@@ -73,3 +73,63 @@ SDL Provides a JSON Response
 
 #### HMI Adapter Initialization
 ![HMI Adapter Init](./assets/HMIAdapterInit.png)
+
+# JSON Message Format
+This section describes the message structure for communication between your HMI and SDL. The JSON RPC 2.0 format is taken as a basis.
+
+From this point forward the actors for exchanging messages will be considered:
+  * Client - can send requests and notifications
+  * Server - can provide responses to requests from a Client and send notifications
+
+## Request
+An RPC call is represented by sending a Request object to a Server. The Request object has the following properties
+
+| Property | Description    |
+| :------------- | :------------- |
+| "id"       | An identifier established by the Client. This value must be of unsigned int type in the frames of communication between your HMI and SDL. The value should never be Null. If "id" is not included the message is assumed to be a notification and the receiver should not respond.|
+| "jsonrpc" | A string specifying the version of JSON RPC protocol being used. Must be exactly "2.0" currently in all versions of SDL.|
+| "method" | A String containing the information of the method to be invoked. The format is `[componentName].[methodName]`.|
+| "params" | A structured value that holds the parameter values to be used during the invocation of the method. This property may be omitted.|
+
+### Example Requests
+#### Request with No Parameters
+```json
+{
+  "id": 125,
+  "jsonrpc": "2.0",
+  "method": "Buttons.GetCapabilities"
+}
+```
+#### Request with Parameters
+```json
+{
+  "id": 92,
+  "jsonrpc": "2.0",
+  "method": "UI.Alert",
+  "params": {
+    "alertStrings": [
+      {
+        "fieldName": alertText1,
+        "fieldText": "WARNING"
+      },
+      {
+        "fieldName": alertText2,
+        "fieldText": "Adverse Weather Conditions Ahead"
+      }
+    ],
+    "duration": 4000,
+    "softButtons": [
+      {
+        "type": TEXT,
+        "text": "OK",
+        "softButtonID": 697,
+        "systemAction": STEAL_FOCUS
+      }
+    ],
+    "appID": 8218
+  }
+}
+```
+
+## Notification
+A notification is a request object without an `id` property. For all the other properties, see the [Request Section](#request)
