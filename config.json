@@ -10,6 +10,17 @@
         },
         {
           "name": "Getting Started"
+        },
+        {
+          "name": "Basic Communication",
+          "navigation": [
+            {
+              "name": "Update Device List"
+            },
+            {
+              "name": "Activate App"
+            }
+          ]
         }
     ]
 }
