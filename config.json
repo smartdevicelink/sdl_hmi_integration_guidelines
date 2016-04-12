@@ -1,0 +1,12 @@
+{
+    "Authors": ["Anastasiya Britanova", "Justin Dickow"],
+    "languages": ["en"],
+    "navigation": [
+        {
+            "name": "Overview"
+        },
+        {
+            "name": "WebSocket Transport"
+        }
+    ]
+}
