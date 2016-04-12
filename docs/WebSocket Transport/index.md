@@ -109,21 +109,21 @@ An RPC call is represented by sending a Request object to a Server. The Request 
   "params": {
     "alertStrings": [
       {
-        "fieldName": alertText1,
+        "fieldName": "alertText1",
         "fieldText": "WARNING"
       },
       {
-        "fieldName": alertText2,
+        "fieldName": "alertText2",
         "fieldText": "Adverse Weather Conditions Ahead"
       }
     ],
     "duration": 4000,
     "softButtons": [
       {
-        "type": TEXT,
+        "type": "TEXT",
         "text": "OK",
         "softButtonID": 697,
-        "systemAction": STEAL_FOCUS
+        "systemAction": "STEAL_FOCUS"
       }
     ],
     "appID": 8218
@@ -133,3 +133,115 @@ An RPC call is represented by sending a Request object to a Server. The Request 
 
 ## Notification
 A notification is a request object without an `id` property. For all the other properties, see the [Request Section](#request)
+
+The receiver should not reply to a notification, ie no response object needs to be returned to the client upon receipt of a notification.
+
+### Example Notifications
+#### Notification With No Parameters
+```json
+{
+  "jsonrpc": "2.0",
+  "method": "UI.OnReady"
+}
+```
+#### Notifications With Parameters
+```json
+{
+  "jsonrpc": "2.0",
+  "method": "BasicCommunication.OnAppActivated",
+  "params": {
+    "appID": 6578
+  }
+}
+
+{
+  "jsonrpc": "2.0",
+  "method": "Buttons.OnButtonPress",
+  "params": {
+    "mode": "SHORT",
+    "name": "OK"
+  }
+}
+```
+
+## Response
+On receipt of a request message, the server must reply with a response. The response is expressed as a single JSON Object with the following properties.
+
+| Property | Description    |
+| :------------- | :------------- |
+| "id"      | Required property which must be the same as the value of the associated request object. If there was an error in detecting the id in the request object, this value must be Null    |
+|"jsonrpc"| Must be exactly "2.0"|
+|"result"| Required on Success. Must not exist if there was an error invoking the method. The result property must contain a `method` field which is the same as the corresponding request, a `code` field with 0 to indicate success.  No other result codes can be sent in the response object. The result property may also include additional properties as defined in the HMI_API.|
+
+### Example Responses
+#### Response with No Parameters
+```json
+{
+  "id": 167,
+  "jsonrpc": "2.0",
+  "result": {
+    "code": 0,
+    "method": "UI.Alert"
+  }
+}
+```
+#### Response with Parameters
+```json
+{
+  "id": 125,
+  "jsonrpc": "2.0",
+  "result": {
+    "capabilities" : [
+			{
+				"longPressAvailable" : true,
+				"name" : "PRESET_0",
+				"shortPressAvailable" : true,
+				"upDownAvailable" : true
+			},
+			{
+				"longPressAvailable" : true,
+				"name" : "TUNEDOWN",
+				"shortPressAvailable" : true,
+				"upDownAvailable" : true
+			}
+		],
+		"presetBankCapabilities": {
+			"onScreenPresetsAvailable" : true
+		},
+		"code" : 0,
+		"method" : "Buttons.GetCapabilities"
+  }
+}
+```
+
+## Error Response
+
+!!! must
+
+When an RPC encounters an error, the response object must contain the `error` property instead of the `result` property.
+
+!!!
+
+The error object has the following members:
+
+| Property | Description     |
+| :------------- | :------------- |
+| "id"       | Required to be the same as the value of "id" in the corresponding Request object. If there was an error in detecting the id of the request object, then this property must be Null   |
+| "jsonrpc"| Must be exactly "2.0"|
+| "error" | Required on error. Must not exist if there was no error triggered during invocation. The error field must contain a `code` field with the value that indicates the error type that occurred (TODO: Result Enumeration section 5.1.1), a `message` field containing the string that provides a short description of the error, and a `data` field that must contain the `method` from the original request.|
+
+### Examples
+#### Response with Error
+```json
+{
+  "id": 103,
+  "jsonrpc": "2.0",
+  "error": {
+    "code": 13,
+    "message": "One of the provided IDs is not valid",
+    "data": {
+      "method": "VehicleInfo.GetDTCs"
+    }
+  }
+}
+```
