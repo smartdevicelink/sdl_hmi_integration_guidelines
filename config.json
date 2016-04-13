@@ -14,8 +14,8 @@
         {
           "name": "BasicCommunication",
     			"navigation": [
-    				{
-    					"name": "ActivateApp"
+            {
+    					"name": "UpdateDeviceList"
     				},
     				{
     					"name": "ActivateApp"
@@ -109,9 +109,6 @@
     				},
     				{
     					"name": "UpdateAppList"
-    				},
-    				{
-    					"name": "UpdateDeviceList"
     				}
     			]
     		},
