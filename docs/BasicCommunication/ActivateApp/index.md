@@ -24,12 +24,12 @@ This request may be sent:
 !!! must
 
   1. Activate the application on the HMI
-    * Display [UI.Show](../UI/Show) related parameters associated with the named `appID` in the case they were previously requested within ignition cycle
-    * Display the corresponding template in the case one was previously requested by [UI.SetDisplayLayout](../UI/SetDisplayLayout) for that application
-    * Apply [UI.SetGlobalProperties](../UI/SetGlobalProperties) associated with the named `appID`, if any
-    * Apply [UI.AddSubMenu](../UI/AddSubMenu) associated with the named `appID`, if any
+    * Display [UI.Show](../../UI/Show) related parameters associated with the named `appID` in the case they were previously requested within ignition cycle
+    * Display the corresponding template in the case one was previously requested by [UI.SetDisplayLayout](../../UI/SetDisplayLayout) for that application
+    * Apply [UI.SetGlobalProperties](../../UI/SetGlobalProperties) associated with the named `appID`, if any
+    * Apply [UI.AddSubMenu](../../UI/AddSubMenu) associated with the named `appID`, if any
   2. Make VR commands accessible from previous [VR.AddCommand](../VR/AddCommand) for the named `appID` during the same ignition cycle
-  3. Apply [TTS.SetGlobalProperties](../TTS/SetGlobalProperties) associated with the `appID` in case previously requested since application registration
+  3. Apply [TTS.SetGlobalProperties](../../TTS/SetGlobalProperties) associated with the `appID` in case previously requested since application registration
   4. Assign priority based on the `priority` parameter received. If the parameter is omitted, the HMI must assign a priority of `NONE` by default
   5. Respond with `SUCCESS` result code after the previous requirements have been met
   6. Set up the application as the active audio source if it is a media or navigation type application
