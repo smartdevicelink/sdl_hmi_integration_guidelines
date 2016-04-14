@@ -1,11 +1,17 @@
 ## GetCapabilities
 
+
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
+
 ### Response
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |displayCapabilities|Common.DisplayCapabilities|true|||
@@ -13,7 +19,9 @@
 |hmiZoneCapabilities|Common.HmiZoneCapabilities|true|||
 |softButtonCapabilities|Common.SoftButtonCapabilities|false|||
 |hmiCapabilities|Common.HMICapabilities|false|||
+
 #### DisplayCapabilities
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |displayType|Common.DisplayType|true|||
@@ -25,25 +33,33 @@
 |templatesAvailable|String|true|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 100||
 |screenParams|Common.ScreenParams|false|||
 |numCustomPresetsAvailable|Integer|false|minvalue: 1<br>maxvalue: 100||
+
 #### AudioPassThruCapabilities
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |samplingRate|Common.SamplingRate|true|||
 |bitsPerSample|Common.BitsPerSample|true|||
 |audioType|Common.AudioType|true|||
+
 #### HmiZoneCapabilities
+
 |Name|Value|
 |:---|:----|
 |FRONT|0|
 |BACK|1|
+
 #### SoftButtonCapabilities
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |shortPressAvailable|Boolean|true|||
 |longPressAvailable|Boolean|true|||
 |upDownAvailable|Boolean|true|||
 |imageSupported|Boolean|true|||
+
 #### HMICapabilities
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |navigation|Boolean|false|||

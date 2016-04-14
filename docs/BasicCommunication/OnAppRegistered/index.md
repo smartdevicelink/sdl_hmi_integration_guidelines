@@ -1,7 +1,10 @@
 ## OnAppRegistered
 
+
 ### Notification
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |application|Common.HMIApplication|true|||
@@ -9,7 +12,9 @@
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40||
 |resumeVrGrammars|Boolean|false|||
 |priority|Common.AppPriority|false|||
+
 #### HMIApplication
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |appName|String|true|maxlength: 100||
@@ -25,12 +30,16 @@
 |appType|Common.AppHMIType|false|array: true<br>minsize: 1<br>maxsize: 100||
 |greyOut|Boolean|false|||
 |requestType|Common.RequestType|false|array: true<br>minsize: 0<br>maxsize: 100||
+
 #### TTSChunk
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |text|String|true|maxlength: 500||
 |type|Common.SpeechCapabilities|true|||
+
 #### AppPriority
+
 |Name|Value|
 |:---|:----|
 |EMERGENCY|0|

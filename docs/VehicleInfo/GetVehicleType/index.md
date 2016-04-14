@@ -1,15 +1,23 @@
 ## GetVehicleType
 
+
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
+
 ### Response
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |vehicleType|Common.VehicleType|true|||
+
 #### VehicleType
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |make|String|false|maxlength: 500||

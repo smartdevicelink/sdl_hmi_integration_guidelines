@@ -1,7 +1,10 @@
 ## ChangeRegistration
 
+
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |appName|String|false|maxlength: 100||
@@ -9,7 +12,9 @@
 |language|Common.Language|true|||
 |appHMIType|Common.AppHMIType|false|array: true<br>minsize: 1<br>maxsize: 100||
 |appID|Integer|true|||
+
 #### Language
+
 |Name|Value|
 |:---|:----|
 |EN-US|0|
@@ -36,7 +41,9 @@
 |CS-CZ|21|
 |DA-DK|22|
 |NO-NO|23|
+
 #### AppHMIType
+
 |Name|Value|
 |:---|:----|
 |DEFAULT|0|
@@ -49,6 +56,9 @@
 |BACKGROUND_PROCESS|7|
 |TESTING|8|
 |SYSTEM|9|
+
 ### Response
+
 #### Parameters
+
 This RPC has no additional parameter requirements

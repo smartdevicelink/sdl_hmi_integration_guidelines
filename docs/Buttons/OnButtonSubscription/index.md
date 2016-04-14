@@ -1,13 +1,18 @@
 ## OnButtonSubscription
 
+
 ### Notification
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |name|Common.ButtonName|true|||
 |isSubscribed|Boolean|true|||
 |appID|Integer|true|||
+
 #### ButtonName
+
 |Name|Value|
 |:---|:----|
 |OK|0|

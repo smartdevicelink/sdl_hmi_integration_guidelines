@@ -1,12 +1,17 @@
 ## OnAppDeactivated
 
+
 ### Notification
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |appID|Integer|true|||
 |reason|Common.DeactivateReason|true|||
+
 #### DeactivateReason
+
 |Name|Value|
 |:---|:----|
 |AUDIO|0|

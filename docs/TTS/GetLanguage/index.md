@@ -1,15 +1,23 @@
 ## GetLanguage
 
+
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
+
 ### Response
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |language|Common.Language|true|||
+
 #### Language
+
 |Name|Value|
 |:---|:----|
 |EN-US|0|

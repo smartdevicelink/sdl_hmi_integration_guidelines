@@ -1,11 +1,16 @@
 ## OnTBTClientState
 
+
 ### Notification
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |state|Common.TBTState|true|||
+
 #### TBTState
+
 |Name|Value|
 |:---|:----|
 |ROUTE_UPDATE_REQUEST|0|

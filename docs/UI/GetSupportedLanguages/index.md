@@ -1,15 +1,23 @@
 ## GetSupportedLanguages
 
+
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
+
 ### Response
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |languages|Common.Language|true|array: true<br>minsize: 1<br>maxsize: 100||
+
 #### Language
+
 |Name|Value|
 |:---|:----|
 |EN-US|0|

@@ -1,7 +1,10 @@
 ## SendLocation
 
+
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |appID|Integer|true|||
@@ -12,11 +15,16 @@
 |addressLines|String|false|array: true<br>minsize: 0<br>maxsize: 4<br>maxlength: 500||
 |phoneNumber|String|false|maxlength: 500||
 |locationImage|Common.Image|false|||
+
 #### Image
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |value|String|true|maxlength: 65535||
 |imageType|Common.ImageType|true|||
+
 ### Response
+
 #### Parameters
+
 This RPC has no additional parameter requirements

@@ -1,12 +1,17 @@
 ## GetUserFriendlyMessage
 
+
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |messageCodes|String|true|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 500||
 |language|Common.Language|false|||
+
 #### Language
+
 |Name|Value|
 |:---|:----|
 |EN-US|0|
@@ -33,12 +38,17 @@
 |CS-CZ|21|
 |DA-DK|22|
 |NO-NO|23|
+
 ### Response
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |messages|Common.UserFriendlyMessage|false|array: true<br>minsize: 1<br>maxsize: 100||
+
 #### UserFriendlyMessage
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |messageCode|String|true|||

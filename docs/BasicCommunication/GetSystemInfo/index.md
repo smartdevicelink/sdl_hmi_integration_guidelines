@@ -1,17 +1,25 @@
 ## GetSystemInfo
 
+
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
+
 ### Response
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |ccpu_version|String|true|maxlength: 500||
 |language|Common.Language|true|||
 |wersCountryCode|String|true|maxlength: 500||
+
 #### Language
+
 |Name|Value|
 |:---|:----|
 |EN-US|0|

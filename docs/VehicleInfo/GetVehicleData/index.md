@@ -1,7 +1,10 @@
 ## GetVehicleData
 
+
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |gps|Boolean|false|||
@@ -30,8 +33,11 @@
 |clusterModeStatus|Boolean|false|||
 |myKey|Boolean|false|||
 |appID|Integer|true|||
+
 ### Response
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |gps|Common.GPSData|false|||
@@ -59,7 +65,9 @@
 |emergencyEvent|Common.EmergencyEvent|false|||
 |clusterModeStatus|Common.ClusterModeStatus|false|||
 |myKey|Common.MyKey|false|||
+
 #### GPSData
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |longitudeDegrees|Float|false|minvalue: -180<br>maxvalue: 180||
@@ -80,7 +88,9 @@
 |altitude|Float|false|minvalue: -10000<br>maxvalue: 10000||
 |heading|Float|false|minvalue: 0<br>maxvalue: 359.99||
 |speed|Float|false|minvalue: 0<br>maxvalue: 500||
+
 #### ComponentVolumeStatus
+
 |Name|Value|
 |:---|:----|
 |UNKNOWN|0|
@@ -89,7 +99,9 @@
 |FAULT|3|
 |ALERT|4|
 |NOT_SUPPORTED|5|
+
 #### PRNDL
+
 |Name|Value|
 |:---|:----|
 |PARK|0|
@@ -107,7 +119,9 @@
 |SEVENTH|12|
 |EIGHTH|13|
 |FAULT|14|
+
 #### TireStatus
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |pressureTelltale|Common.WarningLightStatus|false|||
@@ -117,7 +131,9 @@
 |rightRear|Common.SingleTireStatus|false|||
 |innerLeftRear|Common.SingleTireStatus|false|||
 |innerRightRear|Common.SingleTireStatus|false|||
+
 #### BeltStatus
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |driverBeltDeployed|Common.VehicleDataEventStatus|false|||
@@ -135,7 +151,9 @@
 |rightRearInflatableBelted|Common.VehicleDataEventStatus|false|||
 |middleRow1BeltDeployed|Common.VehicleDataEventStatus|false|||
 |middleRow1BuckleBelted|Common.VehicleDataEventStatus|false|||
+
 #### BodyInformation
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |parkBrakeActive|Boolean|true|||
@@ -145,7 +163,9 @@
 |passengerDoorAjar|Boolean|false|||
 |rearLeftDoorAjar|Boolean|false|||
 |rearRightDoorAjar|Boolean|false|||
+
 #### DeviceStatus
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |voiceRecOn|Boolean|false|||
@@ -159,7 +179,9 @@
 |signalLevelStatus|Common.DeviceLevelStatus|false|||
 |primaryAudioSource|Common.PrimaryAudioSource|false|||
 |eCallEventActive|Boolean|false|||
+
 #### VehicleDataEventStatus
+
 |Name|Value|
 |:---|:----|
 |NO_EVENT|0|
@@ -167,7 +189,9 @@
 |YES|2|
 |NOT_SUPPORTED|3|
 |FAULT|4|
+
 #### WiperStatus
+
 |Name|Value|
 |:---|:----|
 |OFF|0|
@@ -185,19 +209,25 @@
 |AUTO_ADJUST|12|
 |STALLED|13|
 |NO_DATA_EXISTS|14|
+
 #### HeadLampStatus
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |lowBeamsOn|Boolean|true|||
 |highBeamsOn|Boolean|true|||
 |ambientLightSensorStatus|Common.AmbientLightStatus|true|||
+
 #### ECallInfo
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |eCallNotificationStatus|Common.VehicleDataNotificationStatus||||
 |auxECallNotificationStatus|Common.VehicleDataNotificationStatus||||
 |eCallConfirmationStatus|Common.ECallConfirmationStatus||||
+
 #### AirbagStatus
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |driverAirbagDeployed|Common.VehicleDataEventStatus||||
@@ -208,7 +238,9 @@
 |driverKneeAirbagDeployed|Common.VehicleDataEventStatus||||
 |passengerSideAirbagDeployed|Common.VehicleDataEventStatus||||
 |passengerKneeAirbagDeployed|Common.VehicleDataEventStatus||||
+
 #### EmergencyEvent
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |emergencyEventType|Common.EmergencyEventType||||
@@ -216,14 +248,18 @@
 |rolloverEvent|Common.VehicleDataEventStatus||||
 |maximumChangeVelocity|Common.VehicleDataEventStatus||||
 |multipleEvents|Common.VehicleDataEventStatus||||
+
 #### ClusterModeStatus
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |powerModeActive|Boolean||||
 |powerModeQualificationStatus|Common.PowerModeQualificationStatus||||
 |carModeStatus|Common.CarModeStatus||||
 |powerModeStatus|Common.PowerModeStatus||||
+
 #### MyKey
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |e911Override|Common.VehicleDataStatus|true|||

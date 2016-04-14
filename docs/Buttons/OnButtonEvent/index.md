@@ -1,14 +1,19 @@
 ## OnButtonEvent
 
+
 ### Notification
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |name|Common.ButtonName|true|||
 |mode|Common.ButtonEventMode|true|||
 |customButtonID|Integer|false|minvalue: 0<br>maxvalue: 65536||
 |appID|Integer|false|||
+
 #### ButtonName
+
 |Name|Value|
 |:---|:----|
 |OK|0|
@@ -28,7 +33,9 @@
 |PRESET_9|14|
 |CUSTOM_BUTTON|15|
 |SEARCH|16|
+
 #### ButtonEventMode
+
 |Name|Value|
 |:---|:----|
 |BUTTONUP|0|

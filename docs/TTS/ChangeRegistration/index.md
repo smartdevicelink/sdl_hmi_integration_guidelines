@@ -1,18 +1,25 @@
 ## ChangeRegistration
 
+
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |ttsName|Common.TTSChunk|false|array: true<br>minsize: 1<br>maxsize: 100||
 |language|Common.Language|true|||
 |appID|Integer|true|||
+
 #### TTSChunk
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |text|String|true|maxlength: 500||
 |type|Common.SpeechCapabilities|true|||
+
 #### Language
+
 |Name|Value|
 |:---|:----|
 |EN-US|0|
@@ -39,6 +46,9 @@
 |CS-CZ|21|
 |DA-DK|22|
 |NO-NO|23|
+
 ### Response
+
 #### Parameters
+
 This RPC has no additional parameter requirements

@@ -1,11 +1,16 @@
 ## OnFindApplications
 
+
 ### Notification
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |deviceInfo|Common.DeviceInfo|false|||
+
 #### DeviceInfo
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |name|String|true|||

@@ -1,7 +1,10 @@
 ## Show
 
+
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |showStrings|Common.TextFieldStruct|true|array: true<br>minsize: 0<br>maxsize: 7||
@@ -11,28 +14,38 @@
 |softButtons|Common.SoftButton|false|array: true<br>minsize: 0<br>maxsize: 8||
 |customPresets|String|false|array: true<br>minsize: 0<br>maxsize: 10<br>maxlength: 500||
 |appID|Integer|true|||
+
 #### TextFieldStruct
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |fieldName|Common.TextFieldName|true|||
 |fieldText|String|true|maxlength: 500||
+
 #### TextAlignment
+
 |Name|Value|
 |:---|:----|
 |LEFT_ALIGNED|0|
 |RIGHT_ALIGNED|1|
 |CENTERED|2|
+
 #### Image
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |value|String|true|maxlength: 65535||
 |imageType|Common.ImageType|true|||
+
 #### Image
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |value|String|true|maxlength: 65535||
 |imageType|Common.ImageType|true|||
+
 #### SoftButton
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |type|Common.SoftButtonType|true|||
@@ -41,6 +54,9 @@
 |isHighlighted|Boolean|false|||
 |softButtonID|Integer|true|minvalue: 0<br>maxvalue: 65535||
 |systemAction|Common.SystemAction|true|||
+
 ### Response
+
 #### Parameters
+
 This RPC has no additional parameter requirements

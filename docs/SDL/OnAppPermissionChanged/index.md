@@ -1,7 +1,10 @@
 ## OnAppPermissionChanged
 
+
 ### Notification
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |appID|Integer|true|||
@@ -12,13 +15,17 @@
 |appUnauthorized|Boolean|false|||
 |priority|Common.AppPriority|false|||
 |requestType|Common.RequestType|false|array: true<br>minsize: 0<br>maxsize: 100||
+
 #### PermissionItem
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |name|String|true|||
 |id|Integer|true|||
 |allowed|Boolean|false|||
+
 #### AppPriority
+
 |Name|Value|
 |:---|:----|
 |EMERGENCY|0|
@@ -27,7 +34,9 @@
 |COMMUNICATION|3|
 |NORMAL|4|
 |NONE|5|
+
 #### RequestType
+
 |Name|Value|
 |:---|:----|
 |HTTP|0|

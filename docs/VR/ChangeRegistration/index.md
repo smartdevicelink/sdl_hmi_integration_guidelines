@@ -1,13 +1,18 @@
 ## ChangeRegistration
 
+
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40||
 |language|Common.Language|true|||
 |appID|Integer|true|||
+
 #### Language
+
 |Name|Value|
 |:---|:----|
 |EN-US|0|
@@ -34,6 +39,9 @@
 |CS-CZ|21|
 |DA-DK|22|
 |NO-NO|23|
+
 ### Response
+
 #### Parameters
+
 This RPC has no additional parameter requirements

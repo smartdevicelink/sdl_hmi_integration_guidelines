@@ -1,13 +1,18 @@
 ## OnFileRemoved
 
+
 ### Notification
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |fileName|String|true|minlength: 1<br>maxlength: 30||
 |fileType|Common.FileType|true|||
 |appID|Integer|true|||
+
 #### FileType
+
 |Name|Value|
 |:---|:----|
 |GRAPHIC_BMP|0|

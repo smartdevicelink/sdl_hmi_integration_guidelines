@@ -1,11 +1,16 @@
 ## UpdateAppList
 
+
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |applications|Common.HMIApplication|true|array: true<br>minsize: 0<br>maxsize: 100||
+
 #### HMIApplication
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |appName|String|true|maxlength: 100||
@@ -21,6 +26,9 @@
 |appType|Common.AppHMIType|false|array: true<br>minsize: 1<br>maxsize: 100||
 |greyOut|Boolean|false|||
 |requestType|Common.RequestType|false|array: true<br>minsize: 0<br>maxsize: 100||
+
 ### Response
+
 #### Parameters
+
 This RPC has no additional parameter requirements

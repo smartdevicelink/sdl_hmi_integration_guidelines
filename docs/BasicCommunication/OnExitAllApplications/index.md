@@ -1,11 +1,16 @@
 ## OnExitAllApplications
 
+
 ### Notification
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |reason|Common.ApplicationsCloseReason|true|||
+
 #### ApplicationsCloseReason
+
 |Name|Value|
 |:---|:----|
 |IGNITION_OFF|0|
