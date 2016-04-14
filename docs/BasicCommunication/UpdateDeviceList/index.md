@@ -122,6 +122,7 @@ This RPC response has no additional parameter requirements
 	}
 }
 ```
+
 ### Sequence Diagrams
 
 ##### UpdateDeviceList after SDL discovers device over BT or USB
