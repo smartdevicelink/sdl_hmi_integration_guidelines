@@ -139,9 +139,6 @@
     					"name": "AlertManeuver"
     				},
     				{
-    					"name": "AlertManeuver"
-    				},
-    				{
     					"name": "IsReady"
     				},
     				{
@@ -179,9 +176,6 @@
     		{
     			"name": "SDL",
     			"navigation": [
-    				{
-    					"name": "ActivateApp"
-    				},
     				{
     					"name": "ActivateApp"
     				},
@@ -239,9 +233,6 @@
     					"name": "ChangeRegistration"
     				},
     				{
-    					"name": "ChangeRegistration"
-    				},
-    				{
     					"name": "GetCapabilities"
     				},
     				{
@@ -279,9 +270,6 @@
     		{
     			"name": "UI",
     			"navigation": [
-    				{
-    					"name": "AddCommand"
-    				},
     				{
     					"name": "AddCommand"
     				},
@@ -381,9 +369,6 @@
     					"name": "DiagnosticMessage"
     				},
     				{
-    					"name": "DiagnosticMessage"
-    				},
-    				{
     					"name": "GetDTCs"
     				},
     				{
@@ -412,9 +397,6 @@
     		{
     			"name": "VR",
     			"navigation": [
-    				{
-    					"name": "AddCommand"
-    				},
     				{
     					"name": "AddCommand"
     				},
