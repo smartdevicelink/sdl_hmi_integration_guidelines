@@ -17,16 +17,21 @@ Check mixing audio capabilities and provided an accurate response.
 !!!
 
 ### Request
+
 #### Parameters
+
 There are no additional parameter requirements for this request.
 
 ### Response
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |attenuatedSupported|Boolean|true|||
 
 ### Request Example
+
 ```json
 {
 	"id" : 27,
@@ -36,6 +41,7 @@ There are no additional parameter requirements for this request.
 ```
 
 ### Response Example
+
 ```json
 {
 	"id" : 27,
@@ -50,6 +56,7 @@ There are no additional parameter requirements for this request.
 ```
 
 ### Error Example
+
 ```json
 {
 	"id" : 27,
@@ -66,5 +73,7 @@ There are no additional parameter requirements for this request.
 }
 ```
 ### Sequence Diagrams
+
 #### MixingAudioSupported Messaging
+
 ![Mixing Audio Supported](./assets/MixingAudioSupported.png)

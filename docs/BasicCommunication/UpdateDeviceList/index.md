@@ -1,5 +1,7 @@
 ## UpdateDeviceList
+
 ###### [TODO: looking for feedback on how to do format this section]
+
   * Method: BasicCommunication.UpdateDeviceList
   * Sender: SDL
   * Purpose: Update HMI's list of known, connected devices
@@ -38,12 +40,15 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
 !!!
 
 ### Request
+
 #### Parameters
+
 | Param Name | Type    | Mandatory | Additional| Description|
 | :------------- | :------------- | :- | :- | :- |
 | deviceList     | Common.DeviceInfo      | true | Array = true <br> minsize = 0 <br> maxsize = 100 | The list of devices (name and ID) found. If the array is empty it means that all devices have been disconnected or that no devices are connected yet.|
 
 ##### DeviceInfo
+
 | Param Name | Type     | Mandatory | Additional | Description|
 | :------------- | :------------- | :- | :- | :- |
 | name      | String      | true | | The name of the connected device |
@@ -52,6 +57,7 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
 | isSDLAllowed| Boolean | false | | Sent by SDL in UpdateDeviceList. True if the device is allowed for the PolicyTable exchange, false if the device is not allowed for Policy Table exchange|
 
 ##### TransportType
+
 | Name | Value    |
 | :------------- | :------------- |
 | BLUETOOTH     | 0      |
@@ -60,9 +66,11 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
 | WIFI | 3|
 
 ### Response
+
 This RPC response has no additional parameter requirements
 
 ### Example Request
+
 ```json
 {
 	"id" : 64,
@@ -87,6 +95,7 @@ This RPC response has no additional parameter requirements
 ```
 
 ### Example Response
+
 ```json
 {
 	"id" : 64,
@@ -99,6 +108,7 @@ This RPC response has no additional parameter requirements
 ```
 
 ### Example Error
+
 ```json
 {
 	"id" : 64,
@@ -113,9 +123,15 @@ This RPC response has no additional parameter requirements
 }
 ```
 ### Sequence Diagrams
+
 ##### UpdateDeviceList after SDL discovers device over BT or USB
+
 ![Update Device List BT USB](./assets/UpdateDeviceListBTUSB.png)
+
 ##### UpdateDeviceList iOS
+
 ![Update Device List iOS](./assets/UpdateDeviceListiOS.png)
+
 ##### UpdateDeviceList USB AOA
+
 ![Update Device List AOA](./assets/UpdateDeviceListAOA.png)

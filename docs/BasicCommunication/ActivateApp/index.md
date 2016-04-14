@@ -37,13 +37,17 @@ This request may be sent:
 !!!
 
 ### Request
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |appID|Integer|true|||
 |priority|Common.AppPriority|false|||
 |level|Common.HMILevel|false|||
+
 #### AppPriority
+
 |Name|Value|
 |:---|:----|
 |EMERGENCY|0|
@@ -52,18 +56,24 @@ This request may be sent:
 |COMMUNICATION|3|
 |NORMAL|4|
 |NONE|5|
+
 #### HMILevel
+
 |Name|Value|
 |:---|:----|
 |FULL|0|
 |LIMITED|1|
 |BACKGROUND|2|
 |NONE|3|
+
 ### Response
+
 #### Parameters
+
 This RPC has no additional parameter requirements
 
 ### Example Request
+
 ```json
 {
 	"id" : 47,
@@ -76,6 +86,7 @@ This RPC has no additional parameter requirements
 }
 ```
 ### Example Response
+
 ```json
 {
 	"id" : 47,
@@ -89,6 +100,7 @@ This RPC has no additional parameter requirements
 ```
 
 ### Example Error
+
 ```json
 {
 	"id" : 47,
@@ -104,14 +116,25 @@ This RPC has no additional parameter requirements
 	}
 }
 ```
+
 ### Sequence Diagrams
+
 #### Activate App after successful Resumption
+
 ![Activate App Successful Resume](./assets/ActivateAppSuccessfulResume.png)
+
 #### Activate App after failed Resumption
+
 ![Activate App Failed Resume](./assets/ActivateAppFailedResume.png)
+
 #### Activate App after Unexpected Disconnect
+
 ![Activate App Unexpected Disconnect](./assets/ActivateAppUnexpectedDisconnect.png)
+
 #### Activate App after Accepted Data Consent Prompt
+
 ![Activate App Successful Data](./assets/ActivateAppSuccessfulData.png)
+
 #### Activate App after Failed Data Consent Prompt
+
 ![Activate App Failed Data](./assets/ActivateAppFailedData.png)
