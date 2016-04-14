@@ -20,6 +20,9 @@
     				{
     					"name": "ActivateApp"
     				},
+            {
+              "name": "MixingAudioSupported"
+            },
     				{
     					"name": "AllowDeviceToConnect"
     				},
@@ -28,9 +31,6 @@
     				},
     				{
     					"name": "GetSystemInfo"
-    				},
-    				{
-    					"name": "MixingAudioSupported"
     				},
     				{
     					"name": "OnAppActivated"
