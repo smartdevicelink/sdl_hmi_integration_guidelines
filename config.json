@@ -26,6 +26,9 @@
     				{
     					"name": "AllowDeviceToConnect"
     				},
+            {
+              "name": "SystemRequest"
+            },
     				{
     					"name": "DialNumber"
     				},
@@ -103,9 +106,6 @@
     				},
     				{
     					"name": "PolicyUpdate"
-    				},
-    				{
-    					"name": "SystemRequest"
     				},
     				{
     					"name": "UpdateAppList"
