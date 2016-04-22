@@ -29,11 +29,11 @@
             {
               "name": "SystemRequest"
             },
+            {
+              "name": "GetSystemInfo"
+            },
     				{
     					"name": "DialNumber"
-    				},
-    				{
-    					"name": "GetSystemInfo"
     				},
     				{
     					"name": "OnAppActivated"
