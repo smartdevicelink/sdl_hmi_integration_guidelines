@@ -35,6 +35,9 @@
             {
               "name": "OnReady"
             },
+            {
+              "name": "OnStartDeviceDiscovery"
+            },
     				{
     					"name": "DialNumber"
     				},
@@ -88,9 +91,6 @@
     				},
     				{
     					"name": "OnSDLPersistenceComplete"
-    				},
-    				{
-    					"name": "OnStartDeviceDiscovery"
     				},
     				{
     					"name": "OnSystemInfoChanged"
