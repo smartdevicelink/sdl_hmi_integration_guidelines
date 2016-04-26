@@ -119,9 +119,6 @@
     					"name": "GetCapabilities"
     				},
     				{
-    					"name": "GetCapabilities"
-    				},
-    				{
     					"name": "OnButtonEvent"
     				},
     				{
