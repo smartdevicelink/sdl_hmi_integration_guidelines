@@ -38,6 +38,9 @@
             {
               "name": "OnStartDeviceDiscovery"
             },
+            {
+              "name": "OnDeviceChosen"
+            },
     				{
     					"name": "DialNumber"
     				},
@@ -55,9 +58,6 @@
     				},
     				{
     					"name": "OnAwakeSDL"
-    				},
-    				{
-    					"name": "OnDeviceChosen"
     				},
     				{
     					"name": "OnEmergencyEvent"
