@@ -1,9 +1,9 @@
 ## OnDeviceChosen
-Type:
+Type
 : Notification
-Sender:
+Sender
 : HMI
-Purpose:
+Purpose
 : Open the connection with the named device
 
 On Receipt of this notification SDL will open the connected with the named device and start sessions with the compatible SDL applications running on the device.
