@@ -32,6 +32,9 @@
             {
               "name": "GetSystemInfo"
             },
+            {
+              "name": "OnReady"
+            },
     				{
     					"name": "DialNumber"
     				},
@@ -76,9 +79,6 @@
     				},
     				{
     					"name": "OnPutFile"
-    				},
-    				{
-    					"name": "OnReady"
     				},
     				{
     					"name": "OnResumeAudioSource"
