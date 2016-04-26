@@ -1,8 +1,11 @@
 ## OnDeviceChosen
+
 Type
 : Notification
+
 Sender
 : HMI
+
 Purpose
 : Open the connection with the named device
 
