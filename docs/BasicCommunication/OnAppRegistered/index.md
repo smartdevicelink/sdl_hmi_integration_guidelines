@@ -48,3 +48,13 @@
 |COMMUNICATION|3|
 |NORMAL|4|
 |NONE|5|
+
+### Sequence Diagrams
+#### App Register with Resume
+![OnAppRegistered](./assets/OnAppRegisteredResume.png)
+#### App Register without Resume
+![OnAppRegistered](./assets/OnAppRegisteredNoResume.png)
+#### App Registers on USB
+![OnAppRegistered](./assets/OnAppRegisteredUSB.png)
+#### App Registers on Bluetooth
+![OnAppRegistered](./assets/OnAppRegisteredBT.png)
