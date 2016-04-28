@@ -50,3 +50,5 @@ This RPC has no additional parameter requirements
 ![AddCommand](./assets/AddCommandVRNoResponse.png)
 #### AddCommand UI Fails, VR Succeeds
 ![AddCommand](./assets/AddCommandFailVRSuccess.png)
+#### AddCommand UI No Response, VR Succeeds
+![AddCommand](./assets/AddCommandUINoResponseVRSuccess.png)
