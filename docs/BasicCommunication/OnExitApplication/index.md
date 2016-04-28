@@ -16,3 +16,9 @@
 |:---|:----|
 |DRIVER_DISTRACTION_VIOLATION|0|
 |USER_EXIT|1|
+
+### Sequence Diagrams
+#### User Exits Application
+![OnExitApplication](./assets/OnExitApplicationUser.png)
+#### Application Not Authorized
+![OnExitApplication](./assets/OnExitApplicationUnauth.png)
