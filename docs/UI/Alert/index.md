@@ -46,3 +46,17 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |tryAgainTime|Integer|false|minvalue: 0<br>maxvalue: 2000000000||
+
+### Sequence Diagrams
+#### Alert with PlayTone and Speak
+![Alert](./assets/AlertPlayToneSpeak.png)
+#### Alert closed by DEFAULT_ACTION
+![Alert](./assets/AlertDefaultAction.png)
+#### Alert closed by STEAL_FOCUS
+![Alert](./assets/AlertStealFocus.png)
+#### Alert Aborted by VR Session
+![Alert](./assets/AlertAborted.png)
+#### Alert Rejected
+![Alert](./assets/AlertRejected.png)
+#### Alert BOTH UI Closed before TTS finishes Speaking
+![Alert](./assets/AlertTTS.png)
