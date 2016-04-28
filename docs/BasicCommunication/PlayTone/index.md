@@ -18,3 +18,7 @@
 |SPEAK|1|
 |AUDIO_PASS_THRU|2|
 |ALERT_MANEUVER|3|
+
+### Sequence Diagrams
+#### Play Tone with Alert
+![PlayTone](./assets/PlayTone.png)
