@@ -20,3 +20,7 @@
 |PHONEMENU|3|
 |SYNCSETTINGS|4|
 |GENERAL|5|
+
+### Sequence Diagrams
+#### User Switches Apps
+![OnAppDeactivated](./assets/OnAppDeactivated.png)
