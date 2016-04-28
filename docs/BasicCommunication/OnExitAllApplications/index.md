@@ -17,3 +17,7 @@
 |MASTER_RESET|1|
 |FACTORY_DEFAULTS|2|
 |SUSPEND|3|
+
+### Sequence Diagrams
+#### Exit All Apps on Ignition Off
+![OnExitAllApplications](./assets/OnExitAllApps.png)
