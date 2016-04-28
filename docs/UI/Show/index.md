@@ -60,3 +60,13 @@
 #### Parameters
 
 This RPC has no additional parameter requirements
+
+### Sequence Diagrams
+#### Active App shows and is deactivated then reactivated
+![Show](./assets/ShowAppReactivated.png)
+#### Inactive App Sends Show
+![Show](./assets/ShowAppInactive.png)
+#### Show with Soft Buttons
+![Show](./assets/ShowSoftButtons.png)
+#### Show Text Fields
+![Show](./assets/ShowTextFields.png)
