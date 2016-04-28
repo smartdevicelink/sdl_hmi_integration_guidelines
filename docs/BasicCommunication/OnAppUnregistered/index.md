@@ -9,3 +9,7 @@
 |:---|:---|:--------|:---------|:----------|
 |unexpectedDisconnect|Boolean|true|||
 |appID|Integer|true|||
+
+### Sequence Diagrams
+#### Active App Unregistered
+![OnAppUnregistered](./assets/OnAppUnregistered.png)
