@@ -53,3 +53,7 @@
 |AUDIO_AAC|5|
 |BINARY|6|
 |JSON|7|
+
+### Sequence Diagrams
+#### System Requests File Download
+![OnSystemRequest](./assets/OnSystemRequest.png)
