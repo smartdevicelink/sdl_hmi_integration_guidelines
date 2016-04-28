@@ -8,3 +8,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |isActive|Boolean|true|||
+
+### Sequence Diagrams
+#### Phone Call
+![OnPhoneCall](./assets/OnPhoneCall.png)
