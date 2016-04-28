@@ -15,3 +15,9 @@
 #### Parameters
 
 This RPC has no additional parameter requirements
+
+### Sequence Diagrams
+#### Delete Command with Menu Open
+![DeleteCommand](./assets/DeleteCommandMenuOpen.png)
+#### Delete Command Application Inactive
+![DeleteCommand](./assets/DeleteCommandAppInactive.png)
