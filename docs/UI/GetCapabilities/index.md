@@ -64,3 +64,7 @@
 |:---|:---|:--------|:---------|:----------|
 |navigation|Boolean|false|||
 |phoneCall|Boolean|false|||
+
+### Sequence Diagrams
+#### Get Capabilities
+![GetCapabilities](./assets/GetCapabilities.png)
