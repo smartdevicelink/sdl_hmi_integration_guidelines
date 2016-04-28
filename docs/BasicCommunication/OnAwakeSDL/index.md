@@ -1,9 +1,6 @@
 ## OnAwakeSDL
 
 
-### Notification
-
-#### Parameters
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
+### Sequence Diagrams
+#### Wake SDL from Suspension
+![OnAwakeSDL](./assets/OnAwakeSDL.png)
