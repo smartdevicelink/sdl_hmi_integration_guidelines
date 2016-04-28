@@ -23,3 +23,7 @@
 |AUDIO_AAC|5|
 |BINARY|6|
 |JSON|7|
+
+### Sequence Diagrams
+#### File Removed from Head Unit
+![OnFileRemoved](./assets/OnFileRemoved.png)
