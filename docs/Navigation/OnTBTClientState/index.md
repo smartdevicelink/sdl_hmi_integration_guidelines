@@ -23,3 +23,9 @@
 |ROUTE_SUMMARY_REQUEST|7|
 |TRIP_STATUS_REQUEST|8|
 |ROUTE_UPDATE_REQUEST_TIMEOUT|9|
+
+### Sequence Diagrams
+|||
+OnTBTClientState
+![OnTBTClientState](./assets/OnTBTClientState.jpg)
+|||
