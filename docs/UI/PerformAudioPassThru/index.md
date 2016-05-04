@@ -24,3 +24,21 @@
 #### Parameters
 
 This RPC has no additional parameter requirements
+
+### Sequence Diagrams
+|||
+PerformAudioPassThru requested with TTS.Speak
+![PerformAudioPassThru](./assets/PerformAudioPassThruSpeak.png)
+|||
+|||
+PerformAudioPassThru with EndAudioPassThru
+![PerformAudioPassThru](./assets/PerformAudioPassThruEndAudio.png)
+|||
+|||
+PerformAudioPassThru not supported
+![PerformAudioPassThru](./assets/PerformAudioPassThruNotSupported.png)
+|||
+|||
+PerformAudioPassThru from vehicle microphone
+![PerformAudioPassThru](./assets/PerformAudioPassThruMic.png)
+|||
