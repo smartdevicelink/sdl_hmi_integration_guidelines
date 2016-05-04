@@ -9,9 +9,8 @@
 |:---|:---|:--------|:---------|:----------|
 |methodName|String|false|||
 
-### Response
-
-#### Parameters
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
+### Sequence Diagrams
+|||
+ClosePopUp for UI.PerformInteraction
+![ClosePopUp](./assets/ClosePopUp.png)
+|||
