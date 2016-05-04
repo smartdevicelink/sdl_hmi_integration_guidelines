@@ -22,3 +22,9 @@
 #### Parameters
 
 This RPC has no additional parameter requirements
+
+### Sequence Diagrams
+|||
+SetAppIcon
+![SetAppIcon](./assets/SetAppIcon.png)
+|||
