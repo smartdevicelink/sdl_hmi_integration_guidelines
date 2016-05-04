@@ -14,3 +14,9 @@
 #### Parameters
 
 This RPC has no additional parameter requirements
+
+### Sequence Diagrams
+|||
+StopAudioStream
+![StopAudioStream](./assets/StopAudioStream.jpg)
+|||
