@@ -28,3 +28,17 @@
 #### Parameters
 
 This RPC has no additional parameter requirements
+
+### Sequence Diagram
+|||
+SendLocation Success
+![SendLocation](./assets/SendLocationSuccess.jpg)
+|||
+|||
+SendLocation Fail with warnings
+![SendLocation](./assets/SendLocationFailWarning.jpg)
+|||
+|||
+SendLocation Fail Rejected
+![SendLocation](./assets/SendLocationFailRejected.jpg)
+|||
