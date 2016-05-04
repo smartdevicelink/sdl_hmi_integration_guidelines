@@ -3,7 +3,8 @@
 
 ### Notification
 
-#### Parameters
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
+### Sequence Diagrams
+|||
+Stopped when VR session ends
+![Stopped](./assets/Stopped.png)
+|||
