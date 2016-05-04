@@ -59,3 +59,17 @@
 |:---|:---|:--------|:---------|:----------|
 |choiceID|Integer|false|minvalue: 0<br>maxvalue: 2000000000||
 |manualTextEntry|String|false|minlength: 0<br>maxlength: 500||
+
+### Sequence Diagrams
+|||
+PerformInteraction Successful with VR Only
+![PerformInteraction](./assets/PerformInteractionVROnly.png)
+|||
+|||
+PerformInteraction Successful with Manual Only
+![PerformInteraction](./assets/PerformInteractionManualOnly.png)
+|||
+|||
+PerformInteraction Timeout with Both
+![PerformInteraction](./assets/PerformInteractionBothTimeout.png)
+|||
