@@ -27,9 +27,8 @@
 |AUDIO_PASS_THRU|2|
 |ALERT_MANEUVER|3|
 
-### Response
-
-#### Parameters
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
+### Sequence Diagrams
+|||
+Speak
+![Speak](./assets/Speak.png)
+|||
