@@ -44,3 +44,9 @@
 #### Parameters
 
 This RPC has no additional parameter requirements
+
+### Sequence Diagrams
+|||
+SetGlobalProperties for active app on HMI with VR activation
+![SetGlobalProperties](./assets/SetGlobalPropertiesActiveVRActivate.png)
+|||
