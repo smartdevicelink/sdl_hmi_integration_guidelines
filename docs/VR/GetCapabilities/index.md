@@ -21,3 +21,9 @@
 |Name|Value|
 |:---|:----|
 |TEXT|0|
+
+### Sequence Diagrams
+|||
+GetCapabilities
+![GetCapabilities](./assets/GetCapabilities.png)
+|||
