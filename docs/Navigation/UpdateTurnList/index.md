@@ -34,3 +34,9 @@
 #### Parameters
 
 This RPC has no additional parameter requirements
+
+### Sequence Diagrams
+|||
+UpdateTurnList
+![UpdateTurnList](./assets/UpdateTurnList.jpg)
+|||
