@@ -31,3 +31,9 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |onScreenPresetsAvailable|Boolean|true|||
+
+### Sequence Diagrams
+|||
+GetCapabilities on system startup
+![GetCapabilities](./assets/GetCapabilities.png)
+|||
