@@ -16,3 +16,9 @@
 |UP_TO_DATE|0|
 |UPDATING|1|
 |UPDATE_NEEDED|2|
+
+### Sequence Diagrams
+|||
+OnStatusUpdate
+![OnStatusUpdate](./assets/OnStatusUpdate.jpg)
+|||
