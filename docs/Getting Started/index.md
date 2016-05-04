@@ -29,4 +29,7 @@ In the case of a WebSocket connection, the RPCs to each of the components is sen
 
 !!!
 
+|||
+IsReady Sequence
 ![IsReady Sequence](./assets/IsReadySequence.png)
+|||
