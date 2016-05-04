@@ -25,5 +25,7 @@
 |JSON|7|
 
 ### Sequence Diagrams
-#### File Removed from Head Unit
+|||
+File Removed from Head Unit
 ![OnFileRemoved](./assets/OnFileRemoved.png)
+|||

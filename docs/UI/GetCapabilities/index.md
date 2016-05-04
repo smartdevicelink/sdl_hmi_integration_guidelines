@@ -66,5 +66,7 @@
 |phoneCall|Boolean|false|||
 
 ### Sequence Diagrams
-#### Get Capabilities
+|||
+Get Capabilities
 ![GetCapabilities](./assets/GetCapabilities.png)
+|||

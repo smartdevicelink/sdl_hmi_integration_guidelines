@@ -10,5 +10,7 @@
 
 
 ### Sequence Diagrams
-#### User Requests Device List Update
+|||
+User Requests Device List Update
 ![OnUpdateDeviceList](./assets/OnUpdateDeviceList.png)
+|||

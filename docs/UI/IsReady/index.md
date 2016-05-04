@@ -17,5 +17,7 @@
 |available|Boolean|true|||
 
 ### Sequence Diagrams
-#### UI Component Ready
+|||
+UI Component Ready
 ![IsReady](./assets/IsReady.png)
+|||

@@ -58,5 +58,7 @@ The list of known devices is provided to the HMI in the [UpdateDeviceList](../Up
 ```
 
 ### Sequence Diagrams
-#### OnDeviceChosen
+|||
+OnDeviceChosen
 ![OnDeviceChosen](./assets/OnDeviceChosen.png)
+|||

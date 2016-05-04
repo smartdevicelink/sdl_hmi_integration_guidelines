@@ -18,7 +18,11 @@
 |USER_EXIT|1|
 
 ### Sequence Diagrams
-#### User Exits Application
+|||
+User Exits Application
 ![OnExitApplication](./assets/OnExitApplicationUser.png)
-#### Application Not Authorized
+|||
+|||
+Application Not Authorized
 ![OnExitApplication](./assets/OnExitApplicationUnauth.png)
+|||

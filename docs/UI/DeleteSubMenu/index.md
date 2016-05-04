@@ -17,7 +17,11 @@
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
-#### Delete Sub Menu Containing Commands
+|||
+Delete Sub Menu Containing Commands
 ![DeleteSubMenu](./assets/DeleteSubMenuWithCommands.png)
-#### Delete Sub Menu that is on screen
+|||
+|||
+Delete Sub Menu that is on screen
 ![DeleteSubMenu](./assets/DeleteSubMenuOnScreen.png)
+|||

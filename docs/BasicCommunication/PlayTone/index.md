@@ -20,5 +20,7 @@
 |ALERT_MANEUVER|3|
 
 ### Sequence Diagrams
-#### Play Tone with Alert
+|||
+Play Tone with Alert
 ![PlayTone](./assets/PlayTone.png)
+|||

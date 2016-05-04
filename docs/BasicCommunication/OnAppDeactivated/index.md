@@ -22,5 +22,7 @@
 |GENERAL|5|
 
 ### Sequence Diagrams
-#### User Switches Apps
+|||
+User Switches Apps
 ![OnAppDeactivated](./assets/OnAppDeactivated.png)
+|||

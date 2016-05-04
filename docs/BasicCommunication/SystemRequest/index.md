@@ -113,5 +113,7 @@ This RPC has no additional parameter requirements
 ```
 
 ### Sequence Diagrams
-#### System Request Workflow
+|||
+System Request Workflow
 ![System Request](./assets/SystemRequestWorkflow.png)
+|||

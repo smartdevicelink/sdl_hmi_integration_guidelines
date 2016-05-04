@@ -50,11 +50,19 @@
 |NONE|5|
 
 ### Sequence Diagrams
-#### App Register with Resume
+|||
+App Register with Resume
 ![OnAppRegistered](./assets/OnAppRegisteredResume.png)
-#### App Register without Resume
+|||
+|||
+App Register without Resume
 ![OnAppRegistered](./assets/OnAppRegisteredNoResume.png)
-#### App Registers on USB
+|||
+|||
+App Registers on USB
 ![OnAppRegistered](./assets/OnAppRegisteredUSB.png)
-#### App Registers on Bluetooth
+|||
+|||
+App Registers on Bluetooth
 ![OnAppRegistered](./assets/OnAppRegisteredBT.png)
+|||

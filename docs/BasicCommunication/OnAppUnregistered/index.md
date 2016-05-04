@@ -11,5 +11,7 @@
 |appID|Integer|true|||
 
 ### Sequence Diagrams
-#### Active App Unregistered
+|||
+Active App Unregistered
 ![OnAppUnregistered](./assets/OnAppUnregistered.png)
+|||

@@ -21,5 +21,7 @@ This RPC tells SDL to initiate a new device search. The [OnUpdateDeviceList](../
 ```
 
 ### Sequence Diagrams
-#### Starting Device Discovery
+|||
+Starting Device Discovery
 ![OnStartDeviceDiscovery](./assets/OnStartDeviceDiscovery.png)
+|||

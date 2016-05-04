@@ -10,5 +10,7 @@
 |isActive|Boolean|true|||
 
 ### Sequence Diagrams
-#### Phone Call
+|||
+Phone Call
 ![OnPhoneCall](./assets/OnPhoneCall.png)
+|||

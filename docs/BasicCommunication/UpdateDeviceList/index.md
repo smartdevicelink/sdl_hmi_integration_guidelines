@@ -125,14 +125,15 @@ This RPC response has no additional parameter requirements
 
 ### Sequence Diagrams
 
-##### UpdateDeviceList after SDL discovers device over BT or USB
-
+|||
+UpdateDeviceList after SDL discovers device over BT or USB
 ![Update Device List BT USB](./assets/UpdateDeviceListBTUSB.png)
-
-##### UpdateDeviceList iOS
-
+|||
+|||
+UpdateDeviceList iOS
 ![Update Device List iOS](./assets/UpdateDeviceListiOS.png)
-
-##### UpdateDeviceList USB AOA
-
+|||
+|||
+UpdateDeviceList USB AOA
 ![Update Device List AOA](./assets/UpdateDeviceListAOA.png)
+|||

@@ -46,5 +46,7 @@
 |NO-NO|23|
 
 ### Sequence Diagrams
-#### Get Supported Languages
+|||
+Get Supported Languages
 ![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
+|||

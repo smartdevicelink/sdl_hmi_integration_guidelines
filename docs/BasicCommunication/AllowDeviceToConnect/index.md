@@ -92,5 +92,7 @@ Check whether the device is allowed to connect to the head unit and response app
 ```
 
 ### Sequence Diagrams
-#### AllowDeviceToConnect Messaging
+|||
+AllowDeviceToConnect Messaging
 ![Allow Device To Connect](./assets/AllowDeviceToConnect.png)
+|||

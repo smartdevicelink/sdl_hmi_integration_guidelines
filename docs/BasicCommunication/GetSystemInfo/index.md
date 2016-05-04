@@ -106,5 +106,7 @@ When SDL starts, it sends GetSystemInfo to update the policies database with the
 ```
 
 ### Sequence Diagrams
-#### GetSystemInfo
+|||
+GetSystemInfo
 ![GetSysteminfo](./assets/GetSystemInfo.png)
+|||

@@ -10,5 +10,7 @@
 |appID|Integer|true|||
 
 ### Sequence Diagrams
-#### User Activates App
+|||
+User Activates App
 ![OnAppActivated](./assets/OnAppActivated.png)
+|||

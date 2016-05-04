@@ -9,7 +9,11 @@
 |:---|:---|:--------|:---------|:----------|
 
 ### Sequence Diagrams
-#### OnSDLClose Ingition Cycle
+|||
+OnSDLClose Ingition Cycle
 ![OnSDLClose](./assets/OnSDLCloseIgnition.png)
-#### OnSDLClose Master Reset
+|||
+|||
+OnSDLClose Master Reset
 ![OnSDLClose](./assets/OnSDLCLoseReset.png)
+|||

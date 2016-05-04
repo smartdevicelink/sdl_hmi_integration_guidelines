@@ -74,7 +74,7 @@ There are no additional parameter requirements for this request.
 ```
 
 ### Sequence Diagrams
-
-#### MixingAudioSupported Messaging
-
+|||
+MixingAudioSupported Messaging
 ![Mixing Audio Supported](./assets/MixingAudioSupported.png)
+|||

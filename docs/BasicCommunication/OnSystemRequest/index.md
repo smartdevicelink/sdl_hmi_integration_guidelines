@@ -55,5 +55,7 @@
 |JSON|7|
 
 ### Sequence Diagrams
-#### System Requests File Download
+|||
+System Requests File Download
 ![OnSystemRequest](./assets/OnSystemRequest.png)
+|||

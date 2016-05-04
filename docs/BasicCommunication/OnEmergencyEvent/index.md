@@ -10,5 +10,7 @@
 |enabled|Boolean|true|||
 
 ### Sequence Diagrams
-#### Emergency Event Activated
+|||
+Emergency Event Activated
 ![OnEmergencyEvent](./assets/OnEmergencyEvent.png)
+|||

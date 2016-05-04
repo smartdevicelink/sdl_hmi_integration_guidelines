@@ -26,11 +26,19 @@
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
-#### Add Sub Menu for Active App
+|||
+Add Sub Menu for Active App
 ![AddSubMenu](./assets/AddSubMenuActiveApp.png)
-#### Add Sub Menu for Inactive App
+|||
+|||
+Add Sub Menu for Inactive App
 ![AddSubMenu](./assets/AddSubMenuInactiveApp.png)
-#### Add Sub Menu with positions
+|||
+|||
+Add Sub Menu with positions
 ![AddSubMenu](./assets/AddSubMenuPositions.png)
-#### Add Sub Menu Rejected Limit Reached
+|||
+|||
+Add Sub Menu Rejected Limit Reached
 ![AddSubMenu](./assets/AddSubMenuLimit.png)
+|||

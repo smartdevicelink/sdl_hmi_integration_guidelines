@@ -19,5 +19,7 @@
 |SUSPEND|3|
 
 ### Sequence Diagrams
-#### Exit All Apps on Ignition Off
+|||
+Exit All Apps on Ignition Off
 ![OnExitAllApplications](./assets/OnExitAllApps.png)
+|||
