@@ -59,3 +59,9 @@
 |EMERGENCY|17|
 |MEDIA|18|
 |FOTA|19|
+
+### Sequence Diagrams
+|||
+OnAppPermissionChanged with consent required
+![OnAppPermissionChanged](./assets/OnAppPermissionChanged.png)
+|||
