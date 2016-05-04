@@ -231,3 +231,13 @@
 |:---|:---|:--------|:---------|:----------|
 |dataType|Common.VehicleDataType||||
 |resultCode|Common.VehicleDataResultCode||||
+
+### Sequence Diagrams
+|||
+UnsubscribeVehicleData
+![UnsubscribeVehicleData](./assets/UnsubscribeVehicleData.jpg)
+|||
+|||
+UnsubscribeVehicleData unexpected disconnect
+![UnsubscribeVehicleData](./assets/UnsubscribeVehicleDataDisconnect.jpg)
+|||
