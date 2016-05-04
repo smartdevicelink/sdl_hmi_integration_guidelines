@@ -57,3 +57,9 @@
 |line1|String|false|||
 |line2|String|false|||
 |textBody|String|false|||
+
+### Sequence Diagrams
+|||
+GetUserFriendlyMessage for device consent
+![GetUserFriendlyMessage](./assets/GetUserFriendlyMessage.png)
+|||
