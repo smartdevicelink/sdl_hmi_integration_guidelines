@@ -23,3 +23,8 @@
 Exit All Apps on Ignition Off
 ![OnExitAllApplications](./assets/OnExitAllApps.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

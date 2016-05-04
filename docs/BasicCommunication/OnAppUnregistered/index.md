@@ -15,3 +15,8 @@
 Active App Unregistered
 ![OnAppUnregistered](./assets/OnAppUnregistered.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

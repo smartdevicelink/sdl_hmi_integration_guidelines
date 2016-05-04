@@ -236,3 +236,8 @@
 OnVehicleData
 ![OnVehicleData](./assets/OnVehicleData.jpg)
 |||
+
+#### JSON Example Notification
+```json
+
+```

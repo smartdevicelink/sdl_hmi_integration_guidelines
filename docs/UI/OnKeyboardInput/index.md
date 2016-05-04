@@ -41,3 +41,8 @@ OnKeyboardInput cancelled
 OnKeyboardInput ENTRY_VOICE mode
 ![OnKeyboardInput](./assets/OnKeyboardInputVoice.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

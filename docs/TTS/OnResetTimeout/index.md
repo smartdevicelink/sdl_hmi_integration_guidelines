@@ -19,3 +19,8 @@ OnResetTimeout for Speak SUCCESS
 OnResetTimeout for Speak GENERIC_ERROR
 ![OnResetTimeout](./assets/OnResetTimeoutGenericError.jpg)
 |||
+
+#### JSON Example Notification
+```json
+
+```

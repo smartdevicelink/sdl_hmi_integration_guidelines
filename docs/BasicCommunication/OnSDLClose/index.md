@@ -17,3 +17,8 @@ OnSDLClose Ingition Cycle
 OnSDLClose Master Reset
 ![OnSDLClose](./assets/OnSDLCLoseReset.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

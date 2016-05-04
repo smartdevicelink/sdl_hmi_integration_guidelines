@@ -17,3 +17,8 @@
 |id|String|true|||
 |transportType|Common.TransportType|false|||
 |isSDLAllowed|Boolean|false|||
+
+#### JSON Example Notification
+```json
+
+```

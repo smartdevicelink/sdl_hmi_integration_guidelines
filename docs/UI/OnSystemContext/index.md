@@ -25,3 +25,8 @@
 OnSystemContext for different HMI States
 ![OnSystemContext](./assets/OnSystemContext.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

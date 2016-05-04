@@ -3,7 +3,7 @@
 
 ### Notification
 
-#### Parameters
+#### JSON Example Notification
+```json
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
+```

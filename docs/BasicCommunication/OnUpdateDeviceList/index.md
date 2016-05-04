@@ -14,3 +14,8 @@
 User Requests Device List Update
 ![OnUpdateDeviceList](./assets/OnUpdateDeviceList.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

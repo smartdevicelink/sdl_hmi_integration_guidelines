@@ -12,3 +12,8 @@ This RPC has no additional parameter requirements
 SDL Persists App Data after Suspend before Ignition Off
 ![OnSDLPersistenceComplete](./assets/OnSDLPersistenceComplete.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

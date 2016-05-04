@@ -25,3 +25,8 @@ This RPC tells SDL to initiate a new device search. The [OnUpdateDeviceList](../
 Starting Device Discovery
 ![OnStartDeviceDiscovery](./assets/OnStartDeviceDiscovery.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

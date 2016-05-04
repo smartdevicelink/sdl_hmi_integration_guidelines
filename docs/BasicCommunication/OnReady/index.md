@@ -24,3 +24,8 @@ The HMI must send this notification after the connection is established and the 
 OnReady WebSocket
 ![OnReady](./assets/OnReady.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

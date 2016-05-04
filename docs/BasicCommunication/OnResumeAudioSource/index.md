@@ -26,3 +26,8 @@ Audio Source Resumption after Phone Call
 Audio Source Resume one audio app one phone call app
 ![OnResumeAudioSource](./assets/OnResumeAudioSourceMultiple.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

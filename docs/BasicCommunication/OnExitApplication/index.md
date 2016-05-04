@@ -26,3 +26,8 @@ User Exits Application
 Application Not Authorized
 ![OnExitApplication](./assets/OnExitApplicationUnauth.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

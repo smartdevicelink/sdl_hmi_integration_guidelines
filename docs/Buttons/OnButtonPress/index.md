@@ -54,3 +54,8 @@ OnButtonPress long press for hard button
 OnButtonPress for hard button that only supports short press
 ![OnButtonPress](./assets/OnButtonPressHardKeyShortOnly.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

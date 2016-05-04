@@ -29,3 +29,8 @@
 File Removed from Head Unit
 ![OnFileRemoved](./assets/OnFileRemoved.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

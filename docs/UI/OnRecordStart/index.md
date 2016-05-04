@@ -22,3 +22,8 @@ OnRecordStart without TTS.Speak
 OnRecordStart not sent if UI.PerformAudioPassThru rejected
 ![OnRecordStart](./assets/OnRecordStartRejected.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

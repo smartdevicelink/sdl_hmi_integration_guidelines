@@ -23,3 +23,8 @@ OnResetTimeout during ScrollableMessage
 OnResetTimeout KEEP_CONTEXT during alert
 ![OnResetTimeout](./assets/OnResetTimeoutKeepContextAlert.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

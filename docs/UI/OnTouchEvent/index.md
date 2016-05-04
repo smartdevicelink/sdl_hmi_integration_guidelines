@@ -35,3 +35,8 @@ OnTouchEvent moving two fingers stop together
 OnTouchEvent moving two fingers one stops first
 ![OnTouchEvent](./assets/OnTouchEventTwoFingersOneStop.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

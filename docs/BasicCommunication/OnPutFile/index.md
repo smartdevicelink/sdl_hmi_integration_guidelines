@@ -41,3 +41,8 @@ Put File used after referencing RPC
 System Request file upload using Put File
 ![OnPutFile](./assets/OnPutFileSystemRequest.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

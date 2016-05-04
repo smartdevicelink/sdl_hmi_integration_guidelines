@@ -25,3 +25,8 @@
 |:---|:----|
 |GUI|0|
 |VUI|1|
+
+#### JSON Example Notification
+```json
+
+```

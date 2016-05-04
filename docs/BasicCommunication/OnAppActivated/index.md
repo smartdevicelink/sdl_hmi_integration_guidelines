@@ -14,3 +14,8 @@
 User Activates App
 ![OnAppActivated](./assets/OnAppActivated.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

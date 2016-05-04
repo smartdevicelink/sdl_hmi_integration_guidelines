@@ -27,3 +27,8 @@ User Choice After OnAppRegistered
 OnFindApplications after Device Chosen by User
 ![OnFindApplications](./assets/OnFindApplicationsDeviceChosen.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

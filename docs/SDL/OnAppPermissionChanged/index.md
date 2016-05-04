@@ -65,3 +65,8 @@
 OnAppPermissionChanged with consent required
 ![OnAppPermissionChanged](./assets/OnAppPermissionChanged.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

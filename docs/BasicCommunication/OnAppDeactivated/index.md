@@ -26,3 +26,8 @@
 User Switches Apps
 ![OnAppDeactivated](./assets/OnAppDeactivated.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

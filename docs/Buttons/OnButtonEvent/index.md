@@ -50,3 +50,8 @@ OnButtonEvent for CUSTOM_BUTTON pressed and released
 OnButtonEvent hardware button pressed and released
 ![OnButtonEvent](./assets/OnButtonEventHardKeyPressRelease.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

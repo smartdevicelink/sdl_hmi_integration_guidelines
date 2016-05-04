@@ -66,3 +66,8 @@ App Registers on USB
 App Registers on Bluetooth
 ![OnAppRegistered](./assets/OnAppRegisteredBT.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

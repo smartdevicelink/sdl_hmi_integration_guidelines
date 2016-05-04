@@ -59,3 +59,8 @@
 System Requests File Download
 ![OnSystemRequest](./assets/OnSystemRequest.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

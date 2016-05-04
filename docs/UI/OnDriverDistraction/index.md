@@ -21,3 +21,8 @@
 OnDriverDistraction
 ![OnDriverDistraction](./assets/OnDriverDistraction.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

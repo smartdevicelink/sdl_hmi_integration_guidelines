@@ -14,3 +14,8 @@
 Emergency Event Activated
 ![OnEmergencyEvent](./assets/OnEmergencyEvent.png)
 |||
+
+#### JSON Example Notification
+```json
+
+```

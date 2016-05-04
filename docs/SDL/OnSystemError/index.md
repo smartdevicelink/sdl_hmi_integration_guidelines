@@ -15,3 +15,8 @@
 |:---|:----|
 |SYNC_REBOOTED|0|
 |SYNC_OUT_OF_MEMMORY|1|
+
+#### JSON Example Notification
+```json
+
+```
