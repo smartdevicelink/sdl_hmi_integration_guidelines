@@ -58,3 +58,13 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |onScreenPresetsAvailable|Boolean|true|||
+
+### Sequence Diagrams
+|||
+SetDisplayLayout Successful with UI.GetCapabilities
+![SetDisplayLayout](./assets/SetDisplayLayoutSuccessGetCapabilities.png)
+|||
+|||
+SetDisplayLayout Invalid Data with UI.GetCapabilities
+![SetDisplayLayout](./assets/SetDisplayLayoutInvalidData.png)
+|||
