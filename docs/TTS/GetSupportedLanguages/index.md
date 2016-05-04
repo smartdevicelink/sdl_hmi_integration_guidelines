@@ -44,3 +44,9 @@
 |CS-CZ|21|
 |DA-DK|22|
 |NO-NO|23|
+
+### Sequence Diagrams
+|||
+GetSupportedLanguages
+![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
+|||
