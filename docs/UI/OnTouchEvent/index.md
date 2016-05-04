@@ -25,3 +25,13 @@
 |id|Integer|true|minvalue: 0<br>maxvalue: 9||
 |ts|Integer|true|array: true<br>minsize: 1<br>maxsize: 1000<br>minvalue: 0<br>maxvalue: 2147483647||
 |c|Common.TouchCoord|true|array: true<br>minsize: 1<br>maxsize: 1000||
+
+### Sequence Diagrams
+|||
+OnTouchEvent moving two fingers stop together
+![OnTouchEvent](./assets/OnTouchEventTwoFingers.png)
+|||
+|||
+OnTouchEvent moving two fingers one stops first
+![OnTouchEvent](./assets/OnTouchEventTwoFingersOneStop.png)
+|||
