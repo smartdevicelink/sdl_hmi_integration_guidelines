@@ -15,5 +15,8 @@ SDL Persists App Data after Suspend before Ignition Off
 
 #### JSON Example Notification
 ```json
-
+{
+	"jsonrpc" : "2.0",
+	"method" : "BasicCommunication.OnSDLPersistenceComplete"
+}
 ```

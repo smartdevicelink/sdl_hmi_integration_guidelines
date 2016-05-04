@@ -61,16 +61,45 @@ DialNumber Failed
 ### Example Request
 
 ```json
-
+{
+	"id" : 59,
+	"jsonrpc" : "2.0",
+	"method" : "BasicCommunication. DialNumber",
+	"params" :
+	{
+				"number" : "*111#",
+				"appID" : 65537
+	}
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 59,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"code" : 0,
+		"method" : "BasicCommunication.DialNumber"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 59,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 5,
+		"message" : " HMI is busy with higher priority RPC ",
+		"data" :
+		{
+			"method" : "BasicCommunication.DialNumber"
+		}
+	}
+}
 ```

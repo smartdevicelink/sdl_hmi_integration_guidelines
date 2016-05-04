@@ -17,5 +17,8 @@ User Requests Device List Update
 
 #### JSON Example Notification
 ```json
-
+{
+	"jsonrpc" : "2.0",
+	"method" : "BasicCommunication.OnUpdateDeviceList"
+}
 ```

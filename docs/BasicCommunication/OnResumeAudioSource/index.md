@@ -29,5 +29,13 @@ Audio Source Resume one audio app one phone call app
 
 #### JSON Example Notification
 ```json
+{
+	"jsonrpc" : "2.0",
+	"method" : "BasicCommunication.OnResumeAudioSource"
+     "params" :
+	 {
+		  "appID" : 123
+ 	 }
 
+}
 ```

@@ -30,5 +30,16 @@ OnFindApplications after Device Chosen by User
 
 #### JSON Example Notification
 ```json
-
+{
+	"jsonrpc" : "2.0",
+	"method" : "BasicCommunication.OnFindApplications",
+	"params" :
+	{
+		"deviceinfo" :
+			{
+				"name" : "XT910",
+				"id" : 4
+			}
+	}
+}
 ```

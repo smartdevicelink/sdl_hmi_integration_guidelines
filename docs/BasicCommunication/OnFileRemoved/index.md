@@ -32,5 +32,15 @@ File Removed from Head Unit
 
 #### JSON Example Notification
 ```json
+{
+	"jsonrpc" : "2.0",
+	"method" : "BasicCommunication.OnFileRemoved"
+     "params" :
+	{
+      "appID" : 31780,
+"fileName" : "/fs/rwdata/storage/sdl/Emergency584421907/syncFileName",
+      "fileType" : "GRAPHIC_BMP"      
+	}
 
+}
 ```

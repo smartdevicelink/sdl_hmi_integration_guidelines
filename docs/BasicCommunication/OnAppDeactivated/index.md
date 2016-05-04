@@ -29,5 +29,13 @@ User Switches Apps
 
 #### JSON Example Notification
 ```json
-
+{
+	"jsonrpc" : "2.0",
+	"method" : "BasicCommunication.OnAppDeactivated",
+	"params" :
+	{
+		"appID" : 65544,
+		"reason" : PHONECALL
+	}
+}
 ```
