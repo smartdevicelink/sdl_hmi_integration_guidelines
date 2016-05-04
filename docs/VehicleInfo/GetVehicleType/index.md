@@ -24,3 +24,9 @@
 |model|String|false|maxlength: 500||
 |modelYear|String|false|maxlength: 500||
 |trim|String|false|maxlength: 500||
+
+### Sequence Diagrams
+|||
+GetVehicleType
+![GetVehicleType](./assets/GetVehicleType.png)
+|||
