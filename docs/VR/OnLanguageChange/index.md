@@ -37,3 +37,9 @@
 |CS-CZ|21|
 |DA-DK|22|
 |NO-NO|23|
+
+### Sequence Diagrams
+|||
+OnLanguageChange
+![OnLanguageChange](./assets/OnLanguageChange.png)
+|||
