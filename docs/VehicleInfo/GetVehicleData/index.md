@@ -263,3 +263,9 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |e911Override|Common.VehicleDataStatus|true|||
+
+### Sequence Diagrams
+|||
+GetVehicleData
+![GetVehicleData](./assets/GetVehicleData.jpg)
+|||
