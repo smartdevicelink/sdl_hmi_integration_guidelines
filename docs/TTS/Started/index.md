@@ -3,7 +3,12 @@
 
 ### Notification
 
-#### Parameters
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
+### Sequence Diagrams
+|||
+Started upon TTS.Speak request from SDL
+![Started](./assets/StartedFromSpeak.png)
+|||
+|||
+Started during PerformInteraction
+![Started](./assets/StartedFromPerformInteraction.png)
+|||
