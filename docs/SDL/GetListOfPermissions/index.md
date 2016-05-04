@@ -24,3 +24,13 @@
 |name|String|true|||
 |id|Integer|true|||
 |allowed|Boolean|false|||
+
+### Sequence Diagrams
+|||
+GetListOfPermissions
+![GetListOfPermissions](./assets/GetListOfPermissions.jpg)
+|||
+|||
+GetListOfPermissions without AppId
+![GetListOfPermissions](./assets/GetListOfPermissionsNoId.jpg)
+|||
