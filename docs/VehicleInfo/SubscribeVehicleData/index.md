@@ -231,3 +231,9 @@
 |:---|:---|:--------|:---------|:----------|
 |dataType|Common.VehicleDataType||||
 |resultCode|Common.VehicleDataResultCode||||
+
+### Sequence Diagrams
+|||
+SubscribeVehicleData
+![SubscribeVehicleData](./assets/SubscribeVehicleData.jpg)
+|||
