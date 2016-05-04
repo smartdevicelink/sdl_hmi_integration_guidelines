@@ -50,3 +50,17 @@
 |COMMUNICATION|3|
 |NORMAL|4|
 |NONE|5|
+
+### Sequence Diagrams
+|||
+ActivateApp for application registered with reduced permissions after Policy Table Update
+![ActivateApp](./assets/ActivateAppReducedPermissions.png)
+|||
+|||
+ActivateApp for application registered with revoked permissions after Policy Table Update
+![ActivateApp](./assets/ActivateAppRevokedPermissions.png)
+|||
+|||
+ActivateApp using App Launching
+![ActivateApp](./assets/ActivateAppAppLaunch.png)
+|||
