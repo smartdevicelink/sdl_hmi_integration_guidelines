@@ -21,3 +21,20 @@ This RPC has no additional parameter requirements
 StartStream
 ![StartStream](./assets/StartStream.jpg)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

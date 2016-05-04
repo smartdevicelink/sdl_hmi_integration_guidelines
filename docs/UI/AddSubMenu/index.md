@@ -42,3 +42,20 @@ Add Sub Menu with positions
 Add Sub Menu Rejected Limit Reached
 ![AddSubMenu](./assets/AddSubMenuLimit.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

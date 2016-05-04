@@ -59,3 +59,20 @@ This RPC has no additional parameter requirements
 ShowConstantTBT
 ![ShowConstantTBT](./assets/ShowConstantTBT.jpg)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

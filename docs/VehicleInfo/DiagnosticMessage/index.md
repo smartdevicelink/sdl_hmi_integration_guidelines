@@ -25,3 +25,20 @@
 DiagnosticMessage
 ![DiagnosticMessage](./assets/DiagnosticMessage.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

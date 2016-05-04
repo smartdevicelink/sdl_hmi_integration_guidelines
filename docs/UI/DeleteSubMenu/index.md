@@ -25,3 +25,20 @@ Delete Sub Menu Containing Commands
 Delete Sub Menu that is on screen
 ![DeleteSubMenu](./assets/DeleteSubMenuOnScreen.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

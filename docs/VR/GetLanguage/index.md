@@ -50,3 +50,20 @@
 GetLanguage
 ![GetLanguage](./assets/GetLanguage.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

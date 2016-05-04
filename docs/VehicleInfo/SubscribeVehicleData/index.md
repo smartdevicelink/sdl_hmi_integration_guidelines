@@ -237,3 +237,20 @@
 SubscribeVehicleData
 ![SubscribeVehicleData](./assets/SubscribeVehicleData.jpg)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

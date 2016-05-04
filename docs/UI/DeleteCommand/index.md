@@ -25,3 +25,20 @@ Delete Command with Menu Open
 Delete Command Application Inactive
 ![DeleteCommand](./assets/DeleteCommandAppInactive.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

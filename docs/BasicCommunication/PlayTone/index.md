@@ -24,3 +24,20 @@
 Play Tone with Alert
 ![PlayTone](./assets/PlayTone.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

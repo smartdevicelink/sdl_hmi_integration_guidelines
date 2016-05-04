@@ -44,3 +44,20 @@ AlertManeuver Aborted
 AlertManeuver Rejected
 ![AlertManeuver](./assets/AlertManeuverRejected.jpg)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

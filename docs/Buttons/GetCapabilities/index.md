@@ -37,3 +37,20 @@
 GetCapabilities on system startup
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

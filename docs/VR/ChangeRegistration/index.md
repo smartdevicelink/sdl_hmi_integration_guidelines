@@ -51,3 +51,20 @@ This RPC has no additional parameter requirements
 ChangeRegistration
 ![ChangeRegistration](./assets/ChangeRegistration.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

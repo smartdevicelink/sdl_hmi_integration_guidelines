@@ -78,3 +78,20 @@ Show with Soft Buttons
 Show Text Fields
 ![Show](./assets/ShowTextFields.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

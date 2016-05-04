@@ -50,3 +50,20 @@ This RPC has no additional parameter requirements
 SetGlobalProperties for active app on HMI with VR activation
 ![SetGlobalProperties](./assets/SetGlobalPropertiesActiveVRActivate.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

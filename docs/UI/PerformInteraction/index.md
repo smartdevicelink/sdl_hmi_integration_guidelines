@@ -73,3 +73,20 @@ PerformInteraction Successful with Manual Only
 PerformInteraction Timeout with Both
 ![PerformInteraction](./assets/PerformInteractionBothTimeout.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

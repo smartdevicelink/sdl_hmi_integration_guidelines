@@ -29,3 +29,20 @@
 GetStatusUpdate
 ![GetStatusUpdate](./assets/GetStatusUpdate.jpg)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

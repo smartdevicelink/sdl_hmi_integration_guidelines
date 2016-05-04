@@ -72,3 +72,20 @@ Alert Rejected
 Alert BOTH UI Closed before TTS finishes Speaking
 ![Alert](./assets/AlertTTS.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

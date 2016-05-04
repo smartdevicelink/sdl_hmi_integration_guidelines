@@ -12,3 +12,20 @@ Started upon TTS.Speak request from SDL
 Started during PerformInteraction
 ![Started](./assets/StartedFromPerformInteraction.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

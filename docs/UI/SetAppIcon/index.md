@@ -28,3 +28,20 @@ This RPC has no additional parameter requirements
 SetAppIcon
 ![SetAppIcon](./assets/SetAppIcon.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

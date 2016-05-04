@@ -64,3 +64,20 @@ ActivateApp for application registered with revoked permissions after Policy Tab
 ActivateApp using App Launching
 ![ActivateApp](./assets/ActivateAppAppLaunch.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

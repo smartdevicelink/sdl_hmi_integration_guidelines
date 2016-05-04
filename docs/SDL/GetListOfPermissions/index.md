@@ -34,3 +34,20 @@ GetListOfPermissions
 GetListOfPermissions without AppId
 ![GetListOfPermissions](./assets/GetListOfPermissionsNoId.jpg)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

@@ -30,3 +30,20 @@
 GetVehicleType
 ![GetVehicleType](./assets/GetVehicleType.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

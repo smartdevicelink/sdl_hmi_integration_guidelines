@@ -70,3 +70,20 @@
 Get Capabilities
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

@@ -50,3 +50,20 @@
 GetSupportedLanguages
 ![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

@@ -40,3 +40,20 @@ This RPC has no additional parameter requirements
 UpdateTurnList
 ![UpdateTurnList](./assets/UpdateTurnList.jpg)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

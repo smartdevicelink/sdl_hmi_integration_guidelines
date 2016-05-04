@@ -70,3 +70,20 @@ AddCommand UI Fails, VR Succeeds
 AddCommand UI No Response, VR Succeeds
 ![AddCommand](./assets/AddCommandUINoResponseVRSuccess.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

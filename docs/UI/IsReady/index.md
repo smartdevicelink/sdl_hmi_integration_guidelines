@@ -21,3 +21,20 @@
 UI Component Ready
 ![IsReady](./assets/IsReady.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

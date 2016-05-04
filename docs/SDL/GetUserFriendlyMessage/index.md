@@ -63,3 +63,20 @@
 GetUserFriendlyMessage for device consent
 ![GetUserFriendlyMessage](./assets/GetUserFriendlyMessage.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

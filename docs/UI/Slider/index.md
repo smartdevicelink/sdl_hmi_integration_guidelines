@@ -35,3 +35,20 @@ Slider with dynamic footer aborted
 Slider with OK Button press
 ![Slider](./assets/SliderOK.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

@@ -23,3 +23,20 @@ EndAudioPassThru stops audio capturing
 EndAudioPassThru audio capturing already ended
 ![EndAudioPassThru](./assets/EndAudioPassThruTooLate.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

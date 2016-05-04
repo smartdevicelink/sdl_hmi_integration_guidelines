@@ -68,3 +68,20 @@ SetDisplayLayout Successful with UI.GetCapabilities
 SetDisplayLayout Invalid Data with UI.GetCapabilities
 ![SetDisplayLayout](./assets/SetDisplayLayoutInvalidData.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

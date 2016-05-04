@@ -23,3 +23,20 @@
 |:---|:---|:--------|:---------|:----------|
 |url|String|true|||
 |policyAppId|String|false|||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

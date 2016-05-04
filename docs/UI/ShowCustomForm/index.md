@@ -17,3 +17,20 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |info|String|false|maxlength: 1000||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

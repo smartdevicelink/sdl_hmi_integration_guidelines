@@ -42,3 +42,20 @@ SendLocation Fail with warnings
 SendLocation Fail Rejected
 ![SendLocation](./assets/SendLocationFailRejected.jpg)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

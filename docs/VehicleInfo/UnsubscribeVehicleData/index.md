@@ -241,3 +241,20 @@ UnsubscribeVehicleData
 UnsubscribeVehicleData unexpected disconnect
 ![UnsubscribeVehicleData](./assets/UnsubscribeVehicleDataDisconnect.jpg)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

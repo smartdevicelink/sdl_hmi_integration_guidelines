@@ -21,3 +21,20 @@ This RPC has no additional parameter requirements
 StartAudioStream
 ![StartAudioStream](./assets/StartAudioStream.jpg)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

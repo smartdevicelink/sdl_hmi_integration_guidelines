@@ -36,3 +36,20 @@ This RPC has no additional parameter requirements
 SetGlobalProperties
 ![SetGlobalProperties](./assets/SetGlobalProperties.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

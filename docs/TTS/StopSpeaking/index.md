@@ -19,3 +19,20 @@ This RPC has no additional parameter requirements
 StopSpeaking
 ![StopSpeaking](./assets/StopSpeaking.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

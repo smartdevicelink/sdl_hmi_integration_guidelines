@@ -16,3 +16,20 @@
 #### Parameters
 
 This RPC has no additional parameter requirements
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

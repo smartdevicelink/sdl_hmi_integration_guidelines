@@ -269,3 +269,20 @@
 GetVehicleData
 ![GetVehicleData](./assets/GetVehicleData.jpg)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

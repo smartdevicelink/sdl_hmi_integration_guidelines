@@ -57,3 +57,20 @@ SetMediaClockTimer Pause and Resume for Active Application
 SetMediaClockTimer COUNTDOWN for a deactivated application
 ![SetMediaClockTimer](./assets/SetMediaClockTimerDownDeactivate.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

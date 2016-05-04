@@ -55,3 +55,20 @@ PerformInteraction in Manual Only Mode completed successfully
 PerformInteraction in Both Mode times out
 ![PerformInteraction](./assets/PerformInteractionBothTimeout.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

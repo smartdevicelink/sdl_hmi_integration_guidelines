@@ -25,3 +25,20 @@
 GetDTCs
 ![GetDTCs](./assets/GetDTCs.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

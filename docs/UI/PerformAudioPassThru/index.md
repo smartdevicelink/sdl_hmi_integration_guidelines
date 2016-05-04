@@ -42,3 +42,20 @@ PerformAudioPassThru not supported
 PerformAudioPassThru from vehicle microphone
 ![PerformAudioPassThru](./assets/PerformAudioPassThruMic.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

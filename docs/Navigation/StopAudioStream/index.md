@@ -20,3 +20,20 @@ This RPC has no additional parameter requirements
 StopAudioStream
 ![StopAudioStream](./assets/StopAudioStream.jpg)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

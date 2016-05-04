@@ -47,3 +47,20 @@ UI.AddCommand fails, VR.AddCommand returns SUCCESS
 UI.AddCommand no response, VR.AddCommand returns SUCCESS
 ![AddCommand](./assets/AddCommandSuccessUINoResponse.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

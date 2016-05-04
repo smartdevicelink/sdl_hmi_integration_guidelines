@@ -42,3 +42,20 @@ Application Just Registered
 User Requests Update App List
 ![UpdateAppList](./assets/UpdateAppListUser.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

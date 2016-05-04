@@ -49,3 +49,20 @@ ScrollableMessage with soft buttons pressed by user
 ScrollableMessage with STEAL_FOCUS button for background application
 ![ScrollableMessage](./assets/ScrollableMessageStealFocus.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

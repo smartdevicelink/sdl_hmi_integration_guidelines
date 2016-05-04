@@ -14,3 +14,20 @@
 ClosePopUp for UI.PerformInteraction
 ![ClosePopUp](./assets/ClosePopUp.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

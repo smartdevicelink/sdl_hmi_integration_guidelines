@@ -57,3 +57,20 @@ DialNumber Success
 DialNumber Failed
 ![DialNumberFailed](./assets/DialNumberFailed.png)
 |||
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```

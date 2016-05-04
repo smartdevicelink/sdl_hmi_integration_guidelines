@@ -14,3 +14,20 @@
 |Name|Value|
 |:---|:----|
 |iAPP_BUFFER_FULL|0|
+
+### Example Request
+
+```json
+
+```
+### Example Response
+
+```json
+
+```
+
+### Example Error
+
+```json
+
+```
