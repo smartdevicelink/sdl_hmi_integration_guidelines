@@ -21,3 +21,17 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |sliderPosition|Integer|false|minvalue: 1<br>maxvalue: 26||
+
+### Sequence Diagrams
+|||
+Slider with static footer displayed closed by timeout
+![Slider](./assets/SliderTimeout.png)
+|||
+|||
+Slider with dynamic footer aborted
+![Slider](./assets/SliderAbort.png)
+|||
+|||
+Slider with OK Button press
+![Slider](./assets/SliderOK.png)
+|||
