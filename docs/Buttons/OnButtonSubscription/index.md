@@ -32,3 +32,9 @@
 |PRESET_9|14|
 |CUSTOM_BUTTON|15|
 |SEARCH|16|
+
+### Sequence Diagrams
+|||
+OnButtonSubscription
+![OnButtonSubscription](./assets/OnButtonSubscription.png)
+|||
