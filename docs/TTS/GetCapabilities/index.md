@@ -36,3 +36,9 @@
 |LISTEN_JINGLE|2|
 |POSITIVE_JINGLE|3|
 |NEGATIVE_JINGLE|4|
+
+### Sequence Diagrams
+|||
+GetCapabilities
+![GetCapabilities](./assets/GetCapabilities.png)
+|||
