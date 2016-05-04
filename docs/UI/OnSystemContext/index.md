@@ -19,3 +19,9 @@
 |MENU|2|
 |HMI_OBSCURED|3|
 |ALERT|4|
+
+### Sequence Diagrams
+|||
+OnSystemContext for different HMI States
+![OnSystemContext](./assets/OnSystemContext.png)
+|||
