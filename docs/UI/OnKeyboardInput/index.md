@@ -19,3 +19,25 @@
 |ENTRY_VOICE|2|
 |ENTRY_CANCELLED|3|
 |ENTRY_ABORTED|4|
+
+### Sequence Diagrams
+|||
+OnKeyboardInput SINGLE_KEYPRESS mode
+![OnKeyboardInput](./assets/OnKeyboardInputSingle.png)
+|||
+|||
+OnKeyboardInput QUEUE_KEYPRESSES mode
+![OnKeyboardInput](./assets/OnKeyboardInputQueue.png)
+|||
+|||
+OnKeyboardInput RESEND_CURRENT_ENTRY mode
+![OnKeyboardInput](./assets/OnKeyboardInputResend.png)
+|||
+|||
+OnKeyboardInput cancelled
+![OnKeyboardInput](./assets/OnKeyboardInputCancel.png)
+|||
+|||
+OnKeyboardInput ENTRY_VOICE mode
+![OnKeyboardInput](./assets/OnKeyboardInputVoice.png)
+|||
