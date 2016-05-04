@@ -19,3 +19,9 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |messageDataResult|Integer|true|array: true<br>minsize: 1<br>maxsize: 65535<br>minvalue: 0<br>maxvalue: 255||
+
+### Sequence Diagrams
+|||
+DiagnosticMessage
+![DiagnosticMessage](./assets/DiagnosticMessage.png)
+|||
