@@ -15,3 +15,9 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |available|Boolean|true|||
+
+### Sequence Diagrams
+|||
+IsReady
+![IsReady](./assets/IsReady.png)
+|||
