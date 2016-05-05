@@ -1,5 +1,13 @@
 ## GetCapabilities
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Get the capabilities of buttons in the vehicle.
 
 ### Request
 

@@ -1,5 +1,13 @@
 ## OnButtonEvent
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL about the occurrence of a button event.
 
 ### Notification
 

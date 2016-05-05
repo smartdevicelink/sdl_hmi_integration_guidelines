@@ -1,5 +1,13 @@
 ## OnButtonSubscription
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Notify the HMI that the specified application's interest in receiving notifications for a button has changed.
 
 ### Notification
 

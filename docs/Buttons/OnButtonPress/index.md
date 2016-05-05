@@ -1,5 +1,13 @@
 ## OnButtonPress
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL about a Button Press
 
 ### Notification
 
