@@ -1,5 +1,13 @@
 ## Stopped
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL about the end of a VR session.
 
 ### Notification
 

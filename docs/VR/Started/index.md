@@ -1,5 +1,13 @@
 ## Started
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL about the start of a VR session
 
 ### Notification
 

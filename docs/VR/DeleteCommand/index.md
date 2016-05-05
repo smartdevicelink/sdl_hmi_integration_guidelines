@@ -1,5 +1,13 @@
 ## DeleteCommand
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Remove a voice recognition command from the application's context.
 
 ### Request
 

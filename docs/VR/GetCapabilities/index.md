@@ -1,5 +1,13 @@
 ## GetCapabilities
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Inform SDL of the VR capabilities of the vehicle.
 
 ### Request
 

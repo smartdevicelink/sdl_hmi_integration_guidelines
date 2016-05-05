@@ -1,5 +1,13 @@
 ## OnCommand
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL that an application's VR command was recognized.
 
 ### Notification
 

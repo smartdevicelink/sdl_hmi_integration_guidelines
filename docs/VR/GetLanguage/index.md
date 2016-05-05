@@ -1,5 +1,13 @@
 ## GetLanguage
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Get the current voice recognition language.
 
 ### Request
 

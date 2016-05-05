@@ -1,5 +1,13 @@
 ## PerformInteraction
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Perform a VR interaction with the User.
 
 ### Request
 

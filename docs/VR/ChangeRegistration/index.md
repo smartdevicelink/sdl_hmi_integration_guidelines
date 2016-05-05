@@ -1,5 +1,13 @@
 ## ChangeRegistration
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Change the language for voice recognition.
 
 ### Request
 

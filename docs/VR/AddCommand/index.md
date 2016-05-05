@@ -1,5 +1,13 @@
 ## AddCommand
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Add a command for voice recognition
 
 ### Request
 

@@ -1,5 +1,13 @@
 ## IsReady
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Request ready state of VR Module
 
 ### Request
 
