@@ -63,16 +63,73 @@ ShowConstantTBT
 ### Example Request
 
 ```json
-
+{
+	"id" : 543,
+	"jsonrpc" : "2.0",
+	"method" : "Navigation.ShowConstantTBT",
+	"params" :
+	{
+		"navigationTexts" :
+		[
+			{
+				"fieldName" :  navigationText1,
+				"fieldText" : "Destination point: Berlin"
+			},
+			{
+				"fieldName" :  ETA,
+				"fieldText" : "15:45"
+			},
+			{
+				"fieldName" :  totalDistance,
+				"fieldText" : "658"
+			}
+		],
+		"turnIcon" :
+		[
+				 "value" : "tmp/SDL/app/Navi/icon_3245.jpeg",
+				 "imageType" : DYNAMIC
+		],
+		"distanceToManeuver" : 168,
+		"distanceToManeuverScale" : 265,
+		"softButtons" :
+		[
+				"type" :  TEXT,
+				"text" : "Close",
+				"softButtonID" : 76,
+				"systemAction" :  DEFAULT_ACTION
+		],
+		"appID" : 26743
+	}
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 543,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"code" : 0,
+		"method" : "Navigation.ShowConstantTBT"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 543,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 5,
+		"message" : " A command was aborted",
+		"data" :
+		{
+			"method" : "Navigation.ShowConstantTBT"
+		}
+	}
+}
 ```

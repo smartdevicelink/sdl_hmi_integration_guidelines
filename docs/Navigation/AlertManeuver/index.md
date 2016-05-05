@@ -48,16 +48,58 @@ AlertManeuver Rejected
 ### Example Request
 
 ```json
-
+{
+  "id": 143,
+  "jsonrpc": "2.0",
+  "method": "Navigation.AlertManeuver",
+  "params": {
+    "softButtons": [
+      {
+        "type": TEXT,
+        "text": "Leave Onscreen",
+        "softButtonID": 45,
+        "systemAction": KEEP_CONTEXT
+      },
+      {
+        "type": TEXT,
+        "text": "Close",
+        "softButtonID": 46,
+        "systemAction": STEAL_FOCUS
+      }
+    ]
+  },
+  "appID": 96
+}
 ```
+
 ### Example Response
 
 ```json
-
+{
+	"id" : 143,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"code" : 0,
+		"method" : "Navigation.AlertManeuver"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 143,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 13,
+		"message" : "The command cannot be executed because there is NO app registered with the specified appID",
+		"data" :
+		{
+			"method" : "Navigation.AlertManeuver"
+		}
+	}
+}
 ```

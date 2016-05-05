@@ -29,3 +29,15 @@
 OnTBTClientState
 ![OnTBTClientState](./assets/OnTBTClientState.jpg)
 |||
+
+#### JSON Example Notification
+```json
+{
+	"jsonrpc" : "2.0",
+	"method" : "Navigation.OnTBTClientState",
+	"params" :  
+	{
+		"state" : "NEXT_TURN_REQUEST"
+	}
+}
+```

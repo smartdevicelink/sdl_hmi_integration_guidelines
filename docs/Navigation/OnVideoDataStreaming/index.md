@@ -14,3 +14,15 @@
 OnVideoDataStreaming
 ![OnVideoDataStreaming](./assets/OnVideoDataStreaming.jpg)
 |||
+
+#### JSON Example Notification
+```json
+{
+	"jsonrpc" : "2.0",
+	"method" : "Navigation.OnVideoDataStreaming",
+	"params" :  
+	{
+		"available" : true
+	}
+}
+```

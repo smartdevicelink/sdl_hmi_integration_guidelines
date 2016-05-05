@@ -19,3 +19,15 @@ OnAudioDataStreaming SDL to HMI
 OnAudioDataStreaming App to HMI
 ![OnAudioDataStreaming](./assets/OnAudioDataStreamingAppHMI.jpg)
 |||
+
+#### JSON Example Notification
+```json
+{
+	"jsonrpc" : "2.0",
+	"method" : "Navigation.OnAudioDataStreaming",
+	"params" :  
+	{
+		"available" : true
+	}
+}
+```
