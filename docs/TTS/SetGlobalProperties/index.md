@@ -1,5 +1,13 @@
 ## SetGlobalProperties
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Set the properties for the TTS component.
 
 ### Request
 

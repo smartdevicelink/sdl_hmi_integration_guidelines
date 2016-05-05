@@ -1,5 +1,13 @@
 ## Stopped
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL that TTS has stopped.
 
 ### Notification
 

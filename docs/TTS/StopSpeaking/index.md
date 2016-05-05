@@ -1,5 +1,13 @@
 ## StopSpeaking
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Interrupt the current spoken session.
 
 ### Request
 

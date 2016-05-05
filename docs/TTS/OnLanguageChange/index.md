@@ -1,5 +1,13 @@
 ## OnLanguageChange
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL that the language for the TTS component has changed.
 
 ### Notification
 

@@ -1,5 +1,13 @@
 ## Speak
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Prompt TTS to speak the requested text to the user.
 
 ### Request
 

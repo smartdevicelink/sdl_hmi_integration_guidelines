@@ -1,5 +1,13 @@
 ## ChangeRegistration
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Change the language of the TTS component.
 
 ### Request
 

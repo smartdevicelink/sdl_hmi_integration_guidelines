@@ -1,5 +1,13 @@
 ## Started
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL that TTS has started.
 
 ### Notification
 

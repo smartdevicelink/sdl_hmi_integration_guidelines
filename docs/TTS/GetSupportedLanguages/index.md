@@ -1,5 +1,13 @@
 ## GetSupportedLanguages
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Get the supported TTS languages
 
 ### Request
 

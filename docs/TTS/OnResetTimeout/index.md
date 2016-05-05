@@ -1,5 +1,13 @@
 ## OnResetTimeout
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL to reset the timeout if speaking is running over the default timeout.
 
 ### Notification
 

@@ -1,5 +1,13 @@
 ## GetLanguage
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Get the current TTS language.
 
 ### Request
 

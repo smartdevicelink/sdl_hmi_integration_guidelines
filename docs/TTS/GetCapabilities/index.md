@@ -1,5 +1,13 @@
 ## GetCapabilities
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Inform SDL of the TTS capabilities of the vehicle.
 
 ### Request
 
