@@ -25,16 +25,41 @@ IsReady
 ### Example Request
 
 ```json
-
+{
+	"id" : 45,
+	"jsonrpc" : "2.0",
+	"method" : "VR.IsReady"
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 45,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"availabe" : true,
+		"code" : 0,
+		"method" : "VR.IsReady"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 45,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 11,
+		"message" : "Invalid data",
+		"data" :
+		{
+			"method" : "VR.IsReady"
+		}
+	}
+}
 ```

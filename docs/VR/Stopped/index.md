@@ -9,19 +9,11 @@ Stopped when VR session ends
 ![Stopped](./assets/Stopped.png)
 |||
 
-### Example Request
+### Example Notification
 
 ```json
-
-```
-### Example Response
-
-```json
-
-```
-
-### Example Error
-
-```json
-
+{
+	"jsonrpc" : "2.0",
+	"method" : "VR.Stopped",
+}
 ```

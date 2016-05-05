@@ -11,19 +11,10 @@ Started on PTT Button Press
 ![Started](./assets/Started.png)
 |||
 
-### Example Request
+### Example Notification
 
 ```json
-
-```
-### Example Response
-
-```json
-
-```
-
-### Example Error
-
-```json
-
-```
+{
+	"jsonrpc" : "2.0",
+	"method" : "VR.Started",
+}

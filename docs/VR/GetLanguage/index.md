@@ -54,16 +54,41 @@ GetLanguage
 ### Example Request
 
 ```json
-
+{
+	"id" : 110,
+	"jsonrpc" : "2.0",
+	"method" : "VR.GetLanguage",
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 110,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"language" : "DE-DE",
+		"code" : 0,
+		"method" : "VR.GetLanguage"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 110,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 22,
+		"message" : "During the API call the unknown error has occured",
+		"data" :
+		{
+			"method" : "VR.GetLanguage"
+		}
+	}
+}
 ```

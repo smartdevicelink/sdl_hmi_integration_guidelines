@@ -18,5 +18,14 @@ OnCommand
 
 #### JSON Example Notification
 ```json
-
+{
+	"jsonrpc" : "2.0",
+	"method" : "VR.OnCommand",
+	"params" :
+	{
+		"cmdID" : 4365,
+      "grammarID" : 11,
+      "appID" : 12564
+	}
+}
 ```

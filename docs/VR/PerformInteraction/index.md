@@ -59,16 +59,63 @@ PerformInteraction in Both Mode times out
 ### Example Request
 
 ```json
+{
+	"id" : 79,
+	"jsonrpc" : "2.0",
+	"method" : "VR.PerformInteraction",
+	"params" :
+	{
+		"initialPrompt" :
+		[
+			"text" : "Please make your choice by voice",
+		],
 
+		"helpPrompt" :
+		[
+			"text" : "Yes",
+			"text" : "No",
+			"text" : "Skip"
+		],
+
+		"timeoutPrompt" :
+		[
+			"text" : "The time is about to run out"
+		],
+
+		"timeout" : 10000,
+		"grammarID" : 245
+	}
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 79,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"choiceID" : 2416
+		"code" : 0,
+		"method" : "VR.PerformInteraction"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 79,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 10,
+		"message" : "Interaction reached the maximum timeout and will be closed",
+		"data" :
+		{
+			"method" : "VR.PerformInteraction"
+		}
+	}
+}
 ```
