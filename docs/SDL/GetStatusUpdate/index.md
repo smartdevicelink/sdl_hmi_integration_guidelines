@@ -33,16 +33,41 @@ GetStatusUpdate
 ### Example Request
 
 ```json
-
+{
+	"id" : 176,
+	"jsonrpc" : "2.0",
+	"method" : "SDL.GetStatusUpdate",
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 176,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"status" : "UPDATE_NEEDED"
+		"code" : 0,
+		"method" : "SDL.GetStatusUpdate"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 176,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" :22,
+		"message" : "Some error occured",
+		"data" :
+		{
+			"method" : "SDL.GetStatusUpdate"
+		}
+	}
+}
 ```

@@ -68,16 +68,48 @@ ActivateApp using App Launching
 ### Example Request
 
 ```json
-
+{
+	"id" : 27,
+	"jsonrpc" : "2.0",
+	"method" : "SDL.ActivateApp"
+	"params" :
+	{
+		"appID" : 12345
+	}
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 27,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"isSDLAllowed" : true,
+		"isPermissionsConsentNeeded" : false,
+		"isAppPermissionsRevoked" : false,
+		"isAppRevoked" : false,
+		"code" : 0,
+		"method" : "SDL.ActivateApp"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 27,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 22,
+		"message" : "The unknown error has occurred",
+		"data" :
+		{
+			"method" : "SDL.ActivateApp"
+		}
+	}
+}
 ```
