@@ -1,5 +1,13 @@
 ## GetStatusUpdate
 
+Type
+: Function
+
+Sender
+: HMI
+
+Purpose
+: Get information about the current status of the policy update process.
 
 ### Request
 

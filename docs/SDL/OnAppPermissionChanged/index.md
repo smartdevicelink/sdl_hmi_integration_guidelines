@@ -1,5 +1,13 @@
 ## OnAppPermissionChanged
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Inform HMI that permissions have changed for a specified application.
 
 ### Notification
 

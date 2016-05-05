@@ -1,5 +1,13 @@
 ## OnStatusUpdate
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Inform the HMI about the status of a policy table update.
 
 ### Notification
 

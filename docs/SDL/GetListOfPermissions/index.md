@@ -1,5 +1,13 @@
 ## GetListOfPermissions
 
+Type
+: Function
+
+Sender
+: HMI
+
+Purpose
+: Get the list of permissions for the specified application or for all applications.
 
 ### Request
 
