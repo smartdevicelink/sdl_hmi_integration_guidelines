@@ -1,5 +1,13 @@
 ## OnExitAllApplications
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL to exit every registered application.
 
 ### Notification
 

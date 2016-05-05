@@ -1,5 +1,14 @@
 ## OnResumeAudioSource
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Inform the HMI that an application being resumed needs to become audible.
+
 
 ### Notification
 

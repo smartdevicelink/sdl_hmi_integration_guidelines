@@ -1,5 +1,13 @@
 ## PlayTone
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Tell the HMI to play a notification sound.
 
 ### Notification
 

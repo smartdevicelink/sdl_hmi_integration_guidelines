@@ -1,5 +1,13 @@
 ## OnSystemRequest
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: A request from the HMI to download data via a connected application.
 
 ### Notification
 

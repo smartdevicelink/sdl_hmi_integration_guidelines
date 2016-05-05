@@ -1,5 +1,14 @@
 ## OnAwakeSDL
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Notify SDL to return to normal operation after a suspend event.
+
 
 ### Sequence Diagrams
 |||

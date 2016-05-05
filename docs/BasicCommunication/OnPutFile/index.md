@@ -1,5 +1,13 @@
 ## OnPutFile
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Inform the HMI that a file has been uploaded into a shared folder by an application.
 
 ### Notification
 

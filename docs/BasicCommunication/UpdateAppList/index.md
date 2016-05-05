@@ -1,5 +1,14 @@
 ## UpdateAppList
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Update HMI's list of registered applications.
+
 
 ### Request
 

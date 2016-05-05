@@ -1,5 +1,14 @@
 ## OnSDLPersistenceComplete
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Inform HMI that any data persistence operations have been completed.
+
 
 ### Notification
 

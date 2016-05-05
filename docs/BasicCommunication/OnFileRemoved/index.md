@@ -1,5 +1,14 @@
 ## OnFileRemoved
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Inform the HMI that a file has been removed from a shared folder by an application.
+
 
 ### Notification
 

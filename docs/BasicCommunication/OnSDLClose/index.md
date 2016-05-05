@@ -1,5 +1,14 @@
 ## OnSDLClose
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Inform the HMI that SDL is ready to be terminated by the system.
+
 
 ### Notification
 

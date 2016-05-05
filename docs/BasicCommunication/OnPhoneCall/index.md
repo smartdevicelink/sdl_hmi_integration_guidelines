@@ -1,5 +1,14 @@
 ## OnPhoneCall
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Notify SDL that a Phone Call event has started or completed.
+
 
 ### Notification
 

@@ -1,5 +1,13 @@
 ## OnExitApplication
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL that an application must be unregistered or put into the NONE HMI state.
 
 ### Notification
 

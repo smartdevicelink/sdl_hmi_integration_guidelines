@@ -1,5 +1,13 @@
 ## OnAppUnregistered
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Inform the HMI that an application has unregistered.
 
 ### Notification
 

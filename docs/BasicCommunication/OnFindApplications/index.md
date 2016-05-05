@@ -1,5 +1,13 @@
 ## OnFindApplications
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Initiate the search for applications on the named device.
 
 ### Notification
 

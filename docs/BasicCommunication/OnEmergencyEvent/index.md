@@ -1,5 +1,14 @@
 ## OnEmergencyEvent
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL to change all AUDIBLE apps to NOT_AUDIBLE and back.
+
 
 ### Notification
 

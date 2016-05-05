@@ -1,5 +1,13 @@
 ## OnAppRegistered
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Update the HMI's list of registered applications and resume the Audio Source
 
 ### Notification
 

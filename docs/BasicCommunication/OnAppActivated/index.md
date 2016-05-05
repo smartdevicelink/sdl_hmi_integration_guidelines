@@ -1,5 +1,13 @@
 ## OnAppActivated
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL that the user has chosen to activate an application.
 
 ### Notification
 
