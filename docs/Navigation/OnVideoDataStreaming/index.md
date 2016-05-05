@@ -1,5 +1,13 @@
 ## OnVideoDataStreaming
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Notify the HMI about a raw video data stream which should be visible to the user while in that application's context.
 
 ### Notification
 

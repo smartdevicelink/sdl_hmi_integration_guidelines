@@ -1,5 +1,13 @@
 ## OnAudioDataStreaming
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Notify the HMI about a raw audio data stream which should be audible to the user.
 
 ### Notification
 

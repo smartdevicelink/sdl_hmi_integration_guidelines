@@ -1,5 +1,13 @@
 ## OnTBTClientState
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Provide SDL with information about changes to the TBT client state.
 
 ### Notification
 

@@ -1,5 +1,13 @@
 ## SendLocation
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Allow a connected application to send a destination to the embedded navigation system.
 
 ### Request
 

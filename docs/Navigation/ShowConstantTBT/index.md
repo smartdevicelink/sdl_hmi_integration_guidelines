@@ -1,5 +1,13 @@
 ## ShowConstantTBT
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Update navigation information of the embedded navigation system.
 
 ### Request
 

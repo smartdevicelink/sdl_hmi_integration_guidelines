@@ -1,5 +1,13 @@
 ## StartStream
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Initiate a video streaming service between SDL and the HMI to stream video data.
 
 ### Request
 

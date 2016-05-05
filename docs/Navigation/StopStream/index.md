@@ -1,5 +1,13 @@
 ## StopStream
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Close the video streaming service between SDL and the HMI and stop streaming video data.
 
 ### Request
 

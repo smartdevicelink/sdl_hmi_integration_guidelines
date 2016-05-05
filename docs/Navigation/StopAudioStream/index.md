@@ -1,5 +1,13 @@
 ## StopAudioStream
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Stop the audio streaming service between SDL and the HMI and stop streaming audio data.
 
 ### Request
 
@@ -57,7 +65,7 @@ StopAudioStream
 	{
 		"code" : 22,
 		"message" : "Stop stream failed or some other error occurred",
-		"data" : 
+		"data" :
 		{
 			"method" : "Navigation.StopAudioStream"
 		}

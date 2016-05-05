@@ -1,5 +1,13 @@
 ## StartAudioStream
 
+Type
+: Notification
+
+Sender
+: SDL
+
+Purpose
+: Initiate an audio streaming service between SDL and the HMI to stream audio data.
 
 ### Request
 
@@ -59,7 +67,7 @@ StartAudioStream
 	{
 		"code" : 22,
 		"message" : "Start stream failed or some other error occurred",
-		"data" : 
+		"data" :
 		{
 			"method" : "Navigation.StartAudioStream"
 		}

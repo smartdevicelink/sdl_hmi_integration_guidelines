@@ -1,5 +1,13 @@
 ## AlertManeuver
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Announce a navigation maneuver.
 
 ### Request
 

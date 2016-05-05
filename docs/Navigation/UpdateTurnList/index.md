@@ -1,5 +1,13 @@
 ## UpdateTurnList
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Update embedded navigation's list of directions for the current route.
 
 ### Request
 
