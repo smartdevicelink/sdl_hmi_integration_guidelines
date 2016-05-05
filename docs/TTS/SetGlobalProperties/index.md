@@ -40,16 +40,56 @@ SetGlobalProperties
 ### Example Request
 
 ```json
+{
+	"id" : 37,
+	"jsonrpc" : "2.0",
+	"method" : "TTS.SetGlobalProperties",
+	"params" :
+	{
+		"helpPrompt" :
+		[
+			"text" : "Yes",
+			"text" : "No",
+			"text" : "Skip"
+		],
 
+		"timeoutPrompt" :
+		[
+			"text" : "Please make a choice",
+			"text" : "The time is about to expire"
+		],
+		"appID" : 65542
+	}
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 37,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"code" : 0,
+		"method" : "TTS.SetGlobalProperties"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 37,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 2,
+		"message" : "TTS is not supported",
+		"data" :
+		{
+			"method" : "TTS.SetGlobalProperties"
+		}
+	}
+}
 ```

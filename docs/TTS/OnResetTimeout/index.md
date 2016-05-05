@@ -22,5 +22,14 @@ OnResetTimeout for Speak GENERIC_ERROR
 
 #### JSON Example Notification
 ```json
+{
+	"jsonrpc" : "2.0",
+	"method" : "TTS.OnResetTimeout",
+     "params" :
+	{
+		"appID" : 123,
+		"methodName" : "Speak"
 
+	}
+}
 ```
