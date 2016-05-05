@@ -46,5 +46,12 @@ OnLanguageChange
 
 #### JSON Example Notification
 ```json
-
+{
+	"jsonrpc" : "2.0",
+	"method" : "UI.OnLanguageChange",
+	"params" :
+	{
+		"language" : "FR-CA"
+	}
+}
 ```

@@ -46,16 +46,50 @@ Add Sub Menu Rejected Limit Reached
 ### Example Request
 
 ```json
-
+{
+	"id" : 112,
+	"jsonrpc" : "2.0",
+	"method" : "UI.AddSubMenu",
+	"params" :
+	{
+		"menuID" : 345,
+		"menuParams" :
+		{
+				 "position" : 2,
+				 "menuName" : "Settings"
+		},
+		"appID" : 65464
+	}
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 112,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"code" : 0,
+		"method" : "UI.AddSubMenu"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 112,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 14,
+		"message" : "Duplicate name: there was a conflict with an already registered name of SubMenu",
+		"data" :
+		{
+			"method" : "UI.AddSubMenu"
+		}
+	}
+}
 ```

@@ -77,16 +77,104 @@ PerformInteraction Timeout with Both
 ### Example Request
 
 ```json
+{
+	"id" : 79,
+	"jsonrpc" : "2.0",
+	"method" : "UI.PerformInteraction",
+	"params" :
+	{
+		"initialText" :
+		{
+				 "fieldName" : initialInteractionText,
+				 "fieldText" : "Choose the station:"
+		},
 
+		"choiceSet" :
+		[
+			{
+				 "choiceID" : 2415,
+				 "menuName" : "Sky.FM"
+			},
+
+			{
+				 "choiceID" : 2416,
+				 "menuName" : "Paradise"
+			},
+
+			{
+				 "choiceID" : 2417,
+				 "menuName" : "100 XR"
+			}
+		],
+
+		"vrHelp" :
+		[
+				{
+				 "text" : "Sky FM",
+				 "image" :
+					[
+				 		"value" : "tmp/SDL/app/Pandora/icon_5410.jpg",
+				 		"imageType" : DYNAMIC
+					],
+
+				 "position" : 1
+				},
+
+				{
+				 "text" : "Paradise",
+				 "image" :
+					[
+				 		"value" : "tmp/SDL/app/Pandora/icon_5423.jpeg",
+				 		"imageType" : DYNAMIC
+					],
+				 "position" : 2
+				},
+
+				{
+				 "text" : "100 XR",
+				 "image" :
+					[
+				 		"value" : "tmp/SDL/app/Pandora/icon_5465.jpeg",
+				 		"imageType" : DYNAMIC
+					],
+				 "position" : 3
+				}
+		],
+
+		"timeout" : 15000,
+		"appID" : 6493
+	}
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 79,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"choiceID" : 2416
+		"code" : 0,
+		"method" : "UI.PerformInteraction"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 79,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 10,
+		"message" : "Overlay reached the maximum timeout and closed",
+		"data" :
+		{
+			"method" : "UI.PerformInteraction"
+		}
+	}
+}
 ```

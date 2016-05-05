@@ -29,16 +29,45 @@ Delete Command Application Inactive
 ### Example Request
 
 ```json
-
+{
+	"id" : 70,
+	"jsonrpc" : "2.0",
+	"method" : "UI. DeleteCommand",
+	"params" :
+	{
+		"cmdID" : 2318,
+		"appID" : 65409
+	}
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 70,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"code" : 0,
+		"method" : "UI. DeleteCommand"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 70,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 13,
+		"message" : "One of the provided IDs is not valid",
+		"data" :
+		{
+			"UI. DeleteCommand"
+		}
+	}
+}
 ```

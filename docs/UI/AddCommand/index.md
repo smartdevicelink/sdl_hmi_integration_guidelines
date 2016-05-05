@@ -74,16 +74,56 @@ AddCommand UI No Response, VR Succeeds
 ### Example Request
 
 ```json
-
+{
+	"id" : 215,
+	"jsonrpc" : "2.0",
+	"method" : "UI. AddCommand",
+	"params" :
+	{
+		"cmdID" : 2318,
+		"menuParams" :
+		 {
+				 "parentID" : 6,
+				 "position" : 0,
+				 "menuName" : "Show weather for tomorrow"
+		 },
+		"cmdIcon" :
+		 {
+				 "value" : "tmp/SDL/app/Gis_meteo/1245_28.jpeg",
+				 "imageType" : DYNAMIC
+		 },
+		"appID" : 65409
+	}
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 215,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"code" : 0,
+		"method" : "UI.AddCommand"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 215,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 13,
+		"message" : "There’s no app with received appID registered",
+		"data" :
+		{
+			"method" : "UI.AddCommand"
+		}
+	}
+}
 ```

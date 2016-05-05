@@ -24,5 +24,12 @@ OnDriverDistraction
 
 #### JSON Example Notification
 ```json
-
+{
+	"jsonrpc" : "2.0",
+	"method" : "UI.OnDriverDistraction",
+	"params" :
+	{
+		"state" : "DD_ON"
+	}
+}
 ```

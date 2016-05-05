@@ -29,16 +29,45 @@ Delete Sub Menu that is on screen
 ### Example Request
 
 ```json
-
+{
+	"id" : 70,
+	"jsonrpc" : "2.0",
+	"method" : "UI. DeleteSubMenu",
+	"params" :
+	{
+		"menuID" : 345,
+		"appID" : 65464
+	}
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 70,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"code" : 0,
+		"method" : "UI. DeleteSubMenu"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 70,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 8,
+		"message" : "The data may not be changed because it is currently in use",
+		"data" :
+		{
+			"UI. DeleteSubMenu "
+		}
+	}
+}
 ```

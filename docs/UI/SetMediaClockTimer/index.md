@@ -61,16 +61,51 @@ SetMediaClockTimer COUNTDOWN for a deactivated application
 ### Example Request
 
 ```json
-
+{
+	"id" : 109,
+	"jsonrpc" : "2.0",
+	"method" : "UI.SetMediaClockTimer",
+	"params" :
+	{
+		"startTime" :
+		{
+				 "hours" : 0,
+				 "minutes" : 18,
+				 "seconds" : 17
+		},
+		"updateMode" : "COUNTUP",
+		"appID" : 65146
+	}
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 109,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"code" : 0,
+		"method" : "UI.SetMediaClockTimer"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 109,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 11,
+		"message" : "Invalid data",
+		"data" :
+		{
+			"method" : "UI.SetMediaClockTimer"
+		}
+	}
+}
 ```

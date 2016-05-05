@@ -46,16 +46,49 @@ PerformAudioPassThru from vehicle microphone
 ### Example Request
 
 ```json
-
+{
+	"id" : 79,
+	"jsonrpc" : "2.0",
+	"method" : "UI.PerformAudioPassThru",
+	"params" :
+	{
+		"audioPassThruDisplayTexts" :
+		{
+				 "fieldName" :  audioPassThruDisplayText1,
+		 "fieldText" : "The audio capturing is in progress"
+		},
+		"maxDuration" : 10000,
+	}
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 79,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"code" : 0,
+		"method" : "UI.PerformAudioPassThru"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 79,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 7,
+		"message" : "The user interrupted the RPC and indicated to start over",
+		"data" :
+		{
+			"method" : "UI.PerformAudioPassThru"
+		}
+	}
+}
 ```

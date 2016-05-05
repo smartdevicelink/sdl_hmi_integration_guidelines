@@ -53,16 +53,67 @@ ScrollableMessage with STEAL_FOCUS button for background application
 ### Example Request
 
 ```json
+{
+	"id" : 138,
+	"jsonrpc" : "2.0",
+	"method" : "UI.ScrollableMessage",
+	"params" :
+	{
+		"messageText" :
+		{
+				 "fieldName" :  scrollableMessageBody,
+		 "fieldText" : "Create a Station
+					Enter an artist, song or composer in the Search box in the top left corner. We'll create a radio station featuring that music and more like it. You can also create a new station from the song or artist currently playing by hovering over the album artwork, clicking the white up-arrow and selecting New Station—you can choose From Song or From Artist."
+		},
+		"timeout" : 10000,
+		"softButtons" :
+		[
+			{
+				"type" :  TEXT,
+				"text" : "Leave onscreen",
+				"softButtonID" : 15,
+				"systemAction" :  KEEP_CONTEXT
+			},
+			{
+				"type" :  TEXT,
+				"text" : "Cancel",
+				"softButtonID" : 16,
+				"systemAction" :  STEAL_FOCUS
+			}
+		],
 
+		"appID" : 6527
+	}
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 138,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"code" : 0,
+		"method" : "UI.ScrollableMessage"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 138,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 12,
+		"message" : "The string data is too long",
+		"data" :
+		{
+			"method" : "UI.ScrollableMessage"
+		}
+	}
+}
 ```

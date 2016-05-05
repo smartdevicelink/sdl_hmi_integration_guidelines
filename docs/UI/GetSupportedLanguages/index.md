@@ -54,16 +54,41 @@ Get Supported Languages
 ### Example Request
 
 ```json
-
+{
+	"id" : 99,
+	"jsonrpc" : "2.0",
+	"method" : "UI.GetSupportedLanguages"
+}
 ```
 ### Example Response
 
 ```json
-
+{
+	"id" : 99,
+	"jsonrpc" : "2.0",
+	"result" :
+	{
+		"languages" : ["AR-SA", "DE-DE", "EN-GB", "EN-US", "ES-ES", "FR-FR", "IT-IT"],
+		"code" : 0,
+		"method" : "UI.GetSupportedLanguages"
+	}
+}
 ```
 
 ### Example Error
 
 ```json
-
+{
+	"id" : 99,
+	"jsonrpc" : "2.0",
+	"error" :
+	{
+		"code" : 9,
+		"message" : "The requested data is not available",
+		"data" :
+		{
+			"method" : "UI.GetSupportedLanguages"
+		}
+	}
+}
 ```

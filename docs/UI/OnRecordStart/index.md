@@ -25,5 +25,12 @@ OnRecordStart not sent if UI.PerformAudioPassThru rejected
 
 #### JSON Example Notification
 ```json
-
+{
+	"jsonrpc" : "2.0",
+	"method" : "UI.OnRecordStart",
+	"params" :
+	{
+		"appID" : 65537
+	}
+}
 ```
