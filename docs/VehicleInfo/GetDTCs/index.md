@@ -1,5 +1,13 @@
 ## GetDTCs
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Request DTCs from vehicle.
 
 ### Request
 

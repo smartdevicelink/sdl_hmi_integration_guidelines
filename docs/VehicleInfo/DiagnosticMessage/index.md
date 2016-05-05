@@ -1,5 +1,13 @@
 ## DiagnosticMessage
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Request current diagnostic messages.
 
 ### Request
 

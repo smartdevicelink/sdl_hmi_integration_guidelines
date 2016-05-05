@@ -1,5 +1,13 @@
 ## UnsubscribeVehicleData
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Unsubscribe from periodic vehicle data type updates
 
 ### Request
 

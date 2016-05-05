@@ -1,5 +1,13 @@
 ## ReadDID
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Request data from specified DID locations.
 
 ### Request
 

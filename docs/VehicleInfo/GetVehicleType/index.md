@@ -1,5 +1,13 @@
 ## GetVehicleType
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Get general information about the vehicle.
 
 ### Request
 

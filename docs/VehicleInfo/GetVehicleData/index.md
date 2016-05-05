@@ -1,5 +1,13 @@
 ## GetVehicleData
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Get current values of specified vehicle data types.
 
 ### Request
 

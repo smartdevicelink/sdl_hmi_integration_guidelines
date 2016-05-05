@@ -1,5 +1,13 @@
 ## OnVehicleData
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL about changes to subscribed vehicle data values.
 
 ### Notification
 

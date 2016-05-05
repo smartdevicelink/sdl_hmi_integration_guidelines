@@ -1,5 +1,13 @@
 ## SubscribeVehicleData
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Subscribe to periodic vehicle data type updates
 
 ### Request
 
