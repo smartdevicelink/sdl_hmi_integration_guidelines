@@ -1,5 +1,13 @@
 ## OnLanguageChange
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL that the UI display language has changed.
 
 ### Notification
 

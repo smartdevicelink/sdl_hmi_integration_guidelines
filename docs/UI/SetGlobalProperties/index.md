@@ -1,5 +1,13 @@
 ## SetGlobalProperties
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Set the UI properties of an application.
 
 ### Request
 

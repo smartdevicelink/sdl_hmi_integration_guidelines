@@ -1,5 +1,13 @@
 ## AddCommand
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Add a command to the specified application's menu or sub menu
 
 ### Request
 

@@ -1,5 +1,13 @@
 ## OnTouchEvent
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL that a touch event has occurred in the HMI.
 
 ### Notification
 

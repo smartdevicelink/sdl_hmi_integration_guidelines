@@ -1,5 +1,13 @@
 ## SetMediaClockTimer
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Set a value and update mode for the media clock of a media application.
 
 ### Request
 

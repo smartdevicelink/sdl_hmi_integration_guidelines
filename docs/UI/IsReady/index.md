@@ -1,5 +1,14 @@
 ## IsReady
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Request ready state of UI Module
+
 
 ### Request
 

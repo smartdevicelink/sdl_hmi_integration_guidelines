@@ -1,5 +1,13 @@
 ## DeleteSubMenu
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Delete a sub menu from the specified application's menu
 
 ### Request
 

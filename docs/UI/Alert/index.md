@@ -1,5 +1,13 @@
 ## Alert
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Display an alert message on the HMI
 
 ### Request
 

@@ -1,5 +1,13 @@
 ## OnKeyboardInput
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL that a keyboard event has occurred.
 
 ### Notification
 

@@ -1,5 +1,13 @@
 ## OnCommand
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL that a command has been chosen by the User from the UI.
 
 ### Notification
 

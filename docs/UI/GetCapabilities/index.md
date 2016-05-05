@@ -1,5 +1,14 @@
 ## GetCapabilities
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Inform SDL of the UI capabilities of the vehicle.
+
 
 ### Request
 

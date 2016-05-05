@@ -1,5 +1,13 @@
 ## OnResetTimeout
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL that a timeout has been reset via user action for some transient UI element.
 
 ### Notification
 

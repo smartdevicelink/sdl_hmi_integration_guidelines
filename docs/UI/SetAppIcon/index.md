@@ -1,5 +1,13 @@
 ## SetAppIcon
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Display the application's specified icon in the HMI's application list.
 
 ### Request
 

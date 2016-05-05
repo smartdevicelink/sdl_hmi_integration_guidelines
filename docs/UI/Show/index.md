@@ -1,5 +1,13 @@
 ## Show
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Update fields displayed on the HMI for the specified application.
 
 ### Request
 

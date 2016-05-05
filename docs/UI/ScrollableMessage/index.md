@@ -1,5 +1,13 @@
 ## ScrollableMessage
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Display a dialog that may contain new lines and text which is scrollable by the user.
 
 ### Request
 

@@ -1,5 +1,13 @@
 ## SetDisplayLayout
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Set the display template for the specified application's persistent display.
 
 ### Request
 

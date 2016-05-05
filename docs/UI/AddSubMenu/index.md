@@ -1,5 +1,13 @@
 ## AddSubMenu
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Add a sub menu to the specified application's menu
 
 ### Request
 

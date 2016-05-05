@@ -1,5 +1,13 @@
 ## PerformInteraction
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Perform a UI Interaction with the User.
 
 ### Request
 

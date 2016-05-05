@@ -1,5 +1,13 @@
 ## ChangeRegistration
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Change the display language for the specified application on the HMI
 
 ### Request
 

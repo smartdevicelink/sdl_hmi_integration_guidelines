@@ -1,5 +1,13 @@
 ## ClosePopUp
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Close the currently displayed popup UI element
 
 ### Request
 

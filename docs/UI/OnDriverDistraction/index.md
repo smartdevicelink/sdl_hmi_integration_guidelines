@@ -1,5 +1,13 @@
 ## OnDriverDistraction
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL about changes to the Driver Distraction state.
 
 ### Notification
 

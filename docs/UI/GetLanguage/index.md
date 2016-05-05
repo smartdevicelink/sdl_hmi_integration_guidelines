@@ -1,5 +1,13 @@
 ## GetLanguage
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Inform SDL of the current HMI display language
 
 ### Request
 

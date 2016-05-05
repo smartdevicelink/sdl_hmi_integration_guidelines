@@ -1,5 +1,13 @@
 ## DeleteCommand
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Delete a command from the specified application's menu or submenu
 
 ### Request
 

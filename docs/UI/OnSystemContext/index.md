@@ -1,5 +1,13 @@
 ## OnSystemContext
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Inform SDL about the current context of app interaction.
 
 ### Notification
 

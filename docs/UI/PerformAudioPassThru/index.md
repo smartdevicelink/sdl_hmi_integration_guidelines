@@ -1,5 +1,13 @@
 ## PerformAudioPassThru
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Start audio capturing and sending PCM data to SDL
 
 ### Request
 

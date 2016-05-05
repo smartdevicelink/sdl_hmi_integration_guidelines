@@ -1,5 +1,13 @@
 ## EndAudioPassThru
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Stop audio capturing and sending PCM data to SDL
 
 ### Request
 

@@ -1,5 +1,13 @@
 ## Slider
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Display a user controlled slider UI element.
 
 ### Request
 
