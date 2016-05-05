@@ -53,5 +53,13 @@ OnButtonEvent hardware button pressed and released
 
 #### JSON Example Notification
 ```json
-
+{
+	"jsonrpc" : "2.0",
+	"method" : "Buttons.OnButtonEvent",
+	"params" :
+	{
+		"name" : OK,
+		"mode" : BUTTONDOWN,
+	}
+}
 ```
