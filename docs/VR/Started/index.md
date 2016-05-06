@@ -11,8 +11,6 @@ Purpose
 
 ### Notification
 
-#### Parameters
-
 ### Sequence Diagrams
 |||
 Started on PTT Button Press

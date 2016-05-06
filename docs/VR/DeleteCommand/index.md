@@ -13,19 +13,12 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|cmdID|Integer|true|minvalue: 0<br>maxvalue: 2000000000||
-|type|Common.VRCommandType|true|||
-|grammarID|Integer|true|minvalue: 0<br>maxvalue: 2000000000||
-|appID|Integer|true|||
-
-#### VRCommandType
-
-|Name|Value|
-|:---|:----|
-|Choice|0|
-|Command|1|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|cmdID|Integer|true|minvalue: 0<br>maxvalue: 2000000000|
+|type|[Common.VRCommandType](../../Common/Enums/index.md#vrcommandtype)|true||
+|grammarID|Integer|true|minvalue: 0<br>maxvalue: 2000000000|
+|appID|Integer|true||
 
 ### Response
 

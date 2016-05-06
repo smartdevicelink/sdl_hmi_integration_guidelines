@@ -13,22 +13,16 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
 
 ### Response
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|vrCapabilities|Common.VrCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100||
-
-#### VrCapabilities
-
-|Name|Value|
-|:---|:----|
-|TEXT|0|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|vrCapabilities|[Common.VrCapabilities](../../Common/Enums/index.md#vrcapabilities)|false|array: true<br>minsize: 1<br>maxsize: 100|
 
 ### Sequence Diagrams
 |||

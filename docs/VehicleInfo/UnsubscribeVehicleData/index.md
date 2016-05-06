@@ -13,232 +13,64 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|appID|Integer|true|||
-|gps|Boolean|false|||
-|speed|Boolean|false|||
-|rpm|Boolean|false|||
-|fuelLevel|Boolean|false|||
-|fuelLevel_State|Boolean|false|||
-|instantFuelConsumption|Boolean|false|||
-|externalTemperature|Boolean|false|||
-|prndl|Boolean|false|||
-|tirePressure|Boolean|false|||
-|odometer|Boolean|false|||
-|beltStatus|Boolean|false|||
-|bodyInformation|Boolean|false|||
-|deviceStatus|Boolean|false|||
-|driverBraking|Boolean|false|||
-|wiperStatus|Boolean|false|||
-|headLampStatus|Boolean|false|||
-|engineTorque|Boolean|false|||
-|accPedalPosition|Boolean|false|||
-|steeringWheelAngle|Boolean|false|||
-|eCallInfo|Boolean|false|||
-|airbagStatus|Boolean|false|||
-|emergencyEvent|Boolean|false|||
-|clusterModeStatus|Boolean|false|||
-|myKey|Boolean|false|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|appID|Integer|true||
+|gps|Boolean|false||
+|speed|Boolean|false||
+|rpm|Boolean|false||
+|fuelLevel|Boolean|false||
+|fuelLevel_State|Boolean|false||
+|instantFuelConsumption|Boolean|false||
+|externalTemperature|Boolean|false||
+|prndl|Boolean|false||
+|tirePressure|Boolean|false||
+|odometer|Boolean|false||
+|beltStatus|Boolean|false||
+|bodyInformation|Boolean|false||
+|deviceStatus|Boolean|false||
+|driverBraking|Boolean|false||
+|wiperStatus|Boolean|false||
+|headLampStatus|Boolean|false||
+|engineTorque|Boolean|false||
+|accPedalPosition|Boolean|false||
+|steeringWheelAngle|Boolean|false||
+|eCallInfo|Boolean|false||
+|airbagStatus|Boolean|false||
+|emergencyEvent|Boolean|false||
+|clusterModeStatus|Boolean|false||
+|myKey|Boolean|false||
 
 ### Response
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|gps|Common.VehicleDataResult|false|||
-|speed|Common.VehicleDataResult|false|||
-|rpm|Common.VehicleDataResult|false|||
-|fuelLevel|Common.VehicleDataResult|false|||
-|fuelLevel_State|Common.VehicleDataResult|false|||
-|instantFuelConsumption|Common.VehicleDataResult|false|||
-|externalTemperature|Common.VehicleDataResult|false|||
-|prndl|Common.VehicleDataResult|false|||
-|tirePressure|Common.VehicleDataResult|false|||
-|odometer|Common.VehicleDataResult|false|||
-|beltStatus|Common.VehicleDataResult|false|||
-|bodyInformation|Common.VehicleDataResult|false|||
-|deviceStatus|Common.VehicleDataResult|false|||
-|driverBraking|Common.VehicleDataResult|false|||
-|wiperStatus|Common.VehicleDataResult|false|||
-|headLampStatus|Common.VehicleDataResult|false|||
-|engineTorque|Common.VehicleDataResult|false|||
-|accPedalPosition|Common.VehicleDataResult|false|||
-|steeringWheelAngle|Common.VehicleDataResult|false|||
-|eCallInfo|Common.VehicleDataResult|false|||
-|airbagStatus|Common.VehicleDataResult|false|||
-|emergencyEvent|Common.VehicleDataResult|false|||
-|clusterModes|Common.VehicleDataResult|false|||
-|myKey|Common.VehicleDataResult|false|||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
-
-#### VehicleDataResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|gps|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|speed|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|rpm|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|fuelLevel|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|fuelLevel_State|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|instantFuelConsumption|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|externalTemperature|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|prndl|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|tirePressure|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|odometer|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|beltStatus|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|bodyInformation|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|deviceStatus|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|driverBraking|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|wiperStatus|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|headLampStatus|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|engineTorque|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|accPedalPosition|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|steeringWheelAngle|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|eCallInfo|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|airbagStatus|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|emergencyEvent|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|clusterModes|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
+|myKey|[Common.VehicleDataResult](../../Common/Structs/index.md#vehicledataresult)|false||
 
 ### Sequence Diagrams
 |||

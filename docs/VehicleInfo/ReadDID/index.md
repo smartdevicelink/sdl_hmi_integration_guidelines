@@ -13,27 +13,19 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|ecuName|Integer|true|minvalue: 0<br>maxvalue: 65535||
-|didLocation|Integer|true|array: true<br>minsize: 1<br>maxsize: 1000<br>minvalue: 0<br>maxvalue: 65535||
-|appID|Integer|true|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|ecuName|Integer|true|minvalue: 0<br>maxvalue: 65535|
+|didLocation|Integer|true|array: true<br>minsize: 1<br>maxsize: 1000<br>minvalue: 0<br>maxvalue: 65535|
+|appID|Integer|true||
 
 ### Response
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|didResult|Common.DIDResult|false|array: true<br>minsize: 0<br>maxsize: 1000||
-
-#### DIDResult
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|resultCode|Common.VehicleDataResultCode|true|||
-|didLocation|Integer|true|minvalue: 0<br>maxvalue: 65535||
-|data|String|false|maxlength: 5000||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|didResult|[Common.DIDResult](../../Common/Structs/index.md#didresult)|false|array: true<br>minsize: 0<br>maxsize: 1000|
 
 ### Sequence Diagrams
 |||
