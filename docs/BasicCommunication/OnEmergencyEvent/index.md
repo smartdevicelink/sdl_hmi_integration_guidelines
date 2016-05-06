@@ -14,9 +14,9 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|enabled|Boolean|true|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|enabled|Boolean|true||
 
 ### Sequence Diagrams
 |||

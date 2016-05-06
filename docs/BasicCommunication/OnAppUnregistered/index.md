@@ -13,10 +13,10 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|unexpectedDisconnect|Boolean|true|||
-|appID|Integer|true|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|unexpectedDisconnect|Boolean|true||
+|appID|Integer|true||
 
 ### Sequence Diagrams
 |||

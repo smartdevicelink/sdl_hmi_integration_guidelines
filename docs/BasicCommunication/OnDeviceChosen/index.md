@@ -28,18 +28,9 @@ The list of known devices is provided to the HMI in the [UpdateDeviceList](../Up
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|deviceInfo|Common.DeviceInfo|true||The information about the device chosen by the User|
-
-#### DeviceInfo
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|name|String|true||The name of the device connected|
-|id|String|true||The ID of the device connected.  Either a hash of device's USB serial number (in case of USB connection) or hash of device's MAC address (in case of BlueTooth or WiFi connection). Remains unique between the ignition cycles for the same transport type.|
-|transportType|Common.TransportType|false||The transport type the device is connected over to SDL (BlueTooth, USB or WiFi). Always returned by SDL via OnAppRegistered and UpdateAppList RPCs.|
-|isSDLAllowed|Boolean|false||Sent by SDL in UpdateDeviceList. ’true’ – if device is allowed for PolicyTable Exchange; ‘false’ – if device is NOT allowed for PolicyTable Exchange|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|deviceInfo|[Common.DeviceInfo](../../Common/Structs/index.md#deviceinfo)|true||
 
 ### Example Notification
 ```json

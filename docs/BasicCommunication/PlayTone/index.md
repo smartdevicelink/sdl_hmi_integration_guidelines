@@ -13,10 +13,10 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|appID|Integer|true|||
-|methodName|Common.MethodName|true|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|appID|Integer|true||
+|methodName|[Common.MethodName](../../Common/Enums/index.md#methodname)|true||
 
 #### MethodName
 

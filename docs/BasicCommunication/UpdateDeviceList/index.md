@@ -43,31 +43,15 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
 
 #### Parameters
 
-| Param Name | Type    | Mandatory | Additional| Description|
-| :------------- | :------------- | :- | :- | :- |
-| deviceList     | Common.DeviceInfo      | true | Array = true <br> minsize = 0 <br> maxsize = 100 | The list of devices (name and ID) found. If the array is empty it means that all devices have been disconnected or that no devices are connected yet.|
-
-##### DeviceInfo
-
-| Param Name | Type     | Mandatory | Additional | Description|
-| :------------- | :------------- | :- | :- | :- |
-| name      | String      | true | | The name of the connected device |
-| id | String | true | | The id of the connected device. Either hash of device's USB serial number or mac address. Remains unique between ignition cycles for connections of the same device on a single transport.|
-| transportType| Common.TransportType| false| | The transport type which the device is connected over. Always returned by SDL in OnAppRegistered and UpdateAppList RPCs|
-| isSDLAllowed| Boolean | false | | Sent by SDL in UpdateDeviceList. True if the device is allowed for the PolicyTable exchange, false if the device is not allowed for Policy Table exchange|
-
-##### TransportType
-
-| Name | Value    |
-| :------------- | :------------- |
-| BLUETOOTH     | 0      |
-| USB_IOS | 1|
-| USB_AOA | 2|
-| WIFI | 3|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|deviceList|[Common.DeviceInfo](../../Common/Structs/index.md#deviceinfo)|true|array: true<br>minsize: 0<br>maxsize: 100|
 
 ### Response
 
-This RPC response has no additional parameter requirements
+#### Parameters
+
+This RPC has no additional parameter requirements
 
 ### Example Request
 

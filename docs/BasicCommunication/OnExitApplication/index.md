@@ -13,17 +13,10 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|reason|Common.ApplicationToNONEReason|true|||
-|appID|Integer|true|||
-
-#### ApplicationToNONEReason
-
-|Name|Value|
-|:---|:----|
-|DRIVER_DISTRACTION_VIOLATION|0|
-|USER_EXIT|1|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|reason|[Common.ApplicationToNONEReason](../../Common/Enums/index.md#applicationtononereason)|true||
+|appID|Integer|true||
 
 ### Sequence Diagrams
 |||

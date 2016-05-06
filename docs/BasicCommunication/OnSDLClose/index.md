@@ -12,11 +12,6 @@ Purpose
 
 ### Notification
 
-#### Parameters
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-
 ### Sequence Diagrams
 |||
 OnSDLClose Ingition Cycle
