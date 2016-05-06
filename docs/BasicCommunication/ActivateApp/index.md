@@ -40,31 +40,11 @@ This request may be sent:
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|appID|Integer|true|||
-|priority|[Common.AppPriority](../../Common/Enums/index.md#apppriority)|false|||
-|level|Common.HMILevel|false|||
-
-#### AppPriority
-
-|Name|Value|
-|:---|:----|
-|EMERGENCY|0|
-|NAVIGATION|1|
-|VOICE_COMMUNICATION|2|
-|COMMUNICATION|3|
-|NORMAL|4|
-|NONE|5|
-
-#### HMILevel
-
-|Name|Value|
-|:---|:----|
-|FULL|0|
-|LIMITED|1|
-|BACKGROUND|2|
-|NONE|3|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|appID|Integer|true||
+|priority|[Common.AppPriority](../../Common/Enums/index.md#apppriority)|false||
+|level|[Common.HMILevel](../../Common/Enums/index.md#hmilevel)|false||
 
 ### Response
 
