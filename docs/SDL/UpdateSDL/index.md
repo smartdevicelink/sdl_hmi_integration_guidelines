@@ -5,24 +5,16 @@
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
 
 ### Response
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|result|Common.UpdateResult|true|||
-
-#### UpdateResult
-
-|Name|Value|
-|:---|:----|
-|UP_TO_DATE|0|
-|UPDATING|1|
-|UPDATE_NEEDED|2|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|result|[Common.UpdateResult](../../Common/Enums/index.md#updateresult)|true||
 
 ### Example Request
 

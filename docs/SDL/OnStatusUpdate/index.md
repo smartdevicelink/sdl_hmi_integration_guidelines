@@ -13,17 +13,9 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|status|Common.UpdateResult|true|||
-
-#### UpdateResult
-
-|Name|Value|
-|:---|:----|
-|UP_TO_DATE|0|
-|UPDATING|1|
-|UPDATE_NEEDED|2|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|status|[Common.UpdateResult](../../Common/Enums/index.md#updateresult)|true||
 
 ### Sequence Diagrams
 |||

@@ -5,16 +5,9 @@
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|error|Common.SystemError|true|||
-
-#### SystemError
-
-|Name|Value|
-|:---|:----|
-|SYNC_REBOOTED|0|
-|SYNC_OUT_OF_MEMMORY|1|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|error|[Common.SystemError](../../Common/Enums/index.md#systemerror)|true||
 
 #### JSON Example Notification
 ```json

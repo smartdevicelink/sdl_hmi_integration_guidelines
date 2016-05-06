@@ -5,15 +5,9 @@
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|statisticType|Common.StatisticsType|true|||
-
-#### StatisticsType
-
-|Name|Value|
-|:---|:----|
-|iAPP_BUFFER_FULL|0|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|statisticType|[Common.StatisticsType](../../Common/Enums/index.md#statisticstype)|true||
 
 ### Example Request
 

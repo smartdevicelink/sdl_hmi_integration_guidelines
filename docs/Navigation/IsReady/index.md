@@ -13,16 +13,16 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
 
 ### Response
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|available|Boolean|true|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|available|Boolean|true||
 
 ### Sequence Diagrams
 |||

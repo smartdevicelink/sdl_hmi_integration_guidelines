@@ -9,13 +9,12 @@ Sender
 Purpose
 : Close the video streaming service between SDL and the HMI and stop streaming video data.
 
-### Request
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|appID|Integer|true|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|appID|Integer|true||
 
 ### Response
 

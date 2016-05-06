@@ -5,27 +5,11 @@
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|device|Common.DeviceInfo|false|||
-|allowed|Boolean|true|||
-|source|Common.ConsentSource|true|||
-
-#### DeviceInfo
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|name|String|true|||
-|id|String|true|||
-|transportType|Common.TransportType|false|||
-|isSDLAllowed|Boolean|false|||
-
-#### ConsentSource
-
-|Name|Value|
-|:---|:----|
-|GUI|0|
-|VUI|1|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|device|[Common.DeviceInfo](../../Common/Structs/index.md#deviceinfo)|false||
+|allowed|Boolean|true||
+|source|[Common.ConsentSource](../../Common/Enums/index.md#consentsource)|true||
 
 #### JSON Example Notification
 ```json

@@ -5,18 +5,9 @@
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|device|Common.DeviceInfo|true|||
-
-#### DeviceInfo
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|name|String|true|||
-|id|String|true|||
-|transportType|Common.TransportType|false|||
-|isSDLAllowed|Boolean|false|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|device|[Common.DeviceInfo](../../Common/Structs/index.md#deviceinfo)|true||
 
 #### JSON Example Notification
 ```json
