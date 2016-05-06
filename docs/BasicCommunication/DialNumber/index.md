@@ -9,16 +9,6 @@ Sender
 Purpose
 : SDL initiates a call to a specific phone number.
 
-### Request
-
-#### Parameters
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|number|String|true|maxlength: 40|The number to dial. All characters will be stripped except for digits 0-9 and * # , ; +
-|
-|appID|Integer|true||ID of application that initiates the call|
-
 !!! NOTE
 
 SDL looks to see if the phone number entered is correct before passing to the HMI. The checks performed are:
@@ -40,6 +30,15 @@ SDL looks to see if the phone number entered is correct before passing to the HM
 !!!
 
 The request is considered to have been executed successfully only after the user presses the "Call" button included in the DialNumber dialog.
+
+### Request
+
+#### Parameters
+
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|number|String||maxlength: 40|
+|appID|Integer|true||
 
 ### Response
 

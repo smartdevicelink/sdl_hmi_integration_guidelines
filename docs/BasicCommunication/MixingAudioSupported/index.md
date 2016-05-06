@@ -20,15 +20,16 @@ Check mixing audio capabilities and provided an accurate response.
 
 #### Parameters
 
-There are no additional parameter requirements for this request.
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
 
 ### Response
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|attenuatedSupported|Boolean|true|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|attenuatedSupported|Boolean|true||
 
 ### Request Example
 

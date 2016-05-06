@@ -22,26 +22,17 @@ Check whether the device is allowed to connect to the head unit and response app
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|device|Common.DeviceInfo|true||Information about the device which is to be connected.|
-
-#### DeviceInfo
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|name|String|true||The name of the device connected|
-|id|String|true||The ID of the device connected. Either a hash of the device's USB serial number (in case of USB connection) or hash of device's MAC address (in case of BlueTooth or WiFi connection). Remains unique between the ignition cycles for the same transport type.|
-|transportType|Common.TransportType|false||The transport type which the device is connected over to the HU (BlueTooth, USB or WiFi).<br>Always returned by SDL in OnAppRegistered and UpdateAppList RPCs.|
-|isSDLAllowed|Boolean|false||Sent by SDL in `UpdateDeviceList`. ’true’ – if device is allowed for PolicyTable Exchange; ‘false’ – if device is NOT allowed for PolicyTable Exchange|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|device|[Common.DeviceInfo](../../Common/Structs/index.md#deviceinfo)|true||
 
 ### Response
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|allow|Boolean|true|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|allow|Boolean|true||
 
 ### Example Request
 ```json
