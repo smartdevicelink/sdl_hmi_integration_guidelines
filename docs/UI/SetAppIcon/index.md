@@ -13,17 +13,10 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|syncFileName|Common.Image|true|||
-|appID|Integer|true|||
-
-#### Image
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|value|String|true|maxlength: 65535||
-|imageType|Common.ImageType|true|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|syncFileName|[Common.Image](../../Common/Structs/index.md#image)|true||
+|appID|Integer|true||
 
 ### Response
 

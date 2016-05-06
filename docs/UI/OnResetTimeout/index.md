@@ -13,10 +13,10 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|appID|Integer|true|||
-|methodName|String|true|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|appID|Integer|true||
+|methodName|String|true||
 
 ### Sequence Diagrams
 |||

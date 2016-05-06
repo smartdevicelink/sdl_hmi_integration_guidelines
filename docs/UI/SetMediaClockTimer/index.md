@@ -13,38 +13,12 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|startTime|Common.TimeFormat|false|||
-|endTime|Common.TimeFormat|false|||
-|updateMode|Common.ClockUpdateMode|true|||
-|appID|Integer|true|||
-
-#### TimeFormat
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|hours|Integer|true|minvalue: 0<br>maxvalue: 59||
-|minutes|Integer|true|minvalue: 0<br>maxvalue: 59||
-|seconds|Integer|true|minvalue: 0<br>maxvalue: 59||
-
-#### TimeFormat
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|hours|Integer|true|minvalue: 0<br>maxvalue: 59||
-|minutes|Integer|true|minvalue: 0<br>maxvalue: 59||
-|seconds|Integer|true|minvalue: 0<br>maxvalue: 59||
-
-#### ClockUpdateMode
-
-|Name|Value|
-|:---|:----|
-|COUNTUP|0|
-|COUNTDOWN|1|
-|PAUSE|2|
-|RESUME|3|
-|CLEAR|4|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|startTime|[Common.TimeFormat](../../Common/Structs/index.md#timeformat)|false||
+|endTime|[Common.TimeFormat](../../Common/Structs/index.md#timeformat)|false||
+|updateMode|[Common.ClockUpdateMode](../../Common/Enums/index.md#clockupdatemode)|true||
+|appID|Integer|true||
 
 ### Response
 

@@ -5,9 +5,9 @@
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|appID|Integer|true|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|appID|Integer|true||
 
 ### Sequence Diagrams
 |||

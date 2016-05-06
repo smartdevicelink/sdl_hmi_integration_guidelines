@@ -13,8 +13,8 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
 
 ### Response
 

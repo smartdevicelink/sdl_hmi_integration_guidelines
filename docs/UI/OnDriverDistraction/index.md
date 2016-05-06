@@ -13,16 +13,9 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|state|Common.DriverDistractionState|true|||
-
-#### DriverDistractionState
-
-|Name|Value|
-|:---|:----|
-|DD_ON|0|
-|DD_OFF|1|
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|state|[Common.DriverDistractionState](../../Common/Enums/index.md#driverdistractionstate)|true||
 
 ### Sequence Diagrams
 |||

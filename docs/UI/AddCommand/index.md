@@ -13,27 +13,12 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|cmdID|Integer|true|minvalue: 0<br>maxvalue: 2000000000||
-|menuParams|Common.MenuParams|false|||
-|cmdIcon|Common.Image|false|||
-|appID|Integer|true|||
-
-#### MenuParams
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|parentID|Integer|false|minvalue: 0<br>maxvalue: 2000000000||
-|position|Integer|false|minvalue: 0<br>maxvalue: 1000||
-|menuName|String|true|maxlength: 500||
-
-#### Image
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|value|String|true|maxlength: 65535||
-|imageType|Common.ImageType|true|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|cmdID|Integer|true|minvalue: 0<br>maxvalue: 2000000000|
+|menuParams|[Common.MenuParams](../../Common/Structs/index.md#menuparams)|false||
+|cmdIcon|[Common.Image](../../Common/Structs/index.md#image)|false||
+|appID|Integer|true||
 
 ### Response
 

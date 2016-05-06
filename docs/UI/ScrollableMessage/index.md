@@ -13,30 +13,12 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|messageText|Common.TextFieldStruct|true|||
-|timeout|Integer|true|minvalue: 0<br>maxvalue: 65535||
-|softButtons|Common.SoftButton|false|array: true<br>minsize: 0<br>maxsize: 8||
-|appID|Integer|true|||
-
-#### TextFieldStruct
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|fieldName|Common.TextFieldName|true|||
-|fieldText|String|true|maxlength: 500||
-
-#### SoftButton
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|type|Common.SoftButtonType|true|||
-|text|String|false|maxlength: 500||
-|image|Common.Image|false|||
-|isHighlighted|Boolean|false|||
-|softButtonID|Integer|true|minvalue: 0<br>maxvalue: 65535||
-|systemAction|Common.SystemAction|true|||
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|messageText|[Common.TextFieldStruct](../../Common/Structs/index.md#textfieldstruct)|true||
+|timeout|Integer|true|minvalue: 0<br>maxvalue: 65535|
+|softButtons|[Common.SoftButton](../../Common/Structs/index.md#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 8|
+|appID|Integer|true||
 
 ### Response
 
