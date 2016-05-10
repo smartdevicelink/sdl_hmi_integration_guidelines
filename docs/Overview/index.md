@@ -6,6 +6,7 @@ SDL is a system that is installed on the HU and allows a connected application o
 With SDL as the connectivity middleware in a vehicle's infotainment system, applications running on connected iOS and Android devices might be presented to the vehicle HMI.
 
 This guideline describes:
+
    * The types of transports supported by SDL for communication with the HMI
    * How to connect over one of the supported transports
    * The types of messages and message formats used for communication
