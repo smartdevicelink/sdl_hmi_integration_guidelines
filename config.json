@@ -433,7 +433,15 @@
     			]
     		},
         {
-          "name": "Common"
+          "name": "Common",
+          "navigation": [
+            {
+              "name": "Enums"
+            },
+            {
+              "name": "Structs"
+            }
+          ]
         }
     ]
 }
