@@ -11,6 +11,20 @@ Purpose
 
 ### Notification
 
+On receipt of this notification, SDL will provide the list of registered applications for the named device via the 'UpdateAppList' RPC.
+
+!!! NOTE
+
+SDL ignores all invalid notifications sent from the HMI (e.g. invalid JSON, invalid data types).
+
+!!!
+
+!!! MUST
+
+HMI must send an 'OnFindApplications' notification when user requests to find applications on a device (i.e. user chooses a device from a list of devices).
+
+!!!
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
