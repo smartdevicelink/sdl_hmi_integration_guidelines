@@ -11,20 +11,20 @@ Purpose
 
 SDL requires this notification to know if the user has requested for an application to be in focus and start operating, based on the HMI's functionality.
 
-When 'OnAppActivated' is received, SDL sends an 'ActivateApp' request to confirm the named application may be activated.
+When `OnAppActivated` is received, SDL sends an `ActivateApp` request to confirm the named application may be activated.
 
 !!! MUST
 
-	1. Send an 'OnAppActivated' notification when the user chooses an application on the HMI.
-	2. Wait for 'ActivateApp' before the HMI can display the application related screen.
+  1. Send an `OnAppActivated` notification when the user chooses an application on the HMI.
+  2. Wait for `ActivateApp` before the HMI can display the application related screen.
 
 !!!
 
 !!! NOTE
 
-'OnAppActivated' shows the user's intent to activate the named application.
+`OnAppActivated` shows the user's intent to activate the named application.
 
-'ActivateApp' is a request created by SDL that provides the permission for the application to access the HMI's functionality.
+`ActivateApp` is a request created by SDL that provides the permission for the application to access the HMI's functionality.
 
 !!!
 
