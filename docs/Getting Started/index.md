@@ -3,6 +3,7 @@
 To start communication with SDL, the HMI must notify about its ready via the `BasicCommunication.OnReady` notification.
 
 Upon receipt of the OnReady notification, SDL will begin checking the available of the different HMI components via a chain a requests:
+
   * `UI.IsReady` - The display availability
   * `VR.IsReady` - The voice recognition module availability
   * `TTS.IsReady` - The Text-To-Speech module availability
