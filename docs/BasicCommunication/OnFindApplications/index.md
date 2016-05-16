@@ -21,7 +21,7 @@ SDL ignores all invalid notifications sent from the HMI (e.g. invalid JSON, inva
 
 !!! MUST
 
-HMI must send an 'OnFindApplications' notification when user requests to find applications on a device (i.e. user chooses a device from a list of devices).
+HMI must send an 'OnFindApplications' notification when the user requests to find applications on a device (i.e. user chooses a device from a list of devices).
 
 !!!
 
