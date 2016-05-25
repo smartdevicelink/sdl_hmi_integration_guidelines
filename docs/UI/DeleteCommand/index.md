@@ -13,7 +13,7 @@ UI.DeleteCommand represents a request to remove a previously added command (adde
 
 !!! must
 
-  * The application's menu must no longer display the command whose `cmdID` matches the RPC's `cmdID` when the user accesses the applications menu
+The application's menu must no longer display the command whose `cmdID` matches the RPC's `cmdID` when the user accesses the applications menu
 
 !!!
 

@@ -13,7 +13,7 @@ UI.DeleteSubMenu represents a request to remove a previously added sub menu (add
 
 !!! must
 
-  * The application's menu must no longer display the sub menu whose `menuID` matches the RPC's `menuID` when the user accesses the applications menu
+The application's menu must no longer display the sub menu whose `menuID` matches the RPC's `menuID` when the user accesses the applications menu
 
 !!!
 
