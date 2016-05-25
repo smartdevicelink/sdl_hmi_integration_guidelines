@@ -9,6 +9,34 @@ Sender
 Purpose
 : Inform the HMI that a file has been uploaded into a shared folder by an application.
 
+`OnPutFile` notifies the HMI that some file has been put into a shared or system folder that can be used by the HMI.
+
+!!! MUST
+
+Use the appropriate uploaded file according to its workflow (IVSU, SystemRequest, RPC's). See diagrams listed below.
+
+!!!
+
+!!! NOTE
+
+The list of RPCs and data structures that `OnPutFile` affects are:
+
+  * Show (Image, SoftButton)
+  * ShowConstantTBT (SoftButton)
+  * CreateInteractionChoiceSet (Image)
+  * DeleteInteractionChoiceSet (Image)
+  * SetGlobalProperties (Image, VrHelpItem)
+  * ResetGlobalProperties (Image, VrHelpItem)
+  * UpdateTurnList (Turn)
+  * AddCommand(Image)
+  * DeleteCommand(Image)
+  * SendLocation(Image)
+  * Alert (SoftButton)
+  * ScrollableMessage (SoftButton)
+  * UpdateTurnList (SoftButton)
+
+!!!
+
 ### Notification
 
 #### Parameters
