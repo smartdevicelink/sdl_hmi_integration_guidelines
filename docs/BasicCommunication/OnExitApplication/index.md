@@ -29,6 +29,7 @@ The HMI may switch layouts or views according to the workflow after deactivation
 
   * Information about the application (name, appID, etc) is provided by SDL via [BC.UpdateAppList](../updateapplist) or [BC.OnAppRegistered](../onappregistered).
   * SDL ignores all invalid notifications which come from the HMI (Invalid JSON, invalid data types/bounds, etc).
+  
 !!!
 ### Notification
 
