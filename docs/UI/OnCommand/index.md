@@ -9,6 +9,14 @@ Sender
 Purpose
 : Inform SDL that a command has been chosen by the User from the UI.
 
+A notification to inform SDL about a command being selected which had previously been added via [UI.AddCommand](../addcommand)
+
+!!! must
+
+The HMI must send the UI.OnCommand notification to SDL when the user selects a command from the application's menu or sub menu.
+
+!!!
+
 ### Notification
 
 #### Parameters
