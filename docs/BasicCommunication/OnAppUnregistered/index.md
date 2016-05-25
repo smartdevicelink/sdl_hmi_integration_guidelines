@@ -27,12 +27,12 @@ Active App Unregistered
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.OnAppUnregistered",
-	"params" :
-	{
-		"appID" : 65539,
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.OnAppUnregistered",
+  "params" :
+  {
+    "appID" : 65539,
       "unexpectedDisconnect":"false"
-	}
+  }
 }
 ```

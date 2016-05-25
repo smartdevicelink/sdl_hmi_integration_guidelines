@@ -38,30 +38,30 @@ GetDTCs
 
 ```json
 {
-	"id" : 139,
-	"jsonrpc" : "2.0",
-	"method" : "VehicleInfo.GetDTCs",
-	"params" :
-	{
-		"ecuName" : 56
-		"dtcMask" : 84,
-		"appID" : 65645
-	}
+  "id" : 139,
+  "jsonrpc" : "2.0",
+  "method" : "VehicleInfo.GetDTCs",
+  "params" :
+  {
+    "ecuName" : 56
+    "dtcMask" : 84,
+    "appID" : 65645
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 139,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"ecuHeader" : 6534,
-		"dtc" : ["84752093", "28237", "748398"],
-		"code" : 0,
-		"method" : "VehicleInfo.GetDTCs"
-	}
+  "id" : 139,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "ecuHeader" : 6534,
+    "dtc" : ["84752093", "28237", "748398"],
+    "code" : 0,
+    "method" : "VehicleInfo.GetDTCs"
+  }
 }
 ```
 
@@ -69,16 +69,16 @@ GetDTCs
 
 ```json
 {
-	"id" : 139,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 9,
-		"message" : "Data not available",
-		"data" :
-		{
-			"method" : "VehicleInfo.GetDTCs"
-		}
-	}
+  "id" : 139,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 9,
+    "message" : "Data not available",
+    "data" :
+    {
+      "method" : "VehicleInfo.GetDTCs"
+    }
+  }
 }
 ```

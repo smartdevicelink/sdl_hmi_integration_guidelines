@@ -35,80 +35,80 @@ UpdateTurnList
 
 ```json
 {
-	"id" : 176,
-	"jsonrpc" : "2.0",
-	"method" : "Navigation.UpdateTurnList",
-	"params" :
-	{
-		"turnList" :
-		[
-			{
-				"navigationText" :  
-				[
-					"fieldName" :  navigationText,
-					"fieldText" : "Turn Right"
-				],
-				"turnIcon" :
-				[
-				 	"value" : "tmp/SDL/app/Navi/icon_turn_right.jpeg",
-				 	"imageType" :  DYNAMIC
-				]
-			},
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "method" : "Navigation.UpdateTurnList",
+  "params" :
+  {
+    "turnList" :
+    [
+      {
+        "navigationText" :  
+        [
+          "fieldName" :  navigationText,
+          "fieldText" : "Turn Right"
+        ],
+        "turnIcon" :
+        [
+           "value" : "tmp/SDL/app/Navi/icon_turn_right.jpeg",
+           "imageType" :  DYNAMIC
+        ]
+      },
 
-			{
-				"navigationText" :  
-				[
-					"fieldName" :  navigationText,
-					"fieldText" : "Turn Left"
-				],
-				"turnIcon" :
-				[
-				 	"value" : "tmp/SDL/app/Navi/icon_turn_left.jpeg",
-				 	"imageType" :  DYNAMIC
-				]
-			},
+      {
+        "navigationText" :  
+        [
+          "fieldName" :  navigationText,
+          "fieldText" : "Turn Left"
+        ],
+        "turnIcon" :
+        [
+           "value" : "tmp/SDL/app/Navi/icon_turn_left.jpeg",
+           "imageType" :  DYNAMIC
+        ]
+      },
 
-			{
-				"navigationText" :  
-				[
-					"fieldName" :  navigationText,
-					"fieldText" : "Go Forward"
-				],
-				"turnIcon" :
-				[
-				 	"value" : "tmp/SDL/app/Navi/icon_go_forward.jpeg",
-				 	"imageType" :  DYNAMIC
-				]
-			}
-		],
+      {
+        "navigationText" :  
+        [
+          "fieldName" :  navigationText,
+          "fieldText" : "Go Forward"
+        ],
+        "turnIcon" :
+        [
+           "value" : "tmp/SDL/app/Navi/icon_go_forward.jpeg",
+           "imageType" :  DYNAMIC
+        ]
+      }
+    ],
 
-		"softButtons" :
-		[
-				"type" :  BOTH,
-				"text" : "Return",
-				"image" :
-				[
-				 	"value" : "tmp/SDL/app/Navi/icon_583.jpg",
-				 	"imageType" : DYNAMIC
-				],
-				"isHighlighted" : true,
-				"softButtonID" : 118,
-				"systemAction" :  DEFAULT_ACTION
-		]
-	}
+    "softButtons" :
+    [
+        "type" :  BOTH,
+        "text" : "Return",
+        "image" :
+        [
+           "value" : "tmp/SDL/app/Navi/icon_583.jpg",
+           "imageType" : DYNAMIC
+        ],
+        "isHighlighted" : true,
+        "softButtonID" : 118,
+        "systemAction" :  DEFAULT_ACTION
+    ]
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 176,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "Navigation.UpdateTurnList"
-	}
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "Navigation.UpdateTurnList"
+  }
 }
 ```
 
@@ -116,16 +116,16 @@ UpdateTurnList
 
 ```json
 {
-	"id" : 176,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 4,
-		"message" : " A command was rejected because a higher priority command is requested",
-		"data" :
-		{
-			"method" : "Navigation.UpdateTurnList"
-		}
-	}
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 4,
+    "message" : " A command was rejected because a higher priority command is requested",
+    "data" :
+    {
+      "method" : "Navigation.UpdateTurnList"
+    }
+  }
 }
 ```

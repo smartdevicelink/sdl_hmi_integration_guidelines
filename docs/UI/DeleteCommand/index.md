@@ -38,27 +38,27 @@ Delete Command Application Inactive
 
 ```json
 {
-	"id" : 70,
-	"jsonrpc" : "2.0",
-	"method" : "UI. DeleteCommand",
-	"params" :
-	{
-		"cmdID" : 2318,
-		"appID" : 65409
-	}
+  "id" : 70,
+  "jsonrpc" : "2.0",
+  "method" : "UI. DeleteCommand",
+  "params" :
+  {
+    "cmdID" : 2318,
+    "appID" : 65409
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 70,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "UI. DeleteCommand"
-	}
+  "id" : 70,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "UI. DeleteCommand"
+  }
 }
 ```
 
@@ -66,16 +66,16 @@ Delete Command Application Inactive
 
 ```json
 {
-	"id" : 70,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 13,
-		"message" : "One of the provided IDs is not valid",
-		"data" :
-		{
-			"UI. DeleteCommand"
-		}
-	}
+  "id" : 70,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 13,
+    "message" : "One of the provided IDs is not valid",
+    "data" :
+    {
+      "UI. DeleteCommand"
+    }
+  }
 }
 ```

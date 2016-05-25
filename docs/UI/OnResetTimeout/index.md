@@ -35,7 +35,7 @@ OnResetTimeout KEEP_CONTEXT during alert
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "UI.OnResetTimeout",
+  "jsonrpc" : "2.0",
+  "method" : "UI.OnResetTimeout",
 }
 ```

@@ -26,11 +26,11 @@ OnStatusUpdate
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "SDL.OnStatusUpdate",
-	"params" :  
-	{
-		"status" : "UPDATE_NEEDED"
-	}
+  "jsonrpc" : "2.0",
+  "method" : "SDL.OnStatusUpdate",
+  "params" :  
+  {
+    "status" : "UPDATE_NEEDED"
+  }
 }
 ```

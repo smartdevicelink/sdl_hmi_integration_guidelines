@@ -50,16 +50,16 @@ OnVehicleData
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "VehicleInfo.OnVehicleData",
-	"params" :  
-	{
-		"speed" : 60,
-		"externalTemperature" : -7,
-		"prndl" : THIRD,
-		"odometer" : 1066,
-		"wiperStatus" : MAN_INT_ON,
-		"accPedalPosition" : 70
-	}
+  "jsonrpc" : "2.0",
+  "method" : "VehicleInfo.OnVehicleData",
+  "params" :  
+  {
+    "speed" : 60,
+    "externalTemperature" : -7,
+    "prndl" : THIRD,
+    "odometer" : 1066,
+    "wiperStatus" : MAN_INT_ON,
+    "accPedalPosition" : 70
+  }
 }
 ```

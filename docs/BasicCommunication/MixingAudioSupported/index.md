@@ -35,9 +35,9 @@ Check mixing audio capabilities and provided an accurate response.
 
 ```json
 {
-	"id" : 27,
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.MixingAudioSupported"
+  "id" : 27,
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.MixingAudioSupported"
 }
 ```
 
@@ -45,14 +45,14 @@ Check mixing audio capabilities and provided an accurate response.
 
 ```json
 {
-	"id" : 27,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"attenuatedSupported" : true,
-		"code" : 0,
-		"method" : "BasicCommunication. MixingAudioSupported"
-	}
+  "id" : 27,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "attenuatedSupported" : true,
+    "code" : 0,
+    "method" : "BasicCommunication. MixingAudioSupported"
+  }
 }
 ```
 
@@ -60,17 +60,17 @@ Check mixing audio capabilities and provided an accurate response.
 
 ```json
 {
-	"id" : 27,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 22,
-		"message" : "An unknown error occurred",
-		"data" :
-		{
-			"method" : "BasicCommunication.MixingAudioSupported"
-		}
-	}
+  "id" : 27,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "An unknown error occurred",
+    "data" :
+    {
+      "method" : "BasicCommunication.MixingAudioSupported"
+    }
+  }
 }
 ```
 

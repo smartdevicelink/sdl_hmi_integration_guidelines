@@ -35,16 +35,16 @@ The list of known devices is provided to the HMI in the [UpdateDeviceList](../Up
 ### Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.OnDevcieChosen",
-	"params" :
-	{
-		"deviceInfo" :
-		{
-				"name" : "Jerry`s Phone",
-				"id" : 3
-		}
-	}
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.OnDevcieChosen",
+  "params" :
+  {
+    "deviceInfo" :
+    {
+        "name" : "Jerry`s Phone",
+        "id" : 3
+    }
+  }
 }
 ```
 

@@ -27,11 +27,11 @@ OnSystemContext for different HMI States
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "UI.OnSystemContext",
-	"params" :
-	{
-		"systemContext" : "VRSESSION"
-	}
+  "jsonrpc" : "2.0",
+  "method" : "UI.OnSystemContext",
+  "params" :
+  {
+    "systemContext" : "VRSESSION"
+  }
 }
 ```

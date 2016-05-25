@@ -60,46 +60,46 @@ Alert BOTH UI Closed before TTS finishes Speaking
 
 ```json
 {
-	"id" : 92,
-	"jsonrpc" : "2.0",
-	"method" : "UI. Alert",
-	"params" :
-	{
-		"alertStrings" :
-		[
-			{
-				 "fieldName" : alertText1,
-				 "fieldText" : "WARNING"
-			},
-			{
-				 "fieldName" : alertText2,
-				 "fieldText" : "Hard weather conditions"
-			}
-		],
-		"duration" : 5000,
-		"softButtons" :
-		{
-			"type" : TEXT,
-			"text" : "OK",
-			"softButtonID" : 697,
-			"systemAction" : DEFAULT_ACTION
-		},
+  "id" : 92,
+  "jsonrpc" : "2.0",
+  "method" : "UI. Alert",
+  "params" :
+  {
+    "alertStrings" :
+    [
+      {
+         "fieldName" : alertText1,
+         "fieldText" : "WARNING"
+      },
+      {
+         "fieldName" : alertText2,
+         "fieldText" : "Hard weather conditions"
+      }
+    ],
+    "duration" : 5000,
+    "softButtons" :
+    {
+      "type" : TEXT,
+      "text" : "OK",
+      "softButtonID" : 697,
+      "systemAction" : DEFAULT_ACTION
+    },
       "alertType": "BOTH",
-		"appID" : 65539
-	}
+    "appID" : 65539
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 92,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "UI.Alert"
-	}
+  "id" : 92,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "UI.Alert"
+  }
 }
 ```
 
@@ -107,17 +107,17 @@ Alert BOTH UI Closed before TTS finishes Speaking
 
 ```json
 {
-	"id" : 92,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 4,
-		"message" : "The requested command was rejected.",
-		"data" :
-		{
-			"tryAgainTime" : 10000,
-			"method" : "UI.Alert"
-		}
-	}
+  "id" : 92,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 4,
+    "message" : "The requested command was rejected.",
+    "data" :
+    {
+      "tryAgainTime" : 10000,
+      "method" : "UI.Alert"
+    }
+  }
 }
 ```

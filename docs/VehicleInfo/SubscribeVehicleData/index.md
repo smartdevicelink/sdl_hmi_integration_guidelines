@@ -82,116 +82,116 @@ SubscribeVehicleData
 
 ```json
 {
-	"id" : 139,
-	"jsonrpc" : "2.0",
-	"method" : "VehicleInfo.SubscribeVehicleData",
-	"params" :
-	{
-		"gps" : true,
-		"speed" : true,
-		"fuelLevel_State" : true,
-		"externalTemperature" : true,
-		"prndl" : true,
-		"tirePressure" : true,
-		"odometer" : true,
-		"beltStatus" : true,
-		"bodyInformation" : true,
-		"deviceStatus" : true,
-		"wiperStatus" : true,
-		"headLampStatus" : true,
-		"accPedalPosition" : true,
-	}
+  "id" : 139,
+  "jsonrpc" : "2.0",
+  "method" : "VehicleInfo.SubscribeVehicleData",
+  "params" :
+  {
+    "gps" : true,
+    "speed" : true,
+    "fuelLevel_State" : true,
+    "externalTemperature" : true,
+    "prndl" : true,
+    "tirePressure" : true,
+    "odometer" : true,
+    "beltStatus" : true,
+    "bodyInformation" : true,
+    "deviceStatus" : true,
+    "wiperStatus" : true,
+    "headLampStatus" : true,
+    "accPedalPosition" : true,
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 139,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"gps" :
-		{
-			"dataType" : VEHICLEDATA_GPS,
-			"resultCode" : SUCCESS
-		},
+  "id" : 139,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "gps" :
+    {
+      "dataType" : VEHICLEDATA_GPS,
+      "resultCode" : SUCCESS
+    },
 
-		"speed" :
-		{
-			"dataType" : VEHICLEDATA_SPEED,
-			"resultCode" : DATA_ALREADY_SUBSCRIBED
-		},
+    "speed" :
+    {
+      "dataType" : VEHICLEDATA_SPEED,
+      "resultCode" : DATA_ALREADY_SUBSCRIBED
+    },
 
-		"fuelLevel_State" :
-		{
-			"dataType" : VEHICLEDATA_FUELLEVEL,
-			"resultCode" : SUCCESS
-		},
+    "fuelLevel_State" :
+    {
+      "dataType" : VEHICLEDATA_FUELLEVEL,
+      "resultCode" : SUCCESS
+    },
 
-		"externalTemperature" :
-		{
-			"dataType" : VEHICLEDATA_EXTERNTEMP,
-			"resultCode" : VEHICLE_DATA_NOT_AVAILABLE
-		},
+    "externalTemperature" :
+    {
+      "dataType" : VEHICLEDATA_EXTERNTEMP,
+      "resultCode" : VEHICLE_DATA_NOT_AVAILABLE
+    },
 
-		"prndl" :
-		{
-			"dataType" : VEHICLEDATA_PRNDL,
-			"resultCode" : VEHICLE_DATA_NOT_AVAILABLE
-		},
+    "prndl" :
+    {
+      "dataType" : VEHICLEDATA_PRNDL,
+      "resultCode" : VEHICLE_DATA_NOT_AVAILABLE
+    },
 
-		"tirePressure" :
-		{
-			"dataType" : VEHICLEDATA_TIREPRESSURE,
-			"resultCode" : SUCCESS
-		},
+    "tirePressure" :
+    {
+      "dataType" : VEHICLEDATA_TIREPRESSURE,
+      "resultCode" : SUCCESS
+    },
 
-		"odometer" :
-		{
-			"dataType" : VEHICLEDATA_odometer,
-			"resultCode" : SUCCESS
-		},
+    "odometer" :
+    {
+      "dataType" : VEHICLEDATA_odometer,
+      "resultCode" : SUCCESS
+    },
 
-		"beltStatus" :
-		{
-			"dataType" : VEHICLEDATA_BELTSTATUS,
-			"resultCode" : SUCCESS
-		},
+    "beltStatus" :
+    {
+      "dataType" : VEHICLEDATA_BELTSTATUS,
+      "resultCode" : SUCCESS
+    },
 
-		"bodyInformation" :
-		{
-			"dataType" : VEHICLEDATA_BODYINFO,
-			"resultCode" : SUCCESS
-		},
+    "bodyInformation" :
+    {
+      "dataType" : VEHICLEDATA_BODYINFO,
+      "resultCode" : SUCCESS
+    },
 
-		"deviceStatus" :
-		{
-			"dataType" : VEHICLEDATA_DEVICESTATUS,
-			"resultCode" : DATA_ALREADY_SUBSCRIBED
-		},
+    "deviceStatus" :
+    {
+      "dataType" : VEHICLEDATA_DEVICESTATUS,
+      "resultCode" : DATA_ALREADY_SUBSCRIBED
+    },
 
-		"wiperStatus" :
-		{
-			"dataType" : VEHICLEDATA_WIPERSTATUS,
-			"resultCode" : SUCCESS
-		},
+    "wiperStatus" :
+    {
+      "dataType" : VEHICLEDATA_WIPERSTATUS,
+      "resultCode" : SUCCESS
+    },
 
-		"headLampStatus" :
-		{
-			"dataType" : HEADLAMPSTATUS,
-			"resultCode" : SUCCESS
-		},
+    "headLampStatus" :
+    {
+      "dataType" : HEADLAMPSTATUS,
+      "resultCode" : SUCCESS
+    },
 
-		"accPedalPosition" :
-		{
-			"dataType" : VEHICLEDATA_ACCPEDAL,
-			"resultCode" : VEHICLE_DATA_NOT_AVAILABLE
-		},
+    "accPedalPosition" :
+    {
+      "dataType" : VEHICLEDATA_ACCPEDAL,
+      "resultCode" : VEHICLE_DATA_NOT_AVAILABLE
+    },
 
-		"code" : 0,
-		"method" : "VehicleInfo.SubscribeVehicleData"
-	}
+    "code" : 0,
+    "method" : "VehicleInfo.SubscribeVehicleData"
+  }
 }
 ```
 
@@ -199,16 +199,16 @@ SubscribeVehicleData
 
 ```json
 {
-	"id" : 139,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 6,
-		"message" : "All of requested data types is subscribed already",
-		"data" :
-		{
-			"method" : "VehicleInfo.SubscribeVehicleData"
-		}
-	}
+  "id" : 139,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 6,
+    "message" : "All of requested data types is subscribed already",
+    "data" :
+    {
+      "method" : "VehicleInfo.SubscribeVehicleData"
+    }
+  }
 }
 ```

@@ -26,12 +26,12 @@ OnCommand
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "UI.OnCommand",
-	"params" :
-	{
-		"cmdID" : 2318,
+  "jsonrpc" : "2.0",
+  "method" : "UI.OnCommand",
+  "params" :
+  {
+    "cmdID" : 2318,
      "appID" : 65409
-	}
+  }
 }
 ```

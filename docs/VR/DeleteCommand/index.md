@@ -36,29 +36,29 @@ DeleteCommand
 
 ```json
 {
-	"id" : 147,
-	"jsonrpc" : "2.0",
-	"method" : "VR. DeleteCommand",
-	"params" :
-	{
-		"cmdID" : 4365,
+  "id" : 147,
+  "jsonrpc" : "2.0",
+  "method" : "VR. DeleteCommand",
+  "params" :
+  {
+    "cmdID" : 4365,
       "type":"Command",
       "grammarID":13,
-		"appID" : 8764
-	}
+    "appID" : 8764
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 147,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "VR.DeleteCommand"
-	}
+  "id" : 147,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "VR.DeleteCommand"
+  }
 }
 ```
 
@@ -66,16 +66,16 @@ DeleteCommand
 
 ```json
 {
-	"id" : 147,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 13,
-		"message" : "One of the provided IDs is not valid",
-		"data" :
-		{
-			"method" : "VR.DeleteCommand"
-		}
-	}
+  "id" : 147,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 13,
+    "message" : "One of the provided IDs is not valid",
+    "data" :
+    {
+      "method" : "VR.DeleteCommand"
+    }
+  }
 }
 ```

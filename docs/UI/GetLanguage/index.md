@@ -33,23 +33,23 @@ GetLanguage
 
 ```json
 {
-	"id" : 167,
-	"jsonrpc" : "2.0",
-	"method" : "UI.GetLanguage"
+  "id" : 167,
+  "jsonrpc" : "2.0",
+  "method" : "UI.GetLanguage"
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 167,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"language" : "ES-ES",
-		"code" : 0,
-		"method" : "UI.GetLanguage"
-	}
+  "id" : 167,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "language" : "ES-ES",
+    "code" : 0,
+    "method" : "UI.GetLanguage"
+  }
 }
 ```
 
@@ -57,16 +57,16 @@ GetLanguage
 
 ```json
 {
-	"id" : 167,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 11,
-		"message" : "Invalid data",
-		"data" :
-		{
-			"method" : "UI.GetLanguage"
-		}
-	}
+  "id" : 167,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 11,
+    "message" : "Invalid data",
+    "data" :
+    {
+      "method" : "UI.GetLanguage"
+    }
+  }
 }
 ```

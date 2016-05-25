@@ -34,23 +34,23 @@ GetCapabilities
 
 ```json
 {
-	"id" : 9,
-	"jsonrpc" : "2.0",
-	"method" : "VR.GetCapabilities"
+  "id" : 9,
+  "jsonrpc" : "2.0",
+  "method" : "VR.GetCapabilities"
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 9,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"vrCapabilities" : [TEXT],
-		"code" : 0,
-		"method" : "VR.GetCapabilities"
-	}
+  "id" : 9,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "vrCapabilities" : [TEXT],
+    "code" : 0,
+    "method" : "VR.GetCapabilities"
+  }
 }
 ```
 
@@ -58,16 +58,16 @@ GetCapabilities
 
 ```json
 {
-	"id" : 9,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 11,
-		"message" : "The data sent is invalid",
-		"data" :
-		{
-			"method" : "VR.GetCapabilities"
-		}
-	}
+  "id" : 9,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 11,
+    "message" : "The data sent is invalid",
+    "data" :
+    {
+      "method" : "VR.GetCapabilities"
+    }
+  }
 }
 ```

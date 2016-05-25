@@ -19,7 +19,7 @@ Wake SDL from Suspension
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication. OnAwakeSDL"
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication. OnAwakeSDL"
 }
 ```

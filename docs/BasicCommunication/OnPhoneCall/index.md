@@ -27,10 +27,10 @@ Phone Call
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.OnPhoneCall"
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.OnPhoneCall"
      "params" :
-	{
+  {
        "isActive": true
      }
 }

@@ -40,8 +40,8 @@ System Request file upload using Put File
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.OnPutFile"
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.OnPutFile"
   {
      "fileName":"/fs/sharedFolder/app1_device1/icon.jpg",
      "fileType":"GRAPHIC_JPEG"

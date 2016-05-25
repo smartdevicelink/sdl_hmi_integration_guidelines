@@ -25,7 +25,7 @@ OnSDLClose Master Reset
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.OnSDLClose"
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.OnSDLClose"
 }
 ```

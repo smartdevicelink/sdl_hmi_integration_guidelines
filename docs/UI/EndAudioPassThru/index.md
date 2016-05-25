@@ -36,22 +36,22 @@ EndAudioPassThru audio capturing already ended
 
 ```json
 {
-	"id" : 79,
-	"jsonrpc" : "2.0",
-	"method" : "UI.EndAudioPassThru",
+  "id" : 79,
+  "jsonrpc" : "2.0",
+  "method" : "UI.EndAudioPassThru",
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 79,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "UI.EndAudioPassThru"
-	}
+  "id" : 79,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "UI.EndAudioPassThru"
+  }
 }
 ```
 
@@ -59,16 +59,16 @@ EndAudioPassThru audio capturing already ended
 
 ```json
 {
-	"id" : 79,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 4,
-		"message" : "Rejected: no PerformAudioPassThru is now active",
-		"data" :
-		{
-			"method" : "UI.EndAudioPassThru"
-		}
-	}
+  "id" : 79,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 4,
+    "message" : "Rejected: no PerformAudioPassThru is now active",
+    "data" :
+    {
+      "method" : "UI.EndAudioPassThru"
+    }
+  }
 }
 ```

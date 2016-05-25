@@ -37,13 +37,13 @@ OnButtonPress for hard button that only supports short press
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "Buttons.OnButtonPress",
-	"params" :
-	{
-		"name" : "CUSTOM_BUTTON",
-		"mode" : "SHORT",
-		"customButtonID" : 564
-	}
+  "jsonrpc" : "2.0",
+  "method" : "Buttons.OnButtonPress",
+  "params" :
+  {
+    "name" : "CUSTOM_BUTTON",
+    "mode" : "SHORT",
+    "customButtonID" : 564
+  }
 }
 ```

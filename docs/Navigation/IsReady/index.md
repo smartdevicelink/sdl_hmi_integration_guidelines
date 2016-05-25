@@ -34,23 +34,23 @@ IsReady
 
 ```json
 {
-	"id" : 27,
-	"jsonrpc" : "2.0",
-	"method" : "Navigation.IsReady"
+  "id" : 27,
+  "jsonrpc" : "2.0",
+  "method" : "Navigation.IsReady"
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 27,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"availabe" : true,
-		"code" : 0,
-		"method" : "Navigation.IsReady"
-	}
+  "id" : 27,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "availabe" : true,
+    "code" : 0,
+    "method" : "Navigation.IsReady"
+  }
 }
 ```
 
@@ -58,16 +58,16 @@ IsReady
 
 ```json
 {
-	"id" : 27,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 22,
-		"message" : "An unknown error has occurred",
-		"data" :
-		{
-			"method" : "Navigation.IsReady"
-		}
-	}
+  "id" : 27,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "An unknown error has occurred",
+    "data" :
+    {
+      "method" : "Navigation.IsReady"
+    }
+  }
 }
 ```

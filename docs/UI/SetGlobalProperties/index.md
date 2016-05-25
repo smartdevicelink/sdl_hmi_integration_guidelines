@@ -38,66 +38,66 @@ SetGlobalProperties for active app on HMI with VR activation
 
 ```json
 {
-	"id" : 116,
-	"jsonrpc" : "2.0",
-	"method" : "UI.SetGlobalProperties",
-	"params" :
-	{
-		"vrHelpTitle" : "Choose the action",
-		"vrHelp" :
-		[
-				{
-				 "text" : "Pause",
-				 "image" :
-					[
-				 		"value" : "tmp/SDL/app/Pandora/icon_1067.jpg",
-				 		"imageType" : DYNAMIC
-					],
-				 "position" : 1
-				},
-				{
-				 "text" : "Resume",
-				 "image" :
-					[
-				 		"value" : "tmp/SDL/app/Pandora/icon_1083.jpeg",
-				 		"imageType" : DYNAMIC
-					],
-				 "position" : 2
-				},
-				{
-				 "text" : "Skip",
-				 "image" :
-					[
-				 		"value" : "tmp/SDL/app/Pandora/icon_1013.jpeg",
-				 		"imageType" : DYNAMIC
-					],
-				 "position" : 3
-				},
-				{
-				 "text" : "Bookmark",
-				 "image" :
-					[
-				 		"value" : "tmp/SDL/app/Pandora/icon_1046.jpeg",
-				 		"imageType" : DYNAMIC
-					],
-				 "position" : 4
-				}
-		],
-		"appID" : 53880
-	}
+  "id" : 116,
+  "jsonrpc" : "2.0",
+  "method" : "UI.SetGlobalProperties",
+  "params" :
+  {
+    "vrHelpTitle" : "Choose the action",
+    "vrHelp" :
+    [
+        {
+         "text" : "Pause",
+         "image" :
+          [
+             "value" : "tmp/SDL/app/Pandora/icon_1067.jpg",
+             "imageType" : DYNAMIC
+          ],
+         "position" : 1
+        },
+        {
+         "text" : "Resume",
+         "image" :
+          [
+             "value" : "tmp/SDL/app/Pandora/icon_1083.jpeg",
+             "imageType" : DYNAMIC
+          ],
+         "position" : 2
+        },
+        {
+         "text" : "Skip",
+         "image" :
+          [
+             "value" : "tmp/SDL/app/Pandora/icon_1013.jpeg",
+             "imageType" : DYNAMIC
+          ],
+         "position" : 3
+        },
+        {
+         "text" : "Bookmark",
+         "image" :
+          [
+             "value" : "tmp/SDL/app/Pandora/icon_1046.jpeg",
+             "imageType" : DYNAMIC
+          ],
+         "position" : 4
+        }
+    ],
+    "appID" : 53880
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 116,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "UI.SetGlobalProperties"
-	}
+  "id" : 116,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "UI.SetGlobalProperties"
+  }
 }
 ```
 
@@ -105,16 +105,16 @@ SetGlobalProperties for active app on HMI with VR activation
 
 ```json
 {
-	"id" : 116,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 11,
-		"message" : "Invalid data",
-		"data" :
-		{
-			"method" : "UI.SetGlobalProperties"
-		}
-	}
+  "id" : 116,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 11,
+    "message" : "Invalid data",
+    "data" :
+    {
+      "method" : "UI.SetGlobalProperties"
+    }
+  }
 }
 ```

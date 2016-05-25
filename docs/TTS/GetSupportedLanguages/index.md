@@ -34,23 +34,23 @@ GetSupportedLanguages
 
 ```json
 {
-	"id" : 19,
-	"jsonrpc" : "2.0",
-	"method" : "TTS.GetSupportedLanguages"
+  "id" : 19,
+  "jsonrpc" : "2.0",
+  "method" : "TTS.GetSupportedLanguages"
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 19,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"languages" : [AR-SA, DE-DE, EN-GB, EN-US, ES-ES, FR-FR, IT-IT],
-		"code" : 0,
-		"method" : "TTS.GetSupportedLanguages"
-	}
+  "id" : 19,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "languages" : [AR-SA, DE-DE, EN-GB, EN-US, ES-ES, FR-FR, IT-IT],
+    "code" : 0,
+    "method" : "TTS.GetSupportedLanguages"
+  }
 }
 ```
 
@@ -58,16 +58,16 @@ GetSupportedLanguages
 
 ```json
 {
-	"id" : 19,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 11,
-		"message" : "The data sent is invalid",
-		"data" :
-		{
-			"method" : "TTS.GetSupportedLanguages"
-		}
-	}
+  "id" : 19,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 11,
+    "message" : "The data sent is invalid",
+    "data" :
+    {
+      "method" : "TTS.GetSupportedLanguages"
+    }
+  }
 }
 ```

@@ -21,21 +21,21 @@ Stopped after StopSpeaking from SDL
 
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : " TTS.Stopped",
+  "jsonrpc" : "2.0",
+  "method" : " TTS.Stopped",
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 37,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "TTS.Stopped"
-	}
+  "id" : 37,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "TTS.Stopped"
+  }
 }
 ```
 
@@ -43,16 +43,16 @@ Stopped after StopSpeaking from SDL
 
 ```json
 {
-	"id" : 37,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 22,
-		"message" : "Something went wrong",
-		"data" :
-		{
-			"method" : "TTS.Stopped"
-		}
-	}
+  "id" : 37,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "Something went wrong",
+    "data" :
+    {
+      "method" : "TTS.Stopped"
+    }
+  }
 }
 ```

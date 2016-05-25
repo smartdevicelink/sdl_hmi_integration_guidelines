@@ -37,9 +37,9 @@ When SDL starts, it sends GetSystemInfo to update the policies database with the
 
 ```json
 {
-	"id" : 47,
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.GetSystemInfo"
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.GetSystemInfo"
 }
 ```
 
@@ -47,16 +47,16 @@ When SDL starts, it sends GetSystemInfo to update the policies database with the
 
 ```json
 {
-	"id" : 47,
-	"jsonrpc" : "2.0",
-	"result" : {
-		"code" : 0,
-		"method" : "BasicCommunication.GetSystemInfo",
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "result" : {
+    "code" : 0,
+    "method" : "BasicCommunication.GetSystemInfo",
     "params" : {
-		    "ccpu_version" : "12.1.3",
-		    "language" : "EN-US",
-		    "wersCountryCode" : "WAEGB"
-	      }
+        "ccpu_version" : "12.1.3",
+        "language" : "EN-US",
+        "wersCountryCode" : "WAEGB"
+        }
     }
 }
 ```
@@ -65,17 +65,17 @@ When SDL starts, it sends GetSystemInfo to update the policies database with the
 
 ```json
 {
-	"id" : 47,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 9,
-		"message" : " Error in fetching system information ",
-		"data" :
-		{
-			"method" : "BasicCommunication.GetSystemInfo"
-		}
-	}
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 9,
+    "message" : " Error in fetching system information ",
+    "data" :
+    {
+      "method" : "BasicCommunication.GetSystemInfo"
+    }
+  }
 }
 ```
 

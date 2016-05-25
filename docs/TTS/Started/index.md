@@ -25,21 +25,21 @@ Started during PerformInteraction
 
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "TTS.Started",
+  "jsonrpc" : "2.0",
+  "method" : "TTS.Started",
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 37,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "TTS.Started"
-	}
+  "id" : 37,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "TTS.Started"
+  }
 }
 ```
 
@@ -47,16 +47,16 @@ Started during PerformInteraction
 
 ```json
 {
-	"id" : 37,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 22,
-		"message" : "Something went wrong",
-		"data" :
-		{
-			"method" : "TTS.Started"
-		}
-	}
+  "id" : 37,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "Something went wrong",
+    "data" :
+    {
+      "method" : "TTS.Started"
+    }
+  }
 }
 ```

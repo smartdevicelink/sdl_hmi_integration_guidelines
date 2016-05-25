@@ -37,16 +37,16 @@ Check whether the device is allowed to connect to the head unit and response app
 ### Example Request
 ```json
 {
-	"id" : 87,
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.AllowDeviceToConnect",
-	"params" :
-	[
-		"deviceInfo" : {
-				"name" : "Mary`s Phone",
-				"id" : 8
-		}
-	]
+  "id" : 87,
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.AllowDeviceToConnect",
+  "params" :
+  [
+    "deviceInfo" : {
+        "name" : "Mary`s Phone",
+        "id" : 8
+    }
+  ]
 }
 ```
 
@@ -54,31 +54,31 @@ Check whether the device is allowed to connect to the head unit and response app
 
 ```json
 {
-	"id" : 87,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-	 "allow" : true,
-		"code" : 0,
-		"method" : "BasicCommunication.AllowDeviceToConnect"
-	}
+  "id" : 87,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+   "allow" : true,
+    "code" : 0,
+    "method" : "BasicCommunication.AllowDeviceToConnect"
+  }
 }
 ```
 
 ### Error Message
 ```json
 {
-	"id" : 87,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 22,
-		"message" : "An unknown error occurred",
-		"data" :
-		{
-			"method" : "BasicCommunication.AllowDeviceToConnect"
-		}
-	}
+  "id" : 87,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "An unknown error occurred",
+    "data" :
+    {
+      "method" : "BasicCommunication.AllowDeviceToConnect"
+    }
+  }
 }
 ```
 

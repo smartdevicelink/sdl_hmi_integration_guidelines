@@ -35,27 +35,27 @@ ChangeRegistration after OnAppRegistered
 
 ```json
 {
-	"id" : 206,
-	"jsonrpc" : "2.0",
-	"method" : "TTS.ChangeRegistration",
-	"params" :
-	{
-		"language" : DE-DE,
-		"appID" : 65539
-	}
+  "id" : 206,
+  "jsonrpc" : "2.0",
+  "method" : "TTS.ChangeRegistration",
+  "params" :
+  {
+    "language" : DE-DE,
+    "appID" : 65539
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 206,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "TTS.ChangeRegistration"
-	}
+  "id" : 206,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "TTS.ChangeRegistration"
+  }
 }
 ```
 
@@ -63,16 +63,16 @@ ChangeRegistration after OnAppRegistered
 
 ```json
 {
-	"id" : 206,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 22,
-		"message" : "Unknown error occurred",
-		"data" :
-		{
-			"method" : "TTS.ChangeRegistration"
-		}
-	}
+  "id" : 206,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "Unknown error occurred",
+    "data" :
+    {
+      "method" : "TTS.ChangeRegistration"
+    }
+  }
 }
 ```

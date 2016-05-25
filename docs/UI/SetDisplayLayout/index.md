@@ -43,136 +43,136 @@ SetDisplayLayout Invalid Data with UI.GetCapabilities
 
 ```json
 {
-	"id" : 47,
-	"jsonrpc" : "2.0",
-	"method" : "UI.SetDisplayLayout",
-	"params" :
-	{
-		"displayLayout" : "NON-MEDIA",
-		"appID" : 65638
-	}
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "method" : "UI.SetDisplayLayout",
+  "params" :
+  {
+    "displayLayout" : "NON-MEDIA",
+    "appID" : 65638
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 47,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"displayCapabilities" :
-		{
-				"displayType" : GEN2_8_DMA,
-				"textFields" : [mainField1, mainField2, alertText1, alertText2, alertText3, scrollableMessageBody, initialInteractionText, navigationText1, navigationText2, audioPassThruDisplayText1, audioPassThruDisplayText2, notificationText]
-				"imageFields" :
-				[
-					{
-					 "name" : "softButtonImage",
-					 "imageTypeSupported" : ["GRAPHIC_BMP", 											"GRAPHIC_JPEG", "GRAPHIC_PNG"],
-					 "imageResolution" :
-						{
-						 "resolutionWidth" : 32,
-						 "resolutionHeight" : 32
-						}
-					},
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "displayCapabilities" :
+    {
+        "displayType" : GEN2_8_DMA,
+        "textFields" : [mainField1, mainField2, alertText1, alertText2, alertText3, scrollableMessageBody, initialInteractionText, navigationText1, navigationText2, audioPassThruDisplayText1, audioPassThruDisplayText2, notificationText]
+        "imageFields" :
+        [
+          {
+           "name" : "softButtonImage",
+           "imageTypeSupported" : ["GRAPHIC_BMP",                       "GRAPHIC_JPEG", "GRAPHIC_PNG"],
+           "imageResolution" :
+            {
+             "resolutionWidth" : 32,
+             "resolutionHeight" : 32
+            }
+          },
 
-					{
-					 "name" : "vrHelpItem",
-					 "imageTypeSupported" : ["GRAPHIC_BMP", 											"GRAPHIC_JPEG", "GRAPHIC_PNG"],
-					 "imageResolution" :
-						{
-						 "resolutionWidth" : 32,
-						 "resolutionHeight" : 32
-						}
-					},
+          {
+           "name" : "vrHelpItem",
+           "imageTypeSupported" : ["GRAPHIC_BMP",                       "GRAPHIC_JPEG", "GRAPHIC_PNG"],
+           "imageResolution" :
+            {
+             "resolutionWidth" : 32,
+             "resolutionHeight" : 32
+            }
+          },
 
-					{
-					 "name" : "appIcon",
-					 "imageTypeSupported" : ["GRAPHIC_BMP", 											"GRAPHIC_JPEG", "GRAPHIC_PNG"],
-					 "imageResolution" :
-						{
-						 "resolutionWidth" : 64,
-						 "resolutionHeight" : 64
-						}
-					},
-				],
+          {
+           "name" : "appIcon",
+           "imageTypeSupported" : ["GRAPHIC_BMP",                       "GRAPHIC_JPEG", "GRAPHIC_PNG"],
+           "imageResolution" :
+            {
+             "resolutionWidth" : 64,
+             "resolutionHeight" : 64
+            }
+          },
+        ],
 
-				"mediaClockFormats" : [CLOCK1, CLOCKTEXT4],
-				"imageCapabilities" : [DYNAMIC],
-				"graphicSupported" : true,
-				"templatesAvailable" : ["DEFAULT", "MEDIA", "NON-MEDIA"],
+        "mediaClockFormats" : [CLOCK1, CLOCKTEXT4],
+        "imageCapabilities" : [DYNAMIC],
+        "graphicSupported" : true,
+        "templatesAvailable" : ["DEFAULT", "MEDIA", "NON-MEDIA"],
 
-				"screenParams" :
-				{
-					"resolution" :
-						{
-						 "resolutionWidth" : 800,
-						 "resolutionHeight" : 480
-						},
+        "screenParams" :
+        {
+          "resolution" :
+            {
+             "resolutionWidth" : 800,
+             "resolutionHeight" : 480
+            },
 
-					"touchEventAvailable" :
-						{
-						 "pressAvailable" : true,
-						 "multiTouchAvailable" : true,
-						 "doublePressAvailable" : false
-						}
-				},
-				"numCustomPresetsAvailable" : 8
-		},
+          "touchEventAvailable" :
+            {
+             "pressAvailable" : true,
+             "multiTouchAvailable" : true,
+             "doublePressAvailable" : false
+            }
+        },
+        "numCustomPresetsAvailable" : 8
+    },
 
-		"buttonCapabilities" :
-		[
-			{
-				"name" : OK,
-				"shortPressAvailable" : true,
-				"longPressAvailable" : true,
-				"upDownAvailable" : true
-			},
-			{
-				"name" : SEEKLEFT,
-				"shortPressAvailable" : true,
-				"longPressAvailable" : true,
-				"upDownAvailable" : true
-			},
-			{
-				"name" : SEEKRIGHT,
-				"shortPressAvailable" : true,
-				"longPressAvailable" : true,
-				"upDownAvailable" : true
-			},
-			{
-				"name" : TUNEUP,
-				"shortPressAvailable" : true,
-				"longPressAvailable" : true,
-				"upDownAvailable" : true
-			},
-			{
-				"name" : TUNEDOWN,
-				"shortPressAvailable" : true,
-				"longPressAvailable" : true,
-				"upDownAvailable" : true
-			},
-		],
+    "buttonCapabilities" :
+    [
+      {
+        "name" : OK,
+        "shortPressAvailable" : true,
+        "longPressAvailable" : true,
+        "upDownAvailable" : true
+      },
+      {
+        "name" : SEEKLEFT,
+        "shortPressAvailable" : true,
+        "longPressAvailable" : true,
+        "upDownAvailable" : true
+      },
+      {
+        "name" : SEEKRIGHT,
+        "shortPressAvailable" : true,
+        "longPressAvailable" : true,
+        "upDownAvailable" : true
+      },
+      {
+        "name" : TUNEUP,
+        "shortPressAvailable" : true,
+        "longPressAvailable" : true,
+        "upDownAvailable" : true
+      },
+      {
+        "name" : TUNEDOWN,
+        "shortPressAvailable" : true,
+        "longPressAvailable" : true,
+        "upDownAvailable" : true
+      },
+    ],
 
-		"softButtonCapabilities" :
-		[
-			{
-				"shortPressAvailable" : true,
-				"longPressAvailable" : true,
-				"upDownAvailable" : true,
-				"imageSupported" : true
-			}
-		],
+    "softButtonCapabilities" :
+    [
+      {
+        "shortPressAvailable" : true,
+        "longPressAvailable" : true,
+        "upDownAvailable" : true,
+        "imageSupported" : true
+      }
+    ],
 
-		"presetBankCapabilities" :
-		{
-			"onScreenPresetsAvailable" : true
-		},
+    "presetBankCapabilities" :
+    {
+      "onScreenPresetsAvailable" : true
+    },
 
-		"code" : 0,
-		"method" : "UI.SetDisplayLayout"
-	}
+    "code" : 0,
+    "method" : "UI.SetDisplayLayout"
+  }
 }
 ```
 
@@ -180,16 +180,16 @@ SetDisplayLayout Invalid Data with UI.GetCapabilities
 
 ```json
 {
-	"id" : 47,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 6,
-		"message" : "Ignored as the requested template is already associated with the named appID",
-		"data" :
-		{
-			"method" : "UI.SetDisplayLayout"
-		}
-	}
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 6,
+    "message" : "Ignored as the requested template is already associated with the named appID",
+    "data" :
+    {
+      "method" : "UI.SetDisplayLayout"
+    }
+  }
 }
 ```

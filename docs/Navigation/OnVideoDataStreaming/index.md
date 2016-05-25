@@ -26,11 +26,11 @@ OnVideoDataStreaming
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "Navigation.OnVideoDataStreaming",
-	"params" :  
-	{
-		"available" : true
-	}
+  "jsonrpc" : "2.0",
+  "method" : "Navigation.OnVideoDataStreaming",
+  "params" :  
+  {
+    "available" : true
+  }
 }
 ```

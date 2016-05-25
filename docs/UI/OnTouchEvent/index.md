@@ -32,11 +32,11 @@ OnTouchEvent moving two fingers one stops first
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "UI.OnTouchEvent",
-	"params" :
-	{
-		"type" : START,
+  "jsonrpc" : "2.0",
+  "method" : "UI.OnTouchEvent",
+  "params" :
+  {
+    "type" : START,
       " event" :[
              {
                 "id":0,
@@ -44,6 +44,6 @@ OnTouchEvent moving two fingers one stops first
                 "c":[{"x":323,"y":259}],
               }
             ]
-	}
+  }
 }
 ```

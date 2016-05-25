@@ -39,43 +39,43 @@ GetListOfPermissions without AppId
 
 ```json
 {
-	"id" : 143,
-	"jsonrpc" : "2.0",
-	"method" : "SDL.GetListOfPermissions",
-	"params" :
-	{
-		"appID" : 65596
-	}
+  "id" : 143,
+  "jsonrpc" : "2.0",
+  "method" : "SDL.GetListOfPermissions",
+  "params" :
+  {
+    "appID" : 65596
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 143,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"allowedFunctions" :
+  "id" : 143,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "allowedFunctions" :
 
 [
       {
-		"name" : "Location-1",
+    "name" : "Location-1",
       "id":1234,
       "allowed":true
-	},
+  },
 
      {
-		"name" : "Notifications",
+    "name" : "Notifications",
       "id":76876,
       "allowed":false
-	},
+  },
 
     ]
 
-		"code" : 0,
-		"method" : "SDL.GetListOfPermissions"
-	}
+    "code" : 0,
+    "method" : "SDL.GetListOfPermissions"
+  }
 }
 ```
 
@@ -83,16 +83,16 @@ GetListOfPermissions without AppId
 
 ```json
 {
-	"id" : 143,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 15,
-		"message" : " A command cannot be executed because there is NO specified 				with appID application registered ",
-		"data" :
-		{
-			"method" : "SDL.GetListOfPermissions"
-		}
-	}
+  "id" : 143,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 15,
+    "message" : " A command cannot be executed because there is NO specified         with appID application registered ",
+    "data" :
+    {
+      "method" : "SDL.GetListOfPermissions"
+    }
+  }
 }
 ```

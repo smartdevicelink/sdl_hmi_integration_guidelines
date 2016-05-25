@@ -27,13 +27,13 @@ Emergency Event Activated
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication. OnEmergencyEvent"
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication. OnEmergencyEvent"
      "params" :
-	{
-				"enabled" : "true"
+  {
+        "enabled" : "true"
 
-	}
+  }
 
 }
 ```

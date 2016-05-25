@@ -35,24 +35,24 @@ GetCapabilities
 
 ```json
 {
-	"id" : 13,
-	"jsonrpc" : "2.0",
-	"method" : "TTS.GetCapabilities"
+  "id" : 13,
+  "jsonrpc" : "2.0",
+  "method" : "TTS.GetCapabilities"
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 13,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"capabilities" : [TEXT],
-		"prerecordedSpeechCapabilities" : [HELP_JINGLE, INITIAL_JINGLE, LISTEN_JINGLE, POSITIVE_JINGLE, NEGATIVE_JINGLE],
-		"code" : 0,
-		"method" : "TTS.GetCapabilities"
-	}
+  "id" : 13,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "capabilities" : [TEXT],
+    "prerecordedSpeechCapabilities" : [HELP_JINGLE, INITIAL_JINGLE, LISTEN_JINGLE, POSITIVE_JINGLE, NEGATIVE_JINGLE],
+    "code" : 0,
+    "method" : "TTS.GetCapabilities"
+  }
 }
 ```
 
@@ -60,16 +60,16 @@ GetCapabilities
 
 ```json
 {
-	"id" : 28,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 11,
-		"message" : "The data sent is invalid",
-		"data" :
-		{
-			"method" : "TTS.GetCapabilities"
-		}
-	}
+  "id" : 28,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 11,
+    "message" : "The data sent is invalid",
+    "data" :
+    {
+      "method" : "TTS.GetCapabilities"
+    }
+  }
 }
 ```

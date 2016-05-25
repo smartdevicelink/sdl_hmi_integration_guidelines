@@ -34,23 +34,23 @@ Get Supported Languages
 
 ```json
 {
-	"id" : 99,
-	"jsonrpc" : "2.0",
-	"method" : "UI.GetSupportedLanguages"
+  "id" : 99,
+  "jsonrpc" : "2.0",
+  "method" : "UI.GetSupportedLanguages"
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 99,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"languages" : ["AR-SA", "DE-DE", "EN-GB", "EN-US", "ES-ES", "FR-FR", "IT-IT"],
-		"code" : 0,
-		"method" : "UI.GetSupportedLanguages"
-	}
+  "id" : 99,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "languages" : ["AR-SA", "DE-DE", "EN-GB", "EN-US", "ES-ES", "FR-FR", "IT-IT"],
+    "code" : 0,
+    "method" : "UI.GetSupportedLanguages"
+  }
 }
 ```
 
@@ -58,16 +58,16 @@ Get Supported Languages
 
 ```json
 {
-	"id" : 99,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 9,
-		"message" : "The requested data is not available",
-		"data" :
-		{
-			"method" : "UI.GetSupportedLanguages"
-		}
-	}
+  "id" : 99,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 9,
+    "message" : "The requested data is not available",
+    "data" :
+    {
+      "method" : "UI.GetSupportedLanguages"
+    }
+  }
 }
 ```

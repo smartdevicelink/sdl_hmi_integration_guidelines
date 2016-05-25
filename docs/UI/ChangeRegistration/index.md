@@ -37,27 +37,27 @@ ChangeRegistration
 
 ```json
 {
-	"id" : 117,
-	"jsonrpc" : "2.0",
-	"method" : "UI.ChangeRegistration",
-	"params" :
-	{
-		"Language" : "PT-PT",
-		"appID" : 65146
-	}
+  "id" : 117,
+  "jsonrpc" : "2.0",
+  "method" : "UI.ChangeRegistration",
+  "params" :
+  {
+    "Language" : "PT-PT",
+    "appID" : 65146
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 117,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "UI.ChangeRegistration"
-	}
+  "id" : 117,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "UI.ChangeRegistration"
+  }
 }
 ```
 
@@ -65,16 +65,16 @@ ChangeRegistration
 
 ```json
 {
-	"id" : 117,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 11,
-		"message" : "Invalid data",
-		"data" :
-		{
-			"method" : "UI.ChangeRegistration"
-		}
-	}
+  "id" : 117,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 11,
+    "message" : "Invalid data",
+    "data" :
+    {
+      "method" : "UI.ChangeRegistration"
+    }
+  }
 }
 ```

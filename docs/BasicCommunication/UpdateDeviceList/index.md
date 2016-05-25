@@ -57,24 +57,24 @@ This RPC has no additional parameter requirements
 
 ```json
 {
-	"id" : 64,
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.UpdateDeviceList",
-	"params" :
-	{
-		"deviceList" :
-		[			
-			{
-				"name" : "Jerry`s Phone",
-				"id" : 3
-			},
+  "id" : 64,
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.UpdateDeviceList",
+  "params" :
+  {
+    "deviceList" :
+    [      
+      {
+        "name" : "Jerry`s Phone",
+        "id" : 3
+      },
 
-			{
-				"name" : "XT910",
-				"id" : 4
-			}
-		]
-	}
+      {
+        "name" : "XT910",
+        "id" : 4
+      }
+    ]
+  }
 }
 ```
 
@@ -82,12 +82,12 @@ This RPC has no additional parameter requirements
 
 ```json
 {
-	"id" : 64,
-	"jsonrpc" : "2.0",
-	"result" : {
-		"code" : 0,
-		"method" : "BasicCommunication.UpdateDeviceList"
-	}
+  "id" : 64,
+  "jsonrpc" : "2.0",
+  "result" : {
+    "code" : 0,
+    "method" : "BasicCommunication.UpdateDeviceList"
+  }
 }
 ```
 
@@ -95,15 +95,15 @@ This RPC has no additional parameter requirements
 
 ```json
 {
-	"id" : 64,
-	"jsonrpc" : "2.0",
-	"error" : {
-		"code" : 11,
-		"message" : " The data sent is invalid.",
-		"data" : {
-			"method" : "BasicCommunication.UpdateDeviceList"
-		}
-	}
+  "id" : 64,
+  "jsonrpc" : "2.0",
+  "error" : {
+    "code" : 11,
+    "message" : " The data sent is invalid.",
+    "data" : {
+      "method" : "BasicCommunication.UpdateDeviceList"
+    }
+  }
 }
 ```
 

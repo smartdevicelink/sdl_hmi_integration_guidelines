@@ -192,24 +192,24 @@ On receipt of a request message, the server must reply with a response. The resp
   "jsonrpc": "2.0",
   "result": {
     "capabilities" : [
-			{
-				"longPressAvailable" : true,
-				"name" : "PRESET_0",
-				"shortPressAvailable" : true,
-				"upDownAvailable" : true
-			},
-			{
-				"longPressAvailable" : true,
-				"name" : "TUNEDOWN",
-				"shortPressAvailable" : true,
-				"upDownAvailable" : true
-			}
-		],
-		"presetBankCapabilities": {
-			"onScreenPresetsAvailable" : true
-		},
-		"code" : 0,
-		"method" : "Buttons.GetCapabilities"
+      {
+        "longPressAvailable" : true,
+        "name" : "PRESET_0",
+        "shortPressAvailable" : true,
+        "upDownAvailable" : true
+      },
+      {
+        "longPressAvailable" : true,
+        "name" : "TUNEDOWN",
+        "shortPressAvailable" : true,
+        "upDownAvailable" : true
+      }
+    ],
+    "presetBankCapabilities": {
+      "onScreenPresetsAvailable" : true
+    },
+    "code" : 0,
+    "method" : "Buttons.GetCapabilities"
   }
 }
 ```

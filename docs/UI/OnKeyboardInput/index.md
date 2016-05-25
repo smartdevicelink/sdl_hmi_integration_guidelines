@@ -43,11 +43,11 @@ OnKeyboardInput ENTRY_VOICE mode
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "UI.OnKeyboardInput",
-	"params" :
-	{
-		"event" : "ENTRY_CANCELLED"
-	}
+  "jsonrpc" : "2.0",
+  "method" : "UI.OnKeyboardInput",
+  "params" :
+  {
+    "event" : "ENTRY_CANCELLED"
+  }
 }
 ```

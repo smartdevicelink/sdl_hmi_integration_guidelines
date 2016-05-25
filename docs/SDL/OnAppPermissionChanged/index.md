@@ -33,12 +33,12 @@ OnAppPermissionChanged with consent required
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "SDL.OnAppPermissionChanged",
-	"params" :  
-	{
-		"appID" : 65674,
+  "jsonrpc" : "2.0",
+  "method" : "SDL.OnAppPermissionChanged",
+  "params" :  
+  {
+    "appID" : 65674,
 
-	}
+  }
 }
 ```

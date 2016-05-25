@@ -36,29 +36,29 @@ Speak
 
 ```json
 {
-	"id" : 144,
-	"jsonrpc" : "2.0",
-	"method" : "TTS.Speak",
-	"params" :
-	{
-		"ttsChunks" :
-		[
-			"text" : "Please say a command"
-		]
-	}
+  "id" : 144,
+  "jsonrpc" : "2.0",
+  "method" : "TTS.Speak",
+  "params" :
+  {
+    "ttsChunks" :
+    [
+      "text" : "Please say a command"
+    ]
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 144,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "TTS.Speak"
-	}
+  "id" : 144,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "TTS.Speak"
+  }
 }
 ```
 
@@ -66,16 +66,16 @@ Speak
 
 ```json
 {
-	"id" : 144,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 5,
-		"message" : "The command was aborted",
-		"data" :
-		{
-			"method" : "TTS.Speak"
-		}
-	}
+  "id" : 144,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 5,
+    "message" : "The command was aborted",
+    "data" :
+    {
+      "method" : "TTS.Speak"
+    }
+  }
 }
 ```

@@ -56,26 +56,26 @@ This RPC has no additional parameter requirements
 
 ```json
 {
-	"id" : 47,
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.ActivateApp",
-	"result" :
-	{
-		"appID" : 65368
-	}
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.ActivateApp",
+  "result" :
+  {
+    "appID" : 65368
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 47,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "BasicCommunication.ActivateApp"
-	}
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "BasicCommunication.ActivateApp"
+  }
 }
 ```
 
@@ -83,17 +83,17 @@ This RPC has no additional parameter requirements
 
 ```json
 {
-	"id" : 47,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 13,
-		"message" : "One of the provided IDs is not valid.",
-		"data" :
-		{
-			"method" : "BasicCommunication.ActivateApp"
-		}
-	}
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 13,
+    "message" : "One of the provided IDs is not valid.",
+    "data" :
+    {
+      "method" : "BasicCommunication.ActivateApp"
+    }
+  }
 }
 ```
 

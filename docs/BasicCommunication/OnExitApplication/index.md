@@ -31,12 +31,12 @@ Application Not Authorized
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.OnExitApplication",
-	"params" :
-	{
-		"appID" : 65544,
-		"reason" : "USER_EXIT"
-	}
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.OnExitApplication",
+  "params" :
+  {
+    "appID" : 65544,
+    "reason" : "USER_EXIT"
+  }
 }
 ```

@@ -73,13 +73,13 @@ AlertManeuver Rejected
 
 ```json
 {
-	"id" : 143,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "Navigation.AlertManeuver"
-	}
+  "id" : 143,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "Navigation.AlertManeuver"
+  }
 }
 ```
 
@@ -87,16 +87,16 @@ AlertManeuver Rejected
 
 ```json
 {
-	"id" : 143,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 13,
-		"message" : "The command cannot be executed because there is NO app registered with the specified appID",
-		"data" :
-		{
-			"method" : "Navigation.AlertManeuver"
-		}
-	}
+  "id" : 143,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 13,
+    "message" : "The command cannot be executed because there is NO app registered with the specified appID",
+    "data" :
+    {
+      "method" : "Navigation.AlertManeuver"
+    }
+  }
 }
 ```

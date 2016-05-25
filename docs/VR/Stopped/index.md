@@ -21,7 +21,7 @@ Stopped when VR session ends
 
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "VR.Stopped",
+  "jsonrpc" : "2.0",
+  "method" : "VR.Stopped",
 }
 ```

@@ -48,33 +48,33 @@ SendLocation Fail Rejected
 
 ```json
 {
-	"id" : 138,
-	"jsonrpc" : "2.0",
-	"method" : "Navigation.SendLocation",
-	"params" :
-	{
-		"longitudeDegrees" : 139.34,
-		"latitudeDegrees" : 35.36,
-		"locationName" : "Ford Repair",
-		"locationImage" :
-		{
-				 "value" : "tmp/SDL/app/Navi/12345.jpg",
-				 "imageType" : DYNAMIC
-		}
-	}
+  "id" : 138,
+  "jsonrpc" : "2.0",
+  "method" : "Navigation.SendLocation",
+  "params" :
+  {
+    "longitudeDegrees" : 139.34,
+    "latitudeDegrees" : 35.36,
+    "locationName" : "Ford Repair",
+    "locationImage" :
+    {
+         "value" : "tmp/SDL/app/Navi/12345.jpg",
+         "imageType" : DYNAMIC
+    }
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 138,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "Navigation.SendLocation"
-	}
+  "id" : 138,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "Navigation.SendLocation"
+  }
 }
 ```
 
@@ -82,16 +82,16 @@ SendLocation Fail Rejected
 
 ```json
 {
-	"id" : 138,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 22,
-		"message" : " The unknown issue occurred ",
-		"data" :
-		{
-			"method" : "Navigation.SendLocation"
-		}
-	}
+  "id" : 138,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : " The unknown issue occurred ",
+    "data" :
+    {
+      "method" : "Navigation.SendLocation"
+    }
+  }
 }
 ```

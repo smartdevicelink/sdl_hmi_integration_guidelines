@@ -35,38 +35,38 @@ SetGlobalProperties
 
 ```json
 {
-	"id" : 37,
-	"jsonrpc" : "2.0",
-	"method" : "TTS.SetGlobalProperties",
-	"params" :
-	{
-		"helpPrompt" :
-		[
-			"text" : "Yes",
-			"text" : "No",
-			"text" : "Skip"
-		],
+  "id" : 37,
+  "jsonrpc" : "2.0",
+  "method" : "TTS.SetGlobalProperties",
+  "params" :
+  {
+    "helpPrompt" :
+    [
+      "text" : "Yes",
+      "text" : "No",
+      "text" : "Skip"
+    ],
 
-		"timeoutPrompt" :
-		[
-			"text" : "Please make a choice",
-			"text" : "The time is about to expire"
-		],
-		"appID" : 65542
-	}
+    "timeoutPrompt" :
+    [
+      "text" : "Please make a choice",
+      "text" : "The time is about to expire"
+    ],
+    "appID" : 65542
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 37,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "TTS.SetGlobalProperties"
-	}
+  "id" : 37,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "TTS.SetGlobalProperties"
+  }
 }
 ```
 
@@ -74,16 +74,16 @@ SetGlobalProperties
 
 ```json
 {
-	"id" : 37,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 2,
-		"message" : "TTS is not supported",
-		"data" :
-		{
-			"method" : "TTS.SetGlobalProperties"
-		}
-	}
+  "id" : 37,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 2,
+    "message" : "TTS is not supported",
+    "data" :
+    {
+      "method" : "TTS.SetGlobalProperties"
+    }
+  }
 }
 ```

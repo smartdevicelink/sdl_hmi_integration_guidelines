@@ -34,31 +34,31 @@ SetAppIcon
 
 ```json
 {
-	"id" : 88,
-	"jsonrpc" : "2.0",
-	"method" : "UI.SetAppIcon",
-	"params" :
-	{
-		"syncFileName" :
-		{
-				 "value" : "tmp/SDL/app/Best_Media/12345.jpg",
-				 "imageType" : "DYNAMIC"
-		},
-		"appID" : 65146
-	}
+  "id" : 88,
+  "jsonrpc" : "2.0",
+  "method" : "UI.SetAppIcon",
+  "params" :
+  {
+    "syncFileName" :
+    {
+         "value" : "tmp/SDL/app/Best_Media/12345.jpg",
+         "imageType" : "DYNAMIC"
+    },
+    "appID" : 65146
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 88,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-	 "method" : "UI.SetAppIcon"
-	}
+  "id" : 88,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+   "method" : "UI.SetAppIcon"
+  }
 }
 ```
 
@@ -66,16 +66,16 @@ SetAppIcon
 
 ```json
 {
-	"id" : 88,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 2,
-		"message" : "Unsupported resource",
-		"data" :
-		{
-			"method" : "UI.SetAppIcon"
-		}
-	}
+  "id" : 88,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 2,
+    "message" : "Unsupported resource",
+    "data" :
+    {
+      "method" : "UI.SetAppIcon"
+    }
+  }
 }
 ```

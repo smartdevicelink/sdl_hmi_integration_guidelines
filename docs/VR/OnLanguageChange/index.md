@@ -26,11 +26,11 @@ OnLanguageChange
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "VR.OnLanguageChange",
-	"params" :
-	{
-		"language" : "IT-IT"
-	}
+  "jsonrpc" : "2.0",
+  "method" : "VR.OnLanguageChange",
+  "params" :
+  {
+    "language" : "IT-IT"
+  }
 }
 ```

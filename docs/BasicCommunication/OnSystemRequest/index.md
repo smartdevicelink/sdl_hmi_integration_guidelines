@@ -33,10 +33,10 @@ System Requests File Download
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.OnSystemRequest",
-	"params" :
-	{
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.OnSystemRequest",
+  "params" :
+  {
     "fileName":"/fs/images/ivsu_cache/EncodedPolicyTable.json",
      "fileType":"JSON",
      "length":0,

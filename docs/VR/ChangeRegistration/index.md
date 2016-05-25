@@ -35,27 +35,27 @@ ChangeRegistration
 
 ```json
 {
-	"id" : 206,
-	"jsonrpc" : "2.0",
-	"method" : "VR.ChangeRegistration",
-	"params" :
-	{
-		"language" : "DE-DE",
-		"appID" : 13264
-	}
+  "id" : 206,
+  "jsonrpc" : "2.0",
+  "method" : "VR.ChangeRegistration",
+  "params" :
+  {
+    "language" : "DE-DE",
+    "appID" : 13264
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 206,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "VR.ChangeRegistration"
-	}
+  "id" : 206,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "VR.ChangeRegistration"
+  }
 }
 ```
 
@@ -63,16 +63,16 @@ ChangeRegistration
 
 ```json
 {
-	"id" : 206,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 22,
-		"message" : "The unknown error occurred",
-		"data" :
-		{
-			"method" : "VR.ChangeRegistration"
-		}
-	}
+  "id" : 206,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "The unknown error occurred",
+    "data" :
+    {
+      "method" : "VR.ChangeRegistration"
+    }
+  }
 }
 ```

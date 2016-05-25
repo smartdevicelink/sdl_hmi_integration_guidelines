@@ -34,26 +34,26 @@ StartStream
 
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "Navigation.StartStream",
-	"params" :  
-	{
-		"url" : "SDL/application_directory/video/123.mp4",
-		"appID" : 65674
-	}
+  "jsonrpc" : "2.0",
+  "method" : "Navigation.StartStream",
+  "params" :  
+  {
+    "url" : "SDL/application_directory/video/123.mp4",
+    "appID" : 65674
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 176,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "Navigation.StartStream"
-	}
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "Navigation.StartStream"
+  }
 }
 ```
 
@@ -61,16 +61,16 @@ StartStream
 
 ```json
 {
-	"id" : 176,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 22,
-		"message" : "Start stream failed or some other error occurred",
-		"data" :
-		{
-			"method" : "Navigation. StartStream"
-		}
-	}
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "Start stream failed or some other error occurred",
+    "data" :
+    {
+      "method" : "Navigation. StartStream"
+    }
+  }
 }
 ```

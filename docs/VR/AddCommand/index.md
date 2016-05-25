@@ -53,34 +53,34 @@ UI.AddCommand no response, VR.AddCommand returns SUCCESS
 
 ```json
 {
-	"id" : 119,
-	"jsonrpc" : "2.0",
-	"method" : "VR. AddCommand",
-	"params" :
-	{
-		"cmdID" : 4365,
-		"vrCommands" :
-		[
-				 "Leave",
-				 "Exit",
-				 "Quit"
-		],
+  "id" : 119,
+  "jsonrpc" : "2.0",
+  "method" : "VR. AddCommand",
+  "params" :
+  {
+    "cmdID" : 4365,
+    "vrCommands" :
+    [
+         "Leave",
+         "Exit",
+         "Quit"
+    ],
      "grammarID":123,
-	"appID" : 64467
-	}
+  "appID" : 64467
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 119,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "VR.AddCommand"
-	}
+  "id" : 119,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "VR.AddCommand"
+  }
 }
 ```
 
@@ -88,16 +88,16 @@ UI.AddCommand no response, VR.AddCommand returns SUCCESS
 
 ```json
 {
-	"id" : 119,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 13,
-		"message" : "Provided appID is not valid",
-		"data" :
-		{
-			"method" : "VR.AddCommand"
-		}
-	}
+  "id" : 119,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 13,
+    "message" : "Provided appID is not valid",
+    "data" :
+    {
+      "method" : "VR.AddCommand"
+    }
+  }
 }
 ```

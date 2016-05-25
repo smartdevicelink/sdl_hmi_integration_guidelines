@@ -21,6 +21,6 @@ Started on PTT Button Press
 
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "VR.Started",
+  "jsonrpc" : "2.0",
+  "method" : "VR.Started",
 }

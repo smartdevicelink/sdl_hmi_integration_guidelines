@@ -28,14 +28,14 @@ GetUserFriendlyMessage for device consent
 
 ```json
 {
-	"id" : 176,
-	"jsonrpc" : "2.0",
-	"method" : "SDL.GetUserFriendlyMessage",
-	"params" :
-	{
-		"messageCodes": "AppPermissions",		
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "method" : "SDL.GetUserFriendlyMessage",
+  "params" :
+  {
+    "messageCodes": "AppPermissions",    
       "language" : "EN-GB"
-	}
+  }
 
 }
 ```
@@ -43,19 +43,19 @@ GetUserFriendlyMessage for device consent
 
 ```json
 {
-	"id" : 176,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"messages": {
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "messages": {
              "messageCode": "AppPermissions",
              "ttsString": "%appName% is requesting the use of the following ....",
              line1: "Grant Requested",
              line2: "Permission(s)?"
             },
     "code" : 0,
-		"method" : "SDL.GetUserFriendlyMessage"
-	}
+    "method" : "SDL.GetUserFriendlyMessage"
+  }
 }
 ```
 
@@ -63,16 +63,16 @@ GetUserFriendlyMessage for device consent
 
 ```json
 {
-	"id" : 176,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" :22,
-		"message" : "Some error occurred",
-		"data" :
-		{
-			"SDL.GetUserFriendlyMessage"
-		}
-	}
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" :22,
+    "message" : "Some error occurred",
+    "data" :
+    {
+      "SDL.GetUserFriendlyMessage"
+    }
+  }
 }
 ```

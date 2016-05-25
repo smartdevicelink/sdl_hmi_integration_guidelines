@@ -34,26 +34,26 @@ StartAudioStream
 
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "Navigation.StartAudioStream",
-	"params" :  
-	{
-		"url" : "SDL/application_directory/audio/123.mp3",
-		"appID" : 65674
-	}
+  "jsonrpc" : "2.0",
+  "method" : "Navigation.StartAudioStream",
+  "params" :  
+  {
+    "url" : "SDL/application_directory/audio/123.mp3",
+    "appID" : 65674
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 176,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "Navigation.StartAudioStream"
-	}
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "Navigation.StartAudioStream"
+  }
 }
 ```
 
@@ -61,16 +61,16 @@ StartAudioStream
 
 ```json
 {
-	"id" : 176,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 22,
-		"message" : "Start stream failed or some other error occurred",
-		"data" :
-		{
-			"method" : "Navigation.StartAudioStream"
-		}
-	}
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "Start stream failed or some other error occurred",
+    "data" :
+    {
+      "method" : "Navigation.StartAudioStream"
+    }
+  }
 }
 ```

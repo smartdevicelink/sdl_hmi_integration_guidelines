@@ -46,11 +46,11 @@ User Activates App
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.OnAppActivated",
-	"params" :
-	{
-		"appID" : 65544
-	}
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.OnAppActivated",
+  "params" :
+  {
+    "appID" : 65544
+  }
 }
 ```

@@ -38,29 +38,29 @@ DiagnosticMessage
 
 ```json
 {
-	"id" : 139,
-	"jsonrpc" : "2.0",
-	"method" : "VehicleInfo.DiagnostocMessage",
-	"params" :
-	{
-		"targetID" : 5456
-		"messageLength" : 1084,
-		"messageData" : [1,2,3,4,5,6,7,8,9]
-	}
+  "id" : 139,
+  "jsonrpc" : "2.0",
+  "method" : "VehicleInfo.DiagnostocMessage",
+  "params" :
+  {
+    "targetID" : 5456
+    "messageLength" : 1084,
+    "messageData" : [1,2,3,4,5,6,7,8,9]
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 139,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"messageDataResult" : [1,2,3,4,5,6],
-		"code" : 0,
-		"method" : "VehicleInfo.GetDTCs"
-	}
+  "id" : 139,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "messageDataResult" : [1,2,3,4,5,6],
+    "code" : 0,
+    "method" : "VehicleInfo.GetDTCs"
+  }
 }
 ```
 
@@ -68,16 +68,16 @@ DiagnosticMessage
 
 ```json
 {
-	"id" : 139,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 9,
-		"message" : "Data not available",
-		"data" :
-		{
-			"method" : "VehicleInfo.GetDTCs"
-		}
-	}
+  "id" : 139,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 9,
+    "message" : "Data not available",
+    "data" :
+    {
+      "method" : "VehicleInfo.GetDTCs"
+    }
+  }
 }
 ```

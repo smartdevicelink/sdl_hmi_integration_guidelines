@@ -45,45 +45,45 @@ This RPC has no additional parameter requirements
 ### Example Request
 ``` json
 {
-	"id" : 59,
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.SystemRequest"
-	"params" :
-	{
-		"requestType" : "FILE_RESUME",
-		"fileName" : "/tmp/fs/mp/images/ivsu_cache/123.json",
-		"appID" : 223
-	}
+  "id" : 59,
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.SystemRequest"
+  "params" :
+  {
+    "requestType" : "FILE_RESUME",
+    "fileName" : "/tmp/fs/mp/images/ivsu_cache/123.json",
+    "appID" : 223
+  }
 }
 ```
 
 ### Example Response
 ```json
 {
-	"id" : 59,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "BasicCommunication.SystemRequest"
-	}
+  "id" : 59,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "BasicCommunication.SystemRequest"
+  }
 }
 ```
 
 ### Example Error
 ```json
 {
-	"id" : 59,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 11,
-		"message" : "Invalid data",
-		"data" :
-		{
-			"method" : "BasicCommunication.SystemRequest"
-		}
-	}
+  "id" : 59,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 11,
+    "message" : "Invalid data",
+    "data" :
+    {
+      "method" : "BasicCommunication.SystemRequest"
+    }
+  }
 }
 ```
 

@@ -37,13 +37,13 @@ Play Tone with Alert
 
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.PlayTone",
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.PlayTone",
 "params" :
-	{
-		"appID" : 123,
+  {
+    "appID" : 123,
       "methodName": "ALERT"
-	}
+  }
 
 }
 ```
@@ -51,13 +51,13 @@ Play Tone with Alert
 
 ```json
 {
-	"id" : 47,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"code" : 0,
-		"method" : "BasicCommunication. PlayTone"
-	}
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "BasicCommunication. PlayTone"
+  }
 }
 ```
 
@@ -65,13 +65,13 @@ Play Tone with Alert
 
 ```json
 {
-	"id" : 47,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 22,
-		"message" : " Unknown system error",
-		"method" : "BasicCommunication.PlayTone"
-	}
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : " Unknown system error",
+    "method" : "BasicCommunication.PlayTone"
+  }
 }
 ```

@@ -26,11 +26,11 @@ Exit All Apps on Ignition Off
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.OnExitAllApplications",
-	"params" :
-	{
-		"reason" : "IGNITION_OFF"
-	}
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.OnExitAllApplications",
+  "params" :
+  {
+    "reason" : "IGNITION_OFF"
+  }
 }
 ```

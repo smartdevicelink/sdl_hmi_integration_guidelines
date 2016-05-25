@@ -28,13 +28,13 @@ OnButtonSubscription
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "Buttons.OnButtonSubscription",
-	"params" :
-	{
-		"name" : "SEEKLEFT",
-		"isSubscribed" : true,
-		"appID" : 564
-	}
+  "jsonrpc" : "2.0",
+  "method" : "Buttons.OnButtonSubscription",
+  "params" :
+  {
+    "name" : "SEEKLEFT",
+    "isSubscribed" : true,
+    "appID" : 564
+  }
 }
 ```

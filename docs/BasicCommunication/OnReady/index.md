@@ -14,8 +14,8 @@ The HMI must send this notification after the connection is established and the 
 ### Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.OnReady"
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.OnReady"
 }
 ```
 

@@ -86,117 +86,117 @@ UnsubscribeVehicleData unexpected disconnect
 
 ```json
 {
-	"id" : 139,
-	"jsonrpc" : "2.0",
-	"method" : "VehicleInfo.UnsubscribeVehicleData",
-	"params" :
-	{
-		"gps" : true,
-		"speed" : true,
-		"fuelLevel_State" : true,
-		"externalTemperature" : true,
-		"prndl" : true,
-		"tirePressure" : true,
-		"odometer" : true,
-		"beltStatus" : true,
-		"bodyInformation" : true,
-		"deviceStatus" : true,
-		"wiperStatus" : true,
-		"headLampStatus" : true,
-		"accPedalPosition" : true,
+  "id" : 139,
+  "jsonrpc" : "2.0",
+  "method" : "VehicleInfo.UnsubscribeVehicleData",
+  "params" :
+  {
+    "gps" : true,
+    "speed" : true,
+    "fuelLevel_State" : true,
+    "externalTemperature" : true,
+    "prndl" : true,
+    "tirePressure" : true,
+    "odometer" : true,
+    "beltStatus" : true,
+    "bodyInformation" : true,
+    "deviceStatus" : true,
+    "wiperStatus" : true,
+    "headLampStatus" : true,
+    "accPedalPosition" : true,
 
-	}
+  }
 }
 ```
 ### Example Response
 
 ```json
 
-	"id" : 139,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"gps" :
-		{
-			"dataType" : VEHICLEDATA_GPS,
-			"resultCode" : SUCCESS
-		},
+  "id" : 139,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "gps" :
+    {
+      "dataType" : VEHICLEDATA_GPS,
+      "resultCode" : SUCCESS
+    },
 
-		"speed" :
-		{
-			"dataType" : VEHICLEDATA_SPEED,
-			"resultCode" : DATA_NOT_SUBSCRIBED
-		},
+    "speed" :
+    {
+      "dataType" : VEHICLEDATA_SPEED,
+      "resultCode" : DATA_NOT_SUBSCRIBED
+    },
 
-		"fuelLevel_State" :
-		{
-			"dataType" : VEHICLEDATA_FUELLEVEL,
-			"resultCode" : SUCCESS
-		},
+    "fuelLevel_State" :
+    {
+      "dataType" : VEHICLEDATA_FUELLEVEL,
+      "resultCode" : SUCCESS
+    },
 
-		"externalTemperature" :
-		{
-			"dataType" : VEHICLEDATA_EXTERNTEMP,
-			"resultCode" : DATA_NOT_SUBSCRIBED
-		},
+    "externalTemperature" :
+    {
+      "dataType" : VEHICLEDATA_EXTERNTEMP,
+      "resultCode" : DATA_NOT_SUBSCRIBED
+    },
 
-		"prndl" :
-		{
-			"dataType" : VEHICLEDATA_PRNDL,
-			"resultCode" : DATA_NOT_SUBSCRIBED
-		},
+    "prndl" :
+    {
+      "dataType" : VEHICLEDATA_PRNDL,
+      "resultCode" : DATA_NOT_SUBSCRIBED
+    },
 
-		"tirePressure" :
-		{
-			"dataType" : VEHICLEDATA_TIREPRESSURE,
-			"resultCode" : SUCCESS
-		},
+    "tirePressure" :
+    {
+      "dataType" : VEHICLEDATA_TIREPRESSURE,
+      "resultCode" : SUCCESS
+    },
 
-		"odometer" :
-		{
-			"dataType" : VEHICLEDATA_odometer,
-			"resultCode" : SUCCESS
-		},
+    "odometer" :
+    {
+      "dataType" : VEHICLEDATA_odometer,
+      "resultCode" : SUCCESS
+    },
 
-		"beltStatus" :
-		{
-			"dataType" : VEHICLEDATA_BELTSTATUS,
-			"resultCode" : SUCCESS
-		},
+    "beltStatus" :
+    {
+      "dataType" : VEHICLEDATA_BELTSTATUS,
+      "resultCode" : SUCCESS
+    },
 
-		"bodyInformation" :
-		{
-			"dataType" : VEHICLEDATA_BODYINFO,
-			"resultCode" : SUCCESS
-		},
+    "bodyInformation" :
+    {
+      "dataType" : VEHICLEDATA_BODYINFO,
+      "resultCode" : SUCCESS
+    },
 
-		"deviceStatus" :
-		{
-			"dataType" : VEHICLEDATA_DEVICESTATUS,
-			"resultCode" : DATA_NOT_SUBSCRIBED
-		},
+    "deviceStatus" :
+    {
+      "dataType" : VEHICLEDATA_DEVICESTATUS,
+      "resultCode" : DATA_NOT_SUBSCRIBED
+    },
 
-		"wiperStatus" :
-		{
-			"dataType" : VEHICLEDATA_WIPERSTATUS,
-			"resultCode" : SUCCESS
-		},
+    "wiperStatus" :
+    {
+      "dataType" : VEHICLEDATA_WIPERSTATUS,
+      "resultCode" : SUCCESS
+    },
 
-		"headLampStatus" :
-		{
-			"dataType" : HEADLAMPSTATUS,
-			"resultCode" : SUCCESS
-		},
+    "headLampStatus" :
+    {
+      "dataType" : HEADLAMPSTATUS,
+      "resultCode" : SUCCESS
+    },
 
-		"accPedalPosition" :
-		{
-			"dataType" : VEHICLEDATA_ACCPEDAL,
-			"resultCode" : DATA_NOT_SUBSCRIBED
-		},
+    "accPedalPosition" :
+    {
+      "dataType" : VEHICLEDATA_ACCPEDAL,
+      "resultCode" : DATA_NOT_SUBSCRIBED
+    },
 
-		"code" : 0,
-		"method" : "VehicleInfo.UnsubscribeVehicleData"
-	}
+    "code" : 0,
+    "method" : "VehicleInfo.UnsubscribeVehicleData"
+  }
 }
 ```
 
@@ -204,16 +204,16 @@ UnsubscribeVehicleData unexpected disconnect
 
 ```json
 {
-	"id" : 139,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 22,
-		"message" : "An unknown error occurred",
-		"data" :
-		{
-			"method" : "VehicleInfo.UnsubscribeVehicleData"
-		}
-	}
+  "id" : 139,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "An unknown error occurred",
+    "data" :
+    {
+      "method" : "VehicleInfo.UnsubscribeVehicleData"
+    }
+  }
 }
 ```

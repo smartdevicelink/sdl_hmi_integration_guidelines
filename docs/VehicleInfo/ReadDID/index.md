@@ -41,45 +41,45 @@ ReadDID Expanded result
 
 ```json
 {
-	"id" : 158,
-	"jsonrpc" : "2.0",
-	"method" : "VehicleInfo.ReadDID",
-	"params" :
-	{
-		"ecuName" : 1287,
-		"didLocation" : [35, 48, 182],
-		"appID" : 93
-	}
+  "id" : 158,
+  "jsonrpc" : "2.0",
+  "method" : "VehicleInfo.ReadDID",
+  "params" :
+  {
+    "ecuName" : 1287,
+    "didLocation" : [35, 48, 182],
+    "appID" : 93
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 158,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"didResult" :
-		[
-			{
-			"resultCode" : SUCCESS,
-			"didLocation" : 35,
-			"data" : "38AF"
-			},
-			{
-			"resultCode" : TRUNCATED_DATA,
-			"didLocation" : 48,
-			"data" : "35"
-			},
-			{
-			"resultCode" : INVALID_ID,
-			"didLocation" : 182
-			}			
-		],
-		"code" : 0,
-		"method" : "VehicleInfo.ReadDID"
-	}
+  "id" : 158,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "didResult" :
+    [
+      {
+      "resultCode" : SUCCESS,
+      "didLocation" : 35,
+      "data" : "38AF"
+      },
+      {
+      "resultCode" : TRUNCATED_DATA,
+      "didLocation" : 48,
+      "data" : "35"
+      },
+      {
+      "resultCode" : INVALID_ID,
+      "didLocation" : 182
+      }      
+    ],
+    "code" : 0,
+    "method" : "VehicleInfo.ReadDID"
+  }
 }
 ```
 
@@ -87,16 +87,16 @@ ReadDID Expanded result
 
 ```json
 {
-	"id" : 158,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 2,
-		"message" : "The requested ECU does not exist",
-		"data" :
-		{
-			"method" : "VehicleInfo.ReadDID"
-		}
-	}
+  "id" : 158,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 2,
+    "message" : "The requested ECU does not exist",
+    "data" :
+    {
+      "method" : "VehicleInfo.ReadDID"
+    }
+  }
 }
 ```

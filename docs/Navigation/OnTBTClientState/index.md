@@ -26,11 +26,11 @@ OnTBTClientState
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "Navigation.OnTBTClientState",
-	"params" :  
-	{
-		"state" : "NEXT_TURN_REQUEST"
-	}
+  "jsonrpc" : "2.0",
+  "method" : "Navigation.OnTBTClientState",
+  "params" :  
+  {
+    "state" : "NEXT_TURN_REQUEST"
+  }
 }
 ```

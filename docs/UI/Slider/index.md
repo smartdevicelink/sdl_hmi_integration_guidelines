@@ -48,32 +48,32 @@ Slider with OK Button press
 
 ```json
 {
-	"id" : 133,
-	"jsonrpc" : "2.0",
-	"method" : "UI.Slider",
-	"params" :
-	{
-		"numTicks" : 5,
-		"position" : 2,
-		"sliderHeader" : "Volume Level",
-		"sliderFooter" : [ "1/5", "2/5", "3/5", "4/5", "5/5" ],
-		"timeout" : 10000,
-		"appID" : 4328
-	}
+  "id" : 133,
+  "jsonrpc" : "2.0",
+  "method" : "UI.Slider",
+  "params" :
+  {
+    "numTicks" : 5,
+    "position" : 2,
+    "sliderHeader" : "Volume Level",
+    "sliderFooter" : [ "1/5", "2/5", "3/5", "4/5", "5/5" ],
+    "timeout" : 10000,
+    "appID" : 4328
+  }
 }
 ```
 ### Example Response
 
 ```json
 {
-	"id" : 133,
-	"jsonrpc" : "2.0",
-	"result" :
-	{
-		"sliderPosition" : 4,
-		"code" : 0,
-		"method" : "UI.Slider"
-	}
+  "id" : 133,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "sliderPosition" : 4,
+    "code" : 0,
+    "method" : "UI.Slider"
+  }
 }
 ```
 
@@ -81,33 +81,33 @@ Slider with OK Button press
 
 ```json
 {
-	"id" : 133,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 5,
-		"message" : "A command was aborted due to user interaction",
-		"data" :
-		{
-			"sliderPosition" : 5
-			"method" : "UI.Slider"
-		}
-	}
+  "id" : 133,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 5,
+    "message" : "A command was aborted due to user interaction",
+    "data" :
+    {
+      "sliderPosition" : 5
+      "method" : "UI.Slider"
+    }
+  }
 }
 ```
 
 ```json
 {
-	"id" : 133,
-	"jsonrpc" : "2.0",
-	"error" :
-	{
-		"code" : 13,
-		"message" : "One of the provided IDs is not valid",
-		"data" :
-		{
-			"method" : "UI.Slider"
-		}
-	}
+  "id" : 133,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 13,
+    "message" : "One of the provided IDs is not valid",
+    "data" :
+    {
+      "method" : "UI.Slider"
+    }
+  }
 }
 ```
