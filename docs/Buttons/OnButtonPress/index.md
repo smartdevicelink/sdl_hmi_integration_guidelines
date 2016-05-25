@@ -9,6 +9,20 @@ Sender
 Purpose
 : Inform SDL about a Button Press
 
+If the HMI reports to SDL via [Buttons.GetCapabilities](../getcapabilities) that it supports long and/or short button press modes, SDL expects the HMI to send the Buttons.OnButtonPress notification but buttons that have been subscribed via [Buttons.OnButtonSubscription](../onbuttonsubscription) and custom buttons added in other rpcs as Soft Buttons.
+
+!!! must
+
+The hmi must send the name of the button pressed, the press mode detected, and ID of the button if it has type `CUSTOM_BUTTON` and the appID related to the button press. If only `SHORT` button press mode is supported, the hmi should send `SHORT` regardless of the time of the button press.
+
+!!!
+
+!!! note
+
+The value of customButtonID is provided by SDL within the [softButton](../../common/structs/index.md#softbutton) struct for some rpcs such as [UI.Alert](../../ui/alert)
+
+!!!
+
 ### Notification
 
 #### Parameters
