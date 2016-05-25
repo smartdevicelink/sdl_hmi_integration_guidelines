@@ -9,6 +9,24 @@ Sender
 Purpose
 : Add a sub menu to the specified application's menu
 
+UI.AddSubMenu represents a request from an application to add a sub-menu to the application's menu. This RPC can be sent to the HMI for an application that is registered and in any state (FULL, BACKGROUND, etc.)
+
+!!! must
+
+  1. The sub menu sent for the application via AddCommand must be accessible from a Menu
+  2. If the user selects a sub menu item from the application's menu, the HMI must display all commands added via [UI.AddCommand](../addcommand) which share a `menuParams.parentID` with the menu's `menuID`
+  3. Store the data provided in this RPC with the requesting application's appID
+  4. Persist the stored data for the duration of the ignition cycle
+  4. Add the command to the application's menu at the position specified in the `menuParams`
+
+!!!
+
+!!! note
+
+  * SDL will never request a sub menu be added to another sub menu
+  
+!!!
+
 ### Request
 
 #### Parameters
