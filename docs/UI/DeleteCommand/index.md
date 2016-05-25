@@ -9,6 +9,14 @@ Sender
 Purpose
 : Delete a command from the specified application's menu or submenu
 
+UI.DeleteCommand represents a request to remove a previously added command (added via [UI.AddCommand](../addcommand)) from the application's menu.
+
+!!! must
+
+  * The application's menu must no longer display the command whose `cmdID` matches the RPC's `cmdID` when the user accesses the applications menu
+
+!!!
+
 ### Request
 
 #### Parameters
