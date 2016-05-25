@@ -22,7 +22,7 @@ SDL sends the `UI.Alert` RPC when some information needs to be displayed to the 
 
 !!!
 
-!!!
+!!! may
 
 The HMI may provide the user with a system defined "close" button providing the user with the possibility to dismiss the alert. In this case the HMI must still respond to the alert request
 
