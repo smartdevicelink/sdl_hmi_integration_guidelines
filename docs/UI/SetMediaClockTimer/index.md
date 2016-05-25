@@ -9,6 +9,20 @@ Sender
 Purpose
 : Set a value and update mode for the media clock of a media application.
 
+The UI.SetMediaClock timer request indicates either an initial value for the media clock timer for a media application or an update to the value. The request may come in for the application which is not currently active on the HMI.
+
+!!! must
+
+The HMI must perform the update type indicated by the `updateMode` parameter. If the application is not active, the HMI must still store the values to be calculated for later display on the HMI. If the application is active, the updates must begin immediately.
+
+!!!
+
+!!! note
+
+SDL will not send this request if the `mediaClock` field is not indicated as supported in [UI.GetCapabilities](../getcapabilities)
+
+!!!
+
 ### Request
 
 #### Parameters
