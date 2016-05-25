@@ -9,6 +9,31 @@ Sender
 Purpose
 : Display an alert message on the HMI
 
+SDL sends the `UI.Alert` RPC when some information needs to be displayed to the user on a display. The Alert has a `softButtons` array of buttons which the user can use to take action on the alert.
+
+!!! must
+
+  1. If the alert includes a soft button of type `STEAL_FOCUS` and the user presses the button, the HMI must bring the app associated with the Alert into full screen mode.
+  2. The HMI must send [UI.OnSystemContext](../onsystemcontext) with type `ALERT` for the application which is in `FULL` mode.
+  3. Respond to the Alert earlier than SDL's default timeout of 10 seconds - applicable only to alerts without `softButtons`.
+  4. Display the alert dialog with the text information in the `alertFields` array and optional `softButtons` and optional `displayIndicator` indicating a timeout for the alert
+  5. Send [Buttons.OnButtonPress](../../buttons/onbuttonpress) and/or [Buttons.OnButtonEvent](../../buttons/onbuttonevent) notifications if soft buttons associated with the alert are pressed by the user
+  6. Dismiss the alert after the duration has passed since receipt of the request
+
+!!!
+
+!!!
+
+The HMI may provide the user with a system defined "close" button providing the user with the possibility to dismiss the alert. In this case the HMI must still respond to the alert request
+
+!!!
+
+!!! note
+
+An alert may be sent to the HMI for an application which is not currently active. If the alert contains `softButtons` then the duration will be set to `0`
+
+!!!
+
 ### Request
 
 #### Parameters
