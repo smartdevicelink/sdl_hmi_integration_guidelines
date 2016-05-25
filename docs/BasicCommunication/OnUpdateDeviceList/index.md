@@ -7,7 +7,7 @@ Sender
 : HMI
 
 Purpose
-: Get the updated list of connected devices.
+: Ask for the updated list of connected devices.
 
 Sending an `OnUpdateDeviceList` notification to SDL asks SDL to send back a list of discovered devices via [UpdateDeviceList](../updatedevicelist).
 
