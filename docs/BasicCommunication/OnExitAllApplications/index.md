@@ -31,7 +31,7 @@ SDL requires this notification in order to accurately close the sessions with re
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|reason|[Common.ApplicationsCloseReason](../../Common/Enums/index.md#applicationsclosereason)|true||
+|reason|[Common.ApplicationsCloseReason](../../common/enums/index.md#applicationsclosereason)|true||
 
 ### Sequence Diagrams
 |||

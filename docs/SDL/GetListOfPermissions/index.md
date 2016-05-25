@@ -23,7 +23,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|allowedFunctions|[Common.PermissionItem](../../Common/Structs/index.md#permissionitem)|true|array: true<br>minsize: 0<br>maxsize: 100|
+|allowedFunctions|[Common.PermissionItem](../../common/structs/index.md#permissionitem)|true|array: true<br>minsize: 0<br>maxsize: 100|
 
 ### Sequence Diagrams
 |||

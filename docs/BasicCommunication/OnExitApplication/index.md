@@ -37,7 +37,7 @@ The HMI may switch layouts or views according to the workflow after deactivation
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|reason|[Common.ApplicationToNONEReason](../../Common/Enums/index.md#applicationtononereason)|true||
+|reason|[Common.ApplicationToNONEReason](../../common/enums/index.md#applicationtononereason)|true||
 |appID|Integer|true||
 
 ### Sequence Diagrams

@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|syncFileName|[Common.Image](../../Common/Structs/index.md#image)|true||
+|syncFileName|[Common.Image](../../common/structs/index.md#image)|true||
 |appID|Integer|true||
 
 ### Response

@@ -7,7 +7,7 @@
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|statisticType|[Common.StatisticsType](../../Common/Enums/index.md#statisticstype)|true||
+|statisticType|[Common.StatisticsType](../../common/enums/index.md#statisticstype)|true||
 
 ### Example Request
 

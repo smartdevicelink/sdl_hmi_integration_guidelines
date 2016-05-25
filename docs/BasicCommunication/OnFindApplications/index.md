@@ -29,7 +29,7 @@ HMI must send an 'OnFindApplications' notification when the user requests to fin
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|deviceInfo|[Common.DeviceInfo](../../Common/Structs/index.md#deviceinfo)|false||
+|deviceInfo|[Common.DeviceInfo](../../common/structs/index.md#deviceinfo)|false||
 
 ### Sequence Diagrams
 |||

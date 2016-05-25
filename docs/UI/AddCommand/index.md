@@ -34,8 +34,8 @@ UI.AddCommand represents a request from an application to add a command to the a
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |cmdID|Integer|true|minvalue: 0<br>maxvalue: 2000000000|
-|menuParams|[Common.MenuParams](../../Common/Structs/index.md#menuparams)|false||
-|cmdIcon|[Common.Image](../../Common/Structs/index.md#image)|false||
+|menuParams|[Common.MenuParams](../../common/structs/index.md#menuparams)|false||
+|cmdIcon|[Common.Image](../../common/structs/index.md#image)|false||
 |appID|Integer|true||
 
 ### Response

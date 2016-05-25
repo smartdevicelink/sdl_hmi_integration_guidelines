@@ -15,9 +15,9 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|messageText|[Common.TextFieldStruct](../../Common/Structs/index.md#textfieldstruct)|true||
+|messageText|[Common.TextFieldStruct](../../common/structs/index.md#textfieldstruct)|true||
 |timeout|Integer|true|minvalue: 0<br>maxvalue: 65535|
-|softButtons|[Common.SoftButton](../../Common/Structs/index.md#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 8|
+|softButtons|[Common.SoftButton](../../common/structs/index.md#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 8|
 |appID|Integer|true||
 
 ### Response

@@ -25,7 +25,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|didResult|[Common.DIDResult](../../Common/Structs/index.md#didresult)|false|array: true<br>minsize: 0<br>maxsize: 1000|
+|didResult|[Common.DIDResult](../../common/structs/index.md#didresult)|false|array: true<br>minsize: 0<br>maxsize: 1000|
 
 ### Sequence Diagrams
 |||

@@ -34,7 +34,7 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |menuID|Integer|true|minvalue: 1<br>maxvalue: 2000000000|
-|menuParams|[Common.MenuParams](../../Common/Structs/index.md#menuparams)|true||
+|menuParams|[Common.MenuParams](../../common/structs/index.md#menuparams)|true||
 |appID|Integer|true||
 
 ### Response

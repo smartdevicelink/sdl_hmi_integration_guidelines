@@ -22,8 +22,8 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|capabilities|[Common.ButtonCapabilities](../../Common/Structs/index.md#buttoncapabilities)|true|array: true<br>minsize: 1<br>maxsize: 100|
-|presetBankCapabilities|[Common.PresetBankCapabilities](../../Common/Structs/index.md#presetbankcapabilities)|false||
+|capabilities|[Common.ButtonCapabilities](../../common/structs/index.md#buttoncapabilities)|true|array: true<br>minsize: 1<br>maxsize: 100|
+|presetBankCapabilities|[Common.PresetBankCapabilities](../../common/structs/index.md#presetbankcapabilities)|false||
 
 ### Sequence Diagrams
 |||

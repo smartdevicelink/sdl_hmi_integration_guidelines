@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|softButtons|[Common.SoftButton](../../Common/Structs/index.md#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 3|
+|softButtons|[Common.SoftButton](../../common/structs/index.md#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 3|
 |appID|Integer|true||
 
 ### Response

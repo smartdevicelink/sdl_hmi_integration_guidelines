@@ -17,12 +17,12 @@ Purpose
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
 |isAppPermissionsRevoked|Boolean|false||
-|appRevokedPermissions|[Common.PermissionItem](../../Common/Structs/index.md#permissionitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|appRevokedPermissions|[Common.PermissionItem](../../common/structs/index.md#permissionitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |appRevoked|Boolean|false||
 |appPermissionsConsentNeeded|Boolean|false||
 |appUnauthorized|Boolean|false||
-|priority|[Common.AppPriority](../../Common/Enums/index.md#apppriority)|false||
-|requestType|[Common.RequestType](../../Common/Enums/index.md#requesttype)|false|array: true<br>minsize: 0<br>maxsize: 100|
+|priority|[Common.AppPriority](../../common/enums/index.md#apppriority)|false||
+|requestType|[Common.RequestType](../../common/enums/index.md#requesttype)|false|array: true<br>minsize: 0<br>maxsize: 100|
 
 ### Sequence Diagrams
 |||

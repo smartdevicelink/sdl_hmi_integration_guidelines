@@ -16,10 +16,10 @@ Purpose
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |vrHelpTitle|String|false|maxlength: 500|
-|vrHelp|[Common.VrHelpItem](../../Common/Structs/index.md#vrhelpitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|vrHelp|[Common.VrHelpItem](../../common/structs/index.md#vrhelpitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |menuTitle|String|false|maxlength: 500|
-|menuIcon|[Common.Image](../../Common/Structs/index.md#image)|false||
-|keyboardProperties|[Common.KeyboardProperties](../../Common/Structs/index.md#keyboardproperties)|false||
+|menuIcon|[Common.Image](../../common/structs/index.md#image)|false||
+|keyboardProperties|[Common.KeyboardProperties](../../common/structs/index.md#keyboardproperties)|false||
 |appID|Integer|true||
 
 ### Response

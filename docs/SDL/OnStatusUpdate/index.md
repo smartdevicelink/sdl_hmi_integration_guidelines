@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|status|[Common.UpdateResult](../../Common/Enums/index.md#updateresult)|true||
+|status|[Common.UpdateResult](../../common/enums/index.md#updateresult)|true||
 
 ### Sequence Diagrams
 |||

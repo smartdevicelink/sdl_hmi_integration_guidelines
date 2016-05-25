@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|state|[Common.DriverDistractionState](../../Common/Enums/index.md#driverdistractionstate)|true||
+|state|[Common.DriverDistractionState](../../common/enums/index.md#driverdistractionstate)|true||
 
 ### Sequence Diagrams
 |||

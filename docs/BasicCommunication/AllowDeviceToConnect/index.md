@@ -24,7 +24,7 @@ Check whether the device is allowed to connect to the head unit and response app
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|device|[Common.DeviceInfo](../../Common/Structs/index.md#deviceinfo)|true||
+|device|[Common.DeviceInfo](../../common/structs/index.md#deviceinfo)|true||
 
 ### Response
 

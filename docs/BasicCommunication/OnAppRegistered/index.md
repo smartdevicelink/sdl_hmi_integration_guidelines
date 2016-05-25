@@ -67,11 +67,11 @@ If a device is connected over Bluetooth or Wi-Fi and registers an application, S
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|application|[Common.HMIApplication](../../Common/Structs/index.md#hmiapplication)|true||
-|ttsName|[Common.TTSChunk](../../Common/Structs/index.md#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|application|[Common.HMIApplication](../../common/structs/index.md#hmiapplication)|true||
+|ttsName|[Common.TTSChunk](../../common/structs/index.md#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40|
 |resumeVrGrammars|Boolean|false||
-|priority|[Common.AppPriority](../../Common/Enums/index.md#apppriority)|false||
+|priority|[Common.AppPriority](../../common/enums/index.md#apppriority)|false||
 
 ### Sequence Diagrams
 |||

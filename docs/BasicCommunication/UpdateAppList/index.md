@@ -16,7 +16,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|applications|[Common.HMIApplication](../../Common/Structs/index.md#hmiapplication)|true|array: true<br>minsize: 0<br>maxsize: 100|
+|applications|[Common.HMIApplication](../../common/structs/index.md#hmiapplication)|true|array: true<br>minsize: 0<br>maxsize: 100|
 
 ### Response
 

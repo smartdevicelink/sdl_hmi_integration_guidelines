@@ -15,11 +15,11 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|showStrings|[Common.TextFieldStruct](../../Common/Structs/index.md#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 7|
-|alignment|[Common.TextAlignment](../../Common/Enums/index.md#textalignment)|false||
-|graphic|[Common.Image](../../Common/Structs/index.md#image)|false||
-|secondaryGraphic|[Common.Image](../../Common/Structs/index.md#image)|false||
-|softButtons|[Common.SoftButton](../../Common/Structs/index.md#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 8|
+|showStrings|[Common.TextFieldStruct](../../common/structs/index.md#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 7|
+|alignment|[Common.TextAlignment](../../common/enums/index.md#textalignment)|false||
+|graphic|[Common.Image](../../common/structs/index.md#image)|false||
+|secondaryGraphic|[Common.Image](../../common/structs/index.md#image)|false||
+|softButtons|[Common.SoftButton](../../common/structs/index.md#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 8|
 |customPresets|String|false|array: true<br>minsize: 0<br>maxsize: 10<br>maxlength: 500|
 |appID|Integer|true||
 

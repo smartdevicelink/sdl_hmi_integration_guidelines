@@ -22,7 +22,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|vehicleType|[Common.VehicleType](../../Common/Structs/index.md#vehicletype)|true||
+|vehicleType|[Common.VehicleType](../../common/structs/index.md#vehicletype)|true||
 
 ### Sequence Diagrams
 |||

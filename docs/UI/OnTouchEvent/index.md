@@ -15,8 +15,8 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|type|[Common.TouchType](../../Common/Enums/index.md#touchtype)|true||
-|event|[Common.TouchEvent](../../Common/Structs/index.md#touchevent)|true|array: true<br>minsize: 1<br>maxsize: 10|
+|type|[Common.TouchType](../../common/enums/index.md#touchtype)|true||
+|event|[Common.TouchEvent](../../common/structs/index.md#touchevent)|true|array: true<br>minsize: 1<br>maxsize: 10|
 
 
 ### Sequence Diagrams

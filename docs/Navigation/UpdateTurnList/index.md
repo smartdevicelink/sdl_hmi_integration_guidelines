@@ -15,8 +15,8 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|turnList|[Common.Turn](../../Common/Structs/index.md#turn)|false|array: true<br>minsize: 1<br>maxsize: 100|
-|softButtons|[Common.SoftButton](../../Common/Structs/index.md#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 1|
+|turnList|[Common.Turn](../../common/structs/index.md#turn)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|softButtons|[Common.SoftButton](../../common/structs/index.md#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 1|
 |appID|Integer|true||
 
 ### Response

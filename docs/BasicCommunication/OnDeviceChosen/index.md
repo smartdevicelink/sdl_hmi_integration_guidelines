@@ -30,7 +30,7 @@ The list of known devices is provided to the HMI in the [UpdateDeviceList](../Up
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|deviceInfo|[Common.DeviceInfo](../../Common/Structs/index.md#deviceinfo)|true||
+|deviceInfo|[Common.DeviceInfo](../../common/structs/index.md#deviceinfo)|true||
 
 ### Example Notification
 ```json

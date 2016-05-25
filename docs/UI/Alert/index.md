@@ -40,11 +40,11 @@ An alert may be sent to the HMI for an application which is not currently active
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|alertStrings|[Common.TextFieldStruct](../../Common/Structs/index.md#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 3|
+|alertStrings|[Common.TextFieldStruct](../../common/structs/index.md#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 3|
 |duration|Integer|true|minvalue: 3000<br>maxvalue: 10000|
-|softButtons|[Common.SoftButton](../../Common/Structs/index.md#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 4|
+|softButtons|[Common.SoftButton](../../common/structs/index.md#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 4|
 |progressIndicator|Boolean|false||
-|alertType|[Common.AlertType](../../Common/Enums/index.md#alerttype)|true||
+|alertType|[Common.AlertType](../../common/enums/index.md#alerttype)|true||
 |appID|Integer|true||
 
 ### Response

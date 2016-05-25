@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|state|[Common.TBTState](../../Common/Enums/index.md#tbtstate)|true||
+|state|[Common.TBTState](../../common/enums/index.md#tbtstate)|true||
 
 ### Sequence Diagrams
 |||
