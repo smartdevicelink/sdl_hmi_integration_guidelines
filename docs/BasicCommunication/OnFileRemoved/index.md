@@ -9,6 +9,20 @@ Sender
 Purpose
 : Inform the HMI that a file has been removed from a shared folder by an application.
 
+When a file is requested to be removed by an application, SDL will notify the HMI that the file has been removed.
+
+!!! MAY
+
+If the named file that was removed was an app icon, the HMI may want to reset the app icon it was displaying to a default app icon.
+
+!!!
+
+!!! NOTE
+
+SDL notifies the HMI about removing files only if the files were located in the HMI's shared folder. 
+
+!!!
+
 
 ### Notification
 
