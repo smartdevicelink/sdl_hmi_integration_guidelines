@@ -9,6 +9,22 @@ Sender
 Purpose
 : Inform SDL to exit every registered application.
 
+SDL requires this notification in order to accurately close the sessions with registered applications before reloading or shutting down based on the user's actions.
+
+!!! MUST
+
+  * Send `OnExitAllApplications` with the appropriate `reason` upon one of the users's actions:
+    * Master Reset
+    * Key set to Ignition Off (Refer to the diagram below).
+    * Key set to Suspend (Refer to the diagram below).
+    * Key set to ACC
+
+!!!
+
+
+
+
+
 ### Notification
 
 #### Parameters
