@@ -11,9 +11,9 @@ Purpose
 
 SDL will send `OnAppRegistered`:
 
-	1. After an SDL-enabled application has registered successfully.
-	2. When the device was reconnected after an unexpected disconnect and a previously connected SDL application reregisters. SDL makes a decision if the data resumption process is applicable for the application.
-	3. When the HMI sends an `OnFindApplications` notification via the users request.
+  1. After an SDL-enabled application has registered successfully.
+  2. When the device was reconnected after an unexpected disconnect and a previously connected SDL application reregisters. SDL makes a decision if the data resumption process is applicable for the application.
+  3. When the HMI sends an `OnFindApplications` notification via the users request.
 
 Regarding data resumption:
 
@@ -28,12 +28,12 @@ If the application resumes data successfully:
 
   * SDL will provide `OnAppRegistered` with `resumeVrGrammars`:`true` to notify the HMI that `VRGrammars` must be resumed. On this event, the HMI must restore the application related `VRGgrammars` for the appID received via an `OnAppRegistered` notification.
   * SDL must restore application-related data and send to the HMI after an `OnAppRegistered` notification:
-		* `AddCommand`(Menu + VR)
-		* `AddSubMenu`
-		* `CreateInteractionChoiceSet`
-	  * `SetGlobalProperties`
-		* `SubscribeButton`
-		* `SubscibeVehicleData`
+    * `AddCommand`(Menu + VR)
+    * `AddSubMenu`
+    * `CreateInteractionChoiceSet`
+    * `SetGlobalProperties`
+    * `SubscribeButton`
+    * `SubscibeVehicleData`
 
 If the application does not resume data successfully:
 
@@ -45,7 +45,7 @@ If the application does not resume data successfully:
 
   1. HMI must update its list of registered applications.
   2. HMI must store the application data sent in the `applications` parameter.
-	3. HMI must compile and store `VRGrammars` for the `vrSynonyms` parameter, and arrange them for the user to be able to use via voice recognition. Note: The VR commands to activate an application must be accessible when viewing a different active application or the list of registered applications.
+  3. HMI must compile and store `VRGrammars` for the `vrSynonyms` parameter, and arrange them for the user to be able to use via voice recognition. Note: The VR commands to activate an application must be accessible when viewing a different active application or the list of registered applications.
   4. HMI must provide the user with the possibility to choose an application among a list of registered applications.
   5. HMI must send an `OnAppActivated` notification to SDL when the user activates an app via the `UI` or `VR`.
 
@@ -94,25 +94,25 @@ App Registers on Bluetooth
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.OnAppRegistered",
-	"params" :
-	{
-		"application" :
-			{
-				"appName" : "TryMe",
-				"ngnMediaScreenAppName " : "TryMe",
-				"deviceInfo":
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.OnAppRegistered",
+  "params" :
+  {
+    "application" :
+      {
+        "appName" : "TryMe",
+        "ngnMediaScreenAppName " : "TryMe",
+        "deviceInfo":
                   { "name" : "GT-I9300",
-	               "id" : 1563462,
-				  "transportType" : "BLUETOOTH"
+                 "id" : 1563462,
+          "transportType" : "BLUETOOTH"
                   },
                   "policyAppID" : 123,
-				"appID" : 65540,
-				"hmiDisplayLanguageDesired" : ES-ES,
-				"isMediaApplication" : false
-			}
-		"resumeVRGrammars" : true
-	}
+        "appID" : 65540,
+        "hmiDisplayLanguageDesired" : ES-ES,
+        "isMediaApplication" : false
+      }
+    "resumeVRGrammars" : true
+  }
 }
 ```
