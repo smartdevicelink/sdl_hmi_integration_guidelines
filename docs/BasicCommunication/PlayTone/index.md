@@ -9,6 +9,13 @@ Sender
 Purpose
 : Tell the HMI to play a notification sound.
 
+This notification may follow some SDL request that brings changes to the HMI (e.g. alert message displayed, audio capturing started, etc).
+
+!!! MUST
+
+Play the HMI's appropriate notification sound for the corresponding type of request defined in the `methodName` parameter. 
+
+!!!
 ### Notification
 
 #### Parameters
