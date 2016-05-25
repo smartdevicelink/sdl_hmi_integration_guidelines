@@ -9,6 +9,14 @@ Sender
 Purpose
 : Delete a sub menu from the specified application's menu
 
+UI.DeleteSubMenu represents a request to remove a previously added sub menu (added via [UI.AddSubMenu](../addsubmenu)) from the application's menu.
+
+!!! must
+
+The application's menu must no longer display the sub menu whose `menuID` matches the RPC's `menuID` when the user accesses the applications menu
+
+!!!
+
 ### Request
 
 #### Parameters
