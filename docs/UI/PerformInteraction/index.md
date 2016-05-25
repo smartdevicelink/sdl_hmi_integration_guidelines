@@ -9,6 +9,22 @@ Sender
 Purpose
 : Perform a UI Interaction with the User.
 
+A request sent by SDL to display a list of choices to the user.
+
+!!! must
+
+  1. Wait until the user responds or the request times out to respond to SDL
+  2. Include the `choiceID` of the chosen option in the response to SDL
+  3. If the interaction times out, respond with a success and no `choiceID` parameter to SDL
+
+!!!
+
+!!! note
+
+A UI.PerformInteraction with a timeout value of `0` should not be timed out immediately. Instead, it should use some default timeout value predetermined by the HMI.
+
+!!!
+
 ### Request
 
 #### Parameters
