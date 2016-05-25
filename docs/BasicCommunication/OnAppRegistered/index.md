@@ -10,38 +10,44 @@ Purpose
 : Update the HMI's list of registered applications and resume the Audio Source
 
 SDL will send `OnAppRegistered`:
-1. After an SDL-enabled application has registered successfully.
-2. When the device was reconnected after an unexpected disconnect and a previously connected SDL application reregisters. SDL makes a decision if the data resumption process is applicable for the application.
-3. When the HMI sends an `OnFindApplications` notification via the users request.
+
+	1. After an SDL-enabled application has registered successfully.
+	2. When the device was reconnected after an unexpected disconnect and a previously connected SDL application reregisters. SDL makes a decision if the data resumption process is applicable for the application.
+	3. When the HMI sends an `OnFindApplications` notification via the users request.
 
 Regarding data resumption:
+
 Data resumption means that an app may request to restore data used in the previous ignition cycle after an `Unexpected Disconnect`.
-* For data resumption purposes, SDL must store application-related data such as commands, application global properties, and show data for the past three ignition cycles after an `Unexpected Disconnect` or `Ignition Off`. On the fourth  `Ignition On`, SDL clears all corresponding application-related data used for resumption.
-* HMI must store the VR grammar compiled for applications that are unregistered by an `Unexpected Disconnect` or `Ignition Off`.
-* During data resumption, the HMI may also have to resume the previous audio source. Refer to `BC.OnResumeAudioSource`.
+
+
+  * For data resumption purposes, SDL must store application-related data such as commands, application global properties, and show data for the past three ignition cycles after an `Unexpected Disconnect` or `Ignition Off`. On the fourth  `Ignition On`, SDL clears all corresponding application-related data used for resumption.
+  * HMI must store the VR grammar compiled for applications that are unregistered by an `Unexpected Disconnect` or `Ignition Off`.
+  * During data resumption, the HMI may also have to resume the previous audio source. Refer to `BC.OnResumeAudioSource`.
 
 If the application resumes data successfully:
-* SDL will provide `OnAppRegistered` with `resumeVrGrammars`:`true` to notify the HMI that `VRGrammars` must be resumed. On this event, the HMI must restore the application related `VRGgrammars` for the appID received via an `OnAppRegistered` notification.
-* SDL must restore application-related data and send to the HMI after an `OnAppRegistered` notification:
-	* `AddCommand`(Menu + VR)
-	* `AddSubMenu`
-	* `CreateInteractionChoiceSet`
-	* `SetGlobalProperties`
-	* `SubscribeButton`
-	* `SubscibeVehicleData`
+
+  * SDL will provide `OnAppRegistered` with `resumeVrGrammars`:`true` to notify the HMI that `VRGrammars` must be resumed. On this event, the HMI must restore the application related `VRGgrammars` for the appID received via an `OnAppRegistered` notification.
+  * SDL must restore application-related data and send to the HMI after an `OnAppRegistered` notification:
+		* `AddCommand`(Menu + VR)
+		* `AddSubMenu`
+		* `CreateInteractionChoiceSet`
+	  * `SetGlobalProperties`
+		* `SubscribeButton`
+		* `SubscibeVehicleData`
 
 If the application does not resume data successfully:
-* SDL will provide `OnAppRegistered` with `resumeVrGrammars`:`false` or no resume parameter at all.
-* SDL cleans up all previously stored application data for the application that failed to resume. The HMI must also clean up previously compiled `VRGrammars` for the application.
-* The application will send new data to start SDL operations. In this event, SDL and the HMI should restart the cycle of collecting application data for resumption.
+
+  * SDL will provide `OnAppRegistered` with `resumeVrGrammars`:`false` or no resume parameter at all.
+  * SDL cleans up all previously stored application data for the application that failed to resume. The HMI must also clean up previously compiled `VRGrammars` for the application.
+  * The application will send new data to start SDL operations. In this event, SDL and the HMI should restart the cycle of collecting application data for resumption.
 
 !!! MUST
 
-1. HMI must update its list of registered applications.
-2. HMI must store the application data sent in the `applications` parameter.
-3. HMI must compile and store `VRGrammars` for the `vrSynonyms` parameter, and arrange them for the user to be able to use via voice recognition. Note: The VR commands to activate an application must be accessible when viewing a different active application or the list of registered applications.
-4. HMI must provide the user with the possibility to choose an application among a list of registered applications.
-5. HMI must send an `OnAppActivated` notification to SDL when the user activates an app via the `UI` or `VR`.
+  1. HMI must update its list of registered applications.
+  2. HMI must store the application data sent in the `applications` parameter.
+	3. HMI must compile and store `VRGrammars` for the `vrSynonyms` parameter, and arrange them for the user to be able to use via voice recognition. Note: The VR commands to activate an application must be accessible when viewing a different active application or the list of registered applications.
+  4. HMI must provide the user with the possibility to choose an application among a list of registered applications.
+  5. HMI must send an `OnAppActivated` notification to SDL when the user activates an app via the `UI` or `VR`.
 
 !!!
 
