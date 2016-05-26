@@ -9,6 +9,14 @@ Sender
 Purpose
 : Inform HMI that any data persistence operations have been completed.
 
+SDL sends `OnSDLPersistenceComplete` when all data persistence operations are complete. The data made persistent is used for future resumption scenarios.
+
+!!! MUST
+
+  1. Send [OnExitAllApplications](../onexitallapplications)(`SUSPEND`) to initiate the data persistence process for registered apps.
+  2. Wait for `OnSDLPersistenceComplete` before sending [OnExitAllApplications](../onexitallapplications)(`IGNITION_OFF`).
+
+!!!
 
 ### Notification
 
