@@ -40,7 +40,7 @@ DiagnosticMessage
 {
   "id" : 139,
   "jsonrpc" : "2.0",
-  "method" : "VehicleInfo.DiagnostocMessage",
+  "method" : "VehicleInfo.DiagnosticMessage",
   "params" :
   {
     "targetID" : 5456
