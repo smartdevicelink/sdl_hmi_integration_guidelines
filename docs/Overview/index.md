@@ -16,7 +16,11 @@ This guideline describes:
    * Examples for each function call in different message formats corresponding to the transports currently supported
 
 ## How to use this guide
-[TODO]
+The SDL HMI Integration guidelines may seem daunting at first, but we're not asking you to read them from cover to cover at the start of your exploration into SDL. We recommend an implementation of SDL HMI as follows
+
+  1. Get connected to SDL by following the [Getting Started](../Getting Started) portion of these guidelines
+  2. Once you're connected and registered, connect a sample app such as the [iOS RPC Builder](https://github.com/smartdevicelink/rpc_builder_app_ios) to start to understand the RPC messaging layer in SDL between core and your HMI.
+  3. From there, you'll notice messages such as BasicCommunication.UpdateAppList. Use this guide to understand what those messages mean and how they can be leveraged in your HMI to provide the best possible user experience.
 
 ## Abbreviations and Definitions
 
