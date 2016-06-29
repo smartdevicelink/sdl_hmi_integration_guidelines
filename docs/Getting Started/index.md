@@ -56,10 +56,6 @@ If the response to any of the component `IsReady` requests contains `{"available
 !!!
 
 
-```json
-
-```
-
 ### IsReady Sequence Diagram
 
 !!! note
