@@ -1,6 +1,6 @@
 {
     "Authors": ["Anastasiya Britanova", "Justin Dickow"],
-    "languages": ["en"],
+    "languages": ["en","zh-cn"],
     "navigation": [
         {
             "name": "Overview"
