@@ -1,1 +1,1 @@
-This is the open source SDL HMI Guidelines, which are a work in progress. For now, you should head over to the [SDL Core readme](https://github.com/smartdevicelink/sdl_core) to download the full HMI guidelines.
+This is the open source SDL HMI Guidelines - head over to https://smartdevicelink.com to search and browse this documentation in style!
