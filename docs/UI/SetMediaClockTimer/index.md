@@ -15,6 +15,15 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
 
 The HMI must perform the update type indicated by the `updateMode` parameter. If the application is not active, the HMI must still store the values to be calculated for later display on the HMI. If the application is active, the updates must begin immediately.
 
+The HMI should exhibit the following behavior based on the `updateMode` parameter:
+
+  * COUNTUP/COUNTDOWN: Start counting up or down from the requested startTime value with a step of 1 second
+  * Continue counting up or down until
+    * The next request of SetMediaClockTimer
+    * 0 is reached in the case of COUNTDOWN
+  * PAUSE: Pause the timer that is counting up or down. If the `startTime` or `endTime` parameters are provided, update the values on the HMI
+  * CLEAR: Clear the startTime to 00:00:00 in the case that the `startTime` parameter is not provided, or update the HMI to reflect the new `startTime`
+
 !!!
 
 !!! note
