@@ -16,7 +16,7 @@ Purpose
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
-|audioPassThruDisplayTexts|[Common.TextFieldStruct](../../common/structs/index.md#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 2|
+|audioPassThruDisplayTexts|[Common.TextFieldStruct](../../common/structs/#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 2|
 |maxDuration|Integer|true|minvalue: 1<br>maxvalue: 1000000|
 |muteAudio|Boolean|true||
 

@@ -43,8 +43,8 @@ This request may be sent:
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
-|priority|[Common.AppPriority](../../common/enums/index.md#apppriority)|false||
-|level|[Common.HMILevel](../../common/enums/index.md#hmilevel)|false||
+|priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
+|level|[Common.HMILevel](../../common/enums/#hmilevel)|false||
 
 ### Response
 

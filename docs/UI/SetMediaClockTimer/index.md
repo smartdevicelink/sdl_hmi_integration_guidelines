@@ -38,9 +38,9 @@ SDL will not send this request if the `mediaClock` field is not indicated as sup
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|startTime|[Common.TimeFormat](../../common/structs/index.md#timeformat)|false||
-|endTime|[Common.TimeFormat](../../common/structs/index.md#timeformat)|false||
-|updateMode|[Common.ClockUpdateMode](../../common/enums/index.md#clockupdatemode)|true||
+|startTime|[Common.TimeFormat](../../common/structs/#timeformat)|false||
+|endTime|[Common.TimeFormat](../../common/structs/#timeformat)|false||
+|updateMode|[Common.ClockUpdateMode](../../common/enums/#clockupdatemode)|true||
 |appID|Integer|true||
 
 ### Response

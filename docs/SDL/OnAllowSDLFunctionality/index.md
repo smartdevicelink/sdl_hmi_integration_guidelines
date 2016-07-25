@@ -7,9 +7,9 @@
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|device|[Common.DeviceInfo](../../common/structs/index.md#deviceinfo)|false||
+|device|[Common.DeviceInfo](../../common/structs/#deviceinfo)|false||
 |allowed|Boolean|true||
-|source|[Common.ConsentSource](../../common/enums/index.md#consentsource)|true||
+|source|[Common.ConsentSource](../../common/enums/#consentsource)|true||
 
 #### JSON Example Notification
 ```json

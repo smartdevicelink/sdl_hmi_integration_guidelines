@@ -15,7 +15,7 @@
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|urls|[Common.ServiceInfo](../../common/structs/index.md#serviceinfo)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|urls|[Common.ServiceInfo](../../common/structs/#serviceinfo)|false|array: true<br>minsize: 1<br>maxsize: 100|
 
 ### Example Request
 

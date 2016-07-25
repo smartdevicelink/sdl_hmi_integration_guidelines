@@ -14,7 +14,7 @@
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|result|[Common.UpdateResult](../../common/enums/index.md#updateresult)|true||
+|result|[Common.UpdateResult](../../common/enums/#updateresult)|true||
 
 ### Example Request
 

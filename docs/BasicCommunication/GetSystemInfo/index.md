@@ -30,7 +30,7 @@ When SDL starts, it sends GetSystemInfo to update the policies database with the
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |ccpu_version|String|true|maxlength: 500|
-|language|[Common.Language](../../common/enums/index.md#language)|true||
+|language|[Common.Language](../../common/enums/#language)|true||
 |wersCountryCode|String|true|maxlength: 500|
 
 ### Example Request

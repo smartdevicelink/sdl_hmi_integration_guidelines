@@ -22,7 +22,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|languages|[Common.Language](../../common/enums/index.md#language)|true|array: true<br>minsize: 1<br>maxsize: 100|
+|languages|[Common.Language](../../common/enums/#language)|true|array: true<br>minsize: 1<br>maxsize: 100|
 
 ### Sequence Diagrams
 |||

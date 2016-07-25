@@ -37,7 +37,7 @@ The information about the application (name, appID, etc) is provided by SDL via 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
-|reason|[Common.DeactivateReason](../../common/enums/index.md#deactivatereason)|true||
+|reason|[Common.DeactivateReason](../../common/enums/#deactivatereason)|true||
 
 ### Sequence Diagrams
 |||

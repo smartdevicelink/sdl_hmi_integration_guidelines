@@ -17,8 +17,8 @@ Purpose
 |:---|:---|:--------|:---------|
 |appName|String|false|maxlength: 100|
 |ngnMediaScreenAppName|String|false|maxlength: 100|
-|language|[Common.Language](../../common/enums/index.md#language)|true||
-|appHMIType|[Common.AppHMIType](../../common/enums/index.md#apphmitype)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|language|[Common.Language](../../common/enums/#language)|true||
+|appHMIType|[Common.AppHMIType](../../common/enums/#apphmitype)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |appID|Integer|true||
 
 ### Response

@@ -16,7 +16,7 @@ Purpose
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40|
-|language|[Common.Language](../../common/enums/index.md#language)|true||
+|language|[Common.Language](../../common/enums/#language)|true||
 |appID|Integer|true||
 
 ### Response

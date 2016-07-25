@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|name|[Common.ButtonName](../../common/enums/index.md#buttonname)|true||
+|name|[Common.ButtonName](../../common/enums/#buttonname)|true||
 |isSubscribed|Boolean|true||
 |appID|Integer|true||
 

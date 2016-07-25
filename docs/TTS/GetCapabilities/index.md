@@ -22,8 +22,8 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|speechCapabilities|[Common.SpeechCapabilities](../../common/enums/index.md#speechcapabilities)|true|array: true<br>minsize: 1<br>maxsize: 5|
-|prerecordedSpeechCapabilities|[Common.PrerecordedSpeech](../../common/enums/index.md#prerecordedspeech)|true|array: true<br>minsize: 1<br>maxsize: 5|
+|speechCapabilities|[Common.SpeechCapabilities](../../common/enums/#speechcapabilities)|true|array: true<br>minsize: 1<br>maxsize: 5|
+|prerecordedSpeechCapabilities|[Common.PrerecordedSpeech](../../common/enums/#prerecordedspeech)|true|array: true<br>minsize: 1<br>maxsize: 5|
 
 ### Sequence Diagrams
 |||

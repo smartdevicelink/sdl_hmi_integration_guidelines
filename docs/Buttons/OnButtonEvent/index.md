@@ -15,8 +15,8 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|name|[Common.ButtonName](../../common/enums/index.md#buttonname)|true||
-|mode|[Common.ButtonEventMode](../../common/enums/index.md#buttoneventmode)|true||
+|name|[Common.ButtonName](../../common/enums/#buttonname)|true||
+|mode|[Common.ButtonEventMode](../../common/enums/#buttoneventmode)|true||
 |customButtonID|Integer|false|minvalue: 0<br>maxvalue: 65536|
 |appID|Integer|false||
 

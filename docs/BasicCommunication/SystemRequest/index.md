@@ -32,7 +32,7 @@ SDL validates all SystemRequests sent from the mobile app and returns DISALLOWED
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|requestType|[Common.RequestType](../../common/enums/index.md#requesttype)|true||
+|requestType|[Common.RequestType](../../common/enums/#requesttype)|true||
 |fileName|String|true|minlength: 1<br>maxlength: 255|
 |appID|String|false|minlength: 1<br>maxlength: 50|
 

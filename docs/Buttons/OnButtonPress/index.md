@@ -19,7 +19,7 @@ The hmi must send the name of the button pressed, the press mode detected, and I
 
 !!! note
 
-The value of customButtonID is provided by SDL within the [softButton](../../common/structs/index.md#softbutton) struct for some rpcs such as [UI.Alert](../../ui/alert)
+The value of customButtonID is provided by SDL within the [softButton](../../common/structs/#softbutton) struct for some rpcs such as [UI.Alert](../../ui/alert)
 
 !!!
 
@@ -29,8 +29,8 @@ The value of customButtonID is provided by SDL within the [softButton](../../com
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|name|[Common.ButtonName](../../common/enums/index.md#buttonname)|true||
-|mode|[Common.ButtonPressMode](../../common/enums/index.md#buttonpressmode)|true||
+|name|[Common.ButtonName](../../common/enums/#buttonname)|true||
+|mode|[Common.ButtonPressMode](../../common/enums/#buttonpressmode)|true||
 |customButtonID|Integer|false|minvalue: 0<br>maxvalue: 65536|
 |appID|Integer|false||
 

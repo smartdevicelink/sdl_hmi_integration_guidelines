@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|systemContext|[Common.SystemContext](../../common/enums/index.md#systemcontext)|true||
+|systemContext|[Common.SystemContext](../../common/enums/#systemcontext)|true||
 |appID|Integer|false||
 
 ### Sequence Diagrams

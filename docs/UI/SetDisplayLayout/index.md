@@ -24,10 +24,10 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|displayCapabilities|[Common.DisplayCapabilities](../../common/structs/index.md#displaycapabilities)|false||
-|buttonCapabilities|[Common.ButtonCapabilities](../../common/structs/index.md#buttoncapabilities)|false|array: true<br>minsize: 1<br>maxsize: 100|
-|softButtonCapabilities|[Common.SoftButtonCapabilities](../../common/structs/index.md#softbuttoncapabilities)|false|array: true<br>minsize: 1<br>maxsize: 100|
-|presetBankCapabilities|[Common.PresetBankCapabilities](../../common/structs/index.md#presetbankcapabilities)|false||
+|displayCapabilities|[Common.DisplayCapabilities](../../common/structs/#displaycapabilities)|false||
+|buttonCapabilities|[Common.ButtonCapabilities](../../common/structs/#buttoncapabilities)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|softButtonCapabilities|[Common.SoftButtonCapabilities](../../common/structs/#softbuttoncapabilities)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|presetBankCapabilities|[Common.PresetBankCapabilities](../../common/structs/#presetbankcapabilities)|false||
 
 ### Sequence Diagrams
 |||
