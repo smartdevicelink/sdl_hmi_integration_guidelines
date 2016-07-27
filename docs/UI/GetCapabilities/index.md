@@ -23,11 +23,11 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|displayCapabilities|[Common.DisplayCapabilities](../../common/structs/index.md#displaycapabilities)|true||
-|audioPassThruCapabilities|[Common.AudioPassThruCapabilities](../../common/structs/index.md#audiopassthrucapabilities)|true||
-|hmiZoneCapabilities|[Common.HmiZoneCapabilities](../../common/enums/index.md#hmizonecapabilities)|true||
-|softButtonCapabilities|[Common.SoftButtonCapabilities](../../common/structs/index.md#softbuttoncapabilities)|false||
-|hmiCapabilities|[Common.HMICapabilities](../../common/structs/index.md#hmicapabilities)|false||
+|displayCapabilities|[Common.DisplayCapabilities](../../common/structs/#displaycapabilities)|true||
+|audioPassThruCapabilities|[Common.AudioPassThruCapabilities](../../common/structs/#audiopassthrucapabilities)|true||
+|hmiZoneCapabilities|[Common.HmiZoneCapabilities](../../common/enums/#hmizonecapabilities)|true||
+|softButtonCapabilities|[Common.SoftButtonCapabilities](../../common/structs/#softbuttoncapabilities)|false||
+|hmiCapabilities|[Common.HMICapabilities](../../common/structs/#hmicapabilities)|false||
 
 ### Sequence Diagrams
 |||

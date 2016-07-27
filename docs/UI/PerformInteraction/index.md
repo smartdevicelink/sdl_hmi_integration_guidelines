@@ -32,12 +32,12 @@ A UI.PerformInteraction with a timeout value of `0` should not be timed out imme
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|initialText|[Common.TextFieldStruct](../../common/structs/index.md#textfieldstruct)|false||
-|choiceSet|[Common.Choice](../../common/structs/index.md#choice)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|initialText|[Common.TextFieldStruct](../../common/structs/#textfieldstruct)|false||
+|choiceSet|[Common.Choice](../../common/structs/#choice)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |vrHelpTitle|String|false|maxlength: 500|
-|vrHelp|[Common.VrHelpItem](../../common/structs/index.md#vrhelpitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|vrHelp|[Common.VrHelpItem](../../common/structs/#vrhelpitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |timeout|Integer|true|minvalue: 5000<br>maxvalue: 100000|
-|interactionLayout|[Common.LayoutMode](../../common/enums/index.md#layoutmode)|false||
+|interactionLayout|[Common.LayoutMode](../../common/enums/#layoutmode)|false||
 |appID|Integer|true||
 
 ### Response

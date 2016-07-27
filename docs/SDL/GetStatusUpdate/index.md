@@ -22,7 +22,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|status|[Common.UpdateResult](../../common/enums/index.md#updateresult)|true||
+|status|[Common.UpdateResult](../../common/enums/#updateresult)|true||
 
 ### Sequence Diagrams
 |||

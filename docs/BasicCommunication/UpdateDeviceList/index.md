@@ -45,7 +45,7 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|deviceList|[Common.DeviceInfo](../../common/structs/index.md#deviceinfo)|true|array: true<br>minsize: 0<br>maxsize: 100|
+|deviceList|[Common.DeviceInfo](../../common/structs/#deviceinfo)|true|array: true<br>minsize: 0<br>maxsize: 100|
 
 ### Response
 

@@ -23,7 +23,7 @@ Play the HMI's appropriate notification sound for the corresponding type of requ
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
-|methodName|[Common.MethodName](../../common/enums/index.md#methodname)|true||
+|methodName|[Common.MethodName](../../common/enums/#methodname)|true||
 
 #### MethodName
 

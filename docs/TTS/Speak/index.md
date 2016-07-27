@@ -15,9 +15,9 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|ttsChunks|[Common.TTSChunk](../../common/structs/index.md#ttschunk)|true|array: true<br>minsize: 1<br>maxsize: 100|
+|ttsChunks|[Common.TTSChunk](../../common/structs/#ttschunk)|true|array: true<br>minsize: 1<br>maxsize: 100|
 |appID|Integer|true||
-|speakType|[Common.MethodName](../../common/enums/index.md#methodname)|false||
+|speakType|[Common.MethodName](../../common/enums/#methodname)|false||
 
 ### Response
 

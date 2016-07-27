@@ -15,13 +15,13 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|navigationTexts|[Common.TextFieldStruct](../../common/structs/index.md#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 5|
-|turnIcon|[Common.Image](../../common/structs/index.md#image)|false||
-|nextTurnIcon|[Common.Image](../../common/structs/index.md#image)|false||
+|navigationTexts|[Common.TextFieldStruct](../../common/structs/#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 5|
+|turnIcon|[Common.Image](../../common/structs/#image)|false||
+|nextTurnIcon|[Common.Image](../../common/structs/#image)|false||
 |distanceToManeuver|Float|true|minvalue: 0<br>maxvalue: 1000000000|
 |distanceToManeuverScale|Float|true|minvalue: 0<br>maxvalue: 1000000000|
 |maneuverComplete|Boolean|false||
-|softButtons|[Common.SoftButton](../../common/structs/index.md#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 3|
+|softButtons|[Common.SoftButton](../../common/structs/#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 3|
 |appID|Integer|true||
 
 ### Response
