@@ -7,21 +7,26 @@ Sender
 : SDL
 
 Purpose
-: Inform the HMI about the status of a policy table update.
+: Inform the HMI about the status of a Policy Table Update (PTU).
 
 ### Notification
+
+!!! may
+
+
+!!!
+
+!!! note
+
+SDL operates with the following PTU statuses:
+
+!!!
 
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |status|[Common.UpdateResult](../../common/enums/index.md#updateresult)|true||
-
-### Sequence Diagrams
-|||
-OnStatusUpdate
-![OnStatusUpdate](./assets/OnStatusUpdate.jpg)
-|||
 
 #### JSON Example Notification
 ```json
@@ -34,3 +39,7 @@ OnStatusUpdate
   }
 }
 ```
+
+### Sequence Diagrams
+|||
+|||
