@@ -20,7 +20,7 @@ SDL 是安装在 HU 中的系统，允许移动设备上的已连接应用程序
 
 SDL HMI 集成指南在初见的时候会让你感觉望而却步, 但是我们并不是让你在开始探索SDL技术的时候按部就班的完整阅读. 我们推荐按以下步骤实现 
 
-  1. 可以从[入门](../Getting Started)开始连接SDL
+  1. 可以从[入门](../getting-started)开始连接SDL
   2. 一旦你连接并且注册成功, 请使用一个事例程序[iOS RPC Builder](https://github.com/smartdevicelink/rpc_builder_app_ios)开始理解SDL在Core和你的HMI的RPC消息处理机制  
   3. 至此, 你会发现例如`BasicCommunication.UpdateAppList`这样的消息. 使用这个手册去理解这些消息是什么和怎么让你的HMI去利用这些消息内容带来最好的用户体验
 

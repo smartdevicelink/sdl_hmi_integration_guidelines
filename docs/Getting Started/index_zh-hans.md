@@ -17,7 +17,7 @@ var JSONMessage = {
 
 可能的组件名称是 `UI`, `Buttons`, `BasicCommunication`, `VR`, `TTS`, `Navigation` 和 `VehicleInfo`
 
-一旦这些组件被注册, HMI必须通知sdl, 它已经准备开始使用[BasicCommunication.OnReady](../BasicCommunication/OnReady)进行之后的通讯通知.
+一旦这些组件被注册, HMI必须通知sdl, 它已经准备开始使用[BasicCommunication.OnReady](../basiccommunication/onready)进行之后的通讯通知.
 
 收到 OnReady 通知后，SDL 将开始通过响应链接请求来检查不同 HMI 组件的可用性：
 
