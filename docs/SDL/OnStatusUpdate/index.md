@@ -30,7 +30,7 @@ SDL operates with the following PTU statuses:
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|status|[Common.UpdateResult](../../common/enums/index.md#updateresult)|true||
+|status|[Common.UpdateResult](../../common/enums/#updateresult)|true||
 
 #### JSON Example Notification
 ```json

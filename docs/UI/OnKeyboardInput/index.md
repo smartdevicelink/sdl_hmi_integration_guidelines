@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|event|[Common.KeyboardEvent](../../common/enums/index.md#keyboardevent)|true||
+|event|[Common.KeyboardEvent](../../common/enums/#keyboardevent)|true||
 |data|String|false|minlength: 0<br>maxlength: 500|
 
 ### Sequence Diagrams

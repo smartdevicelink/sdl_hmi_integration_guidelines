@@ -31,7 +31,7 @@ SDL notifies the HMI about removing files only if the files were located in the 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |fileName|String|true|minlength: 1<br>maxlength: 30|
-|fileType|[Common.FileType](../../common/enums/index.md#filetype)|true||
+|fileType|[Common.FileType](../../common/enums/#filetype)|true||
 |appID|Integer|true||
 
 ### Sequence Diagrams

@@ -17,7 +17,7 @@ var JSONMessage = {
 
 The possible componentNames are `UI`, `Buttons`, `BasicCommunication`, `VR`, `TTS`, `Navigation`, and `VehicleInfo`
 
-Once the components are registered, the HMI must notify sdl that it is ready to begin further communication using the [BasicCommunication.OnReady](../BasicCommunication/OnReady) notification.
+Once the components are registered, the HMI must notify sdl that it is ready to begin further communication using the [BasicCommunication.OnReady](../basiccommunication/onready) notification.
 
 Upon receipt of the OnReady notification, SDL will begin checking the availablility of the different HMI components via a chain a requests:
 

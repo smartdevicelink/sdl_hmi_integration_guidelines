@@ -22,7 +22,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|language|[Common.Language](../../common/enums/index.md#language)|true||
+|language|[Common.Language](../../common/enums/#language)|true||
 ### Sequence Diagrams
 |||
 GetLanguage

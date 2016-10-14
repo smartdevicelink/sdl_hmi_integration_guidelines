@@ -7,7 +7,7 @@
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|error|[Common.SystemError](../../common/enums/index.md#systemerror)|true||
+|error|[Common.SystemError](../../common/enums/#systemerror)|true||
 
 #### JSON Example Notification
 ```json

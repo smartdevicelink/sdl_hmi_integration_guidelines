@@ -16,7 +16,7 @@ Purpose
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |cmdID|Integer|true|minvalue: 0<br>maxvalue: 2000000000|
-|type|[Common.VRCommandType](../../common/enums/index.md#vrcommandtype)|true||
+|type|[Common.VRCommandType](../../common/enums/#vrcommandtype)|true||
 |grammarID|Integer|true|minvalue: 0<br>maxvalue: 2000000000|
 |appID|Integer|true||
 

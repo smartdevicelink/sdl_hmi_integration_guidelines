@@ -7,9 +7,9 @@
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|deviceState|[Common.DeviceState](../../common/enums/index.md#devicestate)|true||
+|deviceState|[Common.DeviceState](../../common/enums/#devicestate)|true||
 |deviceInternalId|String|true|minlength: 0<br>maxlength: 500|
-|deviceId|[Common.DeviceInfo](../../common/structs/index.md#deviceinfo)|false||
+|deviceId|[Common.DeviceInfo](../../common/structs/#deviceinfo)|false||
 
 #### JSON Example Notification
 ```json

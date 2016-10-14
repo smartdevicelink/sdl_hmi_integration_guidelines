@@ -24,12 +24,12 @@ Purpose
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |isSDLAllowed|Boolean|true||
-|device|[Common.DeviceInfo](../../common/structs/index.md#deviceinfo)|false||
+|device|[Common.DeviceInfo](../../common/structs/#deviceinfo)|false||
 |isPermissionsConsentNeeded|Boolean|true||
 |isAppPermissionsRevoked|Boolean|true||
-|appRevokedPermissions|[Common.PermissionItem](../../common/structs/index.md#permissionitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|appRevokedPermissions|[Common.PermissionItem](../../common/structs/#permissionitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |isAppRevoked|Boolean|true||
-|priority|[Common.AppPriority](../../common/enums/index.md#apppriority)|false||
+|priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
 
 ### Sequence Diagrams
 |||

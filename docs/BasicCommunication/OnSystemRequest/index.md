@@ -36,9 +36,9 @@ HMI must send `OnSystemRequest` if specific data is requested from the mobile de
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|requestType|[Common.RequestType](../../common/enums/index.md#requesttype)|true||
+|requestType|[Common.RequestType](../../common/enums/#requesttype)|true||
 |url|String|false|minlength: 1<br>maxlength: 1000|
-|fileType|[Common.FileType](../../common/enums/index.md#filetype)|false||
+|fileType|[Common.FileType](../../common/enums/#filetype)|false||
 |offset|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |length|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |timeout|Integer|false|minvalue: 0<br>maxvalue: 2000000000|

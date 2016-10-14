@@ -1,15 +1,18 @@
 {
-    "Authors": ["Anastasiya Britanova", "Justin Dickow"],
-    "languages": ["en"],
+    "Authors": ["Anastasiya Britanova", "Justin Dickow", "Nicolas(Yifei) Li"],
+    "languages": ["en","zh-hans"],
     "navigation": [
         {
-            "name": "Overview"
+            "name": "Overview",
+            "name_zh-hans": "概述"
         },
         {
-          "name": "Getting Started"
+          "name": "Getting Started",
+          "name_zh-hans": "入门"
         },
         {
-            "name": "WebSocket Transport"
+            "name": "WebSocket Transport",
+            "name_zh-hans": "连接到SmartDeviceLink"
         },
         {
           "name": "BasicCommunication",

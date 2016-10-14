@@ -8,7 +8,7 @@
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |messageCodes|String|true|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 500|
-|language|[Common.Language](../../common/enums/index.md#language)|false||
+|language|[Common.Language](../../common/enums/#language)|false||
 
 ### Response
 
@@ -16,7 +16,7 @@
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|messages|[Common.UserFriendlyMessage](../../common/structs/index.md#userfriendlymessage)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|messages|[Common.UserFriendlyMessage](../../common/structs/#userfriendlymessage)|false|array: true<br>minsize: 1<br>maxsize: 100|
 
 ### Sequence Diagrams
 |||
