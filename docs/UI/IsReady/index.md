@@ -14,10 +14,24 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+The request does not have specific parameters.
+
+!!! note
+
+1. SDL sends `UI.IsReady` request after HMI confirms its readiness via `BC.OnREady` notification.
+2. If HMI responds with `"available":false`, SDL will not further communicate over UI interface with HMI.
+3. If HMI does not respond during SDL's default timeout, SDL will continue to send RPCs over UI interface to HMI.
+
+!!!
 
 ### Response
+
+!!! must
+
+1. Check whether UI component is available and ready.
+2. Respond correspondingly to results of this check.
+
+!!!
 
 #### Parameters
 
