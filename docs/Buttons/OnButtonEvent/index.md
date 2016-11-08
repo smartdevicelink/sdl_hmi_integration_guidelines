@@ -9,6 +9,10 @@ Sender
 Purpose
 : Inform SDL about the occurrence of a button event.
 
+!!! note  
+1. OnButtonPress/OnButtonEvent -> If no “appID” -> SDL transfers notification to FULL apps only. 
+2. OnButtonPress/OnButtonEvent -> If “appID” is present -> SDL transfers notification to the named app, only if it’s in FULL or LIMITED (and ignores notification for BACKROUND & NONE even if there is “appID”) !!!
+
 ### Notification
 
 #### Parameters
@@ -29,7 +33,7 @@ OnButtonEvent for CUSTOM_BUTTON pressed and released
 OnButtonEvent hardware button pressed and released
 ![OnButtonEvent](./assets/OnButtonEventHardKeyPressRelease.png)
 |||
-
+![OnButtonEventOk](./assets/OnButtonEventOk.png)
 #### JSON Example Notification
 ```json
 {
