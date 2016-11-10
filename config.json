@@ -139,6 +139,9 @@
               "name": "AlertManeuver"
             },
             {
+              "name": "GetWayPoints"
+            },
+            {
               "name": "IsReady"
             },
             {
