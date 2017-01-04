@@ -22,7 +22,18 @@ without `<VRHelp>` and `<VRHelpTitle>` params, SDL generates default values of `
 3)	In case mobile app sends the next (not first) SetGlobalProperties_request within the same ignition cycle with `<VRHelp>` and `<VRHelpTitle>` params, SDL transfers them.   
 4)	In case mobile app the next (not first) SetGlobalProperties_request within the same ignition cycle without `<VRHelp>` and `<VRHelpTitle>` params, SDL omits (not sends) `<VRHelp>` and `<VRHelpTitle>` to HMI.   
 5)	In case SDL resumes `<VRHelp>` and `<VRHelpTitle>` during Data resumption, SDL must not send default values of VR at the nexts (not first) SetGlobalProperties requests.   
-
+6) In case mobile app sends _SetGlobalProperties_request_ to SDL:   
+- with both valid values of "autoCompleteList" and "autoCompleteText" params, _SDL must_:   
+- [x] tranfer SetGlobalProperties_request with <autoCompleteList> param and without (omited) <autoCompleteText> param to HMI;   
+- [x] respond with <resultCode_received_from _HMI> to mobile app.   
+- with valid "autoCompleteList" parameter with other valid params related to request and this request is allowed by Policies, _SDL must_:   
+- [x] transfer SetGlobalProperties with all requested params to HMI;   
+- [x] respond with `<resultCode_received_from_HMI>` to mobile app.   
+- without autoCompleteList parameter with other valid params related to request and this request is allowed by Policies, _SDL must_:   
+- [x] transfer SetGlobalProperties with all requested parameters to HMI (_thus, without autoCompleteList_).   
+- [x] respond with `<resultCode_received_from _HMI>` to mobile app.   
+ 
+ 
 _**Note:**_   
 Default values of vrHelpItems are set to all the 1st VR commands of the current application and app's VR synonym. By default vrHelpTitle value is set to application name.
 
@@ -47,10 +58,10 @@ Initially, the appID together with other application-related information is prov
 - display the in-application menu for every active application on User’s request. It must contain SDL-requested commands (UI.AddCommand) and sub menus (UI.AddSubMenu). SDL provides the values for the name (menuTitle parameter) and for the icon (menuIcon parameter) of this in-application menu. The values for in-application menu and touchscreen keyboard are allowed by SDL for navigation type of application only.   
 - display the onscreen keyboard upon User\`s request within keyboardProperties mentioned in p.15.6.1 Description of “HMI Capabilities JSON file”.    
 - use default keyboardProperties – parameter in case SDL transfers UI.SetGlobalProperties request with omitted or empty keyboardProperties param to HMI.   
-_**Important Note:**   
-If HMI-defined VR commands are accessible together with those provided by SDL via VR.AddCommand, HMI must: 
-- Add the corresponding VR HMI-defined commands to the list of VR help items provided by SDL via UI.SetGlobalProperties
--- display the complete list of available VR commands (SDL-defined and HMI-defined ones) when the User activates VR._    
+_**Important Note:**_   
+_If HMI-defined VR commands are accessible together with those provided by SDL via VR.AddCommand, HMI must:_ 
+- _add the corresponding VR HMI-defined commands to the list of VR help items provided by SDL via UI.SetGlobalProperties_
+- _display the complete list of available VR commands (SDL-defined and HMI-defined ones) when the User activates VR._    
 
 **3.** Respond to the request.   
 
@@ -82,10 +93,12 @@ _**Note**: In case HMI does not respond SDL's request during SDL-default timeout
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
-|||
+
 SetGlobalProperties for active app on HMI with VR activation
 ![SetGlobalProperties](./assets/SetGlobalPropertiesActiveVRActivate.png)
-|||
+
+SetGlobalProperties for active app within TTS.SetGlobalProperties_request, UI.SetGlobalProperties_request, VR.Started, VR.Stopped.
+![SetGlobalProperties](./assets/SetGlobalProperties_TTS_UI_VR.png)
 
 ### Example Request
 
