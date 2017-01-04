@@ -56,7 +56,7 @@ Initially, the appID together with other application-related information is prov
 **2.** Whenever the User activates VR, set up the requested values for VR help layout, the name and icon for in-application menu and the properties of the touchscreen keyboard (if supported):   
 - display the list of commands available for voice recognition. SDL provides the title for this list (vrHelpTitle parameter) and the list of commands itself (vrHelp parameter which is an array of VrHelpItem‘s).   
 - display the in-application menu for every active application on User’s request. It must contain SDL-requested commands (UI.AddCommand) and sub menus (UI.AddSubMenu). SDL provides the values for the name (menuTitle parameter) and for the icon (menuIcon parameter) of this in-application menu. The values for in-application menu and touchscreen keyboard are allowed by SDL for navigation type of application only.   
-- display the onscreen keyboard upon User\`s request within keyboardProperties mentioned in p.15.6.1 Description of “HMI Capabilities JSON file”.    
+- display the onscreen keyboard upon User\`s request within the following condition: all keyboardProperties supported by HMI must be embodied in HMI_capabilities.json file. In this case SDL are able to compare keyboardProperties requested by mobile device with actual supported keyboardProperties and send to HMI only that are supported.    
 - use default keyboardProperties – parameter in case SDL transfers UI.SetGlobalProperties request with omitted or empty keyboardProperties param to HMI.   
 _**Important Note:**_   
 _If HMI-defined VR commands are accessible together with those provided by SDL via VR.AddCommand, HMI must:_ 
