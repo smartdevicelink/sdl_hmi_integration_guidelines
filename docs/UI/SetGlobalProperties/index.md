@@ -24,8 +24,8 @@ without `<VRHelp>` and `<VRHelpTitle>` params, SDL generates default values of `
 5)	In case SDL resumes `<VRHelp>` and `<VRHelpTitle>` during Data resumption, SDL must not send default values of VR at the nexts (not first) SetGlobalProperties requests.   
 6) In case mobile app sends _SetGlobalProperties_request_ to SDL:   
 - with both valid values of "autoCompleteList" and "autoCompleteText" params, _SDL must_:   
-- [x] tranfer SetGlobalProperties_request with <autoCompleteList> param and without (omited) <autoCompleteText> param to HMI;   
-- [x] respond with <resultCode_received_from _HMI> to mobile app.   
+- [x] tranfer SetGlobalProperties_request with <autoCompleteList> param and without (omitted) <autoCompleteText> param to HMI;   
+- [x] respond with <resultCode_received_from_HMI> to mobile app.   
 - with valid "autoCompleteList" parameter with other valid params related to request and this request is allowed by Policies, _SDL must_:   
 - [x] transfer SetGlobalProperties with all requested params to HMI;   
 - [x] respond with `<resultCode_received_from_HMI>` to mobile app.   
