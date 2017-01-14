@@ -9,30 +9,38 @@ Sender
 Purpose
 : Set a value and update mode for the media clock of a media application.
 
-The UI.SetMediaClock timer request indicates either an initial value for the media clock timer for a media application or an update to the value. The request may come in for the application which is not currently active on the HMI.
+The UI.SetMediaClock timer request indicates either an initial value for the media clock timer for a media application or an update to the value. The request may come in for the application which is not currently active on the HMI.   
+_**Note:**_   
+_SDL uses the information about:_   
+- _mediaClock field_   
+- _the format of time value confirmed to be supported by HMI within response to UI.GetCapabilities._   
 
-!!! must
+### Request   
 
-The HMI must perform the update type indicated by the `updateMode` parameter. If the application is not active, the HMI must still store the values to be calculated for later display on the HMI. If the application is active, the updates must begin immediately.
+#### HMI must:   
+1) perform the update type indicated by the `updateMode` parameter:   
+- If the application is not active, the HMI must still store the values to be calculated for later display on the HMI.   
+- If the application is active, the updates must begin immediately.   
 
-The HMI should exhibit the following behavior based on the `updateMode` parameter:
+2) exhibit the following behavior based on the `updateMode` parameter:
+  * COUNTUP/COUNTDOWN modes:   
+    * Start counting up or down from the requested `startTime` value with a step of 1 second;
+    * Continue counting up or down until:
+           - The next request of _SetMediaClockTimer_ with appropriate parameters comes;   
+           - Zero is reached in the case of COUNTDOWN.   
+  * PAUSE mode:   
+    * Pause the timer that is counting up or down;   
+    * If `startTime` or `endTime` parameters are provided, the values must be updated on the HMI.   
+  * CLEAR mode:    
+    * Clear `startTime` to 00:00:00 in the case that the `startTime` parameter is not provided in the request, otherwise, `startTime` must be updated with a new value. It is up to HMI to determine the way the media clock timer is cleared: either to remove it from display or to set it to zero.   
+    
+_**Note:**_   
+- SDL will not send this request if the `mediaClock` field is not indicated as supported in [UI.GetCapabilities](../getcapabilities).   
+- HMI must remember the mode and the value (continuing to update it in case of COUNTUP / COUNTDOWN) of the media clock timer associated with appID and display the accurate values whenever the appID application is activated after having been deactivated.   
+- Initially, the appID together with other application-related information is provided by SDL within one of _UpdateAppList_ and _OnAppRegistered_ RPCs.   
 
-  * COUNTUP/COUNTDOWN: Start counting up or down from the requested startTime value with a step of 1 second
-  * Continue counting up or down until
-    * The next request of SetMediaClockTimer
-    * 0 is reached in the case of COUNTDOWN
-  * PAUSE: Pause the timer that is counting up or down. If the `startTime` or `endTime` parameters are provided, update the values on the HMI
-  * CLEAR: Clear the startTime to 00:00:00 in the case that the `startTime` parameter is not provided, or update the HMI to reflect the new `startTime`
-
-!!!
-
-!!! note
-
-SDL will not send this request if the `mediaClock` field is not indicated as supported in [UI.GetCapabilities](../getcapabilities)
-
-!!!
-
-### Request
+3) Respond with the [result code] correspondingly to the results of this RPC execution.
+[result code]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/UI/SetMediaClockTimer/index.md#response
 
 #### Parameters
 
