@@ -20,10 +20,12 @@
 
 ### HMICapabilities
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|navigation|Boolean|false|||
-|phoneCall|Boolean|false|||
+|Name|Type|Mandatory|Description|
+|:---|:---|:--------|:----------|
+|navigation|Boolean|false|Availability of build in Nav. True: Available, False: Not Available|
+|phoneCall|Boolean|false|Availability of build in phone. True: Available, False: Not Available|
+|steeringWheelLocation|Common.SteeringWheelLocation|false|See [SteeringWheelLocation]|
+[SteeringWheelLocation]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#steeringsheellocation
 
 ### MenuParams
 
