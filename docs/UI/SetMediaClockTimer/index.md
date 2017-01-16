@@ -9,7 +9,8 @@ Sender
 Purpose
 : Set a value and update mode for the media clock of a media application.
 
-The UI.SetMediaClock timer request indicates either an initial value for the media clock timer for a media application or an update to the value. The request may come in for the application which is not currently active on the HMI.   
+The UI.SetMediaClock timer request indicates either an initial value for the media clock timer for a media application or an update to the value. The request may come in for the application which is not currently active on the HMI.
+
 _**Note:**_   
 _SDL uses the information about:_   
 - _mediaClock field_   
@@ -44,14 +45,34 @@ _**Note:**_
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
-|startTime|[Common.TimeFormat](../../common/structs/#timeformat)|false||
-|endTime|[Common.TimeFormat](../../common/structs/#timeformat)|false||
-|updateMode|[Common.ClockUpdateMode](../../common/enums/#clockupdatemode)|true||
+|startTime|[Common.TimeFormat]|false|_startTime_ must be provided together with modes: "COUNTUP", "COUNTDOWN", "PAUSE" to HMI. _startTime_ will be ignored for "RESUME", and "CLEAR".|
+|endTime|[Common.TimeFormat]|false|endTime can be provided together with modes: "COUNTUP", "COUNTDOWN", "PAUSE" to HMI. To be used to calculate any visual progress bar (if not provided, this feature is ignored). If endTime is greater then startTime for COUNTDOWN or less than startTime for COUNTUP, then the request will return an INVALID_DATA. _endTime_ will be ignored for "PAUSE", "RESUME", and "CLEAR".|
+|updateMode|[Common.ClockUpdateMode]|true|Enumeration to control the media clock. In case of pause, resume, or clear, the start time value is ignored and shall be left out. For resume, the time continues with the same value as it was when paused.|
 |appID|Integer|true||
 
+[Common.TimeFormat]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#timeformat
+[Common.ClockUpdateMode]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#clockupdatemode
+
+
 ### Response
+
+_**Note:**_   
+_There is a difference in message type for WebSocket and D-Bus connection (see the table below).   
+For detailed information, see Section [Sequence Diagrams](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/UI/SetMediaClockTimer/index.md#sequence-diagrams)._    
+
+|Result|Description|Message type WebSocket|Message type D-Bus|Message Params|Notes|
+|:-----|:----------|:---------------------|:-----------------|:-----------|:----|
+|Success|SUCCESS: 1. HMI has started counting up or down the media clock from the requested value (in case of COUNTUP or COUNTDOWN requested mode).<br>2. HMI has paused the media clock value (PAUSE requested mode).<br>3. HMI has resumed the media clock in the mode that had been in effect before pausing, i.e. has started counting up or down (RESUME requested mode).<br>4. HMI has cleared the existing media clock value (CLEAR requested mode).|JSON response|Method return|code: 0|HMI must respond right after the action requested with updateMode parameter has been performed.|
+|Failure|IGNORED: 1. Request with RESUME mode arrives when the media clock is counting, already resumed or cleared with the previous request.<br>2. Request with PAUSE mode arrives when the media clock is paused or cleared with the previous request.|JSON error message|Method return|code: 6|Applicable to this RPC result codes.|
+|Failure|INVALID_DATA: The data sent is invalid (invalid JSON syntax or parameters out of bounds or of wrong type)|JSON error message|Method return|code: 11|Applicable to this RPC result codes.|
+|Failure|INVALID_ID: appID is invalid (e.g. doesn’t exist)|JSON error message|Method return|code: 13|Applicable to this RPC result codes.|
+|Failure|GENERIC_ERROR: The unknown issue occurred or other codes are not applicable.|JSON error message|Method return|code: 22|Applicable to this RPC result codes.|
+
+_Please see [Result Enumeration] for all SDL-supported codes._
+[Result Enumeration]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#result
+
 
 #### Parameters
 
