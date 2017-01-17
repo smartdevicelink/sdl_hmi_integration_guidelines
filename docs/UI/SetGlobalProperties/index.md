@@ -80,13 +80,14 @@ _If HMI-defined VR commands are accessible together with those provided by SDL v
 |appID|Integer|true|-|
 
 ### Response
-|Result |Description |Message Params|
-|:------|:-----------|:-------------|
-|Success|SUCCESS: HMI has set the requested properties.    |code: 0|
-|Failure|INVALID_ID:appID is not valid (e.g.does not exist)|code: 13|
-|Failure|INVALID_DATA: The data sent is invalid (invalid JSON syntax or parameters out of bounds or of wrong type)|code: 11|
-|Failure|GENERIC_ERROR: The unknown issue occurred or other codes are not applicable.|code: 22|
-_**Note**: In case HMI does not respond SDL's request during SDL-default timeout (10 sec), SDL will return GENERIC_ERROR  result code to the corresponding mobile app's request. Please see [Result Enumeration]( https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#result) for all SDL-supported codes._
+|Result |Description |Message type WebSocket|Message type D-Bus|Message Params|
+|:------|:-----------|:---------------------|:-----------------|:-------------|
+|Success|SUCCESS: HMI has set the requested properties.|JSON response|Method return|code: 0|
+|Failure|INVALID_ID:appID is not valid (e.g.does not exist)|JSON response|Method return|code: 13|
+|Failure|INVALID_DATA: The data sent is invalid (invalid JSON syntax or parameters out of bounds or of wrong type)|JSON response|Method return|code: 11|
+|Failure|GENERIC_ERROR: The unknown issue occurred or other codes are not applicable.|JSON response|Method return|code: 22|
+_**Note**: In case HMI does not respond SDL's request during SDL-default timeout (10 sec), SDL will return GENERIC_ERROR  result code to the corresponding mobile app's request. Please see [Result Enumeration] for all SDL-supported codes._
+[Result Enumeration]: https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#result
 
 #### Parameters
 
