@@ -21,15 +21,16 @@ SDL uses `OnEventChanged` notification for correct changing HMILevels and AudioS
 
 3.	Resume the applications to the previous-to-phone-call state on HMI (as SDL does not send BC.ActivateApp or BC.OnResumeAudioSource to HMI after the phone call is ended).
 
-_Note:_
-When SDL receives `OnEventChanged(PHONE_CALL, isActive: true)` from HMI, it changes the HMILevel of all applications currently either in FULL or LIMITED to BACKGROUND, audioStreamingState: NOT_AUDIBLE. 
-After getting `OnEventChanged(PHONE_CALL, isActive: false)` from HMI, SDL returns applications to the previous-to-phonecall HMILevel. SDL does not send BC.ActivateApp or BC.OnResumeAudioSource to HMI after the phone call is ended.
+_Note:_  
+When SDL receives `OnEventChanged(PHONE_CALL, isActive: true)` from HMI, it changes the HMILevel of all applications currently either in FULL or LIMITED to BACKGROUND, audioStreamingState: NOT_AUDIBLE.  
+After getting `OnEventChanged(PHONE_CALL, isActive: false)` from HMI, SDL returns applications to the previous-to-phonecall HMILevel.  
+SDL does not send BC.ActivateApp or BC.OnResumeAudioSource to HMI after the phone call is ended.
 
 **IMPORTANT NOTE** SDL ignores all invalid notifications which come from HMI (invalid JSON, invalid data types/bounds etc.)
 
 **Emergency event**
 
-Safety Feature is HMI`s specific mode when 'Emergency event' or 'Rear view camera' are active modes.  The main idea from SDL<->HMI point of view is that navigation/audio streaming mustn't interfere with Rear Camera View mode. HMI is responsible for managing audio/video data during 'Emergency event'/'RearCamera' modes.
+Safety Feature is HMI's specific mode when 'Emergency event' or 'Rear view camera' are active modes.  The main idea from SDL-HMI point of view is that navigation/audio streaming mustn't interfere with Rear Camera View mode. HMI is responsible for managing audio/video data during 'Emergency event'/'RearCamera' modes.
 
 !!! **HMI MUST** 
 1. 	Send notification with appropriate parameter value when mode 'Emergency event'/'Rear view camera' becomes active or inactive.
@@ -40,8 +41,8 @@ The app is not allowed to stream audio and it will not be heard by the user (due
 
 **Deactivate HMI**
 
-!!! **HMI MUST** 
-1.	Send notification with appropriate parameter value when all apps to be inactivated/restored.
+!!! **HMI MUST**  
+1.	Send notification with appropriate parameter value when all apps to be inactivated/restored.  
 2.	Send `OnEventChange (DEACTIVATE_HMI isDeactivated: false)` before activating an app.
 
 _Note:_
@@ -51,16 +52,15 @@ When SDL receives OnEventChange(DEACTIVATE_HMI isDeactivated: true) from HMI, it
 
 **Audio source and Embedded navi**
 
-!!! **HMI MUST** 
-1.	Send notification to SDL with appropriate parameter value when embedded navigation or audio source is activated/deactivated.
-2.	Send SDL.ActivateApp (<appID_of_such_app>) in case of app activation or OnAppDeactivated (\<appID>\) in case of app deactivation.
-3.	Switch off embedded source before app activation, when the type of activating app and embedded source are equal (the same)
- i.e. Media app activation is the trigger for HMI to switch off embedded audio source;
- navigation app activation is the trigger for HMI to switch off embedded navigation.
-4.	When system supports audio mixing and embedded navigation starts streaming
+!!! **HMI MUST**  
+1.	Send notification to SDL with appropriate parameter value when embedded navigation or audio source is activated/deactivated.  
+2.	Send SDL.ActivateApp (`<appID_of_such_app>`) in case of app activation or OnAppDeactivated (\<appID>\) in case of app deactivation.  
+3.	Switch off embedded source before app activation, when the type of activating app and embedded source are equal (the same)  
+i.e. Media app activation is the trigger for HMI to switch off embedded audio source;  
+navigation app activation is the trigger for HMI to switch off embedded navigation.  
+4.	When system supports audio mixing and embedded navigation starts streaming  
 HMI must send SDL:TTS.Started.
-to change media app currently in LIMITED and AUDIBLE due to active embedded navigation 
-to LIMITED, ATTENUATED.
+to change media app currently in LIMITED and AUDIBLE due to active embedded navigation to LIMITED, ATTENUATED.  
 and SDL:TTS.Stopped right after embedded navigation stops streaming 
 to change application's HMIStatus to the previous-to-event state.
 
