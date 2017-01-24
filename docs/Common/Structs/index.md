@@ -120,11 +120,12 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|language|Common.Language|false|||
-|keyboardLayout|Common.KeyboardLayout|false|||
-|keypressMode|Common.KeypressMode|false|||
-|limitedCharacterList|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 1||
-|autoCompleteText|String|false|maxlength: 1000||
+|language|Common.Language|false|-|The keyboard language.|
+|keyboardLayout|Common.KeyboardLayout|false|-|Desired keyboard layout.|
+|keypressMode|Common.KeypressMode|false|-|Desired keypress mode. If omitted, this value will be set to RESEND_CURRENT_ENTRY.|
+|limitedCharacterList|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 1|Array of keyboard characters to enable. All omitted characters will be greyed out (disabled) on the keyboard. If omitted, the entire keyboard will be enabled.|
+|autoCompleteText|String|false|maxlength: 1000|Allows an app to prepopulate the text field with a suggested or completed entry as the user types.|
+|autoCompleteList|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 50|Allows an app to prepopulate the text field with a list of suggested or completed entry as the user types|
 
 ### Choice
 
