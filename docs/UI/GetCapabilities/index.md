@@ -81,7 +81,7 @@ _There is a difference in message type for WebSocket and D-Bus connection (see t
 Get Capabilities
 ![GetCapabilities](./assets/GetCapabilities.png)
 
-RegisterAppInterface: SDL must provide the value of _steeringWheelLocation_ parameter at response.
+RegisterAppInterface: SDL must provide the value of _steeringWheelLocation_ parameter at response as a part of HMICapabilities struct.
 ![providing_steeringWheelLocation_parameter_at_response](./assets/providing_steeringWheelLocation_parameter_at_response.png)
 
 ### Example Request
