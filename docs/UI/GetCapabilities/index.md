@@ -47,18 +47,10 @@ _**Note:**_
 
 
 #### Parameters
-This RPC has no additional parameter requirements
 
 ### Response   
-_**Note:**_   
-_There is a difference in message type for WebSocket and D-Bus connection (see the table below)._   
 
-|Result|Description|Message type WebSocket|Message type D-Bus|Message Params|Notes|
-|:-----|:----------|:---------------------|:-----------------|:-------------|:----|
-|Success|SUCCESS: HMI has the information about UI capabilities.|JSON response|Regular response|displayCapabilities, hmiZoneCapabilities, softButtonCapabilities, hmiCapabilities, audioPassThruCapabilities, Code: 0|See Parameters below in table.|
-|Failure|GENERIC_ERROR: Some failure occurred|JSON error message|Regular response|Code: 22|-|
-
-
+This RPC has no additional parameter requirements.
 
 #### Parameters
 
