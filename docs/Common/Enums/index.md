@@ -10,6 +10,14 @@
 |ENTRY_CANCELLED|3||
 |ENTRY_ABORTED|4||
 
+### SteeringWheelLocation
+
+|Name|Value|
+|:---|:----|
+|LEFT|0|
+|RIGHT|1|
+|CENTER|2|
+
 ### FuelCutoffStatus
 
 |Name|Value|Description|
