@@ -1,5 +1,5 @@
 ## SDL’s  configuration file structure (ini-file)
-To configure some specific SDL rules or to define the filepathes and other other SDL settings, smartDeviceLink.ini file is used. The file is divided into a sections, each section relates to the configuration of some functional area. Some of the settings have no reference to HMI behavior, anyway they are described for information purposes to understand particular properties. 
+To configure some specific SDL rules or to define the filepathes and other SDL settings, smartDeviceLink.ini file is used. The file is divided into a sections, each section relates to the configuration of some functional area. Some of the settings have no reference to HMI behavior, anyway they are described for information purposes to understand particular properties. 
 ### HMI
 |Parameter|Type|Example|Description|
 |:---|:----|:----|:----------|
@@ -16,7 +16,6 @@ To configure some specific SDL rules or to define the filepathes and other other
 |SDLVersion|String|SDLVersion = {GIT_COMMIT}|SDL source version, represents as a git commit hash value|
 |LogsEnabled|Boolean|LogsEnabled = true|SDL logging output enabled/disabled on system|
 |AppConfigFolder|String|AppConfigFolder =|The path to application configuration folder where hmi_capabilities,smartDeviceLink.ini, log4cxx.properties are stored.Storage of Policy table files (preload, snapshot) is valid for OpenSource only. The default value is current working directory|
-|AppStorageFolder|String|AppStorageFolder = /fs/rwdata/storage/sdl|The root folder for storing all applications folder|
 |AppStorageFolder|String|AppStorageFolder = /fs/rwdata/storage/sdl|The root folder for storing all applications folder|
 |AppResourceFolder|String|AppResourceFolder =audio8bit.wav|Contains resourses. Default value is SDL working directory|
 |ThreadStackSize|Integer|ThreadStackSize = 20480|ThreadStackSize used by SDL only if its required by sytem/platform, wisean empty value is defined or no such parameter exists, stack size will be PTHREAD`_`STACK_MIN(only SDL’s configurable value), which for<br>Ubuntu:<br>THREAD_STACK_MIN = 16384<br>QNX:<br>PTHREAD_STACK_MIN = 256
@@ -133,8 +132,8 @@ To configure some specific SDL rules or to define the filepathes and other other
 |Parameter|Type|Example|Description|
 |:---|:----|:----|:----------|
 |EnableProtocol4|Boolean|EnableProtocol4 = true|Enables SDL 4.0 support. Parameter allows to switch SDL4 functionality on SDL|
-|AppIconsFolder|String|AppIconsFolder = storage|The path where apps’ icons must be stored. Upon each start SDL  must check whether the folder ‘AppIconsFolder’ exists and read/write permissions.<br>In case folder doesn’t exist, SDL creates it and uses ia as assigned. In case folder doesn’t exist and SDL has read/write permissions SDL must create the folder.<br>In case folder exists and SDL has NO permissions SDL logs error intermally and continues working as assigned.<br>In case free space in the folder is not enough to write a new icon SDL removes ‘AppIconsAmountToRemove’ amount of the oldest icons from this folder, writes the new icon to ‘AppIconsFolder’.<br>In case free space in the folder is not enough to write a new icon and the value of “AppIconsAmountToRemove” is larger than the actual number of iconsin the folder]SDL must remove all icons from this folder and write the new icon. <br>In case after removing the oldest icons still there is no enough space in ‘AppIconsFolder’to write a new icon, SDL cyclically removes ‘AppIconsAmountToRemove’amount of the oldest icons from this folder until the free space is enough to write a new icon to ‘AppIconsFolder’.|
-|AppIconsFolderMaxSize|Integer|AppIconsFolderMaxSize = 104857600|Max size of the folder in bytes. Parameter defines the allowed size in bytes of the folder for SDL to store the applications icons.<br>In case value greater than 1048576 bytes SDL ‘AppIconsFolderMaxSize’as‘AppIconsFolder’folder size.<br>In case value is less than 1048576 bytes SDL uses the default value of 1048576 bytes as AppIconsFolder’folder size.<br>In case the icon that SDL tries to write into ‘AppIconsFolder’ is of greater size than folder’s ‘AppIconsFolderMaxSize’ SDL logs error and continues operating without storing the icon.|
+|AppIconsFolder|String|AppIconsFolder = storage|The path where apps’ icons must be stored. Upon each start SDL  must check whether the folder ‘AppIconsFolder’ exists and read/write permissions.<br>In case folder doesn’t exist, SDL creates it and uses it as assigned|
+|AppIconsFolderMaxSize|Integer|AppIconsFolderMaxSize = 104857600|Max size of the folder in bytes. Parameter defines the allowed size in bytes of the folder for SDL to store the applications icons.|
 |AppIconsAmountToRemove|Integer|AppIconsAmountToRemove = 1|Amount of the oldest icons to remove from "AppIconsFolder" in case of max folder size was reached.<br>In case the value ‘AppIconsAmountToRemove’ is equal zero SDL internally logs error and  continues working without storing the icon.| 
 
 ### Resumption
