@@ -42,7 +42,7 @@ _**Notes for HMI expected behavior:**_
 2) When the system receives a new list of strings for autoCompleteText for a particular app, the system shall delete the previous list and replace it with the new list for that app.   
 3) When any of the keyboard layouts are being used, the system shall reference the list of autoCompleteText strings for that app.   
 4) As the user enters data on the keyboard, the system shall display the autoCompleteText strings which match the entry.   
-5) The number of matching autoCompleteText strings displayed shall only be limited by the character length constraints of the hmi.   
+5) The number of matching autoCompleteText strings displayed shall only be limited by the character length constraints of HMI.   
 6) The system shall provide the user the ability to select one of the displayed matching autoCompleteText strings without having to enter the entire string.   
 7) When the user selects one of the displayed matching autoCompleteText string, the system shall submit that entry and not require further user input for submission.   
 
