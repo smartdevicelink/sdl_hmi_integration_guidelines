@@ -394,8 +394,8 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|value|String|true|maxlength: 65535||
-|imageType|Common.ImageType|true|||
+|value|String|true|maxlength: 65535|The path to the dynamic image stored on HU or the static binary image itself.|
+|imageType|Common.ImageType|true|-|Describes, whether it is a static or dynamic image.|
 
 ### MyKey
 
