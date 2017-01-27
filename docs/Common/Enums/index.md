@@ -290,11 +290,11 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|COUNTUP|0||
-|COUNTDOWN|1||
-|PAUSE|2||
-|RESUME|3||
-|CLEAR|4||
+|COUNTUP|0|Starts the media clock timer counting upwards, as in time elapsed.|
+|COUNTDOWN|1|Starts the media clock timer counting downwards, as in time remaining.|
+|PAUSE|2|Pauses the media clock timer|
+|RESUME|3|Resume the media clock timer|
+|CLEAR|4|Clears the media clock timer (previously done through Show->mediaClock)|
 
 ### DeviceLevelStatus
 
