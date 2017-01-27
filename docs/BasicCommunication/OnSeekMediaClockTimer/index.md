@@ -38,9 +38,32 @@ SDL must transfer _OnSeekMediaClockTimer_ notification from HMI to mobile app **
 This RPC has no additional parameter requirements.
 
 ### Example Request
-```json
+```
+{
+            "params": {
+                        "seekTime": {
+                                   "minutes": 1,
+                                   "seconds": 33,
+                                   "hours": 0
+                        },
+                        "appID": 753022517
+            },
+            "method": "UI.OnSeekMediaClockTimer",
+            "jsonrpc": "2.0"
+}
 ```
 
 ### Example Response
+```
+{
+            seekTime={
+                        hours=0,
+                        minutes=1,
+                        seconds=33
+            }
+}
+```
+
 
 ### Sequence Diagrams
+![_OnSeekMediaClockTimer_ notification](https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/new_param_setmediaclocktimer/docs/BasicCommunication/OnSeekMediaClockTimer/assets/OnSeekMediaClockTimer.png)
