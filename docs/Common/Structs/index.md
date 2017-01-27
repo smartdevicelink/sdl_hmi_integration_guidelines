@@ -386,9 +386,9 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|hours|Integer|true|minvalue: 0<br>maxvalue: 59||
-|minutes|Integer|true|minvalue: 0<br>maxvalue: 59||
-|seconds|Integer|true|minvalue: 0<br>maxvalue: 59||
+|hours|Integer|true|minvalue: 0<br>maxvalue: 59|The hour of the media clock.Some units only support a max of 19 hours. If out of range, it should be rejected.|
+|minutes|Integer|true|minvalue: 0<br>maxvalue: 59|-|
+|seconds|Integer|true|minvalue: 0<br>maxvalue: 59|-|
 
 ### Image
 
