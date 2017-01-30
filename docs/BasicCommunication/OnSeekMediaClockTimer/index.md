@@ -7,17 +7,18 @@
   ### Behavior
  A notification will be provided if the user touches (or seeks) to a particular position on the HMI mediaclock timer. 
  The notification will contain a starttime with the position the user has seeked to.
-    
-1. If HMI sends to SDL _OnSeekMediaClockTimer_ **valid** and **NOT allowed** by PT notification, _**SDL must**_:   
-   - log corresponding error internally;
-   - ignore this _OnSeekMediaClockTimer_ notification.   
-_**SDL must NOT**_: transfer _OnSeekMediaClockTimer_ notification from HMI to mobile application. 
+   
+   _**Note:**_   
+_**SDL must**_:   
 
-2. If HMI sends to SDL _OnSeekMediaClockTimer_ **valid** and **allowed** by PT notification, _**SDL must**_:   
-   - transfer _OnSeekMediaClockTimer_ notification from HMI to mobile application.
-
-_**Note:**_
-SDL must transfer _OnSeekMediaClockTimer_ notification from HMI to mobile app **independently** on value of "enableSeek"
+1) if HMI sends to SDL _OnSeekMediaClockTimer_ **valid** and **NOT allowed** by Local Policy Table notification:   
+     - log corresponding error internally;   
+     - ignore this _OnSeekMediaClockTimer_ notification;   
+   _**SDL must NOT**_: transfer _OnSeekMediaClockTimer_ notification from HMI to mobile application.   
+   
+2) if HMI sends to SDL _OnSeekMediaClockTimer_ **valid** and **allowed** by Local Policy Table notification:   
+     - transfer _OnSeekMediaClockTimer_ notification from HMI to mobile application.   
+3) transfer _OnSeekMediaClockTimer_ notification from HMI to mobile app **independently** on value of "enableSeek"
 (true or false) parameter at _SetMediaClockTimer_request_.
 
 ### Request
