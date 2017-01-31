@@ -23,14 +23,19 @@ The default icon must be set to the button, when the media application:
    
 The request may arrive in both cases when the application is active or in background on HMI (depends on Policy Table permissions applicable to mobile application request, by default allowed to operate in all HMI levels except of NONE).
 
+_Note:_
+Due to _SetAudioStreamingIndicator_ is disallowed by User, HMI must be able to direct user to the mobile applications settings menu to change app permissions (ONLY for EXTERNAL_PROPRIETARY Policy flag ON). 
+
 ### Request
 #### Behavior
 
 The icon of the Play/Pause button shall be modifiable by the media application by sending a RPC Request called _audioStreamingIndicator_.
 
 _**Note:**_    
-_SDL must transfer _SetAudioStreamingIndicator_request_ from mobile application to HMI in case no any failures._   
-_SDL must transfer HMI's response to mobile application._ 
+_SDL must transfer:_   
+
+   - _SetAudioStreamingIndicator_request from mobile application to HMI in case no any failures;_   
+   - _HMI's response (\<resultCode>) to mobile application._ 
 
 #### Parameters
 
@@ -45,6 +50,9 @@ _SetAudioStreamingIndicator_Response_ must return:
     - SUCCESS when the Play/Pause button is set to the desired icon;   
     - IGNORED when the Play/Pause button was already set to the desired icon;   
     - DISALLOWED when the RPC is used in an invalid HMI level.   
+
+_**Note:**_
+_In case HMI does NOT respond during \<DefaultTimeout>, SDL must respond "GENERIC_ERROR, success:false"_.
 
 #### Parameters
 
