@@ -29,7 +29,7 @@ Due to _SetAudioStreamingIndicator_ is disallowed by User, HMI must be able to d
 ### Request
 #### Behavior
 
-The icon of the Play/Pause button shall be modifiable by the media application by sending a RPC Request called _audioStreamingIndicator_.
+The icon of the Play/Pause button shall be modifiable by the media application by sending a RPC Request is called _SetAudioStreamingIndicator_.
 
 _**Note:**_    
 _SDL must transfer:_   
@@ -49,10 +49,11 @@ _SDL must transfer:_
 _SetAudioStreamingIndicator_Response_ must return:   
     - SUCCESS when the Play/Pause button is set to the desired icon;   
     - IGNORED when the Play/Pause button was already set to the desired icon;   
-    - DISALLOWED when the RPC is used in an invalid HMI level.   
-
+    - DISALLOWED when the RPC is used in an invalid HMI level;    
+    - and other applicable resultCodes.   
+    
 _**Note:**_
-_In case HMI does NOT respond during \<DefaultTimeout>, SDL must respond "GENERIC_ERROR, success:false"_.
+_In case HMI does NOT respond during \<DefaultTimeout>, SDL must respond "GENERIC_ERROR, success:false"_ to mobile application.
 
 #### Parameters
 
