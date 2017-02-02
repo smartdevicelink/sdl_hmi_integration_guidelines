@@ -550,6 +550,14 @@
 |STATIC|0||
 |DYNAMIC|1||
 
+### AudioStreamingIndicator
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|PLAY_PAUSE|0|Indicates to use the Play/Pause icon.|
+|PLAY|1|Indicates to use the Play only icon.|
+|PAUSE|2|Indicates to use the Pause only icon."
+
 ### IgnitionStableStatus
 
 |Name|Value|Description|
