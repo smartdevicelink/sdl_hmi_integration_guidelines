@@ -38,11 +38,13 @@ c) SDL  uses OnAppPermissionConsent value (ON/OFF) received from HMI through ign
 
 ### Sequence Diagrams
 |||
-OnAppPermissionConsent (User answers to prompt about app's permisstions consent)
-![OnAppPermissionConsent](./assets/OnAppPermissionConsent.png)
+
+OnAppPermissionConsent (User answers to prompt about app's permisstions consent)   
+![OnAppPermissionConsent](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/SDL/OnAppPermissionConsent/assets/OnAppPermissionConsent.png)
+
 |||
 OnAppPermissionConsent (id<->name dependency)
-![OnAppPermissionConsent](./assets/OnAppPermissionConsent2.png)
+![OnAppPermissionConsent](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/SDL/OnAppPermissionConsent/assets/OnAppPermissionConsent2.png)
 |||
 
 #### JSON Example Notification
