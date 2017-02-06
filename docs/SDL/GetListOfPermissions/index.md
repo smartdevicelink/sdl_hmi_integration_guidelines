@@ -50,10 +50,14 @@ d) The resulting allowance of functional grouping is informed by parameter “al
 GetListOfPermissions
 ![GetListOfPermissions](./assets/GetListOfPermissions.jpg)
 |||
-|||
 GetListOfPermissions without AppId
 ![GetListOfPermissions](./assets/GetListOfPermissionsNoId.jpg)
+||| 
+GetListOfPermissions provide  External UCS Status to HMI
+![GetListOfPermissions](./assets/GetListOfPermissionsInformingHMI.png)
 |||
+Possible Layout - ExternalConsentStatus  
+![GetListOfPermissions](./assets/PossibleLayoutExternalConsentStatus.png)
 
 ### Example Request
 
