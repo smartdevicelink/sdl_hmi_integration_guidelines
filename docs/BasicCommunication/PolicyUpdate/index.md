@@ -19,10 +19,10 @@ _**HMI must:**_
 * Provide the path defined by ``file`` parameter in the next ``BC.OnSystemRequest`` that SDL will forward to mobile application
 * Recognize the PTU status notifications of ``SDL.OnStatusUpdate`` from SDL and display them in the appropriate UI menu
 
-_**Note:**_
+_**Note:**_   
 
 1. ``BC.PolicyUpdate`` dependencies:
-   * SDL sends ``BC.PolicyUpdate`` _only in case_ it's built with ``"-DEXTENDED_POLICY: ON"`` flag. _Otherwise_ SDL handles the entire PTU flow by itself.
+   * SDL sends ``BC.PolicyUpdate`` _only in case_ it's built with ``"-DEXTENDED_POLICY: ON"`` and ``"-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY"`` flag. _Otherwise_ SDL handles the entire PTU flow by itself.
    * If HMI fails to respond ``BC.PolicyUpdate`` or responds with error, PTU sequence will _not_ be continued.  
 2. Triggers for sending ``BC.PolicyUpdate`` (whichever comes first):
    * Days since previous successful PTU (``"exchange_after_x_days"`` value in local PolicyTable (PT));
@@ -34,6 +34,7 @@ _**Note:**_
    * ``file`` - is the path to the Snapshot of local PolicyTable (Snapshot PT final destination is Policies Server)
    * ``timeout`` - value taken from ``"timeout_after_x_seconds"`` field of local PT
    * ``retry`` - array of values from ``"seconds_between_retries"`` field of local PT. SDL handles the PTU retry sequence (re-requesting update if fails to receive during timeout) by itself.
+4. When SDL  is built with EXTERNAL_PROPRIETARY flow, SDL _PoliciesManager_ must change the status to “UPDATING” and notify HMI with OnStatusUpdate("UPDATING") right after SnapshotPT is sent out to to mobile app via OnSystemRequest() RPC.   
 
 #### Parameters
 
@@ -105,7 +106,6 @@ This RPC has no additional parameter requirements
 
 _EXTERNAL proprietary_ Policy Table Update Flow
 ![EXTERNAL proprietary](./assets/diagram_PolicyUpdate_external_proprietary.png)   
-
 
 
 BC.PolicyUpdate in _Proprietary_ Policy Table Update Flow
