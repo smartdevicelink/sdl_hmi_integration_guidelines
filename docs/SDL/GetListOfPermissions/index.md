@@ -36,7 +36,7 @@ d) The resulting allowance of functional grouping is informed by parameter “al
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|appID|Integer|false||
+|appID|Integer|false|If no app specified list of permissions for all apps|
 
 ### Response
 
