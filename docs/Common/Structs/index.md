@@ -417,4 +417,4 @@
 |:---|:---|:--------|:---------|:----------|
 |entityType|Integer|true|minvalue: 0<br>maxvalue: 128|The entityType which status is informed by "status" param.|
 |entityID|Integer|true|minvalue: 0<br>maxvalue: 128|The corresponding ID of entityType which status is informed by "status" param.|
-|status|Common.EntityStatus|true|-|Status of External User Consent Settings entity: "ON" or "OFF"|
+|status|[Common.EntityStatus](https://github.com/KhrystynaDubovyk/sdl_hmi_integration_guidelines/blob/user_consent_in_terms_of_policies/docs/Common/Enums/index.md#entitystatus)|true|-|Status of External User Consent Settings entity: "ON" or "OFF"|
