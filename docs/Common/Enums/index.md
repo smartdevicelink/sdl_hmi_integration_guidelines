@@ -808,8 +808,3 @@
 |ON|||
 |OFF||| 
 
-### ConsentSource
-|Name|Value|Description|
-|:---|:----|:----------|
-|GUI|||
-|VUI|||
