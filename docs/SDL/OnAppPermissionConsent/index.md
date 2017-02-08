@@ -32,9 +32,9 @@ c) SDL  uses OnAppPermissionConsent value (ON/OFF) received from HMI through ign
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |appID|Integer|false||
-|consentedFunctions|[Common.PermissionItem](../../common/structs/#permissionitem)|true|array: true<br>minsize: 1<br>maxsize: 100|
-|ExternalConsentStatus|[Common.ExternalConsentStatus](../../common/structs/#externalconsentstatus)|false|array: true <br>minsize: 1<br>maxsize: 100
-|source|[Common.ConsentSource](../../common/enums/#consentsource)|true|
+|consentedFunctions|[Common.PermissionItem](https://github.com/KhrystynaDubovyk/sdl_hmi_integration_guidelines/blob/user_consent_in_terms_of_policies/docs/Common/Structs/index.md#permissionitem)|true|array: true<br>minsize: 1<br>maxsize: 100|
+|ExternalConsentStatus|[Common.ExternalConsentStatus](ExternalConsentStatus)|false|array: true <br>minsize: 1<br>maxsize: 100
+|source|[Common.ConsentSource](https://github.com/KhrystynaDubovyk/sdl_hmi_integration_guidelines/blob/user_consent_in_terms_of_policies/docs/Common/Enums/index.md#consentsource)|true|
 
 ### Sequence Diagrams
 |||
