@@ -11,7 +11,10 @@ Purpose
 
 Notification from SDL to HMI occurs when application permissions were changed. If no permission specified means that application was dissallowed and has to be unregistered.
 
-_**Note:**_ SDL sends the list of RequestTypes allowed by Policies via _OnAppPermissionChanged_ API. In case HMI will use some not allowed by PolicyTable, SDL will ignore all notifications from HMI which contain prohibited RequestTypes values (e.g. sent via _OnSystemRequest_).
+_**Note:**_    
+
+   - SDL sends the list of RequestTypes allowed by Policies via _OnAppPermissionChanged_ API. In case HMI will use some not allowed by PolicyTable, SDL will ignore all notifications from HMI which contain prohibited RequestTypes values (e.g. sent via _OnSystemRequest_).
+   - SDL PoliciesManager must send _OnAppPermissionChanged_ (appRevoked: true, appID) and BC.ActivateApp (NONE) to HMI, in case the `<appID>` application is currently registered and in any HMILevel and in result of PTU `<appID>` gets "null" policies. 
 
 ### Notification
 
