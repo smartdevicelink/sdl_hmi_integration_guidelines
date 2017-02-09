@@ -1,17 +1,54 @@
 ## OnAllowSDLFunctionality
+Type : Notification
 
+Sender : HMI
+
+Purpose : Inform about allowing SDL functionality
 
 ### Notification
+Notifies about user/HMI allowing SDL functionality or disallowing access to all mobile apps on the specified device.
+
+**HMI must:**  
+Send `OnAllowSDLFuntionality` notification to SDL as a result of user’s choice about device data consent via pop-up dialog or user’s settings change in Settings Menu (if applicable).
+
+_**Note:**_   
+
+1. SDL ignores all invalid notifications which come from HMI (invalid JSON, invalid data types/bounds etc).   
+2. In case SDL PoliciesManager receives _SDL.OnAllowSDLFunctionality_ with _allowed=false_ and without _device_ param from HMI, PoliciesManager must record all of currently registered devices as NOT consented in Local PT.   
+3. In case PoliciesManager receives _SDL.OnAllowSDLFunctionality_ with _allowed=true_ and without _device_ param from HMI, PoliciesManager must:   
+   - record all of currently registered devices as consented in Local PT;   
+   - send _BC.ActivateApp_(params, level: ”default_hmi”-value-from-assigned-policies) to HMI (even if this “default_hmi” value is NONE or BACKGROUND).   
+   - notify mobile application via _OnHMIStatus_(params, level: ”default_hmi”-value-from-assigned-policies).   
+4. In case PoliciesManager receives _SDL.OnAllowSDLFunctionality_ with _allowed=false_ and with _device_ param, PoliciesManager must record the named device (_device_ param) as NOT consented in Local PT ("user_consent_records" -> _device_ sub-section) and send _BC.ActivateApp_ request with _level_ param of the value from 'default_hmi' key of 'pre-DataConsent'section of Local PT to HMI.   
+5. In case PoliciesManager receives _SDL.OnAllowSDLFunctionality_ with _allowed=true_ and with _device_ param from HMI, PoliciesManager must record the named device (_device_ param) as consented in Local PT ("device_data" section \<device_id> subsection "user_consent_records" -> "device" sub-section).
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
-|device|[Common.DeviceInfo](../../common/structs/#deviceinfo)|false||
-|allowed|Boolean|true||
-|source|[Common.ConsentSource](../../common/enums/#consentsource)|true||
+|device|[Common.DeviceInfo]|false|If no device is specified permission counts for SDL functionality in general.|
+|allowed|Boolean|true|Must be true if allowed|
+|source|[Common.ConsentSource]|true|-|
+
+[Common.DeviceInfo]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#deviceinfo
+[Common.ConsentSource]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#consentsource
 
 #### JSON Example Notification
-```json
+```
+{
+	"jsonrpc" : "2.0",
+	"method" : "SDL.OnAllowSDLFunctionality",
+	"params" :  
+	{
+		"deviceInfo": 
+		{
+				"name" : “Mary`s Phone”,
+				"id" : 8
+		}
+
+		“allowed” : true,
+		“source” :”GUI”
+	}
+}
 
 ```
