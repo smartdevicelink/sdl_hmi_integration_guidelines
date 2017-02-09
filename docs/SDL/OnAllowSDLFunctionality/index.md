@@ -33,6 +33,20 @@ _**Note:**_
 [Common.DeviceInfo]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#deviceinfo
 [Common.ConsentSource]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#consentsource
 
+
+### Sequence Diagrams
+
+Preconditions:   
+a) Device is connected to the HU.   
+b) App_1 is running on this device and is registered with SDL.   
+c) App_1 presents in the list of registered apps on HMI.   
+
+1. The User does NOT consent the device.   
+![OnAllowSDLFunctionality] (https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/PTU_external_proprietary/docs/SDL/OnAllowSDLFunctionality/assets/User%20does%20not%20consent%20the%20device1.png)
+
+2. The User consents the device.
+![OnAllowSDLFunctionality](https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/PTU_external_proprietary/docs/SDL/OnAllowSDLFunctionality/assets/User%20consents%20the%20device2.png)
+
 #### JSON Example Notification
 ```
 {
