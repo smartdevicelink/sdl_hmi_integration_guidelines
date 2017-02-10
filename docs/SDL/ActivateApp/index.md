@@ -46,11 +46,15 @@ _**SDL PoliciesManager must**_:
 |device|[Common.DeviceInfo]|false||
 |isPermissionsConsentNeeded|Boolean|true||
 |isAppPermissionsRevoked|Boolean|true||
-|appRevokedPermissions|[Common.PermissionItem](../../common/structs/#permissionitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|appRevokedPermissions|[Common.PermissionItem]|false|array: true<br>minsize: 1<br>maxsize: 100|
 |isAppRevoked|Boolean|true||
-|priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
+|priority|[Common.AppPriority]|false||
 
 [Common.DeviceInfo]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#deviceinfo
+
+[Common.PermissionItem]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#permissionitem
+
+[Common.AppPriority]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#apppriority
 
 ### Sequence Diagrams
 
