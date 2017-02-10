@@ -32,7 +32,7 @@ This RPC has no additional parameter requirements.
 
 |Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
-|result|Common.UpdateResult|true|Specify result: no update needed, update was successful/unsuccessful, etc.|
+|result|[Common.UpdateResult]|true|Specify result: no update needed, update was successful/unsuccessful, etc.|
 
 [Common.UpdateResult]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#updateresult
 
