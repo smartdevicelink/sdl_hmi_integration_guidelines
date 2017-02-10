@@ -13,7 +13,7 @@ Purpose
 
 !!! must
 
-For Proprietary PTU flow:
+For Proprietary PTU flow:  
 1. Send `SDL.GetURLS` after SDL-initiated  [BC.PolicyUpdate](../../BasicCommunication/PolicyUpdate/index.md#PolicyUpdate) with service type  **7**
 * Use the received URL(s) in the next  [BC.OnSystemRequest](../../BasicCommunication/OnSystemRequest/index.md#OnSystemRequest)
 
@@ -47,8 +47,8 @@ Request the URL(s) for any known service type that exists in Local PT at any tim
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|urls|[Common.ServiceInfo](../../common/structs/#serviceinfo)|false|array: true<br>minsize: 1<br>maxsize: 100|
-
+|urls|[Common.ServiceInfo]|false|array: true<br>minsize: 1<br>maxsize: 100|
+[Common.ServiceInfo]: https://github.com/KhrystynaDubovyk/sdl_hmi_integration_guidelines/blob/dextended_policy_proprietary/docs/Common/Structs/index.md#serviceinfo 
 ### Example Request
 
 ```json
