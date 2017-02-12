@@ -10,13 +10,13 @@ Purpose
 
 ### Notification
 
-!!! must
+HMI must
 
 Send `SDL.OnReceivedPolicyUpdate` notification to SDL after HMI finalized processing the updated Policy Table delivered via `BC.SystemRequest`(for example, after decrypting it _in case_ and by the scheme required by Policies Server)
 
 !!!
 
-!!! note
+**Note**
 
 1. `SDL.OnReceivedPolicyUpdate` dependencies:  
    * SDL expects `SDL.OnReceivedPolicyUpdate` _only in case_ it's built with ``"-DEXTENDED_POLICY: ON"`` flag. _Otherwise_ SDL handles the entire PTU flow by itself.
