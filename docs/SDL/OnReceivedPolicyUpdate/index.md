@@ -22,9 +22,9 @@ _**Note:**_
    - SDL will not use Updated PT until notified by HMI.   
    
 2. After getting _OnReceivedPolicyUpdate (policyFile)_ from HMI, _SDL must_ stop timeout started by _OnSystemRequest_ and validate the Policy Table Update (policyFile) of optional, required, or omitted:   
-    - validation must reject a policy table update if it include fields with a status of ‘omitted.’
-    - validation must reject a policy table update if it does not include fields with a status of ‘required’.   
-3. In case section with required status "optional/ommited" is ommited in Updated PT, and a field of this section is marked as required, the validation of the mentioned field is not "required" (i.e. policy table must be considered as valid).
+    - validation must reject policy table updates if it include fields with a status of ‘omitted.’
+    - validation must reject policy table update if it does not include fields with a status of ‘required’.   
+3. In case section with required status "optional/omitted" is omitted in Updated PT, and field of this section is marked as required, the validation of the mentioned field is not "required" (i.e. policy table must be considered as valid).
 
 #### Parameters
 
