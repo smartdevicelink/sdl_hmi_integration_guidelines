@@ -8,36 +8,37 @@ Sender
 Purpose
 : Inform HMI about the Policy Table Update (PTU) mechanism is triggered on SDL
 
+In case SDL is built with **DEXTENDED_POLICY: HTTP" flag** SDL supports PolicyTableUpdate flow **without HMI-related logic**. 
+
 ### Request
 
 ``BC.PolicyUpdate`` represents SDL-generated request to start the PTU sequence.
 
-!!! must
+!!! SDL must
 
-1. Encrypt the Snapshot PT (path from ``file`` parameter) _in case_ and by the scheme required by Policies Server
-* Request Policies Server url via the next ``SDL.GetURLs`` from SDL
-* Provide the path defined by ``file`` parameter in the next ``BC.OnSystemRequest`` that SDL will forward to mobile application
-* Recognize the PTU status notifications of ``SDL.OnStatusUpdate`` from SDL and display them in the appropriate UI menu
-
-!!!
+* Send SDL.OnStatusUpdate(UPDATE_NEEDED) to HMI.
+* Encrypt the PT Snapshot copying the Local Policy Table into Memory and remove "messages" sub-section from "consumer_friendly_messages" section.
+*  Store PT snapshot in SDL memory.
+*  Sends PT Snapshot to a random app as binary data. 
+*  Define the URL(s) the PTS will be sent to. Policies manager must refer PTS "endpoints" section, key "0x07" for the appropriate `<app id>` which was chosen for PTS transferring.
+* SDL defines the timeout to wait a response on PTU as a value of PTS "module_config" section, key `<timeout_after_x_seconds>`.
+* Send PTU status notifications on ``SDL.OnStatusUpdate`` to HMI.
 
 !!! note
 
 1. ``BC.PolicyUpdate`` dependencies:
-   * SDL sends ``BC.PolicyUpdate`` _only in case_ it's built with ``"-DEXTENDED_POLICY: ON"`` flag. _Otherwise_ SDL handles the entire PTU flow by itself.
-   * If HMI fails to respond ``BC.PolicyUpdate`` or responds with error, PTU sequence will _not_ be continued.  
+   * SDL sends ``BC.PolicyUpdate`` 
 2. Triggers for sending ``BC.PolicyUpdate`` (whichever comes first):
    * Days since previous successful PTU (``"exchange_after_x_days"`` value in local PolicyTable (PT))
    * Kilometers since previous successful PTU (``"exchange_after_x_kilometers"`` value in local PT)
    * Ignition cycles since previous successful PTU (``"exchange_after_x_ignition_cycles"`` value in local PT)
    * Expired module's certificate (stored in ``"certificate"``field of local PT)
    * New application (that is, not-yet existing in local PT) registration
+   * No certificate in PolicyTable (stored at `"module_config"` section at local PT)
 3. Parameters values origin:
    * ``file`` - is the path to the Snapshot of local PolicyTable (Snapshot PT final destination is Policies Server)
    * ``timeout`` - value taken from ``"timeout_after_x_seconds"`` field of local PT
    * ``retry`` - array of values from ``"seconds_between_retries"`` field of local PT. SDL handles the PTU retry sequence (re-requesting update if fails to receive during timeout) by itself.
-
-!!!
 
 #### Parameters
 
@@ -47,13 +48,6 @@ Purpose
 |timeout|Integer|true|minvalue: 0<br>maxvalue: 65535|
 |retry|Integer|true|array: true<br>minsize: 1<br>maxsize: 5<br>minvalue: 0<br>maxvalue: 65535|
 
-### Response
-
-!!! must
-
-1. Respond with ``SUCCESS`` resultCode to continue the PTU flow.
-
-!!!
 
 #### Parameters
 
@@ -111,6 +105,6 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
-BC.PolicyUpdate in "Proprietary" Policy Table Update Flow
-![Proprietary PTU](./assets/PolicyUpdate_in_Proprietary_PTU_flow.png)
+BC.PolicyUpdate in "HTTP" Policy Table Update Flow
+![Proprietary PTU](./assets/PolicyUpdate_in_HTTP_PTU_flow.png)
 |||
