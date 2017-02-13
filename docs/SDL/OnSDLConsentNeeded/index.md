@@ -8,7 +8,7 @@ Sender
 Purpose
 : Send from SDL to HMI to notify that data consent is needed for device
 
-The notification is applicable only for the case when the device is not consented by the user and  the user requests Policy Table update from HMI.
+The notification is applicable only for the case when the device is consented by the user and the user requests Policy Table update from HMI.
 
 _**HMI must:**_ 
 1) Initiate the sequence of device data consent on getting OnSDLConsentNeeded.   
