@@ -14,17 +14,17 @@ In case SDL is built with **DEXTENDED_POLICY: HTTP" flag** SDL supports PolicyTa
 
 ``BC.PolicyUpdate`` represents SDL-generated request to start the PTU sequence.
 
-!!! SDL must
+**SDL must**
 
 * Send SDL.OnStatusUpdate(UPDATE_NEEDED) to HMI.
 * Encrypt the PT Snapshot copying the Local Policy Table into Memory and remove "messages" sub-section from "consumer_friendly_messages" section.
 *  Store PT snapshot in SDL memory.
-*  Sends PT Snapshot to a random app as binary data. 
+*  Send PT Snapshot to a random app as binary data. 
 *  Define the URL(s) the PTS will be sent to. Policies manager must refer PTS "endpoints" section, key "0x07" for the appropriate `<app id>` which was chosen for PTS transferring.
 * SDL defines the timeout to wait a response on PTU as a value of PTS "module_config" section, key `<timeout_after_x_seconds>`.
 * Send PTU status notifications on ``SDL.OnStatusUpdate`` to HMI.
 
-!!! note
+_Note_
 
 1. ``BC.PolicyUpdate`` dependencies:
    * SDL sends ``BC.PolicyUpdate`` 
