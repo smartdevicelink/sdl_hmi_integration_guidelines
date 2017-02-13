@@ -106,5 +106,5 @@ This RPC has no additional parameter requirements
 
 |||
 BC.PolicyUpdate in "HTTP" Policy Table Update Flow
-![Proprietary PTU](./assets/PolicyUpdate_in_HTTP_PTU_flow.png)
+![HTTP PTU](./assets/PolicyUpdate_in_HTTP_PTU_flow.png.png)
 |||
