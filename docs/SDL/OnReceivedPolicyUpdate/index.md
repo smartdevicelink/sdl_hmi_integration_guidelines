@@ -19,7 +19,7 @@ Send `SDL.OnReceivedPolicyUpdate` notification to SDL after HMI finalized proces
 **Note**
 
 1. `SDL.OnReceivedPolicyUpdate` dependencies:  
-   * SDL expects `SDL.OnReceivedPolicyUpdate` _only in case_ it's built with ``"-DEXTENDED_POLICY: ON"`` flag. _Otherwise_ SDL handles the entire PTU flow by itself.
+   * SDL expects `SDL.OnReceivedPolicyUpdate` _only in case_ it's built with "-DEXTENDED_POLICY: PROPRIETARY" flag  flag. _Otherwise_ SDL handles the entire PTU flow by itself.
    * SDL will not use Updated PT until notified by HMI
 
 !!!
@@ -45,7 +45,5 @@ Send `SDL.OnReceivedPolicyUpdate` notification to SDL after HMI finalized proces
 
 ### Sequence Diagrams
 
-|||
 SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
 ![Proprietary PTU](./assets/OnReceivedPolicyUpdate_in_Proprietary_PTU_flow.png)
-|||
