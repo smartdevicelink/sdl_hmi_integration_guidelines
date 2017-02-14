@@ -18,13 +18,13 @@ HMI must:
 |language|[Common.Language](https://github.com/KhrystynaDubovyk/sdl_hmi_integration_guidelines/blob/user_consent_in_terms_of_policies/docs/Common/Enums/index.md#language)|false||
 
 **MessageCodes**   
-Message codes specify appropriate user messages which notifies the user about some events/conditions on HMI. Messages and message codes are coming from Policy Table and must be used on HMI in different information pop-ups according to HMI use-cases scenarios.
+Message codes specify appropriate user messages which notify the user about some events/conditions on HMI. Messages and message codes are coming from Policy Table and must be used on HMI in different information pop-ups according to HMI use-cases scenarios.
 
 |MessageCode|MessageText|
 |:---|:---------|
 |AppPermissions|`appName` is requesting the use of the following vehicle information and permissions `functionalGroupLabels`. Grant requested permission(s)|
-|AppPermissionsHelp|`appName` is requesting the following vehicle information and permissions: `functionalGroupLabels`. You can change these permissions and hear detailed descriptions in the mobile apps settings menu. Please press yes to grant permissions or no to deny.|
-|AppPermissionsRevoked|App authorizations have changed. `appName` can no longer access `functionalGroupLabels`. Please you have the most recent app version installed on your mobile device.|
+|AppPermissionsHelp|`appName` is requesting the following vehicle information and permissions: `functionalGroupLabels`. You can change these permissions and hear detailed descriptions in the mobile apps settings menu. Please press 'yes' to grant permissions or 'no' to deny.|
+|AppPermissionsRevoked|App authorizations have changed. `appName` can no longer access `functionalGroupLabels`. Please, make sure you have the most recent app version installed on your mobile device.|
 |AppUnauthorized|This version of `appName` is not authorized and will not work with Applink. Please update to the latest version of `appName`.|
 |AppUnsupported|Your version of `appName` is not supported by SYNC.|
 |DataConsent|Would you like to enable Mobile Apps on SYNC? See your Owner Guide for more information.|
