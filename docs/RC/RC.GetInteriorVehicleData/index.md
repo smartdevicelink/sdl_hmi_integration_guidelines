@@ -49,7 +49,7 @@ _**Behavior**_:
   3.1. Implement additional checks and return the resultCodes described in "applicable result codes" table of Response.   
 
 
-### Request
+### Response
 
 _**Behavior**_:   
 The below table lists resultCodes that the vehicle may use to respond:
@@ -67,6 +67,8 @@ The below table lists resultCodes that the vehicle may use to respond:
 |:---------|:---|:--------|:----------|
 |moduleData|Common.ModuleData|true|The data from the requested module in the requested location.|
 |isSubscribed|Boolean|true|Is a conditional-mandatory parameter: must be returned in case "subscribe" parameter was present in the related request.<br>- if "true" - the "moduleDescription" from request is successfully subscribed and  the head unit will send onInteriorVehicleData notifications for the moduleDescription.<br>- if "false" - the "moduleDescription" from request is either unsubscribed or failed to subscribe.|
+
+### Sequence Diagrams
 
 A. RSDL transfers vehcile's successful response to the mobile application
 ![RSDL](./assets/3.RSDL_transfers_vehcile's_successful_response_to_the_mobile_application.png)  
