@@ -31,7 +31,7 @@ _Note_
    * Days since previous successful PTU (``"exchange_after_x_days"`` value in local PolicyTable (PT))
    * Kilometers since previous successful PTU (``"exchange_after_x_kilometers"`` value in local PT)
    * Ignition cycles since previous successful PTU (``"exchange_after_x_ignition_cycles"`` value in local PT)
-   * Expired module's certificate (stored in ``"certificate"``field of local PT). The current date is 24 hours prior to module's certificate expiration date:  
+   * 24 hours prior to module's certificate expiration date:  
    a. The triggers for checking the cert expiration status are:  
    ignition on  
    TLS handshake  
