@@ -17,10 +17,9 @@ In case SDL is built with **DEXTENDED_POLICY: HTTP" flag** SDL supports PolicyTa
 **SDL must**
 
 * Send SDL.OnStatusUpdate(UPDATE_NEEDED) to HMI.
-* Encrypt the PT Snapshot copying the Local Policy Table into Memory and remove "messages" sub-section from "consumer_friendly_messages" section.
-*  Store PT snapshot in SDL memory.
-*  Send PT Snapshot to a random app as binary data. 
-*  Define the URL(s) the PTS will be sent to. Policies manager must refer PTS "endpoints" section, key "0x07" for the appropriate `<app id>` which was chosen for PTS transferring.
+* Copy PT Snapshot from the Local Policy Table, store PT snapshot in SDL memory and remove "messages" sub-section from "consumer_friendly_messages" section.
+* Send PT Snapshot to a random app as binary data.
+*  Define the URL(s) the PTS will be sent to. Policies Manager must refer PTS "endpoints" section, key "0x07" for the appropriate `<app id>` which was chosen for PTS transferring.
 * SDL defines the timeout to wait a response on PTU as a value of PTS "module_config" section, key `<timeout_after_x_seconds>`.
 * Send PTU status notifications on ``SDL.OnStatusUpdate`` to HMI.
 
@@ -32,9 +31,13 @@ _Note_
    * Days since previous successful PTU (``"exchange_after_x_days"`` value in local PolicyTable (PT))
    * Kilometers since previous successful PTU (``"exchange_after_x_kilometers"`` value in local PT)
    * Ignition cycles since previous successful PTU (``"exchange_after_x_ignition_cycles"`` value in local PT)
-   * Expired module's certificate (stored in ``"certificate"``field of local PT)
+   * Expired module's certificate (stored in ``"certificate"``field of local PT). The current date is 24 hours prior to module's certificate expiration date:  
+   a. The triggers for checking the cert expiration status are:  
+   ignition on  
+   TLS handshake  
+   b. in case module's certificate in policies is expired or invalid, the TLS handshake will fail.
    * New application (that is, not-yet existing in local PT) registration
-   * No certificate in PolicyTable (stored at `"module_config"` section at local PT)
+   * PoliciesManager must check the stored status of PTUpdate upon every Ign_On and in case the status is **UPDATE_NEEDED** PoliciesManager must initiate the PTUpdate sequence right after the first app registers on SDL
 3. Parameters values origin:
    * ``file`` - is the path to the Snapshot of local PolicyTable (Snapshot PT final destination is Policies Server)
    * ``timeout`` - value taken from ``"timeout_after_x_seconds"`` field of local PT
