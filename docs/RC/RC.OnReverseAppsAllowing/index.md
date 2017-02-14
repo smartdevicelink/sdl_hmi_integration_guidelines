@@ -1,7 +1,7 @@
 ## RC.OnReverseAppsAllowing
 
 Type
-:	Function
+:	Notification
 
 Sender
 :	Vehicle
