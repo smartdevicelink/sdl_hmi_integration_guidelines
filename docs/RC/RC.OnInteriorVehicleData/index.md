@@ -1,6 +1,6 @@
 ## RC.OnInteriorVehicleData
 Type
-:	Function
+:	Notification
 
 Sender
 :	Vehicle
