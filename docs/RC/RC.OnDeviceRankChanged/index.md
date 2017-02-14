@@ -1,6 +1,6 @@
 ## RC.OnDeviceRankChanged
 Type
-:	Function
+:	Notification
 
 Sender
 :	Vehicle
