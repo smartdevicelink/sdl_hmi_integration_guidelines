@@ -411,3 +411,122 @@
 |imageTypeSupported|Common.FileType|false|array: true<br>minsize: 1<br>maxsize: 100||
 |imageResolution|Common.ImageResolution|false|||
 
+## SDL RC
+### InteriorZone 
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|col|Integer|true|minValue = 0<br>maxValue = 100|The value of column from "column-row-level" grid that defines the location.|
+|row|Integer|true|minValue = 0<br>maxValue = 100|The value of row from "column-row-level" grid that defines the location.|
+|level|Integer|true|minValue = 0<br>maxValue = 100|The value of level from "column-row-level" grid that defines the location.|
+|colspan|Integer|true|minValue = 0<br>maxValue = 100|Total number of columns in "column-row-level" grid that defines the location.|
+|rowspan|Integer|true|minValue = 0<br>maxValue = 100|Total number of rows in "column-row-level" grid that defines the location.|
+|levelspan|Integer|true|minValue = 0<br>maxValue = 100|Total number of levels in "column-row-level" grid that defines the location.|
+
+### ModuleDescription 
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|moduleZone|Common.InteriorZone|true|-|Defines the location where the module is available for controlling.|
+|moduleType|Common.ModuleType|true|-|Defines the module available for controlling.|
+
+### ModuleData 
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|moduleType|Common.ModuleType|true|-|Defines the module the data is provided for.|
+|moduleZone|Common.InteriorZone|true|-|Defines the zone the data is provided for.|
+|radioControlData|Common.RadioControlData|false|-|Must be provided in case the module is RADIO.|
+|climateControlData|Common.ClimateControlData|false|-|Must be provided in case the module is CLIMATE.|
+|seatsControlData|Common.SeatsControlData|false|-|Must be provided in case the module is SEATS.|
+|hmiControlData|Common.HMIControlData|false|-|Must be provided in case the module is HMI_SETTINGS.|
+|audioControlData|Common.AudioControlData|false|-|Must be provided in case the module is AUDIO.|
+
+
+### RadioControlData 
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|frequencyInteger|Integer|false|minValue = 0<br>maxValue = 1710	The integer part of frequency value (for 101.7 this value should be 101).|
+|frequencyFraction|Integer|false|minValue = 0<br>maxValue = 9|The fractional part of frequency value (for 101.7 is 7).|
+|band|Common.RadioBand|false|-|The band: AM, FM or XM.|
+|rdsData|Common.RdsData|false|-|RDS (Radio Data System) information. Read-only parameter.|
+|availableHDs|nteger|false|minValue = 1<br>maxValue = 3|Number of HD sub-channels if available. Read-only parameter.|
+|hdChannel|Integer|false|minValue = 1<br>maxValue = 3|Current HD sub-channel if available.|
+|signalStrength|Integer|false|minValue = 0<br>maxValue = 100|Current frequency signal strength. Read-only parameter.|
+|ignalChangeThreshold|Integer|false|minValue = 0<br>maxValue = 100|If the signal strength falls below the set value for this parameter, the radio will tune to an alternative frequency. Read-only parameter.|
+|radioEnable|Boolean|false|-|True if the radio is on, false is the radio is off. Read-only parameter.|
+|state|Common.RadioState|false|-|The radio state: acquiring, acquired, multi-cast. Read-only parameter.|
+
+### RdsData 
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|PS|String|false|minlength = 0<br>maxlength = 8|Program Service Name|
+|RT|String|false|minlength = 0<br>maxlength = 64|Radio Text|
+|CT|String|false|minlength = 24<br>maxlength = 24|The clock text in UTC format as YYYY-MM-DDThh:mm:ss.sTZD|
+|PI|String|false|minlength = 0<br>maxlength = 6|Program Identification - the call sign for the radio station|
+|PTY|Integer|false|minValue = 0<br>maxValue = 31|The program type - The region should be used to differentiate between EU and North America program types|
+|TP|Boolean|false|-|Traffic Program Identification - Identifies a station that offers traffic|
+|TA|Boolean|false|-|Traffic Announcement Identification - Indicates an ongoing traffic announcement|
+|REG|String|false|minlength = 0<br>maxlength = 255|Region|
+
+### ClimateControlData 
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|fanSpeed|Integer|false|minValue = 0<br>maxValue = 100|The speed of the fan.|
+|currentTemp|Temperature|false|-|The temperature currently set on the module. Read-only parameter.|
+|desiredTemp|Temperature|false|-|The temperature to be set on the module (must be used with SetInteriorVehicleData only).|
+|acEnable|Boolean|false|-|If "true" - air conditioning is ON.|
+|acMaxEnable|Boolean|false|-|If "true" - air conditioning is ON on the max level.|
+|circulateAirEnable|Boolean|false|-|If "true" - air circulation is ON.|
+|autoModeEnable|Boolean|false|-|If "true" - the climate system is in auto mode.|
+|defrostZone|Common.DefrostZone|false|-|Defines the defrost zone: front, rear or all.|
+|dualModeEnable|Boolean|false|-|If "true" - the dual mode in ON and driver's and passenger's zones can have separate climate settings.|
+
+### SeatsControlData 
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|cooledSeats|Boolean|false|-|Defines the mode of seats cooling being ON or OFF|
+|cooledSeatLevel|Integer|false|minValue = 0<br>maxValue = 100|The levels of seats cooling|
+|heatedSeat|Boolean|false|-|Defines the seats heeting being ON/OFF|
+|seatHorizontalPosition|Integer|false	minValue = 0<br>maxValue = 100|Seat horizontal pozition level|
+|seatVerticalPosition|Integer|false|minValue = 0<br>maxValue = 100|Seat vertical pozition level|
+|seatAnglePosition|Integer|false|minValue = 0<br>maxValue = 100|Seat angle position|
+|backTiltPosition|Integer|false|minValue = 0<br>maxValue = 100|If "true" - air circulation is ON.|
+|backLumbarPosition|LumbarPosition|false|-||	 
+|massageSeat|MassageSeatAction|false|-|Define the action of seat massage: START, STOP|
+|massageSeatZone|Common.MassageSeatZone|false|-|Defines the massage seat zone: LUMBAR, BOTTOM|
+|massageSeatLevel|Common.MassageSeatLevel|false|-|The level of massage seat|
+|massageEnabled|Boolean|false|-|Defines if massage is enabled or disabled|
+
+### AudioControlData 
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|source|AudioSource|false|minValue = 0<br>maxValue = 100|The speed of the fan.|
+|audioVolume|Integer|false|minValue = 0<br>maxValue = 100|The level of audio source volume|
+|equalizerSettings|EqualizerSettings|false|minsize="1"<br>maxsize="10"<br>mandatory="false"<br>array ="true"|Defines the list of supported channels (band) and their current/desired settings on HU
+
+### HMIControlData 
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|displayMode|DisplayMode|false|-|Display mode of the HMI display: DAY, NIGHT, AUTO|
+|temperatureUnit|TemperatureUnit|false|-|Temperature Unit to be applied for temperature measuring systems|
+|distanceUnit|DistanceUnit|false|-|Dispance Unit type to be applied for maps/tracking distances|
+
+### Temperature 
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|unit|TemperatureUnit|true|minlength = 0<br>maxlength = 8|Units the temperature is measured in: Fahrenheit or Celsius|
+|valueC|Float|false|minvalue = 14.0<br>maxvalue=30|Temperature Value in Celsius|
+|valueF|Float|false|minvalue = 60<br>maxvalue=90|Temperature Value in Farenheit|
+
+### EqualizerSettings
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|channel|String	|true|minlength = 1<br>maxlength = 500|Frequency name (e.i. "Treble" or "125 Hz")|
+|channelSettings|Integer|true|minvalue=0<br>maxvalue=100|The settings of the channel|
+
+### DeviceInfo
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|name|String|true|maxlength = 500|The name of the device connected.|
+|id|String|true||The ID of the device connected.|
+|transportType|Common.TransportType|false||The transport type the named-app's-device is connected over HU(BlueTooth, USB or WiFi). It must be provided in OnAppRegistered and in UpdateDeviceList|
+|isSDLAllowed|Boolean|false||Sent by SDL in UpdateDeviceList. ’true’ – if device is allowed for PolicyTable Exchange; ‘false’ – if device is NOT allowed for PolicyTable Exchange|
