@@ -28,7 +28,7 @@ Request the URL(s) for any known service type that exists in Local PT at any tim
 !!! note
 
 1. `SDL.GetURLS` dependencies:
-   * SDL responds to `SDL.GetURLS` _only in case_ it's built with ``"-DEXTENDED_POLICY: ON"`` flag.   
+   * SDL sends ``BC.PolicyUpdate`` _only in case_ it's built with "-DEXTENDED_POLICY: PROPRIETARY" flag or without flag. 
 * URLs storage in Policy Table: `"endpoints"` section ([example](https://github.com/smartdevicelink/sdl_core/blob/master/src/appMain/sdl_preloaded_pt.json#L16))
 * SDL chooses the applications for taking part in PTU among registered ones and provides `appID` + `url` pairs in response  
 * In case no applications are currently registered, SDL will return `url` only
