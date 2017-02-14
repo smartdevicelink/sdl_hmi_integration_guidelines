@@ -38,7 +38,7 @@ SDL.OnReceivedPolicyUpdate in EXTERNAL_PROPRIETARY flow
 ![Proprietary PTU](https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/PTU_external_proprietary/docs/SDL/OnReceivedPolicyUpdate/assets/SDL.OnReceivedPolicyUpdate%20in%20EXTERNAL_PROPRIETARY%20flow.jpg)
 
 SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
-![Proprietary PTU](./assets/OnReceivedPolicyUpdate_in_Proprietary_PTU_flow.png)
+![Proprietary PTU](./assets/Proprietary_PTU_flow_.png)
 
 #### JSON Example Notification
 ```json
