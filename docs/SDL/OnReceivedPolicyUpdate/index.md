@@ -18,19 +18,19 @@ _**HMI must:**_
 _**Note:**_   
 
 1. _SDL.OnReceivedPolicyUpdate_ dependencies:  
-   - SDL expects _SDL.OnReceivedPolicyUpdate_ _only in case_ it's built with `-DEXTENDED_POLICY: ON` and `-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY` flag. _Otherwise_ SDL handles the entire PTU flow by itself.
+   - SDL expects _SDL.OnReceivedPolicyUpdate_ _only in case_ it's built with `"-DEXTENDED_POLICY: PROPRIETARY" flag or without this flag` and `-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY` flag. _Otherwise_ SDL handles the entire PTU flow by itself.
    - SDL will not use Updated PT until notified by HMI.   
    
 2. After getting _OnReceivedPolicyUpdate (policyFile)_ from HMI, _SDL must_ stop timeout started by _OnSystemRequest_ and validate the Policy Table Update (policyFile) of optional, required, or omitted:   
-    - validation must reject policy table updates if it include fields with a status of ‘omitted.’
-    - validation must reject policy table update if it does not include fields with a status of ‘required’.   
+    - validation must reject Policy Table updates if it include fields with a status of ‘omitted.’
+    - validation must reject Policy Table update if it does not include fields with a status of ‘required’.   
 3. In case section with required status "optional/omitted" is omitted in Updated PT, and field of this section is marked as required, the validation of the mentioned field is not "required" (i.e. policy table must be considered as valid).
 
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|policyfile|String|true|minlength: 1<br>maxlength: 255|
+|policyFile|String|true|minlength: 1<br>maxlength: 255|
 
 ### Sequence Diagrams
 
