@@ -69,7 +69,7 @@ _**Changes**_
   
 _**Behavior**_
 
-i. _Application from driver's device registers_ - the vehicle must:   
+I. _Application from driver's device registers_ - the vehicle must:   
      1.	Know the device rank is driver's (see also [RC.OnDevcieRankChanged]).   
      2.	Mark each application registered from driver's device with "D - \<appName>" when displaying in the list of registered applications (all required information comes from _BasicCommunication.OnAppRegistered_).   
      3.	Send _SDL.ActivateApp_ to RSDL in case the driver activates such application through either UI or VR.   
@@ -97,11 +97,15 @@ II. _Application from passenger's device registers_ - the vehicle must:
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|application|[Common.HMIApplication](../../common/structs/#hmiapplication)|true||
-|ttsName|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|application|[Common.HMIApplication]|true||
+|ttsName|[Common.TTSChunk]|false|array: true<br>minsize: 1<br>maxsize: 100|
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40|
 |resumeVrGrammars|Boolean|false||
-|priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
+|priority|[Common.AppPriority]|false||
+
+[Common.HMIApplication]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#hmiapplication
+[Common.TTSChunk]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#ttschunk
+[Common.AppPriority]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#apppriority
 
 ### Sequence Diagrams
 |||
