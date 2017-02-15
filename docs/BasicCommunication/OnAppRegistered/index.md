@@ -70,7 +70,7 @@ _**Changes**_
 _**Behavior**_
 
 I. _Application from driver's device registers_ - the vehicle must:   
-     1.	Know the device rank is driver's (see also [RC.OnDevcieRankChanged]).   
+     1.	Know the device rank is driver's (see also [RC.OnDeviceRankChanged]).   
      2.	Mark each application registered from driver's device with "D - \<appName>" when displaying in the list of registered applications (all required information comes from _BasicCommunication.OnAppRegistered_).   
      3.	Send _SDL.ActivateApp_ to RSDL in case the driver activates such application through either UI or VR.   
      4.	Send _OnExitApplication(USER_EXIT)_ in case the driver decides to exit such application through either UI or VR.
@@ -79,7 +79,7 @@ I. _Application from driver's device registers_ - the vehicle must:
 
 
 II. _Application from passenger's device registers_ - the vehicle must:
-     1.	Know the device rank is passenger's (see also [RC.OnDevcieRankChanged]).   
+     1.	Know the device rank is passenger's (see also [RC.OnDeviceRankChanged]).   
      2.	Display _only applications in LIMITED_ level (meaning, only passenger's applications that received driver's permission to remotely control. RSDL notifies about changed HMILevel via _BasicCommunication.ActivateApp_("level"), see [6.2 ActivateApp of SDL Integration Guidelines]).   
      3.	In case displayed, mark each application registered from passenger's device with "P - \<appName>".   
      4.	Ignore passenger's application _VRSynonyms_ in case the identical driver's application is also registered.   
