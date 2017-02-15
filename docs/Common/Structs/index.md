@@ -339,10 +339,10 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|name|String|true|||
-|id|String|true|||
-|transportType|Common.TransportType|false|||
-|isSDLAllowed|Boolean|false|||
+|name|String|true|maxlength = 500|The name of the device connected.|
+|id|String|true||The ID of the device connected.|
+|transportType|Common.TransportType|false||The transport type the named-app's-device is connected over HU(BlueTooth, USB or WiFi). It must be provided in OnAppRegistered and in UpdateDeviceList|
+|isSDLAllowed|Boolean|false||Sent by SDL in UpdateDeviceList. ’true’ – if device is allowed for PolicyTable Exchange; ‘false’ – if device is NOT allowed for PolicyTable Exchange|
 
 ### SoftButton
 
@@ -435,19 +435,16 @@
 |moduleZone|Common.InteriorZone|true|-|Defines the zone the data is provided for.|
 |radioControlData|Common.RadioControlData|false|-|Must be provided in case the module is RADIO.|
 |climateControlData|Common.ClimateControlData|false|-|Must be provided in case the module is CLIMATE.|
-|seatsControlData|Common.SeatsControlData|false|-|Must be provided in case the module is SEATS.|
-|hmiControlData|Common.HMIControlData|false|-|Must be provided in case the module is HMI_SETTINGS.|
-|audioControlData|Common.AudioControlData|false|-|Must be provided in case the module is AUDIO.|
 
 
 ### RadioControlData 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|frequencyInteger|Integer|false|minValue = 0<br>maxValue = 1710	The integer part of frequency value (for 101.7 this value should be 101).|
+|frequencyInteger|Integer|false|minValue = 0<br>maxValue = 1710|The integer part of frequency value (for 101.7 this value should be 101).|
 |frequencyFraction|Integer|false|minValue = 0<br>maxValue = 9|The fractional part of frequency value (for 101.7 is 7).|
 |band|Common.RadioBand|false|-|The band: AM, FM or XM.|
 |rdsData|Common.RdsData|false|-|RDS (Radio Data System) information. Read-only parameter.|
-|availableHDs|nteger|false|minValue = 1<br>maxValue = 3|Number of HD sub-channels if available. Read-only parameter.|
+|availableHDs|Integer|false|minValue = 1<br>maxValue = 3|Number of HD sub-channels if available. Read-only parameter.|
 |hdChannel|Integer|false|minValue = 1<br>maxValue = 3|Current HD sub-channel if available.|
 |signalStrength|Integer|false|minValue = 0<br>maxValue = 100|Current frequency signal strength. Read-only parameter.|
 |ignalChangeThreshold|Integer|false|minValue = 0<br>maxValue = 100|If the signal strength falls below the set value for this parameter, the radio will tune to an alternative frequency. Read-only parameter.|
@@ -470,63 +467,12 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |fanSpeed|Integer|false|minValue = 0<br>maxValue = 100|The speed of the fan.|
-|currentTemp|Temperature|false|-|The temperature currently set on the module. Read-only parameter.|
-|desiredTemp|Temperature|false|-|The temperature to be set on the module (must be used with SetInteriorVehicleData only).|
+|currentTemp|Integer|false|-|The temperature currently set on the module. Read-only parameter.|
+|desiredTemp|Integer|false|-|The temperature to be set on the module (must be used with SetInteriorVehicleData only).|
+|temperatureUnit|Common.TemperatureUnit|false|-|Units the temperature is measured in: Kelvin, Fahrenheit or Celsius|
 |acEnable|Boolean|false|-|If "true" - air conditioning is ON.|
-|acMaxEnable|Boolean|false|-|If "true" - air conditioning is ON on the max level.|
 |circulateAirEnable|Boolean|false|-|If "true" - air circulation is ON.|
 |autoModeEnable|Boolean|false|-|If "true" - the climate system is in auto mode.|
 |defrostZone|Common.DefrostZone|false|-|Defines the defrost zone: front, rear or all.|
 |dualModeEnable|Boolean|false|-|If "true" - the dual mode in ON and driver's and passenger's zones can have separate climate settings.|
 
-### SeatsControlData 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|cooledSeats|Boolean|false|-|Defines the mode of seats cooling being ON or OFF|
-|cooledSeatLevel|Integer|false|minValue = 0<br>maxValue = 100|The levels of seats cooling|
-|heatedSeat|Boolean|false|-|Defines the seats heeting being ON/OFF|
-|seatHorizontalPosition|Integer|false	minValue = 0<br>maxValue = 100|Seat horizontal pozition level|
-|seatVerticalPosition|Integer|false|minValue = 0<br>maxValue = 100|Seat vertical pozition level|
-|seatAnglePosition|Integer|false|minValue = 0<br>maxValue = 100|Seat angle position|
-|backTiltPosition|Integer|false|minValue = 0<br>maxValue = 100|If "true" - air circulation is ON.|
-|backLumbarPosition|LumbarPosition|false|-||	 
-|massageSeat|MassageSeatAction|false|-|Define the action of seat massage: START, STOP|
-|massageSeatZone|Common.MassageSeatZone|false|-|Defines the massage seat zone: LUMBAR, BOTTOM|
-|massageSeatLevel|Common.MassageSeatLevel|false|-|The level of massage seat|
-|massageEnabled|Boolean|false|-|Defines if massage is enabled or disabled|
-
-### AudioControlData 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|source|AudioSource|false|minValue = 0<br>maxValue = 100|The speed of the fan.|
-|audioVolume|Integer|false|minValue = 0<br>maxValue = 100|The level of audio source volume|
-|equalizerSettings|EqualizerSettings|false|minsize="1"<br>maxsize="10"<br>mandatory="false"<br>array ="true"|Defines the list of supported channels (band) and their current/desired settings on HU
-
-### HMIControlData 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|displayMode|DisplayMode|false|-|Display mode of the HMI display: DAY, NIGHT, AUTO|
-|temperatureUnit|TemperatureUnit|false|-|Temperature Unit to be applied for temperature measuring systems|
-|distanceUnit|DistanceUnit|false|-|Dispance Unit type to be applied for maps/tracking distances|
-
-### Temperature 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|unit|TemperatureUnit|true|minlength = 0<br>maxlength = 8|Units the temperature is measured in: Fahrenheit or Celsius|
-|valueC|Float|false|minvalue = 14.0<br>maxvalue=30|Temperature Value in Celsius|
-|valueF|Float|false|minvalue = 60<br>maxvalue=90|Temperature Value in Farenheit|
-
-### EqualizerSettings
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|channel|String	|true|minlength = 1<br>maxlength = 500|Frequency name (e.i. "Treble" or "125 Hz")|
-|channelSettings|Integer|true|minvalue=0<br>maxvalue=100|The settings of the channel|
-
-### DeviceInfo
-
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|name|String|true|maxlength = 500|The name of the device connected.|
-|id|String|true||The ID of the device connected.|
-|transportType|Common.TransportType|false||The transport type the named-app's-device is connected over HU(BlueTooth, USB or WiFi). It must be provided in OnAppRegistered and in UpdateDeviceList|
-|isSDLAllowed|Boolean|false||Sent by SDL in UpdateDeviceList. ’true’ – if device is allowed for PolicyTable Exchange; ‘false’ – if device is NOT allowed for PolicyTable Exchange|
