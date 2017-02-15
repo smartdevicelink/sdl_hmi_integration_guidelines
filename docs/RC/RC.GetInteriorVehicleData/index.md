@@ -16,15 +16,15 @@ RSDL sends _RC.GetInteriorVehicleData_ to the vehicle:
 _**Error handling:**_   
 RSDL has a logic to _read the capabilities from the predefined file_ so that to respond to the application in case _the vehicle fails to respond or responds with error_ to _RC.GetInteriorVehicleDataCapabilities_.
 
-1.	RSDL validates response from the vehicle and in case it's invalid, RSDL returns GENERIC_ERROR result to the corresponding mobile application's request.
-Validation includes:
+1.	RSDL validates response from the vehicle and in case it's invalid, RSDL returns GENERIC_ERROR result to the corresponding mobile application's request.   
+_Validation includes:_   
  - Mandatory parameters to be present
  - Type of parameters values to correspond HMI_API
  - Parameters values to be in bounds with HMI_API
  - JSON format to be valid.
  - Module and ControlData to match (for example, response with "RadioControlData" sent together with CLIMATE moduleType is invalid)
  
-2. RSDL waits for response from the vehicle during RSDL's internal timeout for vehicle RPCs ("DefaultTimeout" parameter in SmartDeviceLink.ini file; set to 10 sec by default) and in case it's not received, RSDL returns GENERIC_ERROR result to the corresponding mobile application's request.
+2. RSDL waits for response from the vehicle during RSDL's internal timeout for vehicle RPCs (_DefaultTimeout_ parameter in SmartDeviceLink.ini file; set to 10 sec by default) and in case it's not received, RSDL returns GENERIC_ERROR result to the corresponding mobile application's request.
 
 ### Request
 
@@ -47,6 +47,14 @@ _**Behavior**_:
         Information: The vehicle is expected to allow only one passenger's application and one driver's application to control the same module at the same time.   
 3.	 Other result codes - the vehicle may:   
   3.1. Implement additional checks and return the resultCodes described in "applicable result codes" table of Response.   
+
+#### Parameters
+
+|    Param Name           |    Type                        | Mandatory  |    Description                                                                                                      |
+|-------------------------|--------------------------------|------------|---------------------------------------------------------------------------------------------------------------------|
+|    moduleDescription    |    Common.ModuleDescription    |    true    |    The zone and module data to retrieve   from the vehicle for that zone.                                           |
+|    subscribe            |    Boolean                     |    false   |    If subscribe is true, the head unit will   send onInteriorVehicleData notifications for the moduleDescription    |
+|    appID                |    Integer                     |    true    |    Internal SDL-assigned Id of the   application related to this RPC.                                               |
 
 
 ### Response
