@@ -41,10 +41,10 @@ _**Behavior**_:
 
 #### Parameters
 
-|    Param Name    |    Type       |    Mandatory    |    Description                                                                                        |
-|------------------|---------------|-----------------|-------------------------------------------------------------------------------------------------------|
-|    allowed       |    Boolean    |    true         |    If "true" - remote-control for passenger's applications is allowed.<br>If "false" - disallowed.    |
-
+|Param Name|      Type       |Mandatory|    Description                                                                        |
+|----------|-----------------|---------|---------------------------------------------------------------------------------------|
+|deviceRank|Common.DeviceRank|   true  | If "true" - remote-control for passenger's applications is allowed.<br>If "false" - disallowed.|
+|  device  |Common.DeviceInfo|   true  | The device info. Initially is sent by SDL via _UpdateDeviceList_ to the vehicle. Only _name_ and _id_ must be provided.|
 
 
 ### Sequence Diagrams   
