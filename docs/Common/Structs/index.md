@@ -411,6 +411,13 @@
 |imageTypeSupported|Common.FileType|false|array: true<br>minsize: 1<br>maxsize: 100||
 |imageResolution|Common.ImageResolution|false|||
 
+### ExternalConsentStatus
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|entityType|Integer|true|minvalue: 0<br>maxvalue: 128|The entityType which status is informed by "status" param.|
+|entityID|Integer|true|minvalue: 0<br>maxvalue: 128|The corresponding ID of entityType which status is informed by "status" param.|
+|status|Common.EntityStatus|true|-|Status of External User Consent Settings entity: "ON" or "OFF"|
+
 ## SDL RC
 ### InteriorZone 
 |Name|Type|Mandatory|Additional|Description|
@@ -475,4 +482,3 @@
 |autoModeEnable|Boolean|false|-|If "true" - the climate system is in auto mode.|
 |defrostZone|Common.DefrostZone|false|-|Defines the defrost zone: front, rear or all.|
 |dualModeEnable|Boolean|false|-|If "true" - the dual mode in ON and driver's and passenger's zones can have separate climate settings.|
-
