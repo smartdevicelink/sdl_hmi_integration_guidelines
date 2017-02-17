@@ -734,6 +734,7 @@
 |showConstantTBTIcon|9||
 |showConstantTBTNextTurnIcon|10||
 |locationImage|11||
+|SubMenuIcon|12||
 
 ### VehicleDataType
 
@@ -801,6 +802,12 @@
 |NO_DATA_EXISTS|0||
 |OFF|1||
 |ON|2||
+
+### EntityStatus
+|Name|Value|Description|
+|:---|:----|:----------|
+|ON|0||
+|OFF|1||
 
 ## The below describes the behavior related to RSDL functionality only.
 
@@ -880,11 +887,3 @@
 |----------------|--------------------------------------|
 |    DRIVER      |  The device is ranked as driver's    |
 |    PASSEGER    |  The device is ranked as passenger's |
-
-
-
-
-
-
-
-
