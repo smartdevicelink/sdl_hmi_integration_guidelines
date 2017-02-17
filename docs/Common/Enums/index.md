@@ -808,3 +808,82 @@
 |:---|:----|:----------|
 |ON|0||
 |OFF|1||
+
+## The below describes the behavior related to RSDL functionality only.
+
+### ModuleType
+
+|    Param Name    |    Description                                  |
+|------------------|-------------------------------------------------|
+|    CLIMATE       |    Names the Climate module of the   vehicle    |
+|    RADIO         |    Names the Radio module of the vehicle        |
+
+### RadioBand
+
+|  Param Name |    Description                       |
+|-------------|--------------------------------------|
+|    AM       |    AM (amplitude modulation) band    |
+|    FM       |    FM (frequency modulation) band    |
+|    XM       |    XM Satellite Radio                |
+
+### RadioState
+
+|  Param Name |  Description  |
+|-------------|---------------|
+|ACQUIRING|-|
+|ACQUIRED|-|
+|MULTICAST|-|
+|NOT_FOUND|-|
+
+### TemperatureUnit
+
+|  Param Name |  Description  |
+|-------------|---------------|
+|KELVIN|-|
+|FAHRENHEIT|-|
+|CELSIUS|-|
+
+### DefrostZone
+
+|  Param Name |  Description  |
+|-------------|---------------|
+|FRONT|-|
+|REAR|-|
+|ALL|-|
+
+### ButtonName
+
+|    Param Name      |    Description                                            |
+|--------------------|-----------------------------------------------------------|
+|    AC_MAX          |    Max mode of Air Conditioning. Climate   button.        |
+|    AC              |    Air   Conditioning. Climate button.                    |
+|    RECIRCULATE     |    Recirculation mode.   Climate button.                  |
+|    FAN_UP          |    Increment   the fan speed. Climate button.             |
+|    FAN_DOWN        |    Decrement   the fan speed. Climate button.             |
+|    TEMP_UP         |    Increment   the temperature. Climate button.           |
+|    TEMP_DOWN       |    Decrement   the temperature. Climate button.           |
+|    DEFROST_MAX     |    Max   mode of windshield defrost. Climate   button.    |
+|    DEFROST         |    Windshield defrost.   Climate button.                  |
+|    DEFROST_REAR    |    Rear   screen defrost. Climate button.                 |
+|    UPPER_VENT      |    Upper   Vent System mode. Climate button.              |
+|    LOWER_VENT      |    Lower   Vent System mode. Climate button.              |
+|    VOLUME_UP       |    Increment   the volume. Radio button.                  |
+|    VOLUME_DOWN     |    Decrement   the volume. Radio button.                  |
+|    EJECT           |    Eject. Radio button.                                   |
+|    SOURCE          |    Source. Radio button.                                  |
+|    SHUFFLE         |    Shuffle. Radio button.                                 |
+|    REPEAT          |    Repeat. Radio button.                                  |
+
+### ButtonPressMode
+
+|    Param Name    |    Description                                                                                                   |
+|------------------|------------------------------------------------------------------------------------------------------------------|
+|    LONG          |A button was released, after it was   pressed for a long time. Actual timing is defined by head unit and may vary |
+|    SHORT         |A button was released, after it was   pressed for a short time. Actual timing is defined by head unit and may vary|
+
+### DeviceRank
+
+|   Param Name   |    Description                       |
+|----------------|--------------------------------------|
+|    DRIVER      |  The device is ranked as driver's    |
+|    PASSEGER    |  The device is ranked as passenger's |

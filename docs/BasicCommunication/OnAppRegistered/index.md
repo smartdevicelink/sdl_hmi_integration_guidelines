@@ -60,6 +60,36 @@ If a device is connected over Bluetooth or Wi-Fi and registers an application, S
 !!!
 
 
+###The below describes the behavior related to RSDL functionality only.   
+
+_**Changes**_   
+  1.	New appHMIType: REMOTE_CONTROL was added: all and any remote-control applications must register with this type.   
+  2.	Registration of identical applications (that is, with the same name, same VRSynonyms, same policies_appID), one from driver's device and another one from passenger's device, is allowed by RSDL.   
+  3.	Passenger's applications are not allowed to be activated to FULL level.   
+  
+_**Behavior**_
+
+I. _Application from driver's device registers_ - the vehicle must:   
+     1.	Know the device rank is driver's (see also [RC.OnDeviceRankChanged]).   
+     2.	Mark each application registered from driver's device with "D - \<appName>" when displaying in the list of registered applications (all required information comes from _BasicCommunication.OnAppRegistered_).   
+     3.	Send _SDL.ActivateApp_ to RSDL in case the driver activates such application through either UI or VR.   
+     4.	Send _OnExitApplication(USER_EXIT)_ in case the driver decides to exit such application through either UI or VR.
+
+[RC.OnDevcieRankChanged]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/feature/docs/RC/RC.OnDeviceRankChanged/index.md
+
+
+II. _Application from passenger's device registers_ - the vehicle must:
+     1.	Know the device rank is passenger's (see also [RC.OnDeviceRankChanged]).   
+     2.	Display _only applications in LIMITED_ level (meaning, only passenger's applications that received driver's permission to remotely control. RSDL notifies about changed HMILevel via _BasicCommunication.ActivateApp_("level"), see [6.2 ActivateApp of SDL Integration Guidelines]).   
+     3.	In case displayed, mark each application registered from passenger's device with "P - \<appName>".   
+     4.	Ignore passenger's application _VRSynonyms_ in case the identical driver's application is also registered.   
+     5.	Never allow to activate passenger's application.   
+     6.	Allow only "User Exit" for passenger's application (see [6.15 OnExitApplication of SDL Integration Guidelines]).
+
+[RC.OnDevcieRankChanged]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/feature/docs/RC/RC.OnDeviceRankChanged/index.md
+
+[6.2 ActivateApp of SDL Integration Guidelines]: https://app.box.com/s/ohcgjv61cykgkuhycglju6cc4efr0ym3
+[6.15 OnExitApplication of SDL Integration Guidelines]: https://app.box.com/s/ohcgjv61cykgkuhycglju6cc4efr0ym3
 
 ### Notification
 
@@ -67,11 +97,15 @@ If a device is connected over Bluetooth or Wi-Fi and registers an application, S
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|application|[Common.HMIApplication](../../common/structs/#hmiapplication)|true||
-|ttsName|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|application|[Common.HMIApplication]|true||
+|ttsName|[Common.TTSChunk]|false|array: true<br>minsize: 1<br>maxsize: 100|
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40|
 |resumeVrGrammars|Boolean|false||
-|priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
+|priority|[Common.AppPriority]|false||
+
+[Common.HMIApplication]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#hmiapplication
+[Common.TTSChunk]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#ttschunk
+[Common.AppPriority]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#apppriority
 
 ### Sequence Diagrams
 |||
@@ -90,6 +124,9 @@ App Registers on USB
 App Registers on Bluetooth
 ![OnAppRegistered](./assets/OnAppRegisteredBT.png)
 |||
+
+Registration of driver's and passenger's RC applications (behavior related to RSDL functionality only).
+![OnAppRegistered](./assets/Registration%20of%20driver's%20and%20passenger's%20RC%20applications.png)
 
 #### JSON Example Notification
 ```json
@@ -114,5 +151,34 @@ App Registers on Bluetooth
       }
     "resumeVRGrammars" : true
   }
+}
+```
+
+#### JSON Example Notification
+(related to RSDL functionality only)
+```
+{
+     "jsonrpc" : "2.0",
+     "method" : "BasicCommunication.OnAppRegistered",
+     “params” :
+     {
+            "application" : 
+            {
+                   "appName" : "TryMe",
+                   "ngnMediaScreenAppName" : "TryMe",
+                   "appType" : "REMOTE_CONTROL",
+                   "appID" : 65540,
+                   "hmiDisplayLanguageDesired" : "ES-ES",
+                   "isMediaApplication" : false ,
+                   "policyAppID" : "xyz098"
+                   "deviceInfo " : 
+                   {
+                          "name" : “GT-I9300”,
+                          "id" : 1563462,
+                          "transportType" : “BLUETOOTH”
+                   },
+            },
+            "vrSynonyms" : "TryMe"
+     }
 }
 ```
