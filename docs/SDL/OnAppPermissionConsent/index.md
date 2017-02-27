@@ -41,9 +41,8 @@ c) SDL  uses `OnAppPermissionConsent` value (ON/OFF) received from HMI through i
 [Common.ConsentSource]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#consentsource
 ### Sequence Diagrams
 
-
-OnAppPermissionConsent (User answers to prompt about app's permisstions consent)   
-![OnAppPermissionConsent](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/SDL/OnAppPermissionConsent/assets/OnAppPermissionConsent.png)
+OnAppPermissionConsent
+![OnAppPermissionConsent1](./assets/OnAppPermissionConsent.png#)
 
 
 OnAppPermissionConsent (id<->name dependency)
