@@ -41,7 +41,7 @@ If the application does NOT resume data successfully:
   * SDL cleans up all previously stored application data for the application that failed to resume. The HMI must also clean up previously compiled `VRGrammars` for the application.
   * The application will send new data to start SDL operations. In this event, SDL and the HMI should restart the cycle of collecting application data for resumption.
 
-_**HMI must:**_
+!!! MUST
 
   1. Update its list of registered applications.
   2. Store the application data sent in the `applications` parameter.
@@ -49,13 +49,14 @@ _**HMI must:**_
   4. Provide the user with the possibility to choose an application among a list of registered applications.
   5. Send an `OnAppActivated` notification to SDL when the user activates an app via the `UI` or `VR`.   
   6. Manage application events by priority. HMI gets proirity information from _OnAppRegistered_, _UpdateAppList_, _ActivateApp_ HMI API.
+!!!
 
-_**Note:**_   
+!!! NOTE   
 
    - If a device is connected over USB and registers an application, SDL will send `OnAppRegistered` with a hash of the usb serial number as the device id.
    - If a device is connected over Bluetooth or Wi-Fi and registers an application, SDL will send `OnAppRegistered` with a hash of the device's mac address as the device id.
    - When the application is registered for the first time (no records in PT) PoliciesManager should not initiate prompting the User about the event.
-
+!!!
 
 ### Notification
 
@@ -69,9 +70,9 @@ _**Note:**_
 |resumeVrGrammars|Boolean|false||
 |priority|[Common.AppPriority]|false||
 
-[Common.HMIApplication]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#hmiapplication
-[Common.TTSChunk]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#ttschunk
-[Common.AppPriority]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#apppriority
+[Common.HMIApplication]: ../../Common/Structs/index.md#hmiapplication
+[Common.TTSChunk]: ../../Common/Structs/index.md#ttschunk
+[Common.AppPriority]: ../../Common/Enums/index.md#apppriority
 
 ### Sequence Diagrams
 |||
