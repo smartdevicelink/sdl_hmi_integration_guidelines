@@ -46,8 +46,8 @@ HMI must send `OnSystemRequest`, if specific data is requested from the mobile d
 |fileName|String|true|minlength: 1<br>maxlength: 255|
 |appID|String|false|minlength: 1<br>maxlength: 50|
 
-[Common.RequestType]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#requesttype
-[Common.FileType]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#filetype
+[Common.RequestType]: ../../Common/Enums/index.md#requesttype
+[Common.FileType]: ../../Common/Enums/index.md#filetype
 
 ### Sequence Diagrams
 |||
@@ -62,7 +62,7 @@ BC.OnSystemRequest in "Proprietary" Policy Table Update Flow
 
 |||
 _EXTERNAL proprietary_ Policy Table Update Flow
-![EXTERNAL proprietary](https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/PTU_external_proprietary/docs/BasicCommunication/PolicyUpdate/assets/diagram_PolicyUpdate_external_proprietary.png) 
+![EXTERNAL proprietary](./assets/diagram_PolicyUpdate_external_proprietary.png) 
 |||
 
 #### JSON Example Notification
