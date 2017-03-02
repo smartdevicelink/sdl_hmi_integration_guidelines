@@ -46,8 +46,8 @@ HMI must send `OnSystemRequest`, if specific data is requested from the mobile d
 |fileName|String|true|minlength: 1<br>maxlength: 255|
 |appID|String|false|minlength: 1<br>maxlength: 50|
 
-[Common.RequestType]: ../../Common/Enums/index.md#requesttype
-[Common.FileType]: ../../Common/Enums/index.md#filetype
+[Common.RequestType]: ../../Common/Enums/#requesttype
+[Common.FileType]: ../../Common/Enums/#filetype
 
 ### Sequence Diagrams
 |||
@@ -61,8 +61,8 @@ BC.OnSystemRequest in "Proprietary" Policy Table Update Flow
 |||
 
 |||
-_EXTERNAL proprietary_ Policy Table Update Flow
-![EXTERNAL proprietary](./assets/diagram_PolicyUpdate_external_proprietary.png) 
+_EXTERNAL PROPRIETARY_ PTU flow
+![EXTERNAL proprietary](../PolicyUpdate/assets/diagram_PolicyUpdate_external_proprietary.png) 
 |||
 
 #### JSON Example Notification
