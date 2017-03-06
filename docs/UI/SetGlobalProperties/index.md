@@ -33,9 +33,8 @@ without `<VRHelp>` and `<VRHelpTitle>` params, SDL generates default values of `
 - [x] transfer _SetGlobalProperties_ with all requested parameters to HMI (_thus, without autoCompleteList_).   
 - [x] respond with `<resultCode_received_from _HMI>` to mobile app.   
  
- _**Note:**_   
+ !!! NOTE   
 Default values of vrHelpItems are set to all the 1st VR commands of the current application and app's VR synonym. By default vrHelpTitle value is set to application name.
-
 _**Notes for HMI expected behavior:**_   
 1) The system shall have the ability to receive and store multiple strings for _autoCompleteText_ per app.   
 2) When the system receives a new list of strings for autoCompleteText for a particular app, the system shall delete the previous list and replace it with the new list for that app.   
@@ -44,14 +43,17 @@ _**Notes for HMI expected behavior:**_
 5) The number of matching _autoCompleteText_ strings displayed shall only be limited by the character length constraints of the hmi.   
 6) The system shall provide the user the ability to select one of the displayed matching _autoCompleteText_ strings without having to enter the entire string.   
 7) When the user selects one of the displayed matching _autoCompleteText_ string, the system shall submit that entry and not require further user input for submission.   
+!!!
 
 ### Request
 #### Behavior
 
-_**HMI must:**_   
+!!! MUST   
 **1.** Store the information and associate it with appID.   
-_**Note:**   
-Initially, the appID together with other application-related information is provided by SDL within UpdateAppList or OnAppRegistered RPCs._   
+
+!!! NOTE   
+_Initially, the appID together with other application-related information is provided by SDL within UpdateAppList or OnAppRegistered RPCs._   
+!!!
 **2.** Whenever the User activates VR, set up the requested values for VR help layout, the name and icon for in-application menu and the properties of the touchscreen keyboard (if supported):   
 - display the list of commands available for voice recognition. SDL provides the title for this list (_vrHelpTitle_ parameter) and the list of commands itself (vrHelp parameter which is an array of VrHelpItem‘s).   
 - display the in-application menu for every active application on User’s request. It must contain SDL-requested commands (UI.AddCommand) and sub menus (UI.AddSubMenu). SDL provides the values for the name (_menuTitle_ parameter) and for the icon (menuIcon parameter) of this in-application menu. The values for in-application menu and touchscreen keyboard are allowed by SDL for navigation type of application only.   
@@ -61,9 +63,8 @@ _**Important Note:**_
 _If HMI-defined VR commands are accessible together with those provided by SDL via VR.AddCommand, HMI must:_ 
 - _add the corresponding VR HMI-defined commands to the list of VR help items provided by SDL via UI.SetGlobalProperties_
 - _display the complete list of available VR commands (SDL-defined and HMI-defined ones) when the User activates VR._    
-
 **3.** Respond to the request.   
-
+!!!
 
 ### Request
 
@@ -72,10 +73,10 @@ _If HMI-defined VR commands are accessible together with those provided by SDL v
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |vrHelpTitle|String|false|maxlength: 500|
-|vrHelp|[Common.VrHelpItem](https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#vrhelpitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|vrHelp|[Common.VrHelpItem](../../common/structs/#vrhelpitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |menuTitle|String|false|maxlength: 500|
-|menuIcon|[Common.Image](https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#image)|false|-|
-|keyboardProperties|[Common.KeyboardProperties](https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#keyboardproperties)|false|-|
+|menuIcon|[Common.Image](../../common/structs/#image)|false|-|
+|keyboardProperties|[Common.KeyboardProperties](../../common/structs/#keyboardproperties)|false|-|
 |appID|Integer|true|-|
 
 ### Response
@@ -86,7 +87,7 @@ _If HMI-defined VR commands are accessible together with those provided by SDL v
 |Failure|INVALID_DATA: The data sent is invalid (invalid JSON syntax or parameters out of bounds or of wrong type)|JSON response|Method return|code: 11|
 |Failure|GENERIC_ERROR: The unknown issue occurred or other codes are not applicable.|JSON response|Method return|code: 22|
 _**Note**: In case HMI does not respond SDL's request during SDL-default timeout (10 sec), SDL will return GENERIC_ERROR  result code to the corresponding mobile app's request. Please see [Result Enumeration] for all SDL-supported codes._
-[Result Enumeration]: https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#result
+[Result Enumeration]: ../../common/enums/#result
 
 #### Parameters
 
@@ -98,7 +99,7 @@ SetGlobalProperties for active app on HMI with VR activation
 ![SetGlobalProperties](./assets/SetGlobalPropertiesActiveVRActivate.png)
 
 SetGlobalProperties for active app within TTS.SetGlobalProperties_request, UI.SetGlobalProperties_request, VR.Started, VR.Stopped.   
-![SetGlobalProperties](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/feature/set_global_properties_keyboard_properties_struct/docs/UI/SetGlobalProperties/assets/SetGlobalProperties_TTS_UI_VR.png)
+![SetGlobalProperties](./assets/SetGlobalProperties_TTS_UI_VR.png)
 
 
 
