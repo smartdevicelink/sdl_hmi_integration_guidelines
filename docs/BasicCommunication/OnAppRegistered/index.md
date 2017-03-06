@@ -70,9 +70,9 @@ If the application does NOT resume data successfully:
 |resumeVrGrammars|Boolean|false||
 |priority|[Common.AppPriority]|false||
 
-[Common.HMIApplication]: ../../Common/Structs/#hmiapplication
-[Common.TTSChunk]: ../../Common/Structs/#ttschunk
-[Common.AppPriority]: ../../Common/Enums/#apppriority
+[Common.HMIApplication]: ../../common/structs/#hmiapplication
+[Common.TTSChunk]: ../../common/structs/#ttschunk
+[Common.AppPriority]: ../../common/enums/#apppriority
 
 ### Sequence Diagrams
 |||
