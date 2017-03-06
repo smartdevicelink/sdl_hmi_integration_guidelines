@@ -32,7 +32,7 @@ c) SDL  uses `OnAppPermissionConsent` value (ON/OFF) received from HMI through i
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |appID|Integer|false||
-|consentedFunctions|[Common.PermissionItem]|true|array: true<br>minsize: 1<br>maxsize: 100|
+|consentedFunctions|[Common.PermissionItem]|false|array: true<br>minsize: 1<br>maxsize: 100|
 |ExternalConsentStatus|[Common.ExternalConsentStatus]|false|array: true <br>minsize: 1<br>maxsize: 100
 |source|[Common.ConsentSource]|true|
 
