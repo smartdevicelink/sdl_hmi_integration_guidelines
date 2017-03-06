@@ -10,19 +10,13 @@ Purpose
 
 The notification is applicable only for the case when the device is consented by the user and the user requests Policy Table update from HMI.
 
-!!!
-MUST:   
+!!! MUST   
 1) Initiate the sequence of device data consent on getting OnSDLConsentNeeded.   
 2) Upon getting _OnSDLConsentNeeded_, request _SDL.GetUserFriendlyMessages_ from SDL.   
 3) Display the 'device consent' dialog after getting _SDL.GetUserFriendlyMessages_response_ from SDL.   
 4) Send _OnAllowSDLFunctionality_ (true or false) after and depending on User's choice on HMI.   
-
-For more details see the following diagrams:     
-   - [The User does NOT consent the device](../activateapp/assets/user%20does%20not%20consent%20the%20device1.png).   
-   - [The User consents the device](../activateapp/assets/user%20consents%20the%20device2.png).
-
 !!!
-
+ 
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -30,6 +24,18 @@ For more details see the following diagrams:
 |device|[Common.DeviceInfo]|true||
 
 [Common.DeviceInfo]: ../../common/structs/#deviceinfo
+
+### Sequence Diagrams
+
+|||
+The User does NOT consent the device
+![OnSDLConsentNeeded](../ActivateApp/assets/User%20does%20not%20consent%20the%20device1.png)
+|||
+
+|||
+The User consents the device
+![OnSDLConsentNeeded](../ActivateApp/assets/User%20consents%20the%20device2.png)
+|||
 
 #### JSON Example Notification
 ```
