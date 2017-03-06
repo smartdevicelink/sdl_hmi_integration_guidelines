@@ -6,11 +6,13 @@
 **Purpose :** Get user friendly messages from Policy Table
 
 ### Request
-HMI must:  
+
+!!! MUST
 * Request message text to notify user via UI or/and TTS message about some event is happening. Message text may also be requested for some specific dialogs on HMI which require user’s answers.  
 * Notify user according to HMI flow via UI pop-ups or/and TTS messages, the text for them obtained in GetUserFriendlyMessage response in correspondence to messageCodes requested.
+!!!
 
-_**Note:**_    
+!!! NOTE    
 _**PoliciesManager must**_ follow to the next steps:   
 1. In case HMI respond about supported `<language_1>` via _UI.GetLanguage_response_ to SDL
 and HMI sends _SDL.GetUserFriendlyMessage_ request `<language_2>` parameter to SDL and both `<language_1>` and `<language_2>` does NOT exist at "consumer_friendly_messages" section at LocalPT:   
@@ -23,13 +25,14 @@ and `<language_1>` exists at "consumer_friendly_messages" section at LocalPT:
 3. In case HMI sends _SDL.GetUserFriendlyMessage request_ with `<language_1>` parameter and this `<language_1>` exists at "consumer_friendly_message" section of LocalPT:   
     - retrieve message related to requested `<language_1>` from "consumer_friendly_message" section of LocalPT;   
     - provide this message via GetUserFriendlyMessage response to HMI.   
+!!!
 
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |messageCodes|String|true|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 500|
-|language|[Common.Language](https://github.com/KhrystynaDubovyk/sdl_hmi_integration_guidelines/blob/user_consent_in_terms_of_policies/docs/Common/Enums/index.md#language)|false||
+|language|[Common.Language](../../common/enums/#language)|false||
 
 **MessageCodes**   
 Message codes specify appropriate user messages which notifies the user about some events/conditions on HMI. Messages and message codes are coming from Policy Table and must be used on HMI in different information pop-ups according to HMI use-cases scenarios.
@@ -54,7 +57,10 @@ Message codes specify appropriate user messages which notifies the user about so
 |StatusPending|Updating...|
 |StatusUpToDate|Up-To-Date|
 |VehicleInfo|An app can access the following vehicle information: Fuel Level, Fuel Economy, Engine RPMs, Odometer, VIN, External Temperature, Gear Position, Tire Pressure.|
-_**Note:** “MessageText” column specifies the messages just for an information purposes. The MessageText received from SDL may differ from listed in the table._
+
+!!! NOTE
+“MessageText” column specifies the messages just for an information purposes. The MessageText received from SDL may differ from listed in the table.
+!!!
 
 ### Response
 
@@ -63,7 +69,7 @@ _**Note:** “MessageText” column specifies the messages just for an informati
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |messages|[Common.UserFriendlyMessage]|false|array: true<br>minsize: 1<br>maxsize: 100|
-[Common.UserFriendlyMessage]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#userfriendlymessage
+[Common.UserFriendlyMessage]: ../../common/structs/#userfriendlymessage
 
 ### Sequence Diagrams
 |||
