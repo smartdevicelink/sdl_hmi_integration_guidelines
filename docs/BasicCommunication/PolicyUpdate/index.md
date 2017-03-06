@@ -12,15 +12,15 @@ Purpose
 
 ``BC.PolicyUpdate`` represents SDL-generated request to start the PTU sequence.
 
-_**HMI must:**_
+!!! MUST
 
 1. Encrypt the Snapshot PT (path from ``file`` parameter) _in case_ and by the scheme required by Policies Server
 * Request Policies Server url via the next ``SDL.GetURLs`` from SDL
 * Provide the path defined by ``file`` parameter in the next ``BC.OnSystemRequest`` that SDL will forward to mobile application
 * Recognize the PTU status notifications of ``SDL.OnStatusUpdate`` from SDL and display them in the appropriate UI menu
+!!!
 
-_**Note:**_   
-
+!!! NOTE   
 1. ``BC.PolicyUpdate`` dependencies:
    * SDL sends ``BC.PolicyUpdate`` _only in case_ it's built with ``"-DEXTENDED_POLICY: PROPRIETARY" flag or without this flag`` and ``"-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY"`` flag. _Otherwise_ SDL handles the entire PTU flow by itself.
    * If HMI fails to respond ``BC.PolicyUpdate`` or responds with error, PTU sequence will _not_ be continued.  
@@ -43,6 +43,7 @@ _**Note:**_
    * ``timeout`` - value taken from ``"timeout_after_x_seconds"`` field of local PT
    * ``retry`` - array of values from ``"seconds_between_retries"`` field of local PT. SDL handles the PTU retry sequence (re-requesting update if fails to receive during timeout) by itself.
 4. When SDL is built with EXTERNAL_PROPRIETARY flow, SDL _PoliciesManager_ must change the status to “UPDATING” and notify HMI with OnStatusUpdate("UPDATING") right after SnapshotPT is sent out to to mobile app via OnSystemRequest() RPC.   
+!!!
 
 #### Parameters
 
