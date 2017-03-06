@@ -11,21 +11,22 @@ Purpose
 
 Initiated by HMI for specifying the allowance for the application to perform some functionality.The notification informs Policy Manager about some changes in application permissions, that effect application behavior on HMI.  
 
-_**HMI must:**_   
+!!! MUST   
 1) send OnAppPermissionConsent when User answers to prompt about app's permisstions consent.  
 2) send OnAppPermissionConsent when User enters settings menu and allows/disallows app's permissions.  
 3) use the pair of values id<->name in PermissionItem structure which were obtained via GetListOfPermissions response  
 4) send OnAppPermissionConsent when User changes ExternalConsentStatus.
 
 _SDL information:_  
-PoliciesManager applies the changes to all applications in case OnAppPermissionConsent is received without "\<appID>\" parameter.
+PoliciesManager applies the changes to all applications in case OnAppPermissionConsent is received without `<appID>` parameter.
 PoliciesManager applies the changes received via OnAppPermissionConsent according to its internal rules (update appropriate application permissions sections in the policies database etc).
+!!!
 
-
-_**Note:**_  
+!!! NOTE  
 a) SDL ignores all invalid notifications which come from HMI (invalid JSON, invalid data types/bounds etc).  
 b) ExternalConsentStatus either user_dissalows or user_allows applications functional groupings depending on predefined settings in policy table.  
 c) SDL  uses OnAppPermissionConsent value (ON/OFF) received from HMI through ignition cycles until this value is changed by corresponding notification from HMI.
+!!!
 
 #### Parameters
 
@@ -36,10 +37,10 @@ c) SDL  uses OnAppPermissionConsent value (ON/OFF) received from HMI through ign
 |ExternalConsentStatus|[Common.ExternalConsentStatus]|false|array: true <br>minsize: 1<br>maxsize: 100|-|
 |source|[Common.ConsentSource]|true|-|-|
 
-[HMIApplication]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#hmiapplication
-[Common.PermissionItem]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#permissionitem
-[Common.ExternalConsentStatus]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#externalconsentstatus
-[Common.ConsentSource]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#consentsource
+[HMIApplication]: ../../common/structs/#hmiapplication
+[Common.PermissionItem]: ../../common/structs/#permissionitem
+[Common.ExternalConsentStatus]: ../../common/structs/#externalconsentstatus
+[Common.ConsentSource]: ../../common/enums/#consentsource
 
 ### Sequence Diagrams
 
@@ -49,16 +50,16 @@ b) Device is connected to the System (SDL/HU) and is consented by the User;
 c) Four apps are registered with SDL and HMI (_name_HMILevel_): app_FULL, app_LIMITED, app_BACKGROUND, app_NONE.
 
 User\`s consent for permissions.
-![OnAppPermissionConsent](https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/PTU_external_proprietary/docs/SDL/OnAppPermissionConsent/assets/User%60s%20Consent%20for%20permissions.png)
+![OnAppPermissionConsent](./assets/User%60s%20Consent%20for%20permissions.png)
 
 |||
 
 OnAppPermissionConsent (User answers to prompt about app's permisstions consent)   
-![OnAppPermissionConsent](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/SDL/OnAppPermissionConsent/assets/OnAppPermissionConsent.png)
+![OnAppPermissionConsent](./assets/OnAppPermissionConsent.png)
 
 |||
 OnAppPermissionConsent (id<->name dependency)
-![OnAppPermissionConsent](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/SDL/OnAppPermissionConsent/assets/OnAppPermissionConsent2.png)
+![OnAppPermissionConsent](./assets/OnAppPermissionConsent2.png)
 |||
 
 #### JSON Example Notification
