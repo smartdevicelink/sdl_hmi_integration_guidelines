@@ -10,13 +10,13 @@ Purpose
 
 ### Notification
 
-_**HMI must:**_   
+!!! MUST   
   - Send _SDL.OnReceivedPolicyUpdate_ notification to SDL after HMI finalized processing the updated Policy Table delivered via _BC.SystemRequest_ (for example, after decrypting it _in case_ and by the scheme required by Policies Server).
   - Decrypt the PTU file received via SystemRequest.
   - Notify SDL on successful decryption and provide the path to decrypted PTU file.
+!!!
 
-_**Note:**_   
-
+!!! NOTE
 1. _SDL.OnReceivedPolicyUpdate_ dependencies:  
    - SDL expects _SDL.OnReceivedPolicyUpdate_ _only in case_ it's built with `"-DEXTENDED_POLICY: PROPRIETARY" flag or without this flag` and `-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY` flag. _Otherwise_ SDL handles the entire PTU flow by itself.
    - SDL will not use Updated PT until notified by HMI.   
@@ -25,6 +25,7 @@ _**Note:**_
     - validation must reject Policy Table updates if it include fields with a status of ‘omitted.’
     - validation must reject Policy Table update if it does not include fields with a status of ‘required’.   
 3. In case section with required status "optional/omitted" is omitted in Updated PT, and field of this section is marked as required, the validation of the mentioned field is not "required" (i.e. policy table must be considered as valid).
+!!!
 
 #### Parameters
 
@@ -34,11 +35,14 @@ _**Note:**_
 
 ### Sequence Diagrams
 
+|||
 SDL.OnReceivedPolicyUpdate in EXTERNAL_PROPRIETARY flow
-![Proprietary PTU](https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/PTU_external_proprietary/docs/SDL/OnReceivedPolicyUpdate/assets/SDL.OnReceivedPolicyUpdate%20in%20EXTERNAL_PROPRIETARY%20flow.jpg)
-
+![Proprietary PTU](./assets/SDL.OnReceivedPolicyUpdate%20in%20EXTERNAL_PROPRIETARY%20flow.jpg)
+|||
+|||
 SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
 ![Proprietary PTU](./assets/Proprietary_PTU_flow_.png)
+|||
 
 #### JSON Example Notification
 ```json
