@@ -19,17 +19,18 @@ An `OnSystemRequest` is a notification that can be used for a couple of differen
 
 HMI is informed about `requestTypes` that are allowed by policies via [OnAppPermissionChanged](../../sdl/onapppermissionchanged) and [OnAppRegistered](../onappregistered).
 
-**_Note_**:   
+!!! NOTE   
   1. If HMI sends `OnSystemRequest` with a request type disallowed by the policy table, SDL will ignore it.   
   2. If HMI sends 'url' parameter within BasicCommunication.OnSystemRequest, SDL resends the 'url' parameter to mobile app via OnSystemRequest.   
   3. If HMI(SyncP) doesn't send any URLs to SDL, it is supposed that mobile application will sent Policy Table Update data back to SDL.
-
-_**SyncP Note**_:   
+!!!
+!!! SyncP NOTE   
  1. It's SyncP responsibility to encrypt and encode PTS file and provide it to SDL via OnSystemRequest HMI API ("filename") parameter.      
  2. It's SyncP responsibility to choose an application for sending PTU and start timer (for future retry strategy) after sending OnSystemRequest to SDL.
-
-**_HMI must_**:   
+!!!
+!!! MUST   
 HMI must send `OnSystemRequest`, if specific data is requested from the mobile device/cloud, or binary data needs to be sent to the mobile device.
+!!!
 
 ### Notification
 
@@ -46,8 +47,8 @@ HMI must send `OnSystemRequest`, if specific data is requested from the mobile d
 |fileName|String|true|minlength: 1<br>maxlength: 255|
 |appID|String|false|minlength: 1<br>maxlength: 50|
 
-[Common.RequestType]: ../../Common/Enums/#requesttype
-[Common.FileType]: ../../Common/Enums/#filetype
+[Common.RequestType]: ../../common/enums/#requesttype
+[Common.FileType]: ../../common/enums/#filetype
 
 ### Sequence Diagrams
 |||
