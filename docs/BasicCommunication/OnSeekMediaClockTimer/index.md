@@ -8,7 +8,7 @@
  A notification will be provided if the user touches (or seeks) to a particular position on the HMI mediaclock timer. 
  The notification will contain a starttime with the position the user has seeked to.
    
-   _**Note:**_   
+  !!! NOTE   
 _**SDL must**_:   
 
 1) if HMI sends to SDL _OnSeekMediaClockTimer_ **valid** and **NOT allowed** by Local Policy Table notification:   
@@ -20,6 +20,7 @@ _**SDL must**_:
      - transfer _OnSeekMediaClockTimer_ notification from HMI to mobile application.   
 3) transfer _OnSeekMediaClockTimer_ notification from HMI to mobile app **independently** on value of "enableSeek"
 (true or false) parameter at _SetMediaClockTimer_request_.
+!!!
 
 ### Request
 
@@ -30,13 +31,20 @@ _**SDL must**_:
 |seekTime|[Commom.TimeFormat]|true|see [StartTime]|
 |appID|Integer|true|The ID of application that relates to this mediaclock position change.|
 
-[Commom.TimeFormat]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#timeformat
-[StartTime]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/UI/SetMediaClockTimer/index.md#parameters
+[Commom.TimeFormat]: ../../common/structs/#timeformat
+[StartTime]: ../../ui/setmediaclocktimer/#parameters
+
 ### Response
 
 #### Parameters
 
 This RPC has no additional parameter requirements.
+
+### Sequence Diagrams
+
+|||
+![_OnSeekMediaClockTimer_ notification](./assets/OnSeekMediaClockTimer.png)
+|||
 
 ### Example Request
 ```
@@ -66,5 +74,4 @@ This RPC has no additional parameter requirements.
 ```
 
 
-### Sequence Diagrams
-![_OnSeekMediaClockTimer_ notification](https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/new_param_setmediaclocktimer/docs/BasicCommunication/OnSeekMediaClockTimer/assets/OnSeekMediaClockTimer.png)
+
