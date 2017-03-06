@@ -35,7 +35,7 @@ This RPC has no additional parameter requirements.
 ### Sequence Diagrams
 |||
 GetStatusUpdate
-![GetStatusUpdate](./assets/getstatusupdate.jpg)
+![GetStatusUpdate](./assets/GetStatusUpdate.jpg)
 |||
 
 ### Example Request
