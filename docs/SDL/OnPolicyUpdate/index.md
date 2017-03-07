@@ -20,7 +20,7 @@ Currently this notification is not used in any HMI workflows, but in case of nec
 
 !!! NOTE
    - SDL ignores all invalid notifications which come from HMI (invalid JSON, invalid data types/bounds etc).
-   - In case SDL receives _SDL.OnPolicyUpdate_ notification from HMI, SDL PoliciesManager must start the procedure of Policy Table Update (that is, create PT Snapshot, send it to HMI for encryption, and etc. what is defined by related requirements)
+   - In case SDL receives _SDL.OnPolicyUpdate_ notification from HMI, SDL PoliciesManager must start the procedure of Policy Table Update (that is, create PT Snapshot, send it to HMI for encryption, and etc. what is defined by related requirements).
 !!!
 
 #### Parameters
@@ -28,9 +28,10 @@ This RPC has no additional parameter requirements.
 
 ### Sequence Diagrams
 
-!!!
+|||
+Policy Table Update flow
 ![OnPolicyUpdate](./assets/OnPolicyUpdate.jpg)
-!!!
+|||
 
 #### JSON Example Notification
 ```
