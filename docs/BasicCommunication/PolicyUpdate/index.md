@@ -37,7 +37,6 @@ Purpose
         * in case module's certificate in policies is expired or invalid, the TLS handshake will fail.    
         * in case TLS handshake fails because module's certificate is expired or invalid, the "count_of_TLS_errors" must not be incremented;   
         * current model of backend implementation: certificate is always present in PTU (meaning, each successfull request for policies update would bring a certificate in updated PT).
-      
     * New application (that is, not-yet existing in local PT) registration;
   3. Parameters values origin:
     * ``file`` - is the path to the Snapshot of local PolicyTable (Snapshot PT final destination is Policies Server)
