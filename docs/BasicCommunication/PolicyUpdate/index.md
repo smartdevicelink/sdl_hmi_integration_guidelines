@@ -31,12 +31,12 @@ Purpose
     * Kilometers since previous successful PTU (``"exchange_after_x_kilometers"`` value in local PT);
     * Ignition cycles since previous successful PTU (``"exchange_after_x_ignition_cycles"`` value in local PT);
     * The current date is "24 hours prior to module's certificate expiration date":   
-      * the triggers for checking the cert expiration status are:   
-        * ignition on
-        * TLS handshake
-      * in case module's certificate in policies is expired or invalid, the TLS handshake will fail.    
-      * in case TLS handshake fails because module's certificate is expired or invalid, the "count_of_TLS_errors" must not be incremented;   
-      * current model of backend implementation: certificate is always present in PTU (meaning, each successfull request for policies update would bring a certificate in updated PT).
+        * the triggers for checking the cert expiration status are:   
+            * ignition on
+            * TLS handshake
+        * in case module's certificate in policies is expired or invalid, the TLS handshake will fail.    
+        * in case TLS handshake fails because module's certificate is expired or invalid, the "count_of_TLS_errors" must not be incremented;   
+        * current model of backend implementation: certificate is always present in PTU (meaning, each successfull request for policies update would bring a certificate in updated PT).
       
     * New application (that is, not-yet existing in local PT) registration;
   3. Parameters values origin:
