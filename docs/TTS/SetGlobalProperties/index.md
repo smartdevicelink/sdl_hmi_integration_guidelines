@@ -42,15 +42,30 @@ SetGlobalProperties
   {
     "helpPrompt" :
     [
-      "text" : "Yes",
-      "text" : "No",
-      "text" : "Skip"
+      {
+        "text" : "Yes", 
+        "type": "TEXT"
+      },
+      {
+        "text" : "No", 
+        "type": "TEXT"
+      },
+      {
+        "text" : "Skip", 
+        "type": "TEXT"
+      }
     ],
 
     "timeoutPrompt" :
     [
-      "text" : "Please make a choice",
-      "text" : "The time is about to expire"
+      {
+        "text" : "Please make a choice", 
+        "type": "TEXT"
+      },
+      {
+        "text" : "The time is about to expire", 
+        "type": "TEXT"
+      }
     ],
     "appID" : 65542
   }

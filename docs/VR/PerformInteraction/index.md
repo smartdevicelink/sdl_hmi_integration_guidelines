@@ -54,19 +54,34 @@ PerformInteraction in Both Mode times out
   {
     "initialPrompt" :
     [
-      "text" : "Please make your choice by voice",
+      {
+        "text" : "Please make your choice by voice", 
+        "type": "TEXT"
+      }
     ],
 
     "helpPrompt" :
     [
-      "text" : "Yes",
-      "text" : "No",
-      "text" : "Skip"
+      {
+        "text" : "Yes", 
+        "type": "TEXT"
+      },
+      {
+        "text" : "No", 
+        "type": "TEXT"
+      },
+      {
+        "text" : "Skip", 
+        "type": "TEXT"
+      }
     ],
 
     "timeoutPrompt" :
     [
-      "text" : "The time is about to run out"
+      {
+        "text" : "The time is about to run out", 
+        "type": "TEXT"
+      }
     ],
 
     "timeout" : 10000,

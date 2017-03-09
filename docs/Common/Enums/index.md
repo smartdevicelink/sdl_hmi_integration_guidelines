@@ -59,11 +59,12 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|TEXT|0||
-|SAPI_PHONEMES|1||
-|LHPLUS_PHONEMES|2||
+|TEXT|0|Uses plain text for performing TTS|
+|SAPI_PHONEMES|1|Uses the Speech API Phoneme representation of a phrase for performing TTS|
+|LHPLUS_PHONEMES|2|Uses the LH+ Phoneme representation of a phrase for performing TTS|
 |PRE_RECORDED|3||
 |SILENCE|4||
+|FILE|5|Uses an audio file sent to SDL via a PutFile RPC to perform TTS or play generic sounds in conjunction with TTS|
 
 ### TextFieldName
 
