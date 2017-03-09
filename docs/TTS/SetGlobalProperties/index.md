@@ -44,15 +44,15 @@ SetGlobalProperties
     [
       {
         "text" : "Yes", 
-        "type": "TEXT"
+        "type" : "TEXT"
       },
       {
         "text" : "No", 
-        "type": "TEXT"
+        "type" : "TEXT"
       },
       {
         "text" : "Skip", 
-        "type": "TEXT"
+        "type" : "TEXT"
       }
     ],
 
@@ -60,11 +60,11 @@ SetGlobalProperties
     [
       {
         "text" : "Please make a choice", 
-        "type": "TEXT"
+        "type" : "TEXT"
       },
       {
         "text" : "The time is about to expire", 
-        "type": "TEXT"
+        "type" : "TEXT"
       }
     ],
     "appID" : 65542
