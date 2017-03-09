@@ -31,8 +31,8 @@ Purpose
   TTS is performed by the HMI through:
   
   1. TEXT - Plain text format. TTSChunks with this type provide plain text to be spoken in the `text` field
-  2. SAPI_PHONEMES - Microsoft Speech API Format. TTSChunks with this type provide a group of phonemes in this format in the `text` field
-  3. LHPLUS_PHONEMES - LH+ Phoneme format. TTSChunks with this type provide a group of phonemes in this format in the `text` field
+  2. SAPI_PHONEMES - Microsoft Speech API Format. TTSChunks with this type provide a group of phonemes with this format in the `text` field
+  3. LHPLUS_PHONEMES - LH+ Phoneme format. TTSChunks with this type provide a group of phonemes with this format in the `text` field
   4. PRE_RECORDED - Prerecorded sounds. TTSChunks with this type provide a value from [Common.PrerecordedSpeech](../../common/enums/index.md#prerecordedspeech) in the `text` field
   5. FILE - Uploaded audio files. TTSChunks with this type provide a filename pointing to an audio file previously uploaded through a PutFile RPC in the `text` field
       * These audio files can be in one of the following file types/specifications, all must be supported in order for the HMI to support the `FILE` option:
