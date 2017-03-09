@@ -26,26 +26,29 @@ Purpose
 |prerecordedSpeechCapabilities|[Common.PrerecordedSpeech](../../common/enums/index.md#prerecordedspeech)|true|array: true<br>minsize: 1<br>maxsize: 5|
 
 !!! NOTE
+
   Description of possible SpeechCapabilities
   TTS is performed by the HMI through:
-    * TEXT - Plain text format. TTSChunks with this type provide plain text to be spoken in the `text` field
-    * SAPI_PHONEMES - Microsoft Speech API Format. TTSChunks with this type provide a group of phonemes in this format in the `text` field
-    * LHPLUS_PHONEMES - LH+ Phoneme format. TTSChunks with this type provide a group of phonemes in this format in the `text` field
-    * PRE_RECORDED - Prerecorded sounds. TTSChunks with this type provide a value from [Common.PrerecordedSpeech](../../common/enums/index.md#prerecordedspeech) in the `text` field
-    * FILE - Uploaded audio files. TTSChunks with this type provide a filename pointing to an audio file previously uploaded through a PutFile RPC in the `text` field
-        * These audio files can be in one of the following file types/specifications, all must be supported in order for the HMI to support the `FILE` option:
-            * AUDIO_WAVE
-                * Sample Rate: 16000 Hz
-                * Bit Depth: 16
-                * Mono Channel (1 Channel)
-            * AUDIO_MP3
-                * Sample Rate: 44100 Hz
-                * Bit Depth: 8 - 320
-                * Mono Channel (1 Channel)
-            * AUDIO_AAC
-                * Sample Rate: 44100 Hz
-                * Bit Depth: 8 - 320
-                * Mono Channel (1 Channel)
+  
+  1. TEXT - Plain text format. TTSChunks with this type provide plain text to be spoken in the `text` field
+  2. SAPI_PHONEMES - Microsoft Speech API Format. TTSChunks with this type provide a group of phonemes in this format in the `text` field
+  3. LHPLUS_PHONEMES - LH+ Phoneme format. TTSChunks with this type provide a group of phonemes in this format in the `text` field
+  4. PRE_RECORDED - Prerecorded sounds. TTSChunks with this type provide a value from [Common.PrerecordedSpeech](../../common/enums/index.md#prerecordedspeech) in the `text` field
+  5. FILE - Uploaded audio files. TTSChunks with this type provide a filename pointing to an audio file previously uploaded through a PutFile RPC in the `text` field
+      * These audio files can be in one of the following file types/specifications, all must be supported in order for the HMI to support the `FILE` option:
+          * AUDIO_WAVE
+              * Sample Rate: 16000 Hz
+              * Bit Depth: 16
+              * Mono Channel (1 Channel)
+          * AUDIO_MP3
+              * Sample Rate: 44100 Hz
+              * Bit Depth: 8 - 320
+              * Mono Channel (1 Channel)
+          * AUDIO_AAC
+              * Sample Rate: 44100 Hz
+              * Bit Depth: 8 - 320
+              * Mono Channel (1 Channel)
+
 !!!
 
 ### Sequence Diagrams
