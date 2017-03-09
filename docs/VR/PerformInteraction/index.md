@@ -56,7 +56,7 @@ PerformInteraction in Both Mode times out
     [
       {
         "text" : "Please make your choice by voice", 
-        "type": "TEXT"
+        "type" : "TEXT"
       }
     ],
 
@@ -64,15 +64,15 @@ PerformInteraction in Both Mode times out
     [
       {
         "text" : "Yes", 
-        "type": "TEXT"
+        "type" : "TEXT"
       },
       {
         "text" : "No", 
-        "type": "TEXT"
+        "type" : "TEXT"
       },
       {
         "text" : "Skip", 
-        "type": "TEXT"
+        "type" : "TEXT"
       }
     ],
 
@@ -80,7 +80,7 @@ PerformInteraction in Both Mode times out
     [
       {
         "text" : "The time is about to run out", 
-        "type": "TEXT"
+        "type" : "TEXT"
       }
     ],
 
