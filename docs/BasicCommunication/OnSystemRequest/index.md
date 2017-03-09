@@ -24,10 +24,11 @@ HMI is informed about `requestTypes` that are allowed by policies via [OnAppPerm
   2. If HMI sends 'url' parameter within BasicCommunication.OnSystemRequest, SDL resends the 'url' parameter to mobile app via OnSystemRequest.   
   3. If HMI(SyncP) doesn't send any URLs to SDL, it is supposed that mobile application will sent Policy Table Update data back to SDL.
 !!!
-!!! SyncP NOTE   
+
+_**SyncP NOTE**_   
  1. It's SyncP responsibility to encrypt and encode PTS file and provide it to SDL via OnSystemRequest HMI API ("filename") parameter.      
  2. It's SyncP responsibility to choose an application for sending PTU and start timer (for future retry strategy) after sending OnSystemRequest to SDL.
-!!!
+
 !!! MUST   
 HMI must send `OnSystemRequest`, if specific data is requested from the mobile device/cloud, or binary data needs to be sent to the mobile device.
 !!!
