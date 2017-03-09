@@ -15,22 +15,21 @@ Purpose
 
   1. Follow to steps:  
     * send _GetListOfPermissions_ request to SDL (if "isPermissionsConsentNeeded:true" is set to true) in order to obtain list of message codes for functional groups needed by application for user to consent, in response SDL provides array of these message codes.    
-    * send _GetUserFriendlyMessage_ request to SDL to obtain user friendly messages from policy table with list of message codes and optionally language if language needs to be different from provided by HMI on startup (using GetLanguage request from SDL).   
-!!! NOTE
-  In response SDL sends messages from policy table. 
-  * display appropriate dialog to User and sends _OnAppPermissionConsent_ notification to SDL specifying _app_id_, consented functions and source.
-!!!
+    * send _GetUserFriendlyMessage_ request to SDL to obtain user friendly messages from policy table with list of message codes and optionally language if language needs to be different from provided by HMI on startup (using GetLanguage request from SDL).
+        * Note: In response SDL sends messages from policy table
+            * display appropriate dialog to User and sends _OnAppPermissionConsent_ notification to SDL specifying _app_id_, consented functions and source.
 
   2. Display Dialog and on result of user selection to send _OnAllowSDLFuncionality_ specifying device from _ActivateApp_ response, source of choice (UI/VR) and allowed set to true/false (if user ignores question, this is automatically set to false), in case HMI receives _SDL.ActivateApp_ (isSDLAllowed: false).
 !!!
 
 !!! NOTE   
   _**SDL PoliciesManager must**_:
-    * respond with "isPermissionsConsentNeeded: true", otherwise "isPermissionsConsentNeeded: false" should be returned to HMI, in case SDL got _SDL.ActivateApp_ from HMI and LocalPT contains the permission that require User\`s consent.
-    * respond with "isSDLAllowed: true" in the response to HMI, on getting _SDL.ActivateApp_ from HMI and the device the app is running on is consented by the User.   
-    * respond with the following parameters in the response to HMI:   
-        * "isSDLAllowed: false"
-        * _device_ param containing the device\`s name and ID previously sent by SDL via _UpdateDeviceList_.
+  
+  * respond with "isPermissionsConsentNeeded: true", otherwise "isPermissionsConsentNeeded: false" should be returned to HMI, in case SDL got _SDL.ActivateApp_ from HMI and LocalPT contains the permission that require User\`s consent.
+  * respond with "isSDLAllowed: true" in the response to HMI, on getting _SDL.ActivateApp_ from HMI and the device the app is running on is consented by the User.   
+  * respond with the following parameters in the response to HMI:   
+    * "isSDLAllowed: false"
+    * _device_ param containing the device\`s name and ID previously sent by SDL via _UpdateDeviceList_.
 !!!
 
 #### Parameters
