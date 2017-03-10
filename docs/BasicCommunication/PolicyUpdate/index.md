@@ -67,13 +67,14 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams   
-
+|||
 _EXTERNAL_PROPRIETARY_ Policy Table Update Flow
 ![EXTERNAL proprietary](./assets/diagram_PolicyUpdate_external_proprietary.png)   
-
-
+|||
+|||
 BC.PolicyUpdate in _PROPRIETARY_ Policy Table Update Flow
 ![Proprietary PTU](./assets/PolicyUpdate_in_Proprietary_PTU_flow.png)  
+|||
 
 ### Example Request
 
