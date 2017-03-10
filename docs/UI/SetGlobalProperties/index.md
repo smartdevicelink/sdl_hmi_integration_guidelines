@@ -88,7 +88,11 @@ _**Notes for HMI expected behavior:**_
 |Failure|INVALID_ID:appID is not valid (e.g.does not exist)|JSON response|Method return|code: 13|
 |Failure|INVALID_DATA: The data sent is invalid (invalid JSON syntax or parameters out of bounds or of wrong type)|JSON response|Method return|code: 11|
 |Failure|GENERIC_ERROR: The unknown issue occurred or other codes are not applicable.|JSON response|Method return|code: 22|
-_**Note**: In case HMI does not respond SDL's request during SDL-default timeout (10 sec), SDL will return GENERIC_ERROR  result code to the corresponding mobile app's request. Please see [Result Enumeration] for all SDL-supported codes._
+
+!!! NOTE
+In case HMI does not respond SDL's request during SDL-default timeout (10 sec), SDL will return GENERIC_ERROR  result code to the corresponding mobile app's request. Please see [Result Enumeration] for all SDL-supported codes._
+!!!
+
 [Result Enumeration]: ../../common/enums/#result
 
 #### Parameters
