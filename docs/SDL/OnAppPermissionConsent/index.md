@@ -2,12 +2,12 @@
 
 
 ### Notification
-Type
-: Notification  
-Sender
-: HMI  
-Purpose
-: Inform about the User permission changes for some functionality for the named application.
+
+Type: Notification 
+
+Sender: HMI  
+
+Purpose: Inform about the User permission changes for some functionality for the named application.
 
 Initiated by HMI for specifying the allowance for the application to perform some functionality.The notification informs Policy Manager about some changes in application permissions, that effect application behavior on HMI.  
 
@@ -49,14 +49,14 @@ a) SDL and HMI are started;
 b) Device is connected to the System (SDL/HU) and is consented by the User;   
 c) Four apps are registered with SDL and HMI (_name_HMILevel_): app_FULL, app_LIMITED, app_BACKGROUND, app_NONE.
 
+|||
 User\`s consent for permissions.
 ![OnAppPermissionConsent](./assets/User%60s%20Consent%20for%20permissions.png)
-
 |||
-
+|||
 OnAppPermissionConsent (User answers to prompt about app's permisstions consent)   
 ![OnAppPermissionConsent](./assets/OnAppPermissionConsent.png)
-
+|||
 |||
 OnAppPermissionConsent (id<->name dependency)
 ![OnAppPermissionConsent](./assets/OnAppPermissionConsent2.png)
