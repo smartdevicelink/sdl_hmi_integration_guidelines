@@ -2,11 +2,14 @@
 
 ### Notification
 
-Type : Function
+Type
+: Function
 
-Sender : HMI
+Sender
+: HMI
 
-Purpose : Update the Policy Table request
+Purpose
+: Update the Policy Table request
 
 
 ### Request
