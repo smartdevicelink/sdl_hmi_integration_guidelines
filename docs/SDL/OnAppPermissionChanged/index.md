@@ -1,10 +1,13 @@
 ## OnAppPermissionChanged
 
-Type: Notification
+Type
+: Notification
 
-Sender: SDL
+Sender
+: SDL
 
-Purpose: Inform HMI that permissions have changed for a specified application.
+Purpose
+: Inform HMI that permissions have changed for a specified application.
 
 Notification from SDL to HMI occurs when application permissions were changed. If no permission specified means that application was dissallowed and has to be unregistered.
 
