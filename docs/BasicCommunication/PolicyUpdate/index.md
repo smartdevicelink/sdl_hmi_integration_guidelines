@@ -1,9 +1,13 @@
 ## PolicyUpdate
-Type: Function
 
-Sender: SDL
+Type
+: Function
 
-Purpose: Inform HMI about the Policy Table Update (PTU) mechanism is triggered on SDL
+Sender
+: SDL
+
+Purpose
+: Inform HMI about the Policy Table Update (PTU) mechanism is triggered on SDL
 
 ### Request
 
