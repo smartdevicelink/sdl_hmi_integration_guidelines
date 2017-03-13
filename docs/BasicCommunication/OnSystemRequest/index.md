@@ -1,18 +1,15 @@
 ## OnSystemRequest
 
-Type
-: Notification
+Type: Notification
 
-Sender
-: SDL
+Sender: SDL
 
-Purpose
-: A request from SDL to download data via a connected application.
+Purpose: A request from SDL to download data via a connected application.
 
 **HTTP flow**
 
 SDL sendS PTS snapshot as a binary data via `OnSystemRequest` mobile API from the system to backend. The "url" PTS will be forwarded to and "timeout" must be taken from the Local Policy Table.
-If no "url" is provided in Local Policy Table, it is supposed that mobile application will sent Policy Table Update data back to SDL .
+If no "url" is provided in Local Policy Table, it is supposed that mobile application will sent Policy Table Update data back to SDL.
 
 ### Notification
 
