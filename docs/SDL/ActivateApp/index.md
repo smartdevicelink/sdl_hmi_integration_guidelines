@@ -1,20 +1,19 @@
 ## ActivateApp
 
-Type
-: Function
+Type: Function
 
-Sender
-: HMI
+Sender: HMI
 
-Purpose
-: Inform SDL that the user has activated an application.
+Purpose: Inform SDL that the user has activated an application.
 
 ### Request
-**HMI must:**  
+
+!!! MUST
 1. Send `SDL.ActivateApp`.  
 2. Send a request to SDL to get messages for specified permissions (via `GetUserFriendlyMessage`) and notify user that provided permissions of application were decreased in case HMI gets  "isAppPermissionRevoked:true" respond from SDL PoliciesManager.  
 3. Send `GetListOfPermissions` request to SDL in order to obtain list of message codes for functional groups needed by application for user to consent when PoliciesManager responds with "isPermissionsConsentNeeded: true" .  
 4. Display Dialog and on result of user selection to send `OnAllowSDLFuncionality` specifying device from `ActivateApp` response, source of choice (UI/VR) and allowed set to true/false (if user ignores question, this is automatically set to false) when HMI receives `SDL.ActivateApp` (isSDLAllowed: false).
+!!!
 
 #### Parameters
 
@@ -36,10 +35,29 @@ Purpose
 |isAppRevoked|Boolean|true||
 |priority|[Common.AppPriority]|false||
 
-[Common.DeviceInfo]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#deviceinfo
-[Common.PermissionItem]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#permissionitem 
-[Common.AppPriority]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#apppriority 
+[Common.DeviceInfo]: ../../common/structs/#deviceinfo
+
+[Common.PermissionItem]: ../../common/structs/#permissionitem
+
+[Common.AppPriority]: ../../common/enums/#apppriority
+
 ### Sequence Diagrams
+
+Preconditions:   
+a. Device is connected to the HU.   
+b. App_1 is running on this device and is registered with SDL.   
+c. App_1 presents in the list of registered apps on HMI.
+
+|||
+The User does NOT consent the device.
+![ActivateApp](./assets/User%20does%20not%20consent%20the%20device1.png)
+|||
+
+|||
+The User consents the device.
+![ActivateApp](./assets/User%20consents%20the%20device2.png)
+|||
+
 |||
 ActivateApp for application registered with reduced permissions after Policy Table Update
 ![ActivateApp](./assets/ActivateAppReducedPermissions.png)
