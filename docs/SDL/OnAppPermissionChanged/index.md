@@ -1,24 +1,22 @@
 ## OnAppPermissionChanged
 
-Type
-: Notification
+Type: Notification
 
-Sender
-: SDL
+Sender: SDL
 
-Purpose
-: Inform HMI that permissions have changed for a specified application.
+Purpose: Inform HMI that permissions have changed for a specified application.
 
 Notification from SDL to HMI occurs when application permissions were changed. If no permission specified means that application was dissallowed and has to be unregistered.
 
-**HMI must:**  
+!!! MUST  
 1.  Request the list of permissions per app for which the consent is required (via `GetListOfPermissions`) when HMI gets the 'user-consent-required' notification per app from `SDL (SDL.OnAppPermissionChanged{appID, appPermissionsConsentNeeded: true})`.  
 2.  Request Policies Manager for the appropriate user-friendly message from Local PT (`SDL.GetUserFriendlyMessage`) to commuticate about permissions changed when HMI gets the list of permissions that require User's consent.
 
 _It is app’s responsibility to inform the user to change the app’s settings if user consent is needed for proper app operation.  
 Any permissions that require user consent are not enabled until a user accepts them. If permissions do not require user consent, they can be applied immediately._ 
+!!!
 
-_SDL Note:_  
+_**SDL Note**:_   
 1. SDL sends the list of RequestTypes allowed by Policies via `OnAppPermissionChanged` API. In case HMI will use any of requestTypes disallowed by PolicyTable, SDL will ignore such notifications.  
 2. SDL PoliciesManager must send `OnAppPermissionChanged (appRevoked: true, appID)`and `BC.ActivateApp` (NONE) to HMI, in case the  `<appID>`  application is currently registered and in any HMILevel and in result of PTU  `<appID>`  gets "null" policies.   
 3. If app permissions were reduced after PTU, SDL sends `OnAppPermissionChanged (isAppPermissionsRevoked: true)` when app is in FULL or LIMITTED. SDL doesn't notify HMI about revoked permissions twice.  
@@ -37,18 +35,26 @@ b) notify HMI about 'user-consent-required' `SDL.OnAppPermissionChanged{appID, a
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
 |isAppPermissionsRevoked|Boolean|false||
-|appRevokedPermissions|[Common.PermissionItem](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/master/docs/Common/Structs/index.md#permissionitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|appRevokedPermissions|[Common.PermissionItem]|false|array: true<br>minsize: 1<br>maxsize: 100|
 |appRevoked|Boolean|false||
 |appPermissionsConsentNeeded|Boolean|false||
 |appUnauthorized|Boolean|false||
-|priority|[Common.AppPriority](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/master/docs/Common/Enums/index.md#apppriority)|false||
-|requestType|[Common.RequestType](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/master/docs/Common/Enums/index.md#requesttype)|false|array: true<br>minsize: 0<br>maxsize: 100|
+|priority|[Common.AppPriority]|false||
+|requestType|[Common.RequestType]|false|array: true<br>minsize: 0<br>maxsize: 100|
+
+[Common.PermissionItem]: ../../common/structs/#permissionitem
+[Common.AppPriority]: ../../common/enums/#apppriority
+[Common.RequestType]: ../../common/enums/#requesttype
 
 ### Sequence Diagrams
-
+_**Preconditions to the sequence:**_   
+a) SDL and HMI are started;   
+b) Device is connected to the System (SDL/HU) and is consented by the User;   
+c) Four apps are registered with SDL and HMI ('name_HMILevel'): app_FULL, app_LIMITED, app_BACKGROUND, app_NONE.
+|||
 OnAppPermissionChanged with consent required
 ![OnAppPermissionChanged](./assets/OnAppPermissionChanged.png)
-
+|||
 
 #### JSON Example Notification
 ```json
