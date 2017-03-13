@@ -1,9 +1,13 @@
 ## OnReceivedPolicyUpdate
-Type: Notification
 
-Sender: HMI
+Type
+: Notification
 
-Purpose: Trigger SDL to merge the Updated Policy Table to the Local Policy Table
+Sender
+: HMI
+
+Purpose
+: Trigger SDL to merge the Updated Policy Table to the Local Policy Table
 
 ### Notification
 
