@@ -1,10 +1,13 @@
 ## OnSystemRequest
 
-Type: Notification
+Type
+: Notification
 
-Sender: SDL
+Sender
+: SDL
 
-Purpose: A request from SDL to download data via a connected application.
+Purpose
+: A request from SDL to download data via a connected application.
 
 **HTTP flow**
 
