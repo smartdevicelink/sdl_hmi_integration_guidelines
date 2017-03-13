@@ -1,9 +1,13 @@
 ## OnAllowSDLFunctionality
-Type : Notification
 
-Sender : HMI
+Type
+: Notification
 
-Purpose : Inform about allowing SDL functionality
+Sender
+: HMI
+
+Purpose
+: Inform about allowing SDL functionality
 
 ### Notification
 Notifies about user/HMI allowing SDL functionality or disallowing access to all mobile apps on the specified device.
