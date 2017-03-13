@@ -63,10 +63,12 @@ Purpose: Inform HMI about the Policy Table Update (PTU) mechanism is triggered o
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams   
+
 |||
 EXTERNAL PROPRIETARY Policy Table Update Flow
 ![EXTERNAL proprietary](./assets/diagram_PolicyUpdate_external_proprietary.png)   
 |||
+
 |||
 BC.PolicyUpdate in PROPRIETARY Policy Table Update Flow
 ![Proprietary PTU](./assets/PolicyUpdate_in_Proprietary_PTU_flow.png)  
