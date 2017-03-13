@@ -1,9 +1,13 @@
 ## GetUserFriendlyMessage
-**Type :** Function
 
-**Sender :** HMI
+Type
+: Function
 
-**Purpose :** Get user friendly messages from Policy Table
+Sender
+: HMI
+
+Purpose
+: Get user friendly messages from Policy Table
 
 ### Request
 
