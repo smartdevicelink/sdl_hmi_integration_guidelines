@@ -1,12 +1,9 @@
 ## PolicyUpdate
-Type
-: Function
+Type: Function
 
-Sender
-: SDL
+Sender: SDL
 
-Purpose
-: Inform HMI about the Policy Table Update (PTU) mechanism is triggered on SDL
+Purpose: Inform HMI about the Policy Table Update (PTU) mechanism is triggered on SDL
 
 ### Request
 
@@ -18,7 +15,6 @@ Purpose
     * Request Policies Server url via the next ``SDL.GetURLs`` from SDL
     * Provide the path defined by ``file`` parameter in the next ``BC.OnSystemRequest`` that SDL will forward to mobile application
     * Recognize the PTU status notifications of ``SDL.OnStatusUpdate`` from SDL and display them in the appropriate UI menu
-
 !!!
 
 !!! NOTE
@@ -68,11 +64,11 @@ This RPC has no additional parameter requirements
 
 ### Sequence Diagrams   
 |||
-_EXTERNAL_PROPRIETARY_ Policy Table Update Flow
+EXTERNAL PROPRIETARY Policy Table Update Flow
 ![EXTERNAL proprietary](./assets/diagram_PolicyUpdate_external_proprietary.png)   
 |||
 |||
-BC.PolicyUpdate in _PROPRIETARY_ Policy Table Update Flow
+BC.PolicyUpdate in PROPRIETARY Policy Table Update Flow
 ![Proprietary PTU](./assets/PolicyUpdate_in_Proprietary_PTU_flow.png)  
 |||
 
