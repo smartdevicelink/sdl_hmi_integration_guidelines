@@ -66,12 +66,12 @@ This RPC has no additional parameter requirements
 
 |||
 BC.PolicyUpdate in EXTERNAL PROPRIETARY Policy Table Update Flow
-![EXTERNAL proprietary](./assets/diagram_PolicyUpdate_external_proprietary.png)   
+![External proprietary](./assets/diagram_PolicyUpdate_external_proprietary.png)
 |||
 
 |||
 BC.PolicyUpdate in PROPRIETARY Policy Table Update Flow
-![Proprietary PTU](./assets/PolicyUpdate_in_Proprietary_PTU_flow.png)  
+![Proprietary PTU](./assets/PolicyUpdate_in_Proprietary_PTU_flow.png)
 |||
 
 ### Example Request
