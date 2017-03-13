@@ -3,11 +3,14 @@
 
 ### Notification
 
-Type: Notification 
+Type
+: Notification 
 
-Sender: HMI  
+Sender
+: HMI  
 
-Purpose: Inform about the User permission changes for some functionality for the named application.
+Purpose
+: Inform about the User permission changes for some functionality for the named application.
 
 Initiated by HMI for specifying the allowance for the application to perform some functionality.The notification informs Policy Manager about some changes in application permissions, that effect application behavior on HMI.  
 
