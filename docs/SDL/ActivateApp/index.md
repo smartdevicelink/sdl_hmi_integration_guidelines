@@ -1,10 +1,13 @@
 ## ActivateApp
 
-Type: Function
+Type
+: Function
 
-Sender: HMI
+Sender
+: HMI
 
-Purpose: Inform SDL that the user has activated an application.
+Purpose
+: Inform SDL that the user has activated an application.
 
 ### Request
 
