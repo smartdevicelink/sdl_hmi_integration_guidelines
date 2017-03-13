@@ -1,27 +1,21 @@
 ## OnReceivedPolicyUpdate
-Type
-: Notification
+Type: Notification
 
-Sender
-: HMI
+Sender: HMI
 
-Purpose
-: Trigger SDL to merge the Updated Policy Table to the Local Policy Table
+Purpose: Trigger SDL to merge the Updated Policy Table to the Local Policy Table
 
 ### Notification
 
-HMI must
+!!!MUST
 
 Send `SDL.OnReceivedPolicyUpdate` notification to SDL after HMI finalized processing the updated Policy Table delivered via `BC.SystemRequest`(for example, after decrypting it _in case_ and by the scheme required by Policies Server)
-
 !!!
 
-**Note**
-
+!!! NOTE
 1. `SDL.OnReceivedPolicyUpdate` dependencies:  
    * SDL expects `SDL.OnReceivedPolicyUpdate` _only in case_ it's built with "-DEXTENDED_POLICY: PROPRIETARY" flag  flag. _Otherwise_ SDL handles the entire PTU flow by itself.
    * SDL will not use Updated PT until notified by HMI
-
 !!!
 
 #### Parameters
@@ -29,6 +23,17 @@ Send `SDL.OnReceivedPolicyUpdate` notification to SDL after HMI finalized proces
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |policyfile|String|true|minlength: 1<br>maxlength: 255|
+
+### Sequence Diagrams
+
+|||
+SDL.OnReceivedPolicyUpdate in EXTERNAL_PROPRIETARY flow
+![Proprietary PTU](./assets/SDL.OnReceivedPolicyUpdate%20in%20EXTERNAL_PROPRIETARY%20flow.jpg)
+|||
+|||
+SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
+![Proprietary PTU](./assets/OnReceivedPolicyUpdate_in_Proprietary_PTU_flow.png)
+|||
 
 #### JSON Example Notification
 ```json
@@ -42,8 +47,3 @@ Send `SDL.OnReceivedPolicyUpdate` notification to SDL after HMI finalized proces
 	}
 }
 ```
-
-### Sequence Diagrams
-
-SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
-![Proprietary PTU](./assets/OnReceivedPolicyUpdate_in_Proprietary_PTU_flow.png)
