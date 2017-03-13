@@ -65,7 +65,7 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams   
 
 |||
-EXTERNAL PROPRIETARY Policy Table Update Flow
+BC.PolicyUpdate in EXTERNAL PROPRIETARY Policy Table Update Flow
 ![EXTERNAL proprietary](./assets/diagram_PolicyUpdate_external_proprietary.png)   
 |||
 
