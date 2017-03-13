@@ -40,10 +40,10 @@ _**Preconditions to the sequence:**_
 a) SDL and HMI are started;   
 b) Device is connected to the System (SDL/HU) and is consented by the User;   
 c) Four apps are registered with SDL and HMI ('name_HMILevel'): app_FULL, app_LIMITED, app_BACKGROUND, app_NONE.
-
+|||
 OnAppPermissionChanged with consent required
 ![OnAppPermissionChanged](./assets/OnAppPermissionChanged.png)
-
+|||
 
 #### JSON Example Notification
 ```json
