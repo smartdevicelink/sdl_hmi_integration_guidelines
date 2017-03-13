@@ -50,11 +50,11 @@ c) App_1 presents in the list of registered apps on HMI.
 
 |||
 1. The User does NOT consent the device.   
-![OnAllowSDLFunctionality] (../ActivateApp/assets/User%20does%20not%20consent%20the%20device1.png)
+![OnAllowSDLFunctionality] (../activateapp/assets/User%20does%20not%20consent%20the%20device1.png)
 |||
 |||
 2. The User consents the device.
-![OnAllowSDLFunctionality](../ActivateApp/assets/User%20consents%20the%20device2.png)
+![OnAllowSDLFunctionality](../activateapp/assets/User%20consents%20the%20device2.png)
 |||
 
 #### JSON Example Notification
