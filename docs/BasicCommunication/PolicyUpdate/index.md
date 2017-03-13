@@ -1,12 +1,9 @@
 ## PolicyUpdate
-Type
-: Function
+Type: Function
 
-Sender
-: SDL
+Sender: SDL
 
-Purpose
-: Inform HMI about the Policy Table Update (PTU) mechanism is triggered on SDL
+Purpose: Inform HMI about the Policy Table Update (PTU) mechanism is triggered on SDL
 
 In case SDL is built with **"-DEXTENDED_POLICY: HTTP" flag** SDL supports PolicyTableUpdate flow **without HMI-related logic**. 
 
@@ -14,7 +11,7 @@ In case SDL is built with **"-DEXTENDED_POLICY: HTTP" flag** SDL supports Policy
 
 ``BC.PolicyUpdate`` represents SDL-generated request to start the PTU sequence.
 
-**SDL must**
+**SDL must**:
 
 * Send SDL.OnStatusUpdate(UPDATE_NEEDED) to HMI.
 * Copy PT Snapshot from the Local Policy Table, store PT Snapshot in SDL memory and remove "messages" sub-section from "consumer_friendly_messages" section.
@@ -23,8 +20,7 @@ In case SDL is built with **"-DEXTENDED_POLICY: HTTP" flag** SDL supports Policy
 * SDL defines the timeout to wait a response on PTU as a value of PTS "module_config" section, key `<timeout_after_x_seconds>`.
 * Send PTU status notifications on ``SDL.OnStatusUpdate`` to HMI.
 
-_Note_
-
+!!! NOTE
 1. ``BC.PolicyUpdate`` dependencies:
    * SDL sends ``BC.PolicyUpdate`` 
 2. Triggers for sending ``BC.PolicyUpdate`` (whichever comes first):
@@ -41,6 +37,7 @@ _Note_
    * ``file`` - is the path to the Snapshot of local PolicyTable (Snapshot PT final destination is Policies Server)
    * ``timeout`` - value taken from ``"timeout_after_x_seconds"`` field of local PT
    * ``retry`` - array of values from ``"seconds_between_retries"`` field of local PT. SDL handles the PTU retry sequence (re-requesting update if fails to receive during timeout) by itself.
+!!!
 
 #### Parameters
 
@@ -54,6 +51,13 @@ _Note_
 #### Parameters
 
 This RPC has no additional parameter requirements
+
+### Sequence Diagrams
+
+|||
+BC.PolicyUpdate in "HTTP" Policy Table Update Flow
+![HTTP PTU](./assets/PolicyUpdate_in_HTTP_PTU_flow.png.png)
+|||
 
 ### Example Request
 
@@ -103,10 +107,3 @@ This RPC has no additional parameter requirements
 }
 
 ```
-
-### Sequence Diagrams
-
-
-BC.PolicyUpdate in "HTTP" Policy Table Update Flow
-![HTTP PTU](./assets/PolicyUpdate_in_HTTP_PTU_flow.png.png)
-
