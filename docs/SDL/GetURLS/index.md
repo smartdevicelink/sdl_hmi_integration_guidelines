@@ -1,10 +1,13 @@
 ## GetURLS
 
-Type: Function
+Type
+: Function
 
-Sender: HMI
+Sender
+: HMI
 
-Purpose: Retrieve the destination URL(s) from Local Policy Table
+Purpose
+: Retrieve the destination URL(s) from Local Policy Table
 
 ### Request
 
