@@ -47,7 +47,8 @@ Message codes specify appropriate user messages which notify the user about some
 |StatusUpToDate|Up-To-Date|
 |VehicleInfo|An app can access the following vehicle information: Fuel Level, Fuel Economy, Engine RPMs, Odometer, VIN, External Temperature, Gear Position, Tire Pressure.|
 
-!!! NOTE “MessageText” column specifies the messages just for an information purposes. The MessageText received from SDL may differ from listed in the table.
+!!! NOTE 
+“MessageText” column specifies the messages just for an information purposes. The MessageText received from SDL may differ from listed in the table.
 !!!
 
 ### Response
