@@ -25,11 +25,11 @@ _**SDL Note**:_
 2. SDL PoliciesManager must send `OnAppPermissionChanged (appRevoked: true, appID)`and `BC.ActivateApp` (NONE) to HMI, in case the `<appID>` application is currently registered and in any HMILevel and in result of PTU `<appID>` gets "null" policies.   
 3. If app permissions were reduced after PTU, SDL sends `OnAppPermissionChanged (isAppPermissionsRevoked: true)` when app is in FULL or LIMITTED. SDL doesn't notify HMI about revoked permissions twice.   
 4. In case the Local PT is successfully updated AND there are new application permissions that require User's consent, Policies Manager must:   
-  * notify HMI about 'user-consent-required' via `SDL.OnAppPermissionChanged{appID, appPermissionsConsentNeeded: true}` per each application in FULL/LIMITED that lacks the User's permissions right after Policies Manager detects the user-unconsented permissions in Local PT.   
-  * notify HMI about 'user-consent-required' `SDL.OnAppPermissionChanged{appID, appPermissionsConsentNeeded: true} after the related app is activated on HMI (in case the related app is now in BACKGROUND /NONE HMILevel)`.   
+  4.1. notify HMI about 'user-consent-required' via `SDL.OnAppPermissionChanged{appID, appPermissionsConsentNeeded: true}` per each application in FULL/LIMITED that lacks the User's permissions right after Policies Manager detects the user-unconsented permissions in Local PT.   
+  4.2. notify HMI about 'user-consent-required' `SDL.OnAppPermissionChanged{appID, appPermissionsConsentNeeded: true} after the related app is activated on HMI (in case the related app is now in BACKGROUND /NONE HMILevel)`.   
 5. In case the Local PT is successfully updated AND there are new permissions that require User's consent, Policies Manager must:   
-  * notify HMI about 'user-consent-required' via `SDL.OnAppPermissionChanged{appID, appPermissionsConsentNeeded: true}` per each application that lacks the User's permissions.   
-  * provide the list of permissions that require User's consent upon request from HMI via `GetListOfPermissions(appID)`.   
+  5.1. notify HMI about 'user-consent-required' via `SDL.OnAppPermissionChanged{appID, appPermissionsConsentNeeded: true}` per each application that lacks the User's permissions.   
+  5.2. provide the list of permissions that require User's consent upon request from HMI via `GetListOfPermissions(appID)`.   
  
 ### Notification
 
