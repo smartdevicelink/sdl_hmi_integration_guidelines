@@ -11,8 +11,8 @@ Purpose
 
 **HTTP flow**
 
-SDL sendS PTS snapshot as a binary data via `OnSystemRequest` mobile API from the system to backend. The "url" PTS will be forwarded to and "timeout" must be taken from the Local Policy Table.
-If no "url" is provided in Local Policy Table, it is supposed that mobile application will sent Policy Table Update data back to SDL.
+* SDL sends the PTS snapshot as binary data via an `OnSystemRequest` mobile request from the system to the backend. Both the "url" that the PTS will be forwarded to and the "timeout" must be taken from the Local Policy Table.
+    * If no "url" is provided in the Local Policy Table, it is supposed that the mobile application will send the Policy Table Update data back to SDL.
 
 ### Notification
 
