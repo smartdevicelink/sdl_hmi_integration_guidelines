@@ -18,7 +18,7 @@ _**SDL must**_:
    
 2) if HMI sends to SDL _OnSeekMediaClockTimer_ **valid** and **allowed** by Local Policy Table notification:   
      - transfer _OnSeekMediaClockTimer_ notification from HMI to mobile application.   
-3) transfer _OnSeekMediaClockTimer_ notification from HMI to mobile app **independently** on value of "enableSeek"
+3) transfer _OnSeekMediaClockTimer_ notification from HMI to mobile app **independently** on value of _enableSeek_
 (true or false) parameter at _SetMediaClockTimer_request_.
 !!!
 
@@ -43,6 +43,7 @@ This RPC has no additional parameter requirements.
 ### Sequence Diagrams
 
 |||
+OnSeekMediaClockTimer notification with enableSeek param
 ![_OnSeekMediaClockTimer_ notification](./assets/OnSeekMediaClockTimer.png)
 |||
 
@@ -72,6 +73,3 @@ This RPC has no additional parameter requirements.
             }
 }
 ```
-
-
-
