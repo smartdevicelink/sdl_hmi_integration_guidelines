@@ -39,6 +39,9 @@
               "name": "OnReady"
             },
             {
+              "name": "OnSeekMediaClockTimer"
+            },    
+            {
               "name": "OnStartDeviceDiscovery"
             },
             {
@@ -138,6 +141,9 @@
             {
               "name": "AlertManeuver"
             },
+            {
+              "name": "GetWayPoints"
+            },    
             {
               "name": "IsReady"
             },
@@ -301,6 +307,9 @@
               "name": "GetLanguage"
             },
             {
+              "name": "GetCapabilities"
+            },  
+            {
               "name": "GetSupportedLanguages"
             },
             {
@@ -342,6 +351,9 @@
             {
               "name": "SetAppIcon"
             },
+            {
+              "name": "SetAudioStreamingIndicator"
+            },  
             {
               "name": "SetDisplayLayout"
             },
