@@ -13,13 +13,14 @@ Once UI module is confirmed to be ready (via response to [IsReady RPC], SDL star
 
 The response to UI.GetCapabilities is assumed to bring all the information required for correct configuring the ‘display’ requests to UI.   
 
-[IsReady RPC]: https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/develop/docs/Navigation/IsReady/index.md#isready   
+[IsReady RPC]: ../../navigation/isready/index.md#isready   
   
 
 ### Request   
 
 #### Behavior:   
-_**HMI must:**_   
+
+!!! MUST   
 1)	Check the capabilities of:   
 •	Display: its type, the fields supported, the format of media clock supported, whether displaying images are supported and of what type if so, image capabilities, available persistent display templates and number of presets etc.   
 •	Zone the UI is located in (front/back display).   
@@ -39,12 +40,12 @@ The system shall source the vehicle driver location information from DID 0xDE00,
 For Vehicle Driver Location information, a value of:   
 0 - means the vehicle is Left Hand Drive;   
 1 - means the vehicle is Right Hand Drive.   
+!!!
 
-_**Note:**_   
+!!! NOTE      
 - _The expected UI capabilities are described in the section [Parameters] linked to the corresponding structures and enumerations with more detailed information._   
-- _SDL must return the value of "steeringWheelLocation" received from HMI or retrieved from 'HMI_capabilities.json' file._
-[Parameters]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/UI/GetCapabilities/index.md#parameters-1
-
+- _SDL must return the value of "steeringWheelLocation" received from HMI or retrieved from 'HMI_capabilities.json' file._   
+!!!
 
 #### Parameters
 
@@ -62,19 +63,23 @@ This RPC has no additional parameter requirements.
 |softButtonCapabilities|[Common.SoftButtonCapabilities]|false|Array = true<br>minsize = 1<br>maxsize = 100|Must be returned if the platform supports on-screen soft buttons. Contains the soft buttons capabilities: whether the up/down events, long/short press, referencing image are supported.|
 |hmiCapabilities|[Common.HMICapabilities]|false|-|Specifies the HMI capabilities of navigation and phonecall support.|
 
-[Common.DisplayCapabilities]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#displaycapabilities
-[Common.AudioPassThruCapabilities]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#audiopassthrucapabilities
-[Common.HmiZoneCapabilities]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#hmizonecapabilities
-[Common.SoftButtonCapabilities]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#softbuttoncapabilities
-[Common.HMICapabilities]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Structs/index.md#hmicapabilities
+[Common.DisplayCapabilities]: ../../common/structs/displaycapabilities
+[Common.AudioPassThruCapabilities]: ../../common/structs/audiopassthrucapabilities
+[Common.HmiZoneCapabilities]: ../../common/enums/hmizonecapabilities
+[Common.SoftButtonCapabilities]: ../../common/structs/softbuttoncapabilities
+[Common.HMICapabilities]: ../../common/structs/hmicapabilities
 
 ### Sequence Diagrams
 
+|||
 Get Capabilities
 ![GetCapabilities](./assets/GetCapabilities.png)
+|||
 
+|||
 RegisterAppInterface: SDL must provide the value of _steeringWheelLocation_ parameter at response as a part of HMICapabilities struct.
 ![providing_steeringWheelLocation_parameter_at_response](./assets/providing_steeringWheelLocation_parameter_at_response.png)
+|||
 
 ### Example Request
 
