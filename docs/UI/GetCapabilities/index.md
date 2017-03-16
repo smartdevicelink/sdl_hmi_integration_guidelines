@@ -13,9 +13,8 @@ Once UI module is confirmed to be ready (via response to [IsReady RPC], SDL star
 
 The response to UI.GetCapabilities is assumed to bring all the information required for correct configuring the ‘display’ requests to UI.   
 
-[IsReady RPC]: ../../navigation/isready/index.md#isready   
+[IsReady RPC]: ../../navigation/isready/isready   
   
-
 ### Request   
 
 #### Behavior:   
