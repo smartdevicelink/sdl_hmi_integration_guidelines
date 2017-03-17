@@ -13,28 +13,34 @@ SDL prompts HMI to inform the User about a start of audio capturing and by displ
 
 The request may arrive in both cases of active and background application on HMI.   
 
-_**Note:**   
-This RPC may arrive together with TTS.Speak which purpose is to inform the User about start of audio capturing by the means of TTS module. In case of no TTS, SDL starts capturing audio right after sending UI.PerformAPT_request to HMI with using GSTreamer library._
-
+!!! NOTE   
+This RPC may arrive together with TTS.Speak which purpose is to inform the User about start of audio capturing by the means of TTS module. In case of no TTS, SDL starts capturing audio right after sending UI.PerformAPT_request to HMI with using GSTreamer library.
+!!!
 
 ### Request
 #### Behavior   
 
-_**HMI must:**_   
+!!! MUST   
 1)	Display the dialog with requested text (_audioPassThruDisplayText1_ and _audioPassThruDisplayText2_ text fields).   
 2)	Attenuate or mute any audio source except of TTS speaking (depending on HMI capabilities).   
-_**Note:** If PerfromAudioPassThru request is accompanied with TTS.Speak RPC, SDL starts the audio capturing with GSTreamer library only after TTS finishes speaking the requested text (after receiving TTS.SPEAK: SUCCESS response)._   
+!!! NOTE   
+If PerfromAudioPassThru request is accompanied with TTS.Speak RPC, SDL starts the audio capturing with GSTreamer library only after TTS finishes speaking the requested text (after receiving TTS.SPEAK: SUCCESS response).
+!!!
 3)	Keep displaying the dialog and capturing the audio until:   
 - The value of maxDuration is reached.   
 - The User presses any of HMI-defined ‘Cancel’/’Done’/’Retry’ buttons.   
 - The request of EndAudioPassThru comes from SDL.   
 4)	Respond the request.   
+!!!
 
 _**HMI must not**_ return the OnButtonEvent/OnButtonPress notifications to SDL when such soft button is pressed by the User.
 
-_**Important:**_ SDL performs audio data capturing and transferring to mobile side by itself (no HMI API are involved). There are two options: 
+!!! IMPORTANT
+SDL performs audio data capturing and transferring to mobile side by itself (no HMI API are involved). There are two options: 
 a)	SDL is built with  “-DEXTENDED_MEDIA_MODE=OFF” flag (for the testing purposes). In this case SDL reads the hardcoded .wav file (filename is _RecordingFileSource_ located in _AppStorageFolder_) and sends data read via OnAudioPassThru to mobile application.   
-b)	SDL is built with “-DEXTENDED_MEDIA_MODE=ON”. In this case SDL reads the data from the connected microphone and sends data read via OnAudioPassThru to mobile application.   
+b)	SDL is built with “-DEXTENDED_MEDIA_MODE=ON”. In this case SDL reads the data from the connected microphone and sends data read via OnAudioPassThru to mobile application.  
+!!!
+
 _**Notes for HMI expected behavior:**_   
 - The system shall accept requests for AudioPassThru with a reference image.   
 - When the system receives a request for AudioPassThru with a reference to a valid image, the system shall display the image on the pop-up of the PerformAudioPassThru.   
@@ -47,14 +53,19 @@ _**Notes for HMI expected behavior:**_
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:-------|:----------|:----------|
 |appID|Integer|true|-|ID of application related to this RPC.|
-|audioPassThruDisplayTexts|[Common.TextFieldStruct] (https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/master/docs/Common/Structs/index.md#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 2|Uses audioPassThruDisplayText1: First line of text displayed during audio capture; audioPassThruDisplayText2: Second line of text displayed during audio capture.|
+|audioPassThruDisplayTexts|[Common.TextFieldStruct]|true|array: true<br>minsize: 0<br>maxsize: 2|Uses audioPassThruDisplayText1: First line of text displayed during audio capture; audioPassThruDisplayText2: Second line of text displayed during audio capture.|
 |maxDuration|Integer|true|minvalue: 1<br>maxvalue: 1000000|The maximum duration of audio recording in milliseconds. If not provided, the recording should be performed until EndAudioPassThru arrives.|
 |muteAudio|Boolean|true|-|Defines if the current audio source should be muted during the APT session. If not, the audio source will play without interruption. If omitted, the value is set to true.|
-|audioPassThruIcon|[Common.Image](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/master/docs/Common/Structs/index.md#image)|false|-|Image struct determining whether static or dynamic icon. If omitted on supported displays, no (or the default if applicable) icon shall be displayed.|
+|audioPassThruIcon|[Common.Image]|false|-|Image struct determining whether static or dynamic icon. If omitted on supported displays, no (or the default if applicable) icon shall be displayed.|
+
+[Common.TextFieldStruct]: ../../common/structs/#textfieldstruct
+[Common.Image]: ../../common/structs/#image
 
 ### Response
-_**Note:**   
-There is a difference in message type for WebSocket and D-Bus connection (see the table below)._   
+
+!!! NOTE
+There is a difference in message type for WebSocket and D-Bus connection (see the table below).   
+!!!
 
 |Result|Description|WebSocket (message type)|D-Bus (message type)|Message Params|
 |:------|:---------|:----------------------:|:------------------|:------------:|
@@ -65,27 +76,37 @@ There is a difference in message type for WebSocket and D-Bus connection (see th
 |Failure|INVALID_ID: appID is invalid (e.g. doesn’t exist)|JSON error message|Method return|code 13|
 |Failure|GENERIC_ERROR: The unknown issue occurred or other codes are not applicable.|JSON error message|Method return|code 22|
 
-Please see [Result Enumeration](https://github.com/DrachenkoAnastasiia/sdl_hmi_integration_guidelines/blob/master/docs/Common/Enums/index.md#result) for all SDL-supported codes.
+Please see [Result Enumeration](../../common/enums/#result) for all SDL-supported codes.
 
 #### Parameters
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
 
+|||
 PerformAudioPassThru requested with TTS.Speak
 ![PerformAudioPassThru](./assets/PerformAudioPassThruSpeak.png)
+|||
 
+|||
 PerformAudioPassThru with EndAudioPassThru
 ![PerformAudioPassThru](./assets/PerformAudioPassThruEndAudio.png)
+|||
 
+|||
 PerformAudioPassThru not supported
 ![PerformAudioPassThru](./assets/PerformAudioPassThruNotSupported.png)
+|||
 
+|||
 PerformAudioPassThru from vehicle microphone
 ![PerformAudioPassThru](./assets/PerformAudioPassThruMic.png)
+|||
 
+|||
 PerformAudioPassThru with audioPassThruIcon param
 ![PerformAudioPassThru](./assets/PerformAudioPassThru_with_audioPassThruIcon1.png)   
+|||
 
 ### Example Request
 
