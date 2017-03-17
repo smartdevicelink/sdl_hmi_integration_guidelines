@@ -105,7 +105,7 @@ PerformAudioPassThru from vehicle microphone
 
 |||
 PerformAudioPassThru with audioPassThruIcon param
-![PerformAudioPassThru](./assets/PerformAudioPassThru_with_audioPassThruIcon1.png)   
+![PerformAudioPassThru](./assets/PerformAudioPassThru_with_audioPassThruIcon1.png)
 |||
 
 ### Example Request
