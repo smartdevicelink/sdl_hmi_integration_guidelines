@@ -49,11 +49,12 @@ b) App_1 is running on this device and is registered with SDL.
 c) App_1 presents in the list of registered apps on HMI.   
 
 |||
-1. The User does NOT consent the device.   
-![OnAllowSDLFunctionality] (../activateapp/assets/User%20does%20not%20consent%20the%20device1.png)
+The User does NOT consent the device.   
+![OnAllowSDLFunctionality](../activateapp/assets/User%20does%20not%20consent%20the%20device1.png)
 |||
+
 |||
-2. The User consents the device.
+The User consents the device.
 ![OnAllowSDLFunctionality](../activateapp/assets/User%20consents%20the%20device2.png)
 |||
 
