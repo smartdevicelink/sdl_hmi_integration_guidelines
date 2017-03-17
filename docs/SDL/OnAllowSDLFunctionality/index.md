@@ -44,9 +44,9 @@ Send `OnAllowSDLFuntionality` notification to SDL as a result of user’s choice
 ### Sequence Diagrams
 
 Preconditions:   
-* Device is connected to the HU.   
-* App_1 is running on this device and is registered with SDL.   
-* App_1 presents in the list of registered apps on HMI.   
+- Device is connected to the HU.   
+- App_1 is running on this device and is registered with SDL.   
+- App_1 presents in the list of registered apps on HMI.   
 
 |||
 The User consents the device.
