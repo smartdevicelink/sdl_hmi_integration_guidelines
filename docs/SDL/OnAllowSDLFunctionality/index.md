@@ -44,16 +44,18 @@ Send `OnAllowSDLFuntionality` notification to SDL as a result of user’s choice
 ### Sequence Diagrams
 
 Preconditions:   
-a) Device is connected to the HU.   
-b) App_1 is running on this device and is registered with SDL.   
-c) App_1 presents in the list of registered apps on HMI.   
+* Device is connected to the HU.   
+* App_1 is running on this device and is registered with SDL.   
+* App_1 presents in the list of registered apps on HMI.   
 
 |||
-![OnAllowSDLFunctionality1](../activateapp/assets/User%20consents%20the%20device2.png "The User consents the device.")
+The User consents the device.
+![OnAllowSDLFunctionality](../activateapp/assets/User%20consents%20the%20device2.png)
 |||
+
 |||
 The User does NOT consent the device.
-![OnAllowSDLFunctionality1](../activateapp/assets/User%20does%20not%20consent%20the%20device1.png)
+![OnAllowSDLFunctionality](../activateapp/assets/User%20does%20not%20consent%20the%20device1.png)
 |||
 
 #### JSON Example Notification
