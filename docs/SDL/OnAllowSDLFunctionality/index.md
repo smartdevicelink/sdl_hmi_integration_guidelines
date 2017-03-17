@@ -47,9 +47,9 @@ Preconditions:
 a) Device is connected to the HU.   
 b) App_1 is running on this device and is registered with SDL.   
 c) App_1 presents in the list of registered apps on HMI.   
+
 |||
-The User consents the device.
-![OnAllowSDLFunctionality1](../activateapp/assets/User%20consents%20the%20device2.png)
+![OnAllowSDLFunctionality1](../activateapp/assets/User%20consents%20the%20device2.png "The User consents the device.")
 |||
 |||
 The User does NOT consent the device.
