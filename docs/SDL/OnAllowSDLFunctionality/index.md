@@ -25,7 +25,7 @@ Send `OnAllowSDLFuntionality` notification to SDL as a result of user’s choice
     - send _BC.ActivateApp_(params, level: ”default_hmi”-value-from-assigned-policies) to HMI (even if this “default_hmi” value is NONE or BACKGROUND).   
     - notify mobile application via _OnHMIStatus_(params, level: ”default_hmi”-value-from-assigned-policies).   
 4. In case PoliciesManager receives _SDL.OnAllowSDLFunctionality_ with _allowed=false_ and with _device_ param, PoliciesManager must record the named device (_device_ param) as NOT consented in Local PT ("user_consent_records" -> _device_ sub-section) and send _BC.ActivateApp_ request with _level_ param of the value from 'default_hmi' key of 'pre-DataConsent'section of Local PT to HMI.   
-5. In case PoliciesManager receives _SDL.OnAllowSDLFunctionality_ with _allowed=true_ and with _device_ param from HMI, PoliciesManager must record the named device (_device_ param) as consented in Local PT ("device_data" section \<device_id> subsection "user_consent_records" -> "device" sub-section).
+5. In case PoliciesManager receives _SDL.OnAllowSDLFunctionality_ with _allowed=true_ and with _device_ param from HMI, PoliciesManager must record the named device (_device_ param) as consented in Local PT ("device_data" section `<device_id>` subsection "user_consent_records" -> "device" sub-section).
 
 !!!
 
@@ -50,12 +50,12 @@ Preconditions:
 
 |||
 The User consents the device.
-![OnAllowSDLFunctionality](../activateapp/assets/User%20consents%20the%20device2.png)
+![OnAllowSDLFunctionality](./assets/User_consents_the_device2.png)
 |||
 
 |||
 The User does NOT consent the device.
-![OnAllowSDLFunctionality](../activateapp/assets/User%20does%20not%20consent%20the%20device1.png)
+![OnAllowSDLFunctionality](./assets/User_does_not_consent_the_device1.png)
 |||
 
 #### JSON Example Notification
