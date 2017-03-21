@@ -112,10 +112,10 @@
             },
             {
               "name": "UpdateAppList"
-            }
+            },
             {
               "name": "UpdateDeviceList"
-            },
+            }
           ]
         },
         {
