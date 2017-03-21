@@ -4,22 +4,20 @@
   * Purpose: Callback for the seek media clock timer notification.
   
   
-  ### Behavior
+ **Behavior**
  A notification will be provided if the user touches (or seeks) to a particular position on the HMI mediaclock timer. 
  The notification will contain a starttime with the position the user has seeked to.
    
-  !!! NOTE   
+!!! NOTE   
 _**SDL must**_:   
-
 1) if HMI sends to SDL _OnSeekMediaClockTimer_ **valid** and **NOT allowed** by Local Policy Table notification:   
      - log corresponding error internally;   
      - ignore this _OnSeekMediaClockTimer_ notification;   
    _**SDL must NOT**_: transfer _OnSeekMediaClockTimer_ notification from HMI to mobile application.   
-   
 2) if HMI sends to SDL _OnSeekMediaClockTimer_ **valid** and **allowed** by Local Policy Table notification:   
      - transfer _OnSeekMediaClockTimer_ notification from HMI to mobile application.   
 3) transfer _OnSeekMediaClockTimer_ notification from HMI to mobile app **independently** on value of _enableSeek_
-(true or false) parameter at _SetMediaClockTimer_request_.
+(true or false) parameter at _SetMediaClockTimer_request_.   
 !!!
 
 ### Request
