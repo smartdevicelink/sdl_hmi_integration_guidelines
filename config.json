@@ -18,34 +18,19 @@
           "name": "BasicCommunication",
           "navigation": [
             {
-              "name": "UpdateDeviceList"
-            },
-            {
               "name": "ActivateApp"
-            },
-            {
-              "name": "MixingAudioSupported"
             },
             {
               "name": "AllowDeviceToConnect"
             },
             {
-              "name": "SystemRequest"
+              "name": "DialNumber"
             },
             {
               "name": "GetSystemInfo"
             },
             {
-              "name": "OnReady"
-            },
-            {
-              "name": "OnStartDeviceDiscovery"
-            },
-            {
-              "name": "OnDeviceChosen"
-            },
-            {
-              "name": "DialNumber"
+              "name": "MixingAudioSupported"
             },
             {
               "name": "OnAppActivated"
@@ -61,6 +46,9 @@
             },
             {
               "name": "OnAwakeSDL"
+            },
+            {
+              "name": "OnDeviceChosen"
             },
             {
               "name": "OnEmergencyEvent"
@@ -87,13 +75,22 @@
               "name": "OnPutFile"
             },
             {
+              "name": "OnReady"
+            },
+            {
               "name": "OnResumeAudioSource"
+            },
+            {
+               "name": "OnSeekMediaClockTimer"
             },
             {
               "name": "OnSDLClose"
             },
             {
               "name": "OnSDLPersistenceComplete"
+            },
+            {
+              "name": "OnStartDeviceDiscovery"
             },
             {
               "name": "OnSystemInfoChanged"
@@ -111,8 +108,14 @@
               "name": "PolicyUpdate"
             },
             {
+              "name": "SystemRequest"
+            },
+            {
               "name": "UpdateAppList"
             }
+            {
+              "name": "UpdateDeviceList"
+            },
           ]
         },
         {
