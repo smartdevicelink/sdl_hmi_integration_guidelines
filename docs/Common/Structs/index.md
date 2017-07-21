@@ -411,3 +411,60 @@
 |imageTypeSupported|Common.FileType|false|array: true<br>minsize: 1<br>maxsize: 100||
 |imageResolution|Common.ImageResolution|false|||
 
+### ModuleData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|moduleType|Common.ModuleType|true||The moduleType indicates which type of data should be changed and identifies which data object exists in this struct. For example, if the moduleType is CLIMATE then a "climateControlData" should exist|
+|radioControlData|Common.RadioControlData|false|||
+|climateControlData|Common.ClimateControlData|false||
+
+### RadioControlData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|frequencyInteger|Integer|false|minvalue:0 maxvalue:1710|The integer part of the frequency ie for 101.7 this value should be 101|
+|frequencyFraction|Integer|false|minvalue:0 maxvalue:9|The fractional part of the frequency for 101.7 is 7|
+|band|Common.RadioBand|false|||
+|rdsData|Common.RdsData|false|||
+|availableHDs|Integer|false|minvalue:1 maxvalue:3|number of HD sub-channels if available|
+|hdChannel|Integer|false|minvalue:1 maxvalue:3|Current HD sub-channel if available|
+|signalStrength|Integer|false|minvalue:0 maxvalue:100||
+|signalChangeThreshold|Integer|false|minvalue:0 maxvalue:100|If the signal strength falls below the set value for this parameter, the radio will tune to an alternative frequency|
+|radioEnable|Boolean|false||True if the radio is on, false is the radio is off|
+|state|Common.RadioState|false||||
+
+### RdsData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|PS|String|false|minlength:0<br>maxlength:8|Program Service Name|
+|RT|String|false|minlength:0<br>maxlength:64|Radio Text|
+|CT|String|false|minlength:24 maxlength:24|The clock text in UTC format as YYYY-MM-DDThh:mm:ss.sTZD|
+|PI|String|false|minlength:0 maxlength:6|Program Identification - the call sign for the radio station|
+|PTY|Integer|false|minvalue:0 maxvalue:31|The program type - The region should be used to differentiate between EU and North America program types|
+|TP|Boolean|false||Traffic Program Identification - Identifies a station that offers traffic|
+|TA|Boolean|false||Traffic Announcement Identification - Indicates an ongoing traffic announcement|
+|REG|String|false||Region|
+
+### ClimateControlData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|fanSpeed|Integer|false|minvalue: 0 <br> maxvalue: 100||
+|currentTemperature|Temperature|false|||
+|desiredTemperature|Temperature|false|||
+|acEnable|Boolean|false|||
+|circulateAirEnable|Boolean|false|||
+|autoModeEnable|Boolean|false|||
+|defrostZone|DefrostZone|false|||
+|dualModeEnable|Boolean|false|||
+|acMaxEnable|Boolean|false|||
+|ventilationMode|VentilationMode|false|||
+
+### Temperature
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|unit|TemperatureUnit|true||Temperature Unit|
+|value|Float|true||The temperature value is in TemperatureUnit specified unit|
