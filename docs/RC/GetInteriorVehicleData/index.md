@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|moduleType|[Common.ModuleType]()|true||
+|moduleType|[Common.ModuleType](https://github.com/OlesiaV/sdl_hmi_integration_guidelines/blob/sdl_rc_baseline/docs/Common/Enums/index.md)|true||
 |subscribe|Boolean|false|defvalue="false"|
 |appID|Integer|true||
 
@@ -27,6 +27,13 @@ Purpose
 |:---|:---|:--------|:---------|
 |moduleData|[Common.ModuleData](https://github.com/OlesiaV/https://github.com/OlesiaV/sdl_hmi_integration_guidelines/blob/master/docs/Common/Structs/index.md)|true||
 |isSubscribed|Boolean|false||
+
+### Sequence Diagrams
+|||
+GetInteriorVehicleData
+![GetInteriorVehicleData](assets/GetInteriorVehicleData.png)
+
+|||
 
 ### Example Request
 
