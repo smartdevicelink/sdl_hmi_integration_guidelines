@@ -802,3 +802,51 @@
 |OFF|1||
 |ON|2||
 
+### ModuleType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|CLIMATE|||
+|RADIO|||
+
+### RadioBand
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|AM|||
+|FM|||
+|XM|||
+
+### RadioState
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ACQUIRING|||
+|ACQUIRED|||
+|MULTICAST|||
+|NOT_FOUND|||
+
+### TemperatureUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FAHRENHEIT|||
+|CELSIUS|||
+
+### DefrostZone
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FRONT|||
+|REAR|||
+|ALL|||
+|NONE|||
+
+### VentilationMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|UPPER|||
+|LOWER|||
+|BOTH|||
+|NONE|||
