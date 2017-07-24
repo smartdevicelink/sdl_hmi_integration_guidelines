@@ -39,14 +39,12 @@ GetInteriorVehicleData
 
 ```json
 {
-    "id": 31,
+    "id": 122,
     "jsonrpc": "2.0",
     "method": "RC.GetInteriorVehicleData",
     "params": {
-        "appID": 1697438268,
-        "moduleDescription": {
-            "moduleType": "CLIMATE"
-        },
+        "appID": :1093636990,
+        "moduleType": "CLIMATE"
         "subscribe": true
     }
 }
@@ -56,7 +54,7 @@ GetInteriorVehicleData
 
 ```json
 {
-    "id": 31,
+    "id": 122,
     "jsonrpc": "2.0",
     "result": {
         "code": 0,
@@ -99,7 +97,7 @@ GetInteriorVehicleData
         },
         "message": "Read only parameters received"
     },
-    "id": 31,
+    "id": 122,
     "jsonrpc": "2.0"
 }
 ```
