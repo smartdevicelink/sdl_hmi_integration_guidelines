@@ -54,6 +54,7 @@
 |BACKGROUND_PROCESS|7||
 |TESTING|8||
 |SYSTEM|9||
+|REMOTE_CONTROL|10||
 
 ### SpeechCapabilities
 
@@ -806,47 +807,47 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|CLIMATE|||
-|RADIO|||
+|CLIMATE|0||
+|RADIO|1||
 
 ### RadioBand
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|AM|||
-|FM|||
-|XM|||
+|AM|0||
+|FM|1||
+|XM|2||
 
 ### RadioState
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|ACQUIRING|||
-|ACQUIRED|||
-|MULTICAST|||
-|NOT_FOUND|||
+|ACQUIRING|0||
+|ACQUIRED|1||
+|MULTICAST|2||
+|NOT_FOUND|3||
 
 ### TemperatureUnit
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|FAHRENHEIT|||
-|CELSIUS|||
+|FAHRENHEIT|0||
+|CELSIUS|1||
 
 ### DefrostZone
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|FRONT|||
-|REAR|||
-|ALL|||
-|NONE|||
+|FRONT|0||
+|REAR|1||
+|ALL|2||
+|NONE|3||
 
 ### VentilationMode
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|UPPER|||
-|LOWER|||
-|BOTH|||
-|NONE|||
+|UPPER|0||
+|LOWER|1||
+|BOTH|2||
+|NONE|3||
