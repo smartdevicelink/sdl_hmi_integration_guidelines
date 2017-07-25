@@ -50,6 +50,68 @@ SetInteriorvehicleData READ_ONLY
 
 ### Example Request
 
+```json
+{
+    "id": 31,
+    "jsonrpc": "2.0",
+    "method": "RC.SetInteriorVehicleData",
+    "params": {
+        "appID": 306873852,
+        "moduleData": {
+            "climateControlData": {
+                "acEnable": true,
+                "acMaxEnable": true,
+                "autoModeEnable": true,
+                "circulateAirEnable": true,
+                "currentTemperature": {
+                    "unit": "FAHRENHEIT",
+                    "value": 20.1
+                },
+                "defrostZone": "FRONT",
+                "desiredTemperature": {
+                    "unit": "CELSIUS",
+                    "value": 10.5
+                },
+                "dualModeEnable": true,
+                "fanSpeed": 50,
+                "ventilationMode": "BOTH"
+            },
+            "moduleType": "CLIMATE"
+        }
+    }
+}
+```
+
 ### Example Response
 
-### Example Error
+```json
+{
+    "id": 31,
+    "jsonrpc": "2.0",
+    "result": {
+        "code": 0,
+        "method": "RC.SetInteriorVehicleData",
+        "moduleData": {
+            "climateControlData": {
+                "acEnable": true,
+                "acMaxEnable": true,
+                "autoModeEnable": true,
+                "circulateAirEnable": true,
+                "currentTemperature": {
+                    "unit": "FAHRENHEIT",
+                    "value": 20.1
+                },
+                "defrostZone": "FRONT",
+                "desiredTemperature": {
+                    "unit": "CELSIUS",
+                    "value": 10.5
+                },
+                "dualModeEnable": true,
+                "fanSpeed": 50,
+                "ventilationMode": "BOTH"
+            },
+            "moduleType": "CLIMATE"
+        }
+    }
+}
+```
