@@ -38,6 +38,15 @@ RC.SetInteriorvehicledata represents a request from an application to change set
 |:---|:---|:--------|:---------|:---------|
 |moduleData|Common.ModuleData|true|||
 
+### Sequence Diagrams
+|||
+SetInteriorVehicleData
+![SetInteriorVehicleData](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/SDL_RC_baseline_part2/docs/RC/SetInteriorVehicleData/accessories/SetInteriorVehicleData.png)
+|||
+|||
+SetInteriorvehicleData READ_ONLY
+![SetInteriorvehicleData READ_ONLY](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/SDL_RC_baseline_part2/docs/RC/SetInteriorVehicleData/accessories/SetInteriorVehicleData_READ_ONLY.png)
+|||
 
 ### Example Request
 
