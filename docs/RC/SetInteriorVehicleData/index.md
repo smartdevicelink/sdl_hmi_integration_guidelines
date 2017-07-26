@@ -115,3 +115,19 @@ SetInteriorvehicleData READ_ONLY
     }
 }
 ```
+
+### Example Error
+
+```json
+{
+    "error": {
+        "code": 26,
+        "data": {
+            "method": "RC.SetInteriorVehicleData"
+        },
+        "message": "Read only parameters received"
+    },
+    "id": 31,
+    "jsonrpc": "2.0"
+}
+```
