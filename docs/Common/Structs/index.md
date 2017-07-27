@@ -440,7 +440,7 @@
 |:---|:---|:--------|:---------|:----------|
 |PS|String|false|minlength:0<br>maxlength:8|Program Service Name|
 |RT|String|false|minlength:0<br>maxlength:64|Radio Text|
-|CT|String|false|minlength:24 maxlength:24|The clock text in UTC format as YYYY-MM-DDThh:mm:ss.sTZD|
+|CT|String|false|minlength:22 maxlength:28|The clock text in UTC format as YYYY-MM-DDThh:mm:ss.sTZD|
 |PI|String|false|minlength:0 maxlength:6|Program Identification - the call sign for the radio station|
 |PTY|Integer|false|minvalue:0 maxvalue:31|The program type - The region should be used to differentiate between EU and North America program types|
 |TP|Boolean|false||Traffic Program Identification - Identifies a station that offers traffic|
