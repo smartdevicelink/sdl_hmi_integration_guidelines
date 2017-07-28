@@ -27,7 +27,7 @@ RC.SetInteriorvehicledata represents a request from an application to change set
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:---------|
-|moduleData|Common.ModuleData|true||The module type and data to set|
+|moduleData|[Common.ModuleData](https://github.com/OlesiaV/sdl_hmi_integration_guidelines/blob/a118768fa9c6631e168f932919687196bd281f46/docs/Common/Structs/index.md)|true||The module type and data to set|
 |appID|Integer|true||Internal SDL-assigned ID of the related application|
 
 ### Response
@@ -36,7 +36,7 @@ RC.SetInteriorvehicledata represents a request from an application to change set
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:---------|
-|moduleData|Common.ModuleData|true|||
+|moduleData|[Common.ModuleData](https://github.com/OlesiaV/sdl_hmi_integration_guidelines/blob/a118768fa9c6631e168f932919687196bd281f46/docs/Common/Structs/index.md)|true|||
 
 ### Sequence Diagrams
 |||
@@ -45,7 +45,7 @@ SetInteriorVehicleData
 |||
 |||
 SetInteriorvehicleData READ_ONLY
-![SetInteriorvehicleData READ_ONLY](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/SDL_RC_baseline_part2/docs/RC/SetInteriorVehicleData/accessories/SetInteriorVehicleData_READ_ONLY.png)
+![SetInteriorvehicleData READ_ONLY](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/SDL_RC_baseline_part2/docs/RC/SetInteriorVehicleData/accessories/setInteriorVehicleData_READ_ONLY.png)
 |||
 
 ### Example Request
