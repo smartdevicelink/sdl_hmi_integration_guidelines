@@ -34,3 +34,14 @@ OnRemoteControlSettings disabling RC
 |||
 
 #### JSON Example Notification
+
+```json
+{
+    "jsonrpc": "2.0",
+    "method": "RC.OnRemoteControlSettings",
+    "params": {
+        "accessMode": "ASK_DRIVER",
+        "allowed": true
+    }
+}
+```
