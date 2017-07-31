@@ -46,6 +46,44 @@ GetInteriorVehicleDataConsent
 
 ### Example Request
 
+```json
+{
+    "id": 38,
+    "jsonrpc": "2.0",
+    "method": "RC.GetInteriorVehicleDataConsent",
+    "params": {
+        "appID": 2032286926,
+        "moduleType": "CLIMATE"
+    }
+}
+```
+
 ### Example Response
 
+```json
+{
+    "id": 38,
+    "jsonrpc": "2.0",
+    "result": {
+        "allowed": true,
+        "code": 0,
+        "method": "RC.GetInteriorVehicleDataConsent"
+    }
+}
+```
+
 ### Example Error
+
+```json
+{
+    "error": {
+        "code": 26,
+        "data": {
+            "method": "RC.GetInteriorVehicleDataConsent"
+        },
+        "message": "Info message"
+    },
+    "id": 38,
+    "jsonrpc": "2.0"
+}
+```
