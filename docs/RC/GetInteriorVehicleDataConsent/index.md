@@ -40,6 +40,8 @@ The driver is expected to have an ability to grant or deny the permission.
 ### Sequence Diagrams
 
 |||
+GetInteriorVehicleDataConsent
+![GetInteriorVehicleDataConsent](https://github.com/OlesiaV/sdl_hmi_integration_guidelines/blob/sdl_rc_part3/docs/RC/GetInteriorVehicleDataConsent/accessories/GetInteriorVehicleDataConsent.png)
 |||
 
 ### Example Request
