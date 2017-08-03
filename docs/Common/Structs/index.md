@@ -25,6 +25,26 @@
 |navigation|Boolean|false|||
 |phoneCall|Boolean|false|||
 
+### NavigationCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|sendLocationEnabled|Boolean|false||If the module has the ability to add locations to the onboard nav|
+|getWayPointsEnabled|Boolean|false||If the module has the ability to return way points from onboard nav|
+
+### PhoneCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|dialNumberEnabled|Boolean|false||If the module has the abiulity to perform dial number|
+
+### SystemCapabilities
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|navigationCapability|Boolean|false|||
+|phoneCapability|Boolean|false|||
+
 ### MenuParams
 
 |Name|Type|Mandatory|Additional|Description|
