@@ -507,3 +507,10 @@
 |stateAvailable|Boolean|false|| Availability of the getting the Radio state. <br> True: Available, False: Not Available, Not present: Not Available.|
 |signalStrengthAvailable|Boolean|false||Availability of the getting the signal strength. <br> True: Available, False: Not Available, Not present: Not Available.|
 |signalChangeThresholdAvailable|Boolean|false||Availability of the getting the signal Change Threshold. <br> True: Available, False: Not Available, Not present: Not Available.|
+
+### ExternalConsentStatus
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|entityType|Integer|true|minvalue: 0<br>maxvalue: 128|The entityType which status is informed by "status" param.|
+|entityID|Integer|true|minvalue: 0<br>maxvalue: 128|The corresponding ID of entityType which status is informed by "status" param.|
+|status|Common.EntityStatus|true|-|Status of External User Consent Settings entity: "ON" or "OFF"|

@@ -32,6 +32,7 @@ Purpose
    * Ignition cycles since previous successful PTU (``"exchange_after_x_ignition_cycles"`` value in local PT)
    * Expired module's certificate (stored in ``"certificate"``field of local PT)
    * New application (that is, not-yet existing in local PT) registration
+   * No certificate in PolicyTable (stored at "module_config" section at local PT)
 3. Parameters values origin:
    * ``file`` - is the path to the Snapshot of local PolicyTable (Snapshot PT final destination is Policies Server)
    * ``timeout`` - value taken from ``"timeout_after_x_seconds"`` field of local PT
