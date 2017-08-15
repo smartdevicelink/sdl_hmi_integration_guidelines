@@ -41,10 +41,50 @@ The request does not have specific parameters.
 
 ### Sequence Diagrams
 
+|||
+IsReady
+![IsReady](./assets/IsReady_GetCapabilities.png)
+|||
+
 ### Example Request
+
+```json
+{
+  "id" : 8,
+  "jsonrpc" : "2.0",
+  "method" : "RC.IsReady"
+}
+```
 
 ### Example Response
 
+```json
+{
+  "id" : 8,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "available" : true,
+    "code" : 0,
+    "method" : "RC.IsReady"
+  }
+}
+```
+
 ### Example Error
 
-
+```json
+{
+  "id" : 8,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : " HMI doesn’t have the information about RC availability or some failure occurred ",
+    "data" :
+    {
+      "method" : "RC.IsReady"
+    }
+  }
+}
+```
