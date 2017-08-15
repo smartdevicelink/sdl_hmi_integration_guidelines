@@ -468,3 +468,10 @@
 |:---|:---|:--------|:---------|:----------|
 |unit|TemperatureUnit|true||Temperature Unit|
 |value|Float|true||The temperature value is in TemperatureUnit specified unit|
+
+### ExternalConsentStatus
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|entityType|Integer|true|minvalue: 0<br>maxvalue: 128|The entityType which status is informed by "status" param.|
+|entityID|Integer|true|minvalue: 0<br>maxvalue: 128|The corresponding ID of entityType which status is informed by "status" param.|
+|status|Common.EntityStatus|true|-|Status of External User Consent Settings entity: "ON" or "OFF"|
