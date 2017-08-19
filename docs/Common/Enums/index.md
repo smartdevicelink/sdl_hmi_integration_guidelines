@@ -338,7 +338,7 @@
 |SEARCH|16||
 Climate Buttons
 |AC_MAX|17||
-|AC 18|||
+|AC|18||
 |RECIRCULATE|19||
 |FAN_UP|20||
 |FAN_DOWN|21||
