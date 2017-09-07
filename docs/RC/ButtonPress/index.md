@@ -30,8 +30,8 @@ The system shall list all available RC radio buttons and RC climate buttons in t
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:---------|
 |moduleType|[Common.ModuleType](/docs/Common/Enums/index.md)|true||The module where the button should be pressed|
-|buttonName|[Common.ButtonName](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/SDL_RC_baseline_part2/docs/Common/Enums/index.md)|true|||
-|buttonPressMode|[Common.ButtonPressMode](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/SDL_RC_baseline_part2/docs/Common/Enums/index.md)|true||Indicates whether this is a LONG or SHORT button press event.|
+|buttonName|[Common.ButtonName](/docs/Common/Enums/index.md)|true|||
+|buttonPressMode|[Common.ButtonPressMode](/docs/Common/Enums/index.md)|true||Indicates whether this is a LONG or SHORT button press event.|
 |appID|Integer|true||Internal SDL-assigned ID of the related application|
 
 ### Response
