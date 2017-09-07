@@ -88,7 +88,7 @@ GetInteriorVehicleData
 
 ### Example Error
 
-```jsonrpc
+```json
 {
     "error": {
         "code": 2,
