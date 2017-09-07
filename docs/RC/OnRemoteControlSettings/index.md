@@ -26,12 +26,12 @@ When user chose through HMI to disable remote control functionality the notifica
 
 |||
 OnRemoteControlSettings
-![OnRemoteControlSettings](./accessories/OnRemoteControlSettings.png)
+![OnRemoteControlSettings](./assets/OnRemoteControlSettings.png)
 |||
 
 |||
 OnRemoteControlSettings disabling RC
-![OnRemoteControlSettings disabling RC](./accessories/OnRemoteControlSettings_disablingRC.png)
+![OnRemoteControlSettings disabling RC](./assets/OnRemoteControlSettings_disablingRC.png)
 |||
 
 #### JSON Example Notification
