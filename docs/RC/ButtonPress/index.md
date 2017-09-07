@@ -44,7 +44,7 @@ This RPC has no additional parameter requirements
 
 |||
 ButtonPress
-![ButtonPress](accessories/ButtonPress.png)
+![ButtonPress](assets/ButtonPress.png)
 |||
 
 ### Example Request

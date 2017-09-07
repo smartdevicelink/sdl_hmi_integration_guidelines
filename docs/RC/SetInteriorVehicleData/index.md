@@ -41,11 +41,12 @@ RC.SetInteriorvehicledata represents a request from an application to change set
 ### Sequence Diagrams
 |||
 SetInteriorVehicleData
-![SetInteriorVehicleData](accessories/SetInteriorVehicleData.png)
+![SetInteriorVehicleData](assets/SetInteriorVehicleData.png)
 |||
+
 |||
 SetInteriorvehicleData READ_ONLY
-![SetInteriorvehicleData READ_ONLY](accessories/setInteriorVehicleData_READ_ONLY.png)
+![SetInteriorvehicleData READ_ONLY](assets/setInteriorVehicleData_READ_ONLY.png)
 |||
 
 ### Example Request
