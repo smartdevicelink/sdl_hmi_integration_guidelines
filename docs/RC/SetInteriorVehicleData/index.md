@@ -45,7 +45,7 @@ SetInteriorVehicleData
 |||
 
 |||
-SetInteriorvehicleData READ_ONLY
+SetInteriorvehicleData-READ_ONLY
 ![SetInteriorvehicleData READ_ONLY](assets/setInteriorVehicleData_READ_ONLY.png)
 |||
 
