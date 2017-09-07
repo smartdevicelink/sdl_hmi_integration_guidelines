@@ -21,12 +21,12 @@ The HMI must send RC.OnInteriorVehicleData notification to SDL when module setti
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|moduleData|[Common.ModuleData](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/master/docs/Common/Structs/index.md)|||
+|moduleData|[Common.ModuleData](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/master/docs/Common/Structs/index.md)|true|||
 
 ### Sequence Diagrams
+
 ||| OnInteriorVehicledata
 ![OnInteriorVehicleData](./assets/OnInteriorVehicleData.png)
-
 |||
 
 #### JSON Example Notification

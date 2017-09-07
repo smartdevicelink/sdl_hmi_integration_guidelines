@@ -11,10 +11,10 @@ Purpose
 
 ButtonPress represents a request from an application to change settings of requested RC module by pressing the appropriate button.
 This RPC can be sent to the HMI from an application that is registered with REMOTE_CONTROL appHMIType and in one of the following states: FULL, LIMITTED, BACKGROUND.
-Module signed by the application in such reques has to be available on HMI and allowed for control change settings.
+Module signed by the application in such request has to be available on HMI and allowed for control change settings.
 The system shall list all available RC radio buttons and RC climate buttons in the existing ButtonCapabilities list.
 
-!!! must
+!!!must
 
   1. Modules sent by application must be available on HMI
   2. Access to control module settings is defined by access mode entered by user on HMI
@@ -29,7 +29,7 @@ The system shall list all available RC radio buttons and RC climate buttons in t
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:---------|
-|moduleType|[Common.ModuleType](https://github.com/OlesiaV/sdl_hmi_integration_guidelines/blob/a118768fa9c6631e168f932919687196bd281f46/docs/Common/Enums/index.md)|true||The module where the button should be pressed|
+|moduleType|[Common.ModuleType](/docs/Common/Enums/index.md)|true||The module where the button should be pressed|
 |buttonName|[Common.ButtonName](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/SDL_RC_baseline_part2/docs/Common/Enums/index.md)|true|||
 |buttonPressMode|[Common.ButtonPressMode](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/SDL_RC_baseline_part2/docs/Common/Enums/index.md)|true||Indicates whether this is a LONG or SHORT button press event.|
 |appID|Integer|true||Internal SDL-assigned ID of the related application|
@@ -44,7 +44,7 @@ This RPC has no additional parameter requirements
 
 |||
 ButtonPress
-![ButtonPress](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/SDL_RC_baseline_part2/docs/Buttons/ButtonPress/accessories/ButtonPress.png)
+![ButtonPress](accessories/ButtonPress.png)
 |||
 
 ### Example Request

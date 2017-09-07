@@ -28,7 +28,7 @@ Purpose
 
 |||
 GetCapabilities
-![GetCapabilities](https://github.com/OlesiaV/sdl_hmi_integration_guidelines/blob/sdl_rc_capabilities/docs/RC/GetCapabilities/assets/IsReady_GetCapabilities.png)
+![GetCapabilities](assets/IsReady_GetCapabilities.png)
 |||
 
 ### Example Request

@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|moduleType|[Common.ModuleType](https://github.com/OlesiaV/sdl_hmi_integration_guidelines/blob/sdl_rc_baseline/docs/Common/Enums/index.md)|true||
+|moduleType|[Common.ModuleType](/docs/Common/Enums/index.md)|true||
 |subscribe|Boolean|false|defvalue="false"|
 |appID|Integer|true||
 
@@ -25,14 +25,14 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|moduleData|[Common.ModuleData](https://github.com/OlesiaV/https://github.com/OlesiaV/sdl_hmi_integration_guidelines/blob/master/docs/Common/Structs/index.md)|true||
+|moduleData|[Common.ModuleData](/docs/Common/Structs/index.md)|true||
 |isSubscribed|Boolean|false||
 
 ### Sequence Diagrams
+
 |||
 GetInteriorVehicleData
 ![GetInteriorVehicleData](assets/GetInteriorVehicleData.png)
-
 |||
 
 ### Example Request
@@ -88,14 +88,14 @@ GetInteriorVehicleData
 
 ### Example Error
 
-```json
+```jsonrpc
 {
     "error": {
-        "code": 26,
+        "code": 2,
         "data": {
             "method": "RC.GetInteriorVehicleData"
         },
-        "message": "Read only parameters received"
+        "message": "Unknown module type"
     },
     "id": 122,
     "jsonrpc": "2.0"
