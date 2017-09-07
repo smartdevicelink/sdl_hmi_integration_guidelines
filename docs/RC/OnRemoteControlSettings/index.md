@@ -7,7 +7,7 @@ Sender
 : HMI
 
 Purpose
-: Notification about remote-control settings and/or access mode changed. Sent after User`s choice through HMI.
+: Notification about remote-control settings and/or access mode changed. Sent after User's choice through HMI.
 
 RC.OnRemoteControlSettings is expected to be sent by HMI on system start up and every time user is changig remote control settings.
 In case HMI does not send the notification on system start up, the default settings must be applied such as: remote control is allowed and access mode is "AUTO_ALLOW"
