@@ -858,3 +858,10 @@
 |:---|:----|:----------|
 |ON|0||
 |OFF|1||
+
+### RCAccessMode
+|Name|Value|Description|
+|:---|:----|:----------|
+|AUTO_ALLOW|0||
+|AUTO_DENY|1||
+|ASK_DRIVER|2||
