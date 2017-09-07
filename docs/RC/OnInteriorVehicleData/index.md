@@ -25,8 +25,9 @@ The HMI must send RC.OnInteriorVehicleData notification to SDL when module setti
 
 ### Sequence Diagrams
 
-||| OnInteriorVehicledata
-![OnInteriorVehicleData](./assets/OnInteriorVehicleData.png)
+|||
+OnInteriorVehicledata
+![OnInteriorVehicleData](assets/OnInteriorVehicleData.png)
 |||
 
 #### JSON Example Notification
