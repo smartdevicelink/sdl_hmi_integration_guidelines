@@ -48,15 +48,20 @@ d) The resulting allowance of functional grouping is informed by parameter “al
 |allowedFunctions|[Common.PermissionItem](../../common/structs/#permissionitem)|true|array: true<br>minsize: 0<br>maxsize: 100|
 |ExternalConsentStatus|[Common.ExternalConsentStatus](../../common/structs/#ExternalConsentStatus)|true|array: true<br>minsize: 0<br>maxsize: 100|
 ### Sequence Diagrams
+
 |||
 GetListOfPermissions
 ![GetListOfPermissions](./assets/GetListOfPermissions.jpg)
 |||
+
 GetListOfPermissions without AppId
 ![GetListOfPermissions](./assets/GetListOfPermissionsNoId.jpg)
-||| GetListOfPermissions provide  External UCS Status to HMI
+
+|||
+GetListOfPermissions provide  External UCS Status to HMI
 ![GetListOfPermissions](./assets/GetListOfPermissionsInformingHMI.png)
 |||
+
 Possible Layout - ExternalConsentStatus
 ![GetListOfPermissions](./assets/PossibleLayoutExternalConsentStatus.png)
 ### Example Request

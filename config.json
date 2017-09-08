@@ -129,6 +129,9 @@
             },
             {
               "name": "OnButtonSubscription"
+            },
+            {
+              "name": "ButtonPress"
             }
           ]
         },
@@ -432,6 +435,32 @@
             },
             {
               "name": "Stopped"
+            }
+          ]
+        },
+        {
+        "name": "RC",
+          "navigation": [
+            {
+              "name": "GetCapabilities"
+            },
+            {
+              "name": "GetInteriorVehicleData"
+            },
+            {
+              "name": "GetInteriorVehicleDataConsent"
+            },
+            {
+              "name": "IsReady"
+            },
+            {
+              "name": "OnInteriorVehicleData"
+            },
+            {
+              "name": "OnRemoteControlSettings"
+            },
+            {
+              "name": "SetInteriorVehicleData"
             }
           ]
         },

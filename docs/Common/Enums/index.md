@@ -54,6 +54,7 @@
 |BACKGROUND_PROCESS|7||
 |TESTING|8||
 |SYSTEM|9||
+|REMOTE_CONTROL|10||
 
 ### SpeechCapabilities
 
@@ -336,6 +337,26 @@
 |PRESET_9|14||
 |CUSTOM_BUTTON|15||
 |SEARCH|16||
+Climate Buttons
+|AC_MAX|17||
+|AC|18||
+|RECIRCULATE|19||
+|FAN_UP|20||
+|FAN_DOWN|21||
+|TEMP_UP|22||
+|TEMP_DOWN|23||
+|DEFROST_MAX|24||
+|DEFROST|25||
+|DEFROST_REAR|26||
+|UPPER_VENT|27||
+|LOWER_VENT|28||
+Radio Buttons
+|VOLUME_UP|29||
+|VOLUME_DOWN|30||
+|EJECT|31||
+|SOURCE|32||
+|SHUFFLE|33||
+|REPEAT|34||
 
 ### KeypressMode
 
@@ -802,6 +823,55 @@
 |NO_DATA_EXISTS|0||
 |OFF|1||
 |ON|2||
+
+### ModuleType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|CLIMATE|0||
+|RADIO|1||
+
+### RadioBand
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|AM|0||
+|FM|1||
+|XM|2||
+
+### RadioState
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ACQUIRING|0||
+|ACQUIRED|1||
+|MULTICAST|2||
+|NOT_FOUND|3||
+
+### TemperatureUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FAHRENHEIT|0||
+|CELSIUS|1||
+
+### DefrostZone
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FRONT|0||
+|REAR|1||
+|ALL|2||
+|NONE|3||
+
+### VentilationMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|UPPER|0||
+|LOWER|1||
+|BOTH|2||
+|NONE|3||
 
 ### EntityStatus
 |Name|Value|Description|
