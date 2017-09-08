@@ -27,7 +27,12 @@ The value of customButtonID is provided by SDL within the [softButton](../../com
 
 #### Parameters
 
-
+|Name|Type|Mandatory|Additional|
+|:---|:---|:--------|:---------|
+|name|[Common.ButtonName](../../common/enums/#buttonname)|true||
+|mode|[Common.ButtonPressMode](../../common/enums/#buttonpressmode)|true||
+|customButtonID|Integer|false|minvalue: 0<br>maxvalue: 65536|
+|appID|Integer|false||
 
 ### Sequence Diagrams
 |||
