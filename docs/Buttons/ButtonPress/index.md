@@ -14,7 +14,7 @@ This RPC can be sent to the HMI from an application that is registered with REMO
 Module signed by the application in such request has to be available on HMI and allowed for control change settings.
 The system shall list all available RC radio buttons and RC climate buttons in the existing ButtonCapabilities list.
 
-!!!must
+!!! must
 
   1. Modules sent by application must be available on HMI
   2. Access to control module settings is defined by access mode entered by user on HMI
@@ -28,7 +28,7 @@ The system shall list all available RC radio buttons and RC climate buttons in t
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:---------|
+|:---|:----------|:---|:---------|:---------|
 |moduleType|[Common.ModuleType](/docs/Common/Enums/index.md)|true||The module where the button should be pressed|
 |buttonName|[Common.ButtonName](/docs/Common/Enums/index.md)|true|||
 |buttonPressMode|[Common.ButtonPressMode](/docs/Common/Enums/index.md)|true||Indicates whether this is a LONG or SHORT button press event.|
@@ -41,7 +41,6 @@ The system shall list all available RC radio buttons and RC climate buttons in t
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
-
 |||
 ButtonPress
 ![ButtonPress](assets/ButtonPress.png)
