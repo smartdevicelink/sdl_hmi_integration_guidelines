@@ -36,7 +36,7 @@ The request does not have specific parameters.
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+|:------|:------|:---|:---------|
 |available|Boolean|true|Must be true if vehicle RC modules are present and ready to communicate with SDL.|
 
 ### Sequence Diagrams
