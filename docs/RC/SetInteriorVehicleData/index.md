@@ -17,6 +17,7 @@ RC.SetInteriorvehicledata represents a request from an application to change set
   2. Access to control module settings is defined by access mode entered by user on HMI
   3. Module settings can be changed for settable parameters only
   4. Requested module items have to be available for such module on HMI
+  
 !!!
 
 ### Request
@@ -24,25 +25,23 @@ RC.SetInteriorvehicledata represents a request from an application to change set
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|moduleData|[Common.ModuleData](/docs/Common/Structs/index.md)|true||The module type and data to set|
-|appID|Integer|true||Internal SDL-assigned ID of the related application|
+|:--------|:---|:----------------|:---------|:----------|
+|moduleData|[Common.ModuleData](/docs/Common/Structs/index.md)|true| |The module type and data to set|
+|appID|Integer|true| |Internal SDL-assigned ID of the related application|
 
 ### Response
 
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|moduleData|[Common.ModuleData](/docs/Common/Structs/index.md)|true|||
+|:--------|:---|:----------------|:---------|:----------|
+|moduleData|[Common.ModuleData](/docs/Common/Structs/index.md)|true| | |
 
 ### Sequence Diagrams
-
 |||
 SetInteriorVehicleData
 ![SetInteriorVehicleData](assets/SetInteriorVehicleData.png)
 |||
-
 |||
 SetInteriorvehicleData-READ_ONLY
 ![SetInteriorvehicleData READ_ONLY](assets/setInteriorVehicleData_READ_ONLY.png)
