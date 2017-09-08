@@ -13,7 +13,7 @@ RC.GetInteriorVehicleDataConsent must be sent to HMI in case application in HMIL
 HMI is expected to display a permission prompt to the driver showing the RC module and app details (for example, app's name).
 The driver is expected to have an ability to grant or deny the permission.
 
-!!!must
+!!! must
 
 1. Access mode "ASK_DRIVER"
 2. Application that requested access to RC module must be in HMILevel FULL
@@ -26,7 +26,7 @@ The driver is expected to have an ability to grant or deny the permission.
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:---------|
+|:---------|:---------|:--------|:---------|:---------|
 |moduleType|[Common.ModuleType](/docs/Common/Enums/index.md)|true||The module type that the app requests to control|
 |appID|Integer|true||ID of the application that triggers the permission prompt|
 
@@ -34,7 +34,7 @@ The driver is expected to have an ability to grant or deny the permission.
 
 #### Parameters
 |Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:---------|
+|:---------|:---------|:--------|:---------|:---------|
 |allowed|Boolean|true||"true" - if the driver grants the permission for controlling to the named app; <br> "false" - in case the driver denies the permission for controlling to the named app.|
 
 ### Sequence Diagrams
