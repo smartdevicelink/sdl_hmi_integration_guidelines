@@ -14,11 +14,9 @@ HMI is expected to display a permission prompt to the driver showing the RC modu
 The driver is expected to have an ability to grant or deny the permission.
 
 !!! must
-
-1. Access mode "ASK_DRIVER"
-2. Application that requested access to RC module must be in HMILevel FULL
-3. Requested module is not busy with executing request from another application
-
+1. HMI must prompt user to make selection of resource allocation
+2. Respon to SDL with user choice within RC.GetInteriorVehicleDataConsent response
+3. If user didn't make choice send GENERIC_ERROR to SDL
 !!!
 
 ### Request
