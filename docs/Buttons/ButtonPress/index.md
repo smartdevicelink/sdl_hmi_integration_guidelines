@@ -31,6 +31,7 @@ The system shall list all available RC radio buttons and RC climate buttons in t
 |:---|:----------|:---|:---------|:---------|
 |moduleType|[Common.ModuleType](/docs/Common/Enums/index.md)|true| |The module where the button should be pressed|
 |buttonName|[Common.ButtonName](/docs/Common/Enums/index.md)|true| | |
+|buttonPressMode|[Common.ButtonPressMode](/docs/Common/Enums/index.md)|true| |Indicates whether this is a LONG or SHORT button press event.|
 
 
 ### Response
