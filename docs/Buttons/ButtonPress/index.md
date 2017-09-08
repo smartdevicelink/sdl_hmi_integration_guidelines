@@ -27,6 +27,10 @@ The system shall list all available RC radio buttons and RC climate buttons in t
 
 #### Parameters
 
+|Name|Type|Mandatory|Additional|Description|
+|:---|:----------|:---|:---------|:---------|
+|moduleType|[Common.ModuleType](/docs/Common/Enums/index.md)|true| |The module where the button should be pressed|
+
 
 ### Response
 
