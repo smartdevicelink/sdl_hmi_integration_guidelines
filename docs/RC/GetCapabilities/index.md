@@ -21,8 +21,8 @@ Purpose
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
-|remoteControlCapability|Common.RemoteControlCapabilities|false|See RemoteControlCapabilities, all available RC modules and buttons shall be returned|
+|:--------|:--------|:---|:---------|
+|remoteControlCapability|[Common.RemoteControlCapabilities](docs/Common/Structs/index.md)|false|See RemoteControlCapabilities, all available RC modules and buttons shall be returned|
 
 ### Sequence Diagrams
 
