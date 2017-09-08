@@ -41,6 +41,7 @@ The system shall list all available RC radio buttons and RC climate buttons in t
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 ButtonPress
 ![ButtonPress](assets/ButtonPress.png)
