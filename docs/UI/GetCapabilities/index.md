@@ -28,6 +28,7 @@ Purpose
 |hmiZoneCapabilities|[Common.HmiZoneCapabilities](../../common/enums/#hmizonecapabilities)|true||
 |softButtonCapabilities|[Common.SoftButtonCapabilities](../../common/structs/#softbuttoncapabilities)|false||
 |hmiCapabilities|[Common.HMICapabilities](../../common/structs/#hmicapabilities)|false||
+|systemCapabilities|[Common.SystemCapabilities](../../common/structs/#systemcapabilities)|false||
 
 ### Sequence Diagrams
 |||
@@ -64,6 +65,16 @@ Get Capabilities
     {
         "navigation" : true,
         "phoneCall" : true
+    },
+
+    "systemCapabilities": {
+      "navigationCapability": {
+          "sendLocationEnabled": true,
+          "getWayPointsEnabled": true
+      },
+      "phoneCapability": {
+          "dialNumberEnabled": true
+      } 
     },
 
     "softButtonCapabilities" :
