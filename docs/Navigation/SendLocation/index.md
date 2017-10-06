@@ -55,6 +55,9 @@ SendLocation Fail with warnings
 SendLocation Fail Rejected
 ![SendLocation](./assets/SendLocationFailRejected.jpg)
 |||
+SendLocation General behavior
+![SendLocation](./assets/SendLocation_general.png)
+|||
 
 ### Example Request
 
