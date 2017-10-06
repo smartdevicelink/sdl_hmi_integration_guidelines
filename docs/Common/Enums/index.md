@@ -1116,3 +1116,10 @@
 |:---|:----|:----------|
 |DRIVER|0|List possible seats that is a remote controllable seat.|
 |FRONT_PASSENGER|1|List possible seats that is a remote controllable seat.|
+
+### DeliveryMode
+|Name|Value|Description|
+|:---|:----|:----------|
+|PROMPT|0||
+|DESTINATION|1||
+|QUEUE|2||
