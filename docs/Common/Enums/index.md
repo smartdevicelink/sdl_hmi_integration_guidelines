@@ -878,3 +878,10 @@ Radio Buttons
 |:---|:----|:----------|
 |ON|0||
 |OFF|1||
+
+### WaypointType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ALL|0|All waypoints including destination|
+|DESTINATION|1|Only destination|

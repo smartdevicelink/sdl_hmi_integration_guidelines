@@ -521,3 +521,14 @@
 |entityType|Integer|true|minvalue: 0<br>maxvalue: 128|The entityType which status is informed by "status" param.|
 |entityID|Integer|true|minvalue: 0<br>maxvalue: 128|The corresponding ID of entityType which status is informed by "status" param.|
 |status|Common.EntityStatus|true|-|Status of External User Consent Settings entity: "ON" or "OFF"|
+
+### LocationDetails
+|Name|Type|Mandatory|Additional|Description|
+|:--------|:-------|:--------|:---------|:------------------------|
+|coordinate|Coordinate|false|-|Latitude/Longitude of the location|
+|locationName|String|false|maxlength = 500|Name of location|
+|addressLines|String|false|maxlength="500"<br>minsize="0"<br>maxsize="4"<br>array="true"|Location address for display purposes only|
+|locationDescription|String|false|maxlength="500"|Description intended location/establishment (if applicable)|
+|phoneNumber|String|false|maxlength="500"|Phone number of location/establishment|
+|locationImage|Image|false|-|Image/icon of intended location|
+|searchAddress|OASISAddress|false|-|Address to be used by navigation engines for search|
