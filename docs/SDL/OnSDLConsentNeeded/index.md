@@ -29,12 +29,12 @@ The notification is applicable only for the case when the device is consented by
 
 |||
 The User does NOT consent the device
-![OnSDLConsentNeeded](../ActivateApp/assets/User_does_not_consent_the_device1.png)
+![OnSDLConsentNeeded](./assets/User_does_not_consent_the_device1.png)
 |||
 
 |||
 The User consents the device
-![OnSDLConsentNeeded](../ActivateApp/assets/User_consents_the_device2.png)
+![OnSDLConsentNeeded](./assets/User_consents_the_device2.png)
 |||
 
 #### JSON Example Notification
