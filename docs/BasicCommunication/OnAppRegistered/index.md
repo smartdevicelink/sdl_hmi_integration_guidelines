@@ -17,7 +17,7 @@ SDL will send `OnAppRegistered`:
 
 Regarding data resumption:
 
-Data resumption means that an app may request to restore data used in the previous ignition cycle after an `Unexpected Disconnect`.
+Data resumption means that an application may request to restore data used in the previous ignition cycle after an `Unexpected Disconnect`.
 
 
   * For data resumption purposes, SDL must store application-related data such as commands, application global properties, and show data for the past three ignition cycles after an `Unexpected Disconnect` or `Ignition Off`. On the fourth  `Ignition On`, SDL clears all corresponding application-related data used for resumption.
@@ -35,7 +35,7 @@ If the application resumes data successfully:
     * `SubscribeButton`
     * `SubscibeVehicleData`
 
-If the application does not resume data successfully:
+If the application does NOT resume data successfully:
 
   * SDL will provide `OnAppRegistered` with `resumeVrGrammars`:`false` or no resume parameter at all.
   * SDL cleans up all previously stored application data for the application that failed to resume. The HMI must also clean up previously compiled `VRGrammars` for the application.
@@ -43,23 +43,19 @@ If the application does not resume data successfully:
 
 !!! MUST
 
-  1. HMI must update its list of registered applications.
-  2. HMI must store the application data sent in the `applications` parameter.
-  3. HMI must compile and store `VRGrammars` for the `vrSynonyms` parameter, and arrange them for the user to be able to use via voice recognition. Note: The VR commands to activate an application must be accessible when viewing a different active application or the list of registered applications.
-  4. HMI must provide the user with the possibility to choose an application among a list of registered applications.
-  5. HMI must send an `OnAppActivated` notification to SDL when the user activates an app via the `UI` or `VR`.
-
+  1. Update its list of registered applications.
+  2. Store the application data sent in the `applications` parameter.
+  3. Compile and store `VRGrammars` for the `vrSynonyms` parameter, and arrange them for the user to be able to use via voice recognition. Note: The VR commands to activate an application must be accessible when viewing a different active application or the list of registered applications.
+  4. Provide the user with the possibility to choose an application among a list of registered applications.
+  5. Send an `OnAppActivated` notification to SDL when the user activates an app via the `UI` or `VR`.   
+  6. Manage application events by priority. HMI gets proirity information from _OnAppRegistered_, _UpdateAppList_, _ActivateApp_ HMI API.
 !!!
 
-!!! NOTE
-
-If a device is connected over USB and registers an application, SDL will send `OnAppRegistered` with a hash of the usb serial number as the device id.
-
-If a device is connected over Bluetooth or Wi-Fi and registers an application, SDL will send `OnAppRegistered` with a hash of the device's mac address as the device id.
-
+!!! NOTE   
+   * If a device is connected over USB and registers an application, SDL will send `OnAppRegistered` with a hash of the usb serial number as the device id.
+   * If a device is connected over Bluetooth or Wi-Fi and registers an application, SDL will send `OnAppRegistered` with a hash of the device's mac address as the device id.
+   * When the application is registered for the first time (no records in PT) PoliciesManager should not initiate prompting the User about the event.
 !!!
-
-
 
 ### Notification
 
@@ -67,11 +63,15 @@ If a device is connected over Bluetooth or Wi-Fi and registers an application, S
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|application|[Common.HMIApplication](../../common/structs/#hmiapplication)|true||
-|ttsName|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|application|[Common.HMIApplication]|true||
+|ttsName|[Common.TTSChunk]|false|array: true<br>minsize: 1<br>maxsize: 100|
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40|
 |resumeVrGrammars|Boolean|false||
-|priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
+|priority|[Common.AppPriority]|false||
+
+[Common.HMIApplication]: ../../common/structs/#hmiapplication
+[Common.TTSChunk]: ../../common/structs/#ttschunk
+[Common.AppPriority]: ../../common/enums/#apppriority
 
 ### Sequence Diagrams
 |||
