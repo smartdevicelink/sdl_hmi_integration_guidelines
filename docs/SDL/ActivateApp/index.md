@@ -67,12 +67,12 @@ c. App_1 presents in the list of registered apps on HMI.
 
 |||
 The User does NOT consent the device.
-![ActivateApp](./assets/User%20does%20not%20consent%20the%20device1.png)
+![ActivateApp](./assets/User_does_not_consent_the_device1.png)
 |||
 
 |||
 The User consents the device.
-![ActivateApp](./assets/User%20consents%20the%20device2.png)
+![ActivateApp](./assets/User_consents_the_device2.png)
 |||
 
 |||
