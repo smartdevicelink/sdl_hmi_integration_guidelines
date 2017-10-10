@@ -734,6 +734,7 @@
 |showConstantTBTIcon|9||
 |showConstantTBTNextTurnIcon|10||
 |locationImage|11||
+|SubMenuIcon|12||
 
 ### VehicleDataType
 
@@ -802,3 +803,8 @@
 |OFF|1||
 |ON|2||
 
+### EntityStatus
+|Name|Value|Description|
+|:---|:----|:----------|
+|ON|0||
+|OFF|1||

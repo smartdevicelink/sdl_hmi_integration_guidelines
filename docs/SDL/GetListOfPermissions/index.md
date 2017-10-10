@@ -10,6 +10,7 @@ Purpose
 : Get the list of permissions for the specified application or for all applications.
 
 ### Request
+
 !!! MUST  
 1) Initiate sending GetListOfPermissions with “appID” parameter in the following cases:   
 1.1) After receiving SDL.ActivateApp{isPermissionsConsentNeeded: true} from SDL.  
@@ -75,7 +76,8 @@ GetListOfPermissions provide  External UCS Status to HMI
 Possible Layout - ExternalConsentStatus   
 ![GetListOfPermissions](./assets/PossibleLayoutExternalConsentStatus.png)
 |||
-
+Possible Layout - ExternalConsentStatus
+![GetListOfPermissions](./assets/PossibleLayoutExternalConsentStatus.png)
 ### Example Request
 
 ```json
@@ -113,6 +115,15 @@ Possible Layout - ExternalConsentStatus
   },
 
     ]
+      "externalConsentStatus":
+[       
+       {
+       “entityType” : “0”,
+       “entityID”   : “126”,
+       “status” : “ON”
+       }
+]
+
 
     "code" : 0,
     "method" : "SDL.GetListOfPermissions"
@@ -129,7 +140,7 @@ Possible Layout - ExternalConsentStatus
   "error" :
   {
     "code" : 15,
-    "message" : " A command cannot be executed because there is NO specified         with appID application registered ",
+    "message" : " A command cannot be executed because there is NO specified with appID application registered ",
     "data" :
     {
       "method" : "SDL.GetListOfPermissions"

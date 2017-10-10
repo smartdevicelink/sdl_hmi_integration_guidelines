@@ -17,13 +17,20 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
   2. If the user selects a sub menu item from the application's menu, the HMI must display all commands added via [UI.AddCommand](../addcommand) which share a `menuParams.parentID` with the menu's `menuID`
   3. Store the data provided in this RPC with the requesting application's appID
   4. Persist the stored data for the duration of the ignition cycle
-  4. Add the command to the application's menu at the position specified in the `menuParams`
-
-!!!
+  5. Add the command to the application's menu at the position specified in the `menuParams`
+  6. Display images on sub menus if provided by the application.
+  7. Provide a WARNINGS information to the application that the SubMenu was added but no image was displayed.
+  8. Scale the image to ensure it fits properly in the space allocated for the display of the image. If the image does not fit properly even after scaling, the HMI shall not display any image on the submenu.
 
 !!! note
 
-  * SDL will never request a sub menu be added to another sub menu
+  * SDL will never request a sub menu be added to another sub menu  
+  * HMI does not display any image in case the application does not provide an image for display on the sub menu.  
+  * HMI does not display any image in case the image referenced by the application for display on the submenu is invalid or is not available.  
+  * To remove an icon already sent, the app would have to delete the submenu and add it again without the icon.Otherwise, if the submenu is not deleted, another request with the same submenu id will be rejected.
+
+
+
   
 !!!
 
