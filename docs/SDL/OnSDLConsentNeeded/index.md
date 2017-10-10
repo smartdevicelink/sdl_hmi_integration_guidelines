@@ -31,6 +31,7 @@ The notification is applicable only for the case when the device is consented by
 The User does NOT consent the device
 ![OnSDLConsentNeeded](../ActivateApp/assets/User%20does%20not%20consent%20the%20device1.png)
 |||
+
 |||
 The User consents the device
 ![OnSDLConsentNeeded](../ActivateApp/assets/User%20consents%20the%20device2.png)
