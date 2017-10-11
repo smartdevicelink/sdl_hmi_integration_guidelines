@@ -13,8 +13,8 @@ Purpose
 
 !!! MUST
 For Proprietary PTU flow:  
-1. Send `SDL.GetURLS` after SDL-initiated [BC.PolicyUpdate](../../basiccommunication/policyupdate/policyupdate) with service type  **7**
-* Use the received URL(s) in the next [BC.OnSystemRequest](../../basiccommunication/onsystemrequest/onsystemrequest).
+1. Send `SDL.GetURLS` after SDL-initiated [BC.PolicyUpdate](../../basiccommunication/policyupdate/policyupdate) with service type `7`
+2. Use the received URL(s) in the next [BC.OnSystemRequest](../../basiccommunication/onsystemrequest/onsystemrequest).
 !!!
 
 !!! MAY
@@ -22,11 +22,11 @@ Request the URL(s) for any known service type that exists in Local PT at any tim
 !!!
 
 !!! NOTE
-1. `SDL.GetURLS` dependencies:
-   * SDL sends ``BC.PolicyUpdate`` _only in case_ it's built with "-DEXTENDED_POLICY: PROPRIETARY" flag or without flag. 
-* URLs storage in Policy Table: `"endpoints"` section.
-* SDL chooses the applications for taking part in PTU among registered ones and provides `appID` + `url` pairs in response  
-* In case no applications are currently registered, SDL will return `url` only.
+`SDL.GetURLS` dependencies:
+	* SDL sends ``BC.PolicyUpdate`` _only in case_ it's built with "-DEXTENDED_POLICY: PROPRIETARY" flag or without flag. 
+	* URLs storage in Policy Table: `"endpoints"` section.
+	* SDL chooses the applications for taking part in PTU among registered ones and provides `appID` + `url` pairs in response  
+	* In case no applications are currently registered, SDL will return `url` only.
 !!!
 
 #### Parameters
