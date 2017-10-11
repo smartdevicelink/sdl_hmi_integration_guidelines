@@ -9,21 +9,9 @@ Sender
 Purpose
 : Inform HMI about the Policy Table Update (PTU) mechanism is triggered on SDL
 
-In case SDL is built with **"-DEXTENDED_POLICY: HTTP" flag** SDL supports PolicyTableUpdate flow **without HMI-related logic**. 
-
+In case SDL is built with **"-DEXTENDED_POLICY: HTTP" flag**, SDL supports PolicyTableUpdate flow **without HMI-related logic**. 
 ### Request
-
 ``BC.PolicyUpdate`` represents SDL-generated request to start the PTU sequence.
-
-!!! MUST
-**HTTP Policies**:
-* Send SDL.OnStatusUpdate(UPDATE_NEEDED) to HMI.
-* Copy PT Snapshot from the Local Policy Table, store PT Snapshot in SDL memory and remove "messages" sub-section from "consumer_friendly_messages" section.
-* Send PT Snapshot to a random app as binary data.
-* Define the URL(s) the PTS will be sent to. Policies Manager must refer PTS "endpoints" section, key "0x07" for the appropriate `<app id>` which was chosen for PTS transferring.
-* SDL defines the timeout to wait a response on PTU as a value of PTS "module_config" section, key `<timeout_after_x_seconds>`.
-* Send PTU status notifications on ``SDL.OnStatusUpdate`` to HMI.
-!!!
 
 !!! MUST
 **Proprietary Policies**:
@@ -65,7 +53,8 @@ TLS handshake
 ### Response
 
 !!! MUST   
-1. Respond with ``SUCCESS`` resultCode to continue the PTU flow.
+Respond with ``SUCCESS`` resultCode to continue the PTU flow.
+!!!
 
 #### Parameters
 
