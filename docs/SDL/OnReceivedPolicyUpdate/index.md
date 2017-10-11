@@ -1,4 +1,5 @@
 ## OnReceivedPolicyUpdate
+
 Type
 : Notification
 
@@ -42,6 +43,17 @@ SDL.OnReceivedPolicyUpdate in EXTERNAL_PROPRIETARY flow
 |||
 SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
 ![Proprietary PTU](./assets/Proprietary_PTU_flow_.png)
+|||
+
+### Sequence Diagrams
+
+|||
+SDL.OnReceivedPolicyUpdate in EXTERNAL_PROPRIETARY flow
+![Proprietary PTU](./assets/SDL.OnReceivedPolicyUpdate%20in%20EXTERNAL_PROPRIETARY%20flow.jpg)
+|||
+|||
+SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
+![Proprietary PTU](./assets/OnReceivedPolicyUpdate_in_Proprietary_PTU_flow.png)
 |||
 
 #### JSON Example Notification

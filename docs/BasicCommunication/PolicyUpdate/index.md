@@ -22,15 +22,18 @@ Purpose
 
 !!! NOTE
 1. ``BC.PolicyUpdate`` dependencies:
-   * SDL sends ``BC.PolicyUpdate`` _only in case_ it's built with ``"-DEXTENDED_POLICY: ON"`` and ``"-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY"`` flag. _Otherwise_ SDL handles the entire PTU flow by itself.
+   * SDL sends ``BC.PolicyUpdate`` _only in case_ it's built with "-DEXTENDED_POLICY: PROPRIETARY" flag or without this flag. _Otherwise_ SDL handles the entire PTU flow by itself.
    * If HMI fails to respond ``BC.PolicyUpdate`` or responds with error, PTU sequence will _not_ be continued.  
 2. Triggers for sending ``BC.PolicyUpdate`` (whichever comes first):
-   * Days since previous successful PTU (``"exchange_after_x_days"`` value in local PolicyTable (PT));
-   * Kilometers since previous successful PTU (``"exchange_after_x_kilometers"`` value in local PT);
-   * Ignition cycles since previous successful PTU (``"exchange_after_x_ignition_cycles"`` value in local PT);
-   * Expired or missing module's certificate (stored in ``"certificate"``field of local PT);
-   * New application (that is, not-yet existing in local PT) registration;
-   * No certificate in PolicyTable (stored at "module_config" section at local PT)
+   * Days since previous successful PTU (``"exchange_after_x_days"`` value in local PolicyTable (PT)
+   * Kilometers since previous successful PTU (``"exchange_after_x_kilometers"`` value in local PT)
+   * Ignition cycles since previous successful PTU (``"exchange_after_x_ignition_cycles"`` value in local PT)
+   * 24 hours prior to module's certificate expiration date:
+a. The triggers for checking the cert expiration status are:
+Ignition On
+TLS handshake
+   * New application (that is, not-yet existing in local PT) registration
+   * In case the status of PTU is UPDATE_NEEDED due to failed retry stratery at previous ignition cycle
 3. Parameters values origin:
    * ``file`` - is the path to the Snapshot of local PolicyTable (Snapshot PT final destination is Policies Server)
    * ``timeout`` - value taken from ``"timeout_after_x_seconds"`` field of local PT

@@ -11,28 +11,22 @@ Purpose
 
 ### Request
 
-!!! must
-
-For Proprietary PTU flow:
-1. Send `SDL.GetURLS` after SDL-initiated  [BC.PolicyUpdate](../../BasicCommunication/PolicyUpdate/index.md#PolicyUpdate) with service type  **7**
-* Use the received URL(s) in the next  [BC.OnSystemRequest](../../BasicCommunication/OnSystemRequest/index.md#OnSystemRequest)
-
+!!! MUST
+For Proprietary PTU flow:  
+1. Send `SDL.GetURLS` after SDL-initiated [BC.PolicyUpdate](../../basiccommunication/policyupdate/policyupdate) with service type  **7**
+* Use the received URL(s) in the next [BC.OnSystemRequest](../../basiccommunication/onsystemrequest/onsystemrequest).
 !!!
 
-!!! may
-
+!!! MAY
 Request the URL(s) for any known service type that exists in Local PT at any time if required per internal flows.
-
 !!!
 
-!!! note
-
+!!! NOTE
 1. `SDL.GetURLS` dependencies:
-   * SDL responds to `SDL.GetURLS` _only in case_ it's built with ``"-DEXTENDED_POLICY: ON"`` flag.   
-* URLs storage in Policy Table: `"endpoints"` section ([example](https://github.com/smartdevicelink/sdl_core/blob/master/src/appMain/sdl_preloaded_pt.json#L16))
+   * SDL sends ``BC.PolicyUpdate`` _only in case_ it's built with "-DEXTENDED_POLICY: PROPRIETARY" flag or without flag. 
+* URLs storage in Policy Table: `"endpoints"` section.
 * SDL chooses the applications for taking part in PTU among registered ones and provides `appID` + `url` pairs in response  
-* In case no applications are currently registered, SDL will return `url` only
-
+* In case no applications are currently registered, SDL will return `url` only.
 !!!
 
 #### Parameters
@@ -47,7 +41,15 @@ Request the URL(s) for any known service type that exists in Local PT at any tim
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|urls|[Common.ServiceInfo](../../common/structs/#serviceinfo)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|urls|[Common.ServiceInfo]|false|array: true<br>minsize: 1<br>maxsize: 100|
+[Common.ServiceInfo]: ../../common/structs/serviceinfo 
+
+### Sequence Diagrams
+
+|||
+BC.PolicyUpdate in "Proprietary" Policy Table Update Flow
+![Proprietary PTU](./assets/GetURLS_in_Proprietary_PTU_flow.png)
+|||
 
 ### Example Request
 
@@ -100,10 +102,3 @@ Request the URL(s) for any known service type that exists in Local PT at any tim
 	}
 }
 ```
-
-### Sequence Diagrams
-
-|||
-BC.PolicyUpdate in "Proprietary" Policy Table Update Flow
-![Proprietary PTU](./assets/GetURLS_in_Proprietary_PTU_flow.png)
-|||
