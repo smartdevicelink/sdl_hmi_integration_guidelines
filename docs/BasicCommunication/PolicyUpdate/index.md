@@ -15,6 +15,7 @@ In case SDL is built with **"-DEXTENDED_POLICY: HTTP" flag**, SDL supports Polic
 
 !!! MUST
 **Proprietary Policies**:
+
 * Encrypt the Snapshot PT (path from ``file`` parameter) _in case_ and by the scheme required by Policies Server
 * Request Policies Server url via the next ``SDL.GetURLs`` from SDL
 * Provide the path defined by ``file`` parameter in the next ``BC.OnSystemRequest`` that SDL will forward to mobile application
