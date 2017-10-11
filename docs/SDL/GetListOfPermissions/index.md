@@ -11,7 +11,6 @@ Purpose
 
 ### Request
 
-!!! MUST  
 1) Initiate sending GetListOfPermissions with “appID” parameter in the following cases:   
 1.1) After receiving SDL.ActivateApp{isPermissionsConsentNeeded: true} from SDL.  
 !!! NOTE
@@ -29,7 +28,6 @@ When GetListOfPermissions is requested without “appID” parameter, the respon
 3) Store the pair of values id<->name of PermissionItem structure which were obtained via GetListOfPermissions response. These pairs will be used for future notifications via [OnAppPermissionConsent](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/master/docs/SDL/OnAppPermissionConsent/index.md) in case user’s choice for the application to allow some functionality has been updated (_For more details see OnAppPermissionConsent (id<->name dependency_).  
 4) Display the received “External UCS Status” in the appropriate UI screen (_For more details see the picture ExternalConsentStatus_).   
 5) Request the list of permissions per application for which the consent is required (via _GetListOfPermissions(appID)_), when HMI gets the 'user-consent-required' notification per application from SDL (_SDL.OnAppPermissionChanged(appID_, _appPermissionsConsentNeeded: true_)).
-!!!
 
 !!! NOTE  
 a) The information about the application (name, ID, etc.) is provided by SDL via either [BasicCommunication.UpdateAppList](../../BasicCommunication/UpdateAppList/index.md) or [BasicCommunication.OnAppRegistered](../../BasicCommunication/OnAppRegistered/index.md) RPCs.  
@@ -65,7 +63,7 @@ GetListOfPermissions
 |||
 GetListOfPermissions without AppId
 ![GetListOfPermissions](./assets/GetListOfPermissionsNoId.jpg)
-||| 
+|||
 
 |||
 GetListOfPermissions provide  External UCS Status to HMI   
@@ -76,8 +74,7 @@ GetListOfPermissions provide  External UCS Status to HMI
 Possible Layout - ExternalConsentStatus   
 ![GetListOfPermissions](./assets/PossibleLayoutExternalConsentStatus.png)
 |||
-Possible Layout - ExternalConsentStatus
-![GetListOfPermissions](./assets/PossibleLayoutExternalConsentStatus.png)
+
 ### Example Request
 
 ```json
