@@ -38,7 +38,7 @@ The User consents the device
 |||
 
 #### JSON Example Notification
-```
+```json
 {
 	"jsonrpc" : "2.0",
 	"method" : "SDL.OnSDLConsentNeeded",

@@ -734,7 +734,6 @@
 |showConstantTBTIcon|9||
 |showConstantTBTNextTurnIcon|10||
 |locationImage|11||
-|SubMenuIcon|12||
 
 ### VehicleDataType
 
@@ -771,9 +770,9 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|UP_TO_DATE|0|PolicyTable has actual state and doesn’t require update.|
-|UPDATING|1|The process of PolicyTableUpdate is in Progress.|
-|UPDATE_NEEDED|2|PolicyTable requires to be updated.|
+|UP_TO_DATE|0||
+|UPDATING|1||
+|UPDATE_NEEDED|2||
 
 ### PRNDL
 
@@ -806,5 +805,6 @@
 ### EntityStatus
 |Name|Value|Description|
 |:---|:----|:----------|
-|ON|0||
-|OFF|1||
+|ON|||
+|OFF||| 
+

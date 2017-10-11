@@ -337,13 +337,12 @@
 
 ### DeviceInfo
 
-|Name|Type|Mandatory|Description|
-|:---|:---|:--------|:----------|
-|name|String|true|The name of the device connected.|
-|id|String|true|The ID of the device connectedi: either hash of device's USB serial number(in case of USB connection) or has of device's MAC address (in case of BlueTooth or WIFI connection.|
-|transportType|[Common.TransportType]|false|The transport type the named-app's-device is connected over HU(BlueTooth, USB or WiFi). It must be provided in _OnAppRegistered_ and in _UpdateDeviceList_.|
-|isSDLAllowed|Boolean|false|Sent by SDL in _UpdateDeviceList_. ’true’ – if device is allowed for PolicyTable Exchange; ‘false’ – if device is NOT allowed for PolicyTable Exchange.|
-[Common.TransportType]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Common/Enums/index.md#transporttype
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|name|String|true|||
+|id|String|true|||
+|transportType|Common.TransportType|false|||
+|isSDLAllowed|Boolean|false|||
 
 ### SoftButton
 
@@ -413,9 +412,9 @@
 |imageResolution|Common.ImageResolution|false|||
 
 ### ExternalConsentStatus
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |entityType|Integer|true|minvalue: 0<br>maxvalue: 128|The entityType which status is informed by "status" param.|
 |entityID|Integer|true|minvalue: 0<br>maxvalue: 128|The corresponding ID of entityType which status is informed by "status" param.|
-|status|Common.EntityStatus|true|-|Status of External User Consent Settings entity: "ON" or "OFF"|
-
+|status|[Common.EntityStatus](../Enums/index.md#entitystatus)|true|-|Status of External User Consent Settings entity: "ON" or "OFF"|

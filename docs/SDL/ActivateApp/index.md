@@ -13,13 +13,10 @@ Purpose
 
 !!! MUST   
 
-  1. Follow to steps:  
-    * send _GetListOfPermissions_ request to SDL (if "isPermissionsConsentNeeded:true" is set to true) in order to obtain list of message codes for functional groups needed by application for user to consent, in response SDL provides array of these message codes.    
-    * send _GetUserFriendlyMessage_ request to SDL to obtain user friendly messages from policy table with list of message codes and optionally language if language needs to be different from provided by HMI on startup (using GetLanguage request from SDL).
-        * Note: In response SDL sends messages from policy table
-            * display appropriate dialog to User and sends _OnAppPermissionConsent_ notification to SDL specifying _app_id_, consented functions and source.
-
-  2. Display Dialog and on result of user selection to send _OnAllowSDLFuncionality_ specifying device from _ActivateApp_ response, source of choice (UI/VR) and allowed set to true/false (if user ignores question, this is automatically set to false), in case HMI receives _SDL.ActivateApp_ (isSDLAllowed: false).
+1. Send `SDL.ActivateApp`.  
+2. Send a request to SDL to get messages for specified permissions (via `GetUserFriendlyMessage`) and notify user that provided permissions of application were decreased in case HMI gets  "isAppPermissionRevoked:true" respond from SDL PoliciesManager.  
+3. Send `GetListOfPermissions` request to SDL in order to obtain list of message codes for functional groups needed by application for user to consent when PoliciesManager responds with "isPermissionsConsentNeeded: true" .  
+4. Display Dialog and on result of user selection to send `OnAllowSDLFuncionality` specifying device from `ActivateApp` response, source of choice (UI/VR) and allowed set to true/false (if user ignores question, this is automatically set to false) when HMI receives `SDL.ActivateApp` (isSDLAllowed: false).
 !!!
 
 !!! NOTE   
@@ -79,10 +76,12 @@ The User consents the device.
 ActivateApp for application registered with reduced permissions after Policy Table Update
 ![ActivateApp](./assets/ActivateAppReducedPermissions.png)
 |||
+
 |||
 ActivateApp for application registered with revoked permissions after Policy Table Update
 ![ActivateApp](./assets/ActivateAppRevokedPermissions.png)
 |||
+
 |||
 ActivateApp using App Launching
 ![ActivateApp](./assets/ActivateAppAppLaunch.png)
