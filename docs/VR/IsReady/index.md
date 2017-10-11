@@ -13,7 +13,7 @@ Purpose
 
 !!! note
 
-1. SDL sends `VR.IsReady` request after HMI confirms its readiness via `BC.OnREady` notification.
+1. SDL sends `VR.IsReady` request after HMI confirms its readiness via `BC.OnReady` notification.
 2. If HMI responds with `"available":false`, SDL will not further communicate over VR interface with HMI.
 3. If HMI does not respond during SDL's default timeout, SDL will continue to send RPCs over VR interface to HMI.
 
