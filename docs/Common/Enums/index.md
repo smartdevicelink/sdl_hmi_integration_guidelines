@@ -802,3 +802,9 @@
 |OFF|1||
 |ON|2||
 
+### EntityStatus
+|Name|Value|Description|
+|:---|:----|:----------|
+|ON|||
+|OFF||| 
+

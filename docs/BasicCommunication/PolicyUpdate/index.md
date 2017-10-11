@@ -13,7 +13,7 @@ Purpose
 
 ``BC.PolicyUpdate`` represents SDL-generated request to start the PTU sequence.
 
-!!! MUST 
+!!! MUST
 1. Encrypt the Snapshot PT (path from ``file`` parameter) _in case_ and by the scheme required by Policies Server
 * Request Policies Server url via the next ``SDL.GetURLs`` from SDL
 * Provide the path defined by ``file`` parameter in the next ``BC.OnSystemRequest`` that SDL will forward to mobile application
@@ -30,7 +30,7 @@ Purpose
    * Ignition cycles since previous successful PTU (``"exchange_after_x_ignition_cycles"`` value in local PT)
    * 24 hours prior to module's certificate expiration date:
 a. The triggers for checking the cert expiration status are:
-ignition on
+Ignition On
 TLS handshake
    * New application (that is, not-yet existing in local PT) registration
    * In case the status of PTU is UPDATE_NEEDED due to failed retry stratery at previous ignition cycle
@@ -38,19 +38,20 @@ TLS handshake
    * ``file`` - is the path to the Snapshot of local PolicyTable (Snapshot PT final destination is Policies Server)
    * ``timeout`` - value taken from ``"timeout_after_x_seconds"`` field of local PT
    * ``retry`` - array of values from ``"seconds_between_retries"`` field of local PT. SDL handles the PTU retry sequence (re-requesting update if fails to receive during timeout) by itself.
+4. When SDL  is built with EXTERNAL_PROPRIETARY flow, SDL _PoliciesManager_ must change the status to “UPDATING” and notify HMI with OnStatusUpdate("UPDATING") right after SnapshotPT is sent out to to mobile app via OnSystemRequest() RPC.   
 !!!
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
-|file|String|true|minlength: 1<br>maxlength: 255|
-|timeout|Integer|true|minvalue: 0<br>maxvalue: 65535|
-|retry|Integer|true|array: true<br>minsize: 1<br>maxsize: 5<br>minvalue: 0<br>maxvalue: 65535|
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|file|String|true|minlength: 1<br>maxlength: 255|Location of policy table snapshot. It’s defined in smartDeviceLink.ini as  “PathToSnapshot” parameter|
+|timeout|Integer|true|minvalue: 0<br>maxvalue: 65535|Send attempt timeout in seconds, it’s a value from the Policy Table.|
+|retry|Integer|true|array: true<br>minsize: 1<br>maxsize: 5<br>minvalue: 0<br>maxvalue: 65535|Array of delays to wait after failed atempts, it’s a value from the Policy Table|
 
 ### Response
 
-!!! MUST
+!!! MUST   
 1. Respond with ``SUCCESS`` resultCode to continue the PTU flow.
 !!!
 
@@ -58,10 +59,16 @@ TLS handshake
 
 This RPC has no additional parameter requirements
 
-### Sequence Diagrams
+### Sequence Diagrams   
+
 |||
-BC.PolicyUpdate in "Proprietary" Policy Table Update Flow
-![Proprietary PTU](./assets/Proprietary_PTU_flow_.png)
+BC.PolicyUpdate in EXTERNAL PROPRIETARY Policy Table Update Flow
+![External proprietary](./assets/diagram_PolicyUpdate_external_proprietary.png)
+|||
+
+|||
+BC.PolicyUpdate in PROPRIETARY Policy Table Update Flow
+![Proprietary PTU](./assets/PolicyUpdate_in_Proprietary_PTU_flow.png)
 |||
 
 ### Example Request
