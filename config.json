@@ -343,6 +343,9 @@
               "name": "ScrollableMessage"
             },
             {
+              "name": "SendHapticData"
+            },
+            {
               "name": "SetAppIcon"
             },
             {
