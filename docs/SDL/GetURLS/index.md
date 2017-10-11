@@ -23,10 +23,11 @@ Request the URL(s) for any known service type that exists in Local PT at any tim
 
 !!! NOTE
 `SDL.GetURLS` dependencies:
-	* SDL sends ``BC.PolicyUpdate`` _only in case_ it's built with "-DEXTENDED_POLICY: PROPRIETARY" flag or without flag. 
-	* URLs storage in Policy Table: `"endpoints"` section.
-	* SDL chooses the applications for taking part in PTU among registered ones and provides `appID` + `url` pairs in response  
-	* In case no applications are currently registered, SDL will return `url` only.
+
+  * SDL sends ``BC.PolicyUpdate`` _only in case_ it's built with "-DEXTENDED_POLICY: PROPRIETARY" flag or without flag. 
+  * URLs storage in Policy Table: `"endpoints"` section.
+  * SDL chooses the applications for taking part in PTU among registered ones and provides `appID` + `url` pairs in response  
+  * In case no applications are currently registered, SDL will return `url` only.
 !!!
 
 #### Parameters
