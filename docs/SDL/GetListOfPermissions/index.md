@@ -22,11 +22,15 @@ appID is known from the corresponding SDL.ActivateApp request.
 
 2) Initiate sending GetListOfPermissions without “appID” parameter in the following cases:  
 2.1) After the User presses the button to change the permissions of all currently registered applications.   
+
 !!! IMPORTANT   
 When GetListOfPermissions is requested without “appID” parameter, the response of PermissionItem array contains the PermissionGroups (“name” parameters) for all the applications as a whole and “allowed” parameter is common for each group (e.g. if at least one of the applications has disallowed parameter for some group, “allowed” value returned for this group in the context of all application must be false). (For more details see the diagram GetListOfPermissions without appID). 
 !!!   
+
 3) Store the pair of values id<->name of PermissionItem structure which were obtained via GetListOfPermissions response. These pairs will be used for future notifications via [OnAppPermissionConsent](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/master/docs/SDL/OnAppPermissionConsent/index.md) in case user’s choice for the application to allow some functionality has been updated (_For more details see OnAppPermissionConsent (id<->name dependency_).  
+
 4) Display the received “External UCS Status” in the appropriate UI screen (_For more details see the picture ExternalConsentStatus_).   
+
 5) Request the list of permissions per application for which the consent is required (via _GetListOfPermissions(appID)_), when HMI gets the 'user-consent-required' notification per application from SDL (_SDL.OnAppPermissionChanged(appID_, _appPermissionsConsentNeeded: true_)).
 
 !!! NOTE  
