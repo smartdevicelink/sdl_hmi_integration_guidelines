@@ -70,12 +70,12 @@ BC.PolicyUpdate in EXTERNAL PROPRIETARY Policy Table Update Flow
 
 |||
 BC.PolicyUpdate in PROPRIETARY Policy Table Update Flow
-![Proprietary PTU](./assets/PolicyUpdate_in_Proprietary_PTU_flow.png)
+![Proprietary PTU](./assets/Proprietary_PTU_flow.png)
 |||
 
 |||
 BC.PolicyUpdate in "HTTP" Policy Table Update Flow
-![HTTP PTU](./assets/PolicyUpdate_in_HTTP_PTU_flow.png.png)
+![HTTP PTU](./assets/PolicyUpdate_in_HTTP_PTU_flow.png)
 |||
 
 ### Example Request
