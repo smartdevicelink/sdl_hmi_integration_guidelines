@@ -21,6 +21,7 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
   6. Display images on sub menus if provided by the application.
   7. Provide a WARNINGS information to the application that the SubMenu was added but no image was displayed.
   8. Scale the image to ensure it fits properly in the space allocated for the display of the image. If the image does not fit properly even after scaling, the HMI shall not display any image on the submenu.
+!!!
 
 !!! note
 
