@@ -68,8 +68,6 @@ _**Notes for HMI expected behavior:**_
 
 !!!
 
-### Request
-
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -100,14 +98,10 @@ In case HMI does not respond SDL's request during SDL-default timeout (10 sec), 
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
-
+|||
 SetGlobalProperties for active app on HMI with VR activation
 ![SetGlobalProperties](./assets/SetGlobalPropertiesActiveVRActivate.png)
-
-SetGlobalProperties for active app within TTS.SetGlobalProperties_request, UI.SetGlobalProperties_request, VR.Started, VR.Stopped.   
-![SetGlobalProperties](./assets/SetGlobalProperties_TTS_UI_VR.png)
-
-
+|||
 
 ### Example Request
 
