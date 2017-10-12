@@ -62,7 +62,7 @@ UpdateSDL - PROPRIETARY Policy Table Update Flow
 |||
 ### Example Request
 
-```
+```json
 {
 	"id" : 543,
 	"jsonrpc" : "2.0",
@@ -72,7 +72,7 @@ UpdateSDL - PROPRIETARY Policy Table Update Flow
 
 ### Example Response
 
-```
+```json
 {
 	"id" : 543,
 	"jsonrpc" : "2.0",
@@ -87,7 +87,7 @@ UpdateSDL - PROPRIETARY Policy Table Update Flow
 
 ### Example Error
 
-```
+```json
 {
 	"id" : 543,
 	"jsonrpc" : "2.0",
