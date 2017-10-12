@@ -260,6 +260,7 @@
 |BEGIN|0||
 |MOVE|1||
 |END|2||
+|CANCEL|3||
 
 ### HmiZoneCapabilities
 
