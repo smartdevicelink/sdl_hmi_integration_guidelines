@@ -15,10 +15,12 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
 
 !!! MUST
 1) perform the update type indicated by the `updateMode` parameter:   
+
   * If the application is not active, the HMI must still store the values to be calculated for later display on the HMI.   
   * If the application is active, the updates must begin immediately.   
 
 2) exhibit the following behavior based on the `updateMode` parameter:
+
   * COUNTUP/COUNTDOWN modes:   
     * Start counting up or down from the requested `startTime` value with a step of 1 second;
     * Continue counting up or down until:
@@ -29,7 +31,7 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
     * If `startTime` or `endTime` parameters are provided, the values must be updated on the HMI.   
   * CLEAR mode:    
     * Clear `startTime` to 00:00:00 in the case that the `startTime` parameter is not provided in the request, otherwise, `startTime` must be updated with a new value. It is up to HMI to determine the way the media clock timer is cleared: either to remove it from display or to set it to zero.   
-    
+
 3) Respond with the [result code] correspondingly to the results of this RPC execution.
 [result code]: https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/UI/SetMediaClockTimer/index.md#response
 !!!
