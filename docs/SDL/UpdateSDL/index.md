@@ -44,19 +44,22 @@ This RPC has no additional parameter requirements.
 [Common.UpdateResult]: ../../common/enums/#updateresult
 
 ### Sequence Diagrams
-
+|||
 UpdateSDL UP_TO_DATE - EXTERNAL_PROPRIETARY Policy Table Update Flow
 ![UpdateSDL](./assets/UpdateSDL%20UPDATING.jpg)
-
+|||
+|||
 UpdateSDL UPDATING - EXTERNAL_PROPRIETARY Policy Table Update Flow
 ![UpdateSDL](./assets/UpdateSDL%20UPDATING.jpg)
-
+|||
+|||
 UpdateSDL UPDATE_NEEDED - EXTERNAL_PROPRIETARY Policy Table Update Flow
 ![UpdateSDL](./assets/UpdateSDL%20UPDATE_NEEDED.jpg)
-
+|||
+|||
 UpdateSDL - PROPRIETARY Policy Table Update Flow
-![UpdateSDL](../OnReceivedPolicyUpdate/assets/Proprietary_PTU_flow_.png)
-
+![UpdateSDL](./assets/Proprietary_PTU_flow_.png)
+|||
 ### Example Request
 
 ```
