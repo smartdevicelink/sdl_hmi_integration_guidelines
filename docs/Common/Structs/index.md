@@ -446,10 +446,10 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|protocol|Common.VideoStreamingProtocol|false||The video protocol configuration.|
-|codec|Common.VideoStreamingCodec|false||The video codec configuration.|
-|width|Integer|false||Width of the video stream, in pixels.|
-|height|Integer|false||Height of the video stream, in pixels.|
+|protocol|Common.VideoStreamingProtocol|false| |The video protocol configuration.|
+|codec|Common.VideoStreamingCodec|false| |The video codec configuration.|
+|width|Integer|false| |Width of the video stream, in pixels.|
+|height|Integer|false| |Height of the video stream, in pixels.|
 
 ### ExternalConsentStatus
 |Name|Type|Mandatory|Additional|Description|
