@@ -401,30 +401,45 @@ Radio Buttons
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|EN-US|0||
-|ES-MX|1||
-|FR-CA|2||
-|DE-DE|3||
-|ES-ES|4||
-|EN-GB|5||
-|RU-RU|6||
-|TR-TR|7||
-|PL-PL|8||
-|FR-FR|9||
-|IT-IT|10||
-|SV-SE|11||
-|PT-PT|12||
-|NL-NL|13||
-|EN-AU|14||
-|ZH-CN|15||
-|ZH-TW|16||
-|JA-JP|17||
-|AR-SA|18||
-|KO-KR|19||
-|PT-BR|20||
-|CS-CZ|21||
-|DA-DK|22||
-|NO-NO|23||
+|EN-US|0|English - US|
+|ES-MX|1|Spanish - Mexico|
+|FR-CA|2|French - Canada|
+|DE-DE|3|German - Germany|
+|ES-ES|4|Spanish - Spain|
+|EN-GB|5|English - GB|
+|RU-RU|6|Russian - Russia|
+|TR-TR|7|Turkish - Turkey|
+|PL-PL|8|Polish - Poland|
+|FR-FR|9|French - France|
+|IT-IT|10|Italian - Italy|
+|SV-SE|11|Swedish - Sweden|
+|PT-PT|12|Portuguese - Portugal|
+|NL-NL|13|Dutch (Standard) - Netherlands|
+|EN-AU|14|English - Australia|
+|ZH-CN|15|Mandarin - China|
+|ZH-TW|16|Mandarin - Taiwan|
+|JA-JP|17|Japanese - Japan|
+|AR-SA|18|Arabic - Saudi Arabia|
+|KO-KR|19|Korean - South Korea|
+|PT-BR|20|Portuguese - Brazil|
+|CS-CZ|21|Czech - Czech Republic|
+|DA-DK|22|Danish - Denmark|
+|NO-NO|23|Norwegian - Norway|
+|NL-BE|24|Dutch (Flemish) - Belgium|
+|EL-GR|25|Greek - Greece|
+|HU-HU|26|Hungarian - Hungary|
+|FI-FI|27|Finnish - Finland|
+|SK-SK|28|Slovak - Slovakia|
+|EN-IN|29|English - India|
+|TH-TH|30|Thai - Thailand|
+|EN-SA|31|English - Middle East|
+|HE-IL|32|Hebrew - Israel|
+|RO-RO|33|Romanian - Romania|
+|UK-UA|34|Ukrainian - Ukraine|
+|ID-ID|35|Indonesian - Indonesia|
+|VI-VN|36|Vietnamese - Vietnam|
+|MS-MY|37|Malay - Malaysia|
+|HI-IN|38|Hindi - India|
 
 ### FileType
 
