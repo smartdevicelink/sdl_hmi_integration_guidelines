@@ -1,0 +1,23 @@
+@startuml
+/'
+Source file for sequence diagram
+More information at https://plantuml.com/ 
+'/
+
+Participant "App" as A
+Participant "SDL" as SDL
+Participant "HMI" as HMI
+Participant "User" as U
+
+A -> SDL: SendHapticData(hapticRectData)
+SDL -> HMI: UI.SendHapticData(hapticRectData)
+HMI -> HMI: Stores HapticRect data
+HMI -> SDL: UI.SendHapticData(SUCCESS)
+U -> HMI: Brings first rect into focus using touch pad
+U -> HMI: Presses on touch pad to select the area
+HMI -> SDL: UI.OnTouchEvent(type:BEGIN, touchCoord:{rect center})
+SDL -> A: OnTouchEvent(type:BEGIN, touchCoord:{rect center})
+HMI -> SDL: UI.OnTouchEvent(type:END, touchCoord:{rect center})
+SDL -> A: OnTouchEvent(type:END, touchCoord:{rect center})
+
+@enduml
