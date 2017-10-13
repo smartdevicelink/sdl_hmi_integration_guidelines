@@ -561,17 +561,3 @@
 |entityType|Integer|true|minvalue: 0<br>maxvalue: 128|The entityType which status is informed by "status" param.|
 |entityID|Integer|true|minvalue: 0<br>maxvalue: 128|The corresponding ID of entityType which status is informed by "status" param.|
 |status|Common.EntityStatus|true|-|Status of External User Consent Settings entity: "ON" or "OFF"|
-
-### Rectangle
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|x|Float|true||The X-coordinate of the rectangle|
-|y|Float|true||The Y-coordinate of the rectangle|
-|width|Float|true||The width of the rectangle|
-|height|Float|true||The height of the rectangle|
-
-### HapticRect
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|id|Integer|true|minvalue: 0<br>maxvalue: 128|A unique identifier for the haptic rectangle|
-|rect|Common.Rectangle|true||The position of the haptic rectangle to be highlighted.<br>The center of this rectangle is considered "touched" when the element is focused and then selected.|
