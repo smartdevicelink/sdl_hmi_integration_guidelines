@@ -103,6 +103,23 @@
 |timeToDestination|30||
 |turnText|31||
 
+### MetadataType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|mediaTitle|0|This field contains the title of the current audio track.|
+|mediaArtist|1|This field contains the artist/creator of the current audio track.|
+|mediaAlbum|2|This field contains the album title of the current audio track.|
+|mediaYear|3|This field contains the creation year of the current audio track.|
+|mediaGenre|4|This field contains the genre of the current audio track.|
+|mediaStation|5|This field contains the name of the current media source.|
+|rating|6|This field contains a rating of some form.|
+|currentTemperature|7|This field contains the current temperature.|
+|maximumTemperature|8|This field contains the maximum temperature for the day.|
+|minimumTemperature|9|This field contains the minimum temperature for the day.|
+|weatherTerm|10|This field contains the current weather (cloudy, clear, etc.).|
+|humidity|11|This field contains the current humidity value.|
+
 ### AmbientLightStatus
 
 |Name|Value|Description|

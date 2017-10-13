@@ -352,8 +352,9 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|fieldName|Common.TextFieldName|true|||
-|fieldText|String|true|maxlength: 500||
+|fieldName|Common.TextFieldName|true| |The name of the field for displaying the text.|
+|fieldText|String|true|maxlength: 500|The data contained in the field.|
+|fieldType|Common.MetadataType|false|array: true<br>minSize: 0<br>maxSize: 5|The type of data contained in the field.|
 
 ### DeviceInfo
 
