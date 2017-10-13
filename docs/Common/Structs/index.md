@@ -36,14 +36,25 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|dialNumberEnabled|Boolean|false||If the module has the abiulity to perform dial number|
+|dialNumberEnabled|Boolean|false||If the module has the ability to perform dial number|
+
+### VideoStreamingCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|preferredResolution|Common.ImageResolution|false| |The preferred resolution of a video stream for decoding and rendering on HMI.|
+|maxBitrate|Integer|false|minvalue: 0<br>maxvalue: 2147483647|The maximum bitrate of video stream that is supported, in kbps.|
+|supportedFormats|Common.VideoStreamingFormat|false|array: true|Detailed information on each format supported by this system, in its preferred order.|
+|hapticSpatialDataSupported|boolean|false| |True if the system can utilize the haptic spatial data from the source being streamed.|
+
 
 ### SystemCapabilities
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|navigationCapability|Boolean|false|||
-|phoneCapability|Boolean|false|||
+|navigationCapability|Common.NavigationCapability|false|||
+|phoneCapability|Common.PhoneCapability|false|||
+|videoStreamingCapability|Common.VideoStreamingCapability|false|||
 
 ### MenuParams
 
@@ -431,6 +442,15 @@
 |name|Common.ImageFieldName|true|||
 |imageTypeSupported|Common.FileType|false|array: true<br>minsize: 1<br>maxsize: 100||
 |imageResolution|Common.ImageResolution|false|||
+
+### VideoConfig
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|protocol|Common.VideoStreamingProtocol|false| |The video protocol configuration.|
+|codec|Common.VideoStreamingCodec|false| |The video codec configuration.|
+|width|Integer|false| |Width of the video stream, in pixels.|
+|height|Integer|false| |Height of the video stream, in pixels.|
 
 ### ExternalConsentStatus
 |Name|Type|Mandatory|Additional|Description|

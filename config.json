@@ -358,6 +358,9 @@
               "name": "SetMediaClockTimer"
             },
             {
+              "name": "SetVideoConfig"
+            },
+            {
               "name": "Show"
             },
             {

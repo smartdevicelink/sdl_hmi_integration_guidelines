@@ -806,6 +806,26 @@ Radio Buttons
 |VEHICLEDATA_ACCPEDAL|24||
 |VEHICLEDATA_STEERINGWHEEL|25||
 
+### VideoStreamingProtocol
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|RAW|0|Raw stream bytes|
+|RTP|1|Real-time Transport Protocol|
+|RTSP|2|Real-time Streaming Protocol|
+|RTMP|3|Real-Time Messaging Protocol|
+|WEBM|4|WebM container|
+
+### VideoStreamingCodec
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|H264|0|MPEG-4 Advanced Video Coding|
+|H265|1|High Efficiency Video Coding|
+|Theora|2|Ogg Theora|
+|VP8|3||
+|VP9|4||
+
 ### UpdateResult
 
 |Name|Value|Description|
