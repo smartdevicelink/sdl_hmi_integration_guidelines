@@ -42,10 +42,10 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|preferredResolution|Common.ImageResolution|false||The preferred resolution of a video stream for decoding and rendering on HMI.|
+|preferredResolution|Common.ImageResolution|false| |The preferred resolution of a video stream for decoding and rendering on HMI.|
 |maxBitrate|Integer|false|minvalue: 0<br>maxvalue: 2147483647|The maximum bitrate of video stream that is supported, in kbps.|
 |supportedFormats|Common.VideoStreamingFormat|false|array: true|Detailed information on each format supported by this system, in its preferred order.|
-|hapticSpatialDataSupported|boolean|false||True if the system can utilize the haptic spatial data from the source being streamed.|
+|hapticSpatialDataSupported|boolean|false| |True if the system can utilize the haptic spatial data from the source being streamed.|
 
 
 ### SystemCapabilities
