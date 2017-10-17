@@ -924,6 +924,14 @@
 |BOTH|2||
 |NONE|3||
 
+### RCAccessMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|AUTO_ALLOW|0|Any RC app can take immediately gain control a module when it is requested|
+|AUTO_DENY|1|An RC app has control of a module until the app releases it, all requests for control of the module by other apps are rejected|
+|ASK_DRIVER|2|The driver is prompted when an app requests control of a module that is currently being used|
+
 ### EntityStatus
 |Name|Value|Description|
 |:---|:----|:----------|
