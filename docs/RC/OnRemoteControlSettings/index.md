@@ -18,9 +18,9 @@ When user chose through HMI to disable remote control functionality the notifica
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|
-|:--------|:--------|:---|:---------|:---------|
-|allowed|Boolean|false||If "true" - RC is allowed; if "false" - RC is disallowed|
-|accessMode|[Common.RCAccessMode](/docs/Common/Enums/index.md)|false||The remote control access mode specified by the driver via HMI|
+|:---|:---|:--------|:---------|:----------|
+|allowed|Boolean|false| |If "true" - RC is allowed; if "false" - RC is disallowed|
+|accessMode|[Common.RCAccessMode](../../common/enums/#rcaccessmode)|false| |The remote control access mode specified by the driver via HMI|
 
 ### Sequence Diagrams
 
