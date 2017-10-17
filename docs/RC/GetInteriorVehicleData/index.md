@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|moduleType|[Common.ModuleType](/docs/Common/Enums/index.md)|true||
+|moduleType|[Common.ModuleType](../../common/enums/#moduletype)|true||
 |subscribe|Boolean|false|defvalue="false"|
 |appID|Integer|true||
 
@@ -25,7 +25,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|moduleData|[Common.ModuleData](/docs/Common/Structs/index.md)|true||
+|moduleData|[Common.ModuleData](../../common/structs/#moduledata)|true||
 |isSubscribed|Boolean|false||
 
 ### Sequence Diagrams
@@ -44,7 +44,7 @@ GetInteriorVehicleData
     "method": "RC.GetInteriorVehicleData",
     "params": {
         "appID": 1093636990,
-        "moduleType": "CLIMATE"
+        "moduleType": "CLIMATE",
         "subscribe": true
     }
 }
