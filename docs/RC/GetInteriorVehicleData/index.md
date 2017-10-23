@@ -11,7 +11,7 @@ Purpose
 
 GetInteriorVehicleData is a request originated by a Remote Control Mobile Application. The HMI should only return interior vehicle data that corresponds to the request module type. For example, if `moduleType = CLIMATE`, only return [`ClimateControlData`](../../common/structs/#climatecontroldata) and do not return [`RadioControlData`](../../common/structs/#radiocontroldata). 
 
-If the parameter `subscribe` is set to true, the mobile application has requested to subscribe to the module data defined by the `moduleType` parameter.
+If the parameter `subscribe` is set to true, the mobile application has requested to subscribe to the module data defined by the [`moduleType`](../../common/enums/#moduletype) parameter.
 ### Request
 
 #### Parameters
