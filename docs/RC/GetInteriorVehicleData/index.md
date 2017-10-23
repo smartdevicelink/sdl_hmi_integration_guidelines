@@ -9,6 +9,9 @@ Sender
 Purpose
 : To read RC module status data. The same function is used to subscribe/unsubscribe on RC module status/setting change notifications.
 
+GetInteriorVehicleData is a request originated by a Remote Control Mobile Application. The HMI should only return interior vehicle data that corresponds to the request module type. For example, if `moduleType = CLIMATE`, only return `ClimateControlData` and do not return `RadioControlData`. 
+
+If the parameter `subscribe` is set to true, the mobile application has requested to subscribe to the module data defined by the `moduleType` parameter.
 ### Request
 
 #### Parameters
