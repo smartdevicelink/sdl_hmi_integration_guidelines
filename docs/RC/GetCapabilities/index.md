@@ -9,6 +9,9 @@ Sender
 Purpose
 : Inform SDL of the Remote Control capabilities of HMI, invoked at system startup.
 
+GetCapabilities is a request originated by SDL Core after receiving an `IsReady` Response from the Remote Control interface. If the HMI responds to GetCapabilities with the `RemoteControlCapabilities` parameter, this struct will overwrite any Remote Control related capabilities that are stored in the [hmi_capabilities.json](https://github.com/smartdevicelink/sdl_core/blob/master/src/appMain/hmi_capabilities.json) configuration file.
+
+The `RemoteControlCapabilities` struct will be stored by SDL Core, and used when a mobile application performs a `GetSystemCapability` request.
 ### Request
 
 #### Parameters
