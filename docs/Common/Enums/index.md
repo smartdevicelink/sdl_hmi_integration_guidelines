@@ -54,6 +54,8 @@
 |BACKGROUND_PROCESS|7||
 |TESTING|8||
 |SYSTEM|9||
+|PROJECTION|10||
+|REMOTE_CONTROL|11||
 
 ### SpeechCapabilities
 
@@ -101,6 +103,23 @@
 |phoneNumber|29||
 |timeToDestination|30||
 |turnText|31||
+
+### MetadataType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|mediaTitle|0|This field contains the title of the current audio track.|
+|mediaArtist|1|This field contains the artist/creator of the current audio track.|
+|mediaAlbum|2|This field contains the album title of the current audio track.|
+|mediaYear|3|This field contains the creation year of the current audio track.|
+|mediaGenre|4|This field contains the genre of the current audio track.|
+|mediaStation|5|This field contains the name of the current media source.|
+|rating|6|This field contains a rating of some form.|
+|currentTemperature|7|This field contains the current temperature.|
+|maximumTemperature|8|This field contains the maximum temperature for the day.|
+|minimumTemperature|9|This field contains the minimum temperature for the day.|
+|weatherTerm|10|This field contains the current weather (cloudy, clear, etc.).|
+|humidity|11|This field contains the current humidity value.|
 
 ### AmbientLightStatus
 
@@ -259,6 +278,7 @@
 |BEGIN|0||
 |MOVE|1||
 |END|2||
+|CANCEL|3||
 
 ### HmiZoneCapabilities
 
@@ -336,6 +356,24 @@
 |PRESET_9|14||
 |CUSTOM_BUTTON|15||
 |SEARCH|16||
+|AC_MAX|17|CLIMATE Module|
+|AC|18|CLIMATE Module|
+|RECIRCULATE|19|CLIMATE Module|
+|FAN_UP|20|CLIMATE Module|
+|FAN_DOWN|21|CLIMATE Module|
+|TEMP_UP|22|CLIMATE Module|
+|TEMP_DOWN|23|CLIMATE Module|
+|DEFROST_MAX|24|CLIMATE Module|
+|DEFROST|25|CLIMATE Module|
+|DEFROST_REAR|26|CLIMATE Module|
+|UPPER_VENT|27|CLIMATE Module|
+|LOWER_VENT|28|CLIMATE Module|
+|VOLUME_UP|29|RADIO Module|
+|VOLUME_DOWN|30|RADIO Module|
+|EJECT|31|RADIO Module|
+|SOURCE|32|RADIO Module|
+|SHUFFLE|33|RADIO Module|
+|REPEAT|34|RADIO Module|
 
 ### KeypressMode
 
@@ -379,30 +417,45 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|EN-US|0||
-|ES-MX|1||
-|FR-CA|2||
-|DE-DE|3||
-|ES-ES|4||
-|EN-GB|5||
-|RU-RU|6||
-|TR-TR|7||
-|PL-PL|8||
-|FR-FR|9||
-|IT-IT|10||
-|SV-SE|11||
-|PT-PT|12||
-|NL-NL|13||
-|EN-AU|14||
-|ZH-CN|15||
-|ZH-TW|16||
-|JA-JP|17||
-|AR-SA|18||
-|KO-KR|19||
-|PT-BR|20||
-|CS-CZ|21||
-|DA-DK|22||
-|NO-NO|23||
+|EN-US|0|English - US|
+|ES-MX|1|Spanish - Mexico|
+|FR-CA|2|French - Canada|
+|DE-DE|3|German - Germany|
+|ES-ES|4|Spanish - Spain|
+|EN-GB|5|English - GB|
+|RU-RU|6|Russian - Russia|
+|TR-TR|7|Turkish - Turkey|
+|PL-PL|8|Polish - Poland|
+|FR-FR|9|French - France|
+|IT-IT|10|Italian - Italy|
+|SV-SE|11|Swedish - Sweden|
+|PT-PT|12|Portuguese - Portugal|
+|NL-NL|13|Dutch (Standard) - Netherlands|
+|EN-AU|14|English - Australia|
+|ZH-CN|15|Mandarin - China|
+|ZH-TW|16|Mandarin - Taiwan|
+|JA-JP|17|Japanese - Japan|
+|AR-SA|18|Arabic - Saudi Arabia|
+|KO-KR|19|Korean - South Korea|
+|PT-BR|20|Portuguese - Brazil|
+|CS-CZ|21|Czech - Czech Republic|
+|DA-DK|22|Danish - Denmark|
+|NO-NO|23|Norwegian - Norway|
+|NL-BE|24|Dutch (Flemish) - Belgium|
+|EL-GR|25|Greek - Greece|
+|HU-HU|26|Hungarian - Hungary|
+|FI-FI|27|Finnish - Finland|
+|SK-SK|28|Slovak - Slovakia|
+|EN-IN|29|English - India|
+|TH-TH|30|Thai - Thailand|
+|EN-SA|31|English - Middle East|
+|HE-IL|32|Hebrew - Israel|
+|RO-RO|33|Romanian - Romania|
+|UK-UA|34|Ukrainian - Ukraine|
+|ID-ID|35|Indonesian - Indonesia|
+|VI-VN|36|Vietnamese - Vietnam|
+|MS-MY|37|Malay - Malaysia|
+|HI-IN|38|Hindi - India|
 
 ### FileType
 
@@ -766,6 +819,26 @@
 |VEHICLEDATA_ACCPEDAL|24||
 |VEHICLEDATA_STEERINGWHEEL|25||
 
+### VideoStreamingProtocol
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|RAW|0|Raw stream bytes|
+|RTP|1|Real-time Transport Protocol|
+|RTSP|2|Real-time Streaming Protocol|
+|RTMP|3|Real-Time Messaging Protocol|
+|WEBM|4|WebM container|
+
+### VideoStreamingCodec
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|H264|0|MPEG-4 Advanced Video Coding|
+|H265|1|High Efficiency Video Coding|
+|Theora|2|Ogg Theora|
+|VP8|3||
+|VP9|4||
+
 ### UpdateResult
 
 |Name|Value|Description|
@@ -802,9 +875,65 @@
 |OFF|1||
 |ON|2||
 
+### ModuleType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|CLIMATE|0||
+|RADIO|1||
+
+### RadioBand
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|AM|0||
+|FM|1||
+|XM|2||
+
+### RadioState
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ACQUIRING|0||
+|ACQUIRED|1||
+|MULTICAST|2||
+|NOT_FOUND|3||
+
+### TemperatureUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FAHRENHEIT|0||
+|CELSIUS|1||
+
+### DefrostZone
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FRONT|0||
+|REAR|1||
+|ALL|2||
+|NONE|3||
+
+### VentilationMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|UPPER|0||
+|LOWER|1||
+|BOTH|2||
+|NONE|3||
+
+### RCAccessMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|AUTO_ALLOW|0|Any RC app can take immediately gain control a module when it is requested|
+|AUTO_DENY|1|An RC app has control of a module until the app releases it, all requests for control of the module by other apps are rejected|
+|ASK_DRIVER|2|The driver is prompted when an app requests control of a module that is currently being used|
+
 ### EntityStatus
 |Name|Value|Description|
 |:---|:----|:----------|
-|ON|||
-|OFF||| 
-
+|ON|0||
+|OFF|1||

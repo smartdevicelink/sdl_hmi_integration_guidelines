@@ -1,0 +1,16 @@
+@startuml
+/'
+Source file for sequence diagram
+More information at https://plantuml.com/ 
+'/
+
+Participant "App" as A
+Participant "SDL" as SDL
+Participant "HMI" as HMI
+
+A -> SDL: StartService(serviceType:Video, streamingParams)
+SDL -> HMI: UI.SetVideoConfig(config: streamingParams)
+HMI -> SDL: UI.SetVideoConfig(REJECTED, rejectedParams:["codec"])
+SDL -> A: StartServiceNAK(rejectedParams:["codec"])
+
+@enduml
