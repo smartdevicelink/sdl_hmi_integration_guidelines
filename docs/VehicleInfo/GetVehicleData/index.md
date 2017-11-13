@@ -40,7 +40,8 @@ Purpose
 |emergencyEvent|Boolean|false||
 |clusterModeStatus|Boolean|false||
 |myKey|Boolean|false||
-|appID|Integer|true||
+|appID|Integer|true||  
+|fuelRange|Boolean|false||
 |engineOilLife|Boolean|false||
 
 ### Response
