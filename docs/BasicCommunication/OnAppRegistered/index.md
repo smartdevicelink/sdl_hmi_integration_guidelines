@@ -55,7 +55,7 @@ If the application does NOT resume data successfully:
    * If a device is connected over USB and registers an application, SDL will send `OnAppRegistered` with a hash of the usb serial number as the device id.
    * If a device is connected over Bluetooth or Wi-Fi and registers an application, SDL will send `OnAppRegistered` with a hash of the device's mac address as the device id.
    * When the application is registered for the first time (no records in PT) PoliciesManager should not initiate prompting the User about the event.  
-   * If iOS device was connected over Bluetooth with applications registered and running on SDL and was also connected over USB, SDL must close iAP session opened for Bluetooth, start reconnection timer and NOT send OnAppRegistered to HMI.
+   * If iOS device was connected over Bluetooth with applications registered and running on SDL and was also connected over USB, SDL must start reconnection timer and NOT send OnAppRegistered to HMI.
 !!!
 
 
