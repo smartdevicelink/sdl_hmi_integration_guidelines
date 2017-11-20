@@ -61,22 +61,37 @@ Get Capabilities
         "graphicSupported" : true,
         "imageCapabilities": ["DYNAMIC"]
     },
-  "hmiCapabilities" :
+    "hmiCapabilities" :
     {
         "navigation" : true,
-        "phoneCall" : true
+        "phoneCall" : true,
+        "videostreaming" : true
     },
-
-    "systemCapabilities": {
-      "navigationCapability": {
+    "systemCapabilities":
+    {
+      "navigationCapability":
+      {
           "sendLocationEnabled": true,
           "getWayPointsEnabled": true
       },
-      "phoneCapability": {
+      "phoneCapability":
+      {
           "dialNumberEnabled": true
-      } 
+      },
+      "videoStreamingCapability":
+      {
+        "preferredResolution": {
+          "resolutionWidth": 800,
+          "resolutionHeight": 350
+        },
+        "maxBitrate": 10000,
+        "supportedFormats": [{
+          "protocol": "RAW",
+          "codec": "H264"
+        }],
+        "hapticSpatialDataSupported": true
+      }
     },
-
     "softButtonCapabilities" :
     {
         "shortPressAvailable" : true,
@@ -84,16 +99,13 @@ Get Capabilities
         "upDownAvailable" : true,
         "imageSupported" : true
     },
-
     "hmiZoneCapabilities" : "FRONT",
-
     "audioPassThruCapabilities" :
     {
         "samplingRate" : "44KHZ",
         "bitsPerSample" : "8_BIT",
         "audioType" : "PCM"
     },
-
     "code" : 0,
     "method" : "UI.GetCapabilities"
   }

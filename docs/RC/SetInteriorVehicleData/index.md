@@ -25,8 +25,8 @@ RC.SetInteriorvehicledata represents a request from an application to change set
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|
-|:--------|:---|:----------------|:---------|:----------|
-|moduleData|[Common.ModuleData](/docs/Common/Structs/index.md)|true| |The module type and data to set|
+|:---|:---|:--------|:---------|:----------|
+|moduleData|[Common.ModuleData](../../common/structs/#moduledata)|true| |The module type and data to set|
 |appID|Integer|true| |Internal SDL-assigned ID of the related application|
 
 ### Response
@@ -34,8 +34,8 @@ RC.SetInteriorvehicledata represents a request from an application to change set
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|
-|:--------|:---|:----------------|:---------|:----------|
-|moduleData|[Common.ModuleData](/docs/Common/Structs/index.md)|true| | |
+|:---|:---|:--------|:---------|:----------|
+|moduleData|[Common.ModuleData](../../common/structs/#moduledata)|true| | |
 
 ### Sequence Diagrams
 |||

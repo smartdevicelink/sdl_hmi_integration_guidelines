@@ -24,16 +24,16 @@ The driver is expected to have an ability to grant or deny the permission.
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|
-|:---------|:---------|:--------|:---------|:---------|
-|moduleType|[Common.ModuleType](/docs/Common/Enums/index.md)|true||The module type that the app requests to control|
-|appID|Integer|true||ID of the application that triggers the permission prompt|
+|:---|:---|:--------|:---------|:----------|
+|moduleType|[Common.ModuleType](../../common/enums/#moduletype)|true| |The module type that the app requests to control|
+|appID|Integer|true| |ID of the application that triggers the permission prompt|
 
 ### Response
 
 #### Parameters
 |Name|Type|Mandatory|Additional|Description|
-|:---------|:---------|:--------|:---------|:---------|
-|allowed|Boolean|true||"true" - if the driver grants the permission for controlling to the named app; <br> "false" - in case the driver denies the permission for controlling to the named app.|
+|:---|:---|:--------|:---------|:----------|
+|allowed|Boolean|true| |"true" - if the driver grants the permission for controlling to the named app; <br> "false" - in case the driver denies the permission for controlling to the named app.|
 
 ### Sequence Diagrams
 
