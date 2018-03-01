@@ -54,8 +54,11 @@ If the application does NOT resume data successfully:
 !!! NOTE   
    * If a device is connected over USB and registers an application, SDL will send `OnAppRegistered` with a hash of the usb serial number as the device id.
    * If a device is connected over Bluetooth or Wi-Fi and registers an application, SDL will send `OnAppRegistered` with a hash of the device's mac address as the device id.
-   * When the application is registered for the first time (no records in PT) PoliciesManager should not initiate prompting the User about the event.
+   * When the application is registered for the first time (no records in PT) PoliciesManager should not initiate prompting the User about the event.  
+   * If iOS device was connected over Bluetooth with applications registered and running on SDL and was also connected over USB, SDL must start reconnection timer and NOT send OnAppRegistered to HMI.
 !!!
+
+
 
 ### Notification
 
@@ -63,15 +66,11 @@ If the application does NOT resume data successfully:
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|application|[Common.HMIApplication]|true||
-|ttsName|[Common.TTSChunk]|false|array: true<br>minsize: 1<br>maxsize: 100|
+|application|[Common.HMIApplication](../../common/structs/#hmiapplication)|true||
+|ttsName|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40|
 |resumeVrGrammars|Boolean|false||
-|priority|[Common.AppPriority]|false||
-
-[Common.HMIApplication]: ../../common/structs/#hmiapplication
-[Common.TTSChunk]: ../../common/structs/#ttschunk
-[Common.AppPriority]: ../../common/enums/#apppriority
+|priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
 
 ### Sequence Diagrams
 |||
