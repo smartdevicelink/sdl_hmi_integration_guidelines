@@ -9,13 +9,16 @@ Sender
 Purpose
 : To read RC module status data. The same function is used to subscribe/unsubscribe on RC module status/setting change notifications.
 
+GetInteriorVehicleData is a request originated by a Remote Control Mobile Application. The HMI should only return interior vehicle data that corresponds to the request module type. For example, if `moduleType = CLIMATE`, only return [`ClimateControlData`](../../common/structs/#climatecontroldata) and do not return [`RadioControlData`](../../common/structs/#radiocontroldata). 
+
+If the parameter `subscribe` is set to true, the mobile application has requested to subscribe to the module data defined by the [`moduleType`](../../common/enums/#moduletype) parameter.
 ### Request
 
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|moduleType|[Common.ModuleType](/docs/Common/Enums/index.md)|true||
+|moduleType|[Common.ModuleType](../../common/enums/#moduletype)|true||
 |subscribe|Boolean|false|defvalue="false"|
 |appID|Integer|true||
 
@@ -25,7 +28,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|moduleData|[Common.ModuleData](/docs/Common/Structs/index.md)|true||
+|moduleData|[Common.ModuleData](../../common/structs/#moduledata)|true||
 |isSubscribed|Boolean|false||
 
 ### Sequence Diagrams
@@ -44,7 +47,7 @@ GetInteriorVehicleData
     "method": "RC.GetInteriorVehicleData",
     "params": {
         "appID": 1093636990,
-        "moduleType": "CLIMATE"
+        "moduleType": "CLIMATE",
         "subscribe": true
     }
 }

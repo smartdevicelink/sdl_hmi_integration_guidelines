@@ -356,26 +356,24 @@
 |PRESET_9|14||
 |CUSTOM_BUTTON|15||
 |SEARCH|16||
-Climate Buttons
-|AC_MAX|17||
-|AC|18||
-|RECIRCULATE|19||
-|FAN_UP|20||
-|FAN_DOWN|21||
-|TEMP_UP|22||
-|TEMP_DOWN|23||
-|DEFROST_MAX|24||
-|DEFROST|25||
-|DEFROST_REAR|26||
-|UPPER_VENT|27||
-|LOWER_VENT|28||
-Radio Buttons
-|VOLUME_UP|29||
-|VOLUME_DOWN|30||
-|EJECT|31||
-|SOURCE|32||
-|SHUFFLE|33||
-|REPEAT|34||
+|AC_MAX|17|CLIMATE Module|
+|AC|18|CLIMATE Module|
+|RECIRCULATE|19|CLIMATE Module|
+|FAN_UP|20|CLIMATE Module|
+|FAN_DOWN|21|CLIMATE Module|
+|TEMP_UP|22|CLIMATE Module|
+|TEMP_DOWN|23|CLIMATE Module|
+|DEFROST_MAX|24|CLIMATE Module|
+|DEFROST|25|CLIMATE Module|
+|DEFROST_REAR|26|CLIMATE Module|
+|UPPER_VENT|27|CLIMATE Module|
+|LOWER_VENT|28|CLIMATE Module|
+|VOLUME_UP|29|RADIO Module|
+|VOLUME_DOWN|30|RADIO Module|
+|EJECT|31|RADIO Module|
+|SOURCE|32|RADIO Module|
+|SHUFFLE|33|RADIO Module|
+|REPEAT|34|RADIO Module|
 
 ### KeypressMode
 
@@ -789,7 +787,6 @@ Radio Buttons
 |showConstantTBTIcon|9||
 |showConstantTBTNextTurnIcon|10||
 |locationImage|11||
-|SubMenuIcon|12||
 
 ### VehicleDataType
 
@@ -820,7 +817,9 @@ Radio Buttons
 |VEHICLEDATA_BATTVOLTAGE|22||
 |VEHICLEDATA_ENGINETORQUE|23||
 |VEHICLEDATA_ACCPEDAL|24||
-|VEHICLEDATA_STEERINGWHEEL|25||
+|VEHICLEDATA_STEERINGWHEEL|25||  
+|VEHICLEDATA_FUELRANGE|26||  
+|VEHICLEDATA_ENGINEOILLIFE|27||
 
 ### VideoStreamingProtocol
 
@@ -927,8 +926,26 @@ Radio Buttons
 |BOTH|2||
 |NONE|3||
 
+### RCAccessMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|AUTO_ALLOW|0|Any RC app can take immediately gain control a module when it is requested|
+|AUTO_DENY|1|An RC app has control of a module until the app releases it, all requests for control of the module by other apps are rejected|
+|ASK_DRIVER|2|The driver is prompted when an app requests control of a module that is currently being used|
+
 ### EntityStatus
 |Name|Value|Description|
 |:---|:----|:----------|
 |ON|0||
-|OFF|1||
+|OFF|1||  
+
+### FuelType  
+|Name|Value|Description|
+|:---|:----|:----------|  
+|GASOLINE|0||  
+|DIESEL|1||  
+|CNG|2|For vehicles using compressed natural gas|  
+|LPG|3|For vehicles using liquefied petroleum gas|
+|HYDROGEN|4|For FCEV (fuel cell electric vehicle)|  
+|BATTERY|5|For BEV (Battery Electric Vehicle), PHEV (Plug-in Hybrid Electric Vehicle), solar vehicles and other vehicles which run on a battery|
