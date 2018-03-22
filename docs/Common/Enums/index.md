@@ -888,8 +888,8 @@ Radio Buttons
 |RADIO|1||  
 |AUDIO|2||
 |LIGHT|3||
-|HMI_SETTINGS|3||
-|SEAT|4||
+|HMI_SETTINGS|4||
+|SEAT|5||
 
 ### RadioBand
 
