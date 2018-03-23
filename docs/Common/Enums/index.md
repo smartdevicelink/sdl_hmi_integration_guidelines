@@ -933,7 +933,7 @@ Radio Buttons
 |ON|0||
 |OFF|1||
 
-#### CommonEventType  
+### CommonEventType  
 |Element name|Type|
 |:---|:---------|
 |PHONE_CALL|Phone call is active
