@@ -9,6 +9,8 @@ Sender
 Purpose
 : Close the video streaming service between SDL and the HMI and stop streaming video data.
 
+When an application closes the 11th service, SDL sends StopStream to HMI. It initiates the channel closure between SDL and HMI which is used for streaming video raw data sent by navigation or projection application. 
+
 
 #### Parameters
 

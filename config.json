@@ -112,6 +112,9 @@
             },
             {
               "name": "UpdateAppList"
+            },
+            {
+              "name": "OnEventChanged"
             }
           ]
         },

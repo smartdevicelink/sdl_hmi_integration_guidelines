@@ -932,3 +932,12 @@ Radio Buttons
 |:---|:----|:----------|
 |ON|0||
 |OFF|1||
+
+#### CommonEventType  
+|Element name|Type|
+|:---|:---------|
+|PHONE_CALL|Phone call is active
+|EMERGENCY_EVENT|Active emergency event, active parking event
+|DEACTIVATE_HMI|GAL/DIO is active
+|AUDIO_SOURCE|Navigated to audio(radio, etc)
+|EMBEDDED_NAVI|Navigated to navigation screen

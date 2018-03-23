@@ -9,7 +9,9 @@ Sender
 Purpose
 : Initiate a video streaming service between SDL and the HMI to stream video data.
 
-### Request
+### Request  
+
+When an application opens the 11th service, SDL sends StartStream to HMI. It initiates the channel between SDL and HMI for streaming video raw data which is being sent by navigation or projection application. 
 
 #### Parameters
 
