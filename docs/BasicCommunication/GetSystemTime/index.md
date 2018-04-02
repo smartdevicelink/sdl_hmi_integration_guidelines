@@ -25,7 +25,7 @@ After sending the request SDL starts [`<DefaultTimeout>`](https://github.com/sma
 1.	Send valid response during `<DefaultTimeout>`(value from .ini file)
 2.	Provide all parameters of "DateTime" struct at response (“milliseconds”,” tz_hour”,” tz_minute” params should be set to “0” as QNX systemTime struct has NO these params)
 
-_Note:_ SDL logs corresponding error internally and fails TLS Handshake if at least one of the following failures happens:
+_Note:_ SDL logs corresponding error internally and fails TLS or DTLS Handshake if at least one of the following failures happens:
 1)	HMI does NOT respond during `<DefaultTimeout>`;
 2)	HMI responds with any `<errorCode>` during `<DefaultTimeout>`;
 3)	HMI sends invalid by any reason response: 
@@ -37,7 +37,7 @@ e.	at least one mandatory param was omited
 f.	at least one param is out of bound  
 
 
-In case TLS handshake fails, SDL must behave depending on `<serviceType>` requested for encryption and a value of "ForceProtectedService"/"ForceUnprotectedService" params of .ini file.
+In case TLS or DTLS handshake fails, SDL must behave depending on `<serviceType>` requested for encryption and a value of "ForceProtectedService"/"ForceUnprotectedService" params of .ini file.
 
 #### Parameters
 |Name|Type|Mandatory|Additional|
