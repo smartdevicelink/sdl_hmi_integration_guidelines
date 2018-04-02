@@ -576,3 +576,17 @@
 |:---|:---|:--------|:---------|:----------|
 |id|Integer|true|minvalue: 0<br>maxvalue: 128|A unique identifier for the haptic rectangle|
 |rect|Common.Rectangle|true| |The position of the haptic rectangle to be highlighted.<br>The center of this rectangle is considered "touched" when the element is focused and then selected.|
+
+### DateTime  
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|  
+|millisecond|Integer|false|minvalue: 0<br> maxvalue: 999|Milliseconds – part of time - one thousandth split second|
+|seconds|Integer|false|minvalue: 0<br> maxvalue: 60|Seconds part of time|  
+|minutes|Integer|false|minvalue: 0<br> maxvalue: 59|Minutes part of time|  
+|hour|Integer|false|minvalue: 0<br> maxvalue: 23|Hours part of time. Note that this structure accepts time only in 24 Hr format|  
+|day|Integer|false|minvalue: 1 <br>maxvalue: 31|Day of the month|  
+|month|Integer|false|minvalue: 1<br> maxvalue: 12|Month of the year|  
+|year|Integer|false|minvalue: 0 <br>maxvalue: 4095|The year in YYYY format|  
+|tz_hour|Integer|false|minvalue: -12 <br> maxvalue: 14 <br> defvalue: 0|Time zone offset in Hours with regard to UTC.|  
+|tz_minute|Integer|false|minvalue: 0 <br>maxvalue: 59 <br> defvalue: 0|Time zone offset in Min with regard to UTC.|   

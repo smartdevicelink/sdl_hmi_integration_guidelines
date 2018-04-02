@@ -112,6 +112,12 @@
             },
             {
               "name": "UpdateAppList"
+            },
+            {
+              "name": "OnSystemTimeReady"
+            },
+            {
+              "name": "GetSystemTime"
             }
           ]
         },
