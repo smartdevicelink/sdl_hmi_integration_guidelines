@@ -395,7 +395,8 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |value|String|true|maxlength: 65535||
-|imageType|Common.ImageType|true|||
+|imageType|Common.ImageType|true|||  
+|isTemplate|Boolean|false|||
 
 ### MyKey
 
