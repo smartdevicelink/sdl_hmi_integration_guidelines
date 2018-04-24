@@ -9,6 +9,10 @@ Sender
 Purpose
 : Close the video streaming service between SDL and the HMI and stop streaming video data.
 
+The app must stop video streaming after receiving onHMIStatus with HMI level NONE or BACKGROUND. 
+
+If the app does not stop streaming after certain amount of time, SDL sends a StopService Control Frame to the app in protocol layer. 
+
 
 #### Parameters
 
