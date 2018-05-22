@@ -24,8 +24,9 @@ In the event a navigation application is in `FULL` or `LIMITED` and the HMI send
 
 In the event a navigation application is in `FULL` or `Limited` and the HMI sends `OnAppDeactivated` (reason="AUDIO"), SDL must set the navigation app to `LIMITED` with the AudioStreamingState set to `AUDIBLE`.
 
-In the event a projection application is in `FULL` and the HMI sends `OnAppDeactivated` (user goes out from media app screen to HU menu), SDL must set the app to `LIMITED` with the AudioStreamingState set to `NOT_AUDIBLE`, VideoStreamingState `NOT_STREAMABLE`.  
-In the event a projection application is in `LIMITED`  the HMI sends `OnAppDeactivated` (user goes out from media app screen to HU menu), SDL must set the app to `BACKGROUND` with the AudioStreamingState set to `NOT_AUDIBLE`, VideoStreamingState `NOT_STREAMABLE`.
+In the event a media projection application is in `FULL` and the HMI sends `OnAppDeactivated` (user goes out from media app screen to HU menu), SDL must set the app to `LIMITED` with the AudioStreamingState set to `AUDIBLE`, VideoStreamingState `STREAMABLE`.  
+
+In the event a non media projection application is in `FULL`  the HMI sends `OnAppDeactivated` (user goes out from media app screen to HU menu), SDL must set the app to `LIMITED` with the AudioStreamingState set to `NOT_AUDIBLE`, VideoStreamingState `STREAMABLE`.
 
 !!! NOTE
 
