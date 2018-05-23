@@ -12,9 +12,7 @@ Purpose
 SDL requires this notification in order to keep the mobile application from sending RPC's related to the HMI's functionality (e.g. adding commands for VR, starting an interaction with the user, speaking text via TTS, etc).
 
 
-In the event a navigation application is in `FULL` or `LIMITED` and the HMI sends `OnAppDeactivated` (reason="NAVIGATIONMAP"), SDL must set the navigation application to `BACKGROUND`.
-
-In the event a navigation application is in `FULL` or `Limited` and the HMI sends `OnAppDeactivated` (reason="AUDIO"), SDL must set the navigation app to `LIMITED` with the AudioStreamingState set to `AUDIBLE`.
+In the event a navigation application is in `FULL` and the HMI sends `OnAppDeactivated`, SDL must set the navigation application to `LIMITED` with the AudioStreamingState set to `AUDIBLE`, VideoStreamingState `STREAMABLE`.
 
 In the event a media projection application is in `FULL` and the HMI sends `OnAppDeactivated` (user goes out from media app screen to HU menu), SDL must set the app to `LIMITED` with the AudioStreamingState set to `AUDIBLE`, VideoStreamingState `STREAMABLE`.  
 
