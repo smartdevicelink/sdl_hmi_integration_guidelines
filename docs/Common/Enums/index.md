@@ -883,7 +883,8 @@ Radio Buttons
 |Name|Value|Description|
 |:---|:----|:----------|
 |CLIMATE|0||
-|RADIO|1||
+|RADIO|1||  
+|SEAT|2||
 
 ### RadioBand
 
@@ -932,3 +933,36 @@ Radio Buttons
 |:---|:----|:----------|
 |ON|0||
 |OFF|1||
+
+### MassageZone
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|OFF|0||
+|LOW|1||
+|HIGH|2||
+
+### MassageCushion
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|TOP_LUMBAR|0||
+|MIDDLE_LUMBAR|1||
+|BOTTOM_LUMBAR|2||
+|BACK_BOLSTERS|3||
+|SEAT_BOLSTERS|4||
+
+### SeatMemoryActionType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|SAVE|0|Save current seat postions and settings to seat memory.|
+|RESTORE|1|Restore / apply the seat memory settings to the current seat.|
+|NONE|2|No action to be performed.|
+
+### SupportedSeat
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DRIVER|0|List possible seats that is a remote controllable seat.|
+|FRONT_PASSENGER|1|List possible seats that is a remote controllable seat.|
