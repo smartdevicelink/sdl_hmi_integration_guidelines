@@ -39,7 +39,6 @@ The list of RPCs and data structures that `OnPutFile` affects are:
   * Alert (SoftButton)  
   * AlertManeuver (SoftButton)
   * ScrollableMessage (SoftButton)
-  * UpdateTurnList (SoftButton)
 
 !!!
 
