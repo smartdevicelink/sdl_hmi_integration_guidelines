@@ -7,11 +7,11 @@ Sender
 : HMI
 
 Purpose
-: Inform SDL about readiness to provide system time
+: Notifies SDL that the HMI is ready to provide accurate system time
 
 !!! must
 
-The HMI must send BC.OnSystemTimeReady to SDL due to new ignition cycle in order to notify SDL about readiness to provide system time.
+The HMI must send a BC.OnSystemTimeReady notification to SDL when a new ignition cycle occurs in order to notify SDL that the HMI is once again ready to provide accurate system time.
 !!!
 
 ### Notification
