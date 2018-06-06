@@ -42,7 +42,7 @@ SetAppIcon
 ```json
 {
   "id" : 88,
-  "jsonrpc" : "2.
+  "jsonrpc" : "2.0",
   "method" : "UI.SetAppIcon",
   "params" :
   {
