@@ -288,7 +288,7 @@
 |passengerBuckleBelted|Common.VehicleDataEventStatus|false|||
 |driverBuckleBelted|Common.VehicleDataEventStatus|false|||
 |leftRow2BuckleBelted|Common.VehicleDataEventStatus|false|||
-|passengerChildDetected|Common.VehicleDataEventStatus|false|||
+|passengerChildDetected|Common.Vehicl### SisDataeDataEventStatus|false|||
 |rightRow2BuckleBelted|Common.VehicleDataEventStatus|false|||
 |middleRow2BuckleBelted|Common.VehicleDataEventStatus|false|||
 |middleRow3BuckleBelted|Common.VehicleDataEventStatus|false|||
@@ -486,6 +486,7 @@
 |signalChangeThreshold|Integer|false|minvalue:0 maxvalue:100|If the signal strength falls below the set value for this parameter, the radio will tune to an alternative frequency|
 |radioEnable|Boolean|false||True if the radio is on, false is the radio is off|
 |state|Common.RadioState|false||||
+|sisData|Common.SisData|false||Read-only Station Information Service (SIS) data provides basic information about the station such as call sign, as well as information not displayable to the consumer such as the station identification number|
 
 ### RdsData
 
@@ -571,7 +572,7 @@
 |heatedSteeringWheelAvailable|Boolean|false|| Availability of the control (enable/disable) of heated Steering Wheel. <br> True: Available, False: Not Available, Not present: Not Available.|
 |heatedWindshieldAvailable|Boolean|false|| Availability of the control (enable/disable) of heated Windshield. <br> True: Available, False: Not Available, Not present: Not Available.|
 |heatedRearWindowAvailable|Boolean|false|| Availability of the control (enable/disable) of heated Rear Window. <br> True: Available, False: Not Available, Not present: Not Available.|
-|heatedMirrorsAvailable|Boolean|false|| Availability of the control (enable/disable) of heated Mirrors. <br> True: Available, False: Not Available, Not present: Not Available.|  
+|heatedMirrorsAvailable|Boolean|false|| Availability of the control (enable/disable) of heated Mirrors. <br> True: Available, False: Not Available, Not present: Not Available.|
 
 ### AudioControlCapabilities
 
@@ -601,7 +602,7 @@
 |source|Common.PrimaryAudioSource|false||In a getter response or a notification, it is the current primary audio source of the system. <br> In a setter request, it is the target audio source that the system shall switch to. <br> If the value is MOBILE_APP, the system shall switch to the mobile media app that issues the setter RPC.|
 |keepContext|Boolean|false||This parameter shall not be present in any getter responses or notifications. <br> This parameter is optional in a setter request. The default value is false. <br> If it is false, the system not only changes the audio source but also brings the default infotainment system UI associated with the audio source to foreground and set the application to background. <br> If it is true, the system changes the audio source, but keeps the current application's context.|
 |volume|Integer|false|minvalue="0" <br> maxvalue="100"|Reflects the volume of audio, from 0%-100%."
-|equalizerSettings|Common.EqualizerSettings|false|minvalue="1" <br> maxvalue="100"<br>array ="true"|Defines the list of supported channels (band) and their current/desired settings on HMI|    
+|equalizerSettings|Common.EqualizerSettings|false|minvalue="1" <br> maxvalue="100"<br>array ="true"|Defines the list of supported channels (band) and their current/desired settings on HMI|
 
 
 ### LightCapabilities
@@ -610,8 +611,9 @@
 |:---|:---|:--------|:---------|:----------|
 |name|Common.LightName|true|||
 |Assuming light ON/OFF status is always available|||||
+|statusAvailable|Boolean|false||Indicates if the status (ON/OFF) can be set remotely. App shall not use read-only values (RAMP_UP/RAMP_DOWN/UNKNOWN/INVALID) in a setInteriorVehicleData request.|
 |densityAvailable|Boolean|false||Indicates if the light's density can be set remotely (similar to a dimmer).|
-|RGBColorSpaceAvailable|Boolean|false||Indicates if the light's color can be set remotely by using the sRGB color space.|
+|rgbColorSpaceAvailable|Boolean|false||Indicates if the light's color can be set remotely by using the sRGB color space.|
 
 
 ### LightControlCapabilities
