@@ -96,8 +96,8 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|text|String|true|maxlength: 500||
-|type|Common.SpeechCapabilities|true|||
+|text|String|true|maxlength: 500|The text/phonemes to be spoken or the name of an audio file to play|
+|type|Common.SpeechCapabilities|true||Describes how to interpret the text field (as plain text, a file name, etc.)|
 
 ### TextField
 
