@@ -12,14 +12,14 @@ Purpose
 !!! must
 
 The HMI must send a BC.OnSystemTimeReady notification to SDL when a new ignition cycle occurs in order to notify SDL that the HMI is once again ready to provide accurate system time.
+
 !!!
 
 ### Notification
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+`This RPC has no additional parameter requirements.`
 
 ### Sequence Diagrams
 |||
