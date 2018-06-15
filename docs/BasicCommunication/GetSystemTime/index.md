@@ -1,4 +1,4 @@
-## GeSystemTime
+## GetSystemTime
 
 Type
 : Function
@@ -36,6 +36,7 @@ d.	at least one param has invalid type
 e.	at least one mandatory param was omitted
 f.	at least one param is out of bounds  
 
+!!!
 
 If the handshake process fails, SDL behavior depends on the "ForceProtectedService"/"ForceUnprotectedService" params configured in the 'Security Manager' section of the smartDeviceLink.ini file.
 
@@ -57,7 +58,7 @@ GetSystemTime
 {
 	"id" : 59546,
 	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication. GetSystemTime"
+	"method" : "BasicCommunication.GetSystemTime"
 }
 ```
 
@@ -69,10 +70,10 @@ GetSystemTime
 	"jsonrpc" : "2.0",
 	"result" : 
 	{
-      "systemTime" : 
-		[
+      		"systemTime" : 
+			[
 			
-			{
+				{
 				"millisecond" : 11,
 				"second" : 111,
 				"minute" : 111,
@@ -80,10 +81,10 @@ GetSystemTime
 				"day" : 1,
 				"month" : 11,
 				"year" : 2017,
-                  "tz_hour" : 1,
+                  		"tz_hour" : 1,
 				"tz_minute" : 11
-			}
-        ], 
+				}
+        		], 
 		"code" : 0,
 		"method" : "BasicCommunication.GetSystemTime"
 	}
