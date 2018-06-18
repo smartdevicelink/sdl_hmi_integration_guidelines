@@ -25,18 +25,19 @@ After sending the request SDL starts [`<DefaultTimeout>`](https://github.com/sma
 1.	Send a valid response during the `<DefaultTimeout>`(value from the smartDeviceLink.ini file)
 2.	Provide all parameters of the "DateTime" struct inside of the GetSystemTime response.
 
+!!!
+
 _Note:_ SDL logs the corresponding error internally and fails the handshake process if at least one of the following failures occurs:
 1)	HMI does NOT respond during `<DefaultTimeout>`;
 2)	HMI responds with any `<errorCode>` during `<DefaultTimeout>`;
-3)	HMI sends invalid for any reason in the response: 
-a.	at least one String param is empty (exception: in case empty String param is allowed by HMI_API)
-b.	at least one String param has '\n', '\t' or completely white-space
-c.	wrong json format
-d.	at least one param has invalid type
-e.	at least one mandatory param was omitted
-f.	at least one param is out of bounds  
+3)	HMI sends invalid for any reason in the response:  
+    a.	at least one String param is empty (exception: in case empty String param is allowed by HMI_API)  
+    b.	at least one String param has '\n', '\t' or completely white-space  
+    c.	wrong json format  
+    d.	at least one param has invalid type  
+    e.	at least one mandatory param was omitted  
+    f.	at least one param is out of bounds  
 
-!!!
 
 If the handshake process fails, SDL behavior depends on the "ForceProtectedService"/"ForceUnprotectedService" params configured in the 'Security Manager' section of the smartDeviceLink.ini file.
 
@@ -56,9 +57,9 @@ GetSystemTime
 
 ```
 {
-	"id" : 59546,
-	"jsonrpc" : "2.0",
-	"method" : "BasicCommunication.GetSystemTime"
+  "id" : 59546,
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.GetSystemTime"
 }
 ```
 
@@ -66,45 +67,44 @@ GetSystemTime
 
 ```
 {
-	"id" : 59546,
-	"jsonrpc" : "2.0",
-	"result" : 
-	{
-      		"systemTime" : 
-			[
-			
-				{
-				"millisecond" : 11,
-				"second" : 111,
-				"minute" : 111,
-				"hour" : 11,
-				"day" : 1,
-				"month" : 11,
-				"year" : 2017,
-                  		"tz_hour" : 1,
-				"tz_minute" : 11
-				}
-        		], 
-		"code" : 0,
-		"method" : "BasicCommunication.GetSystemTime"
-	}
+  "id" : 59546,
+  "jsonrpc" : "2.0",
+  "result" : 
+ {
+ "systemTime" :
+   [
+    {
+     "millisecond" : 11,
+     "second" : 111,
+     "minute" : 111,
+     "hour" : 11,
+     "day" : 1,
+     "month" : 11,
+     "year" : 2017,
+     "tz_hour" : 1,
+     "tz_minute" : 11
+     }
+    ], 
+    "code" : 0,
+    "method" : "BasicCommunication.GetSystemTime"
+  }
 }
 ```
 
 ### Example Error  
 
-```  
+```json
 {
-	"id" : 59546,
-	"jsonrpc" : "2.0",
-	"error" : 
-	{
-		"code" : 11,
-		"message" : " Mandatory parameters not provided ",
-		"data" : 
-		{
-			"method" : "BasicCommunication.GetSystemTime"
-		}
-	}
+  "id" : 59546,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 11,
+    "message" : "Mandatory parameters not provided.",
+    "data" :
+    {
+      "method" : "BasicCommunication.GetSystemTime"
+    }
+  }
 }
 ```
