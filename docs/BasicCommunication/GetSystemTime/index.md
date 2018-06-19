@@ -49,13 +49,13 @@ If the handshake process fails, SDL behavior depends on the "ForceProtectedServi
 ### Sequence Diagrams
 |||
 GetSystemTime
-![GetSystemTime](assets/GetSystemTime_TLS_Handshake.png)
+![GetSystemTime](./assets/GetSystemTime_TLS_Handshake.png)
 |||
 
 
 ### Example Request
 
-```
+```json
 {
   "id" : 59546,
   "jsonrpc" : "2.0",
@@ -65,7 +65,7 @@ GetSystemTime
 
 ### Example Response
 
-```
+```json
 {
   "id" : 59546,
   "jsonrpc" : "2.0",
