@@ -28,15 +28,16 @@ After sending the request SDL starts [`<DefaultTimeout>`](https://github.com/sma
 !!!
 
 _Note:_ SDL logs the corresponding error internally and fails the handshake process if at least one of the following failures occurs:
-1)	HMI does NOT respond during `<DefaultTimeout>`;
-2)	HMI responds with any `<errorCode>` during `<DefaultTimeout>`;
-3)	HMI sends invalid for any reason in the response:  
-    a.	at least one String param is empty (exception: in case empty String param is allowed by HMI_API)  
-    b.	at least one String param has '\n', '\t' or completely white-space  
-    c.	wrong json format  
-    d.	at least one param has invalid type  
-    e.	at least one mandatory param was omitted  
-    f.	at least one param is out of bounds  
+
+1. HMI does NOT respond during `<DefaultTimeout>`;
+2. HMI responds with any `<errorCode>` during `<DefaultTimeout>`;
+3. HMI sends invalid for any reason in the response:  
+    a. at least one String param is empty (exception: in case empty String param is allowed by HMI_API)  
+    b. at least one String param has '\n', '\t' or completely white-space  
+    c. wrong json format  
+    d. at least one param has invalid type  
+    e. at least one mandatory param was omitted  
+    f. at least one param is out of bounds  
 
 
 If the handshake process fails, SDL behavior depends on the "ForceProtectedService"/"ForceUnprotectedService" params configured in the 'Security Manager' section of the smartDeviceLink.ini file.
