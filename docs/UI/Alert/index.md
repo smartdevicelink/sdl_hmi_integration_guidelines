@@ -57,10 +57,6 @@ An alert may be sent to the HMI for an application which is not currently active
 
 ### Sequence Diagrams
 |||
-Alert with PlayTone and Speak
-![Alert](./assets/AlertPlayToneSpeak.png)
-|||
-|||
 Alert closed by DEFAULT_ACTION
 ![Alert](./assets/AlertDefaultAction.png)
 |||
