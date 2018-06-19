@@ -63,9 +63,6 @@
               "name": "OnAwakeSDL"
             },
             {
-              "name": "OnEmergencyEvent"
-            },
-            {
               "name": "OnExitAllApplications"
             },
             {
@@ -79,9 +76,6 @@
             },
             {
               "name": "OnIgnitionCycleOver"
-            },
-            {
-              "name": "OnPhoneCall"
             },
             {
               "name": "OnPutFile"
