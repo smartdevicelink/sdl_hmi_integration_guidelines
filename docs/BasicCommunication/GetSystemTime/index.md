@@ -66,45 +66,41 @@ GetSystemTime
 ### Example Response
 
 ```json
-{
-  "id" : 59546,
-  "jsonrpc" : "2.0",
-  "result" : 
- {
- "systemTime" :
-   [
-    {
-     "millisecond" : 11,
-     "second" : 111,
-     "minute" : 111,
-     "hour" : 11,
-     "day" : 1,
-     "month" : 11,
-     "year" : 2017,
-     "tz_hour" : 1,
-     "tz_minute" : 11
-     }
-    ], 
-    "code" : 0,
-    "method" : "BasicCommunication.GetSystemTime"
-  }
+{  
+   "id":59546,
+   "jsonrpc":"2.0",
+   "result":{  
+      "systemTime":[  
+         {  
+            "millisecond":11,
+            "second":111,
+            "minute":111,
+            "hour":11,
+            "day":1,
+            "month":11,
+            "year":2017,
+            "tz_hour":1,
+            "tz_minute":11
+         }
+      ],
+      "code":0,
+      "method":"BasicCommunication.GetSystemTime"
+   }
 }
 ```
 
 ### Example Error  
 
 ```json
-{
-  "id" : 59546,
-  "jsonrpc" : "2.0",
-  "error" :
-  {
-    "code" : 11,
-    "message" : "Mandatory parameters not provided.",
-    "data" :
-    {
-      "method" : "BasicCommunication.GetSystemTime"
-    }
-  }
+{  
+   "id":59546,
+   "jsonrpc":"2.0",
+   "error":{  
+      "code":11,
+      "message":"Mandatory parameters not provided.",
+      "data":{  
+         "method":"BasicCommunication.GetSystemTime"
+      }
+   }
 }
 ```
