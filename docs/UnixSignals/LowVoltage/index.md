@@ -7,13 +7,13 @@ Sender
 : HMI
 
 Purpose
-: To suspend SDL's services due to a low voltage event
+: To suspend/restore SDL's services due to a low voltage event
 
 ### Description  
 A 'LowVoltage' event occurs on HMI when battery voltage hits below a certain predefined threshold set by the system.  
 In case of such event, SDL operations are halted including receiving and processing of normal RPC messages from HMI. 
-HMI sends system signals to SDL to exchange shutdown and wake-up signals.  
-After the voltage level is restored all operations are resumed.
+HMI sends system signals of the range SIGRTMIN - SIGRTMAX for LowVoltage, WakeUp and IgnitionOff to SDL. 
+After the voltage level is restored HMI sends `WAKE_UP` signal to SDL and SDL processes all operations resumption.
 
 !!!
 MUST  
