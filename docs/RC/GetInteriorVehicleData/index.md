@@ -7,11 +7,17 @@ Sender
 : SDL
 
 Purpose
-: To read RC module status data. The same function is used to subscribe/unsubscribe on RC module status/setting change notifications.
+: To read RC module status data. The same function is used to subscribe/unsubscribe to RC module status/setting change notifications.
 
-GetInteriorVehicleData is a request originated by a Remote Control Mobile Application. The HMI should only return interior vehicle data that corresponds to the request module type. For example, if `moduleType = CLIMATE`, only return [`ClimateControlData`](../../common/structs/#climatecontroldata) and do not return [`RadioControlData`](../../common/structs/#radiocontroldata). 
+GetInteriorVehicleData is a request originated by a Remote Control Mobile Application.  
+If the parameter `subscribe` is set to `true`, the mobile application has requested to subscribe to the module data defined by the [`moduleType`](../../common/enums/#moduletype) parameter.  
+SDL maintains the `moduleType` subscription status as a whole. SDL needs to subscribe to a module if there is at least one app that subscribes to the module. SDL needs to unsubscribe from a module if no apps subscribe to the module.  
 
-If the parameter `subscribe` is set to true, the mobile application has requested to subscribe to the module data defined by the [`moduleType`](../../common/enums/#moduletype) parameter.
+SDL forwards a GetInteriorVehicleData request to HMI only if there is no cached data available for the requested `moduleType` or it needs to unsubscribe to the module from HMI.  
+Otherwise, SDL responds to the request with the cached data without forwarding it to HMI.
+
+The HMI should only return interior vehicle data that corresponds to the request`moduleType`. For example, if `moduleType = CLIMATE`, only return [`ClimateControlData`](../../common/structs/#climatecontroldata) and do not return [`RadioControlData`](../../common/structs/#radiocontroldata). 
+
 ### Request
 
 #### Parameters
@@ -20,7 +26,6 @@ If the parameter `subscribe` is set to true, the mobile application has requeste
 |:---|:---|:--------|:---------|
 |moduleType|[Common.ModuleType](../../common/enums/#moduletype)|true||
 |subscribe|Boolean|false|defvalue="false"|
-|appID|Integer|true||
 
 ### Response
 
@@ -46,7 +51,6 @@ GetInteriorVehicleData
     "jsonrpc": "2.0",
     "method": "RC.GetInteriorVehicleData",
     "params": {
-        "appID": 1093636990,
         "moduleType": "CLIMATE",
         "subscribe": true
     }
