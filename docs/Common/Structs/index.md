@@ -526,6 +526,7 @@
 |climateControlCapabilities|ClimateControlCapabilities|false|array: true <br> minsize: 1 <br> maxsize: 100|If included, the platform supports RC climate controls. For this baseline version, maxsize=1. i.e. only one climate control module is supported|
 |radioControlCapabilities|RadioControlCapabilities|false|array: true <br> minsize: 1 <br> maxsize: 100|If included, the platform supports RC radio controls. For this baseline version, maxsize=1. i.e. only one climate control module is supported|
 |ButtonCapabilities|false|array: true <br> minsize: 1 <br> maxsize: 100|If included, the platform supports RC button controls with the included button names|
+|seatControlCapabilities|Common.SeatControlCapabilities|false|minsize="1" <br> maxsize="100" <br> array="true"|If included, the platform supports seat controls.| 
 
 ### ClimateControlCapabilities
 |Name|Type|Mandatory|Additional|Description|
@@ -578,6 +579,70 @@
 |:---|:---|:--------|:---------|:----------|
 |id|Integer|true|minvalue: 0<br>maxvalue: 128|A unique identifier for the haptic rectangle|
 |rect|Common.Rectangle|true| |The position of the haptic rectangle to be highlighted.<br>The center of this rectangle is considered "touched" when the element is focused and then selected.|
+
+### MassageModeData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|massageZone|Common.MassageZone|true|||
+|massageMode|Common.MassageMode|true||  
+
+### MassageCushionFirmness
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|cushion|Common.MassageCushion|true||
+|firmness|Integer|true|minvalue="0" <br> maxvalue="100"||
+
+### SeatMemoryAction
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|id|Integer|true|minvalue="1" <br> maxvalue="10" ||
+|label|String|false|maxlength="100"||
+|action|Common.SeatMemoryActionType|true|||
+
+### SeatControlData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|id|Common.SupportedSeat|true|||
+|heatingEnabled|Boolean|false||
+|coolingEnabled|Boolean|false||
+|heatingLevel|Integer|false|minvalue="0" <br> maxvalue="100"||
+|coolingLevel|Integer|false|minvalue="0" <br> maxvalue="100"||
+|horizontalPosition|Integer|false|minvalue="0" maxvalue="100"||
+|verticalPosition|Integer|false|minvalue="0" maxvalue="100"||
+|frontVerticalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
+|backVerticalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
+|backTiltAngle|Integer|false|minvalue="0" <br> maxvalue="100"||
+|headSupportHorizontalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
+|headSupportVerticalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
+|massageEnabled|Boolean|false|||
+|massageMode|Common.MassageModeData|true|minsize="1" <br> maxsize="2" <br> array="true"||
+|massageCushionFirmness|Common.MassageCushionFirmness|false|minsize="1" <br> maxsize="5" <br> array="true"||
+|memory|Common.SeatMemoryAction|false|||
+
+### SeatControlCapabilities
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|moduleName|String|true|maxlength="100"|The short friendly name of the light control module. <br> It should not be used to identify a module by mobile application.|
+|heatingEnabledAvailable|Boolean|false|||
+|coolingEnabledAvailable|Boolean|false|||
+|heatingLevelAvailable|Boolean|false|||
+|coolingLevelAvailable|Boolean|false|||
+|horizontalPositionAvailable|Boolean|false|||
+|verticalPositionAvailable|Boolean|false|||
+|frontVerticalPositionAvailable|Boolean|false|||
+|backVerticalPositionAvailable|Boolean|false|||
+|backTiltAngleAvailable|Boolean|false|||
+|headSupportHorizontalPositionAvailable|Boolean|false|||
+|headSupportVerticalPositionAvailable|Boolean|false|||
+|massageEnabledAvailable|Boolean|false|||
+|massageModeAvailable|Boolean|false|||
+|massageCushionFirmnessAvailable|Boolean|false|||
+|memoryAvailable|Boolean|false|||
 
 ### DateTime  
 
