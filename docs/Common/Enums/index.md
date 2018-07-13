@@ -61,11 +61,12 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|TEXT|0||
-|SAPI_PHONEMES|1||
-|LHPLUS_PHONEMES|2||
+|TEXT|0|Uses plain text for performing TTS|
+|SAPI_PHONEMES|1|Uses the Speech API Phoneme representation of a phrase for performing TTS|
+|LHPLUS_PHONEMES|2|Uses the LH+ Phoneme representation of a phrase for performing TTS|
 |PRE_RECORDED|3||
 |SILENCE|4||
+|FILE|5|Uses an audio file sent to SDL via a PutFile RPC to perform TTS or play generic sounds in conjunction with TTS|
 
 ### TextFieldName
 
@@ -228,17 +229,6 @@
 |TYPE5SET|1||
 |CID1SET|2||
 |CID2SET|3||
-
-### DeactivateReason
-
-|Name|Value|Description|
-|:---|:----|:----------|
-|AUDIO|0||
-|PHONECALL|1||
-|NAVIGATIONMAP|2||
-|PHONEMENU|3||
-|SYNCSETTINGS|4||
-|GENERAL|5||
 
 ### SamplingRate
 
@@ -698,7 +688,8 @@ Radio Buttons
 |VEHICLE_DIAGNOSTICS|16||
 |EMERGENCY|17||
 |MEDIA|18||
-|FOTA|19||
+|FOTA|19||  
+|OEM_SPECIFIC|20||
 
 ### ConsentSource
 

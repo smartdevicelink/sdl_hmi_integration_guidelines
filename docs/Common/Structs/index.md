@@ -96,8 +96,8 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|text|String|true|maxlength: 500||
-|type|Common.SpeechCapabilities|true|||
+|text|String|true|maxlength: 500|The text/phonemes to be spoken or the name of an audio file to play|
+|type|Common.SpeechCapabilities|true||Describes how to interpret the text field (as plain text, a file name, etc.)|
 
 ### TextField
 
@@ -238,7 +238,8 @@
 |isMediaApplication|Boolean|false|||
 |appType|Common.AppHMIType|false|array: true<br>minsize: 1<br>maxsize: 100||
 |greyOut|Boolean|false|||
-|requestType|Common.RequestType|false|array: true<br>minsize: 0<br>maxsize: 100||
+|requestType|Common.RequestType|false|array: true<br>minsize: 0<br>maxsize: 100||  
+|requestSubType|String|false|array:true <br> minsize:0 <br>maxsize:100 <br> maxlength:100|The list of SystemRequest's requestSubTypes allowed by policies for the named application.<br>If the app sends a requestSubType which is not specified in this list, then that request should be rejected.<br>An empty array signifies that any value of requestSubType is allowed for this app. <br> If this parameter is omitted, then a request with any value of requestSubType is now allowed for this app|
 
 ### VehicleType
 
@@ -427,7 +428,8 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |value|String|true|maxlength: 65535||
-|imageType|Common.ImageType|true|||
+|imageType|Common.ImageType|true|||  
+|isTemplate|Boolean|false|||
 
 ### MyKey
 
@@ -641,3 +643,17 @@
 |massageModeAvailable|Boolean|false|||
 |massageCushionFirmnessAvailable|Boolean|false|||
 |memoryAvailable|Boolean|false|||
+
+### DateTime  
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|  
+|millisecond|Integer|false|minvalue: 0<br> maxvalue: 999|Milliseconds – part of time - one thousandth split second|
+|seconds|Integer|false|minvalue: 0<br> maxvalue: 60|Seconds part of time|  
+|minutes|Integer|false|minvalue: 0<br> maxvalue: 59|Minutes part of time|  
+|hour|Integer|false|minvalue: 0<br> maxvalue: 23|Hours part of time. Note that this structure accepts time only in 24 Hr format|  
+|day|Integer|false|minvalue: 1 <br>maxvalue: 31|Day of the month|  
+|month|Integer|false|minvalue: 1<br> maxvalue: 12|Month of the year|  
+|year|Integer|false|minvalue: 0 <br>maxvalue: 4095|The year in YYYY format|  
+|tz_hour|Integer|false|minvalue: -12 <br> maxvalue: 14 <br> defvalue: 0|Time zone offset in Hours with regard to UTC.|  
+|tz_minute|Integer|false|minvalue: 0 <br>maxvalue: 59 <br> defvalue: 0|Time zone offset in Min with regard to UTC.|   

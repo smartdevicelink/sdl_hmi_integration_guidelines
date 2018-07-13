@@ -112,6 +112,12 @@
             },
             {
               "name": "UpdateAppList"
+            },
+            {
+              "name": "OnSystemTimeReady"
+            },
+            {
+              "name": "GetSystemTime"
             }
           ]
         },
@@ -467,6 +473,9 @@
             },
             {
               "name": "SetInteriorVehicleData"
+            },
+            {
+              "name": "OnRCStatus"
             }
           ]
         },
