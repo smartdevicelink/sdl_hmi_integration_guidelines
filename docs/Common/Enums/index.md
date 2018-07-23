@@ -657,13 +657,16 @@
 |:---|:----|:----------|
 |NO_SOURCE_SELECTED|0||
 |CD|1||
-|BLUETOOTH_STEREO_BTST|2||
-|USB|3||
-|USB2|4||
+|USB|2||
+|USB2|3||
+|BLUETOOTH_STEREO_BTST|4||
 |LINE_IN|5||
 |IPOD|6||
-|MOBILE_APP|7||
-|RADIO_TUNER|8||
+|MOBILE_APP|7||  
+|AM|8||
+|FM|9||
+|XM|10||
+|DAB|11||
 
 ### RequestType
 
@@ -873,7 +876,7 @@
 |Name|Value|Description|
 |:---|:----|:----------|
 |CLIMATE|0||
-|RADIO|1||  
+|RADIO|1||
 |SEAT|2||
 |AUDIO|3||
 |LIGHT|4||
@@ -1033,4 +1036,3 @@
 |:---|:----|:----------|
 |DRIVER|0|List possible seats that is a remote controllable seat.|
 |FRONT_PASSENGER|1|List possible seats that is a remote controllable seat.|
-
