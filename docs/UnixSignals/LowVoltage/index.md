@@ -28,7 +28,7 @@ MUST
 * SDL stops audio/video streaming services.
 * All transports are unavailable for SDL.
 * SDL persists resumption related data stored before receiving a `LOW_VOLTAGE` signal.
-* SDL and the PoliciesManager must persist 'consumer data' (resumption-related + local PT) periodically and independently of the external events. 
+* SDL and the PoliciesManager must persist 'consumer data' (resumption-related + local PT). 
 
 #### SDL resumes its regular work after receiving a "WAKE_UP" signal:
 * After receiving a `WAKE_UP` signal, all applications will be unregistered and the device disconnected.
@@ -49,7 +49,7 @@ Offset for SIGRTMIN from this notifications is defined in the 'Main' section of 
 [MAIN] 
 LowVoltageSignal = 1 ; Offset for from SIGRTMIN
 WakeUpSignal = 2 ; Offset for from SIGRTMIN
-IgnitionOffSignal = 2 ; Offset for from SIGRTMIN
+IgnitionOffSignal = 3 ; Offset for from SIGRTMIN
 ```
 
 ### Sequence Diagrams  
