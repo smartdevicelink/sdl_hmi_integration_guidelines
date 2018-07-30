@@ -12,8 +12,8 @@ Purpose
 ### Description  
 A 'LowVoltage' event occurs on HMI when battery voltage hits below a certain predefined threshold set by the system.  
 In case of such event, SDL operations are halted including receiving and processing of normal RPC messages from HMI. 
-HMI sends system signals of the range SIGRTMIN - SIGRTMAX for LowVoltage, WakeUp and IgnitionOff to SDL. 
-After the voltage level is restored HMI sends `WAKE_UP` signal to SDL and SDL processes all operations resumption.
+
+HMI sends system signals of the range SIGRTMIN - SIGRTMAX for LowVoltage, WakeUp and IgnitionOff to all smartDeviceLinkCore processes. 
 
 !!!
 MUST  
@@ -30,11 +30,13 @@ MUST
 * SDL persists resumption related data stored before receiving a `LOW_VOLTAGE` signal.
 * SDL and the PoliciesManager must persist 'consumer data' (resumption-related + local PT). 
 
-#### SDL resumes its regular work after receiving a "WAKE_UP" signal:
+
+After the voltage level is restored HMI sends `WAKE_UP` signal to SDL and SDL processes its regular work and all operations resumption.
+
+#### SDL behavior after receiving a "WAKE_UP" signal:
 * After receiving a `WAKE_UP` signal, all applications will be unregistered and the device disconnected.
 * If `LOW_VOLTAGE` was received at the moment of writing to policies database, SDL and Policies Manager must keep policies database correct and working. After `WAKE_UP` policy database reflects the last known correct state.
 * SDL must be able to start up correctly in the next ignition cycle after it was powered off in low voltage state.   
-
 
 #### Details of implementation
 
@@ -43,7 +45,7 @@ UNIX signals are used to exchange shutdown and wake-up signals between HMI and S
 UNIX signals provide ability to use signals from SIGRTMIN to SIGRTMAX for custom needs.  
 SDL uses this range for handling `LOW_VOLTAGE`, `WAKE_UP`, `IGNITION_OFF` notifications. 
 
-Offset for SIGRTMIN from this notifications is defined in the 'Main' section of the smartDeviceLink.ini file: 
+Offset for SIGRTMIN from this notifications is defined in the 'Main' section of the [smartDeviceLink.ini file](https://github.com/smartdevicelink/sdl_core/blob/master/src/appMain/smartDeviceLink.ini): 
 
 ```
 [MAIN] 
