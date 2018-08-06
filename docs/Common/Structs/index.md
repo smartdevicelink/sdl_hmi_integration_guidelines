@@ -197,9 +197,9 @@
 |utcMinutes|Integer|false|minvalue: 0<br>maxvalue: 59||
 |utcSeconds|Integer|false|minvalue: 0<br>maxvalue: 59||
 |compassDirection|Common.CompassDirection|false|||
-|pdop|Float|false|minvalue: 0<br>maxvalue: 10||
-|hdop|Float|false|minvalue: 0<br>maxvalue: 10||
-|vdop|Float|false|minvalue: 0<br>maxvalue: 10||
+|pdop|Float|false|minvalue: 0<br>maxvalue: 1000||
+|hdop|Float|false|minvalue: 0<br>maxvalue: 1000||
+|vdop|Float|false|minvalue: 0<br>maxvalue: 1000||
 |actual|Boolean|false|||
 |satellites|Integer|false|minvalue: 0<br>maxvalue: 31||
 |dimension|Common.Dimension|false|||
