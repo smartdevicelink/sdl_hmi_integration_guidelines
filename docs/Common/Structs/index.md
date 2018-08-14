@@ -188,8 +188,8 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|longitudeDegrees|Float|false|minvalue: -180<br>maxvalue: 180||
-|latitudeDegrees|Float|false|minvalue: -90<br>maxvalue: 90||
+|longitudeDegrees|Float|true|minvalue: -180<br>maxvalue: 180||
+|latitudeDegrees|Float|true|minvalue: -90<br>maxvalue: 90||
 |utcYear|Integer|false|minvalue: 2010<br>maxvalue: 2100||
 |utcMonth|Integer|false|minvalue: 1<br>maxvalue: 12||
 |utcDay|Integer|false|minvalue: 1<br>maxvalue: 31||
