@@ -230,6 +230,17 @@
 |CID1SET|2||
 |CID2SET|3||
 
+### DeactivateReason
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|AUDIO|0||
+|PHONECALL|1||
+|NAVIGATIONMAP|2||
+|PHONEMENU|3||
+|SYNCSETTINGS|4||
+|GENERAL|5||
+
 ### SamplingRate
 
 |Name|Value|Description|
@@ -664,6 +675,8 @@ Radio Buttons
 |LINE_IN|4||
 |IPOD|5||
 |MOBILE_APP|6||
+|CD|7||
+|RADIO_TUNER|8||
 
 ### RequestType
 
@@ -874,8 +887,10 @@ Radio Buttons
 |Name|Value|Description|
 |:---|:----|:----------|
 |CLIMATE|0||
-|RADIO|1||  
-|SEAT|2||
+|RADIO|1||
+|AUDIO|2||
+|LIGHT|3||
+|HMI_SETTINGS|4||
 
 ### RadioBand
 
@@ -925,6 +940,54 @@ Radio Buttons
 |ON|0||
 |OFF|1||
 
+### LightName
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FRONT_LEFT_HIGH_BEAM|0||
+|FRONT_RIGHT_HIGH_BEAM|1||
+|FRONT_LEFT_LOW_BEAM|2||
+|FRONT_RIGHT_LOW_BEAM|3||
+|FRONT_LEFT_PARKING_LIGHT|4||
+|FRONT_RIGHT_PARKING_LIGHT|5||
+|FRONT_LEFT_FOG_LIGHT|6||
+|FRONT_RIGHT_FOG_LIGHT|7||
+|FRONT_LEFT_DAYTIME_RUNNING_LIGHT|8||
+|FRONT_RIGHT_DAYTIME_RUNNING_LIGHT|9||
+|FRONT_LEFT_TURN_LIGHT|10||
+|FRONT_RIGHT_TURN_LIGHT|11||
+|REAR_LEFT_FOG_LIGHT|12||
+|REAR_RIGHT_FOG_LIGHT|13||
+|REAR_LEFT_TAIL_LIGHT|14||
+|REAR_RIGHT_TAIL_LIGHT|15||
+|REAR_LEFT_BREAK_LIGHT|16||
+|REAR_RIGHT_BREAK_LIGHT|17||
+|REAR_LEFT_TURN_LIGHT|18||
+|REAR_RIGHT_TURN_LIGHT|19||
+|REAR_REGISTRATION_PLATE_LIGHT|20||
+
+### LightStatus
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ON|0||
+|OFF|1||
+
+### DisplayMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DAY|0||
+|NIGHT|1||
+|AUTO|2||
+
+### DistanceUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MILES|0||
+|KILOMETERS|1||
+
 ### MassageZone
 
 |Name|Value|Description|
@@ -957,3 +1020,4 @@ Radio Buttons
 |:---|:----|:----------|
 |DRIVER|0|List possible seats that is a remote controllable seat.|
 |FRONT_PASSENGER|1|List possible seats that is a remote controllable seat.|
+

@@ -9,7 +9,12 @@ Sender
 Purpose
 : To read RC module status data. The same function is used to subscribe/unsubscribe on RC module status/setting change notifications.
 
-### Request
+### Request  
+
+GetInteriorVehicleData is a request originated by a Remote Control Mobile Application. The HMI should only return interior vehicle data that corresponds to the request module type.  
+For example, if `moduleType = CLIMATE`, only return [`ClimateControlData`](../../common/structs/#climatecontroldata) and do not return [`RadioControlData`](../../common/structs/#radiocontroldata).  
+
+If the parameter `subscribe` is set to true, the mobile application has requested to subscribe to the module data defined by the [`moduleType`](../../common/enums/#moduletype) parameter.
 
 #### Parameters
 
@@ -20,6 +25,7 @@ Purpose
 |appID|Integer|true||
 
 ### Response
+HMI must return in GetInteriorVehicleData_response the current value of the display mode used in HMI if `moduleType = HMI_SETTINGS` .
 
 #### Parameters
 
