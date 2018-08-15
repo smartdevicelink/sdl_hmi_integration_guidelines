@@ -54,9 +54,9 @@ WakeUpSignal = 2 ; Offset for from SIGRTMIN
 IgnitionOffSignal = 3 ; Offset for from SIGRTMIN
 ```
 
-### Sequence Diagrams  
+### Sequence Diagrams
 
 |||
-Low Voltage  
-![Low Voltage](./assets/low_voltage.png)  
+Low Voltage
+![Low Voltage](./assets/low_voltage.png)
 |||
