@@ -887,10 +887,11 @@ Radio Buttons
 |Name|Value|Description|
 |:---|:----|:----------|
 |CLIMATE|0||
-|RADIO|1||
-|AUDIO|2||
-|LIGHT|3||
-|HMI_SETTINGS|4||
+|RADIO|1||  
+|SEAT|2||
+|AUDIO|3||
+|LIGHT|4||
+|HMI_SETTINGS|5||
 
 ### RadioBand
 
