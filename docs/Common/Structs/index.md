@@ -500,17 +500,12 @@
 |TA|Boolean|false||Traffic Announcement Identification - Indicates an ongoing traffic announcement|
 |REG|String|false||Region|
 
-
 ### StationIDNumber
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |countryCode|Integer|false|minvalue="0" <br> maxvalue="999"|Binary Representation of ITU Country Code. USA Code is 001.|
 |fccFacilityId|Integer|false|minvalue="0" <br> maxvalue="999999"|Binary representation  of unique facility ID assigned by the FCC; FCC controlled for U.S. territory|  
-### StationIDNumber
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-|countryCode|Integer|false|minvalue="0" <br> maxvalue="999"|Binary Representation of ITU Country Code. USA Code is 001.|
-|fccFacilityId|Integer|false|minvalue="0" <br> maxvalue="999999"|Binary representation  of unique facility ID assigned by the FCC; FCC controlled for U.S. territory|
+
 ### SisData
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
