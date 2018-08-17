@@ -653,7 +653,6 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|||Corresponds to "HMI_SETTINGS" ModuleType||
 |displayMode|Common.DisplayMode|false||
 |temperatureUnit|Common.TemperatureUnit|false||
 |distanceUnit|Common.DistanceUnit|false||
