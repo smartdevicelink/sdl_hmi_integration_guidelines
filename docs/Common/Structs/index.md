@@ -486,7 +486,7 @@
 |signalChangeThreshold|Integer|false|minvalue:0 maxvalue:100|If the signal strength falls below the set value for this parameter, the radio will tune to an alternative frequency|
 |radioEnable|Boolean|false||True if the radio is on, false is the radio is off|
 |state|Common.RadioState|false||||
-|sisData|SisData|false||Read-only Station Information Service (SIS) data provides basic information about the station such as call sign, as well as information not displayable to the consumer such as the station identification number|
+|sisData|Common.SisData|false||Read-only Station Information Service (SIS) data provides basic information about the station such as call sign, as well as information not displayable to the consumer such as the station identification number|
 
 ### RdsData
 
