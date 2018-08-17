@@ -610,7 +610,6 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |name|Common.LightName|true|||
-|Assuming light ON/OFF status is always available|||||
 |densityAvailable|Boolean|false||Indicates if the light's density can be set remotely (similar to a dimmer).|
 |RGBColorSpaceAvailable|Boolean|false||Indicates if the light's color can be set remotely by using the sRGB color space.|
 
