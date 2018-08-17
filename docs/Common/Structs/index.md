@@ -467,10 +467,10 @@
 |:---|:---|:--------|:---------|:----------|
 |moduleType|Common.ModuleType|true||The moduleType indicates which type of data should be changed and identifies which data object exists in this struct. For example, if the moduleType is CLIMATE then a "climateControlData" should exist|
 |radioControlData|Common.RadioControlData|false|||
-|climateControlData|Common.ClimateControlData|false||
+|climateControlData|Common.ClimateControlData|false|||
 |audioControlData|Common.AudioControlData|false|||
-|lightControlData|Common.LightControlData|false||
-|hmiSettingsControlData|Common.HMISettingsControlData|false||
+|lightControlData|Common.LightControlData|false|||
+|hmiSettingsControlData|Common.HMISettingsControlData|false|||
 
 ### RadioControlData
 
