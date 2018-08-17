@@ -551,7 +551,7 @@
 |seatControlCapabilities|Common.SeatControlCapabilities|false|minsize="1" <br> maxsize="100" <br> array="true"|If included, the platform supports seat controls.|
 |audioControlCapabilities|Common.AudioControlCapabilities|false| minsize="1" <br> maxsize="100" <br> array="true"| If included, the platform supports audio controls.|
 |hmiSettingsControlCapabilities|Common.HMISettingsControlCapabilities|false||If included, the platform supports hmi setting controls.|
-|lightControlCapabilities|Common.LightControlCapabilities|false|If included, the platform supports light controls.|
+|lightControlCapabilities|Common.LightControlCapabilities|false||If included, the platform supports light controls.|
 
 ### ClimateControlCapabilities
 |Name|Type|Mandatory|Additional|Description|
