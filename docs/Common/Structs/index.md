@@ -188,8 +188,8 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|longitudeDegrees|Float|false|minvalue: -180<br>maxvalue: 180||
-|latitudeDegrees|Float|false|minvalue: -90<br>maxvalue: 90||
+|longitudeDegrees|Float|true|minvalue: -180<br>maxvalue: 180||
+|latitudeDegrees|Float|true|minvalue: -90<br>maxvalue: 90||
 |utcYear|Integer|false|minvalue: 2010<br>maxvalue: 2100||
 |utcMonth|Integer|false|minvalue: 1<br>maxvalue: 12||
 |utcDay|Integer|false|minvalue: 1<br>maxvalue: 31||
@@ -197,9 +197,9 @@
 |utcMinutes|Integer|false|minvalue: 0<br>maxvalue: 59||
 |utcSeconds|Integer|false|minvalue: 0<br>maxvalue: 59||
 |compassDirection|Common.CompassDirection|false|||
-|pdop|Float|false|minvalue: 0<br>maxvalue: 10||
-|hdop|Float|false|minvalue: 0<br>maxvalue: 10||
-|vdop|Float|false|minvalue: 0<br>maxvalue: 10||
+|pdop|Float|false|minvalue: 0<br>maxvalue: 1000||
+|hdop|Float|false|minvalue: 0<br>maxvalue: 1000||
+|vdop|Float|false|minvalue: 0<br>maxvalue: 1000||
 |actual|Boolean|false|||
 |satellites|Integer|false|minvalue: 0<br>maxvalue: 31||
 |dimension|Common.Dimension|false|||
@@ -238,7 +238,7 @@
 |isMediaApplication|Boolean|false|||
 |appType|Common.AppHMIType|false|array: true<br>minsize: 1<br>maxsize: 100||
 |greyOut|Boolean|false|||
-|requestType|Common.RequestType|false|array: true<br>minsize: 0<br>maxsize: 100||  
+|requestType|Common.RequestType|false|array: true<br>minsize: 0<br>maxsize: 100||
 |requestSubType|String|false|array:true <br> minsize:0 <br>maxsize:100 <br> maxlength:100|The list of SystemRequest's requestSubTypes allowed by policies for the named application.<br>If the app sends a requestSubType which is not specified in this list, then that request should be rejected.<br>An empty array signifies that any value of requestSubType is allowed for this app. <br> If this parameter is omitted, then a request with any value of requestSubType is now allowed for this app|
 
 ### VehicleType
@@ -428,7 +428,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |value|String|true|maxlength: 65535||
-|imageType|Common.ImageType|true|||  
+|imageType|Common.ImageType|true|||
 |isTemplate|Boolean|false|||
 
 ### MyKey
@@ -525,8 +525,8 @@
 |:---|:---|:--------|:---------|:----------|
 |climateControlCapabilities|ClimateControlCapabilities|false|array: true <br> minsize: 1 <br> maxsize: 100|If included, the platform supports RC climate controls. For this baseline version, maxsize=1. i.e. only one climate control module is supported|
 |radioControlCapabilities|RadioControlCapabilities|false|array: true <br> minsize: 1 <br> maxsize: 100|If included, the platform supports RC radio controls. For this baseline version, maxsize=1. i.e. only one climate control module is supported|
+|seatControlCapabilities|Common.SeatControlCapabilities|false|minsize="1" <br> maxsize="100" <br> array="true"|If included, the platform supports seat controls|
 |buttonCapabilities|ButtonCapabilities|false|array: true <br> minsize: 1 <br> maxsize: 100|If included, the platform supports RC button controls with the included button names|
-|seatControlCapabilities|Common.SeatControlCapabilities|false|minsize="1" <br> maxsize="100" <br> array="true"|If included, the platform supports seat controls.|
 
 ### ClimateControlCapabilities
 |Name|Type|Mandatory|Additional|Description|
@@ -580,16 +580,80 @@
 |id|Integer|true|minvalue: 0<br>maxvalue: 128|A unique identifier for the haptic rectangle|
 |rect|Common.Rectangle|true| |The position of the haptic rectangle to be highlighted.<br>The center of this rectangle is considered "touched" when the element is focused and then selected.|
 
-### DateTime  
+### MassageModeData
 
 |Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|  
+|:---|:---|:--------|:---------|:----------|
+|massageZone|Common.MassageZone|true|||
+|massageMode|Common.MassageMode|true||
+
+### MassageCushionFirmness
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|cushion|Common.MassageCushion|true||
+|firmness|Integer|true|minvalue="0" <br> maxvalue="100"||
+
+### SeatMemoryAction
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|id|Integer|true|minvalue="1" <br> maxvalue="10" ||
+|label|String|false|maxlength="100"||
+|action|Common.SeatMemoryActionType|true|||
+
+### SeatControlData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|id|Common.SupportedSeat|true|||
+|heatingEnabled|Boolean|false||
+|coolingEnabled|Boolean|false||
+|heatingLevel|Integer|false|minvalue="0" <br> maxvalue="100"||
+|coolingLevel|Integer|false|minvalue="0" <br> maxvalue="100"||
+|horizontalPosition|Integer|false|minvalue="0" maxvalue="100"||
+|verticalPosition|Integer|false|minvalue="0" maxvalue="100"||
+|frontVerticalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
+|backVerticalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
+|backTiltAngle|Integer|false|minvalue="0" <br> maxvalue="100"||
+|headSupportHorizontalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
+|headSupportVerticalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
+|massageEnabled|Boolean|false|||
+|massageMode|Common.MassageModeData|true|minsize="1" <br> maxsize="2" <br> array="true"||
+|massageCushionFirmness|Common.MassageCushionFirmness|false|minsize="1" <br> maxsize="5" <br> array="true"||
+|memory|Common.SeatMemoryAction|false|||
+
+### SeatControlCapabilities
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|moduleName|String|true|maxlength="100"|The short friendly name of the light control module. <br> It should not be used to identify a module by mobile application.|
+|heatingEnabledAvailable|Boolean|false|||
+|coolingEnabledAvailable|Boolean|false|||
+|heatingLevelAvailable|Boolean|false|||
+|coolingLevelAvailable|Boolean|false|||
+|horizontalPositionAvailable|Boolean|false|||
+|verticalPositionAvailable|Boolean|false|||
+|frontVerticalPositionAvailable|Boolean|false|||
+|backVerticalPositionAvailable|Boolean|false|||
+|backTiltAngleAvailable|Boolean|false|||
+|headSupportHorizontalPositionAvailable|Boolean|false|||
+|headSupportVerticalPositionAvailable|Boolean|false|||
+|massageEnabledAvailable|Boolean|false|||
+|massageModeAvailable|Boolean|false|||
+|massageCushionFirmnessAvailable|Boolean|false|||
+|memoryAvailable|Boolean|false|||
+
+### DateTime
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
 |millisecond|Integer|false|minvalue: 0<br> maxvalue: 999|Milliseconds – part of time - one thousandth split second|
-|seconds|Integer|false|minvalue: 0<br> maxvalue: 60|Seconds part of time|  
-|minutes|Integer|false|minvalue: 0<br> maxvalue: 59|Minutes part of time|  
-|hour|Integer|false|minvalue: 0<br> maxvalue: 23|Hours part of time. Note that this structure accepts time only in 24 Hr format|  
-|day|Integer|false|minvalue: 1 <br>maxvalue: 31|Day of the month|  
-|month|Integer|false|minvalue: 1<br> maxvalue: 12|Month of the year|  
-|year|Integer|false|minvalue: 0 <br>maxvalue: 4095|The year in YYYY format|  
-|tz_hour|Integer|false|minvalue: -12 <br> maxvalue: 14 <br> defvalue: 0|Time zone offset in Hours with regard to UTC.|  
-|tz_minute|Integer|false|minvalue: 0 <br>maxvalue: 59 <br> defvalue: 0|Time zone offset in Min with regard to UTC.|   
+|seconds|Integer|false|minvalue: 0<br> maxvalue: 60|Seconds part of time|
+|minutes|Integer|false|minvalue: 0<br> maxvalue: 59|Minutes part of time|
+|hour|Integer|false|minvalue: 0<br> maxvalue: 23|Hours part of time. Note that this structure accepts time only in 24 Hr format|
+|day|Integer|false|minvalue: 1 <br>maxvalue: 31|Day of the month|
+|month|Integer|false|minvalue: 1<br> maxvalue: 12|Month of the year|
+|year|Integer|false|minvalue: 0 <br>maxvalue: 4095|The year in YYYY format|
+|tz_hour|Integer|false|minvalue: -12 <br> maxvalue: 14 <br> defvalue: 0|Time zone offset in Hours with regard to UTC.|
+|tz_minute|Integer|false|minvalue: 0 <br>maxvalue: 59 <br> defvalue: 0|Time zone offset in Min with regard to UTC.|

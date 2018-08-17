@@ -473,6 +473,9 @@
             },
             {
               "name": "SetInteriorVehicleData"
+            },
+            {
+              "name": "OnRCStatus"
             }
           ]
         },
