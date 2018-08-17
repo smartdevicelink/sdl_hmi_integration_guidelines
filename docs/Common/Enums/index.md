@@ -669,13 +669,13 @@ Radio Buttons
 |Name|Value|Description|
 |:---|:----|:----------|
 |NO_SOURCE_SELECTED|0||
-|USB|1||
-|USB2|2||
-|BLUETOOTH_STEREO_BTST|3||
-|LINE_IN|4||
-|IPOD|5||
-|MOBILE_APP|6||
-|CD|7||
+|CD|1||
+|BLUETOOTH_STEREO_BTST|2||
+|USB|3||
+|USB2|4||
+|LINE_IN|5||
+|IPOD|6||
+|MOBILE_APP|7||
 |RADIO_TUNER|8||
 
 ### RequestType
