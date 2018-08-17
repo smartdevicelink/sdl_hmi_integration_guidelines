@@ -658,7 +658,6 @@
 |temperatureUnit|Common.TemperatureUnit|false||
 |distanceUnit|Common.DistanceUnit|false||
 
-
 ### RadioControlCapabilities
 
 |Name|Type|Mandatory|Additional|Description|
