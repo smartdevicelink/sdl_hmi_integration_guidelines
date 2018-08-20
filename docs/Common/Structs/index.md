@@ -467,10 +467,10 @@
 |:---|:---|:--------|:---------|:----------|
 |moduleType|Common.ModuleType|true||The moduleType indicates which type of data should be changed and identifies which data object exists in this struct. For example, if the moduleType is CLIMATE then a "climateControlData" should exist|
 |radioControlData|Common.RadioControlData|false|||
-|climateControlData|Common.ClimateControlData|false||
+|climateControlData|Common.ClimateControlData|false|||
 |audioControlData|Common.AudioControlData|false|||
-|lightControlData|Common.LightControlData|false||
-|hmiSettingsControlData|Common.HMISettingsControlData|false||
+|lightControlData|Common.LightControlData|false|||
+|hmiSettingsControlData|Common.HMISettingsControlData|false|||
 
 ### RadioControlData
 
@@ -480,8 +480,8 @@
 |frequencyFraction|Integer|false|minvalue:0 maxvalue:9|The fractional part of the frequency for 101.7 is 7|
 |band|Common.RadioBand|false|||
 |rdsData|Common.RdsData|false|||
-|availableHDs|Integer|false|minvalue:1 maxvalue:3|number of HD sub-channels if available|
-|hdChannel|Integer|false|minvalue:1 maxvalue:3|Current HD sub-channel if available|
+|availableHDs|Integer|false|minvalue:1 maxvalue:7|number of HD sub-channels if available|
+|hdChannel|Integer|false|minvalue:1 maxvalue:7|Current HD sub-channel if available|
 |signalStrength|Integer|false|minvalue:0 maxvalue:100||
 |signalChangeThreshold|Integer|false|minvalue:0 maxvalue:100|If the signal strength falls below the set value for this parameter, the radio will tune to an alternative frequency|
 |radioEnable|Boolean|false||True if the radio is on, false is the radio is off|
@@ -505,7 +505,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |countryCode|Integer|false|minvalue="0" <br> maxvalue="999"|Binary Representation of ITU Country Code. USA Code is 001.|
-|fccFacilityId|Integer|false|minvalue="0" <br> maxvalue="999999"|Binary representation  of unique facility ID assigned by the FCC; FCC controlled for U.S. territory|  
+|fccFacilityId|Integer|false|minvalue="0" <br> maxvalue="999999"|Binary representation  of unique facility ID assigned by the FCC; FCC controlled for U.S. territory|
 
 ### SisData
 |Name|Type|Mandatory|Additional|Description|
@@ -552,7 +552,7 @@
 |seatControlCapabilities|Common.SeatControlCapabilities|false|minsize="1" <br> maxsize="100" <br> array="true"|If included, the platform supports seat controls.|
 |audioControlCapabilities|Common.AudioControlCapabilities|false| minsize="1" <br> maxsize="100" <br> array="true"| If included, the platform supports audio controls.|
 |hmiSettingsControlCapabilities|Common.HMISettingsControlCapabilities|false||If included, the platform supports hmi setting controls.|
-|lightControlCapabilities|Common.LightControlCapabilities|false|If included, the platform supports light controls.|
+|lightControlCapabilities|Common.LightControlCapabilities|false||If included, the platform supports light controls.|
 
 ### ClimateControlCapabilities
 |Name|Type|Mandatory|Additional|Description|
@@ -579,12 +579,11 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |moduleName|String|true|maxlength="100"|The short friendly name of the light control module. <br> It should not be used to identify a module by mobile application.|
-|sourceAvailable|Boolean|false||Availability of the control of audio source.|  
+|sourceAvailable|Boolean|false||Availability of the control of audio source.|
 |keepContextAvailable|Boolean|false||Availability of the parameter keepContext.|
 |volumeAvailable|Boolean|false||Availability of the control of audio volume.|
 |equalizerAvailable|Boolean|false||Availability of the control of Equalizer Settings.|
 |equalizerMaxChannelId|Integer|false|minvalue="1" <br> maxvalue="100"|Must be included if equalizerAvailable=true, and assume all IDs starting from 1 to this value are valid.|
-
 
 ### EqualizerSettings
 
@@ -610,11 +609,9 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |name|Common.LightName|true|||
-|Assuming light ON/OFF status is always available|||||
 |statusAvailable|Boolean|false||Indicates if the status (ON/OFF) can be set remotely. App shall not use read-only values (RAMP_UP/RAMP_DOWN/UNKNOWN/INVALID) in a setInteriorVehicleData request.|
 |densityAvailable|Boolean|false||Indicates if the light's density can be set remotely (similar to a dimmer).|
-|rgbColorSpaceAvailable|Boolean|false||Indicates if the light's color can be set remotely by using the sRGB color space.|
-
+|RGBColorSpaceAvailable|Boolean|false||Indicates if the light's color can be set remotely by using the sRGB color space.|
 
 ### LightControlCapabilities
 
@@ -655,11 +652,9 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|||Corresponds to "HMI_SETTINGS" ModuleType||
 |displayMode|Common.DisplayMode|false||
 |temperatureUnit|Common.TemperatureUnit|false||
 |distanceUnit|Common.DistanceUnit|false||
-
 
 ### RadioControlCapabilities
 
@@ -676,6 +671,8 @@
 |signalStrengthAvailable|Boolean|false||Availability of the getting the signal strength. <br> True: Available, False: Not Available, Not present: Not Available.|
 |signalChangeThresholdAvailable|Boolean|false||Availability of the getting the signal Change Threshold. <br> True: Available, False: Not Available, Not present: Not Available.|
 |sisDataAvailable|Boolean|false|| Availability of the getting HD radio Station Information Service (SIS) data. <br> True: Available, False: Not Available, Not present: Not Available.|
+|hdRadioEnableAvailable|Boolean|false|| Availability of the control of enable/disable HD radio. <br> True: Available, False: Not Available, Not present: Not Available.|
+|siriusxmRadioAvailable|Boolean|false|| Availability of sirius XM radio. <br> True: Available, False: Not Available, Not present: Not Available.|
 
 ### ExternalConsentStatus
 
