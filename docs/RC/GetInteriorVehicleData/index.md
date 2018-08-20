@@ -18,7 +18,12 @@ Otherwise, SDL responds to the request with the cached data without forwarding i
 
 The HMI should only return interior vehicle data that corresponds to the request`moduleType`. For example, if `moduleType = CLIMATE`, only return [`ClimateControlData`](../../common/structs/#climatecontroldata) and do not return [`RadioControlData`](../../common/structs/#radiocontroldata). 
 
-### Request
+### Request  
+
+GetInteriorVehicleData is a request originated by a Remote Control Mobile Application. The HMI should only return interior vehicle data that corresponds to the request module type.  
+For example, if `moduleType = CLIMATE`, only return [`ClimateControlData`](../../common/structs/#climatecontroldata) and do not return [`RadioControlData`](../../common/structs/#radiocontroldata).  
+
+If the parameter `subscribe` is set to true, the mobile application has requested to subscribe to the module data defined by the [`moduleType`](../../common/enums/#moduletype) parameter.
 
 #### Parameters
 
@@ -28,6 +33,7 @@ The HMI should only return interior vehicle data that corresponds to the request
 |subscribe|Boolean|false|defvalue="false"|
 
 ### Response
+HMI must return in GetInteriorVehicleData_response the current value of the display mode used in HMI if `moduleType = HMI_SETTINGS` .
 
 #### Parameters
 
