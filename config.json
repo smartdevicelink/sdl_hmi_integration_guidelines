@@ -451,7 +451,7 @@
           ]
         },
         {
-        "name": "RC",
+          "name": "RC",
           "navigation": [
             {
               "name": "GetCapabilities"

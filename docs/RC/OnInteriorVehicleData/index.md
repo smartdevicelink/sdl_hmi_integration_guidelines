@@ -23,7 +23,7 @@ if the driver (or other applications) or HMI itself change the display mode in t
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|moduleData|[Common.ModuleData](docs/Common/Structs/index.md)|true||
+|moduleData|[Common.ModuleData](../../common/structs/#moduledata)|true||
 
 ### Sequence Diagrams
 
