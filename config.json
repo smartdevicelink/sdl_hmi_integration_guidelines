@@ -489,6 +489,14 @@
               "name": "Structs"
             }
           ]
+        },
+        {
+          "name": "UnixSignals",
+          "navigation": [
+            {
+              "name": "LowVoltage"
+            }
+          ]
         }
     ]
 }
