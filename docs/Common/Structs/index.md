@@ -487,6 +487,7 @@
 |radioEnable|Boolean|false||True if the radio is on, false is the radio is off|
 |state|Common.RadioState|false||||
 |sisData|Common.SisData|false||Read-only Station Information Service (SIS) data provides basic information about the station such as call sign, as well as information not displayable to the consumer such as the station identification number|
+|hdRadioEnable|Boolean|false||True if the hd radio is on, false is the radio is off|
 
 ### RdsData
 
