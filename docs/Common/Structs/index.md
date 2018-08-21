@@ -288,7 +288,7 @@
 |passengerBuckleBelted|Common.VehicleDataEventStatus|false|||
 |driverBuckleBelted|Common.VehicleDataEventStatus|false|||
 |leftRow2BuckleBelted|Common.VehicleDataEventStatus|false|||
-|passengerChildDetected|Common.VehicleVehicleDataEventStatus|false|||
+|passengerChildDetected|Common.VehicleDataEventStatus|false|||
 |rightRow2BuckleBelted|Common.VehicleDataEventStatus|false|||
 |middleRow2BuckleBelted|Common.VehicleDataEventStatus|false|||
 |middleRow3BuckleBelted|Common.VehicleDataEventStatus|false|||
