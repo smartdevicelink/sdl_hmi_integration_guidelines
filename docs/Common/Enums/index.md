@@ -230,17 +230,6 @@
 |CID1SET|2||
 |CID2SET|3||
 
-### DeactivateReason
-
-|Name|Value|Description|
-|:---|:----|:----------|
-|AUDIO|0||
-|PHONECALL|1||
-|NAVIGATIONMAP|2||
-|PHONEMENU|3||
-|SYNCSETTINGS|4||
-|GENERAL|5||
-
 ### SamplingRate
 
 |Name|Value|Description|
