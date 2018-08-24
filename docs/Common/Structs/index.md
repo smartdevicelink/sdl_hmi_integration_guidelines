@@ -587,7 +587,6 @@
 |equalizerAvailable|Boolean|false||Availability of the control of Equalizer Settings.|
 |equalizerMaxChannelId|Integer|false|minvalue="1" <br> maxvalue="100"|Must be included if equalizerAvailable=true, and assume all IDs starting from 1 to this value are valid.|
 
-
 ### EqualizerSettings
 
 |Name|Type|Mandatory|Additional|Description|
@@ -612,9 +611,9 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |name|Common.LightName|true|||
+|statusAvailable|Boolean|false||Indicates if the status (ON/OFF) can be set remotely. App shall not use read-only values (RAMP_UP/RAMP_DOWN/UNKNOWN/INVALID) in a setInteriorVehicleData request.|
 |densityAvailable|Boolean|false||Indicates if the light's density can be set remotely (similar to a dimmer).|
 |RGBColorSpaceAvailable|Boolean|false||Indicates if the light's color can be set remotely by using the sRGB color space.|
-
 
 ### LightControlCapabilities
 

@@ -951,7 +951,7 @@
 |REAR_RIGHT_BRAKE_LIGHT|17||
 |REAR_LEFT_TURN_LIGHT|18||
 |REAR_RIGHT_TURN_LIGHT|19||
-|REAR_REGISTRATION_PLATE_LIGHT|20||  
+|REAR_REGISTRATION_PLATE_LIGHT|20|| 
 |HIGH_BEAMS|501||
 |LOW_BEAMS|502||
 |FOG_LIGHTS|503||
@@ -963,6 +963,13 @@
 |LEFT_TURN_LIGHTS|509||  
 |RIGHT_TURN_LIGHTS|510||
 |HAZARD_LIGHTS|511||
+|REAR_CARGO_LIGHTS|512| Cargo lamps illuminate the cargo area.|  
+|REAR_TRUCK_BED_LIGHTS|513|Truck bed lamps light up the bed of the truck.|    
+|REAR_TRAILER_LIGHTS|514|Trailer lights are lamps mounted on a trailer hitch.|  
+|LEFT_SPOT_LIGHTS|515|It is the spotlights mounted on the left side of a vehicle.|  
+|RIGHT_SPOT_LIGHTS|516|It is the spotlights mounted on the right side of a vehicle.|  
+|LEFT_PUDDLE_LIGHTS|517|Puddle lamps illuminate the ground beside the door as the customer is opening or approaching the door.|  
+|RIGHT_PUDDLE_LIGHTS|518| Puddle lamps illuminate the ground beside the door as the customer is opening or approaching the door.|
 |AMBIENT_LIGHTS|801||
 |OVERHEAD_LIGHTS|802||
 |READING_LIGHTS|803||
@@ -973,7 +980,11 @@
 |Name|Value|Description|
 |:---|:----|:----------|
 |ON|0||
-|OFF|1||
+|OFF|1||  
+|RAMP_UP|2||  
+|RAMP_DOWN|3||  
+|UNKNOWN|4||  
+|INVALID|5||
 
 ### DisplayMode
 
