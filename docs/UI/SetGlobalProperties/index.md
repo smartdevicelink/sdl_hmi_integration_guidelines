@@ -14,16 +14,14 @@ SDL requests to set-up the data for VR help layout, the name and icon for in-app
 
 The request may arrive for the application whatever being active or in background on HMI (depends on Policy Table permissions applicable to mobile application request, by default allowed to operate in all HMI levels except of NONE).
 
-SDL sends _SetGlobalProperties_request_ with specific _vrHelp_ and _vrHelpTitle_ values to HMI in next cases:   
+The `vrHelp` parameter of the `SetGlobalProperties` RPC is used by the system to display the help items on the screen and the `helpPrompt` parameter is used by the system for playing out the associated TTS help prompt.
 
-1.	In case mobile app sends the very first _SetGlobalProperties_request_ in current ignition cycle
-with `<VRHelp>` and `<VRHelpTitle>` params, SDL transfers `<VRHelp>` and `<VRHelpTitle>`.   
-2.	In case mobile app sends the very first _SetGlobalProperties_request_ in current ignition cycle
-without `<VRHelp>` and `<VRHelpTitle>` params, SDL generates default values of `<VRHelp>` and `<VRHelpTitle>` and transfers them.   
-3.	In case mobile app sends the next (not first) _SetGlobalProperties_request_ within the same ignition cycle with `<VRHelp>` and `<VRHelpTitle>` params, SDL transfers them.   
-4.	In case mobile app the next (not first) _SetGlobalProperties_request_ within the same ignition cycle without `<VRHelp>` and `<VRHelpTitle>` params, SDL omits (not sends) `<VRHelp>` and `<VRHelpTitle>` to HMI.   
-5.	In case SDL resumes `<VRHelp>` and `<VRHelpTitle>` during Data resumption, SDL must not send default values of VR at the nexts (not first) _SetGlobalProperties_ requests.   
-6. In case mobile app sends _SetGlobalProperties_request_ to SDL:   
+SDL sends SetGlobalProperties request with specific `<vrHelp>` and `<vrHelpTitle>` values to HMI in next cases:   
+
+1.	If at any point in time, the application sends `SetGlobalProperties` RPC with the `vrHelp` **and** `helpPrompt` parameters, then SDL Core shall continue with the existing behavior of forwarding such requests to HMI and SDL Core shall delete its internal list and stop sending `SetGlobalProperties` RPC to HMI after each AddCommmand/DeleteCommand request received from mobile.
+2. If at any point in time, the application sends `SetGlobalProperties` RPC with **either** of `vrHelp` **or** `helpPrompt` parameters, then SDL Core shall continue with the existing behavior of forwarding such requests to HMI and SDL Core shall not delete its internal list and shall continue to update the parameter which was not provided by the application.  
+3. In case mobile app sends `AddCommand` with `CommandType = Command`, SDL must send update values of `vrHelp` via `SetGlobalProperties` to HMI. _(Note: AddCommand requests related to choice set must NOT trigger the update of "vrHelp")_
+4. In case mobile app sends _SetGlobalProperties_request_ to SDL:   
     - with both valid values of _autoCompleteList_ and _autoCompleteText_ params, _SDL must_:   
         - transfer _SetGlobalProperties_request_ with _autoCompleteList_ param and without (omitted) _autoCompleteText_ param to HMI;   
         - respond with `<resultCode_received_from_HMI>` to mobile app.   
@@ -36,7 +34,7 @@ without `<VRHelp>` and `<VRHelpTitle>` params, SDL generates default values of `
  
 !!! NOTE
 
-Default values of vrHelpItems are set to all the 1st VR commands of the current application and app's VR synonym. By default vrHelpTitle value is set to application name.
+Default values of `vrHelpItems` are set to all the 1st VR commands of the current application and app's VR synonym. By default `vrHelpTitle` value is set to application name.
 _**Notes for HMI expected behavior:**_
 
 1. The system shall have the ability to receive and store multiple strings for _autoCompleteText_ per app.   
