@@ -35,6 +35,17 @@ If the application resumes data successfully:
     * `SubscribeButton`
     * `SubscibeVehicleData`
 
+If HMI responds with any kind of error or does not respond to any requests sent during resumption, SDL must revert already restored data with appropriate RPCs:
+  
+  * `DeleteCommand`
+  * `DeleteSubMenu`
+  * `DeleteInteractionChoiceSet`
+  * `ResetGlobalProperties`
+  * `UnsubscribeButton`
+  * `UnsubscribeVehicleData`
+
+_Note:_ In the case some subscription data is already used by other applications, this means that the subscription is actual and SDL must not send unsubscribe requests to HMI.
+
 If the application does NOT resume data successfully:
 
   * SDL will provide `OnAppRegistered` with `resumeVrGrammars`:`false` or no resume parameter at all.
