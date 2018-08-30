@@ -34,7 +34,8 @@ SDL sends SetGlobalProperties request with specific `<vrHelp>` and `<vrHelpTitle
  
 !!! NOTE
 
-Default values of `vrHelpItems` are set to all the 1st VR commands of the current application and app's VR synonym. By default `vrHelpTitle` value is set to application name.
+By default `vrHelpTitle` value is set to application name.
+
 _**Notes for HMI expected behavior:**_
 
 1. The system shall have the ability to receive and store multiple strings for _autoCompleteText_ per app.   
