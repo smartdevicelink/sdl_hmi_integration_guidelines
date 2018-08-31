@@ -12,7 +12,7 @@ Purpose
 ### Request
 On receiving `AddCommand` with `CommandType = Command` SDL must send updated values of `helpPrompt` via UI.SetGlobalProperties request to HMI.
 
-#### Parameters 
+#### Parameters
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
