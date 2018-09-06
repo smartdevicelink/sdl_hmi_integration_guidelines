@@ -9,8 +9,11 @@ Sender
 Purpose
 : Set the properties for the TTS component.
 
-### Request
-On receiving `AddCommand` with `CommandType = Command` SDL must send updated values of `helpPrompt` via UI.SetGlobalProperties request to HMI.
+### Description
+SDL requests to set the values for the prompts to be spoken by TTS during the User's interaction with the application over head unit.
+
+### Request  
+On receiving `AddCommand` with `CommandType = Command` SDL must send updated values of `helpPrompt` via TTS.SetGlobalProperties request to HMI.
 
 #### Parameters
 
@@ -30,6 +33,9 @@ This RPC has no additional parameter requirements
 |||
 SetGlobalProperties
 ![SetGlobalProperties](./assets/SetGlobalProperties.png)
+|||
+SetGlobalProperties request with VRHelp and HelpPrompt params
+![SetGlobalProperties VRHelp](./assets/SetGlobalProperties_VRHelp_and_HelpPrompt.png)
 |||
 
 ### Example Request
