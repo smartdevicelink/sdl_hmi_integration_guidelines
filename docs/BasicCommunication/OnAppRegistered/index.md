@@ -33,7 +33,9 @@ If the application resumes data successfully:
     * `CreateInteractionChoiceSet`
     * `SetGlobalProperties`
     * `SubscribeButton`
-    * `SubscibeVehicleData`
+    * `SubscibeVehicleData`  
+    * `GetInteriorVehicleData`  
+
 
 If the application does NOT resume data successfully:
 

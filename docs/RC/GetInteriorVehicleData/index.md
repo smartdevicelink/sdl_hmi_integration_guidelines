@@ -16,6 +16,8 @@ SDL maintains the `moduleType` subscription status as a whole. SDL needs to subs
 SDL forwards a GetInteriorVehicleData request to HMI only if there is no cached data available for the requested `moduleType` or it needs to unsubscribe to the module from HMI.  
 Otherwise, SDL responds to the request with the cached data without forwarding it to HMI.
 
+During data resumption process SDL sends GetInteriorVehicleData(IsSubscribe=true) request to HMI and stores data received from HMI in cache.
+
 The HMI should only return interior vehicle data that corresponds to the request`moduleType`. For example, if `moduleType = CLIMATE`, only return [`ClimateControlData`](../../common/structs/#climatecontroldata) and do not return [`RadioControlData`](../../common/structs/#radiocontroldata). 
 
 ### Request  
