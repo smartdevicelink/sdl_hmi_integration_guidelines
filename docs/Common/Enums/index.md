@@ -61,11 +61,12 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|TEXT|0||
-|SAPI_PHONEMES|1||
-|LHPLUS_PHONEMES|2||
+|TEXT|0|Uses plain text for performing TTS|
+|SAPI_PHONEMES|1|Uses the Speech API Phoneme representation of a phrase for performing TTS|
+|LHPLUS_PHONEMES|2|Uses the LH+ Phoneme representation of a phrase for performing TTS|
 |PRE_RECORDED|3||
 |SILENCE|4||
+|FILE|5|Uses an audio file sent to SDL via a PutFile RPC to perform TTS or play generic sounds in conjunction with TTS|
 
 ### TextFieldName
 
@@ -229,17 +230,6 @@
 |CID1SET|2||
 |CID2SET|3||
 
-### DeactivateReason
-
-|Name|Value|Description|
-|:---|:----|:----------|
-|AUDIO|0||
-|PHONECALL|1||
-|NAVIGATIONMAP|2||
-|PHONEMENU|3||
-|SYNCSETTINGS|4||
-|GENERAL|5||
-
 ### SamplingRate
 
 |Name|Value|Description|
@@ -356,26 +346,24 @@
 |PRESET_9|14||
 |CUSTOM_BUTTON|15||
 |SEARCH|16||
-Climate Buttons
-|AC_MAX|17||
-|AC|18||
-|RECIRCULATE|19||
-|FAN_UP|20||
-|FAN_DOWN|21||
-|TEMP_UP|22||
-|TEMP_DOWN|23||
-|DEFROST_MAX|24||
-|DEFROST|25||
-|DEFROST_REAR|26||
-|UPPER_VENT|27||
-|LOWER_VENT|28||
-Radio Buttons
-|VOLUME_UP|29||
-|VOLUME_DOWN|30||
-|EJECT|31||
-|SOURCE|32||
-|SHUFFLE|33||
-|REPEAT|34||
+|AC_MAX|17|CLIMATE Module|
+|AC|18|CLIMATE Module|
+|RECIRCULATE|19|CLIMATE Module|
+|FAN_UP|20|CLIMATE Module|
+|FAN_DOWN|21|CLIMATE Module|
+|TEMP_UP|22|CLIMATE Module|
+|TEMP_DOWN|23|CLIMATE Module|
+|DEFROST_MAX|24|CLIMATE Module|
+|DEFROST|25|CLIMATE Module|
+|DEFROST_REAR|26|CLIMATE Module|
+|UPPER_VENT|27|CLIMATE Module|
+|LOWER_VENT|28|CLIMATE Module|
+|VOLUME_UP|29|RADIO Module|
+|VOLUME_DOWN|30|RADIO Module|
+|EJECT|31|RADIO Module|
+|SOURCE|32|RADIO Module|
+|SHUFFLE|33|RADIO Module|
+|REPEAT|34|RADIO Module|
 
 ### KeypressMode
 
@@ -668,12 +656,17 @@ Radio Buttons
 |Name|Value|Description|
 |:---|:----|:----------|
 |NO_SOURCE_SELECTED|0||
-|USB|1||
-|USB2|2||
-|BLUETOOTH_STEREO_BTST|3||
-|LINE_IN|4||
-|IPOD|5||
-|MOBILE_APP|6||
+|CD|1||
+|USB|2||
+|USB2|3||
+|BLUETOOTH_STEREO_BTST|4||
+|LINE_IN|5||
+|IPOD|6||
+|MOBILE_APP|7||  
+|AM|8||
+|FM|9||
+|XM|10||
+|DAB|11||
 
 ### RequestType
 
@@ -698,7 +691,8 @@ Radio Buttons
 |VEHICLE_DIAGNOSTICS|16||
 |EMERGENCY|17||
 |MEDIA|18||
-|FOTA|19||
+|FOTA|19||  
+|OEM_SPECIFIC|20||
 
 ### ConsentSource
 
@@ -789,7 +783,6 @@ Radio Buttons
 |showConstantTBTIcon|9||
 |showConstantTBTNextTurnIcon|10||
 |locationImage|11||
-|SubMenuIcon|12||
 
 ### VehicleDataType
 
@@ -886,6 +879,10 @@ Radio Buttons
 |:---|:----|:----------|
 |CLIMATE|0||
 |RADIO|1||
+|SEAT|2||
+|AUDIO|3||
+|LIGHT|4||
+|HMI_SETTINGS|5||
 
 ### RadioBand
 
@@ -933,7 +930,7 @@ Radio Buttons
 |Name|Value|Description|
 |:---|:----|:----------|
 |ON|0||
-|OFF|1||  
+|OFF|1||
 
 ### FuelType  
 |Name|Value|Description|
@@ -944,3 +941,110 @@ Radio Buttons
 |LPG|3|For vehicles using liquefied petroleum gas|
 |HYDROGEN|4|For FCEV (fuel cell electric vehicle)|  
 |BATTERY|5|For BEV (Battery Electric Vehicle), PHEV (Plug-in Hybrid Electric Vehicle), solar vehicles and other vehicles which run on a battery|
+
+### LightName
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FRONT_LEFT_HIGH_BEAM|0||
+|FRONT_RIGHT_HIGH_BEAM|1||
+|FRONT_LEFT_LOW_BEAM|2||
+|FRONT_RIGHT_LOW_BEAM|3||
+|FRONT_LEFT_PARKING_LIGHT|4||
+|FRONT_RIGHT_PARKING_LIGHT|5||
+|FRONT_LEFT_FOG_LIGHT|6||
+|FRONT_RIGHT_FOG_LIGHT|7||
+|FRONT_LEFT_DAYTIME_RUNNING_LIGHT|8||
+|FRONT_RIGHT_DAYTIME_RUNNING_LIGHT|9||
+|FRONT_LEFT_TURN_LIGHT|10||
+|FRONT_RIGHT_TURN_LIGHT|11||
+|REAR_LEFT_FOG_LIGHT|12||
+|REAR_RIGHT_FOG_LIGHT|13||
+|REAR_LEFT_TAIL_LIGHT|14||
+|REAR_RIGHT_TAIL_LIGHT|15||
+|REAR_LEFT_BRAKE_LIGHT|16||
+|REAR_RIGHT_BRAKE_LIGHT|17||
+|REAR_LEFT_TURN_LIGHT|18||
+|REAR_RIGHT_TURN_LIGHT|19||
+|REAR_REGISTRATION_PLATE_LIGHT|20|| 
+|HIGH_BEAMS|501||
+|LOW_BEAMS|502||
+|FOG_LIGHTS|503||
+|RUNNING_LIGHTS|504||
+|PARKING_LIGHTS|505||
+|BRAKE_LIGHTS|506||
+|REAR_REVERSING_LIGHTS|507||
+|SIDE_MARKER_LIGHTS|508||
+|LEFT_TURN_LIGHTS|509||  
+|RIGHT_TURN_LIGHTS|510||
+|HAZARD_LIGHTS|511||
+|REAR_CARGO_LIGHTS|512| Cargo lamps illuminate the cargo area.|  
+|REAR_TRUCK_BED_LIGHTS|513|Truck bed lamps light up the bed of the truck.|    
+|REAR_TRAILER_LIGHTS|514|Trailer lights are lamps mounted on a trailer hitch.|  
+|LEFT_SPOT_LIGHTS|515|It is the spotlights mounted on the left side of a vehicle.|  
+|RIGHT_SPOT_LIGHTS|516|It is the spotlights mounted on the right side of a vehicle.|  
+|LEFT_PUDDLE_LIGHTS|517|Puddle lamps illuminate the ground beside the door as the customer is opening or approaching the door.|  
+|RIGHT_PUDDLE_LIGHTS|518| Puddle lamps illuminate the ground beside the door as the customer is opening or approaching the door.|
+|AMBIENT_LIGHTS|801||
+|OVERHEAD_LIGHTS|802||
+|READING_LIGHTS|803||
+|TRUNK_LIGHTS|804||
+
+### LightStatus
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ON|0||
+|OFF|1||  
+|RAMP_UP|2||  
+|RAMP_DOWN|3||  
+|UNKNOWN|4||  
+|INVALID|5||
+
+### DisplayMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DAY|0||
+|NIGHT|1||
+|AUTO|2||
+
+### DistanceUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MILES|0||
+|KILOMETERS|1||
+
+### MassageZone
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|OFF|0||
+|LOW|1||
+|HIGH|2||
+
+### MassageCushion
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|TOP_LUMBAR|0||
+|MIDDLE_LUMBAR|1||
+|BOTTOM_LUMBAR|2||
+|BACK_BOLSTERS|3||
+|SEAT_BOLSTERS|4||
+
+### SeatMemoryActionType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|SAVE|0|Save current seat postions and settings to seat memory.|
+|RESTORE|1|Restore / apply the seat memory settings to the current seat.|
+|NONE|2|No action to be performed.|
+
+### SupportedSeat
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DRIVER|0|List possible seats that is a remote controllable seat.|
+|FRONT_PASSENGER|1|List possible seats that is a remote controllable seat.|

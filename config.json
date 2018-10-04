@@ -112,6 +112,12 @@
             },
             {
               "name": "UpdateAppList"
+            },
+            {
+              "name": "OnSystemTimeReady"
+            },
+            {
+              "name": "GetSystemTime"
             }
           ]
         },
@@ -445,7 +451,7 @@
           ]
         },
         {
-        "name": "RC",
+          "name": "RC",
           "navigation": [
             {
               "name": "GetCapabilities"
@@ -467,6 +473,9 @@
             },
             {
               "name": "SetInteriorVehicleData"
+            },
+            {
+              "name": "OnRCStatus"
             }
           ]
         },
@@ -478,6 +487,14 @@
             },
             {
               "name": "Structs"
+            }
+          ]
+        },
+        {
+          "name": "UnixSignals",
+          "navigation": [
+            {
+              "name": "LowVoltage"
             }
           ]
         }

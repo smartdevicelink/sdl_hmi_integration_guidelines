@@ -14,14 +14,16 @@ Purpose
 * SDL sends the PTS snapshot as binary data via an `OnSystemRequest` mobile request from the system to the backend. Both the "url" that the PTS will be forwarded to and the "timeout" must be taken from the Local Policy Table.
     * If no "url" is provided in the Local Policy Table, it is supposed that the mobile application will send the Policy Table Update data back to SDL.
 
-`RequestType` defines the type of the requested data from a mobile device or the cloud. The HMI may request this data, but it's SDL's responsibility to block a `SystemRequest` in case the request intends to transfer a data type not allowed by the policy table.
+`RequestType` defines the type of the requested data from a mobile device or the cloud. The HMI may request this data, but it's SDL's responsibility to block a `SystemRequest` in case the request intends to transfer a data type not allowed by the policy table.  
+`requestSubType` is filled for supporting OEM proprietary data exchanges.
 
-HMI is informed about `requestTypes` that are allowed by policies via [OnAppPermissionChanged](../../sdl/onapppermissionchanged) and [OnAppRegistered](../onappregistered).
+The HMI is informed about `requestTypes`, `requestSubType` that are allowed by policies via [OnAppPermissionChanged](../../sdl/onapppermissionchanged) and [OnAppRegistered](../onappregistered).
 
-!!! NOTE   
-  1. If HMI sends `OnSystemRequest` with a request type disallowed by the policy table, SDL will ignore it.   
-  2. If HMI sends 'url' parameter within BasicCommunication.OnSystemRequest, SDL resends the 'url' parameter to mobile app via OnSystemRequest.   
-  3. If HMI(SyncP) doesn't send any URLs to SDL, it is supposed that mobile application will sent Policy Table Update data back to SDL.
+!!! NOTE
+
+If the HMI sends `OnSystemRequest` with a request type disallowed by the policy table, SDL will ignore it.  
+In case PT contains some value for `requestSubType` param and the HMI sends `OnSystemRequest` with `requestSubType=<not_in_PT>`, SDL does not forward this notification to mobile app. 
+
 !!!
 
 _**SyncP NOTE**_   
@@ -38,9 +40,10 @@ HMI must send `OnSystemRequest`, if specific data is requested from the mobile d
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|requestType|[Common.RequestType]|true||
+|requestType|[Common.RequestType](../../common/enums/#requesttype)|true||  
+|requestSubType|String|false|maxlength: 255|
 |url|String|false|minlength: 1<br>maxlength: 1000|
-|fileType|[Common.FileType]|false||
+|fileType|[Common.FileType](../../common/enums/#filetype)|false||
 |offset|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |length|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |timeout|Integer|false|minvalue: 0<br>maxvalue: 2000000000|

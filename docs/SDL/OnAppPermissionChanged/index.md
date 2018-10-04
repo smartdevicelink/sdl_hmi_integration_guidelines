@@ -39,12 +39,13 @@ _**SDL Note**:_
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
 |isAppPermissionsRevoked|Boolean|false||
-|appRevokedPermissions|[Common.PermissionItem]|false|array: true<br>minsize: 1<br>maxsize: 100|
+|appRevokedPermissions|[Common.PermissionItem](../../common/structs/#permissionitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |appRevoked|Boolean|false||
 |appPermissionsConsentNeeded|Boolean|false||
 |appUnauthorized|Boolean|false||
-|priority|[Common.AppPriority]|false||
-|requestType|[Common.RequestType]|false|array: true<br>minsize: 0<br>maxsize: 100|
+|priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
+|requestType|[Common.RequestType](../../common/enums/#requesttype)|false|array: true<br>minsize: 0<br>maxsize: 100|  
+|requestSubType|String|false|array: true<br> minsize: 0<br> maxsize: 100 <br> maxlength: 100|
 
 [Common.PermissionItem]: ../../common/structs/#permissionitem
 [Common.AppPriority]: ../../common/enums/#apppriority

@@ -24,12 +24,12 @@ _Note:_ appID is known from the corresponding SDL.ActivateApp request.
 
 Impotant:  
 When GetListOfPermissions is requested without “appID” parameter, the response of PermissionItem array contains the PermissionGroups (“name” parameters) for all the applications as a whole and “allowed” parameter is common for each group (e.g. if at least one of the applications has disallowed parameter for some group, “allowed” value returned for this group in the context of all application must be false). (_For more details see the diagram GetListOfPermissions without appID_).
-3)	Store the pair of values id<->name of PermissionItem structure which were obtained via GetListOfPermissions response. These pairs will be used for future notifications via [OnAppPermissionConsent](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/master/docs/SDL/OnAppPermissionConsent/index.md) in case user’s choice for the application to allow some functionality has been updated (_For more details see_ [OnAppPermissionConsent](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/master/docs/SDL/OnAppPermissionConsent/index.md) (id<->name dependency).
+3)	Store the pair of values id<->name of PermissionItem structure which were obtained via GetListOfPermissions response. These pairs will be used for future notifications via [OnAppPermissionConsent](../../sdl/onapppermissionconsent) in case user’s choice for the application to allow some functionality has been updated (_For more details see_ [OnAppPermissionConsent](../../sdl/onapppermissionconsent) (id<->name dependency).
 4)	Display the received “External UCS Status” in the appropriate UI screen (_For more details see the picture ExternalConsentStatus_).
 
 !!! NOTE  
 a) The information about the application (name, ID, etc.) is provided by SDL via either BasicCommunication.UpdateAppList or BasicCommunication.OnAppRegistered RPCs.  
-b) If HMI has never sent externalConsentStatus before (via [OnAppPermissionConsent](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/master/docs/SDL/OnAppPermissionConsent/index.md)), SDL will respond with empty array.  
+b) If HMI has never sent externalConsentStatus before (via [OnAppPermissionConsent](../../sdl/onapppermissionconsent)), SDL will respond with empty array.  
 c) User can go to settings on HMI and enable or disable "External UCS" for an "entity". HMI will notify SDL accordingly (_see figure ExternalConsentStatus_).  
 d) The resulting allowance of functional grouping is informed by parameter “allowedFunctions” to HMI in accordinance with result of ExternalConsentStatus.
 
@@ -46,7 +46,8 @@ d) The resulting allowance of functional grouping is informed by parameter “al
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |allowedFunctions|[Common.PermissionItem](../../common/structs/#permissionitem)|true|array: true<br>minsize: 0<br>maxsize: 100|
-|ExternalConsentStatus|[Common.ExternalConsentStatus](../../common/structs/#ExternalConsentStatus)|true|array: true<br>minsize: 0<br>maxsize: 100|
+|externalConsentStatus|[Common.ExternalConsentStatus](../../common/structs/#externalconsentstatus)|true|array: true<br>minsize: 0<br>maxsize: 100|
+
 ### Sequence Diagrams
 
 |||
@@ -54,8 +55,10 @@ GetListOfPermissions
 ![GetListOfPermissions](./assets/GetListOfPermissions.jpg)
 |||
 
+|||
 GetListOfPermissions without AppId
 ![GetListOfPermissions](./assets/GetListOfPermissionsNoId.jpg)
+|||
 
 |||
 GetListOfPermissions provide  External UCS Status to HMI
@@ -64,6 +67,7 @@ GetListOfPermissions provide  External UCS Status to HMI
 
 Possible Layout - ExternalConsentStatus
 ![GetListOfPermissions](./assets/PossibleLayoutExternalConsentStatus.png)
+
 ### Example Request
 
 ```json
