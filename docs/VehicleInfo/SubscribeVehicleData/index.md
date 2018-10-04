@@ -39,7 +39,9 @@ Purpose
 |airbagStatus|Boolean|false||
 |emergencyEvent|Boolean|false||
 |clusterModeStatus|Boolean|false||
-|myKey|Boolean|false||
+|myKey|Boolean|false||  
+|fuelRange|Boolean|false|
+|engineOilLife|Boolean|false||
 
 ### Response
 
@@ -71,6 +73,8 @@ Purpose
 |emergencyEvent|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |clusterModes|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |myKey|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|fuelRange|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|engineOilLife|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
 |||

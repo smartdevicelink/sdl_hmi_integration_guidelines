@@ -813,7 +813,9 @@
 |VEHICLEDATA_BATTVOLTAGE|22||
 |VEHICLEDATA_ENGINETORQUE|23||
 |VEHICLEDATA_ACCPEDAL|24||
-|VEHICLEDATA_STEERINGWHEEL|25||
+|VEHICLEDATA_STEERINGWHEEL|25||  
+|VEHICLEDATA_FUELRANGE|26||  
+|VEHICLEDATA_ENGINEOILLIFE|27||
 
 ### VideoStreamingProtocol
 
@@ -929,6 +931,16 @@
 |:---|:----|:----------|
 |ON|0||
 |OFF|1||
+
+### FuelType  
+|Name|Value|Description|
+|:---|:----|:----------|  
+|GASOLINE|0||  
+|DIESEL|1||  
+|CNG|2|For vehicles using compressed natural gas|  
+|LPG|3|For vehicles using liquefied petroleum gas|
+|HYDROGEN|4|For FCEV (fuel cell electric vehicle)|  
+|BATTERY|5|For BEV (Battery Electric Vehicle), PHEV (Plug-in Hybrid Electric Vehicle), solar vehicles and other vehicles which run on a battery|
 
 ### LightName
 

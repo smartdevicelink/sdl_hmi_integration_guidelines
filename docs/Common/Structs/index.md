@@ -700,6 +700,12 @@
 |id|Integer|true|minvalue: 0<br>maxvalue: 128|A unique identifier for the haptic rectangle|
 |rect|Common.Rectangle|true| |The position of the haptic rectangle to be highlighted.<br>The center of this rectangle is considered "touched" when the element is focused and then selected.|
 
+### FuelRange  
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|  
+|type|FuelType|false|||
+|range|Float|faslse|minvalue=0<br>maxvalue=10000|The estimate range in KM the vehicle can travel based on fuel level and consumption|
+
 ### MassageModeData
 
 |Name|Type|Mandatory|Additional|Description|
