@@ -10,6 +10,13 @@ Purpose
 : Add a command for voice recognition
 
 ### Request
+If the application sends `AddCommand` with the `vrCommands` parameter then SDL must maintain a list of the added `vrCommands`.  
+For each AddCommand, only the first item in the `vrCommands` array shall be added to the list.
+
+Whenever the internal list of added `vrCommands` is updated SDL must:  
+* construct the `vrHelp` and `helpPrompt`  parameters using the data from the list SDL created internally  
+* send these parameters to the HMI via the `SetGlobalProperties` RPC
+
 
 #### Parameters
 
