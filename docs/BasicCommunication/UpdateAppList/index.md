@@ -32,7 +32,7 @@ SDL adds the VR synonyms of a registered application to the HMI via [OnAppRegist
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|applications|[Common.HMIApplication](../../common/structs/index.md#hmiapplication)|true|array: true<br>minsize: 0<br>maxsize: 100|
+|applications|[Common.HMIApplication](../../common/structs/#hmiapplication)|true|array: true<br>minsize: 0<br>maxsize: 100|
 
 ### Response
 

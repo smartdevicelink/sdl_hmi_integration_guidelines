@@ -39,7 +39,9 @@ Purpose
 |airbagStatus|Boolean|false||
 |emergencyEvent|Boolean|false||
 |clusterModeStatus|Boolean|false||
-|myKey|Boolean|false||
+|myKey|Boolean|false||  
+|fuelRange|Boolean|false|
+|engineOilLife|Boolean|false||
 
 ### Response
 
@@ -47,30 +49,32 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|gps|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|speed|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|rpm|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|fuelLevel|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|fuelLevel_State|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|instantFuelConsumption|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|externalTemperature|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|prndl|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|tirePressure|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|odometer|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|beltStatus|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|bodyInformation|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|deviceStatus|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|driverBraking|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|wiperStatus|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|headLampStatus|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|engineTorque|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|accPedalPosition|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|steeringWheelAngle|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|eCallInfo|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|airbagStatus|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|emergencyEvent|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|clusterModes|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
-|myKey|[Common.VehicleDataResult](../../common/structs/index.md#vehicledataresult)|false||
+|gps|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|speed|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|rpm|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|fuelLevel|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|fuelLevel_State|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|instantFuelConsumption|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|externalTemperature|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|prndl|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|tirePressure|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|odometer|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|beltStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|bodyInformation|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|deviceStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|driverBraking|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|wiperStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|headLampStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|engineTorque|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|accPedalPosition|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|steeringWheelAngle|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|eCallInfo|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|airbagStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|emergencyEvent|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|clusterModes|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|myKey|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|fuelRange|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|engineOilLife|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
 |||

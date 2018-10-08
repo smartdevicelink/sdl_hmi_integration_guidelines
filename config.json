@@ -1,15 +1,18 @@
 {
-    "Authors": ["Anastasiya Britanova", "Justin Dickow"],
-    "languages": ["en"],
+    "Authors": ["Anastasiya Britanova", "Justin Dickow", "Nicolas(Yifei) Li"],
+    "languages": ["en","zh-hans"],
     "navigation": [
         {
-            "name": "Overview"
+            "name": "Overview",
+            "name_zh-hans": "概述"
         },
         {
-          "name": "Getting Started"
+          "name": "Getting Started",
+          "name_zh-hans": "入门"
         },
         {
-            "name": "WebSocket Transport"
+            "name": "WebSocket Transport",
+            "name_zh-hans": "连接到SmartDeviceLink"
         },
         {
           "name": "BasicCommunication",
@@ -109,6 +112,12 @@
             },
             {
               "name": "UpdateAppList"
+            },
+            {
+              "name": "OnSystemTimeReady"
+            },
+            {
+              "name": "GetSystemTime"
             }
           ]
         },
@@ -126,6 +135,9 @@
             },
             {
               "name": "OnButtonSubscription"
+            },
+            {
+              "name": "ButtonPress"
             }
           ]
         },
@@ -337,6 +349,9 @@
               "name": "ScrollableMessage"
             },
             {
+              "name": "SendHapticData"
+            },
+            {
               "name": "SetAppIcon"
             },
             {
@@ -347,6 +362,9 @@
             },
             {
               "name": "SetMediaClockTimer"
+            },
+            {
+              "name": "SetVideoConfig"
             },
             {
               "name": "Show"
@@ -433,6 +451,35 @@
           ]
         },
         {
+          "name": "RC",
+          "navigation": [
+            {
+              "name": "GetCapabilities"
+            },
+            {
+              "name": "GetInteriorVehicleData"
+            },
+            {
+              "name": "GetInteriorVehicleDataConsent"
+            },
+            {
+              "name": "IsReady"
+            },
+            {
+              "name": "OnInteriorVehicleData"
+            },
+            {
+              "name": "OnRemoteControlSettings"
+            },
+            {
+              "name": "SetInteriorVehicleData"
+            },
+            {
+              "name": "OnRCStatus"
+            }
+          ]
+        },
+        {
           "name": "Common",
           "navigation": [
             {
@@ -440,6 +487,14 @@
             },
             {
               "name": "Structs"
+            }
+          ]
+        },
+        {
+          "name": "UnixSignals",
+          "navigation": [
+            {
+              "name": "LowVoltage"
             }
           ]
         }

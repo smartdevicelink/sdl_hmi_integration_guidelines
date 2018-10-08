@@ -43,7 +43,7 @@ If the HMI does not respond to SDL's request, after the default timeout occurs S
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|softButtons|[Common.SoftButton](../../common/structs/index.md#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 3|
+|softButtons|[Common.SoftButton](../../common/structs/#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 3|
 |appID|Integer|true||
 
 ### Response

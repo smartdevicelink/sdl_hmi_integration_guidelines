@@ -4,46 +4,54 @@ Type
 : Notification
 
 Sender
-: HMI
+: SDL
 
 Purpose
-: A request from the HMI to download data via a connected application.
+: A request from SDL to download data via a connected application.
 
-An `OnSystemRequest` is a notification that can be used for a couple of different purposes:
+**HTTP flow**
 
-  * As an asynchronous request from the HMI/Core for specific data from the mobile device or cloud.
-  * As a response to a request from the device or cloud. In this case binary data could be included in the hybrid part of the message to the mobile device.
-  * As a request to the mobile side to stop a current upload/data transfer via a `PutFile`.
+* SDL sends the PTS snapshot as binary data via an `OnSystemRequest` mobile request from the system to the backend. Both the "url" that the PTS will be forwarded to and the "timeout" must be taken from the Local Policy Table.
+    * If no "url" is provided in the Local Policy Table, it is supposed that the mobile application will send the Policy Table Update data back to SDL.
 
-`RequestType` defines the type of the requested data from a mobile device or the cloud. The HMI may request this data, but it's SDL's responsibility to block a `SystemRequest` in case the request intends to transfer a data type not allowed by the policy table.
+`RequestType` defines the type of the requested data from a mobile device or the cloud. The HMI may request this data, but it's SDL's responsibility to block a `SystemRequest` in case the request intends to transfer a data type not allowed by the policy table.  
+`requestSubType` is filled for supporting OEM proprietary data exchanges.
 
-The HMI is informed about `requestTypes` that are allowed by policies via [OnAppPermissionChanged](../../sdl/onapppermissionchanged) and [OnAppRegistered](../onappregistered).
+The HMI is informed about `requestTypes`, `requestSubType` that are allowed by policies via [OnAppPermissionChanged](../../sdl/onapppermissionchanged) and [OnAppRegistered](../onappregistered).
 
 !!! NOTE
 
-If the HMI sends `OnSystemRequest` with a request type disallowed by the policy table, SDL will ignore it.
+If the HMI sends `OnSystemRequest` with a request type disallowed by the policy table, SDL will ignore it.  
+In case PT contains some value for `requestSubType` param and the HMI sends `OnSystemRequest` with `requestSubType=<not_in_PT>`, SDL does not forward this notification to mobile app. 
 
 !!!
 
-!!! MUST
+_**SyncP NOTE**_   
+ 1. It's SyncP responsibility to encrypt and encode PTS file and provide it to SDL via OnSystemRequest HMI API ("filename") parameter.      
+ 2. It's SyncP responsibility to choose an application for sending PTU and start timer (for future retry strategy) after sending OnSystemRequest to SDL.
 
-HMI must send `OnSystemRequest` if specific data is requested from the mobile device/cloud, or binary data needs to be sent to the mobile device.
-
+!!! MUST   
+HMI must send `OnSystemRequest`, if specific data is requested from the mobile device/cloud, or binary data needs to be sent to the mobile device.
 !!!
+
 ### Notification
 
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|requestType|[Common.RequestType](../../common/enums/index.md#requesttype)|true||
+|requestType|[Common.RequestType](../../common/enums/#requesttype)|true||  
+|requestSubType|String|false|maxlength: 255|
 |url|String|false|minlength: 1<br>maxlength: 1000|
-|fileType|[Common.FileType](../../common/enums/index.md#filetype)|false||
+|fileType|[Common.FileType](../../common/enums/#filetype)|false||
 |offset|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |length|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |timeout|Integer|false|minvalue: 0<br>maxvalue: 2000000000|
 |fileName|String|true|minlength: 1<br>maxlength: 255|
 |appID|String|false|minlength: 1<br>maxlength: 50|
+
+[Common.RequestType]: ../../common/enums/#requesttype
+[Common.FileType]: ../../common/enums/#filetype
 
 ### Sequence Diagrams
 |||
@@ -54,6 +62,11 @@ System Requests File Download
 |||
 BC.OnSystemRequest in "Proprietary" Policy Table Update Flow
 ![Proprietary PTU](./assets/OnSystemRequest_in_Proprietary_PTU_flow.png)
+|||
+
+|||
+BC.OnSystemRequest in External Proprietary Policy Table Update Flow
+![EXTERNAL proprietary](../policyupdate/assets/diagram_PolicyUpdate_external_proprietary.png)
 |||
 
 #### JSON Example Notification

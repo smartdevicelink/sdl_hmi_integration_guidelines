@@ -22,7 +22,7 @@ Purpose
 |locationDescription|String|false|maxlength: 500|
 |addressLines|String|false|array: true<br>minsize: 0<br>maxsize: 4<br>maxlength: 500|
 |phoneNumber|String|false|maxlength: 500|
-|locationImage|[Common.Image](../../common/structs/index.md#image)|false||
+|locationImage|[Common.Image](../../common/structs/#image)|false||
 
 ### Response
 

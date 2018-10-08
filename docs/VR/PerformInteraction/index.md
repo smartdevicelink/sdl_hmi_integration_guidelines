@@ -15,9 +15,9 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|helpPrompt|[Common.TTSChunk](../../common/structs/index.md#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
-|initialPrompt|[Common.TTSChunk](../../common/structs/index.md#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
-|timeoutPrompt|[Common.TTSChunk](../../common/structs/index.md#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|helpPrompt|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|initialPrompt|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|timeoutPrompt|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |timeout|Integer|true||
 |grammarID|Integer|false|array: true<br>minsize: 1<br>maxsize: 100<br>minvalue: 0<br>maxvalue: 2000000000|
 
@@ -54,19 +54,34 @@ PerformInteraction in Both Mode times out
   {
     "initialPrompt" :
     [
-      "text" : "Please make your choice by voice",
+      {
+        "text" : "Please make your choice by voice", 
+        "type" : "TEXT"
+      }
     ],
 
     "helpPrompt" :
     [
-      "text" : "Yes",
-      "text" : "No",
-      "text" : "Skip"
+      {
+        "text" : "Yes", 
+        "type" : "TEXT"
+      },
+      {
+        "text" : "No", 
+        "type" : "TEXT"
+      },
+      {
+        "text" : "Skip", 
+        "type" : "TEXT"
+      }
     ],
 
     "timeoutPrompt" :
     [
-      "text" : "The time is about to run out"
+      {
+        "text" : "The time is about to run out", 
+        "type" : "TEXT"
+      }
     ],
 
     "timeout" : 10000,

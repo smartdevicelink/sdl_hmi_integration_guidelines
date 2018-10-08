@@ -23,11 +23,12 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|displayCapabilities|[Common.DisplayCapabilities](../../common/structs/index.md#displaycapabilities)|true||
-|audioPassThruCapabilities|[Common.AudioPassThruCapabilities](../../common/structs/index.md#audiopassthrucapabilities)|true||
-|hmiZoneCapabilities|[Common.HmiZoneCapabilities](../../common/enums/index.md#hmizonecapabilities)|true||
-|softButtonCapabilities|[Common.SoftButtonCapabilities](../../common/structs/index.md#softbuttoncapabilities)|false||
-|hmiCapabilities|[Common.HMICapabilities](../../common/structs/index.md#hmicapabilities)|false||
+|displayCapabilities|[Common.DisplayCapabilities](../../common/structs/#displaycapabilities)|true||
+|audioPassThruCapabilities|[Common.AudioPassThruCapabilities](../../common/structs/#audiopassthrucapabilities)|true||
+|hmiZoneCapabilities|[Common.HmiZoneCapabilities](../../common/enums/#hmizonecapabilities)|true||
+|softButtonCapabilities|[Common.SoftButtonCapabilities](../../common/structs/#softbuttoncapabilities)|false||
+|hmiCapabilities|[Common.HMICapabilities](../../common/structs/#hmicapabilities)|false||
+|systemCapabilities|[Common.SystemCapabilities](../../common/structs/#systemcapabilities)|false||
 
 ### Sequence Diagrams
 |||
@@ -60,12 +61,37 @@ Get Capabilities
         "graphicSupported" : true,
         "imageCapabilities": ["DYNAMIC"]
     },
-  "hmiCapabilities" :
+    "hmiCapabilities" :
     {
         "navigation" : true,
-        "phoneCall" : true
+        "phoneCall" : true,
+        "videostreaming" : true
     },
-
+    "systemCapabilities":
+    {
+      "navigationCapability":
+      {
+          "sendLocationEnabled": true,
+          "getWayPointsEnabled": true
+      },
+      "phoneCapability":
+      {
+          "dialNumberEnabled": true
+      },
+      "videoStreamingCapability":
+      {
+        "preferredResolution": {
+          "resolutionWidth": 800,
+          "resolutionHeight": 350
+        },
+        "maxBitrate": 10000,
+        "supportedFormats": [{
+          "protocol": "RAW",
+          "codec": "H264"
+        }],
+        "hapticSpatialDataSupported": true
+      }
+    },
     "softButtonCapabilities" :
     {
         "shortPressAvailable" : true,
@@ -73,16 +99,13 @@ Get Capabilities
         "upDownAvailable" : true,
         "imageSupported" : true
     },
-
     "hmiZoneCapabilities" : "FRONT",
-
     "audioPassThruCapabilities" :
     {
         "samplingRate" : "44KHZ",
         "bitsPerSample" : "8_BIT",
         "audioType" : "PCM"
     },
-
     "code" : 0,
     "method" : "UI.GetCapabilities"
   }

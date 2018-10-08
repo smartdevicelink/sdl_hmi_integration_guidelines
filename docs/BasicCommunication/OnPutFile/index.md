@@ -13,8 +13,15 @@ Purpose
 
 !!! MUST
 
-Use the appropriate uploaded file according to its workflow (IVSU, SystemRequest, RPC's). See diagrams listed below.
+1. Use the appropriate uploaded file according to its workflow (IVSU, SystemRequest, RPC's). See diagrams listed below.  
+2. Whenever HMI gets RPC with `Image` which has `.isTemplate` set to true, the HMI has to:
 
+- load the proper image pattern
+- extract alpha channel from the template image
+- apply the alpha channel to the image pattern
+- use this newly generated image instead of the uploaded one  
+
+and whenever the UI changes, the HMI has to recreate images currently visible on the screen.
 !!!
 
 !!! NOTE
@@ -22,18 +29,16 @@ Use the appropriate uploaded file according to its workflow (IVSU, SystemRequest
 The list of RPCs and data structures that `OnPutFile` affects are:
 
   * Show (Image, SoftButton)
-  * ShowConstantTBT (SoftButton)
+  * ShowConstantTBT (Image, SoftButton)
   * CreateInteractionChoiceSet (Image)
-  * DeleteInteractionChoiceSet (Image)
   * SetGlobalProperties (Image, VrHelpItem)
   * ResetGlobalProperties (Image, VrHelpItem)
-  * UpdateTurnList (Turn)
+  * UpdateTurnList (Turn, SoftButton)
   * AddCommand(Image)
-  * DeleteCommand(Image)
   * SendLocation(Image)
-  * Alert (SoftButton)
+  * Alert (SoftButton)  
+  * AlertManeuver (SoftButton)
   * ScrollableMessage (SoftButton)
-  * UpdateTurnList (SoftButton)
 
 !!!
 
@@ -48,7 +53,7 @@ The list of RPCs and data structures that `OnPutFile` affects are:
 |fileSize|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |FileName|String|true|maxlength: 255|
 |syncFileName|String|true|maxlength: 255|
-|fileType|[Common.FileType](../../common/enums/index.md#filetype)|true||
+|fileType|[Common.FileType](../../common/enums/#filetype)|true||
 |persistentFile|Boolean|false||
 
 ### Sequence Diagrams

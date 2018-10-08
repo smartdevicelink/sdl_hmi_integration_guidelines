@@ -15,8 +15,8 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|helpPrompt|[Common.TTSChunk](../../common/structs/index.md#ttschunk)|false|array: true<br>minsize: 0<br>maxsize: 100|
-|timeoutPrompt|[Common.TTSChunk](../../common/structs/index.md#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|helpPrompt|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 0<br>maxsize: 100|
+|timeoutPrompt|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |appID|Integer|true||
 
 ### Response
@@ -42,15 +42,30 @@ SetGlobalProperties
   {
     "helpPrompt" :
     [
-      "text" : "Yes",
-      "text" : "No",
-      "text" : "Skip"
+      {
+        "text" : "Yes", 
+        "type" : "TEXT"
+      },
+      {
+        "text" : "No", 
+        "type" : "TEXT"
+      },
+      {
+        "text" : "Skip", 
+        "type" : "TEXT"
+      }
     ],
 
     "timeoutPrompt" :
     [
-      "text" : "Please make a choice",
-      "text" : "The time is about to expire"
+      {
+        "text" : "Please make a choice", 
+        "type" : "TEXT"
+      },
+      {
+        "text" : "The time is about to expire", 
+        "type" : "TEXT"
+      }
     ],
     "appID" : 65542
   }

@@ -11,18 +11,26 @@ Purpose
 
 ### Request
 
+In case HMI needs to find out current status of PTU and sends _GetStatusUpdate_request_ to SDL, it must respond with the current update status code to HMI.
+The request _GetStatusUpdate_ duplicates the functionality of the notification _OnStatusUpdate_. In case the policy update status is being changed.(e.g. an update is finished successfully or retry strategy failed), SDL must send notification _OnStatusUpdate_ to HMI with the corresponding UpdateStatus code, whereas _GetStatusUpdate_ allowes to request the status of policy table at any time, not on update only.
+
+!!! MUST:
+Send a request to SDL if it needs to get a current policy update status according to its workflows.
+!!!
+
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+This RPC has no additional parameter requirements.
 
 ### Response
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
-|status|[Common.UpdateResult](../../common/enums/index.md#updateresult)|true||
+|Name|Type|Mandatory|
+|:---|:---|:--------|
+|status|[Common.UpdateResult]|true|
+
+[Common.UpdateResult]: ../../common/enums/#updateresult
 
 ### Sequence Diagrams
 |||

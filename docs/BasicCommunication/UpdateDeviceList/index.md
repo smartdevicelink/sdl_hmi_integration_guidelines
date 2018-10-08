@@ -17,7 +17,8 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
     * Once the device is found, SDL starts the procedure of searching for SDL Enabled Applications on the device.
     * SDL Sends `BasicCommunication.UpdateDeviceList` with the name and id of the discovered device to the HMI.
     * SDL needs to receive `OnDeviceChosen(deviceInfo)` or `OnFindApplications(deviceInfo)` from the HMI to allow registering applications which are running on the connected device.
-    * SDL allows registration of applications on the named device and sends `BasicCommunication.OnAppRegistered` to the HMI
+    * SDL allows registration of applications on the named device and sends `BasicCommunication.OnAppRegistered` to the HMI  
+    * SDL sends `BasicCommunication.UpdateDeviceList` to HMI when iOS device was connected over Bluetooth with applications registered and running on SDL and was also connected over USB. 
   2. USB Transport (AOA)
     * SDL learns about a new device connected over USB (A notification to the TA from the OS)
     * SDL Sends `BasicCommunication.UpdateDeviceList` with the name, id, and TransportType (AOA, iOS) of the discovered device to the HMI.
@@ -45,7 +46,7 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|deviceList|[Common.DeviceInfo](../../common/structs/index.md#deviceinfo)|true|array: true<br>minsize: 0<br>maxsize: 100|
+|deviceList|[Common.DeviceInfo](../../common/structs/#deviceinfo)|true|array: true<br>minsize: 0<br>maxsize: 100|
 
 ### Response
 
