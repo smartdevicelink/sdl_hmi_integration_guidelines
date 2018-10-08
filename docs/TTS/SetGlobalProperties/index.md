@@ -13,7 +13,7 @@ Purpose
 SDL requests to set the values for the prompts to be spoken by TTS during the User's interaction with the application over head unit.
 
 ### Request  
-On receiving `AddCommand` with `CommandType = Command` SDL must send updated values of `helpPrompt` via TTS.SetGlobalProperties request to HMI.
+On receiving `AddCommand` with `CommandType = Command` before a custom `helpPrompt` is set by the application, SDL must send updated values of `helpPrompt` via TTS.SetGlobalProperties request to HMI.
 
 #### Parameters
 
