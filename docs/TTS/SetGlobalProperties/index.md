@@ -34,8 +34,10 @@ This RPC has no additional parameter requirements
 SetGlobalProperties
 ![SetGlobalProperties](./assets/SetGlobalProperties.png)
 |||
+
+|||
 SetGlobalProperties request with VRHelp and HelpPrompt params
-![SetGlobalProperties VRHelp](./assets/SetGlobalProperties_VRHelp_and_HelpPrompt.png)
+![SetGlobalProperties](./assets/SetGlobalProperties_VRHelp_and_HelpPrompt.png)
 |||
 
 ### Example Request
