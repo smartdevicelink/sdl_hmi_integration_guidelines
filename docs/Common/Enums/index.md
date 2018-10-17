@@ -593,6 +593,15 @@
 |STATIC|0||
 |DYNAMIC|1||
 
+### AudioStreamingIndicator
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|PLAY_PAUSE|0|Default playback indicator.|
+|PLAY|1|Indicates that a button press of the Play/Pause button would start the playback.|
+|PAUSE|2|Indicates that a button press of the Play/Pause button would pause the current playback.|
+|STOP|3|Indicates that a button press of the Play/Pause button would stop the current playback.|
+
 ### IgnitionStableStatus
 
 |Name|Value|Description|
