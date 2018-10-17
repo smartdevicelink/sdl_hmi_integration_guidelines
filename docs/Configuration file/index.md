@@ -37,6 +37,8 @@ To configure some specific SDL rules or to define the filepathes and other SDL s
 |TimeTestingPort|Integer|TimeTestingPort = 8090|Port to obtain the performance information about   messages processing  on different component levels. Enabled if SDL built with TIME_TESTER flag|
 |ReadDIDRequest|Integer,Array[2]=true|ReadDIDRequest = 5, 1|Limitation for a number of ReadDID requests (the 1st value) per seconds (the 2nd value)|
 |GetVehicleDataRequest|Integer, Array[2]=true|GetVehicleDataRequest = 5, 1|Limitation for a number of GetVehicleData requests (the 1st value) per seconds (the 2nd value)|
+|AppTransportChangeTimer|Integer|AppTransportChangeTimer = 500 ms|Defines the timeout for waiting the mobile app to reconnect between Bluetooth and USB transports change|
+|AppTransportChangeTimerAddition|Integer|AppTransportChangeTimerAddition = 0ms|Defines the timeout  for waiting of every mobile app to reconnect between Bluetooth and USB transports change in case the number of connected apps is more than one|
 
 ### MEDIA MANAGER
 |Parameter|Type|Example|Description|

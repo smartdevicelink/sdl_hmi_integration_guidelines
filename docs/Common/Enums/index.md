@@ -54,16 +54,19 @@
 |BACKGROUND_PROCESS|7||
 |TESTING|8||
 |SYSTEM|9||
+|PROJECTION|10||
+|REMOTE_CONTROL|11||
 
 ### SpeechCapabilities
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|TEXT|0||
-|SAPI_PHONEMES|1||
-|LHPLUS_PHONEMES|2||
+|TEXT|0|Uses plain text for performing TTS|
+|SAPI_PHONEMES|1|Uses the Speech API Phoneme representation of a phrase for performing TTS|
+|LHPLUS_PHONEMES|2|Uses the LH+ Phoneme representation of a phrase for performing TTS|
 |PRE_RECORDED|3||
 |SILENCE|4||
+|FILE|5|Uses an audio file sent to SDL via a PutFile RPC to perform TTS or play generic sounds in conjunction with TTS|
 
 ### TextFieldName
 
@@ -101,6 +104,23 @@
 |phoneNumber|29||
 |timeToDestination|30||
 |turnText|31||
+
+### MetadataType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|mediaTitle|0|This field contains the title of the current audio track.|
+|mediaArtist|1|This field contains the artist/creator of the current audio track.|
+|mediaAlbum|2|This field contains the album title of the current audio track.|
+|mediaYear|3|This field contains the creation year of the current audio track.|
+|mediaGenre|4|This field contains the genre of the current audio track.|
+|mediaStation|5|This field contains the name of the current media source.|
+|rating|6|This field contains a rating of some form.|
+|currentTemperature|7|This field contains the current temperature.|
+|maximumTemperature|8|This field contains the maximum temperature for the day.|
+|minimumTemperature|9|This field contains the minimum temperature for the day.|
+|weatherTerm|10|This field contains the current weather (cloudy, clear, etc.).|
+|humidity|11|This field contains the current humidity value.|
 
 ### AmbientLightStatus
 
@@ -210,17 +230,6 @@
 |CID1SET|2||
 |CID2SET|3||
 
-### DeactivateReason
-
-|Name|Value|Description|
-|:---|:----|:----------|
-|AUDIO|0||
-|PHONECALL|1||
-|NAVIGATIONMAP|2||
-|PHONEMENU|3||
-|SYNCSETTINGS|4||
-|GENERAL|5||
-
 ### SamplingRate
 
 |Name|Value|Description|
@@ -259,6 +268,7 @@
 |BEGIN|0||
 |MOVE|1||
 |END|2||
+|CANCEL|3||
 
 ### HmiZoneCapabilities
 
@@ -336,6 +346,24 @@
 |PRESET_9|14||
 |CUSTOM_BUTTON|15||
 |SEARCH|16||
+|AC_MAX|17|CLIMATE Module|
+|AC|18|CLIMATE Module|
+|RECIRCULATE|19|CLIMATE Module|
+|FAN_UP|20|CLIMATE Module|
+|FAN_DOWN|21|CLIMATE Module|
+|TEMP_UP|22|CLIMATE Module|
+|TEMP_DOWN|23|CLIMATE Module|
+|DEFROST_MAX|24|CLIMATE Module|
+|DEFROST|25|CLIMATE Module|
+|DEFROST_REAR|26|CLIMATE Module|
+|UPPER_VENT|27|CLIMATE Module|
+|LOWER_VENT|28|CLIMATE Module|
+|VOLUME_UP|29|RADIO Module|
+|VOLUME_DOWN|30|RADIO Module|
+|EJECT|31|RADIO Module|
+|SOURCE|32|RADIO Module|
+|SHUFFLE|33|RADIO Module|
+|REPEAT|34|RADIO Module|
 
 ### KeypressMode
 
@@ -379,30 +407,45 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|EN-US|0||
-|ES-MX|1||
-|FR-CA|2||
-|DE-DE|3||
-|ES-ES|4||
-|EN-GB|5||
-|RU-RU|6||
-|TR-TR|7||
-|PL-PL|8||
-|FR-FR|9||
-|IT-IT|10||
-|SV-SE|11||
-|PT-PT|12||
-|NL-NL|13||
-|EN-AU|14||
-|ZH-CN|15||
-|ZH-TW|16||
-|JA-JP|17||
-|AR-SA|18||
-|KO-KR|19||
-|PT-BR|20||
-|CS-CZ|21||
-|DA-DK|22||
-|NO-NO|23||
+|EN-US|0|English - US|
+|ES-MX|1|Spanish - Mexico|
+|FR-CA|2|French - Canada|
+|DE-DE|3|German - Germany|
+|ES-ES|4|Spanish - Spain|
+|EN-GB|5|English - GB|
+|RU-RU|6|Russian - Russia|
+|TR-TR|7|Turkish - Turkey|
+|PL-PL|8|Polish - Poland|
+|FR-FR|9|French - France|
+|IT-IT|10|Italian - Italy|
+|SV-SE|11|Swedish - Sweden|
+|PT-PT|12|Portuguese - Portugal|
+|NL-NL|13|Dutch (Standard) - Netherlands|
+|EN-AU|14|English - Australia|
+|ZH-CN|15|Mandarin - China|
+|ZH-TW|16|Mandarin - Taiwan|
+|JA-JP|17|Japanese - Japan|
+|AR-SA|18|Arabic - Saudi Arabia|
+|KO-KR|19|Korean - South Korea|
+|PT-BR|20|Portuguese - Brazil|
+|CS-CZ|21|Czech - Czech Republic|
+|DA-DK|22|Danish - Denmark|
+|NO-NO|23|Norwegian - Norway|
+|NL-BE|24|Dutch (Flemish) - Belgium|
+|EL-GR|25|Greek - Greece|
+|HU-HU|26|Hungarian - Hungary|
+|FI-FI|27|Finnish - Finland|
+|SK-SK|28|Slovak - Slovakia|
+|EN-IN|29|English - India|
+|TH-TH|30|Thai - Thailand|
+|EN-SA|31|English - Middle East|
+|HE-IL|32|Hebrew - Israel|
+|RO-RO|33|Romanian - Romania|
+|UK-UA|34|Ukrainian - Ukraine|
+|ID-ID|35|Indonesian - Indonesia|
+|VI-VN|36|Vietnamese - Vietnam|
+|MS-MY|37|Malay - Malaysia|
+|HI-IN|38|Hindi - India|
 
 ### FileType
 
@@ -613,12 +656,17 @@
 |Name|Value|Description|
 |:---|:----|:----------|
 |NO_SOURCE_SELECTED|0||
-|USB|1||
-|USB2|2||
-|BLUETOOTH_STEREO_BTST|3||
-|LINE_IN|4||
-|IPOD|5||
-|MOBILE_APP|6||
+|CD|1||
+|USB|2||
+|USB2|3||
+|BLUETOOTH_STEREO_BTST|4||
+|LINE_IN|5||
+|IPOD|6||
+|MOBILE_APP|7||  
+|AM|8||
+|FM|9||
+|XM|10||
+|DAB|11||
 
 ### RequestType
 
@@ -643,7 +691,8 @@
 |VEHICLE_DIAGNOSTICS|16||
 |EMERGENCY|17||
 |MEDIA|18||
-|FOTA|19||
+|FOTA|19||  
+|OEM_SPECIFIC|20||
 
 ### ConsentSource
 
@@ -734,7 +783,6 @@
 |showConstantTBTIcon|9||
 |showConstantTBTNextTurnIcon|10||
 |locationImage|11||
-|SubMenuIcon|12||
 
 ### VehicleDataType
 
@@ -765,7 +813,29 @@
 |VEHICLEDATA_BATTVOLTAGE|22||
 |VEHICLEDATA_ENGINETORQUE|23||
 |VEHICLEDATA_ACCPEDAL|24||
-|VEHICLEDATA_STEERINGWHEEL|25||
+|VEHICLEDATA_STEERINGWHEEL|25||  
+|VEHICLEDATA_FUELRANGE|26||  
+|VEHICLEDATA_ENGINEOILLIFE|27||
+
+### VideoStreamingProtocol
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|RAW|0|Raw stream bytes|
+|RTP|1|Real-time Transport Protocol|
+|RTSP|2|Real-time Streaming Protocol|
+|RTMP|3|Real-Time Messaging Protocol|
+|WEBM|4|WebM container|
+
+### VideoStreamingCodec
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|H264|0|MPEG-4 Advanced Video Coding|
+|H265|1|High Efficiency Video Coding|
+|Theora|2|Ogg Theora|
+|VP8|3||
+|VP9|4||
 
 ### UpdateResult
 
@@ -803,8 +873,178 @@
 |OFF|1||
 |ON|2||
 
+### ModuleType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|CLIMATE|0||
+|RADIO|1||
+|SEAT|2||
+|AUDIO|3||
+|LIGHT|4||
+|HMI_SETTINGS|5||
+
+### RadioBand
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|AM|0||
+|FM|1||
+|XM|2||
+
+### RadioState
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ACQUIRING|0||
+|ACQUIRED|1||
+|MULTICAST|2||
+|NOT_FOUND|3||
+
+### TemperatureUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FAHRENHEIT|0||
+|CELSIUS|1||
+
+### DefrostZone
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FRONT|0||
+|REAR|1||
+|ALL|2||
+|NONE|3||
+
+### VentilationMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|UPPER|0||
+|LOWER|1||
+|BOTH|2||
+|NONE|3||
+
 ### EntityStatus
 |Name|Value|Description|
 |:---|:----|:----------|
 |ON|0||
 |OFF|1||
+
+### FuelType  
+|Name|Value|Description|
+|:---|:----|:----------|  
+|GASOLINE|0||  
+|DIESEL|1||  
+|CNG|2|For vehicles using compressed natural gas|  
+|LPG|3|For vehicles using liquefied petroleum gas|
+|HYDROGEN|4|For FCEV (fuel cell electric vehicle)|  
+|BATTERY|5|For BEV (Battery Electric Vehicle), PHEV (Plug-in Hybrid Electric Vehicle), solar vehicles and other vehicles which run on a battery|
+
+### LightName
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FRONT_LEFT_HIGH_BEAM|0||
+|FRONT_RIGHT_HIGH_BEAM|1||
+|FRONT_LEFT_LOW_BEAM|2||
+|FRONT_RIGHT_LOW_BEAM|3||
+|FRONT_LEFT_PARKING_LIGHT|4||
+|FRONT_RIGHT_PARKING_LIGHT|5||
+|FRONT_LEFT_FOG_LIGHT|6||
+|FRONT_RIGHT_FOG_LIGHT|7||
+|FRONT_LEFT_DAYTIME_RUNNING_LIGHT|8||
+|FRONT_RIGHT_DAYTIME_RUNNING_LIGHT|9||
+|FRONT_LEFT_TURN_LIGHT|10||
+|FRONT_RIGHT_TURN_LIGHT|11||
+|REAR_LEFT_FOG_LIGHT|12||
+|REAR_RIGHT_FOG_LIGHT|13||
+|REAR_LEFT_TAIL_LIGHT|14||
+|REAR_RIGHT_TAIL_LIGHT|15||
+|REAR_LEFT_BRAKE_LIGHT|16||
+|REAR_RIGHT_BRAKE_LIGHT|17||
+|REAR_LEFT_TURN_LIGHT|18||
+|REAR_RIGHT_TURN_LIGHT|19||
+|REAR_REGISTRATION_PLATE_LIGHT|20|| 
+|HIGH_BEAMS|501||
+|LOW_BEAMS|502||
+|FOG_LIGHTS|503||
+|RUNNING_LIGHTS|504||
+|PARKING_LIGHTS|505||
+|BRAKE_LIGHTS|506||
+|REAR_REVERSING_LIGHTS|507||
+|SIDE_MARKER_LIGHTS|508||
+|LEFT_TURN_LIGHTS|509||  
+|RIGHT_TURN_LIGHTS|510||
+|HAZARD_LIGHTS|511||
+|REAR_CARGO_LIGHTS|512| Cargo lamps illuminate the cargo area.|  
+|REAR_TRUCK_BED_LIGHTS|513|Truck bed lamps light up the bed of the truck.|    
+|REAR_TRAILER_LIGHTS|514|Trailer lights are lamps mounted on a trailer hitch.|  
+|LEFT_SPOT_LIGHTS|515|It is the spotlights mounted on the left side of a vehicle.|  
+|RIGHT_SPOT_LIGHTS|516|It is the spotlights mounted on the right side of a vehicle.|  
+|LEFT_PUDDLE_LIGHTS|517|Puddle lamps illuminate the ground beside the door as the customer is opening or approaching the door.|  
+|RIGHT_PUDDLE_LIGHTS|518| Puddle lamps illuminate the ground beside the door as the customer is opening or approaching the door.|
+|AMBIENT_LIGHTS|801||
+|OVERHEAD_LIGHTS|802||
+|READING_LIGHTS|803||
+|TRUNK_LIGHTS|804||
+
+### LightStatus
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ON|0||
+|OFF|1||  
+|RAMP_UP|2||  
+|RAMP_DOWN|3||  
+|UNKNOWN|4||  
+|INVALID|5||
+
+### DisplayMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DAY|0||
+|NIGHT|1||
+|AUTO|2||
+
+### DistanceUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MILES|0||
+|KILOMETERS|1||
+
+### MassageZone
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|OFF|0||
+|LOW|1||
+|HIGH|2||
+
+### MassageCushion
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|TOP_LUMBAR|0||
+|MIDDLE_LUMBAR|1||
+|BOTTOM_LUMBAR|2||
+|BACK_BOLSTERS|3||
+|SEAT_BOLSTERS|4||
+
+### SeatMemoryActionType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|SAVE|0|Save current seat postions and settings to seat memory.|
+|RESTORE|1|Restore / apply the seat memory settings to the current seat.|
+|NONE|2|No action to be performed.|
+
+### SupportedSeat
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DRIVER|0|List possible seats that is a remote controllable seat.|
+|FRONT_PASSENGER|1|List possible seats that is a remote controllable seat.|

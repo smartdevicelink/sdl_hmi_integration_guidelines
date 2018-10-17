@@ -21,17 +21,18 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
   6. Display images on sub menus if provided by the application.
   7. Provide a WARNINGS information to the application that the SubMenu was added but no image was displayed.
   8. Scale the image to ensure it fits properly in the space allocated for the display of the image. If the image does not fit properly even after scaling, the HMI shall not display any image on the submenu.
+!!!
 
 !!! note
 
-  * SDL will never request a sub menu be added to another sub menu  
-  * HMI does not display any image in case the application does not provide an image for display on the sub menu.  
-  * HMI does not display any image in case the image referenced by the application for display on the submenu is invalid or is not available.  
+  * SDL will never request a sub menu be added to another sub menu
+  * HMI does not display any image in case the application does not provide an image for display on the sub menu.
+  * HMI does not display any image in case the image referenced by the application for display on the submenu is invalid or is not available.
   * To remove an icon already sent, the app would have to delete the submenu and add it again without the icon.Otherwise, if the submenu is not deleted, another request with the same submenu id will be rejected.
 
 
 
-  
+
 !!!
 
 ### Request
@@ -42,6 +43,7 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
 |:---|:---|:--------|:---------|
 |menuID|Integer|true|minvalue: 1<br>maxvalue: 2000000000|
 |menuParams|[Common.MenuParams](../../common/structs/#menuparams)|true||
+|menuIcon|[Common.Image](../../common/structs/#image)|false||
 |appID|Integer|true||
 
 ### Response

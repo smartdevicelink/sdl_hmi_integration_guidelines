@@ -19,31 +19,34 @@ _SDL uses the information about:_
 
 ### Request   
 
-!!! MUST   
+!!! MUST 
 1) perform the update type indicated by the `updateMode` parameter:   
-- If the application is not active, the HMI must still store the values to be calculated for later display on the HMI.   
-- If the application is active, the updates must begin immediately.   
+
+  * If the application is not active, the HMI must still store the values to be calculated for later display on the HMI.   
+  * If the application is active, the updates must begin immediately.   
 
 2) exhibit the following behavior based on the `updateMode` parameter:
+
   * COUNTUP/COUNTDOWN modes:   
     * Start counting up or down from the requested `startTime` value with a step of 1 second;
     * Continue counting up or down until:
-           - The next request of _SetMediaClockTimer_ with appropriate parameters comes;   
-           - Zero is reached in the case of COUNTDOWN.   
+      * The next request of _SetMediaClockTimer_ with appropriate parameters comes;   
+      * Zero is reached in the case of COUNTDOWN.   
   * PAUSE mode:   
     * Pause the timer that is counting up or down;   
     * If `startTime` or `endTime` parameters are provided, the values must be updated on the HMI.   
   * CLEAR mode:    
     * Clear `startTime` to 00:00:00 in the case that the `startTime` parameter is not provided in the request, otherwise, `startTime` must be updated with a new value. It is up to HMI to determine the way the media clock timer is cleared: either to remove it from display or to set it to zero.   
-    
-!!! NOTE   
-- SDL will not send this request if the `mediaClock` field is not indicated as supported in [UI.GetCapabilities](../getcapabilities/index.md).   
-- HMI must remember the mode and the value (continuing to update it in case of COUNTUP / COUNTDOWN) of the media clock timer associated with appID and display the accurate values whenever the appID application is activated after having been deactivated.   
-- Initially, the appID together with other application-related information is provided by SDL within one of _UpdateAppList_ and _OnAppRegistered_ RPCs.   
-!!!
 
 3) Respond with the [result code] correspondingly to the results of this RPC execution.
 !!!
+    
+!!! NOTE   
+1) SDL will not send this request if the `mediaClock` field is not indicated as supported in [UI.GetCapabilities](../getcapabilities).   
+2) HMI must remember the mode and the value (continuing to update it in case of COUNTUP / COUNTDOWN) of the media clock timer associated with appID and display the accurate values whenever the appID application is activated after having been deactivated.   
+3) Initially, the appID together with other application-related information is provided by SDL within one of _UpdateAppList_ and _OnAppRegistered_ RPCs.   
+!!!
+
 #### Parameters
 
 |Name|Type|Mandatory|Description|
@@ -64,6 +67,8 @@ _There is a difference in message type for WebSocket and D-Bus connection (see t
 For detailed information, see Section "Sequence Diagrams"._    
 !!!
 
+#### Parameters
+
 |Result|Description|Message type WebSocket|Message type D-Bus|Message Params|Notes|
 |:-----|:----------|:---------------------|:-----------------|:-----------|:----|
 |Success|SUCCESS: 1. HMI has started counting up or down the media clock from the requested value (in case of COUNTUP or COUNTDOWN requested mode).<br>2. HMI has paused the media clock value (PAUSE requested mode).<br>3. HMI has resumed the media clock in the mode that had been in effect before pausing, i.e. has started counting up or down (RESUME requested mode).<br>4. HMI has cleared the existing media clock value (CLEAR requested mode).|JSON response|Method return|code: 0|HMI must respond right after the action requested with updateMode parameter has been performed.|
@@ -73,10 +78,6 @@ For detailed information, see Section "Sequence Diagrams"._
 |Failure|GENERIC_ERROR: The unknown issue occurred or other codes are not applicable.|JSON error message|Method return|code: 22|Applicable to this RPC result codes.|
 
 Please see [Result Enumeration](../../common/enums/result) for all SDL-supported codes.
-
-#### Parameters
-
-This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
 |||

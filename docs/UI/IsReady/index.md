@@ -9,20 +9,19 @@ Sender
 Purpose
 : Request ready state of UI Module
 
-
 ### Request
-
-#### Parameters
-
-The request does not have specific parameters.
 
 !!! note
 
-1. SDL sends `UI.IsReady` request after HMI confirms its readiness via `BC.OnREady` notification.
+1. SDL sends `UI.IsReady` request after HMI confirms its readiness via `BC.OnReady` notification.
 2. If HMI responds with `"available":false`, SDL will not further communicate over UI interface with HMI.
 3. If HMI does not respond during SDL's default timeout, SDL will continue to send RPCs over UI interface to HMI.
 
 !!!
+
+#### Parameters
+
+The request does not have specific parameters.
 
 ### Response
 

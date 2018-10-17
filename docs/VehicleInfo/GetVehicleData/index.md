@@ -40,7 +40,9 @@ Purpose
 |emergencyEvent|Boolean|false||
 |clusterModeStatus|Boolean|false||
 |myKey|Boolean|false||
-|appID|Integer|true||
+|appID|Integer|true||  
+|fuelRange|Boolean|false||
+|engineOilLife|Boolean|false||
 
 ### Response
 
@@ -72,7 +74,9 @@ Purpose
 |airbagStatus|[Common.AirbagStatus](../../common/structs/#airbagstatus)|false||
 |emergencyEvent|[Common.EmergencyEvent](../../common/structs/#emergencyevent)|false||
 |clusterModeStatus|[Common.ClusterModeStatus](../../common/structs/#clustermodestatus)|false||
-|myKey|[Common.MyKey](../../common/structs/#mykey)|false||
+|myKey|[Common.MyKey](../../common/structs/#mykey)|false||  
+|fuelRange|[Common.FuelRange](../../common/structs/#fuelrange)|false|minsize=0<br>maxsize=100<br>array=true|
+|engineOilLife|Float|false|minvalue=0<br>maxvalue=100|
 
 ### Sequence Diagrams
 |||
