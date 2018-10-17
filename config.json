@@ -27,9 +27,6 @@
               "name": "MixingAudioSupported"
             },
             {
-              "name": "AllowDeviceToConnect"
-            },
-            {
               "name": "SystemRequest"
             },
             {
