@@ -863,7 +863,8 @@
 |SIXTH|11||
 |SEVENTH|12||
 |EIGHTH|13||
-|FAULT|14||
+|UNKNOWN|14||
+|FAULT|15||
 
 ### VehicleDataStatus
 
