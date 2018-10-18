@@ -17,7 +17,7 @@ SDL uses `OnEventChanged` notification for correct changing HMILevels and AudioS
 
 1.	Send notification with appropriate parameter value when active call on HMI has been started/ended.
 
-2.	Send SDL OnAppDeactivated /<appID/> after the phone call started.
+2.	Send SDL OnAppDeactivated `<appID>` after the phone call started.
 
 3.	Resume the applications to the previous-to-phone-call state on HMI (as SDL does not send BC.ActivateApp or BC.OnResumeAudioSource to HMI after the phone call is ended).
 !!!
@@ -31,10 +31,10 @@ After getting OnEventChanged(PHONE_CALL, isActive: false) from HMI, SDL returns 
 
 #### Emergency event
 
-Safety Feature is HMI's specific mode when “Emergency event” or “Rear view camera” are active modes. The main idea from SDL<->HMI point of view is that navigation/audio streaming mustn’t interfere with Rear Camera View mode. HMI is responsible for managing audio/video data during “Emergency event”/”RearCamera” modes.
+Safety Feature is HMI's specific mode when "Emergency event" or "Rear view camera" are active modes. The main idea from SDL<->HMI point of view is that navigation/audio streaming mustn’t interfere with Rear Camera View mode. HMI is responsible for managing audio/video data during "Emergency event"/"RearCamera" modes.
 
 !!! MUST
-1. 	Send notification with appropriate parameter value when mode “Emergency event”/“Rear view camera” becomes active or inactive.
+1. 	Send notification with appropriate parameter value when mode "Emergency event"/"Rear view camera" becomes active or inactive.
 
 _Note:_
 When SDL receives `OnEventChanged(EMERGENCY_EVENT isActive:true)` notification about SafetyFeature activation from HMI, SDL moves all apps with AudioStreamingState AUDIBLE to NOT_AUDIBLE state and returns to previous state when gets  `OnEventChanged(EMERGENCY_EVENT isActive:false)`.
@@ -154,7 +154,7 @@ App activation during active embedded navigation
 |||
 
 |||
-Correlation between audioStreamingState of media app and embedded navigation in case “MixingAudioSupported” = true/false
+Correlation between audioStreamingState of media app and embedded navigation in case "MixingAudioSupported" = true/false
 ![OnEventChanged](./assets/Correlation_audioStreamingState_of_media_app_and_embedded_navigation.png)
 |||
 
