@@ -9,122 +9,109 @@ Sender
 Purpose
 : Notify SDL that an event becomes active
 
-SDL uses `OnEventChanged` notification for correct changing HMILevels and AudioStreamingState of applications due to active events.
+SDL uses `OnEventChanged` notification to appropriately manage the hmiLevel and audioStreamingState of each application during an active event.
 
-#### Phone call
+##### PHONE_CALL
 
 !!! MUST
+1. Send notification with appropriate parameter value when active call on HMI has been started/ended.
 
-1.	Send notification with appropriate parameter value when active call on HMI has been started/ended.
+2. Send [SDL.OnAppDeactivated](../../sdl/onappdeactivated) to the active app when the phone call is started.
 
-2.	Send SDL OnAppDeactivated `<appID>` after the phone call started.
-
-3.	Resume the applications to the previous-to-phone-call state on HMI (as SDL does not send BC.ActivateApp or BC.OnResumeAudioSource to HMI after the phone call is ended).
+3. Resume the applications to their original state prior to the phone call event in the HMI (as SDL does not send BC.ActivateApp or BC.OnResumeAudioSource to the HMI after the phone call is ended).
 !!!
 
 !!! NOTE
-When SDL receives `OnEventChanged(PHONE_CALL, isActive: true)` from HMI, it changes the HMILevel of all applications currently either in FULL or LIMITED to BACKGROUND, audioStreamingState: NOT_AUDIBLE.
-After getting OnEventChanged(PHONE_CALL, isActive: false) from HMI, SDL returns applications to the previous-to-phonecall HMILevel. SDL does not send BC.ActivateApp or BC.OnResumeAudioSource to HMI after the phone call is ended.
+When SDL receives `OnEventChanged(PHONE_CALL, isActive: true)` from HMI, it changes the hmiLevel of all applications currently either in FULL or LIMITED to BACKGROUND, audioStreamingState: NOT_AUDIBLE.
+After getting `OnEventChanged(PHONE_CALL, isActive: false)` from HMI, SDL returns applications to the same hmiLevel they had prior to the event. SDL does not send BC.ActivateApp or BC.OnResumeAudioSource to HMI after the phone call is ended.
 !!!
 
-**IMPORTANT NOTE**: SDL ignores all invalid notifications which come from HMI (invalid JSON, invalid data types/bounds etc.)
+##### EMERGENCY_EVENT
 
-#### Emergency event
-
-Safety Feature is HMI's specific mode when "Emergency event" or "Rear view camera" are active modes. The main idea from SDL<->HMI point of view is that navigation/audio streaming mustn't interfere with Rear Camera View mode. HMI is responsible for managing audio/video data during "Emergency event"/"RearCamera" modes.
+Emergency event is an HMI-specific event used when "Emergency event" or "Rear view camera" are active. The main idea from SDL<->HMI point of view is that navigation/audio streaming mustn't interfere with Rear Camera View mode. HMI is responsible for managing audio/video data while EMERGENCY_EVENT is active.
 
 !!! MUST
-1. Send notification with appropriate parameter value when mode "Emergency event"/"Rear view camera" becomes active or inactive.
-
-_Note:_
-When SDL receives `OnEventChanged(EMERGENCY_EVENT isActive:true)` notification about SafetyFeature activation from HMI, SDL moves all apps with AudioStreamingState AUDIBLE to NOT_AUDIBLE state and returns to previous state when gets  `OnEventChanged(EMERGENCY_EVENT isActive:false)`.
-The app is not allowed to stream audio and it will not be heard by the user (due to other audio and/or system events blocking it).
+1. Send a notification with the appropriate parameter value when EMERGENCY_EVENT becomes active or inactive.
 !!!
 
-#### Deactivate HMI
+!!! NOTE
+When SDL receives an `OnEventChanged(EMERGENCY_EVENT, isActive:true)` notification from HMI, SDL moves all apps with audioStreamingState AUDIBLE to NOT_AUDIBLE and returns them to previous state when it receives `OnEventChanged(EMERGENCY_EVENT, isActive:false)`.
+While the event is active, the app is not allowed to stream audio and it will not be heard by the user (due to other audio and/or system events blocking it).
+!!!
+
+##### DEACTIVATE_HMI
 
 !!! MUST
-1. Send notification with appropriate parameter value when all apps to be inactivated/restored.
-2. Send `OnEventChange (DEACTIVATE_HMI isDeactivated: false)` before activating an app.
-
-When SDL receives OnEventChange(DEACTIVATE_HMI isDeactivated: true) from HMI, it changes the HMILevel of all applications currently in FULL and-or LIMITED to BACKGROUND, audioStreamingState: NOT_AUDIBLE. After getting OnEventChange (DEACTIVATE_HMI isDeactivated: false) from HMI, SDL resumes the applications to the previous-to-event state on HMI.
+1. Send notification with appropriate parameter value when all apps should be deactivated/restored.
+2. Send `OnEventChanged(DEACTIVATE_HMI, isActive: false)` before activating an app.
 !!!
 
-**IMPORTANT NOTE**:  When applications are into BACKGROUND, NOT_AUDIBLE mode SDL **rejects** all app activation requests from HMI.
+!!! NOTE
+When SDL receives an `OnEventChanged(DEACTIVATE_HMI, isActive: true)` from the HMI, it changes the hmiLevel of all applications currently in FULL and-or LIMITED to BACKGROUND, audioStreamingState: NOT_AUDIBLE. After getting `OnEventChanged(DEACTIVATE_HMI, isActive: false)` from HMI, SDL resumes the applications to the same state they were prior to the event in the HMI.
+!!!
 
-#### Audio source and Embedded navi
+**IMPORTANT NOTE**:  When this event is active, SDL **rejects** all app activation requests from the HMI.
+
+##### AUDIO_SOURCE/EMBEDDED_NAVI
 
 !!! MUST
 1. Send notification to SDL with appropriate parameter value when embedded navigation or audio source is activated/deactivated.
-2. Send SDL.ActivateApp (<appID_of_such_app>) in case of app activation or OnAppDeactivated (<appID>) in case of app deactivation.
+2. Send `SDL.ActivateApp(appID)` in case of app activation or `BC.OnAppDeactivated(appID)` in case of app deactivation.
 3. Switch off embedded source before app activation, when the type of activating app and embedded source are equal (the same)
- i.e. Media app activation is the trigger for HMI to switch off embedded audio source;
- navigation app activation is the trigger for HMI to switch off embedded navigation.
-4. When system supports audio mixing and embedded navigation starts streaming
-    - Send SDL:TTS.Started to change media app currently in LIMITED and AUDIBLE due to active embedded navigation to LIMITED, ATTENUATED.
-    - Send SDL:TTS.Stopped right after embedded navigation stops streaming to change application's HMIStatus to the previous-to-event state.
+    - The HMI must deactivate the AUDIO_SOURCE event if a media app is activated.
+    - The HMI must deactivate the EMBEDDED_NAVI event if a navigation app is activated.
+4. When the system supports audio mixing and embedded navigation starts streaming
+    - Send TTS.Started to SDL to change media app currently in LIMITED and AUDIBLE to LIMITED, ATTENUATED due to active embedded navigation.
+    - Send TTS.Stopped to SDL right after embedded navigation stops streaming to change application's HMIStatus to the same state it had prior to the event.
 !!!
 
 !!! NOTE
 
-- When app is successfully registered and SDL receives OnEventChanged(AUDIO_SOURCE, isActive:true) or OnEventChanged(EMBEDDED_NAVI, isActive:true), SDL changes HMILevel and AudioStreamingState of this application. (see the table _HMILevel and audioStreamingState of apps when embedded audio source or navigation was activated_) 
+- When app is successfully registered and SDL receives `OnEventChanged(AUDIO_SOURCE, isActive:true)` or `OnEventChanged(EMBEDDED_NAVI, isActive:true)`, SDL changes hmiLevel and audioStreamingState of this application. (see the table _HMI Status of apps when AUDIO_SOURCE or EMBEDDED_NAVI event is activated_) 
 
-- When app is activated during active embedded navi or audio source SDL sets appropriate HMILevel and AudioStreamingState  (see the table _Apps activation during active embedded audio source or navigation_)
+- When app is activated during an active EMBEDDED_NAVI or AUDIO_SOURCE event, SDL sets the appropriate hmiLevel and audioStreamingState for the app (see the table _Activating apps during active AUDIO_SOURCE or EMBEDDED_NAVI event_)
 
-- If system supports audio mixing ("MixingAudioSupported" = true at .ini file) and navigation app in FULL or LIMITED and AUDIBLE and SDL receives OnEventChanged (AUDIO_SOURCE, isActive=true), SDL changes navigation app to (LIMITED, AUDIBLE)
-
-- If system supports audio mixing ("MixingAudioSupported" = true at .ini file) and navigation app is in LIMITED and AUDIBLE due to active embedded audio source and SDL receives SDL.ActivateApp (<appID_of_navigation_app>), SDL changes navigation app to (FULL, AUDIBLE).
-
-- If system supports audio mixing ("MixingAudioSupported" = true at .ini file) and embedded navigation starts streaming, SDL changes media app from LIMITED and AUDIBLE to LIMITED, ATTENUATED, after embedded navigation stops streaming SDL changes media app to LIMITED, AUDIBLE.
-
-- When system supports audio mixing and three apps different types are running and user activates embedded audio source or embedded navigation, SDL changes HMILevel of applications.
-
+- Given that a system supports audio mixing ("MixingAudioSupported" = true at .ini file), then:
+   - If there is a navigation app in (FULL/LIMITED, AUDIBLE) and SDL receives `OnEventChanged(AUDIO_SOURCE, isActive=true)`, then SDL will change the navigation app's state to (LIMITED, AUDIBLE)
+   - If there is a navigation app that is in (LIMITED, AUDIBLE) due to an active AUDIO_SOURCE event, and SDL receives `SDL.ActivateApp(appID_of_navigation_app)`, then SDL will change the navigation app's state to (FULL, AUDIBLE).
+   - If SDL receives `OnEventChanged(EMBEDDED_NAVI, isActive=true)`, SDL changes any media app in (LIMITED, AUDIBLE) to (LIMITED, ATTENUATED). After the EMBEDDED_NAVI event ends, SDL changes the media app's state to (LIMITED, AUDIBLE).
 !!!
 
-#### HMILevel and audioStreamingState of apps when embedded audio source or navigation was activated
-|appHMIType|HMILevel before embedded source activation|embedded source activation|HMILevel during active embedded source|
-|:---|:---|:--------|:---------|
-|media|FULL or LIMITED and AUDIBLE|embedded audio source|BACKGROUND and NOT_AUDIBLE|
-|navigation|FULL or LIMITED and AUDIBLE|embedded audio source|LIMITED and AUDIBLE
-|non-media|FULL or LIMITED and AUDIBLE|embedded audio source|BACKGROUND and NOT_AUDIBLE|
-|media|FULL or LIMITED and AUDIBLE|embedded navigation|LIMITED and AUDIBLE|
-|navigation|FULL or LIMITED and AUDIBLE|embedded navigation|BACKGROUND and NOT_AUDIBLE|
-|non-media|FULL or LIMITED and AUDIBLE|embedded navigation|BACKGROUND and NOT_AUDIBLE|
+#### HMI Status of apps when AUDIO_SOURCE or EMBEDDED_NAVI event is activated
+|appHMIType|Event|hmiLevel before|audioStreamingState before|hmiLevel after|audioStreamingState after|
+|:---------|:----|:--------------|:-------------------------|:-------------|:------------------------|
+|Media|AUDIO_SOURCE|FULL/LIMITED|AUDIBLE|BACKGROUND|NOT_AUDIBLE|
+|Navigation|AUDIO_SOURCE|FULL/LIMITED|AUDIBLE|AUDIO_SOURCE|LIMITED|AUDIBLE|
+|Non-media|AUDIO_SOURCE|FULL/LIMITED|AUDIBLE|AUDIO_SOURCE|BACKGROUND|NOT_AUDIBLE|
+|Media|EMBEDDED_NAVI|FULL/LIMITED|AUDIBLE|LIMITED|AUDIBLE|
+|Navigation|EMBEDDED_NAVI|FULL/LIMITED|AUDIBLE|EMBEDDED_NAVI|BACKGROUND|NOT_AUDIBLE|
+|Non-media|EMBEDDED_NAVI|FULL/LIMITED|AUDIBLE|EMBEDDED_NAVI|BACKGROUND|NOT_AUDIBLE|
 
-#### Apps activation during active embedded audio source or navigation
-|appHMIType|active embedded source|App activation|
-|:---|:---|:--------|
-|media|embedded audio source|FULL and AUDIBLE (embedded audio source should be switched off)|
-|navigation|embedded audio source|FULL and AUDIBLE (embedded audio source still active)|
-|non-media|embedded audio source|FULL and NOT_AUDIBLE (embedded audio source still active)|
-|media|embedded navigation|FULL and AUDIBLE (embedded navigation is still active)|
-|navigation|embedded navigation|FULL and AUDIBLE (embedded navigation should be switched off)|
-|non-media|embedded navigation|FULL and NOT_AUDIBLE (embedded navigation still active)|
+#### Activating apps during active AUDIO_SOURCE or EMBEDDED_NAVI event
+|appHMIType|Event|New hmiLevel|New audioStreamingState|Keep event active|
+|:---------|:----|:-------|:------------------|:-------------------|
+|Media|AUDIO_SOURCE|FULL|AUDIBLE|false|
+|Navigation|AUDIO_SOURCE|FULL|AUDIBLE|true|
+|Non-media|AUDIO_SOURCE|FULL|NOT_AUDIBLE|true|
+|Media|EMBEDDED_NAVI|FULL|AUDIBLE|true|
+|Navigation|EMBEDDED_NAVI|FULL|AUDIBLE|false|
+|Non-media|EMBEDDED_NAVI|FULL|NOT_AUDIBLE|true|
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|Description
+|Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:--------|:---------|
-|eventName|Common.EventTypes|true|-|Specifies the types of active events|
-|isActive|Boolean|true|-|Must be 'true' - when the event is started on HMI. Must be 'false' when the event is ended on HMI|
-
-#### CommonEventType
-|Element name|Type|
-|:---|:---------|
-|PHONE_CALL|Phone call is active|
-|EMERGENCY_EVENT|Active emergency event, active parking event|
-|DEACTIVATE_HMI|GAL/DIO is active|
-|AUDIO_SOURCE|Navigated to audio(radio, etc)|
-|EMBEDDED_NAVI|Navigated to navigation screen|
+|eventName|[Common.EventTypes](../../common/enums/#eventtypes)|true|-|Specifies the types of active events|
+|isActive|Boolean|true|-|Must be 'true' when the event is started on HMI. Must be 'false' when the event is ended on HMI|
 
 ### Sequence Diagrams
 |||
-PHONE_CALL
+PHONE_CALL, media app is active
 ![OnEventChanged](./assets/PHONE_CALL1.png)
 |||
 
 |||
-PHONE_CALL
+PHONE_CALL, non-media app is active
 ![OnEventChanged](./assets/PHONE_CALL2.png)
 |||
 
@@ -144,7 +131,7 @@ EMBEDDED_NAVI or AUDIO_SOURCE
 |||
 
 |||
-App activation during active embedded audio source
+App activation during active audio source
 ![OnEventChanged](./assets/App_activation_during_active_audio_source.png)
 |||
 

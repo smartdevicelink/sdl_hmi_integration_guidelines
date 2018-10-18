@@ -26,6 +26,16 @@
 |USB|1||
 |WIFI|2||
 
+### EventTypes
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|PHONE_CALL|0|Phone call is active|
+|EMERGENCY_EVENT|1|Active emergency event, active parking event|
+|DEACTIVATE_HMI|2|GAL/DIO is active|
+|AUDIO_SOURCE|3|Navigated to audio(radio, etc)|
+|EMBEDDED_NAVI|4|Navigated to navigation screen|
+
 ### ButtonPressMode
 
 |Name|Value|Description|
