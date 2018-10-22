@@ -427,9 +427,9 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|value|String|true|maxlength: 65535||
-|imageType|Common.ImageType|true|||
-|isTemplate|Boolean|false|||
+|value|String|true|maxlength: 65535|The path to the dynamic image stored on HU or the static binary image itself.<br>Note: There is no guarantee that the image reference is valid at the time it is received.|
+|imageType|Common.ImageType|true||Describes whether it is a static or dynamic image.|
+|isTemplate|Boolean|false||Optional value to specify whether it's a template image. A template image can be (re)colored by the HMI as needed by using an image pattern.|
 
 ### MyKey
 
