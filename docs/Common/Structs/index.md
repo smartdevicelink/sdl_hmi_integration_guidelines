@@ -212,6 +212,8 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |status|Common.ComponentVolumeStatus|true|||
+|tpms|[Common.TPMS](../enums/#tpms)|false||The status of TPMS according to the particular tire.|
+|pressure|Float|false|minvalue: 0<br>maxvalue: 2000|The pressure value of the particular tire in kilopascals.|
 
 ### SoftButtonCapabilities
 

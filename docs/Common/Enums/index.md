@@ -865,6 +865,19 @@
 |EIGHTH|13||
 |FAULT|14||
 
+### TPMS
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|UNKNOWN|0|If set the status of the tire is not known.|
+|SYSTEM_FAULT|1|TPMS does not function.|
+|SENSOR_FAULT|2|The sensor of the tire does not function.|
+|LOW|3|TPMS is reporting a low tire pressure for the tire.|
+|SYSTEM_ACTIVE|4|TPMS is active and the tire pressure is monitored.|
+|TRAIN|5|TPMS is reporting that the tire must be trained.|
+|TRAINING_COMPLETE|6|TPMS reports the training for the tire is completed.|
+|NOT_TRAINED|7|TPMS reports the tire is not trained.|
+
 ### VehicleDataStatus
 
 |Name|Value|Description|
