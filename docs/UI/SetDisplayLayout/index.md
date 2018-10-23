@@ -17,6 +17,8 @@ Purpose
 |:---|:---|:--------|:---------|
 |displayLayout|String|true|maxlength: 500|
 |appID|Integer|true||
+|dayColorScheme|[Common.TemplateColorScheme](../../common/structs/#templatecolorscheme)|false||
+|nightColorScheme|[Common.TemplateColorScheme](../../common/structs/#templatecolorscheme)|false||
 
 ### Response
 

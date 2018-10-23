@@ -240,6 +240,8 @@
 |greyOut|Boolean|false|||
 |requestType|Common.RequestType|false|array: true<br>minsize: 0<br>maxsize: 100||
 |requestSubType|String|false|array:true <br> minsize:0 <br>maxsize:100 <br> maxlength:100|The list of SystemRequest's requestSubTypes allowed by policies for the named application.<br>If the app sends a requestSubType which is not specified in this list, then that request should be rejected.<br>An empty array signifies that any value of requestSubType is allowed for this app. <br> If this parameter is omitted, then a request with any value of requestSubType is now allowed for this app|
+|dayColorScheme|Common.TemplateColorScheme|false|||
+|nightColorScheme|Common.TemplateColorScheme|false|||
 
 ### VehicleType
 
@@ -400,6 +402,22 @@
 |driverKneeAirbagDeployed|Common.VehicleDataEventStatus||||
 |passengerSideAirbagDeployed|Common.VehicleDataEventStatus||||
 |passengerKneeAirbagDeployed|Common.VehicleDataEventStatus||||
+
+### RGBColor
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|red|Integer|true|minvalue: 0<br>maxvalue: 255||
+|green|Integer|true|minvalue: 0<br>maxvalue: 255||
+|blue|Integer|true|minvalue: 0<br>maxvalue: 255||
+
+### TemplateColorScheme
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|primaryColor|Common.RGBColor|true|||
+|secondaryColor|Common.RGBColor|true|||
+|backgroundColor|Common.RGBColor|true|||
 
 ### DisplayCapabilities
 
