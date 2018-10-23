@@ -40,8 +40,10 @@ Purpose
 |emergencyEvent|[Common.EmergencyEvent](../../common/structs/#emergencyevent)|false||
 |clusterModeStatus|[Common.ClusterModeStatus](../../common/structs/#clustermodestatus)|false||
 |myKey|[Common.MyKey](../../common/structs/#mykey)|false||
+|turnSignal|[Common.TurnSignal](../../common/enums/#turnsignal)|false||
 |fuelRange|[Common.FuelRange](../../common/structs/#fuelrange)|false|minsize=0<br>maxsize=100<br>array=true|
 |engineOilLife|Float|false|minvalue=0<br>maxvalue=100|
+|electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
 
 ### Sequence Diagrams
 |||
@@ -58,9 +60,9 @@ OnVehicleData
   {
     "speed" : 60,
     "externalTemperature" : -7,
-    "prndl" : THIRD,
+    "prndl" : "THIRD",
     "odometer" : 1066,
-    "wiperStatus" : MAN_INT_ON,
+    "wiperStatus" : "MAN_INT_ON",
     "accPedalPosition" : 70
   }
 }

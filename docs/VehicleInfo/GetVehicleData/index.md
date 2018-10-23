@@ -40,9 +40,11 @@ Purpose
 |emergencyEvent|Boolean|false||
 |clusterModeStatus|Boolean|false||
 |myKey|Boolean|false||
-|appID|Integer|true||  
+|appID|Integer|true||
+|turnSignal|Boolean|false||
 |fuelRange|Boolean|false||
 |engineOilLife|Boolean|false||
+|electronicParkBrakeStatus|Boolean|false||
 
 ### Response
 
@@ -75,8 +77,10 @@ Purpose
 |emergencyEvent|[Common.EmergencyEvent](../../common/structs/#emergencyevent)|false||
 |clusterModeStatus|[Common.ClusterModeStatus](../../common/structs/#clustermodestatus)|false||
 |myKey|[Common.MyKey](../../common/structs/#mykey)|false||  
+|turnSignal|[Common.TurnSignal](../../common/enums/#turnsignal)|false||
 |fuelRange|[Common.FuelRange](../../common/structs/#fuelrange)|false|minsize=0<br>maxsize=100<br>array=true|
 |engineOilLife|Float|false|minvalue=0<br>maxvalue=100|
+|electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
 
 ### Sequence Diagrams
 |||
@@ -105,8 +109,7 @@ GetVehicleData
     "deviceStatus" : true,
     "wiperStatus" : true,
     "headLampStatus" : true,
-    "accPedalPosition" : true,
-
+    "accPedalPosition" : true
   }
 }
 ```
@@ -119,7 +122,7 @@ GetVehicleData
   "result" :
   {
     "gps" :
-    [
+    {
       "longitudeDegrees" : 46.4774700,
       "latitudeDegrees" : 30.7326200,
       "utcYear" : 2013,
@@ -128,66 +131,69 @@ GetVehicleData
       "utcHours" : 23,
       "utcMinutes" : 50,
       "utcSeconds" : 5,
-      "compassDirection" : NORTH,
+      "compassDirection" : "NORTH",
       "pdop" : 0.15,
       "hdop" : 1.01,
       "vdop" : 1.56,
       "actual" : true,
       "satellites" : 8,
-      "dimension" : 3D,
+      "dimension" : "3D",
       "altitude" : 47,
       "heading" : 0,
       "speed" : 90
-    ],
-
+    },
     "speed" : 90,
-    "fuelLevel_State" : LOW,
+    "fuelLevel_State" : "LOW",
     "externalTemperature" : -5,
-    "prndl" : FOURTH,
+    "prndl" : "FOURTH",
     "tirePressure" :
-    [
-        "pressureTelltale" : ON,
-        "leftFront" : NORMAL,
-        "rightFront" : NORMAL,
-        "leftRear" : LOW,
-        "rightRear" : UNKNOWN
-    ],
-
+    {
+        "pressureTelltale" : "ON",
+        "leftFront" : {
+          "status" : "NORMAL"
+        },
+        "rightFront" : {
+          "status" : "NORMAL"
+        },
+        "leftRear" : {
+          "status" : "LOW"
+        },
+        "rightRear" : {
+          "status" : "UNKNOWN"
+        }
+    },
     "odometer" : 1065,
     "beltStatus" :
-    [
-        "driverBeltDeployed" : YES,
-        "passengerBeltDeployed" : YES,
-    ],
-
+    {
+        "driverBeltDeployed" : "YES",
+        "passengerBeltDeployed" : "YES",
+    },
     "bodyInformation" :
-    [
+    {
         "parkBrakeActive" : false,
-        "ignitionStableStatus" : IGNITION_SWITCH_STABLE,
-        "ignitionStatus" : RUN
-    ],
+        "ignitionStableStatus" : "IGNITION_SWITCH_STABLE",
+        "ignitionStatus" : "RUN"
+    },
     "deviceStatus" :
-    [
+    {
         "voiceRecOn" : false,
         "btIconOn" : false,
         "callActive" : false,
         "phoneRoaming" : false,
         "textMsgAvailable" : true,
-        "battLevelStatus" : THREE_LEVEL_BARS,
+        "battLevelStatus" : "THREE_LEVEL_BARS",
         "stereoAudioOutputMuted" : true,
         "monoAudioOutputMuted" : false,
-        "signalLevelStatus" : NOT_PROVIDED,
-        "primaryAudioSource" : MOBILE_APP,
+        "signalLevelStatus" : "NOT_PROVIDED",
+        "primaryAudioSource" : "MOBILE_APP",
         "eCallEventActive" : false
-    ],
-
-    "wiperStatus" : OFF,
+    },
+    "wiperStatus" : "OFF",
     "headLampStatus" :
-    [
+    {
         "lowBeamsOn" : true,
         "highBeamsOn" : false
-    ],
-
+    },
     "accPedalPosition" : 80,
 
     "code" : 0,
