@@ -63,13 +63,13 @@
               "name": "OnAwakeSDL"
             },
             {
-              "name": "OnEmergencyEvent"
-            },
-            {
               "name": "OnExitAllApplications"
             },
             {
               "name": "OnExitApplication"
+            },
+            {
+              "name": "OnEventChanged"
             },
             {
               "name": "OnFileRemoved"
@@ -79,9 +79,6 @@
             },
             {
               "name": "OnIgnitionCycleOver"
-            },
-            {
-              "name": "OnPhoneCall"
             },
             {
               "name": "OnPutFile"
