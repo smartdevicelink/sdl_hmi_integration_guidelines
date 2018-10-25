@@ -407,6 +407,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |displayType|Common.DisplayType|true|||
+|displayName|String|true||The name of the display the app is connected to.|
 |textFields|Common.TextField|true|array: true<br>minsize: 0<br>maxsize: 100||
 |imageFields|Common.ImageField|false|array: true<br>minsize: 1<br>maxsize: 100||
 |mediaClockFormats|Common.MediaClockFormat|true|array: true<br>minsize: 0<br>maxsize: 100||
