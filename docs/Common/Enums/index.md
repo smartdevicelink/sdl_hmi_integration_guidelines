@@ -823,9 +823,11 @@
 |VEHICLEDATA_BATTVOLTAGE|22||
 |VEHICLEDATA_ENGINETORQUE|23||
 |VEHICLEDATA_ACCPEDAL|24||
-|VEHICLEDATA_STEERINGWHEEL|25||  
-|VEHICLEDATA_FUELRANGE|26||  
-|VEHICLEDATA_ENGINEOILLIFE|27||
+|VEHICLEDATA_STEERINGWHEEL|25||
+|VEHICLEDATA_TURNSIGNAL|26||
+|VEHICLEDATA_FUELRANGE|27||
+|VEHICLEDATA_ENGINEOILLIFE|28||
+|VEHICLEDATA_ELECTRONICPARKBRAKESTATUS|29||
 
 ### VideoStreamingProtocol
 
@@ -937,12 +939,14 @@
 |NONE|3||
 
 ### EntityStatus
+
 |Name|Value|Description|
 |:---|:----|:----------|
 |ON|0||
 |OFF|1||
 
 ### FuelType  
+
 |Name|Value|Description|
 |:---|:----|:----------|  
 |GASOLINE|0||  
@@ -951,6 +955,25 @@
 |LPG|3|For vehicles using liquefied petroleum gas|
 |HYDROGEN|4|For FCEV (fuel cell electric vehicle)|  
 |BATTERY|5|For BEV (Battery Electric Vehicle), PHEV (Plug-in Hybrid Electric Vehicle), solar vehicles and other vehicles which run on a battery|
+
+### TurnSignal
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|OFF|0||
+|LEFT|1||
+|RIGHT|2||
+|BOTH|3||
+
+### ElectronicParkBrakeStatus
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|CLOSED|0|Park brake actuators have been fully applied.|
+|TRANSITION|1|Park brake actuators are transitioning to either Apply/Closed or Release/Open state.|
+|OPEN|2|Park brake actuators are released.|
+|DRIVE_ACTIVE|3|When driver pulls the Electronic Park Brake switch while driving "at speed".|
+|FAULT|4|When system has a fault or is under maintenance.|
 
 ### LightName
 
