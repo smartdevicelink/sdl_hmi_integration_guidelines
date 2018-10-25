@@ -230,6 +230,7 @@
 |ngnMediaScreenAppName|String|false|maxlength: 100||
 |icon|String|false|||
 |deviceInfo|Common.DeviceInfo|true|||
+|secondaryDeviceInfo|Common.DeviceInfo|true||The ID, serial number, transport type that are acquired through Secondary Transport.|
 |policyAppID|String|true|minlength: 1<br>maxlength: 50||
 |ttsName|Common.TTSChunk|false|array: true<br>minsize: 1<br>maxsize: 100||
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40||
