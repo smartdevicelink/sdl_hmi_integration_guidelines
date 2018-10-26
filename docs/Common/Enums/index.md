@@ -799,9 +799,10 @@
 |cmdIcon|6||
 |appIcon|7||
 |graphic|8||
-|showConstantTBTIcon|9||
-|showConstantTBTNextTurnIcon|10||
-|locationImage|11||
+|secondaryGraphic|9||
+|showConstantTBTIcon|10||
+|showConstantTBTNextTurnIcon|11||
+|locationImage|12||
 
 ### VehicleDataType
 
