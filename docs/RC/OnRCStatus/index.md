@@ -9,16 +9,14 @@ Sender
 Purpose
 : Inform HMI and mobile application about changes in RC module allocation.
 
-!!! must
-
 
 ### Notification
 
-SDL must send OnRCStatus notification when
- * RC application registers with SDL
- * a module is allocated to an application 
- * a module is de-allocated from an application (the module is freed when application exits, disconnects, goes to HMI level NONE)
- * when an application no longer has the right to control the module (for example, a policy update can revoke the application's access to a module)
+SDL must send OnRCStatus notification when:
+    * RC application registers with SDL
+    * A module is allocated to an application 
+    * A module is de-allocated from an application (the module is freed when application exits, disconnects, goes to HMI level NONE)
+    * An application no longer has the right to control the module (for example, a policy update can revoke the application's access to a module)
 
 #### Parameters
 

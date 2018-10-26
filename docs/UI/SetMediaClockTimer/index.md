@@ -14,10 +14,10 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
 ### Request   
 
 !!! MUST
-1. perform the update type indicated by the `updateMode` parameter:   
+1. Perform the update type indicated by the `updateMode` parameter:   
     * If the application is not active, the HMI must still store the values to be calculated for later display on the HMI.   
     * If the application is active, the updates must begin immediately.   
-2. exhibit the following behavior based on the `updateMode` parameter:
+2. Exhibit the following behavior based on the `updateMode` parameter:
     * COUNTUP/COUNTDOWN modes:   
         * Start counting up or down from the requested `startTime` value with a step of 1 second;
         * Continue counting up or down until:
@@ -32,9 +32,9 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
 !!!
     
 !!! NOTE
-1) SDL will not send this request if the `mediaClock` field is not indicated as supported in [UI.GetCapabilities](../getcapabilities).   
-2) HMI must remember the mode and the value (continuing to update it in case of COUNTUP / COUNTDOWN) of the media clock timer associated with appID and display the accurate values whenever the appID application is activated after having been deactivated.   
-3) Initially, the appID together with other application-related information is provided by SDL within one of _UpdateAppList_ and _OnAppRegistered_ RPCs.   
+1. SDL will not send this request if the `mediaClock` field is not indicated as supported in [UI.GetCapabilities](../getcapabilities).   
+2. HMI must remember the mode and the value (continuing to update it in case of COUNTUP / COUNTDOWN) of the media clock timer associated with appID and display the accurate values whenever the appID application is activated after having been deactivated.   
+3. Initially, the appID together with other application-related information is provided by SDL within one of _UpdateAppList_ and _OnAppRegistered_ RPCs.   
 !!!
 
 
