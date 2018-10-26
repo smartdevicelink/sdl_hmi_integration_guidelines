@@ -28,8 +28,7 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
         * If `startTime` or `endTime` parameters are provided, the values must be updated on the HMI.   
     * CLEAR mode:    
         * Clear `startTime` to 00:00:00 in the case that the `startTime` parameter is not provided in the request, otherwise, `startTime` must be updated with a new value. It is up to HMI to determine the way the media clock timer is cleared: either to remove it from display or to set it to zero.   
-3. Respond with the [result code] correspondingly to the results of this RPC execution.
-[result code]: #response
+3. Respond with the [result code](../setmediaclocktimer/#response) correspondingly to the results of this RPC execution.
 !!!
     
 !!! NOTE
