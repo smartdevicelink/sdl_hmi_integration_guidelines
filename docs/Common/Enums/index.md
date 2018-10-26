@@ -521,12 +521,14 @@
 |MFD5|8||
 |GEN3_8_INCH|9||
 
-### ApplicationToNONEReason
+### ApplicationExitReason
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|DRIVER_DISTRACTION_VIOLATION|0||
-|USER_EXIT|1||
+|DRIVER_DISTRACTION_VIOLATION|0|By getting this value, SDL puts the named app to NONE HMILevel|
+|USER_EXIT|1|By getting this value, SDL puts the named app to NONE HMILevel|
+|UNAUTHORIZED_TRANSPORT_REGISTRATION|2|By getting this value, SDL unregisters the named application|
+|UNSUPPORTED_HMI_RESOURCE|3|By getting this value, SDL unregisters the named application|
 
 ### IgnitionStatus
 
