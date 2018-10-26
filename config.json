@@ -99,9 +99,6 @@
               "name": "OnUpdateDeviceList"
             },
             {
-              "name": "PlayTone"
-            },
-            {
               "name": "PolicyUpdate"
             },
             {

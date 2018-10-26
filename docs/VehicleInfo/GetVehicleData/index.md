@@ -40,7 +40,6 @@ Purpose
 |emergencyEvent|Boolean|false||
 |clusterModeStatus|Boolean|false||
 |myKey|Boolean|false||
-|appID|Integer|true||
 |turnSignal|Boolean|false||
 |fuelRange|Boolean|false||
 |engineOilLife|Boolean|false||
@@ -195,7 +194,6 @@ GetVehicleData
         "highBeamsOn" : false
     },
     "accPedalPosition" : 80,
-
     "code" : 0,
     "method" : "VehicleInfo.GetVehicleData"
   }
