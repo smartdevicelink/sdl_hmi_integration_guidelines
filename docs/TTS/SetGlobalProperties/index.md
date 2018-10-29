@@ -9,7 +9,11 @@ Sender
 Purpose
 : Set the properties for the TTS component.
 
-### Request
+### Description
+SDL requests to set the values for the prompts to be spoken by TTS during the User's interaction with the application over head unit.
+
+### Request  
+On receiving `AddCommand` with `CommandType = Command` before a custom `helpPrompt` is set by the application, SDL must send updated values of `helpPrompt` via TTS.SetGlobalProperties request to HMI.
 
 #### Parameters
 
@@ -31,6 +35,11 @@ SetGlobalProperties
 ![SetGlobalProperties](./assets/SetGlobalProperties.png)
 |||
 
+|||
+SetGlobalProperties request with VRHelp and HelpPrompt params
+![SetGlobalProperties](./assets/SetGlobalProperties_VRHelp_and_HelpPrompt.png)
+|||
+
 ### Example Request
 
 ```json
@@ -42,15 +51,30 @@ SetGlobalProperties
   {
     "helpPrompt" :
     [
-      "text" : "Yes",
-      "text" : "No",
-      "text" : "Skip"
+      {
+        "text" : "Yes", 
+        "type" : "TEXT"
+      },
+      {
+        "text" : "No", 
+        "type" : "TEXT"
+      },
+      {
+        "text" : "Skip", 
+        "type" : "TEXT"
+      }
     ],
 
     "timeoutPrompt" :
     [
-      "text" : "Please make a choice",
-      "text" : "The time is about to expire"
+      {
+        "text" : "Please make a choice", 
+        "type" : "TEXT"
+      },
+      {
+        "text" : "The time is about to expire", 
+        "type" : "TEXT"
+      }
     ],
     "appID" : 65542
   }

@@ -39,6 +39,10 @@ Purpose
 |emergencyEvent|Boolean|false||
 |clusterModeStatus|Boolean|false||
 |myKey|Boolean|false||
+|turnSignal|Boolean|false||
+|fuelRange|Boolean|false||
+|engineOilLife|Boolean|false||
+|electronicParkBrakeStatus|Boolean|false||
 
 ### Response
 
@@ -70,6 +74,10 @@ Purpose
 |emergencyEvent|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |clusterModes|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |myKey|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|turnSignal|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|fuelRange|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|engineOilLife|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|electronicParkBrakeStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
 |||
@@ -102,7 +110,7 @@ UnsubscribeVehicleData unexpected disconnect
     "deviceStatus" : true,
     "wiperStatus" : true,
     "headLampStatus" : true,
-    "accPedalPosition" : true,
+    "accPedalPosition" : true
   }
 }
 ```
@@ -182,7 +190,7 @@ UnsubscribeVehicleData unexpected disconnect
 
     "headLampStatus" :
     {
-      "dataType" : "HEADLAMPSTATUS",
+      "dataType" : "VEHICLEDATA_HEADLAMPSTATUS",
       "resultCode" : "SUCCESS"
     },
 

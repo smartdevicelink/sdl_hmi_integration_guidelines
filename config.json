@@ -27,9 +27,6 @@
               "name": "MixingAudioSupported"
             },
             {
-              "name": "AllowDeviceToConnect"
-            },
-            {
               "name": "SystemRequest"
             },
             {
@@ -63,13 +60,13 @@
               "name": "OnAwakeSDL"
             },
             {
-              "name": "OnEmergencyEvent"
-            },
-            {
               "name": "OnExitAllApplications"
             },
             {
               "name": "OnExitApplication"
+            },
+            {
+              "name": "OnEventChanged"
             },
             {
               "name": "OnFileRemoved"
@@ -79,9 +76,6 @@
             },
             {
               "name": "OnIgnitionCycleOver"
-            },
-            {
-              "name": "OnPhoneCall"
             },
             {
               "name": "OnPutFile"
@@ -109,6 +103,12 @@
             },
             {
               "name": "UpdateAppList"
+            },
+            {
+              "name": "OnSystemTimeReady"
+            },
+            {
+              "name": "GetSystemTime"
             }
           ]
         },
@@ -464,6 +464,9 @@
             },
             {
               "name": "SetInteriorVehicleData"
+            },
+            {
+              "name": "OnRCStatus"
             }
           ]
         },
@@ -475,6 +478,14 @@
             },
             {
               "name": "Structs"
+            }
+          ]
+        },
+        {
+          "name": "UnixSignals",
+          "navigation": [
+            {
+              "name": "LowVoltage"
             }
           ]
         }

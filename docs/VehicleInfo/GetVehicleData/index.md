@@ -40,6 +40,10 @@ Purpose
 |emergencyEvent|Boolean|false||
 |clusterModeStatus|Boolean|false||
 |myKey|Boolean|false||
+|turnSignal|Boolean|false||
+|fuelRange|Boolean|false||
+|engineOilLife|Boolean|false||
+|electronicParkBrakeStatus|Boolean|false||
 
 ### Response
 
@@ -71,7 +75,11 @@ Purpose
 |airbagStatus|[Common.AirbagStatus](../../common/structs/#airbagstatus)|false||
 |emergencyEvent|[Common.EmergencyEvent](../../common/structs/#emergencyevent)|false||
 |clusterModeStatus|[Common.ClusterModeStatus](../../common/structs/#clustermodestatus)|false||
-|myKey|[Common.MyKey](../../common/structs/#mykey)|false||
+|myKey|[Common.MyKey](../../common/structs/#mykey)|false||  
+|turnSignal|[Common.TurnSignal](../../common/enums/#turnsignal)|false||
+|fuelRange|[Common.FuelRange](../../common/structs/#fuelrange)|false|minsize=0<br>maxsize=100<br>array=true|
+|engineOilLife|Float|false|minvalue=0<br>maxvalue=100|
+|electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
 
 ### Sequence Diagrams
 |||
@@ -100,7 +108,7 @@ GetVehicleData
     "deviceStatus" : true,
     "wiperStatus" : true,
     "headLampStatus" : true,
-    "accPedalPosition" : true,
+    "accPedalPosition" : true
   }
 }
 ```
@@ -133,7 +141,6 @@ GetVehicleData
       "heading" : 0,
       "speed" : 90
     },
-
     "speed" : 90,
     "fuelLevel_State" : "LOW",
     "externalTemperature" : -5,
@@ -141,19 +148,25 @@ GetVehicleData
     "tirePressure" :
     {
         "pressureTelltale" : "ON",
-        "leftFront" : "NORMAL",
-        "rightFront" : "NORMAL",
-        "leftRear" : "LOW",
-        "rightRear" : "UNKNOWN"
+        "leftFront" : {
+          "status" : "NORMAL"
+        },
+        "rightFront" : {
+          "status" : "NORMAL"
+        },
+        "leftRear" : {
+          "status" : "LOW"
+        },
+        "rightRear" : {
+          "status" : "UNKNOWN"
+        }
     },
-
     "odometer" : 1065,
     "beltStatus" :
     {
         "driverBeltDeployed" : "YES",
         "passengerBeltDeployed" : "YES",
     },
-
     "bodyInformation" :
     {
         "parkBrakeActive" : false,
@@ -174,16 +187,13 @@ GetVehicleData
         "primaryAudioSource" : "MOBILE_APP",
         "eCallEventActive" : false
     },
-
     "wiperStatus" : "OFF",
     "headLampStatus" :
     {
         "lowBeamsOn" : true,
         "highBeamsOn" : false
     },
-
     "accPedalPosition" : 80,
-
     "code" : 0,
     "method" : "VehicleInfo.GetVehicleData"
   }

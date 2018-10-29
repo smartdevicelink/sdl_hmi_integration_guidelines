@@ -26,6 +26,16 @@
 |USB|1||
 |WIFI|2||
 
+### EventTypes
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|PHONE_CALL|0|Phone call is active|
+|EMERGENCY_EVENT|1|Active emergency event, active parking event|
+|DEACTIVATE_HMI|2|GAL/DIO is active|
+|AUDIO_SOURCE|3|Navigated to audio(radio, etc)|
+|EMBEDDED_NAVI|4|Navigated to navigation screen|
+
 ### ButtonPressMode
 
 |Name|Value|Description|
@@ -61,11 +71,12 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|TEXT|0||
-|SAPI_PHONEMES|1||
-|LHPLUS_PHONEMES|2||
+|TEXT|0|Uses plain text for performing TTS|
+|SAPI_PHONEMES|1|Uses the Speech API Phoneme representation of a phrase for performing TTS|
+|LHPLUS_PHONEMES|2|Uses the LH+ Phoneme representation of a phrase for performing TTS|
 |PRE_RECORDED|3||
 |SILENCE|4||
+|FILE|5|Uses an audio file sent to SDL via a PutFile RPC to perform TTS or play generic sounds in conjunction with TTS|
 
 ### TextFieldName
 
@@ -229,17 +240,6 @@
 |CID1SET|2||
 |CID2SET|3||
 
-### DeactivateReason
-
-|Name|Value|Description|
-|:---|:----|:----------|
-|AUDIO|0||
-|PHONECALL|1||
-|NAVIGATIONMAP|2||
-|PHONEMENU|3||
-|SYNCSETTINGS|4||
-|GENERAL|5||
-
 ### SamplingRate
 
 |Name|Value|Description|
@@ -340,40 +340,41 @@
 |Name|Value|Description|
 |:---|:----|:----------|
 |OK|0||
-|SEEKLEFT|1||
-|SEEKRIGHT|2||
-|TUNEUP|3||
-|TUNEDOWN|4||
-|PRESET_0|5||
-|PRESET_1|6||
-|PRESET_2|7||
-|PRESET_3|8||
-|PRESET_4|9||
-|PRESET_5|10||
-|PRESET_6|11||
-|PRESET_7|12||
-|PRESET_8|13||
-|PRESET_9|14||
-|CUSTOM_BUTTON|15||
-|SEARCH|16||
-|AC_MAX|17|CLIMATE Module|
-|AC|18|CLIMATE Module|
-|RECIRCULATE|19|CLIMATE Module|
-|FAN_UP|20|CLIMATE Module|
-|FAN_DOWN|21|CLIMATE Module|
-|TEMP_UP|22|CLIMATE Module|
-|TEMP_DOWN|23|CLIMATE Module|
-|DEFROST_MAX|24|CLIMATE Module|
-|DEFROST|25|CLIMATE Module|
-|DEFROST_REAR|26|CLIMATE Module|
-|UPPER_VENT|27|CLIMATE Module|
-|LOWER_VENT|28|CLIMATE Module|
-|VOLUME_UP|29|RADIO Module|
-|VOLUME_DOWN|30|RADIO Module|
-|EJECT|31|RADIO Module|
-|SOURCE|32|RADIO Module|
-|SHUFFLE|33|RADIO Module|
-|REPEAT|34|RADIO Module|
+|PLAY_PAUSE|1||
+|SEEKLEFT|2||
+|SEEKRIGHT|3||
+|TUNEUP|4||
+|TUNEDOWN|5||
+|PRESET_0|6||
+|PRESET_1|7||
+|PRESET_2|8||
+|PRESET_3|9||
+|PRESET_4|10||
+|PRESET_5|11||
+|PRESET_6|12||
+|PRESET_7|13||
+|PRESET_8|14||
+|PRESET_9|15||
+|CUSTOM_BUTTON|16||
+|SEARCH|17||
+|AC_MAX|18|CLIMATE Module|
+|AC|19|CLIMATE Module|
+|RECIRCULATE|20|CLIMATE Module|
+|FAN_UP|21|CLIMATE Module|
+|FAN_DOWN|22|CLIMATE Module|
+|TEMP_UP|23|CLIMATE Module|
+|TEMP_DOWN|24|CLIMATE Module|
+|DEFROST_MAX|25|CLIMATE Module|
+|DEFROST|26|CLIMATE Module|
+|DEFROST_REAR|27|CLIMATE Module|
+|UPPER_VENT|28|CLIMATE Module|
+|LOWER_VENT|29|CLIMATE Module|
+|VOLUME_UP|30|RADIO Module|
+|VOLUME_DOWN|31|RADIO Module|
+|EJECT|32|RADIO Module|
+|SOURCE|33|RADIO Module|
+|SHUFFLE|34|RADIO Module|
+|REPEAT|35|RADIO Module|
 
 ### KeypressMode
 
@@ -520,12 +521,14 @@
 |MFD5|8||
 |GEN3_8_INCH|9||
 
-### ApplicationToNONEReason
+### ApplicationExitReason
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|DRIVER_DISTRACTION_VIOLATION|0||
-|USER_EXIT|1||
+|DRIVER_DISTRACTION_VIOLATION|0|By getting this value, SDL puts the named app to NONE HMILevel|
+|USER_EXIT|1|By getting this value, SDL puts the named app to NONE HMILevel|
+|UNAUTHORIZED_TRANSPORT_REGISTRATION|2|By getting this value, SDL unregisters the named application|
+|UNSUPPORTED_HMI_RESOURCE|3|By getting this value, SDL unregisters the named application|
 
 ### IgnitionStatus
 
@@ -603,6 +606,15 @@
 |STATIC|0||
 |DYNAMIC|1||
 
+### AudioStreamingIndicator
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|PLAY_PAUSE|0|Default playback indicator.|
+|PLAY|1|Indicates that a button press of the Play/Pause button would start the playback.|
+|PAUSE|2|Indicates that a button press of the Play/Pause button would pause the current playback.|
+|STOP|3|Indicates that a button press of the Play/Pause button would stop the current playback.|
+
 ### IgnitionStableStatus
 
 |Name|Value|Description|
@@ -666,12 +678,17 @@
 |Name|Value|Description|
 |:---|:----|:----------|
 |NO_SOURCE_SELECTED|0||
-|USB|1||
-|USB2|2||
-|BLUETOOTH_STEREO_BTST|3||
-|LINE_IN|4||
-|IPOD|5||
-|MOBILE_APP|6||
+|CD|1||
+|USB|2||
+|USB2|3||
+|BLUETOOTH_STEREO_BTST|4||
+|LINE_IN|5||
+|IPOD|6||
+|MOBILE_APP|7||  
+|AM|8||
+|FM|9||
+|XM|10||
+|DAB|11||
 
 ### RequestType
 
@@ -696,7 +713,8 @@
 |VEHICLE_DIAGNOSTICS|16||
 |EMERGENCY|17||
 |MEDIA|18||
-|FOTA|19||
+|FOTA|19||  
+|OEM_SPECIFIC|20||
 
 ### ConsentSource
 
@@ -784,9 +802,10 @@
 |cmdIcon|6||
 |appIcon|7||
 |graphic|8||
-|showConstantTBTIcon|9||
-|showConstantTBTNextTurnIcon|10||
-|locationImage|11||
+|secondaryGraphic|9||
+|showConstantTBTIcon|10||
+|showConstantTBTNextTurnIcon|11||
+|locationImage|12||
 
 ### VehicleDataType
 
@@ -818,6 +837,10 @@
 |VEHICLEDATA_ENGINETORQUE|23||
 |VEHICLEDATA_ACCPEDAL|24||
 |VEHICLEDATA_STEERINGWHEEL|25||
+|VEHICLEDATA_TURNSIGNAL|26||
+|VEHICLEDATA_FUELRANGE|27||
+|VEHICLEDATA_ENGINEOILLIFE|28||
+|VEHICLEDATA_ELECTRONICPARKBRAKESTATUS|29||
 
 ### VideoStreamingProtocol
 
@@ -865,7 +888,21 @@
 |SIXTH|11||
 |SEVENTH|12||
 |EIGHTH|13||
-|FAULT|14||
+|UNKNOWN|14||
+|FAULT|15||
+
+### TPMS
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|UNKNOWN|0|If set the status of the tire is not known.|
+|SYSTEM_FAULT|1|TPMS does not function.|
+|SENSOR_FAULT|2|The sensor of the tire does not function.|
+|LOW|3|TPMS is reporting a low tire pressure for the tire.|
+|SYSTEM_ACTIVE|4|TPMS is active and the tire pressure is monitored.|
+|TRAIN|5|TPMS is reporting that the tire must be trained.|
+|TRAINING_COMPLETE|6|TPMS reports the training for the tire is completed.|
+|NOT_TRAINED|7|TPMS reports the tire is not trained.|
 
 ### VehicleDataStatus
 
@@ -881,6 +918,10 @@
 |:---|:----|:----------|
 |CLIMATE|0||
 |RADIO|1||
+|SEAT|2||
+|AUDIO|3||
+|LIGHT|4||
+|HMI_SETTINGS|5||
 
 ### RadioBand
 
@@ -933,7 +974,145 @@
 |ASK_DRIVER|2|The driver is prompted when an app requests control of a module that is currently being used|
 
 ### EntityStatus
+
 |Name|Value|Description|
 |:---|:----|:----------|
 |ON|0||
 |OFF|1||
+
+### FuelType  
+
+|Name|Value|Description|
+|:---|:----|:----------|  
+|GASOLINE|0||  
+|DIESEL|1||  
+|CNG|2|For vehicles using compressed natural gas|  
+|LPG|3|For vehicles using liquefied petroleum gas|
+|HYDROGEN|4|For FCEV (fuel cell electric vehicle)|  
+|BATTERY|5|For BEV (Battery Electric Vehicle), PHEV (Plug-in Hybrid Electric Vehicle), solar vehicles and other vehicles which run on a battery|
+
+### TurnSignal
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|OFF|0||
+|LEFT|1||
+|RIGHT|2||
+|BOTH|3||
+
+### ElectronicParkBrakeStatus
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|CLOSED|0|Park brake actuators have been fully applied.|
+|TRANSITION|1|Park brake actuators are transitioning to either Apply/Closed or Release/Open state.|
+|OPEN|2|Park brake actuators are released.|
+|DRIVE_ACTIVE|3|When driver pulls the Electronic Park Brake switch while driving "at speed".|
+|FAULT|4|When system has a fault or is under maintenance.|
+
+### LightName
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FRONT_LEFT_HIGH_BEAM|0||
+|FRONT_RIGHT_HIGH_BEAM|1||
+|FRONT_LEFT_LOW_BEAM|2||
+|FRONT_RIGHT_LOW_BEAM|3||
+|FRONT_LEFT_PARKING_LIGHT|4||
+|FRONT_RIGHT_PARKING_LIGHT|5||
+|FRONT_LEFT_FOG_LIGHT|6||
+|FRONT_RIGHT_FOG_LIGHT|7||
+|FRONT_LEFT_DAYTIME_RUNNING_LIGHT|8||
+|FRONT_RIGHT_DAYTIME_RUNNING_LIGHT|9||
+|FRONT_LEFT_TURN_LIGHT|10||
+|FRONT_RIGHT_TURN_LIGHT|11||
+|REAR_LEFT_FOG_LIGHT|12||
+|REAR_RIGHT_FOG_LIGHT|13||
+|REAR_LEFT_TAIL_LIGHT|14||
+|REAR_RIGHT_TAIL_LIGHT|15||
+|REAR_LEFT_BRAKE_LIGHT|16||
+|REAR_RIGHT_BRAKE_LIGHT|17||
+|REAR_LEFT_TURN_LIGHT|18||
+|REAR_RIGHT_TURN_LIGHT|19||
+|REAR_REGISTRATION_PLATE_LIGHT|20|| 
+|HIGH_BEAMS|501||
+|LOW_BEAMS|502||
+|FOG_LIGHTS|503||
+|RUNNING_LIGHTS|504||
+|PARKING_LIGHTS|505||
+|BRAKE_LIGHTS|506||
+|REAR_REVERSING_LIGHTS|507||
+|SIDE_MARKER_LIGHTS|508||
+|LEFT_TURN_LIGHTS|509||  
+|RIGHT_TURN_LIGHTS|510||
+|HAZARD_LIGHTS|511||
+|REAR_CARGO_LIGHTS|512| Cargo lamps illuminate the cargo area.|  
+|REAR_TRUCK_BED_LIGHTS|513|Truck bed lamps light up the bed of the truck.|    
+|REAR_TRAILER_LIGHTS|514|Trailer lights are lamps mounted on a trailer hitch.|  
+|LEFT_SPOT_LIGHTS|515|It is the spotlights mounted on the left side of a vehicle.|  
+|RIGHT_SPOT_LIGHTS|516|It is the spotlights mounted on the right side of a vehicle.|  
+|LEFT_PUDDLE_LIGHTS|517|Puddle lamps illuminate the ground beside the door as the customer is opening or approaching the door.|  
+|RIGHT_PUDDLE_LIGHTS|518| Puddle lamps illuminate the ground beside the door as the customer is opening or approaching the door.|
+|AMBIENT_LIGHTS|801||
+|OVERHEAD_LIGHTS|802||
+|READING_LIGHTS|803||
+|TRUNK_LIGHTS|804||
+
+### LightStatus
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ON|0||
+|OFF|1||  
+|RAMP_UP|2||  
+|RAMP_DOWN|3||  
+|UNKNOWN|4||  
+|INVALID|5||
+
+### DisplayMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DAY|0||
+|NIGHT|1||
+|AUTO|2||
+
+### DistanceUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MILES|0||
+|KILOMETERS|1||
+
+### MassageZone
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|OFF|0||
+|LOW|1||
+|HIGH|2||
+
+### MassageCushion
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|TOP_LUMBAR|0||
+|MIDDLE_LUMBAR|1||
+|BOTTOM_LUMBAR|2||
+|BACK_BOLSTERS|3||
+|SEAT_BOLSTERS|4||
+
+### SeatMemoryActionType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|SAVE|0|Save current seat postions and settings to seat memory.|
+|RESTORE|1|Restore / apply the seat memory settings to the current seat.|
+|NONE|2|No action to be performed.|
+
+### SupportedSeat
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DRIVER|0|List possible seats that is a remote controllable seat.|
+|FRONT_PASSENGER|1|List possible seats that is a remote controllable seat.|

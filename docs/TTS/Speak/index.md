@@ -44,7 +44,10 @@ Speak
   {
     "ttsChunks" :
     [
-      "text" : "Please say a command"
+      {
+        "text" : "Please say a command", 
+        "type" : "TEXT"
+      }
     ]
   }
 }
