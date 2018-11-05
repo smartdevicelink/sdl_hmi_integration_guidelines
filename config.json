@@ -125,7 +125,10 @@
               "name": "OnButtonPress"
             },
             {
-              "name": "OnButtonSubscription"
+              "name": "SubscribeButton"
+            },
+            {
+              "name": "UnsubscribeButton"
             },
             {
               "name": "ButtonPress"
