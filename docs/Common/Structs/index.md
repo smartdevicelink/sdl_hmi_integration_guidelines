@@ -206,6 +206,7 @@
 |altitude|Float|false|minvalue: -10000<br>maxvalue: 10000||
 |heading|Float|false|minvalue: 0<br>maxvalue: 359.99||
 |speed|Float|false|minvalue: 0<br>maxvalue: 500||
+|shifted|Boolean|false||True, if GPS lat/long, time, and altitude have been purposefully shifted (requires a proprietary algorithm to unshift).<br>False, if the GPS data is raw and un-shifted.<br>If not provided, then value is assumed False|
 
 ### SingleTireStatus
 
