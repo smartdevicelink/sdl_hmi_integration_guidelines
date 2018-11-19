@@ -19,7 +19,7 @@ SDL sends the `UI.Alert` RPC when some information needs to be displayed to the 
   4. Display the alert dialog with the text information in the `alertFields` array and optional `softButtons` and optional `displayIndicator` indicating a timeout for the alert
   5. Send [Buttons.OnButtonPress](../../buttons/onbuttonpress) and/or [Buttons.OnButtonEvent](../../buttons/onbuttonevent) notifications if soft buttons associated with the alert are pressed by the user
   6. Dismiss the alert after the duration has passed since receipt of the request
-
+  7. Send `BC.OnResetTimeout` to SDL in case HMI needs input from user and hence more time to process `UI.Alert` RPC
 !!!
 
 !!! may

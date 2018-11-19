@@ -29,10 +29,11 @@ Whenever the internal list of added `vrCommands` is updated SDL must:
 |appID|Integer|false||
 
 ### Response
+In case HMI needs more time for processing VR.AddCommand request (because of big number of `vrCommands`), HMI must send OnResetTimeout notification to SDL for reseting timeout.
 
 #### Parameters
 
-This RPC has no additional parameter requirements
+This RPC has no additional parameter requirements.
 
 ### Sequence Diagrams
 |||

@@ -19,7 +19,6 @@ Purpose
 5. Respond with `REJECTED` result code to SDL in case HMI is currently busy with a higher-priority event or other reasons defined for the mentioned resultCode by HMI.
 
 ### Request
-
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -37,6 +36,12 @@ Purpose
 |address| Common.OASISAddress|false||
 
 ### Response
+
+!!!must
+Send OnResetTimeout notification to SDL to reset timeout in case while processing SendLocation request HMI waits for user's selection.
+!!!
+
+_SDL Note: In case HMI does not respond SDL's request during SDL default timeout, SDL will return GENERIC_ERROR code to the corresponding mobile app's request._
 
 #### Parameters
 
