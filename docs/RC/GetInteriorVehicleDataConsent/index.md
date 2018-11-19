@@ -16,7 +16,7 @@ The driver is expected to have an ability to grant or deny the permission.
 !!! must
 1. HMI must prompt user to make selection of resource allocation
 2. Respond to SDL with user choice within RC.GetInteriorVehicleDataConsent response
-3. If user didn't make choice send GENERIC_ERROR to SDL
+3. If user didn't make choice send BC.OnResetTimeout notification to SDL to reset timeout
 !!!
 
 ### Request

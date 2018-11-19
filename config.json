@@ -109,6 +109,9 @@
             },
             {
               "name": "GetSystemTime"
+            },
+            {
+              "name": "OnResetTimeout"
             }
           ]
         },
@@ -248,9 +251,6 @@
               "name": "OnLanguageChange"
             },
             {
-              "name": "OnResetTimeout"
-            },
-            {
               "name": "SetGlobalProperties"
             },
             {
@@ -320,9 +320,6 @@
             },
             {
               "name": "OnRecordStart"
-            },
-            {
-              "name": "OnResetTimeout"
             },
             {
               "name": "OnSystemContext"

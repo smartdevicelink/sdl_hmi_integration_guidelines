@@ -11,6 +11,10 @@ Purpose
 
 ### Request
 
+!!! must
+Send `BC.OnResetTimeout` to SDL in case HMI needs input from user and hence more time to process `UI.Slider` RPC
+!!!
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
