@@ -67,7 +67,7 @@ OnResetTimeout for Speak GENERIC_ERROR
      "params" :
   {
     "requestID" : 123,
-    "methodName" : "Speak",
+    "methodName" : "TTS.Speak",
     "resetPeriod" : 10000
   }
 }
