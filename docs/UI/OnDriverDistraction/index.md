@@ -34,6 +34,8 @@ _Note: SDL ignores all invalid notifications which come from HMI (invalid JSON, 
 OnDriverDistraction
 ![OnDriverDistraction](./assets/OnDriverDistraction.png)
 |||
+OnDriverDistraction dismissable lock screen
+![OnDriverDistraction dismiss lock screen](./assets/OnDriverDistraction_lockScreenDismissalEnabled.png)
 
 #### JSON Example Notification
 ```json
@@ -42,7 +44,8 @@ OnDriverDistraction
   "method" : "UI.OnDriverDistraction",
   "params" :
   {
-    "state" : "DD_ON"
+    "state" : "DD_ON",
+    "lockScreenDismissalEnabled" : "true"
   }
 }
 ```
