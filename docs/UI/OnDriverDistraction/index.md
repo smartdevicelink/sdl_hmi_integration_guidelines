@@ -43,8 +43,7 @@ OnDriverDistraction dismissable lock screen
   "method" : "UI.OnDriverDistraction",
   "params" :
   {
-    "state" : "DD_ON",
-    "lockScreenDismissalEnabled" : "true"
+    "state" : "DD_ON"
   }
 }
 ```
