@@ -27,7 +27,6 @@ _Note: SDL ignores all invalid notifications which come from HMI (invalid JSON, 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |state|[Common.DriverDistractionState](../../common/enums/#driverdistractionstate)|true||
-|lockScreenDismissalEnabled|Boolean|false|If enabled, the lock screen will be able to be dismissed while connected to SDL, allowing users the ability to interact with the app.<br>Dismissals should include a warning to the user and ensure that they are not the driver.|
 
 ### Sequence Diagrams
 |||
@@ -35,7 +34,7 @@ OnDriverDistraction
 ![OnDriverDistraction](./assets/OnDriverDistraction.png)
 |||
 OnDriverDistraction dismissable lock screen
-![OnDriverDistraction dismiss lock screen](./assets/OnDriverDistraction_lockScreenDismissalEnabled.png)
+![OnDriverDistraction dismiss lock screen](./assets/OnDriverDistraction.png)
 
 #### JSON Example Notification
 ```json
