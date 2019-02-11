@@ -1204,3 +1204,25 @@
 |:---|:----|:----------|
 |LEFT|0||
 |RIGHT|1||
+
+### ServiceType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|VIDEO|0|Refers to the Video service.|
+|AUDIO|1|Refers to the Audio service.|
+|RPC|2|Refers to RPC service.|
+
+### ServiceEvent
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|REQUEST_RECEIVED|0|When a request for a Service is received.|
+|REQUEST_ACCEPTED|1|When a request for a Service is Accepted.|
+|REQUEST_REJECTED|2|When a request for a Service is Rejected.|
+
+### ServiceUpdateReason
+
+|PTU_FAILED|0|When a Service is rejected because the system was unable to get a required Policy Table Update.|
+|INVALID_CERT|1|When a Service is rejected because the security certificate is invalid/expired.|
+|INVALID_TIME|2|When a Service is rejected because the system was unable to get a valid SystemTime from HMI, which is required for certificate authentication.|
