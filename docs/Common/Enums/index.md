@@ -1223,6 +1223,8 @@
 
 ### ServiceUpdateReason
 
+|Name|Value|Description|
+|:---|:----|:----------|
 |PTU_FAILED|0|When a Service is rejected because the system was unable to get a required Policy Table Update.|
 |INVALID_CERT|1|When a Service is rejected because the security certificate is invalid/expired.|
 |INVALID_TIME|2|When a Service is rejected because the system was unable to get a valid SystemTime from HMI, which is required for certificate authentication.|
