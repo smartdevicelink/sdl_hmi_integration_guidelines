@@ -23,7 +23,7 @@ These steps include:
 * performing a policy table update  
 * decrypting certificates and ensuring validity of the certificates  
 
-Processing these steps SDL sends OnServiceUpdate notification to HMI to provide accurate feedback on the status of the system.
+Processing these steps SDL sends OnServiceUpdate notification to HMI to provide accurate feedback on the status of the system.  
 _Note:_ the only time when SDL would not be able provide the `appID` would be during the first StartService request for the RPC service before RAI was sent.
 
 #### Parameters
