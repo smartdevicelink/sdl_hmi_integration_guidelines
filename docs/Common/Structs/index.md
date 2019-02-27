@@ -716,7 +716,6 @@
 |height|Float|true| |The height of the rectangle|
 
 ### HapticRect
-
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |id|Integer|true|minvalue: 0<br>maxvalue: 128|A unique identifier for the haptic rectangle|
@@ -805,3 +804,17 @@
 |year|Integer|false|minvalue: 0 <br>maxvalue: 4095|The year in YYYY format|
 |tz_hour|Integer|false|minvalue: -12 <br> maxvalue: 14 <br> defvalue: 0|Time zone offset in Hours with regard to UTC.|
 |tz_minute|Integer|false|minvalue: 0 <br>maxvalue: 59 <br> defvalue: 0|Time zone offset in Min with regard to UTC.|
+
+### OASISAddress
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|countryName|String|false|minlength="0"<br>maxlength="200"|Name of the country (localized)|
+|countryCode|String|false|minlength="0"<br>maxlength="200"|Name of country (ISO 3166-2)|
+|postalCode|String|false|minlength="0"<br>maxlength="200"|(PLZ, ZIP, PIN, CAP etc.)|
+|administrativeArea|String|false|minlength="0"<br>maxlength="200"|Portion of country (e.g. state)|
+|subAdministrativeAre|String|false|minlength="0"<br>maxlength="200"|Portion of administrativeArea (e.g. county)|
+|locality|String|false|minlength="0"<br>maxlength="200"|Hypernym for city/village|
+|subLocality|String|false|minlength="0"<br>maxlength="200"|Hypernym for district|
+|thoroughfare|String|false|minlength="0"<br>maxlength="200"|Hypernym for street, road etc|
+|subThoroughfare|String|false|minlength="0"<br>maxlength="200"|Portion of thoroughfare (e.g. house number)|
