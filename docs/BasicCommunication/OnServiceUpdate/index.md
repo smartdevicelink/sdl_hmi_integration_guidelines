@@ -11,7 +11,7 @@ Purpose
 
 !!! must
 
-Display appropriate pop-up providing accurate feedback to the user on the status of the system or what steps to take in case of an error.
+Display a pop-up providing accurate feedback to the user on the status of the system or what steps to take in case of an error.
 
 !!!
 
