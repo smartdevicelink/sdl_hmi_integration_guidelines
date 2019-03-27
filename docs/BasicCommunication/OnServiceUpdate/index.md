@@ -9,7 +9,7 @@ Sender
 Purpose
 : Update HMI with the status of a particular service
 
-!!! must
+!!! may
 
 Display a pop-up providing accurate feedback to the user on the status of the system or what steps to take in case of an error.
 
