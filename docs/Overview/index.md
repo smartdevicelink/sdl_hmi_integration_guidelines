@@ -48,3 +48,5 @@ Abbreviations used in this document are collected in the table below
 |VDOP|Vertical Dilution of Precision|
 |VR|Voice Recognition|
 |UTC|Universal Time Coordinate|
+|ASC|App Service Consumer|
+|ASP|App Service Provider|
