@@ -1,0 +1,10 @@
+@startuml PublishAppService
+participant HMIProvider
+participant Core
+participant AppServiceManager
+
+HMIProvider -> Core: AppService.PublishAppService
+Core -> AppServiceManager: PublishAppService
+Core --> HMIProvider: AppService.PublishAppService Response
+
+@enduml

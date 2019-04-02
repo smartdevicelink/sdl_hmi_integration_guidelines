@@ -475,6 +475,9 @@
           "navigation": [
             {
               "name": "PublishAppService"
+            },
+            {
+              "name": "GetAppServiceData"
             }
           ]
         },

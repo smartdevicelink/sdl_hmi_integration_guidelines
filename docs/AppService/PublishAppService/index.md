@@ -77,5 +77,6 @@ PublishAppService
       },
       "code" : 0,
       "method" : "AppService.PublishAppService"
+  }
 }
 ```
