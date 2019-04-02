@@ -471,6 +471,14 @@
           ]
         },
         {
+          "name": "AppService",
+          "navigation": [
+            {
+              "name": "PublishAppService"
+            }
+          ]
+        },
+        {
           "name": "Common",
           "navigation": [
             {
