@@ -1,4 +1,4 @@
-## RPC_NAME
+## GetAppServiceData
 
 Type
 : Request
