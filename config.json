@@ -478,6 +478,9 @@
             },
             {
               "name": "GetAppServiceData"
+            },
+            {
+              "name": "OnAppServiceData"
             }
           ]
         },

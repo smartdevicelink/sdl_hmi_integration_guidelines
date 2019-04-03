@@ -1,0 +1,16 @@
+@startuml OnAppServiceData_HMI_ASP
+participant HMIProvider
+participant Core
+participant MobileConsumer
+
+HMIProvider -> Core: AppService.PublishAppService(MEDIA)
+Core --> HMIProvider: AppService.PublishAppService Response
+MobileConsumer -> Core: GetAppServiceData(MEDIA)
+Core -> HMIProvider: AppService.GetAppServiceData(MEDIA)
+HMIProvider --> Core: AppService.GetAppServiceData Response
+Core --> MobileConsumer: GetAppServiceData Response
+HMIProvider -> HMIProvider: Update service data
+HMIProvider ->> Core: AppService.OnAppServiceData Notification
+Core ->> MobileConsumer: OnAppServiceData Notification
+
+@enduml
