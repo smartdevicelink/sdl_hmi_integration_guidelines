@@ -111,6 +111,9 @@
               "name": "GetSystemTime"
             },
             {
+              "name": "OnSystemCapabilityUpdated"
+            },
+            {
               "name": "GetFilePath"
             }
           ]
