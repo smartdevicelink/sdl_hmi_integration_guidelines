@@ -6,7 +6,6 @@ skinparam defaultFontSize 10
 participant AppConsumer
 participant AppProvider
 participant Core
-participant AppServiceManager
 participant HMI
 
 AppConsumer -> Core : PerformAppServiceInteraction\n(requestServiceActive:true)
@@ -16,7 +15,7 @@ opt Consumer is not in foreground
   HMI -> HMI : Prompt user to \nactivate service
   HMI --> Core : AS.GetActiveServiceConsent\n(true)
 end
-Core -> AppServiceManager : ActivateAppService("providerID")
+Core -> Core : ActivateAppService("providerID")
 Core -> AppProvider : PerformAppServiceInteraction()
 AppProvider --> Core : PerformAppServiceInteraction\n(serviceSpecificResult:"result", SUCCESS)
 

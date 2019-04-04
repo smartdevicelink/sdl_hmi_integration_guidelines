@@ -4,9 +4,7 @@ skinparam ParticipantPadding 36
 skinparam defaultFontSize 10
 
 participant AppConsumer
-participant AppProvider
 participant Core
-participant AppServiceManager
 participant HMI
 
 AppConsumer -> Core : PerformAppServiceInteraction\n(requestServiceActive:true)
