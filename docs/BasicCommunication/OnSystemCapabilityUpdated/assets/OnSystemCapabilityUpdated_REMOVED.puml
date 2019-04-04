@@ -12,8 +12,8 @@ Core -> Core : UnregisterApplication
 Core -> AppServiceManager : UnpublishServices(app_id)
 
 loop For Every Published Service On Device
-AppServiceManager -> Core :BroadcastCapabilityUpdate
-Core ->> Mobile : OnSystemCapabilityUpdated\n(APP_SERVICES, REMOVED)
-Core ->> HMI : BasicCommunication.OnSystemCapabilityUpdated\n(APP_SERVICES, REMOVED)
+  AppServiceManager -> Core :BroadcastCapabilityUpdate
+  Core ->> Mobile : OnSystemCapabilityUpdated\n(APP_SERVICES, REMOVED)
+  Core ->> HMI : BasicCommunication.OnSystemCapabilityUpdated\n(APP_SERVICES, REMOVED)
 end
 @enduml

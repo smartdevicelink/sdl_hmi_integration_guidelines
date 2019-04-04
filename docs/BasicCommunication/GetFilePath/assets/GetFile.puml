@@ -12,6 +12,6 @@ else
     HMIProvider --> Core: GetFilePathResponse(filePath)
     Core -> Core: Read file from fs
 end
-    Core --> MobileConsumer: GetFileResponse(binaryData, crc)
+Core --> MobileConsumer: GetFileResponse(binaryData, crc)
 
 @enduml

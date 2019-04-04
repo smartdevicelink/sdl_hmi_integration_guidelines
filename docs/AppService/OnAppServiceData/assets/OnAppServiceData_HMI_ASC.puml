@@ -3,8 +3,8 @@ participant HMIConsumer
 participant Core
 participant MobileProvider
 
-MobileProvider -> Core: PublishAppService(MEDIA)
-Core --> MobileProvider: PublishAppService Response
+note right of MobileProvider: Mobile app has\npublished a\nMEDIA app service
+
 HMIConsumer -> Core: AppService.GetAppServiceData(MEDIA,subscribe=true)
 Core -> MobileProvider: GetAppServiceData(MEDIA,subscribe=true)
 MobileProvider --> Core: GetAppServiceData Response
