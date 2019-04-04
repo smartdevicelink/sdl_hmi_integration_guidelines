@@ -1,0 +1,18 @@
+@startuml GetFile
+participant MobileConsumer
+participant Core
+participant HMIProvider
+participant MobileProvider
+
+MobileConsumer -> Core: GetFile(fileName, serviceID)
+alt ASP is mobile app
+    Core -> Core: Read file from ASPs app storage folder on fs
+else
+    Core -> Core: Increase Request Timeout
+    Core -> HMIProvider: GetFilePath(fileName, serviceID)
+    HMIProvider --> Core: GetFilePathResponse(filePath)
+    Core -> Core: Read file from fs
+end
+    Core --> MobileConsumer: GetFileResponse(binaryData, crc)
+
+@enduml
