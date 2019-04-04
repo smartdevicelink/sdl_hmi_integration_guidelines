@@ -5,8 +5,8 @@ participant MobileConsumer
 
 HMIProvider -> Core: AppService.PublishAppService(MEDIA)
 Core --> HMIProvider: AppService.PublishAppService Response
-MobileConsumer -> Core: GetAppServiceData(MEDIA)
-Core -> HMIProvider: AppService.GetAppServiceData(MEDIA)
+MobileConsumer -> Core: GetAppServiceData(MEDIA,subscribe=true)
+Core -> HMIProvider: AppService.GetAppServiceData(MEDIA,subscribe=true)
 HMIProvider --> Core: AppService.GetAppServiceData Response
 Core --> MobileConsumer: GetAppServiceData Response
 HMIProvider -> HMIProvider: Update service data

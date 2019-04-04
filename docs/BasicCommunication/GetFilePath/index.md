@@ -32,7 +32,7 @@ Purpose
 ### Sequence Diagrams
 |||
 GetFile (HMI Provider)
-![GetFileUML](./assets/GetFileUML.png)
+![GetFile](./assets/GetFile.png)
 |||
 
 ### Example Request

@@ -2,7 +2,6 @@
 participant MobileConsumer
 participant Core
 participant HMIProvider
-participant MobileProvider
 
 MobileConsumer -> Core: GetFile(fileName, serviceID)
 alt ASP is mobile app
