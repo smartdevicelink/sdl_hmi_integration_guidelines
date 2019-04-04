@@ -109,6 +109,12 @@
             },
             {
               "name": "GetSystemTime"
+            },
+            {
+              "name": "OnSystemCapabilityUpdated"
+            },
+            {
+              "name": "GetFilePath"
             }
           ]
         },
@@ -477,10 +483,19 @@
               "name": "PublishAppService"
             },
             {
+              "name": "GetAppServiceData"
+            },
+            {
+              "name": "OnAppServiceData"
+            },
+            {
               "name": "PerformAppServiceInteraction"
             },
             {
               "name": "GetActiveServiceConsent"
+            },
+            {
+              "name": "GetAppServiceRecords"
             }
           ]
         },

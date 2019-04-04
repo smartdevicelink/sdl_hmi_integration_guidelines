@@ -1123,3 +1123,11 @@
 |PROMPT|0||
 |DESTINATION|1||
 |QUEUE|2||
+
+### AppServiceType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MEDIA|0||
+|WEATHER|1||
+|NAVIGATION|2||

@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|appServiceManifest|[Common.AppServiceManifest](../../common/structs/#)|true||
+|appServiceManifest|[Common.AppServiceManifest](../../common/structs/#appservicemanifest)|true||
 
 ### Response
 
@@ -23,7 +23,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|appServiceRecord|[Common.AppServiceRecord](../../common/structs/#)|false||
+|appServiceRecord|[Common.AppServiceRecord](../../common/structs/#appservicerecord)|false||
 
 ### Sequence Diagrams
 |||
@@ -77,5 +77,6 @@ PublishAppService
       },
       "code" : 0,
       "method" : "AppService.PublishAppService"
+  }
 }
 ```

@@ -1,0 +1,13 @@
+@startuml GetAppServiceRecords
+participant HMIConsumer
+participant Core
+participant MobileProvider
+participant HMIProvider
+
+MobileProvider -> Core: PublishAppService(MEDIA)
+Core --> MobileProvider: PublishAppService Response
+HMIProvider -> Core: AppService.PublishAppService(MEDIA)
+Core --> HMIProvider: AppService.PublishAppService Response
+HMIConsumer -> Core: AppService.GetAppServiceRecords(MEDIA)
+Core --> HMIConsumer: AppService.GetAppServiceRecords Response
+@enduml
