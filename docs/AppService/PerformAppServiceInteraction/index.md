@@ -4,7 +4,7 @@ Type
 : Function
 
 Sender
-: Bidirectional
+: SDL / HMI
 
 Purpose
 : Perform a predefined action on a service provider

@@ -478,6 +478,9 @@
             },
             {
               "name": "PerformAppServiceInteraction"
+            },
+            {
+              "name": "GetActiveServiceConsent"
             }
           ]
         },
