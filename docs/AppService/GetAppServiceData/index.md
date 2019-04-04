@@ -24,7 +24,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|serviceData|[Common.AppServiceData](../../common/structs/#)|false||
+|serviceData|[Common.AppServiceData](../../common/structs/#appservicedata)|false||
 
 ### Sequence Diagrams
 |||

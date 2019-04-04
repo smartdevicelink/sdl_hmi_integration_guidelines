@@ -23,7 +23,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|serviceRecords|[Common.AppServiceRecord](../../common/structs/#)|true|array: true|
+|serviceRecords|[Common.AppServiceRecord](../../common/structs/#appservicerecord)|true|array: true|
 
 ### Sequence Diagrams
 |||
