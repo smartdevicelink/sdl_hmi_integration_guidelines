@@ -860,3 +860,27 @@
 |mediaServiceData|Common.MediaServiceData|false|||
 |weatherServiceData|Common.WeatherServiceData|false|||
 |navigationServiceData|Common.NavigationServiceData|false|||
+
+### AppServiceCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|updateReason|[Common.ServiceUpdateReason](../enums/#serviceupdatereason)|false||Only included in OnSystemCapabilityUpdated. Update reason for service record|
+|updatedAppServiceRecord|Common.AppServiceRecord|true||Service record for a specific app service provider|
+
+### AppServicesCapabilities
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|appServices|Common.AppServiceCapability|false|array: true|An array of currently available services. If this is an update to the capability the affected services will include an update reason in that item|
+
+### SystemCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|systemCapabilityType|[Common.SystemCapabilityType](../enums/#systemcapabilitytype)|true||Used as a descriptor of what data to expect in this struct. The corresponding param to this enum should be included and the only other param included|
+|navigationCapability|Common.NavigationCapability|false||Describes extended capabilities for onboard navigation system|
+|phoneCapability|Common.PhoneCapability|false||Describes extended capabilities of the module's phone feature|
+|videoStreamingCapability|Common.VideoStreamingCapability|false||Describes extended capabilities of the module's phone feature|
+|remoteControlCapability|Common.RemoteControlCapabilities|false||Describes extended capabilities of the module's phone feature|
+|appServicesCapabilities|Common.AppServicesCapabilities|false||An array of currently available services. If this is an update to the capability the affected services will include an update reason in that item|

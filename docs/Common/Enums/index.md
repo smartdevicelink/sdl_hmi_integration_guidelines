@@ -1131,3 +1131,23 @@
 |MEDIA|0||
 |WEATHER|1||
 |NAVIGATION|2||
+
+### ServiceUpdateReason
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|PUBLISHED|0|The service has just been published with the module and once activated to the primary service of its type, it will be ready for possible consumption|
+|REMOVED|1|The service has just been unpublished with the module and is no longer accessible|
+|ACTIVATED|2|The service is activated as the primary service of this type. All requests dealing with this service type will be handled by this service|
+|DEACTIVATED|3|The service has been deactivated as the primary service of its type|
+|MANIFEST_UPDATE|4|The service has updated its manifest. This could imply updated capabilities|
+
+### SystemCapabilityType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|NAVIGATION|0||
+|PHONE_CALL|1||
+|VIDEO_STREAMING|2||
+|REMOTE_CONTROL|3||
+|APP_SERVICES|4||

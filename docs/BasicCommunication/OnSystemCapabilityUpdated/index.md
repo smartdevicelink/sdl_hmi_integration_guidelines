@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|systemCapability|[Common.SystemCapability](../../common/structs/#)|true||
+|systemCapability|[Common.SystemCapability](../../common/structs/#systemcapability)|true||
 
 ### Sequence Diagrams
 |||
