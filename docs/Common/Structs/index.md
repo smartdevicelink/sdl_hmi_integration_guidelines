@@ -903,3 +903,62 @@
 |queuePlaybackDuration|Integer|false||Music: The total duration of the playback queue in seconds<br>Podcast: The total duration of the playback queue in seconds<br>Audiobook: The total duration of the playback queue (e.g. the book) in seconds|
 |queueCurrentTrackNumber|Integer|false||Music: The current number (1 based) of the track in the playback queue<br>Podcast: The current number (1 based) of the episode in the playback queue<br>Audiobook: The current number (1 based) of the episode in the playback queue (e.g. the chapter number in the book)|
 |queueTotalTrackCount|Integer|false||Music: The total number of tracks in the playback queue<br>Podcast: The total number of episodes in the playback queue<br>Audiobook: The total number of sections in the playback queue (e.g. the number of chapters in the book)|
+
+### WeatherServiceManifest
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|currentForecastSupported|Boolean|false|||
+|maxMultidayForecastAmount|Integer|false|||
+|maxHourlyForecastAmount|Integer|false|||
+|maxMinutelyForecastAmount|Integer|false|||
+|weatherForLocationSupported|Boolean|false|||
+
+### WeatherAlert
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|title|String|false|||
+|summary|String|false|||
+|expires|Common.DateTime|false|||
+|regions|String|false|array: true<br>minsize: 1<br> maxsize: 99||
+|severity|String|false|||
+|timeIssued|Common.DateTime|false|||
+
+### WeatherData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|currentTemperature|Common.Temperature|false|||
+|temperatureHigh|Common.Temperature|false|||
+|temperatureLow|Common.Temperature|false|||
+|apparentTemperature|Common.Temperature|false|||
+|apparentTemperatureHigh|Common.Temperature|false|||
+|apparentTemperatureLow|Common.Temperature|false|||
+|weatherSummary|String|false|||
+|time|Common.DateTime|false|||
+|humidity|Float|false|minvalue: 0<br>maxvalue: 1|0 to 1, percentage humidity|
+|cloudCover|Float|false|minvalue: 0<br>maxvalue: 1|0 to 1, percentage cloud cover|
+|moonPhase|Float|false|minvalue: 0<br>maxvalue: 1|0 to 1, percentage of the moon seen, e.g. 0 = no moon, 0.25 = quarter moon|
+|windBearing|Integer|false||In degrees, true north at 0 degrees|
+|windGust|Float|false||km/hr|
+|windSpeed|Float|false||km/hr|
+|nearestStormBearing|Integer|false||In degrees, true north at 0 degrees|
+|nearestStormDistance|Integer|false||In km|
+|precipAccumulation|Float|false||cm|
+|precipIntensity|Float|false||cm of water per hour|
+|precipProbability|Float|false|minvalue: 0<br>maxvalue: 1|0 to 1, percentage chance|
+|precipType|String|false||e.g. "rain", "snow", "sleet", "hail"|
+|visibility|Float|false||In km|
+|weatherIcon|Common.Image|false|||
+
+### WeatherServiceData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.LocationDetails|true|||
+|currentForecast|Common.WeatherData|false|||
+|minuteForecast|Common.WeatherData|false|array: true<br>minsize: 15<br>maxsize: 60||
+|hourlyForecast|Common.WeatherData|false|array: true<br>minsize: 1<br>maxsize: 96||
+|multidayForecast|Common.WeatherData|false|array: true<br>minsize: 1<br>maxsize: 30||
+|alerts|Common.WeatherAlert|false|array: true<br>minsize: 1<br>maxsize: 10|This array should be ordered with the first object being the current day|
