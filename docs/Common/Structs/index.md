@@ -884,3 +884,22 @@
 |videoStreamingCapability|Common.VideoStreamingCapability|false||Describes extended capabilities of the module's phone feature|
 |remoteControlCapability|Common.RemoteControlCapabilities|false||Describes extended capabilities of the module's phone feature|
 |appServicesCapabilities|Common.AppServicesCapabilities|false||An array of currently available services. If this is an update to the capability the affected services will include an update reason in that item|
+
+### MediaServiceManifest
+
+### MediaServiceData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|mediaType|[Common.MediaType](../enums/#mediatype)|false||The type of the currently playing or paused track|
+|mediaTitle|String|false||Music: The name of the current track<br>Podcast: The name of the current episode<br>Audiobook: The name of the current chapter|
+|mediaArtist|String|false||Music: The name of the current album artist<br>Podcast: The provider of the podcast (hosts, network, company)<br>Audiobook: The book author's name|
+|mediaAlbum|String|false||Music: The name of the current album<br>Podcast: The name of the current podcast show<br>Audiobook: The name of the current book|
+|playlistName|String|false||Music: The name of the playlist or radio station, if the user is playing from a playlist, otherwise, Null<br>Podcast: The name of the playlist, if the user is playing from a playlist, otherwise, Null<br>Audiobook: Likely not applicable, possibly a collection or "playlist" of books|
+|isExplicit|Boolean|false||Whether or not the content currently playing (e.g. the track, episode, or book) contains explicit content|
+|trackPlaybackProgress|Integer|false||Music: The current progress of the track in seconds<br>Podcast: The current progress of the episode in seconds<br>Audiobook: The current progress of the current segment (e.g. the chapter) in seconds|
+|trackPlaybackDuration|Integer|false||Music: The total duration of the track in seconds<br>Podcast: The total duration of the episode in seconds<br>Audiobook: The total duration of the current segment (e.g. the chapter) in seconds|
+|queuePlaybackProgress|Integer|false||Music: The current progress of the playback queue in seconds<br>Podcast: The current progress of the playback queue in seconds<br>Audiobook: The current progress of the playback queue (e.g. the book) in seconds|
+|queuePlaybackDuration|Integer|false||Music: The total duration of the playback queue in seconds<br>Podcast: The total duration of the playback queue in seconds<br>Audiobook: The total duration of the playback queue (e.g. the book) in seconds|
+|queueCurrentTrackNumber|Integer|false||Music: The current number (1 based) of the track in the playback queue<br>Podcast: The current number (1 based) of the episode in the playback queue<br>Audiobook: The current number (1 based) of the episode in the playback queue (e.g. the chapter number in the book)|
+|queueTotalTrackCount|Integer|false||Music: The total number of tracks in the playback queue<br>Podcast: The total number of episodes in the playback queue<br>Audiobook: The total number of sections in the playback queue (e.g. the number of chapters in the book)|

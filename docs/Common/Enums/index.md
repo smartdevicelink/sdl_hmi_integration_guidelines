@@ -1151,3 +1151,12 @@
 |VIDEO_STREAMING|2||
 |REMOTE_CONTROL|3||
 |APP_SERVICES|4||
+
+### MediaType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MUSIC|0||
+|PODCAST|1||
+|AUDIOBOOK|2||
+|OTHER|3||
