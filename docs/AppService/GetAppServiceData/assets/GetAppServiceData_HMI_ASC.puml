@@ -6,6 +6,7 @@ participant MobileProvider
 note right of MobileProvider: Mobile app has\npublished a\nMEDIA app service
 
 HMIConsumer -> Core: AppService.GetAppServiceData(MEDIA)
+Core -> Core : Increase RPC Timeout
 Core -> MobileProvider: GetAppServiceData(MEDIA)
 MobileProvider --> Core: GetAppServiceData Response
 Core --> HMIConsumer: AppService.GetAppServiceData Response

@@ -64,3 +64,18 @@ GetFile (HMI Provider)
 	}
 }
 ```
+### Example Error
+
+```json
+{
+  "id" : 34,
+  "jsonrpc" : "2.0",
+  "error" : {
+    "code" : 27,
+    "message" : "File not found",
+    "data" : {
+      "method" : "BasicCommunication.GetFilePath"
+    }
+  }
+}
+```
