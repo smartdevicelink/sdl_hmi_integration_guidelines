@@ -887,6 +887,10 @@
 
 ### MediaServiceManifest
 
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+||||||
+
 ### MediaServiceData
 
 |Name|Type|Mandatory|Additional|Description|
