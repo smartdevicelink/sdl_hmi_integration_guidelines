@@ -962,3 +962,36 @@
 |hourlyForecast|Common.WeatherData|false|array: true<br>minsize: 1<br>maxsize: 96||
 |multidayForecast|Common.WeatherData|false|array: true<br>minsize: 1<br>maxsize: 30||
 |alerts|Common.WeatherAlert|false|array: true<br>minsize: 1<br>maxsize: 10|This array should be ordered with the first object being the current day|
+
+### NavigationServiceManifest
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|acceptsWayPoints|Boolean|false||Informs the subscriber if this service can actually accept way points|
+
+### NavigationInstruction
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|locationDetails|Common.LocationDetails|true|||
+|action|[Common.NavigationAction](../enums/#navigationaction)|true|||
+|eta|Common.DateTime|false|||
+|bearing|Integer|false|minvalue: 0<br>maxvalue:359|The angle at which this instruction takes place. For example, 0 would mean straight, less than 45 is bearing right, greater than 135 is sharp right, between 45 and 135 is a regular right, and 180 is a U-Turn, etc|
+|junctionType|[Common.NavigationJunction](../enums/#navigationjunction)|false|||
+|drivingSide|[Common.Direction](../enums/#direction)|false||Used to infer which side of the road this instruction takes place. For a U-Turn (action=TURN, bearing=180) this will determine which direction the turn should take place|
+|details|String|false||This is a string representation of this instruction, used to display instructions to the users. This is not intended to be read aloud to the users, see the param prompt in NavigationServiceData for that|
+|image|Common.Image|false||An image representation of this instruction|
+
+### NavigationServiceData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|timeStamp|Common.DateTime|true||This is the timestamp of when the data was generated. This is to ensure any time or distance given in the data can accurately be adjusted if necessary|
+|origin|Common.LocationDetails|false|||
+|destination|Common.LocationDetails|false|||
+|destinationETA|Common.DateTime|false|||
+|instructions|Common.NavigationInstruction|false|array: true|This array should be ordered with all remaining instructions. The start of this array should always contain the next instruction|
+|nextInstructionETA|Common.DateTime|false|||
+|nextInstructionDistance|Float|false||The distance to this instruction from current location. This should only be updated ever .1 unit of distance. For more accuracy the consumer can use the GPS location of itself and the next instruction|
+|nextInstructionDistanceScale|Float|false||Distance till next maneuver (starting from) from previous maneuver|
+|prompt|String|false||This is a prompt message that should be conveyed to the user through either display or voice (TTS). This param will change often as it should represent the following: approaching instruction, post instruction, alerts that affect the current navigation session, etc|
