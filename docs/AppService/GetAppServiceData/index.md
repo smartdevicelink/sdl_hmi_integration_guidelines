@@ -80,3 +80,18 @@ GetAppServiceData (HMI Consumer)
   }
 }
 ```
+### Example Error
+
+```json
+{
+  "error": {
+    "code": 9,
+    "data": {
+      "method": "AppService.GetAppServiceData"
+    },
+    "message": "No app service provider with serviceType: MUSIC is available"
+  },
+  "id": 1000,
+  "jsonrpc": "2.0"
+}
+```

@@ -1140,7 +1140,7 @@
 |REMOVED|1|The service has just been unpublished with the module and is no longer accessible|
 |ACTIVATED|2|The service is activated as the primary service of this type. All requests dealing with this service type will be handled by this service|
 |DEACTIVATED|3|The service has been deactivated as the primary service of its type|
-|MANIFEST_UPDATE|4|The service has updated its manifest. This could imply updated capabilities|
+|MANIFEST_UPDATE|4|The service has updated its manifest. This could imply updated capabilities. **Note: Currently unimplemented**|
 
 ### SystemCapabilityType
 
