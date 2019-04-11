@@ -7,12 +7,17 @@ Sender
 : SDL / HMI
 
 Purpose
-: Perform a predefined action on a service provider
+: Request a service provider to perform a predefined action.
 
 ### Request
 
 !!! MUST
 Process `serviceUri` according to whatever predefined schema is offered by the HMI service
+!!!
+
+!!! NOTE
+If the HMI is the ASC, SDL will:
+1. Activate the service specified with `serviceID` if `requestServiceActive` is set to `true`
 !!!
 
 #### Parameters
@@ -34,13 +39,13 @@ Process `serviceUri` according to whatever predefined schema is offered by the H
 
 ### Sequence Diagrams
 |||
-PerformAppServiceInteraction
-![PerformAppServiceInteraction with HMI ASC](./assets/PerformAppServiceInteractionFromHMI.png)
+PerformAppServiceInteraction with HMI ASC
+![PerformAppServiceInteraction](./assets/PerformAppServiceInteractionFromHMI.png)
 |||
 
 |||
-PerformAppServiceInteraction
-![PerformAppServiceInteraction with Mobile ASC](./assets/PerformAppServiceInteractionFromMobile.png)
+PerformAppServiceInteraction with Mobile ASC
+![PerformAppServiceInteraction](./assets/PerformAppServiceInteractionFromMobile.png)
 |||
 
 ### Example Request

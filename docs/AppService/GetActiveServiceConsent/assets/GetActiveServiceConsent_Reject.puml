@@ -3,15 +3,15 @@
 skinparam ParticipantPadding 36
 skinparam defaultFontSize 10
 
-participant AppConsumer
+participant MobileConsumer
 participant Core
 participant HMI
 
-AppConsumer -> Core : PerformAppServiceInteraction\n(requestServiceActive:true)
+MobileConsumer -> Core : PerformAppServiceInteraction\n(requestServiceActive:true)
 Core -> Core : Increase RPC Timeout
 Core -> HMI : AS.GetActiveServiceConsent\n("providerID")
 HMI -> HMI : Prompt user to \nactivate service
 HMI --> Core : AS.GetActiveServiceConsent\n(false)
 
-Core --> AppConsumer : PerformAppServiceInteraction\n(USER_DISALLOWED)
+Core --> MobileConsumer : PerformAppServiceInteraction\n(USER_DISALLOWED)
 @enduml

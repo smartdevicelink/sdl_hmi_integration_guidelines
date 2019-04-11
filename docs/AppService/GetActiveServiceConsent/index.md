@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Request an app service to become the active service of it's type
+: Request user consent to activate an app service
 
 ### Request
 
@@ -32,13 +32,13 @@ Purpose
 
 ### Sequence Diagrams
 |||
-GetActiveServiceConsent
-![GetActiveServiceConsent user accepts prompt](./assets/GetActiveServiceConsent_Allow.png)
+GetActiveServiceConsent (user accepts prompt)
+![GetActiveServiceConsent](./assets/GetActiveServiceConsent_Allow.png)
 |||
 
 |||
-GetActiveServiceConsent
-![GetActiveServiceConsent user rejects prompt](./assets/GetActiveServiceConsent_Reject.png)
+GetActiveServiceConsent (user rejects prompt)
+![GetActiveServiceConsent](./assets/GetActiveServiceConsent_Reject.png)
 |||
 
 ### Example Request
