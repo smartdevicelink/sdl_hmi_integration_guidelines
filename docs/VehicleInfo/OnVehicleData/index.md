@@ -44,6 +44,7 @@ Purpose
 |fuelRange|[Common.FuelRange](../../common/structs/#fuelrange)|false|minsize=0<br>maxsize=100<br>array=true|
 |engineOilLife|Float|false|minvalue=0<br>maxvalue=100|
 |electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
+|cloudAppVehicleID|String|false||
 
 ### Sequence Diagrams
 |||
