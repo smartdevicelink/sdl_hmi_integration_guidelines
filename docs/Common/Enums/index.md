@@ -529,6 +529,7 @@
 |USER_EXIT|1|By getting this value, SDL puts the named app to NONE HMILevel|
 |UNAUTHORIZED_TRANSPORT_REGISTRATION|2|By getting this value, SDL unregisters the named application|
 |UNSUPPORTED_HMI_RESOURCE|3|By getting this value, SDL unregisters the named application|
+|CLOSE_CLOUD_CONNECTION|4|By getting this value, SDL puts the named app to NONE HMILevel. Used by the HMI to close a cloud app connection|
 
 ### IgnitionStatus
 
@@ -715,6 +716,7 @@
 |MEDIA|18||
 |FOTA|19||  
 |OEM_SPECIFIC|20||
+|ICON_URL|21||
 
 ### ConsentSource
 
