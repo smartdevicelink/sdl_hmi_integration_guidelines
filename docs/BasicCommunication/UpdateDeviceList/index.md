@@ -27,6 +27,10 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
     * SDL learns about a new device connected over Wifi
     * SDL sends `BasicCommunication.UpdateDeviceList` with the name and id of the discovered device to the HMI
     * SDL sends `BasicCommunication.OnAppRegistered` to the HMI and does not wait for `OnDeviceChosen` or `OnFindApplications` notifications
+  4. Cloud App Websockets
+    * The application manager queries the policy table for cloud app policy entries
+    * For each policy table entry the websocket transport adapter creates a cloud device for each cloud application.
+    * SDL sends `BasicCommunication.UpdateDeviceList` with the names, IDs, and trasnportType:CLOUD_WEBSOCKET for each cloud device
 
 !!!
 

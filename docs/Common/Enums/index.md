@@ -23,8 +23,10 @@
 |Name|Value|Description|
 |:---|:----|:----------|
 |BLUETOOTH|0||
-|USB|1||
-|WIFI|2||
+|USB_IOS|1||
+|USB_AOA|2||
+|WIFI|3||
+|CLOUD_WEBSOCKET|4|Websocket connection used to connect to remote cloud application|
 
 ### EventTypes
 
@@ -66,6 +68,13 @@
 |SYSTEM|9||
 |PROJECTION|10||
 |REMOTE_CONTROL|11||
+
+### CloudConnectionStatus
+|Name|Value|Description|
+|:---|:----|:----------|
+|NOT_CONNECTED|0|No active websocket session or ongoing connection attempts|
+|CONNECTED|1|Websocket is active|
+|RETRY|2|Websocket connection failed and retry attempts are ongoing|
 
 ### SpeechCapabilities
 

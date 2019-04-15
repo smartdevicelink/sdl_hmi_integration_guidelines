@@ -60,6 +60,10 @@ If the application does NOT resume data successfully:
    * If iOS device was connected over Bluetooth with applications registered and running on SDL and was also connected over USB, SDL must start reconnection timer and NOT send OnAppRegistered to HMI.
 !!!
 
+!!! NOTE
+SDL Apps that are using the websocket transport adapter will send `OnAppRegistered` after the user has activated the app and the websocket connection is opened. The HMI should not use OnAppRegistered for updating the available apps in the app list. [BC.UpdateAppList](../UpdateAppList) should be used for updating the app list. 
+!!!
+
 
 
 ### Notification
@@ -114,6 +118,77 @@ App Registers on Bluetooth
         "isMediaApplication" : false
       }
     "resumeVRGrammars" : true
+  }
+}
+```
+
+```json
+{
+  "jsonrpc": "2.0",
+  "method": "BasicCommunication.OnAppRegistered",
+  "params": {
+    "application": {
+      "appID": 845030685,
+      "appName": "SDL App",
+      "appType": [
+        "DEFAULT"
+      ],
+      "cloudConnectionStatus": "CONNECTED",
+      "dayColorScheme": {
+        "backgroundColor": {
+          "blue": 98,
+          "green": 78,
+          "red": 36
+        },
+        "primaryColor": {
+          "blue": 248,
+          "green": 246,
+          "red": 242
+        },
+        "secondaryColor": {
+          "blue": 98,
+          "green": 78,
+          "red": 36
+        }
+      },
+      "deviceInfo": {
+        "id": "1d92c1e33853c4566641d26e7043e7646da2a4d4a2fa0f99687fdf75f7f40a93",
+        "isSDLAllowed": true,
+        "name": "ws://192.168.1.69:3000/",
+        "transportType": "CLOUD_WEBSOCKET"
+      },
+      "hmiDisplayLanguageDesired": "EN-US",
+      "isCloudApplication": true,
+      "isMediaApplication": false,
+      "ngnMediaScreenAppName": "SDLApp",
+      "nightColorScheme": {
+        "backgroundColor": {
+          "blue": 35,
+          "green": 17,
+          "red": 2
+        },
+        "primaryColor": {
+          "blue": 248,
+          "green": 246,
+          "red": 242
+        },
+        "secondaryColor": {
+          "blue": 98,
+          "green": 78,
+          "red": 36
+        }
+      },
+      "policyAppID": "123456",
+      "requestSubType": [],
+      "requestType": [],
+      "vrSynonyms": [
+        "SDLApp"
+      ]
+    },
+    "priority": "NONE",
+    "vrSynonyms": [
+      "SDLApp"
+    ]
   }
 }
 ```
