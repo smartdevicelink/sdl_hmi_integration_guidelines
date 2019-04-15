@@ -1,0 +1,11 @@
+@startuml
+
+participant Core
+participant HMI
+
+HMI -> Core : AppServiceActivation\n(serviceID: "providerID", \nsetAsDefault: true)
+
+Core -> Core : SetDefaultService("providerID")
+
+Core -> HMI : AppServiceActivation\n("providerID", true)
+@enduml

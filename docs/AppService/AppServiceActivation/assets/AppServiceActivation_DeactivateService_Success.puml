@@ -1,0 +1,16 @@
+@startuml
+
+participant Mobile
+participant Core
+participant HMI
+
+HMI -> Core : AppServiceActivation\n(serviceID: "providerID", \nactivate: false)
+
+Core -> Core : DeactivateAppService("providerID")
+
+Core -> Mobile : OnSystemCapabilityUpdated\n(APP_SERVICES, DEACTIVATED)
+
+Core -> HMI : OnSystemCapabilityUpdated\n(APP_SERVICES, DEACTIVATED)
+
+Core -> HMI : AppServiceActivation\n("providerID", false)
+@enduml

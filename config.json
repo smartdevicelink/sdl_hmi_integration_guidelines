@@ -496,6 +496,9 @@
             },
             {
               "name": "GetAppServiceRecords"
+            },
+            {
+              "name": "AppServiceActivation"
             }
           ]
         },
