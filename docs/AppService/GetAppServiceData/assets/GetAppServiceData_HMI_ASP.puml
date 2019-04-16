@@ -3,7 +3,7 @@ participant HMIProvider
 participant Core
 participant MobileConsumer
 
-note left of HMIProvider: HMI has published a\nMEDIA app service
+note left of HMIProvider: HMI is the ASP\nfor the active\nMEDIA service
 
 MobileConsumer -> Core: GetAppServiceData(MEDIA)
 Core -> Core : Increase RPC Timeout

@@ -60,7 +60,7 @@ GetFile (HMI Provider)
 		"method": "BasicCommunication.GetFilePath",
 		"code": 0,
 		"fileType": "JSON",
-		"filePath": "/home/user/HMI/somfile.json"
+		"filePath": "/home/user/HMI/somefile.json"
 	}
 }
 ```

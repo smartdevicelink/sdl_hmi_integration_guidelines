@@ -7,10 +7,12 @@ Sender
 : HMI
 
 Purpose
-: Get service records of a specfic service type.
+: Get service records of a specific service type.
 
 !!! note
-If `serviceType` is not included in request, all service records for all types will be returned
+
+If `serviceType` is not included in request, all service records will be returned
+
 !!!
 
 
