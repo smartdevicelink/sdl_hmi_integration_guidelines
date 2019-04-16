@@ -9,6 +9,13 @@ Sender
 Purpose
 : Get current values of specified vehicle data types.
 
+!!! note
+
+  CloudAppVehicleID  
+  * Parameter used by cloud apps or the policy server to identify the head unit  
+  * User may choose to reset this value in case the vehicle changes owners
+
+!!!
 ### Request
 
 #### Parameters

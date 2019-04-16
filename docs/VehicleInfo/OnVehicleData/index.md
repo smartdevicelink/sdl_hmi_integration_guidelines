@@ -9,6 +9,13 @@ Sender
 Purpose
 : Inform SDL about changes to subscribed vehicle data values.
 
+!!! note
+
+  CloudAppVehicleID  
+  * Parameter used by cloud apps or the policy server to identify the head unit  
+  * User may choose to reset this value in case the vehicle changes owners
+
+!!!
 ### Notification
 
 #### Parameters
