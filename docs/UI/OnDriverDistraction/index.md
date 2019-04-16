@@ -14,7 +14,6 @@ Purpose
 !!! must
 
 1. Inform SDL whenever the driver distraction mode is activated/deactivated on HMI.
-2. Allow a passenger to dismiss the lock screen.
 
 !!!
 
