@@ -16,7 +16,7 @@ Process `serviceUri` according to whatever predefined schema is offered by the H
 !!!
 
 !!! NOTE
-If the HMI is the ASC, SDL will:
+If the HMI is the <span title="App Service Consumer">ASC</span>, SDL will:
 1. Activate the service specified with `serviceID` if `requestServiceActive` is set to `true`
 !!!
 
@@ -26,7 +26,7 @@ If the HMI is the ASC, SDL will:
 |:---|:---|:--------|:---------|
 |serviceUri|String|true||
 |serviceID|String|true||
-|originApp|String|false|Non-mandatory only if HMI is the ASC|
+|originApp|String|false|Non-mandatory only if HMI is the <span title="App Service Consumer">ASC</span>|
 |requestServiceActive|Boolean|false||
 
 ### Response
@@ -39,12 +39,12 @@ If the HMI is the ASC, SDL will:
 
 ### Sequence Diagrams
 |||
-PerformAppServiceInteraction with HMI ASC
+PerformAppServiceInteraction with HMI <span title="App Service Consumer">ASC</span>
 ![PerformAppServiceInteraction](./assets/PerformAppServiceInteractionFromHMI.png)
 |||
 
 |||
-PerformAppServiceInteraction with Mobile ASC
+PerformAppServiceInteraction with Mobile <span title="App Service Consumer">ASC</span>
 ![PerformAppServiceInteraction](./assets/PerformAppServiceInteractionFromMobile.png)
 |||
 
