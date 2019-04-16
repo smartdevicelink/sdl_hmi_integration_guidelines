@@ -489,6 +489,12 @@
               "name": "OnAppServiceData"
             },
             {
+              "name": "PerformAppServiceInteraction"
+            },
+            {
+              "name": "GetActiveServiceConsent"
+            },
+            {
               "name": "GetAppServiceRecords"
             }
           ]
