@@ -1,7 +1,7 @@
 ## StartAudioStream
 
 Type
-: Notification
+: Request
 
 Sender
 : SDL
