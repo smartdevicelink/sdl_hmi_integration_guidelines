@@ -843,7 +843,7 @@
 |VEHICLEDATA_FUELRANGE|27||
 |VEHICLEDATA_ENGINEOILLIFE|28||
 |VEHICLEDATA_ELECTRONICPARKBRAKESTATUS|29||
-|VEHICLEDATA_CLOUDAPPVEHICLEID|30| Parameter used by cloud apps to identify a head unit|
+|VEHICLEDATA_CLOUDAPPVEHICLEID|30| Parameter used by cloud apps or the policy server to identify a head unit|
 
 ### VideoStreamingProtocol
 
