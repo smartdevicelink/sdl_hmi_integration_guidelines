@@ -1,7 +1,7 @@
 ## StopAudioStream
 
 Type
-: Notification
+: Request
 
 Sender
 : SDL

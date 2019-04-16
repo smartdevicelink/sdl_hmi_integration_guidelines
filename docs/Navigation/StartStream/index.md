@@ -1,7 +1,7 @@
 ## StartStream
 
 Type
-: Notification
+: Request
 
 Sender
 : SDL
