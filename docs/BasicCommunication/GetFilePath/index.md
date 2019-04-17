@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Retrieve a file path from the HMI app service provider
+: Retrieve a file path from the HMI App Service Provider (ASP)
 
 ### Request
 
@@ -60,7 +60,7 @@ GetFile (HMI Provider)
 		"method": "BasicCommunication.GetFilePath",
 		"code": 0,
 		"fileType": "JSON",
-		"filePath": "/home/user/HMI/somfile.json"
+		"filePath": "/home/user/HMI/somefile.json"
 	}
 }
 ```

@@ -1,0 +1,23 @@
+@startuml
+
+skinparam ParticipantPadding 36
+skinparam defaultFontSize 10
+
+participant MobileConsumer
+participant ServiceProvider
+participant Core
+participant HMI
+
+MobileConsumer -> Core : PerformAppServiceInteraction\n(requestServiceActive:true)
+Core -> Core : Increase RPC Timeout
+opt Consumer is not in foreground
+  Core -> HMI : AS.GetActiveServiceConsent\n("providerID")
+  HMI -> HMI : Prompt user to \nactivate service
+  HMI --> Core : AS.GetActiveServiceConsent\n(true)
+end
+Core -> Core : ActivateAppService("providerID")
+Core -> ServiceProvider : PerformAppServiceInteraction()
+ServiceProvider --> Core : PerformAppServiceInteraction\n(serviceSpecificResult:"result", SUCCESS)
+
+Core --> MobileConsumer : PerformAppServiceInteraction\n("result", SUCCESS)
+@enduml

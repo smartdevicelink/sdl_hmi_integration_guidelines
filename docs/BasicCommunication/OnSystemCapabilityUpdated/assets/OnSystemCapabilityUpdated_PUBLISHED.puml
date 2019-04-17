@@ -1,15 +1,12 @@
 @startuml OnSystemCapabilityUpdated_PUBLISHED
 participant Mobile
 participant Core
-participant AppServiceManager
 participant HMI
 
 Mobile -> Core : PublishAppServiceRequest
 Core -> Core : SystemCapability:\nSubscribeTo\n(APP_SERVICES)
-Core -> AppServiceManager : PublishAppService
-AppServiceManager -> Core :BroadcastCapabilityUpdate
-Core --> Mobile : PublishAppServiceResponse
 Core ->> Mobile : OnSystemCapabilityUpdated\n(APP_SERVICES, PUBLISHED)
-Core ->> HMI : BasicCommunication.OnSystemCapabilityUpdated\n(APP_SERVICES, PUBLISHED)
+Core ->> HMI : BasicCommunication\n.OnSystemCapabilityUpdated\n(APP_SERVICES, PUBLISHED)
+Core --> Mobile : PublishAppServiceResponse
 
 @enduml

@@ -7,8 +7,14 @@ Sender
 : HMI / SDL
 
 Purpose
-: Sent by the app service provider when AppServiceData of a subscribed service is updated. **HMI->SDL** if the HMI is a producer, **SDL->HMI** if the HMI is a consumer
+: Sent by the app service provider when its service data is updated. Broadcast by SDL to all consumers subscribed to this service type.
 
+!!! note
+
+* **HMI->SDL** if HMI App Service Provider (ASP) is sending updated service data  
+* **SDL->HMI** if HMI App Service Consumer (ASC) is receiving updated service data
+
+!!!
 ### Notification
 
 #### Parameters

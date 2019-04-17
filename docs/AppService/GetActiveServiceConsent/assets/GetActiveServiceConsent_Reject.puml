@@ -1,0 +1,17 @@
+@startuml
+
+skinparam ParticipantPadding 36
+skinparam defaultFontSize 10
+
+participant MobileConsumer
+participant Core
+participant HMI
+
+MobileConsumer -> Core : PerformAppServiceInteraction\n(requestServiceActive:true)
+Core -> Core : Increase RPC Timeout
+Core -> HMI : AS.GetActiveServiceConsent\n("providerID")
+HMI -> HMI : Prompt user to \nactivate service
+HMI --> Core : AS.GetActiveServiceConsent\n(false)
+
+Core --> MobileConsumer : PerformAppServiceInteraction\n(USER_DISALLOWED)
+@enduml

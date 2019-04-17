@@ -7,8 +7,14 @@ Sender
 : HMI / SDL
 
 Purpose
-: Requests an app service provider for current data related to a specific service. It also includes an option to subscribe to that service for future updates
+: Requests app service data from the active service of a given type. Also gives the option to subscribe to future app service data updates for this serviceType
 
+!!! note
+
+* **HMI->SDL** if HMI App Service Consumer (ASC) is requesting service data
+* **SDL->HMI** if HMI App Service Provider (ASP) is receiving a service data request
+
+!!!
 ### Request
 
 #### Parameters

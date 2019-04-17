@@ -889,9 +889,7 @@
 
 ### MediaServiceManifest
 
-|Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|
-||||||
+There are no defined parameters for this struct.
 
 ### MediaServiceData
 

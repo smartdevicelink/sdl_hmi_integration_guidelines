@@ -28,6 +28,8 @@ Abbreviations used in this document are collected in the table below
 
 | Abbreviation | Meaning     |
 | :------------- | :------------- |
+|ASC|App Service Consumer|
+|ASP|App Service Provider|
 |BT|Bluetooth|
 |CID|Center Information Display|
 |DID|Data Identifier|
@@ -45,6 +47,6 @@ Abbreviations used in this document are collected in the table below
 |SDL|SmartDeviceLink|
 |SEE|Software Engineering Environment|
 |TTS|Text To Speech|
+|UTC|Universal Time Coordinate|
 |VDOP|Vertical Dilution of Precision|
 |VR|Voice Recognition|
-|UTC|Universal Time Coordinate|

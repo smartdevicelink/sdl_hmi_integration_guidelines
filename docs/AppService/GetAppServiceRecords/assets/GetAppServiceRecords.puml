@@ -1,13 +1,10 @@
 @startuml GetAppServiceRecords
-participant HMIConsumer
+participant HMI
 participant Core
-participant MobileProvider
-participant HMIProvider
 
-MobileProvider -> Core: PublishAppService(MEDIA)
-Core --> MobileProvider: PublishAppService Response
-HMIProvider -> Core: AppService.PublishAppService(MEDIA)
-Core --> HMIProvider: AppService.PublishAppService Response
-HMIConsumer -> Core: AppService.GetAppServiceRecords(MEDIA)
-Core --> HMIConsumer: AppService.GetAppServiceRecords Response
+note right of Core: Mobile ASP has published a MEDIA app service\n(serviceName: "Mobile Media Service", serviceId: "service1")
+note right of Core: HMI ASP has published a MEDIA app service\n(serviceName: "HMI Media Service", serviceId: "service2")
+
+HMI -> Core: AppService.GetAppServiceRecords(MEDIA)
+Core --> HMI: AppService.GetAppServiceRecords Response([\n{"service1", "Mobile Media Service"},\n{"service2", "HMI Media Service"}\n])
 @enduml
