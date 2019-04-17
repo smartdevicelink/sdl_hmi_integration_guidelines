@@ -1123,3 +1123,72 @@
 |PROMPT|0||
 |DESTINATION|1||
 |QUEUE|2||
+
+### AppServiceType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MEDIA|0||
+|WEATHER|1||
+|NAVIGATION|2||
+
+### ServiceUpdateReason
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|PUBLISHED|0|The service has just been published with the module and once activated to the primary service of its type, it will be ready for possible consumption|
+|REMOVED|1|The service has just been unpublished with the module and is no longer accessible|
+|ACTIVATED|2|The service is activated as the primary service of this type. All requests dealing with this service type will be handled by this service|
+|DEACTIVATED|3|The service has been deactivated as the primary service of its type|
+|MANIFEST_UPDATE|4|The service has updated its manifest. This could imply updated capabilities. **Note: Currently unimplemented**|
+
+### SystemCapabilityType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|NAVIGATION|0||
+|PHONE_CALL|1||
+|VIDEO_STREAMING|2||
+|REMOTE_CONTROL|3||
+|APP_SERVICES|4||
+
+### MediaType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MUSIC|0||
+|PODCAST|1||
+|AUDIOBOOK|2||
+|OTHER|3||
+
+### NavigationAction
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|TURN|0|Using this action plus a supplied direction can give the type of turn|
+|EXIT|1||
+|STAY|2||
+|MERGE|3||
+|FERRY|4||
+|CAR_SHUTTLE_TRAIN|5||
+|WAYPOINT|6||
+
+### NavigationJunction
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|REGULAR|0|A junction that represents a standard intersection with a single road crossing another|
+|BIFURCATION|1|A junction where the road splits off into two paths; a fork in the road|
+|MULTI_CARRIAGEWAY|2|A junction that has multiple intersections and paths|
+|ROUNDABOUT|3|A junction where traffic moves in a single direction around a central, non-traversable point to reach one of the connecting roads|
+|TRAVERSABLE_ROUNDABOUT|4|Similar to a roundabout, however the center of the roundabout is fully traversable. Also known as a mini-roundabout|
+|JUGHANDLE|5|A junction where lefts diverge to the right, then curve to the left, converting a left turn to a crossing maneuver|
+|ALL_WAY_YIELD|6|Multiple way intersection that allows traffic to flow based on priority; most commonly right of way and first in, first out|
+|TURN_AROUND|7|A junction designated for traffic turn arounds|
+
+### Direction
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|LEFT|0||
+|RIGHT|1||

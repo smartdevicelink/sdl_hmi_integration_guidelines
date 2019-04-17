@@ -1,0 +1,16 @@
+@startuml OnSystemCapabilityUpdated_REMOVED
+
+participant Mobile
+participant Core
+participant HMI
+
+note left of Mobile: Mobile app has \nmultiple published \napp services
+
+Mobile -> Core : Disconnect
+Core -> Core : UnregisterApplication
+
+loop For every service published by Application
+    Core ->> Mobile : OnSystemCapabilityUpdated\n(APP_SERVICES, REMOVED)
+    Core ->> HMI : BasicCommunication\n.OnSystemCapabilityUpdated\n(APP_SERVICES, REMOVED)
+end
+@enduml

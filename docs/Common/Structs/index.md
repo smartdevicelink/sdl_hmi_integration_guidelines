@@ -818,3 +818,182 @@
 |subLocality|String|false|minlength="0"<br>maxlength="200"|Hypernym for district|
 |thoroughfare|String|false|minlength="0"<br>maxlength="200"|Hypernym for street, road etc|
 |subThoroughfare|String|false|minlength="0"<br>maxlength="200"|Portion of thoroughfare (e.g. house number)|
+
+### SyncMsgVersion
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|majorVersion|Integer|true|minvalue: 1<br>maxvalue: 10|The major version indicates versions that is not-compatible to previous versions|
+|minorVersion|Integer|true|minvalue: 0<br>maxvalue: 1000|The minor version indicates a change to a previous version that should still allow to be run on an older version (with limited functionality)|
+|patchVersion|Integer|false|minvalue: 0<br>maxvalue: 1000|The patch version indicates a fix to existing functionality in a previous version that should still be able to be run on an older version|
+
+### AppServiceManifest
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|serviceName|String|false||Unique name of this service|
+|serviceType|String|true||The type of service that is to be offered by this app|
+|serviceIcon|Common.Image|false||The icon to be associated with this service. Most likely the same as the appIcon|
+|allowAppConsumers|Boolean|false|defvalue: false|If true, app service consumers beyond the IVI system will be able to access this service. If false, only the IVI system will be able consume the service. If not provided, it is assumed to be false|
+|rpcSpecVersion|Common.SyncMsgVersion|false||This is the max RPC Spec version the app service understands. This is important during the RPC passthrough functionality. If not included, it is assumed the max version of the module is acceptable|
+|handledRPCs|Integer|false|array: true|This field contains the Function IDs for the RPCs that this service intends to handle correctly. This means the service will provide meaningful responses|
+|mediaServiceManifest|Common.MediaServiceManifest|false|||
+|weatherServiceManifest|Common.WeatherServiceManifest|false|||
+|navigationServiceManifest|Common.NavigationServiceManifest|false|||
+
+
+### AppServiceRecord
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|serviceID|String|true||A unique ID tied to this specific service record. The ID is supplied by the module that services publish themselves|
+|serviceManifest|Common.AppServiceManifest|true||Manifest for the service that this record is for|
+|servicePublished|Boolean|true||If true, the service is published and available. If false, the service has likely just been unpublished, and should be considered unavailable|
+|serviceActive|Boolean|true||If true, the service is the active primary service of the supplied service type. It will receive all potential RPCs that are passed through to that service type. If false, it is not the primary service of the supplied type. See servicePublished for its availability|
+
+### AppServiceData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|serviceType|String|true||The type of service that is to be offered by this app. See AppServiceType for known enum equivalent types. Parameter is a string to allow for new service types to be used by apps on older versions of SDL Core|
+|serviceID|String|true||A unique ID tied to this specific service|
+|mediaServiceData|Common.MediaServiceData|false|||
+|weatherServiceData|Common.WeatherServiceData|false|||
+|navigationServiceData|Common.NavigationServiceData|false|||
+
+### AppServiceCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|updateReason|[Common.ServiceUpdateReason](../enums/#serviceupdatereason)|false||Only included in OnSystemCapabilityUpdated. Update reason for service record|
+|updatedAppServiceRecord|Common.AppServiceRecord|true||Service record for a specific app service provider|
+
+### AppServicesCapabilities
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|appServices|Common.AppServiceCapability|false|array: true|An array of currently available services. If this is an update to the capability the affected services will include an update reason in that item|
+
+### SystemCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|systemCapabilityType|[Common.SystemCapabilityType](../enums/#systemcapabilitytype)|true||Used as a descriptor of what data to expect in this struct. The corresponding param to this enum should be included and the only other param included|
+|navigationCapability|Common.NavigationCapability|false||Describes extended capabilities for onboard navigation system|
+|phoneCapability|Common.PhoneCapability|false||Describes extended capabilities of the module's phone feature|
+|videoStreamingCapability|Common.VideoStreamingCapability|false||Describes extended capabilities of the module's phone feature|
+|remoteControlCapability|Common.RemoteControlCapabilities|false||Describes extended capabilities of the module's phone feature|
+|appServicesCapabilities|Common.AppServicesCapabilities|false||An array of currently available services. If this is an update to the capability the affected services will include an update reason in that item|
+
+### MediaServiceManifest
+
+There are no defined parameters for this struct.
+
+### MediaServiceData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|mediaType|[Common.MediaType](../enums/#mediatype)|false||The type of the currently playing or paused track|
+|mediaTitle|String|false||Music: The name of the current track<br>Podcast: The name of the current episode<br>Audiobook: The name of the current chapter|
+|mediaArtist|String|false||Music: The name of the current album artist<br>Podcast: The provider of the podcast (hosts, network, company)<br>Audiobook: The book author's name|
+|mediaAlbum|String|false||Music: The name of the current album<br>Podcast: The name of the current podcast show<br>Audiobook: The name of the current book|
+|playlistName|String|false||Music: The name of the playlist or radio station, if the user is playing from a playlist, otherwise, Null<br>Podcast: The name of the playlist, if the user is playing from a playlist, otherwise, Null<br>Audiobook: Likely not applicable, possibly a collection or "playlist" of books|
+|isExplicit|Boolean|false||Whether or not the content currently playing (e.g. the track, episode, or book) contains explicit content|
+|trackPlaybackProgress|Integer|false||Music: The current progress of the track in seconds<br>Podcast: The current progress of the episode in seconds<br>Audiobook: The current progress of the current segment (e.g. the chapter) in seconds|
+|trackPlaybackDuration|Integer|false||Music: The total duration of the track in seconds<br>Podcast: The total duration of the episode in seconds<br>Audiobook: The total duration of the current segment (e.g. the chapter) in seconds|
+|queuePlaybackProgress|Integer|false||Music: The current progress of the playback queue in seconds<br>Podcast: The current progress of the playback queue in seconds<br>Audiobook: The current progress of the playback queue (e.g. the book) in seconds|
+|queuePlaybackDuration|Integer|false||Music: The total duration of the playback queue in seconds<br>Podcast: The total duration of the playback queue in seconds<br>Audiobook: The total duration of the playback queue (e.g. the book) in seconds|
+|queueCurrentTrackNumber|Integer|false||Music: The current number (1 based) of the track in the playback queue<br>Podcast: The current number (1 based) of the episode in the playback queue<br>Audiobook: The current number (1 based) of the episode in the playback queue (e.g. the chapter number in the book)|
+|queueTotalTrackCount|Integer|false||Music: The total number of tracks in the playback queue<br>Podcast: The total number of episodes in the playback queue<br>Audiobook: The total number of sections in the playback queue (e.g. the number of chapters in the book)|
+
+### WeatherServiceManifest
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|currentForecastSupported|Boolean|false|||
+|maxMultidayForecastAmount|Integer|false|||
+|maxHourlyForecastAmount|Integer|false|||
+|maxMinutelyForecastAmount|Integer|false|||
+|weatherForLocationSupported|Boolean|false|||
+
+### WeatherAlert
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|title|String|false|||
+|summary|String|false|||
+|expires|Common.DateTime|false|||
+|regions|String|false|array: true<br>minsize: 1<br> maxsize: 99||
+|severity|String|false|||
+|timeIssued|Common.DateTime|false|||
+
+### WeatherData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|currentTemperature|Common.Temperature|false|||
+|temperatureHigh|Common.Temperature|false|||
+|temperatureLow|Common.Temperature|false|||
+|apparentTemperature|Common.Temperature|false|||
+|apparentTemperatureHigh|Common.Temperature|false|||
+|apparentTemperatureLow|Common.Temperature|false|||
+|weatherSummary|String|false|||
+|time|Common.DateTime|false|||
+|humidity|Float|false|minvalue: 0<br>maxvalue: 1|0 to 1, percentage humidity|
+|cloudCover|Float|false|minvalue: 0<br>maxvalue: 1|0 to 1, percentage cloud cover|
+|moonPhase|Float|false|minvalue: 0<br>maxvalue: 1|0 to 1, percentage of the moon seen, e.g. 0 = no moon, 0.25 = quarter moon|
+|windBearing|Integer|false||In degrees, true north at 0 degrees|
+|windGust|Float|false||km/hr|
+|windSpeed|Float|false||km/hr|
+|nearestStormBearing|Integer|false||In degrees, true north at 0 degrees|
+|nearestStormDistance|Integer|false||In km|
+|precipAccumulation|Float|false||cm|
+|precipIntensity|Float|false||cm of water per hour|
+|precipProbability|Float|false|minvalue: 0<br>maxvalue: 1|0 to 1, percentage chance|
+|precipType|String|false||e.g. "rain", "snow", "sleet", "hail"|
+|visibility|Float|false||In km|
+|weatherIcon|Common.Image|false|||
+
+### WeatherServiceData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.LocationDetails|true|||
+|currentForecast|Common.WeatherData|false|||
+|minuteForecast|Common.WeatherData|false|array: true<br>minsize: 15<br>maxsize: 60||
+|hourlyForecast|Common.WeatherData|false|array: true<br>minsize: 1<br>maxsize: 96||
+|multidayForecast|Common.WeatherData|false|array: true<br>minsize: 1<br>maxsize: 30||
+|alerts|Common.WeatherAlert|false|array: true<br>minsize: 1<br>maxsize: 10|This array should be ordered with the first object being the current day|
+
+### NavigationServiceManifest
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|acceptsWayPoints|Boolean|false||Informs the subscriber if this service can actually accept way points|
+
+### NavigationInstruction
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|locationDetails|Common.LocationDetails|true|||
+|action|[Common.NavigationAction](../enums/#navigationaction)|true|||
+|eta|Common.DateTime|false|||
+|bearing|Integer|false|minvalue: 0<br>maxvalue:359|The angle at which this instruction takes place. For example, 0 would mean straight, less than 45 is bearing right, greater than 135 is sharp right, between 45 and 135 is a regular right, and 180 is a U-Turn, etc|
+|junctionType|[Common.NavigationJunction](../enums/#navigationjunction)|false|||
+|drivingSide|[Common.Direction](../enums/#direction)|false||Used to infer which side of the road this instruction takes place. For a U-Turn (action=TURN, bearing=180) this will determine which direction the turn should take place|
+|details|String|false||This is a string representation of this instruction, used to display instructions to the users. This is not intended to be read aloud to the users, see the param prompt in NavigationServiceData for that|
+|image|Common.Image|false||An image representation of this instruction|
+
+### NavigationServiceData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|timeStamp|Common.DateTime|true||This is the timestamp of when the data was generated. This is to ensure any time or distance given in the data can accurately be adjusted if necessary|
+|origin|Common.LocationDetails|false|||
+|destination|Common.LocationDetails|false|||
+|destinationETA|Common.DateTime|false|||
+|instructions|Common.NavigationInstruction|false|array: true|This array should be ordered with all remaining instructions. The start of this array should always contain the next instruction|
+|nextInstructionETA|Common.DateTime|false|||
+|nextInstructionDistance|Float|false||The distance to this instruction from current location. This should only be updated ever .1 unit of distance. For more accuracy the consumer can use the GPS location of itself and the next instruction|
+|nextInstructionDistanceScale|Float|false||Distance till next maneuver (starting from) from previous maneuver|
+|prompt|String|false||This is a prompt message that should be conveyed to the user through either display or voice (TTS). This param will change often as it should represent the following: approaching instruction, post instruction, alerts that affect the current navigation session, etc|

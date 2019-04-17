@@ -1,0 +1,9 @@
+@startuml PublishAppService
+participant HMIProvider
+participant Core
+
+HMIProvider -> Core: AppService.PublishAppService\n(MEDIA, "HMI Media Service")
+Core ->> HMIProvider : BasicCommunication.OnSystemCapabilityUpdated\n(APP_SERVICES, PUBLISHED)
+Core --> HMIProvider: AppService.PublishAppService Response\n(serviceId: "service1")
+
+@enduml

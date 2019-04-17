@@ -1,0 +1,14 @@
+@startuml GetAppServiceData_HMI_ASP
+participant HMIProvider
+participant Core
+participant MobileConsumer
+
+note left of HMIProvider: HMI is the ASP\nfor the active\nMEDIA service
+
+MobileConsumer -> Core: GetAppServiceData(MEDIA)
+Core -> Core : Increase RPC Timeout
+Core -> HMIProvider: AppService.GetAppServiceData(MEDIA)
+HMIProvider --> Core: AppService.GetAppServiceData Response
+Core --> MobileConsumer: GetAppServiceData Response
+
+@enduml

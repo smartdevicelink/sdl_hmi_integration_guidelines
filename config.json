@@ -109,6 +109,12 @@
             },
             {
               "name": "GetSystemTime"
+            },
+            {
+              "name": "OnSystemCapabilityUpdated"
+            },
+            {
+              "name": "GetFilePath"
             }
           ]
         },
@@ -467,6 +473,32 @@
             },
             {
               "name": "OnRCStatus"
+            }
+          ]
+        },
+        {
+          "name": "AppService",
+          "navigation": [
+            {
+              "name": "PublishAppService"
+            },
+            {
+              "name": "GetAppServiceData"
+            },
+            {
+              "name": "OnAppServiceData"
+            },
+            {
+              "name": "PerformAppServiceInteraction"
+            },
+            {
+              "name": "GetActiveServiceConsent"
+            },
+            {
+              "name": "GetAppServiceRecords"
+            },
+            {
+              "name": "AppServiceActivation"
             }
           ]
         },
