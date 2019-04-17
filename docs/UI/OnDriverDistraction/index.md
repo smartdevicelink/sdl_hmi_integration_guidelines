@@ -19,7 +19,9 @@ Purpose
 
 Driver distraction rules may be specific to contry/area, so it depends on HMI when to trigger activate/deactivate states.
 
-_Note: SDL ignores all invalid notifications which come from HMI (invalid JSON, invalid data types/bounds etc)_
+_Note:_  
+_1. Whether the app receives the notification in current HMILevel is defined by app's assigned Policies._  
+_2. SDL ignores all invalid notifications which come from HMI (invalid JSON, invalid data types/bounds etc)._
 
 #### Parameters
 
