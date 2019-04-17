@@ -756,7 +756,7 @@
 |:---|:----|:----------|
 |SUCCESS|0||
 |UNSUPPORTED_REQUEST|1||
-|UNSUPPORTED_RESOURCE|2||
+|UNSUPPORTED_RESOURCE|2|If this response is returned to core and the related HMI interface state is not available, core will return `success:false` to mobile. Otherwise core will return `success:true`|
 |DISALLOWED|3||
 |REJECTED|4||
 |ABORTED|5||
