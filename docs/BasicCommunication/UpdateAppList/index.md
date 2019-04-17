@@ -28,7 +28,7 @@ SDL adds the VR synonyms of a registered application to the HMI via [OnAppRegist
 !!! Note
 Cloud apps will appear in the app list before they are connected and registered. The `cloudConnectionStatus` parameter in [Common.HMIApplication](../../common/structs/#hmiapplication) can be used to track the connection status of the cloud app. The `isCloudApp` parameter can be used by the HMI to differentiate or group cloud apps away from mobile connected SDL applications. 
 
-The connection to the cloud app will be created by Core after the user activates the app via [`SDL.ActivateApp`](../../SDL/ActivateApp).
+The connection to the cloud app will be created by Core after the user activates the app via [SDL.ActivateApp](../../SDL/ActivateApp).
 !!!
 
 
