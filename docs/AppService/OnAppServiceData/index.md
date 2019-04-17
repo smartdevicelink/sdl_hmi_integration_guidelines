@@ -11,8 +11,8 @@ Purpose
 
 !!! note
 
-* **HMI->SDL** if HMI ASP is sending updated service data  
-* **SDL->HMI** if HMI ASC is receiving updated service data
+* **HMI->SDL** if HMI App Service Provider (ASP) is sending updated service data  
+* **SDL->HMI** if HMI App Service Consumer (ASC) is receiving updated service data
 
 !!!
 ### Notification

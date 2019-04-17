@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Retrieve a file path from the HMI app service provider
+: Retrieve a file path from the HMI App Service Provider (ASP)
 
 ### Request
 
