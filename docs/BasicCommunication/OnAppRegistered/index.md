@@ -122,6 +122,8 @@ App Registers on Bluetooth
 }
 ```
 
+#### Cloud App JSON Example Notification
+
 ```json
 {
   "jsonrpc": "2.0",
