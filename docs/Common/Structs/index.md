@@ -246,7 +246,7 @@
 |dayColorScheme|Common.TemplateColorScheme|false|||
 |nightColorScheme|Common.TemplateColorScheme|false|||
 |isCloudApplication|Boolean|false|||
-|cloudConnectionStatus|[Common.CloudConnectionStatus](../enums/#CloudConnectionStatus)||||
+|cloudConnectionStatus|[Common.CloudConnectionStatus](../enums/#cloudconnectionstatus)|false|||
 
 ### VehicleType
 
