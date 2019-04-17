@@ -1,7 +1,7 @@
 ## StopStream
 
 Type
-: Notification
+: Request
 
 Sender
 : SDL
