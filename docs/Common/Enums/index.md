@@ -23,8 +23,10 @@
 |Name|Value|Description|
 |:---|:----|:----------|
 |BLUETOOTH|0||
-|USB|1||
-|WIFI|2||
+|USB_IOS|1||
+|USB_AOA|2||
+|WIFI|3||
+|CLOUD_WEBSOCKET|4|Websocket connection used to connect to remote cloud application|
 
 ### EventTypes
 
@@ -66,6 +68,13 @@
 |SYSTEM|9||
 |PROJECTION|10||
 |REMOTE_CONTROL|11||
+
+### CloudConnectionStatus
+|Name|Value|Description|
+|:---|:----|:----------|
+|NOT_CONNECTED|0|No active websocket session or ongoing connection attempts|
+|CONNECTED|1|Websocket is active|
+|RETRY|2|Websocket connection failed and retry attempts are ongoing|
 
 ### SpeechCapabilities
 
@@ -529,6 +538,7 @@
 |USER_EXIT|1|By getting this value, SDL puts the named app to NONE HMILevel|
 |UNAUTHORIZED_TRANSPORT_REGISTRATION|2|By getting this value, SDL unregisters the named application|
 |UNSUPPORTED_HMI_RESOURCE|3|By getting this value, SDL unregisters the named application|
+|CLOSE_CLOUD_CONNECTION|4|By getting this value, SDL puts the named app to NONE HMILevel. Used by the HMI to close a cloud app connection|
 
 ### IgnitionStatus
 
@@ -715,6 +725,7 @@
 |MEDIA|18||
 |FOTA|19||  
 |OEM_SPECIFIC|20||
+|ICON_URL|21||
 
 ### ConsentSource
 
@@ -841,6 +852,7 @@
 |VEHICLEDATA_FUELRANGE|27||
 |VEHICLEDATA_ENGINEOILLIFE|28||
 |VEHICLEDATA_ELECTRONICPARKBRAKESTATUS|29||
+|VEHICLEDATA_CLOUDAPPVEHICLEID|30| Parameter used by cloud apps or the policy server to identify a head unit|
 
 ### VideoStreamingProtocol
 

@@ -29,6 +29,11 @@ The HMI may switch layouts or views according to the workflow after deactivation
 
   * Information about the application (name, appID, etc) is provided by SDL via [BC.UpdateAppList](../updateapplist) or [BC.OnAppRegistered](../onappregistered).
   * SDL ignores all invalid notifications which come from the HMI (Invalid JSON, invalid data types/bounds, etc).
+  * If the HMI sends ApplicationExitReason `CLOSE_CLOUD_CONNECTION`
+    * The application will be unregistered.
+    * A [BasicCommunication.UpdateDeviceList](../updatedevicelist) (with the closed application) will be sent by SDL.
+    * The closed application will have a cloudConnectionStatus of `NOT_CONNECTED`
+
   
 !!!
 ### Notification

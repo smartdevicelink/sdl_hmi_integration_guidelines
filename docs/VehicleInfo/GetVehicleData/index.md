@@ -9,6 +9,16 @@ Sender
 Purpose
 : Get current values of specified vehicle data types.
 
+!!! note
+
+#### CloudAppVehicleID
+* An optional parameter used by cloud apps or the policy server to identify the head unit
+* Could be used by a cloud app to identify an incoming connection from core
+* Could be used by a policy server to index cloud app configurations for a specific head unit
+
+The HMI will have to update this field if the user chooses to reset this value (in case the vehicle changes owners)
+
+!!!
 ### Request
 
 #### Parameters
@@ -44,6 +54,7 @@ Purpose
 |fuelRange|Boolean|false||
 |engineOilLife|Boolean|false||
 |electronicParkBrakeStatus|Boolean|false||
+|cloudAppVehicleID|Boolean|false||
 
 ### Response
 
@@ -80,6 +91,7 @@ Purpose
 |fuelRange|[Common.FuelRange](../../common/structs/#fuelrange)|false|minsize=0<br>maxsize=100<br>array=true|
 |engineOilLife|Float|false|minvalue=0<br>maxvalue=100|
 |electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
+|cloudAppVehicleID|String|false||
 
 ### Sequence Diagrams
 |||

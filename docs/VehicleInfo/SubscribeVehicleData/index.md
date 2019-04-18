@@ -43,6 +43,7 @@ Purpose
 |fuelRange|Boolean|false||
 |engineOilLife|Boolean|false||
 |electronicParkBrakeStatus|Boolean|false||
+|cloudAppVehicleID|Boolean|false||
 
 ### Response
 
@@ -78,6 +79,7 @@ Purpose
 |fuelRange|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |engineOilLife|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |electronicParkBrakeStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|cloudAppVehicleID|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
 |||
