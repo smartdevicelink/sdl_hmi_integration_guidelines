@@ -61,7 +61,7 @@ If the application does NOT resume data successfully:
 !!!
 
 !!! NOTE
-SDL Apps that are using the websocket transport adapter will send `OnAppRegistered` after the user has activated the app and the websocket connection is opened. The HMI should not use OnAppRegistered for updating the available apps in the app list. [BC.UpdateAppList](../UpdateAppList) should be used for updating the app list. 
+SDL Apps that are using the websocket transport adapter will send `OnAppRegistered` after the user has activated the app and the websocket connection is opened. The HMI should not use `OnAppRegistered` for updating the available apps in the app list. [BC.UpdateAppList](../UpdateAppList) should be used for updating the app list. 
 !!!
 
 
