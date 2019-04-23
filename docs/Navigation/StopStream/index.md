@@ -1,7 +1,7 @@
 ## StopStream
 
 Type
-: Request
+: Function
 
 Sender
 : SDL
