@@ -8,9 +8,9 @@ Participant "App" as A
 Participant "SDL" as SDL
 Participant "HMI" as HMI
 
-A -> SDL: StartService(serviceType:Video, streamingParams)
+A -->> SDL: StartService(serviceType:Video, streamingParams)
 SDL -> HMI: Navigation.SetVideoConfig(config: streamingParams)
 HMI -> SDL: Navigation.SetVideoConfig(REJECTED, rejectedParams:["codec"])
-SDL -> A: StartServiceNAK(rejectedParams:["codec"])
+SDL -->> A: StartServiceNAK(rejectedParams:["codec"])
 
 @enduml

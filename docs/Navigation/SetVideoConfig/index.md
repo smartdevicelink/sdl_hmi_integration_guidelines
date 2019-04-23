@@ -9,7 +9,7 @@ Sender
 Purpose
 : Negotiate parameters for a new video stream
 
-Navigation.SetVideoConfig represents a request from the app to determine whether a given video streaming configuration is supported by the HMI.
+`Navigation.SetVideoConfig` represents a request from the app to determine whether a given video streaming configuration is supported by the HMI.
 
 !!! must
 
