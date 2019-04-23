@@ -9,7 +9,7 @@ Sender
 Purpose
 : Negotiate parameters for a new video stream
 
-UI.SetVideoConfig represents a request from the app to determine whether a given video streaming configuration is supported by the HMI.
+Navigation.SetVideoConfig represents a request from the app to determine whether a given video streaming configuration is supported by the HMI.
 
 !!! must
 
@@ -58,7 +58,7 @@ SetVideoConfig error flow
 {
   "id" : 70,
   "jsonrpc" : "2.0",
-  "method" : "UI.SetVideoConfig",
+  "method" : "Navigation.SetVideoConfig",
   "params" :
   {
     "config" : 
@@ -82,7 +82,7 @@ SetVideoConfig error flow
   "result" :
   {
     "code" : 0,
-    "method" : "UI.SetVideoConfig"
+    "method" : "Navigation.SetVideoConfig"
   }
 }
 ```
@@ -97,7 +97,7 @@ SetVideoConfig error flow
   {
     "code" : 4,
     "rejectedParams": ["codec", "width"],
-    "method" : "UI.SetVideoConfig"
+    "method" : "Navigation.SetVideoConfig"
   }
 }
 ```

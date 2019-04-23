@@ -9,8 +9,8 @@ Participant "SDL" as SDL
 Participant "HMI" as HMI
 
 A -> SDL: StartService(serviceType:Video, streamingParams)
-SDL -> HMI: UI.SetVideoConfig(config: streamingParams)
-HMI -> SDL: UI.SetVideoConfig(SUCCESS)
+SDL -> HMI: Navigation.SetVideoConfig(config: streamingParams)
+HMI -> SDL: Navigation.SetVideoConfig(SUCCESS)
 SDL -> A: StartServiceACK(streamingParams)
 SDL -> HMI: Navigation.StartStream(url: http://127.0.0.1:5050)
 HMI -> SDL: Navigation.StartStream(SUCCESS)
