@@ -50,7 +50,8 @@ If the application does NOT resume data successfully:
   5. Send an `OnAppActivated` notification to SDL when the user activates an app via the `UI` or `VR`.   
   6. Manage application events by priority. HMI gets proirity information from _OnAppRegistered_, _UpdateAppList_, _ActivateApp_ HMI API.  
   7. HMI must set app icon and create the app title in the mobile apps list in case SDL provides `<icon>` via `OnAppRegistered` notification.  
-  8. HMI must set default app icon in case SDL omits `<icon>` at `OnAppRegistered` notification.
+  8. HMI must set default app icon in case SDL omits `<icon>` at `OnAppRegistered` notification.  
+  9. Differentiate the same app across different devices.
 !!!
 
 !!! NOTE   
@@ -94,6 +95,10 @@ App Registers on USB
 |||
 App Registers on Bluetooth
 ![OnAppRegistered](./assets/OnAppRegisteredBT.png)
+|||
+|||
+Running the same apps from multiple devices at the same time
+![OnAppRegistered](./assets/OnAppRegisteredMultipleDevices.png)
 |||
 
 #### JSON Example Notification
