@@ -160,6 +160,9 @@
               "name": "SendLocation"
             },
             {
+              "name": "SetVideoConfig"
+            },
+            {
               "name": "ShowConstantTBT"
             },
             {
@@ -359,9 +362,6 @@
             },
             {
               "name": "SetMediaClockTimer"
-            },
-            {
-              "name": "SetVideoConfig"
             },
             {
               "name": "Show"
