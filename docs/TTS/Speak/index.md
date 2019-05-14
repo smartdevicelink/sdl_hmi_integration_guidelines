@@ -18,6 +18,7 @@ Purpose
 |ttsChunks|[Common.TTSChunk](../../common/structs/#ttschunk)|true|array: true<br>minsize: 1<br>maxsize: 100|
 |appID|Integer|true||
 |speakType|[Common.MethodName](../../common/enums/#methodname)|false||
+|playTone|Boolean|false||
 
 ### Response
 
@@ -43,7 +44,10 @@ Speak
   {
     "ttsChunks" :
     [
-      "text" : "Please say a command"
+      {
+        "text" : "Please say a command", 
+        "type" : "TEXT"
+      }
     ]
   }
 }

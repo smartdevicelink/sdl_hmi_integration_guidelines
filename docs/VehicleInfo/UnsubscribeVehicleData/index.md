@@ -15,7 +15,6 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|appID|Integer|true||
 |gps|Boolean|false||
 |speed|Boolean|false||
 |rpm|Boolean|false||
@@ -40,6 +39,11 @@ Purpose
 |emergencyEvent|Boolean|false||
 |clusterModeStatus|Boolean|false||
 |myKey|Boolean|false||
+|turnSignal|Boolean|false||
+|fuelRange|Boolean|false||
+|engineOilLife|Boolean|false||
+|electronicParkBrakeStatus|Boolean|false||
+|cloudAppVehicleID|Boolean|false||
 
 ### Response
 
@@ -71,6 +75,11 @@ Purpose
 |emergencyEvent|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |clusterModes|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |myKey|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|turnSignal|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|fuelRange|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|engineOilLife|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|electronicParkBrakeStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|cloudAppVehicleID|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
 |||
@@ -103,8 +112,7 @@ UnsubscribeVehicleData unexpected disconnect
     "deviceStatus" : true,
     "wiperStatus" : true,
     "headLampStatus" : true,
-    "accPedalPosition" : true,
-
+    "accPedalPosition" : true
   }
 }
 ```
@@ -118,80 +126,80 @@ UnsubscribeVehicleData unexpected disconnect
   {
     "gps" :
     {
-      "dataType" : VEHICLEDATA_GPS,
-      "resultCode" : SUCCESS
+      "dataType" : "VEHICLEDATA_GPS",
+      "resultCode" : "SUCCESS"
     },
 
     "speed" :
     {
-      "dataType" : VEHICLEDATA_SPEED,
-      "resultCode" : DATA_NOT_SUBSCRIBED
+      "dataType" : "VEHICLEDATA_SPEED",
+      "resultCode" : "DATA_NOT_SUBSCRIBED"
     },
 
     "fuelLevel_State" :
     {
-      "dataType" : VEHICLEDATA_FUELLEVEL,
-      "resultCode" : SUCCESS
+      "dataType" : "VEHICLEDATA_FUELLEVEL",
+      "resultCode" : "SUCCESS"
     },
 
     "externalTemperature" :
     {
-      "dataType" : VEHICLEDATA_EXTERNTEMP,
-      "resultCode" : DATA_NOT_SUBSCRIBED
+      "dataType" : "VEHICLEDATA_EXTERNTEMP",
+      "resultCode" : "DATA_NOT_SUBSCRIBED"
     },
 
     "prndl" :
     {
-      "dataType" : VEHICLEDATA_PRNDL,
-      "resultCode" : DATA_NOT_SUBSCRIBED
+      "dataType" : "VEHICLEDATA_PRNDL",
+      "resultCode" : "DATA_NOT_SUBSCRIBED"
     },
 
     "tirePressure" :
     {
-      "dataType" : VEHICLEDATA_TIREPRESSURE,
-      "resultCode" : SUCCESS
+      "dataType" : "VEHICLEDATA_TIREPRESSURE",
+      "resultCode" : "SUCCESS"
     },
 
     "odometer" :
     {
-      "dataType" : VEHICLEDATA_odometer,
-      "resultCode" : SUCCESS
+      "dataType" : "VEHICLEDATA_ODOMETER",
+      "resultCode" : "SUCCESS"
     },
 
     "beltStatus" :
     {
-      "dataType" : VEHICLEDATA_BELTSTATUS,
-      "resultCode" : SUCCESS
+      "dataType" : "VEHICLEDATA_BELTSTATUS",
+      "resultCode" : "SUCCESS"
     },
 
     "bodyInformation" :
     {
-      "dataType" : VEHICLEDATA_BODYINFO,
-      "resultCode" : SUCCESS
+      "dataType" : "VEHICLEDATA_BODYINFO",
+      "resultCode" : "SUCCESS"
     },
 
     "deviceStatus" :
     {
-      "dataType" : VEHICLEDATA_DEVICESTATUS,
-      "resultCode" : DATA_NOT_SUBSCRIBED
+      "dataType" : "VEHICLEDATA_DEVICESTATUS",
+      "resultCode" : "DATA_NOT_SUBSCRIBED"
     },
 
     "wiperStatus" :
     {
-      "dataType" : VEHICLEDATA_WIPERSTATUS,
-      "resultCode" : SUCCESS
+      "dataType" : "VEHICLEDATA_WIPERSTATUS",
+      "resultCode" : "SUCCESS"
     },
 
     "headLampStatus" :
     {
-      "dataType" : HEADLAMPSTATUS,
-      "resultCode" : SUCCESS
+      "dataType" : "VEHICLEDATA_HEADLAMPSTATUS",
+      "resultCode" : "SUCCESS"
     },
 
     "accPedalPosition" :
     {
-      "dataType" : VEHICLEDATA_ACCPEDAL,
-      "resultCode" : DATA_NOT_SUBSCRIBED
+      "dataType" : "VEHICLEDATA_ACCPEDAL",
+      "resultCode" : "DATA_NOT_SUBSCRIBED"
     },
 
     "code" : 0,

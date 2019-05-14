@@ -9,6 +9,16 @@ Sender
 Purpose
 : Inform SDL about changes to subscribed vehicle data values.
 
+!!! note
+
+#### CloudAppVehicleID
+* An optional parameter used by cloud apps or the policy server to identify the head unit
+* Could be used by a cloud app to identify an incoming connection from core
+* Could be used by a policy server to index cloud app configurations for a specific head unit
+
+The HMI will have to update this field if the user chooses to reset this value (in case the vehicle changes owners)
+
+!!!
 ### Notification
 
 #### Parameters
@@ -40,6 +50,11 @@ Purpose
 |emergencyEvent|[Common.EmergencyEvent](../../common/structs/#emergencyevent)|false||
 |clusterModeStatus|[Common.ClusterModeStatus](../../common/structs/#clustermodestatus)|false||
 |myKey|[Common.MyKey](../../common/structs/#mykey)|false||
+|turnSignal|[Common.TurnSignal](../../common/enums/#turnsignal)|false||
+|fuelRange|[Common.FuelRange](../../common/structs/#fuelrange)|false|minsize=0<br>maxsize=100<br>array=true|
+|engineOilLife|Float|false|minvalue=0<br>maxvalue=100|
+|electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
+|cloudAppVehicleID|String|false||
 
 ### Sequence Diagrams
 |||
@@ -56,9 +71,9 @@ OnVehicleData
   {
     "speed" : 60,
     "externalTemperature" : -7,
-    "prndl" : THIRD,
+    "prndl" : "THIRD",
     "odometer" : 1066,
-    "wiperStatus" : MAN_INT_ON,
+    "wiperStatus" : "MAN_INT_ON",
     "accPedalPosition" : 70
   }
 }

@@ -1,0 +1,14 @@
+@startuml
+
+participant MobileConsumer
+participant Core
+participant HMI
+
+MobileConsumer -> Core : PerformAppServiceInteraction\n(serviceID: "providerID", \nserviceUri: "method:sample")
+Core -> Core : Increase RPC \nTimeout
+Core -> HMI : AS.PerformAppServiceInteraction\n("providerID", "method:sample")
+
+HMI --> Core : AS.PerformAppServiceInteraction\n(serviceSpecificResult:"result", \nSUCCESS)
+
+Core --> MobileConsumer : PerformAppServiceInteraction\n("result", SUCCESS)
+@enduml

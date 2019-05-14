@@ -27,9 +27,6 @@
               "name": "MixingAudioSupported"
             },
             {
-              "name": "AllowDeviceToConnect"
-            },
-            {
               "name": "SystemRequest"
             },
             {
@@ -63,13 +60,13 @@
               "name": "OnAwakeSDL"
             },
             {
-              "name": "OnEmergencyEvent"
-            },
-            {
               "name": "OnExitAllApplications"
             },
             {
               "name": "OnExitApplication"
+            },
+            {
+              "name": "OnEventChanged"
             },
             {
               "name": "OnFileRemoved"
@@ -79,9 +76,6 @@
             },
             {
               "name": "OnIgnitionCycleOver"
-            },
-            {
-              "name": "OnPhoneCall"
             },
             {
               "name": "OnPutFile"
@@ -105,13 +99,22 @@
               "name": "OnUpdateDeviceList"
             },
             {
-              "name": "PlayTone"
-            },
-            {
               "name": "PolicyUpdate"
             },
             {
               "name": "UpdateAppList"
+            },
+            {
+              "name": "OnSystemTimeReady"
+            },
+            {
+              "name": "GetSystemTime"
+            },
+            {
+              "name": "OnSystemCapabilityUpdated"
+            },
+            {
+              "name": "GetFilePath"
             }
           ]
         },
@@ -129,6 +132,9 @@
             },
             {
               "name": "OnButtonSubscription"
+            },
+            {
+              "name": "ButtonPress"
             }
           ]
         },
@@ -155,6 +161,9 @@
             },
             {
               "name": "SendLocation"
+            },
+            {
+              "name": "SetVideoConfig"
             },
             {
               "name": "ShowConstantTBT"
@@ -343,6 +352,9 @@
               "name": "ScrollableMessage"
             },
             {
+              "name": "SendHapticData"
+            },
+            {
               "name": "SetAppIcon"
             },
             {
@@ -439,6 +451,61 @@
           ]
         },
         {
+          "name": "RC",
+          "navigation": [
+            {
+              "name": "GetCapabilities"
+            },
+            {
+              "name": "GetInteriorVehicleData"
+            },
+            {
+              "name": "GetInteriorVehicleDataConsent"
+            },
+            {
+              "name": "IsReady"
+            },
+            {
+              "name": "OnInteriorVehicleData"
+            },
+            {
+              "name": "OnRemoteControlSettings"
+            },
+            {
+              "name": "SetInteriorVehicleData"
+            },
+            {
+              "name": "OnRCStatus"
+            }
+          ]
+        },
+        {
+          "name": "AppService",
+          "navigation": [
+            {
+              "name": "PublishAppService"
+            },
+            {
+              "name": "GetAppServiceData"
+            },
+            {
+              "name": "OnAppServiceData"
+            },
+            {
+              "name": "PerformAppServiceInteraction"
+            },
+            {
+              "name": "GetActiveServiceConsent"
+            },
+            {
+              "name": "GetAppServiceRecords"
+            },
+            {
+              "name": "AppServiceActivation"
+            }
+          ]
+        },
+        {
           "name": "Common",
           "navigation": [
             {
@@ -446,6 +513,14 @@
             },
             {
               "name": "Structs"
+            }
+          ]
+        },
+        {
+          "name": "UnixSignals",
+          "navigation": [
+            {
+              "name": "LowVoltage"
             }
           ]
         }

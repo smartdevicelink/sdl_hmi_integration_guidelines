@@ -23,8 +23,20 @@
 |Name|Value|Description|
 |:---|:----|:----------|
 |BLUETOOTH|0||
-|USB|1||
-|WIFI|2||
+|USB_IOS|1||
+|USB_AOA|2||
+|WIFI|3||
+|CLOUD_WEBSOCKET|4|Websocket connection used to connect to remote cloud application|
+
+### EventTypes
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|PHONE_CALL|0|Phone call is active|
+|EMERGENCY_EVENT|1|Active emergency event, active parking event|
+|DEACTIVATE_HMI|2|GAL/DIO is active|
+|AUDIO_SOURCE|3|Navigated to audio(radio, etc)|
+|EMBEDDED_NAVI|4|Navigated to navigation screen|
 
 ### ButtonPressMode
 
@@ -54,16 +66,26 @@
 |BACKGROUND_PROCESS|7||
 |TESTING|8||
 |SYSTEM|9||
+|PROJECTION|10||
+|REMOTE_CONTROL|11||
+
+### CloudConnectionStatus
+|Name|Value|Description|
+|:---|:----|:----------|
+|NOT_CONNECTED|0|No active websocket session or ongoing connection attempts|
+|CONNECTED|1|Websocket is active|
+|RETRY|2|Websocket connection failed and retry attempts are ongoing|
 
 ### SpeechCapabilities
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|TEXT|0||
-|SAPI_PHONEMES|1||
-|LHPLUS_PHONEMES|2||
+|TEXT|0|Uses plain text for performing TTS|
+|SAPI_PHONEMES|1|Uses the Speech API Phoneme representation of a phrase for performing TTS|
+|LHPLUS_PHONEMES|2|Uses the LH+ Phoneme representation of a phrase for performing TTS|
 |PRE_RECORDED|3||
 |SILENCE|4||
+|FILE|5|Uses an audio file sent to SDL via a PutFile RPC to perform TTS or play generic sounds in conjunction with TTS|
 
 ### TextFieldName
 
@@ -101,6 +123,23 @@
 |phoneNumber|29||
 |timeToDestination|30||
 |turnText|31||
+
+### MetadataType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|mediaTitle|0|This field contains the title of the current audio track.|
+|mediaArtist|1|This field contains the artist/creator of the current audio track.|
+|mediaAlbum|2|This field contains the album title of the current audio track.|
+|mediaYear|3|This field contains the creation year of the current audio track.|
+|mediaGenre|4|This field contains the genre of the current audio track.|
+|mediaStation|5|This field contains the name of the current media source.|
+|rating|6|This field contains a rating of some form.|
+|currentTemperature|7|This field contains the current temperature.|
+|maximumTemperature|8|This field contains the maximum temperature for the day.|
+|minimumTemperature|9|This field contains the minimum temperature for the day.|
+|weatherTerm|10|This field contains the current weather (cloudy, clear, etc.).|
+|humidity|11|This field contains the current humidity value.|
 
 ### AmbientLightStatus
 
@@ -210,17 +249,6 @@
 |CID1SET|2||
 |CID2SET|3||
 
-### DeactivateReason
-
-|Name|Value|Description|
-|:---|:----|:----------|
-|AUDIO|0||
-|PHONECALL|1||
-|NAVIGATIONMAP|2||
-|PHONEMENU|3||
-|SYNCSETTINGS|4||
-|GENERAL|5||
-
 ### SamplingRate
 
 |Name|Value|Description|
@@ -259,6 +287,7 @@
 |BEGIN|0||
 |MOVE|1||
 |END|2||
+|CANCEL|3||
 
 ### HmiZoneCapabilities
 
@@ -320,22 +349,41 @@
 |Name|Value|Description|
 |:---|:----|:----------|
 |OK|0||
-|SEEKLEFT|1||
-|SEEKRIGHT|2||
-|TUNEUP|3||
-|TUNEDOWN|4||
-|PRESET_0|5||
-|PRESET_1|6||
-|PRESET_2|7||
-|PRESET_3|8||
-|PRESET_4|9||
-|PRESET_5|10||
-|PRESET_6|11||
-|PRESET_7|12||
-|PRESET_8|13||
-|PRESET_9|14||
-|CUSTOM_BUTTON|15||
-|SEARCH|16||
+|PLAY_PAUSE|1||
+|SEEKLEFT|2||
+|SEEKRIGHT|3||
+|TUNEUP|4||
+|TUNEDOWN|5||
+|PRESET_0|6||
+|PRESET_1|7||
+|PRESET_2|8||
+|PRESET_3|9||
+|PRESET_4|10||
+|PRESET_5|11||
+|PRESET_6|12||
+|PRESET_7|13||
+|PRESET_8|14||
+|PRESET_9|15||
+|CUSTOM_BUTTON|16||
+|SEARCH|17||
+|AC_MAX|18|CLIMATE Module|
+|AC|19|CLIMATE Module|
+|RECIRCULATE|20|CLIMATE Module|
+|FAN_UP|21|CLIMATE Module|
+|FAN_DOWN|22|CLIMATE Module|
+|TEMP_UP|23|CLIMATE Module|
+|TEMP_DOWN|24|CLIMATE Module|
+|DEFROST_MAX|25|CLIMATE Module|
+|DEFROST|26|CLIMATE Module|
+|DEFROST_REAR|27|CLIMATE Module|
+|UPPER_VENT|28|CLIMATE Module|
+|LOWER_VENT|29|CLIMATE Module|
+|VOLUME_UP|30|RADIO Module|
+|VOLUME_DOWN|31|RADIO Module|
+|EJECT|32|RADIO Module|
+|SOURCE|33|RADIO Module|
+|SHUFFLE|34|RADIO Module|
+|REPEAT|35|RADIO Module|
 
 ### KeypressMode
 
@@ -379,30 +427,45 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|EN-US|0||
-|ES-MX|1||
-|FR-CA|2||
-|DE-DE|3||
-|ES-ES|4||
-|EN-GB|5||
-|RU-RU|6||
-|TR-TR|7||
-|PL-PL|8||
-|FR-FR|9||
-|IT-IT|10||
-|SV-SE|11||
-|PT-PT|12||
-|NL-NL|13||
-|EN-AU|14||
-|ZH-CN|15||
-|ZH-TW|16||
-|JA-JP|17||
-|AR-SA|18||
-|KO-KR|19||
-|PT-BR|20||
-|CS-CZ|21||
-|DA-DK|22||
-|NO-NO|23||
+|EN-US|0|English - US|
+|ES-MX|1|Spanish - Mexico|
+|FR-CA|2|French - Canada|
+|DE-DE|3|German - Germany|
+|ES-ES|4|Spanish - Spain|
+|EN-GB|5|English - GB|
+|RU-RU|6|Russian - Russia|
+|TR-TR|7|Turkish - Turkey|
+|PL-PL|8|Polish - Poland|
+|FR-FR|9|French - France|
+|IT-IT|10|Italian - Italy|
+|SV-SE|11|Swedish - Sweden|
+|PT-PT|12|Portuguese - Portugal|
+|NL-NL|13|Dutch (Standard) - Netherlands|
+|EN-AU|14|English - Australia|
+|ZH-CN|15|Mandarin - China|
+|ZH-TW|16|Mandarin - Taiwan|
+|JA-JP|17|Japanese - Japan|
+|AR-SA|18|Arabic - Saudi Arabia|
+|KO-KR|19|Korean - South Korea|
+|PT-BR|20|Portuguese - Brazil|
+|CS-CZ|21|Czech - Czech Republic|
+|DA-DK|22|Danish - Denmark|
+|NO-NO|23|Norwegian - Norway|
+|NL-BE|24|Dutch (Flemish) - Belgium|
+|EL-GR|25|Greek - Greece|
+|HU-HU|26|Hungarian - Hungary|
+|FI-FI|27|Finnish - Finland|
+|SK-SK|28|Slovak - Slovakia|
+|EN-IN|29|English - India|
+|TH-TH|30|Thai - Thailand|
+|EN-SA|31|English - Middle East|
+|HE-IL|32|Hebrew - Israel|
+|RO-RO|33|Romanian - Romania|
+|UK-UA|34|Ukrainian - Ukraine|
+|ID-ID|35|Indonesian - Indonesia|
+|VI-VN|36|Vietnamese - Vietnam|
+|MS-MY|37|Malay - Malaysia|
+|HI-IN|38|Hindi - India|
 
 ### FileType
 
@@ -467,12 +530,15 @@
 |MFD5|8||
 |GEN3_8_INCH|9||
 
-### ApplicationToNONEReason
+### ApplicationExitReason
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|DRIVER_DISTRACTION_VIOLATION|0||
-|USER_EXIT|1||
+|DRIVER_DISTRACTION_VIOLATION|0|By getting this value, SDL puts the named app to NONE HMILevel|
+|USER_EXIT|1|By getting this value, SDL puts the named app to NONE HMILevel|
+|UNAUTHORIZED_TRANSPORT_REGISTRATION|2|By getting this value, SDL unregisters the named application|
+|UNSUPPORTED_HMI_RESOURCE|3|By getting this value, SDL unregisters the named application|
+|CLOSE_CLOUD_CONNECTION|4|By getting this value, SDL puts the named app to NONE HMILevel. Used by the HMI to close a cloud app connection|
 
 ### IgnitionStatus
 
@@ -550,6 +616,15 @@
 |STATIC|0||
 |DYNAMIC|1||
 
+### AudioStreamingIndicator
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|PLAY_PAUSE|0|Default playback indicator.|
+|PLAY|1|Indicates that a button press of the Play/Pause button would start the playback.|
+|PAUSE|2|Indicates that a button press of the Play/Pause button would pause the current playback.|
+|STOP|3|Indicates that a button press of the Play/Pause button would stop the current playback.|
+
 ### IgnitionStableStatus
 
 |Name|Value|Description|
@@ -613,12 +688,17 @@
 |Name|Value|Description|
 |:---|:----|:----------|
 |NO_SOURCE_SELECTED|0||
-|USB|1||
-|USB2|2||
-|BLUETOOTH_STEREO_BTST|3||
-|LINE_IN|4||
-|IPOD|5||
-|MOBILE_APP|6||
+|CD|1||
+|USB|2||
+|USB2|3||
+|BLUETOOTH_STEREO_BTST|4||
+|LINE_IN|5||
+|IPOD|6||
+|MOBILE_APP|7||  
+|AM|8||
+|FM|9||
+|XM|10||
+|DAB|11||
 
 ### RequestType
 
@@ -643,7 +723,9 @@
 |VEHICLE_DIAGNOSTICS|16||
 |EMERGENCY|17||
 |MEDIA|18||
-|FOTA|19||
+|FOTA|19||  
+|OEM_SPECIFIC|20||
+|ICON_URL|21||
 
 ### ConsentSource
 
@@ -685,7 +767,7 @@
 |:---|:----|:----------|
 |SUCCESS|0||
 |UNSUPPORTED_REQUEST|1||
-|UNSUPPORTED_RESOURCE|2||
+|UNSUPPORTED_RESOURCE|2|If this response is returned to core and the related HMI interface state is not available, core will return `success:false` to mobile. Otherwise core will return `success:true`|
 |DISALLOWED|3||
 |REJECTED|4||
 |ABORTED|5||
@@ -731,9 +813,10 @@
 |cmdIcon|6||
 |appIcon|7||
 |graphic|8||
-|showConstantTBTIcon|9||
-|showConstantTBTNextTurnIcon|10||
-|locationImage|11||
+|secondaryGraphic|9||
+|showConstantTBTIcon|10||
+|showConstantTBTNextTurnIcon|11||
+|locationImage|12||
 
 ### VehicleDataType
 
@@ -765,6 +848,31 @@
 |VEHICLEDATA_ENGINETORQUE|23||
 |VEHICLEDATA_ACCPEDAL|24||
 |VEHICLEDATA_STEERINGWHEEL|25||
+|VEHICLEDATA_TURNSIGNAL|26||
+|VEHICLEDATA_FUELRANGE|27||
+|VEHICLEDATA_ENGINEOILLIFE|28||
+|VEHICLEDATA_ELECTRONICPARKBRAKESTATUS|29||
+|VEHICLEDATA_CLOUDAPPVEHICLEID|30| Parameter used by cloud apps or the policy server to identify a head unit|
+
+### VideoStreamingProtocol
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|RAW|0|Raw stream bytes|
+|RTP|1|Real-time Transport Protocol|
+|RTSP|2|Real-time Streaming Protocol|
+|RTMP|3|Real-Time Messaging Protocol|
+|WEBM|4|WebM container|
+
+### VideoStreamingCodec
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|H264|0|MPEG-4 Advanced Video Coding|
+|H265|1|High Efficiency Video Coding|
+|Theora|2|Ogg Theora|
+|VP8|3||
+|VP9|4||
 
 ### UpdateResult
 
@@ -792,7 +900,21 @@
 |SIXTH|11||
 |SEVENTH|12||
 |EIGHTH|13||
-|FAULT|14||
+|UNKNOWN|14||
+|FAULT|15||
+
+### TPMS
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|UNKNOWN|0|If set the status of the tire is not known.|
+|SYSTEM_FAULT|1|TPMS does not function.|
+|SENSOR_FAULT|2|The sensor of the tire does not function.|
+|LOW|3|TPMS is reporting a low tire pressure for the tire.|
+|SYSTEM_ACTIVE|4|TPMS is active and the tire pressure is monitored.|
+|TRAIN|5|TPMS is reporting that the tire must be trained.|
+|TRAINING_COMPLETE|6|TPMS reports the training for the tire is completed.|
+|NOT_TRAINED|7|TPMS reports the tire is not trained.|
 
 ### VehicleDataStatus
 
@@ -802,3 +924,283 @@
 |OFF|1||
 |ON|2||
 
+### ModuleType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|CLIMATE|0||
+|RADIO|1||
+|SEAT|2||
+|AUDIO|3||
+|LIGHT|4||
+|HMI_SETTINGS|5||
+
+### RadioBand
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|AM|0||
+|FM|1||
+|XM|2||
+
+### RadioState
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ACQUIRING|0||
+|ACQUIRED|1||
+|MULTICAST|2||
+|NOT_FOUND|3||
+
+### TemperatureUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FAHRENHEIT|0||
+|CELSIUS|1||
+
+### DefrostZone
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FRONT|0||
+|REAR|1||
+|ALL|2||
+|NONE|3||
+
+### VentilationMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|UPPER|0||
+|LOWER|1||
+|BOTH|2||
+|NONE|3||
+
+### RCAccessMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|AUTO_ALLOW|0|Any RC app can take immediately gain control a module when it is requested|
+|AUTO_DENY|1|An RC app has control of a module until the app releases it, all requests for control of the module by other apps are rejected|
+|ASK_DRIVER|2|The driver is prompted when an app requests control of a module that is currently being used|
+
+### EntityStatus
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ON|0||
+|OFF|1||
+
+### FuelType  
+
+|Name|Value|Description|
+|:---|:----|:----------|  
+|GASOLINE|0||  
+|DIESEL|1||  
+|CNG|2|For vehicles using compressed natural gas|  
+|LPG|3|For vehicles using liquefied petroleum gas|
+|HYDROGEN|4|For FCEV (fuel cell electric vehicle)|  
+|BATTERY|5|For BEV (Battery Electric Vehicle), PHEV (Plug-in Hybrid Electric Vehicle), solar vehicles and other vehicles which run on a battery|
+
+### TurnSignal
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|OFF|0||
+|LEFT|1||
+|RIGHT|2||
+|BOTH|3||
+
+### ElectronicParkBrakeStatus
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|CLOSED|0|Park brake actuators have been fully applied.|
+|TRANSITION|1|Park brake actuators are transitioning to either Apply/Closed or Release/Open state.|
+|OPEN|2|Park brake actuators are released.|
+|DRIVE_ACTIVE|3|When driver pulls the Electronic Park Brake switch while driving "at speed".|
+|FAULT|4|When system has a fault or is under maintenance.|
+
+### LightName
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|FRONT_LEFT_HIGH_BEAM|0||
+|FRONT_RIGHT_HIGH_BEAM|1||
+|FRONT_LEFT_LOW_BEAM|2||
+|FRONT_RIGHT_LOW_BEAM|3||
+|FRONT_LEFT_PARKING_LIGHT|4||
+|FRONT_RIGHT_PARKING_LIGHT|5||
+|FRONT_LEFT_FOG_LIGHT|6||
+|FRONT_RIGHT_FOG_LIGHT|7||
+|FRONT_LEFT_DAYTIME_RUNNING_LIGHT|8||
+|FRONT_RIGHT_DAYTIME_RUNNING_LIGHT|9||
+|FRONT_LEFT_TURN_LIGHT|10||
+|FRONT_RIGHT_TURN_LIGHT|11||
+|REAR_LEFT_FOG_LIGHT|12||
+|REAR_RIGHT_FOG_LIGHT|13||
+|REAR_LEFT_TAIL_LIGHT|14||
+|REAR_RIGHT_TAIL_LIGHT|15||
+|REAR_LEFT_BRAKE_LIGHT|16||
+|REAR_RIGHT_BRAKE_LIGHT|17||
+|REAR_LEFT_TURN_LIGHT|18||
+|REAR_RIGHT_TURN_LIGHT|19||
+|REAR_REGISTRATION_PLATE_LIGHT|20|| 
+|HIGH_BEAMS|501||
+|LOW_BEAMS|502||
+|FOG_LIGHTS|503||
+|RUNNING_LIGHTS|504||
+|PARKING_LIGHTS|505||
+|BRAKE_LIGHTS|506||
+|REAR_REVERSING_LIGHTS|507||
+|SIDE_MARKER_LIGHTS|508||
+|LEFT_TURN_LIGHTS|509||  
+|RIGHT_TURN_LIGHTS|510||
+|HAZARD_LIGHTS|511||
+|REAR_CARGO_LIGHTS|512| Cargo lamps illuminate the cargo area.|  
+|REAR_TRUCK_BED_LIGHTS|513|Truck bed lamps light up the bed of the truck.|    
+|REAR_TRAILER_LIGHTS|514|Trailer lights are lamps mounted on a trailer hitch.|  
+|LEFT_SPOT_LIGHTS|515|It is the spotlights mounted on the left side of a vehicle.|  
+|RIGHT_SPOT_LIGHTS|516|It is the spotlights mounted on the right side of a vehicle.|  
+|LEFT_PUDDLE_LIGHTS|517|Puddle lamps illuminate the ground beside the door as the customer is opening or approaching the door.|  
+|RIGHT_PUDDLE_LIGHTS|518| Puddle lamps illuminate the ground beside the door as the customer is opening or approaching the door.|
+|AMBIENT_LIGHTS|801||
+|OVERHEAD_LIGHTS|802||
+|READING_LIGHTS|803||
+|TRUNK_LIGHTS|804||
+
+### LightStatus
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ON|0||
+|OFF|1||  
+|RAMP_UP|2||  
+|RAMP_DOWN|3||  
+|UNKNOWN|4||  
+|INVALID|5||
+
+### DisplayMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DAY|0||
+|NIGHT|1||
+|AUTO|2||
+
+### DistanceUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MILES|0||
+|KILOMETERS|1||
+
+### MassageZone
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|OFF|0||
+|LOW|1||
+|HIGH|2||
+
+### MassageCushion
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|TOP_LUMBAR|0||
+|MIDDLE_LUMBAR|1||
+|BOTTOM_LUMBAR|2||
+|BACK_BOLSTERS|3||
+|SEAT_BOLSTERS|4||
+
+### SeatMemoryActionType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|SAVE|0|Save current seat postions and settings to seat memory.|
+|RESTORE|1|Restore / apply the seat memory settings to the current seat.|
+|NONE|2|No action to be performed.|
+
+### SupportedSeat
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DRIVER|0|List possible seats that is a remote controllable seat.|
+|FRONT_PASSENGER|1|List possible seats that is a remote controllable seat.|
+
+### DeliveryMode
+|Name|Value|Description|
+|:---|:----|:----------|
+|PROMPT|0||
+|DESTINATION|1||
+|QUEUE|2||
+
+### AppServiceType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MEDIA|0||
+|WEATHER|1||
+|NAVIGATION|2||
+
+### ServiceUpdateReason
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|PUBLISHED|0|The service has just been published with the module and once activated to the primary service of its type, it will be ready for possible consumption|
+|REMOVED|1|The service has just been unpublished with the module and is no longer accessible|
+|ACTIVATED|2|The service is activated as the primary service of this type. All requests dealing with this service type will be handled by this service|
+|DEACTIVATED|3|The service has been deactivated as the primary service of its type|
+|MANIFEST_UPDATE|4|The service has updated its manifest. This could imply updated capabilities. **Note: Currently unimplemented**|
+
+### SystemCapabilityType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|NAVIGATION|0||
+|PHONE_CALL|1||
+|VIDEO_STREAMING|2||
+|REMOTE_CONTROL|3||
+|APP_SERVICES|4||
+
+### MediaType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MUSIC|0||
+|PODCAST|1||
+|AUDIOBOOK|2||
+|OTHER|3||
+
+### NavigationAction
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|TURN|0|Using this action plus a supplied direction can give the type of turn|
+|EXIT|1||
+|STAY|2||
+|MERGE|3||
+|FERRY|4||
+|CAR_SHUTTLE_TRAIN|5||
+|WAYPOINT|6||
+
+### NavigationJunction
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|REGULAR|0|A junction that represents a standard intersection with a single road crossing another|
+|BIFURCATION|1|A junction where the road splits off into two paths; a fork in the road|
+|MULTI_CARRIAGEWAY|2|A junction that has multiple intersections and paths|
+|ROUNDABOUT|3|A junction where traffic moves in a single direction around a central, non-traversable point to reach one of the connecting roads|
+|TRAVERSABLE_ROUNDABOUT|4|Similar to a roundabout, however the center of the roundabout is fully traversable. Also known as a mini-roundabout|
+|JUGHANDLE|5|A junction where lefts diverge to the right, then curve to the left, converting a left turn to a crossing maneuver|
+|ALL_WAY_YIELD|6|Multiple way intersection that allows traffic to flow based on priority; most commonly right of way and first in, first out|
+|TURN_AROUND|7|A junction designated for traffic turn arounds|
+
+### Direction
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|LEFT|0||
+|RIGHT|1||
