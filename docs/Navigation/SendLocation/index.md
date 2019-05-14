@@ -25,8 +25,8 @@ Purpose
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
-|longitudeDegrees|Float|true|minvalue: -180<br>maxvalue: 180|
-|latitudeDegrees|Float|true|minvalue: -90<br>maxvalue: 90|
+|longitudeDegrees|Float|false|minvalue: -180<br>maxvalue: 180|
+|latitudeDegrees|Float|false|minvalue: -90<br>maxvalue: 90|
 |locationName|String|false|maxlength: 500|
 |locationDescription|String|false|maxlength: 500|
 |addressLines|String|false|array: true<br>minsize: 0<br>maxsize: 4<br>maxlength: 500|
