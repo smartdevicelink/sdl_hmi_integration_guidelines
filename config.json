@@ -148,6 +148,15 @@
               "name": "GetWayPoints"
             },
             {
+              "name": "SubscribeWayPoints"
+            },
+            {
+              "name": "UnsubscribeWayPoints"
+            },
+            {
+              "name": "OnWayPointChange"
+            },
+            {
               "name": "IsReady"
             },
             {
