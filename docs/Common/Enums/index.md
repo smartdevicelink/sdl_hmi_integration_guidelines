@@ -1221,7 +1221,7 @@
 |REQUEST_ACCEPTED|1|When a request for a Service is Accepted.|
 |REQUEST_REJECTED|2|When a request for a Service is Rejected.|
 
-### ServiceUpdateReason
+### ServiceStatusUpdateReason
 
 |Name|Value|Description|
 |:---|:----|:----------|
