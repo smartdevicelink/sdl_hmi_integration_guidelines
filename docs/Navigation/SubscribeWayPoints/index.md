@@ -28,7 +28,7 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 |||
 SubscribeWayPoints
-![SubscribeWayPoints](./assets/SubscribeWayPoints.jpg)
+![SubscribeWayPoints](./assets/SubscribeWayPoints.png)
 |||
 
 ### Example Request

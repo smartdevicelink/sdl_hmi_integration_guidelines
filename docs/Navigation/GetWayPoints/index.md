@@ -1,7 +1,7 @@
 ## GetWayPoints
 
 Type
-: Notification
+: Function
 
 Sender
 : SDL
@@ -61,7 +61,7 @@ GetWayPoints
 
 ### Example Request
 
-```
+```json
 {
 	"id" : 543,
 	"jsonrpc" : "2.0",
@@ -76,7 +76,7 @@ GetWayPoints
 
 ### Example Response
 
-```
+```json
 {
 	"id" : 543,
 	"jsonrpc" : "2.0",
@@ -97,7 +97,7 @@ GetWayPoints
 
 ### Example Error
 
-```
+```json
 {
 	"id" : 543,
 	"jsonrpc" : "2.0",

@@ -24,7 +24,7 @@ Send this notification when the list of waypoints is changed and SDL is subscrib
 ### Sequence Diagrams
 |||
 OnWayPointChange
-![OnWayPointChange](./assets/OnWayPointChange.jpg)
+![OnWayPointChange](./assets/OnWayPointChange.png)
 |||
 
 ### Example Notification
