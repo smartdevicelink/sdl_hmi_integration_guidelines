@@ -70,11 +70,19 @@
 |REMOTE_CONTROL|11||
 
 ### CloudConnectionStatus
+
 |Name|Value|Description|
 |:---|:----|:----------|
 |NOT_CONNECTED|0|No active websocket session or ongoing connection attempts|
 |CONNECTED|1|Websocket is active|
 |RETRY|2|Websocket connection failed and retry attempts are ongoing|
+
+### WayPointType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ALL|0|All waypoints including destination|
+|DESTINATION|1|Only destination|
 
 ### SpeechCapabilities
 
