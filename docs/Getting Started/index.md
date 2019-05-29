@@ -16,15 +16,15 @@ The HMI must register each component which can communicate with SDL using the fo
 ```
 
 The possible componentNames are:  
-- `UI`
-- `Buttons`
-- `BasicCommunication`
-- `VR` 
-- `TTS`
-- `Navigation`
-- `VehicleInfo`
-- `RC`
-- `AppService`
+  * `UI`
+  * `Buttons`
+  * `BasicCommunication`
+  * `VR` 
+  * `TTS`
+  * `Navigation`
+  * `VehicleInfo`
+  * `RC`
+  * `AppService`
 
 Once the components are registered, the HMI must notify sdl that it is ready to begin further communication using the [BasicCommunication.OnReady](../basiccommunication/onready) notification.
 
@@ -56,10 +56,10 @@ Where propertyName is the name of the notification, such as `Buttons.OnButtonSub
 !!! must
 
 The HMI must:
-- Register its components
-- Send the OnReady notification
-- Respond to each of the `IsReady` RPCs
-- Register for the notifications it would like to receive
+  * Register its components
+  * Send the OnReady notification
+  * Respond to each of the `IsReady` RPCs
+  * Register for the notifications it would like to receive
 
 !!!
 

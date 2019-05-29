@@ -19,17 +19,17 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
     * TM performs a periodic search over Bluetooth.
     * Once the device is found, SDL starts the procedure of searching for SDL Enabled Applications on the device.
     * SDL Sends `BasicCommunication.UpdateDeviceList` with the name and id of the discovered device to the HMI.
-    * SDL needs to receive `[OnDeviceChosen](../ondevicechosen)(deviceInfo)` or `[OnFindApplications](../onfindapplications)(deviceInfo)` from the HMI to allow registering applications which are running on the connected device.
-    * SDL allows registration of applications on the named device and sends `BasicCommunication.[OnAppRegistered](../onappregistered)` to the HMI  
+    * SDL needs to receive `OnDeviceChosen(deviceInfo)` or `OnFindApplications(deviceInfo)` from the HMI to allow registering applications which are running on the connected device.
+    * SDL allows registration of applications on the named device and sends `BasicCommunication.OnAppRegistered` to the HMI  
     * SDL sends `BasicCommunication.UpdateDeviceList` to HMI when iOS device was connected over Bluetooth with applications registered and running on SDL and was also connected over USB. 
   2. USB Transport (AOA)
     * SDL learns about a new device connected over USB (A notification to the TA from the OS)
     * SDL Sends `BasicCommunication.UpdateDeviceList` with the name, id, and TransportType (AOA, iOS) of the discovered device to the HMI.
-    * SDL sends `BasicCommunication.[OnAppRegistered](../onappregistered)` to the HMI and does not wait for `[OnDeviceChosen](../ondevicechosen)` or `[OnFindApplications](../onfindapplications)` notifications
+    * SDL sends `BasicCommunication.OnAppRegistered` to the HMI and does not wait for `OnDeviceChosen` or `OnFindApplications` notifications
   3. Wifi Transport
     * SDL learns about a new device connected over Wifi
     * SDL sends `BasicCommunication.UpdateDeviceList` with the name and id of the discovered device to the HMI
-    * SDL sends `BasicCommunication.[OnAppRegistered](../onappregistered)` to the HMI and does not wait for `[OnDeviceChosen](../ondevicechosen)` or `[OnFindApplications](../onfindapplications)` notifications
+    * SDL sends `BasicCommunication.OnAppRegistered` to the HMI and does not wait for `OnDeviceChosen` or `OnFindApplications` notifications
   4. Cloud App Websockets
     * The application manager queries the policy table for cloud app policy entries
     * For each policy table entry, the websocket transport adapter creates a cloud device for each cloud application.
@@ -42,7 +42,7 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
 !!! must
 
   1. Update list of connected devices (i.e. store the provided information)
-  2. Use the information when providing `[OnDeviceChosen](../ondevicechosen)` and `[OnFindApplications](../onfindapplications)` notifications
+  2. Use the information when providing `OnDeviceChosen` and `OnFindApplications` notifications
   3. Provide the user with the possibility of choosing among the found devices through either display, voice recognition or both.
 
 !!!
