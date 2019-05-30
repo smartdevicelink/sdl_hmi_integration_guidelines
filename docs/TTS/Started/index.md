@@ -26,7 +26,7 @@ Started during PerformInteraction
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : "TTS.Started",
+  "method" : "TTS.Started"
 }
 ```
 ### Example Response

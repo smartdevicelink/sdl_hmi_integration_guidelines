@@ -97,7 +97,7 @@ PerformInteraction in Both Mode times out
   "jsonrpc" : "2.0",
   "result" :
   {
-    "choiceID" : 2416
+    "choiceID" : 2416,
     "code" : 0,
     "method" : "VR.PerformInteraction"
   }

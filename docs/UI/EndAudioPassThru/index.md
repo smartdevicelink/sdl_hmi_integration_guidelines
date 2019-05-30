@@ -38,7 +38,7 @@ EndAudioPassThru audio capturing already ended
 {
   "id" : 79,
   "jsonrpc" : "2.0",
-  "method" : "UI.EndAudioPassThru",
+  "method" : "UI.EndAudioPassThru"
 }
 ```
 ### Example Response

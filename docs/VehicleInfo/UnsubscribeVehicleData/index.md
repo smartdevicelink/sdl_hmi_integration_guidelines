@@ -119,7 +119,7 @@ UnsubscribeVehicleData unexpected disconnect
 ### Example Response
 
 ```json
-
+{
   "id" : 139,
   "jsonrpc" : "2.0",
   "result" :

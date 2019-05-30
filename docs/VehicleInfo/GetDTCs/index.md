@@ -28,12 +28,6 @@ Purpose
 |ecuHeader|Integer|true|minvalue: 0<br>maxvalue: 65535|
 |dtc|String|false|array: true<br>minsize: 1<br>maxsize: 15<br>maxlength: 10|
 
-### Sequence Diagrams
-|||
-GetDTCs
-![GetDTCs](./assets/GetDTCs.png)
-|||
-
 ### Example Request
 
 ```json
@@ -43,7 +37,7 @@ GetDTCs
   "method" : "VehicleInfo.GetDTCs",
   "params" :
   {
-    "ecuName" : 56
+    "ecuName" : 56,
     "dtcMask" : 84,
     "appID" : 65645
   }
@@ -82,3 +76,9 @@ GetDTCs
   }
 }
 ```
+
+### Sequence Diagrams
+|||
+GetDTCs
+![GetDTCs](./assets/GetDTCs.png)
+|||

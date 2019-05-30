@@ -36,7 +36,7 @@ GetLanguage
 {
   "id" : 110,
   "jsonrpc" : "2.0",
-  "method" : "TTS.GetLanguage",
+  "method" : "TTS.GetLanguage"
 }
 ```
 ### Example Response

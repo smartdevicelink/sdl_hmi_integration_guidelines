@@ -22,7 +22,7 @@ Stopped after StopSpeaking from SDL
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : " TTS.Stopped",
+  "method" : " TTS.Stopped"
 }
 ```
 ### Example Response

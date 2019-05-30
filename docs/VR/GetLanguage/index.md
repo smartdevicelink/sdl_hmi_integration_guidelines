@@ -36,7 +36,7 @@ GetLanguage
 {
   "id" : 110,
   "jsonrpc" : "2.0",
-  "method" : "VR.GetLanguage",
+  "method" : "VR.GetLanguage"
 }
 ```
 ### Example Response

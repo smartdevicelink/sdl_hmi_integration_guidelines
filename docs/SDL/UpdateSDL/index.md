@@ -78,7 +78,7 @@ UpdateSDL - PROPRIETARY Policy Table Update Flow
 	"jsonrpc" : "2.0",
 	"result" : 
 	{
-		“result” : “UPDATING”
+		"result" : "UPDATING",
 		"code" : 0,
 		"method" : "SDL.UpdateSDL"
 	}

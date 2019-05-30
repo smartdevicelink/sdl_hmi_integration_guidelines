@@ -47,7 +47,7 @@ GetSupportedLanguages
   "jsonrpc" : "2.0",
   "result" :
   {
-    "languages" : [AR-SA, DE-DE, EN-GB, EN-US, ES-ES, FR-FR, IT-IT],
+    "languages" : ["AR-SA", "DE-DE", "EN-GB", "EN-US", "ES-ES", "FR-FR", "IT-IT"],
     "code" : 0,
     "method" : "TTS.GetSupportedLanguages"
   }

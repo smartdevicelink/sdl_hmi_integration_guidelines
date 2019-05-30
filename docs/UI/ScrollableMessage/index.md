@@ -51,24 +51,23 @@ ScrollableMessage with STEAL_FOCUS button for background application
   {
     "messageText" :
     {
-         "fieldName" :  scrollableMessageBody,
-     "fieldText" : "Create a Station
-          Enter an artist, song or composer in the Search box in the top left corner. We'll create a radio station featuring that music and more like it. You can also create a new station from the song or artist currently playing by hovering over the album artwork, clicking the white up-arrow and selecting New Station—you can choose From Song or From Artist."
+         "fieldName" :  "scrollableMessageBody",
+     "fieldText" : "Create a Station.\nEnter an artist, song or composer in the Search box in the top left corner. We'll create a radio station featuring that music and more like it. You can also create a new station from the song or artist currently playing by hovering over the album artwork, clicking the white up-arrow and selecting New Station—you can choose From Song or From Artist."
     },
     "timeout" : 10000,
     "softButtons" :
     [
       {
-        "type" :  TEXT,
+        "type" :  "TEXT",
         "text" : "Leave onscreen",
         "softButtonID" : 15,
-        "systemAction" :  KEEP_CONTEXT
+        "systemAction" :  "KEEP_CONTEXT"
       },
       {
-        "type" :  TEXT,
+        "type" :  "TEXT",
         "text" : "Cancel",
         "softButtonID" : 16,
-        "systemAction" :  STEAL_FOCUS
+        "systemAction" :  "STEAL_FOCUS"
       }
     ],
 

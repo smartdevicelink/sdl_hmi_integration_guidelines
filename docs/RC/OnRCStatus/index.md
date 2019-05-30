@@ -26,39 +26,40 @@ SDL must send OnRCStatus notification when:
 |allocatedModules|[Common.ModuleData](/docs/Common/Structs/index.md)|true|Contains a list (zero or more) of module types that are allocated to the application|
 |freeModules|[Common.ModuleData](/docs/Common/Structs/index.md)|true|Contains a list (zero or more) of module types that are free to access for the application|
 
+#### JSON Example Notification
+
+```json
+{
+	"jsonrpc": "2.0",
+	"method": "RC.OnRCStatus",
+	"params": {
+		"allocatedModules": [],
+		"freeModules": [{
+				"moduleType": "CLIMATE"
+			},
+			{
+				"moduleType": "RADIO"
+			},
+			{
+				"moduleType": "AUDIO"
+			},
+			{
+				"moduleType": "LIGHT"
+			},
+			{
+				"moduleType": "HMI_SETTINGS"
+			},
+			{
+				"moduleType": "SEAT"
+			}
+		]
+	}
+}
+```
+
 ### Sequence Diagrams
 
 |||
 OnRCStatus
 ![OnRCStatus](assets/OnRCStatus.png)
 |||
-
-#### JSON Example Notification
-
-```json
-{
-    "jsonrpc": "2.0",
-    "method": "RC.OnRCStatus",
-    "params": {
-        "allocatedModules" : [],
-        "freeModules" : [
-     {
-        "moduleType" : "CLIMATE"
-     },
-     {
-        "moduleType" : "RADIO"
-     },
-     {
-        "moduleType" : "AUDIO"
-     },
-     {
-        "moduleType" : "LIGHT"
-     },
-     {
-        "moduleType" : "HMI_SETTINGS"
-     },
-     {
-        "moduleType" : "SEAT"
-     }
-  ]
-}

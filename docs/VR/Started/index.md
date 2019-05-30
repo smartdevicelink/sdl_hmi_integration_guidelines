@@ -11,16 +11,21 @@ Purpose
 
 ### Notification
 
+#### Parameters
+
+This RPC has no additional parameter requirements
+
+#### JSON Example Notification
+
+```json
+{
+  "jsonrpc" : "2.0",
+  "method" : "VR.Started"
+}
+```
+
 ### Sequence Diagrams
 |||
 Started on PTT Button Press
 ![Started](./assets/Started.png)
 |||
-
-### Example Notification
-
-```json
-{
-  "jsonrpc" : "2.0",
-  "method" : "VR.Started",
-}

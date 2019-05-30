@@ -44,7 +44,7 @@ GetStatusUpdate
 {
   "id" : 176,
   "jsonrpc" : "2.0",
-  "method" : "SDL.GetStatusUpdate",
+  "method" : "SDL.GetStatusUpdate"
 }
 ```
 ### Example Response
@@ -55,7 +55,7 @@ GetStatusUpdate
   "jsonrpc" : "2.0",
   "result" :
   {
-    "status" : "UPDATE_NEEDED"
+    "status" : "UPDATE_NEEDED",
     "code" : 0,
     "method" : "SDL.GetStatusUpdate"
   }

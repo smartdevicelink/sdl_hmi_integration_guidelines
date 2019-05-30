@@ -74,7 +74,7 @@ PerformInteraction Timeout with Both
   {
     "initialText" :
     {
-         "fieldName" : initialInteractionText,
+         "fieldName" : "initialInteractionText",
          "fieldText" : "Choose the station:"
     },
 
@@ -101,10 +101,10 @@ PerformInteraction Timeout with Both
         {
          "text" : "Sky FM",
          "image" :
-          [
+          {
              "value" : "tmp/SDL/app/Pandora/icon_5410.jpg",
-             "imageType" : DYNAMIC
-          ],
+             "imageType" : "DYNAMIC"
+          },
 
          "position" : 1
         },
@@ -112,20 +112,20 @@ PerformInteraction Timeout with Both
         {
          "text" : "Paradise",
          "image" :
-          [
+          {
              "value" : "tmp/SDL/app/Pandora/icon_5423.jpeg",
-             "imageType" : DYNAMIC
-          ],
+             "imageType" : "DYNAMIC"
+          },
          "position" : 2
         },
 
         {
          "text" : "100 XR",
          "image" :
-          [
+          {
              "value" : "tmp/SDL/app/Pandora/icon_5465.jpeg",
-             "imageType" : DYNAMIC
-          ],
+             "imageType" : "DYNAMIC"
+          },
          "position" : 3
         }
     ],
@@ -143,7 +143,7 @@ PerformInteraction Timeout with Both
   "jsonrpc" : "2.0",
   "result" :
   {
-    "choiceID" : 2416
+    "choiceID" : 2416,
     "code" : 0,
     "method" : "UI.PerformInteraction"
   }

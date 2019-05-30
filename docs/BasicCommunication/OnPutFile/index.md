@@ -74,10 +74,10 @@ System Request file upload using Put File
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : "BasicCommunication.OnPutFile"
-  {
-     "fileName":"/fs/sharedFolder/app1_device1/icon.jpg",
-     "fileType":"GRAPHIC_JPEG"
-    }
+  "method" : "BasicCommunication.OnPutFile",
+  "params":{
+    "fileName":"/fs/sharedFolder/app1_device1/icon.jpg",
+    "fileType":"GRAPHIC_JPEG"
+  }
 }
 ```

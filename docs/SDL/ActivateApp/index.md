@@ -93,7 +93,7 @@ ActivateApp using App Launching
 {
   "id" : 27,
   "jsonrpc" : "2.0",
-  "method" : "SDL.ActivateApp"
+  "method" : "SDL.ActivateApp",
   "params" :
   {
     "appID" : 12345

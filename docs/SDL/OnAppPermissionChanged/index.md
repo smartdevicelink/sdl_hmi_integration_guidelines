@@ -68,8 +68,7 @@ OnAppPermissionChanged with consent required
   "method" : "SDL.OnAppPermissionChanged",
   "params" :  
   {
-    "appID" : 65674,
-
+    "appID" : 65674
   }
 }
 ```

@@ -46,7 +46,7 @@ User Switches Apps
   "params" :
   {
     "appID" : 65544,
-    "reason" : PHONECALL
+    "reason" : "PHONECALL"
   }
 }
 ```

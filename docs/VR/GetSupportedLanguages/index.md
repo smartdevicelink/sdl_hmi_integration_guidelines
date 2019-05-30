@@ -24,12 +24,6 @@ Purpose
 |:---|:---|:--------|:---------|
 |languages|[Common.Language](../../common/enums/#language)|true|array: true<br>minsize: 1<br>maxsize: 100|
 
-### Sequence Diagrams
-|||
-GetSupportedLanguages
-![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
-|||
-
 ### Example Request
 
 ```json
@@ -47,7 +41,7 @@ GetSupportedLanguages
   "jsonrpc" : "2.0",
   "result" :
   {
-    "languages" : [AR-SA, DE-DE, EN-GB, EN-US, ES-ES, FR-FR, IT-IT],
+    "languages" : ["AR-SA", "DE-DE", "EN-GB", "EN-US", "ES-ES", "FR-FR", "IT-IT"],
     "code" : 0,
     "method" : "VR.GetSupportedLanguages"
   }
@@ -71,3 +65,9 @@ GetSupportedLanguages
   }
 }
 ```
+
+### Sequence Diagrams
+|||
+GetSupportedLanguages
+![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
+|||

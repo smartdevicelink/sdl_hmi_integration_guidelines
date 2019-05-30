@@ -47,11 +47,11 @@ If SDL sends a SystemRequest with `requestSubType` parameter to an older system,
 This RPC has no additional parameter requirements
 
 ### Example Request
-``` json
+```json
 {
   "id" : 59,
   "jsonrpc" : "2.0",
-  "method" : "BasicCommunication.SystemRequest"
+  "method" : "BasicCommunication.SystemRequest",
   "params" :
   {
     "requestType" : "FILE_RESUME",

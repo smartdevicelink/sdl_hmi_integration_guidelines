@@ -103,7 +103,7 @@ SendHapticData basic flow with user selection
     "message" : "The HMI does not support the use of haptic data",
     "data" :
     {
-      "UI.SendHapticData"
+      "method": "UI.SendHapticData"
     }
   }
 }

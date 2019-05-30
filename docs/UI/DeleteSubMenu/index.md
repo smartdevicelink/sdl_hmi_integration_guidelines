@@ -48,7 +48,7 @@ Delete Sub Menu that is on screen
 {
   "id" : 70,
   "jsonrpc" : "2.0",
-  "method" : "UI. DeleteSubMenu",
+  "method" : "UI.DeleteSubMenu",
   "params" :
   {
     "menuID" : 345,
@@ -65,7 +65,7 @@ Delete Sub Menu that is on screen
   "result" :
   {
     "code" : 0,
-    "method" : "UI. DeleteSubMenu"
+    "method" : "UI.DeleteSubMenu"
   }
 }
 ```
@@ -82,7 +82,7 @@ Delete Sub Menu that is on screen
     "message" : "The data may not be changed because it is currently in use",
     "data" :
     {
-      "UI. DeleteSubMenu "
+      "method": "UI.DeleteSubMenu"
     }
   }
 }

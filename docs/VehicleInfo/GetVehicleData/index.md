@@ -177,7 +177,7 @@ GetVehicleData
     "beltStatus" :
     {
         "driverBeltDeployed" : "YES",
-        "passengerBeltDeployed" : "YES",
+        "passengerBeltDeployed" : "YES"
     },
     "bodyInformation" :
     {

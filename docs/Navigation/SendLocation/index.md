@@ -74,7 +74,7 @@ SendLocation General behavior
     "locationImage" :
     {
          "value" : "tmp/SDL/app/Navi/12345.jpg",
-         "imageType" : DYNAMIC
+         "imageType" : "DYNAMIC"
     }
   }
 }

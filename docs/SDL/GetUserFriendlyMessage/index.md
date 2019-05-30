@@ -100,19 +100,18 @@ GetUserFriendlyMessage for device consent
 
 ```json
 {
-  "id" : 176,
-  "jsonrpc" : "2.0",
-  "result" :
-  {
-    "messages": {
-             "messageCode": "AppPermissions",
-             "ttsString": "%appName% is requesting the use of the following ....",
-             line1: "Grant Requested",
-             line2: "Permission(s)?"
-            },
-    "code" : 0,
-    "method" : "SDL.GetUserFriendlyMessage"
-  }
+	"id": 176,
+	"jsonrpc": "2.0",
+	"result": {
+		"messages": {
+			"messageCode": "AppPermissions",
+			"ttsString": "%appName% is requesting the use of the following ....",
+			"line1": "Grant Requested",
+			"line2": "Permission(s)?"
+		},
+		"code": 0,
+		"method": "SDL.GetUserFriendlyMessage"
+	}
 }
 ```
 
@@ -128,7 +127,7 @@ GetUserFriendlyMessage for device consent
     "message" : "Some error occurred",
     "data" :
     {
-      "SDL.GetUserFriendlyMessage"
+      "method": "SDL.GetUserFriendlyMessage"
     }
   }
 }

@@ -66,12 +66,12 @@ The User does NOT consent the device.
 	{
 		"deviceInfo": 
 		{
-				"name" : “Mary`s Phone”,
+				"name" : "Mary's Phone",
 				"id" : 8
-		}
+		},
 
-		“allowed” : true,
-		“source” :”GUI”
+		"allowed" : true,
+		"source" : "GUI"
 	}
 }
 

@@ -1,5 +1,13 @@
 ## OnSystemError
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Send notification to SDL Core about system errors
 
 ### Notification
 
@@ -11,5 +19,11 @@
 
 #### JSON Example Notification
 ```json
-
+{
+  "jsonrpc": "2.0",
+  "method": "SDL.OnSystemError",
+  "params": {
+    "error": "SYNC_REBOOTED"
+  }
+}
 ```

@@ -40,7 +40,7 @@ ChangeRegistration after OnAppRegistered
   "method" : "TTS.ChangeRegistration",
   "params" :
   {
-    "language" : DE-DE,
+    "language" : "DE-DE",
     "appID" : 65539
   }
 }
