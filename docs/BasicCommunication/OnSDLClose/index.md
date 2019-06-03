@@ -28,6 +28,10 @@ SDL cleans up applications' persistent data if the HMI calls for a `Factory Rese
 
 ### Notification
 
+#### Parameters
+
+This RPC has no additional parameter requirements
+
 ### Sequence Diagrams
 |||
 OnSDLClose Ingition Cycle

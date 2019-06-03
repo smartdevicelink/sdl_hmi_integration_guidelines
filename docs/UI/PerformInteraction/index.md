@@ -36,7 +36,7 @@ A UI.PerformInteraction with a timeout value of `0` should not be timed out imme
 |choiceSet|[Common.Choice](../../common/structs/#choice)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |vrHelpTitle|String|false|maxlength: 500|
 |vrHelp|[Common.VrHelpItem](../../common/structs/#vrhelpitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
-|timeout|Integer|true|minvalue: 5000<br>maxvalue: 100000|
+|timeout|Integer|true|minvalue: 5000<br>maxvalue: 100000<br>defvalue: 10000|
 |interactionLayout|[Common.LayoutMode](../../common/enums/#layoutmode)|false||
 |appID|Integer|true||
 

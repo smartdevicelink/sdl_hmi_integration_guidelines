@@ -32,13 +32,9 @@ Send `OnAllowSDLFuntionality` notification to SDL as a result of user’s choice
 
 |Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
-|device|[Common.DeviceInfo]|false|If no device is specified permission counts for SDL functionality in general.|
+|device|[Common.DeviceInfo](../../common/structs/#deviceinfo)|false|If no device is specified permission counts for SDL functionality in general.|
 |allowed|Boolean|true|Must be true if allowed|
-|source|[Common.ConsentSource]|true|-|
-
-[Common.DeviceInfo]: ../../common/structs/#deviceinfo
-[Common.ConsentSource]: ../../common/enums/#consentsource
-
+|source|[Common.ConsentSource](../../common/enums/#consentsource)|true|-|
 
 ### Sequence Diagrams
 

@@ -20,6 +20,7 @@ Purpose
 |timeoutPrompt|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |timeout|Integer|true||
 |grammarID|Integer|false|array: true<br>minsize: 1<br>maxsize: 100<br>minvalue: 0<br>maxvalue: 2000000000|
+|appID|Integer|true||
 
 ### Response
 

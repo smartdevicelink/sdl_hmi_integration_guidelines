@@ -30,7 +30,7 @@ If `serviceType` is not included in request, all service records will be returne
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|serviceRecords|[Common.AppServiceRecord](../../common/structs/#appservicerecord)|true|array: true|
+|serviceRecords|[Common.AppServiceRecord](../../common/structs/#appservicerecord)|false|array: true|
 
 ### Sequence Diagrams
 |||

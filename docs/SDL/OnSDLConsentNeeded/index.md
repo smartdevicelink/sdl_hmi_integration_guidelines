@@ -21,9 +21,7 @@ The notification is applicable only for the case when the device is consented by
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|device|[Common.DeviceInfo]|true||
-
-[Common.DeviceInfo]: ../../common/structs/#deviceinfo
+|device|[Common.DeviceInfo](../../common/structs/#deviceinfo)|true||
 
 ### Sequence Diagrams
 

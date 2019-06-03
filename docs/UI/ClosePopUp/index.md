@@ -17,6 +17,12 @@ Purpose
 |:---|:---|:--------|:---------|
 |methodName|String|false||
 
+### Response
+
+#### Parameters
+
+This RPC has no additional parameter requirements
+
 ### Sequence Diagrams
 |||
 ClosePopUp for UI.PerformInteraction

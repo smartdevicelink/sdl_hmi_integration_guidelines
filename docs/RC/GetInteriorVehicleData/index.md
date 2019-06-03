@@ -30,7 +30,7 @@ If the parameter `subscribe` is set to true, the mobile application has requeste
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |moduleType|[Common.ModuleType](../../common/enums/#moduletype)|true||
-|subscribe|Boolean|false|defvalue="false"|
+|subscribe|Boolean|false||
 
 ### Response
 HMI must return in GetInteriorVehicleData_response the current value of the display mode used in HMI if `moduleType = HMI_SETTINGS` .

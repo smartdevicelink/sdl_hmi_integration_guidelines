@@ -28,9 +28,7 @@ This RPC has no additional parameter requirements.
 
 |Name|Type|Mandatory|
 |:---|:---|:--------|
-|status|[Common.UpdateResult]|true|
-
-[Common.UpdateResult]: ../../common/enums/#updateresult
+|status|[Common.UpdateResult](../../common/enums/#updateresult)|true|
 
 ### Sequence Diagrams
 |||

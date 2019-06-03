@@ -20,11 +20,11 @@ SDL must send OnRCStatus notification when:
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
-|appID|Integer|true|ID of selected application|
-|allocatedModules|[Common.ModuleData](/docs/Common/Structs/index.md)|true|Contains a list (zero or more) of module types that are allocated to the application|
-|freeModules|[Common.ModuleData](/docs/Common/Structs/index.md)|true|Contains a list (zero or more) of module types that are free to access for the application|
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|appID|Integer|true||ID of selected application|
+|allocatedModules|[Common.ModuleData](../../common/structs/#moduledata)|true|array: true<br>minsize: 0<br>maxsize: 100|Contains a list (zero or more) of module types that are allocated to the application|
+|freeModules|[Common.ModuleData](../../common/structs/#moduledata)|true|array: true<br>minsize: 0<br>maxsize: 100|Contains a list (zero or more) of module types that are free to access for the application|
 
 #### JSON Example Notification
 

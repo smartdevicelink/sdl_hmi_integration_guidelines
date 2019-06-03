@@ -32,7 +32,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|policyFile|String|true|minlength: 1<br>maxlength: 255|
+|policyfile|String|true|minlength: 1<br>maxlength: 255|
 
 ### Sequence Diagrams
 

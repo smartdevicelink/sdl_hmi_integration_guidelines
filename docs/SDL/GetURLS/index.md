@@ -42,8 +42,7 @@ Request the URL(s) for any known service type that exists in Local PT at any tim
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|urls|[Common.ServiceInfo]|false|array: true<br>minsize: 1<br>maxsize: 100|
-[Common.ServiceInfo]: ../../common/structs/serviceinfo 
+|urls|[Common.ServiceInfo](../../common/structs/#serviceinfo)|false|array: true<br>minsize: 1<br>maxsize: 100|
 
 ### Sequence Diagrams
 

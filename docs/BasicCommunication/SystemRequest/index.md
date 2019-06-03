@@ -36,9 +36,9 @@ If SDL sends a SystemRequest with `requestSubType` parameter to an older system,
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |requestType|[Common.RequestType](../../common/enums/#requesttype)|true||  
-|requestSubType|String|false|maxlength="255"|
+|requestSubType|String|false|maxlength: 255|
 |fileName|String|true|minlength: 1<br>maxlength: 255|
-|appID|String|false|minlength: 1<br>maxlength: 50|
+|appID|Integer|true||
 
 ### Response
 

@@ -11,6 +11,10 @@ Purpose
 
 ### Notification
 
+#### Parameters
+
+This RPC has no additional parameter requirements.
+
 ### Sequence Diagrams
 |||
 Started upon TTS.Speak request from SDL

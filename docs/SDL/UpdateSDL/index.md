@@ -39,9 +39,7 @@ This RPC has no additional parameter requirements.
 
 |Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
-|result|[Common.UpdateResult]|true|Specify result: no update needed, update was successful/unsuccessful, etc.|
-
-[Common.UpdateResult]: ../../common/enums/#updateresult
+|result|[Common.UpdateResult](../../common/enums/#updateresult)|true|Specify result: no update needed, update was successful/unsuccessful, etc.|
 
 ### Sequence Diagrams
 |||

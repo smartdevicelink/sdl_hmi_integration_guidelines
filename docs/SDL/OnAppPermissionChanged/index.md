@@ -47,10 +47,6 @@ _**SDL Note**:_
 |requestType|[Common.RequestType](../../common/enums/#requesttype)|false|array: true<br>minsize: 0<br>maxsize: 100|  
 |requestSubType|String|false|array: true<br> minsize: 0<br> maxsize: 100 <br> maxlength: 100|
 
-[Common.PermissionItem]: ../../common/structs/#permissionitem
-[Common.AppPriority]: ../../common/enums/#apppriority
-[Common.RequestType]: ../../common/enums/#requesttype
-
 ### Sequence Diagrams
 _**Preconditions to the sequence:**_   
 a) SDL and HMI are started;   

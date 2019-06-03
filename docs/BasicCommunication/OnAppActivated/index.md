@@ -32,7 +32,7 @@ When `OnAppActivated` is received, SDL sends an `ActivateApp` request to confirm
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |appID|Integer|true|ID of the application to be activated on the HMI|
 
