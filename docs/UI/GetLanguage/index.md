@@ -22,6 +22,7 @@ This RPC has no additional parameter requirements
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |language|[Common.Language](../../common/enums/#language)|true||
+
 ### Sequence Diagrams
 |||
 GetLanguage

@@ -51,7 +51,7 @@ This RPC has no additional parameter requirements
 DialNumber Success
 ![DialNumberSuccess](./assets/DialNumberSuccess.jpg)
 |||
-|||
+
 |||
 DialNumber Failed
 ![DialNumberFailed](./assets/DialNumberFailed.png)
