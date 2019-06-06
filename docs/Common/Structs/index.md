@@ -539,7 +539,7 @@
 |stationShortName|String|false|minlength="4" <br> maxlength="7"|Identifies the 4-alpha-character station call sign plus an optional (-FM) extension|
 |stationIDNumber|Common.StationIDNumber|false||Used for network Application. Consists of Country Code and FCC Facility ID.|
 |stationLongName|String|false|minlength="0" <br> maxlength="56"|Identifies the station call sign or other identifying information in the long format.|
-|stationLocation|Common.GPSData|false|HMI should include only `longitudeDegrees`, `latitudeDegrees`, `altitude` params providing SiSData with `stationLocation` param|Provides the 3-dimensional geographic station location.|
+|stationLocation|Common.GPSData|false||Provides the 3-dimensional geographic station location.<br>HMI should include only `longitudeDegrees`, `latitudeDegrees`, `altitude` params providing SiSData|
 |stationMessage|String|false|minlength="0" <br> maxlength="56"|May be used to convey textual information of general interest to the consumer such as weather forecasts or public service announcements. <br> Includes a high priority delivery feature to convey emergencies that may be in the listening area.|
 
 ### ClimateControlData
