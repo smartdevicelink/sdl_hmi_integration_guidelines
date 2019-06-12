@@ -1227,4 +1227,7 @@
 |:---|:----|:----------|
 |PTU_FAILED|0|When a Service is rejected because the system was unable to get a required Policy Table Update.|
 |INVALID_CERT|1|When a Service is rejected because the security certificate is invalid/expired.|
-|INVALID_TIME|2|When a Service is rejected because the system was unable to get a valid SystemTime from HMI, which is required for certificate authentication.|
+|INVALID_TIME|2|When a Service is rejected because the system was unable to get a valid SystemTime from HMI, which is required for certificate authentication.|  
+|PROTECTION_ENFORCED|3|When a Service is rejected because the system configuration ini file requires the service must be protected, but the app asks for an unprotected service.|
+|PROTECTION_DISABLED|4|When a mobile app requests a protected service, but the system starts an unprotected service instead.|
+
