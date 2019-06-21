@@ -504,15 +504,15 @@
 |frequencyFraction|Integer|false|minvalue:0 maxvalue:9|The fractional part of the frequency for 101.7 is 7|
 |band|Common.RadioBand|false|||
 |rdsData|Common.RdsData|false|||
-|availableHDs|Integer|false|minvalue:0 maxvalue:7|number of HD sub-channels if available. since="5.2"|
-|hdChannel|Integer|false|minvalue:0 maxvalue:7|Current HD sub-channel if available. since="5.2"|
+|availableHDs|Integer|false|minvalue:1 maxvalue:7|Number of HD sub-channels if available. Deprecated.|
+|hdChannel|Integer|false|minvalue:0 maxvalue:7|Current HD sub-channel if available.|
 |signalStrength|Integer|false|minvalue:0 maxvalue:100||
 |signalChangeThreshold|Integer|false|minvalue:0 maxvalue:100|If the signal strength falls below the set value for this parameter, the radio will tune to an alternative frequency|
 |radioEnable|Boolean|false||True if the radio is on, false is the radio is off|
 |state|Common.RadioState|false||||
 |sisData|Common.SisData|false||Read-only Station Information Service (SIS) data provides basic information about the station such as call sign, as well as information not displayable to the consumer such as the station identification number|
 |hdRadioEnable|Boolean|false||True if the hd radio is on, false is the radio is off|
-|availableHdChannels|Integer|false|minvalue:0 maxvalue:7 array="true" minsize="0" since="5.2"|the list of available hd sub-channel indexes, empty list means no Hd channel is available, read-only|
+|availableHdChannels|Integer|false|minvalue:0 maxvalue:7 array="true" minsize="0"|The list of available hd sub-channel indexes, empty list means no Hd channel is available, read-only|
 
 ### RdsData
 
