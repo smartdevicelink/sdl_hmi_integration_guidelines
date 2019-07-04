@@ -21,6 +21,7 @@ On receiving `AddCommand` with `CommandType = Command` before a custom `helpProm
 |:---|:---|:--------|:---------|
 |helpPrompt|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 0<br>maxsize: 100|
 |timeoutPrompt|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
+|userLocation|[Common.SeatLocation](../../common/structs/#seatlocation)|false||
 |appID|Integer|true||
 
 ### Response

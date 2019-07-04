@@ -25,6 +25,7 @@ This RPC has no additional parameter requirements
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |remoteControlCapability|[Common.RemoteControlCapabilities](../../common/structs/#remotecontrolcapabilities)|false|See RemoteControlCapabilities, all available RC modules and buttons shall be returned|
+|seatLocationCapability|[Common.SeatLocationCapability](../../common/structs/#seatlocationcapability)|false|See SeatLocationCapability, all available seat locations shall be returned.|
 
 ### Sequence Diagrams
 
