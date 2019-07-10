@@ -29,6 +29,7 @@ Purpose
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |sliderPosition|Integer|false|minvalue: 1<br>maxvalue: 26|
+|cancelID|Integer|false|can be used later with CancelInteraction RPC to specifically close this slider|
 
 ### Sequence Diagrams
 |||

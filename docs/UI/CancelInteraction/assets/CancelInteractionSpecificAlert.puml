@@ -1,0 +1,17 @@
+@startuml
+
+participant Mobile
+participant Core
+participant HMI
+
+Mobile -> Core : CancelInteractionRequest\n(appID, ALERT, cancelID)
+
+Core -> HMI : CancelInteractionRequest\n(appID, ALERT, cancelID)
+
+HMI -> HMI : HMI Closes an active ALERT with\nthe corresponding cancel ID\nresponding with success if an\nALERT was closed
+
+HMI -> Core : CancelInteractionResponse
+
+Core -> Mobile : CancelInteractionResponse
+
+@enduml
