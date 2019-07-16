@@ -21,6 +21,7 @@ This request may be sent:
 
 ### Behavior
 
+If `level` is `FULL` or `LIMITED`: 
 !!! must
 
   1. Activate the application on the HMI
@@ -44,7 +45,7 @@ This request may be sent:
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
 |priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
-|level|[Common.HMILevel](../../common/enums/#hmilevel)|false||
+|level|[Common.HMILevel](../../common/enums/#hmilevel)|false|Included if the hmi level of this application should be changed to anything other than `FULL`. Should not be `NONE`.|
 
 ### Response
 
@@ -113,8 +114,4 @@ Activate App after Unexpected Disconnect
 |||
 Activate App after Accepted Data Consent Prompt
 ![Activate App Successful Data](./assets/ActivateAppSuccessfulData.png)
-|||
-|||
-Activate App after Failed Data Consent Prompt
-![Activate App Failed Data](./assets/ActivateAppFailedData.png)
 |||

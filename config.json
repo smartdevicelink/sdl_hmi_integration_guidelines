@@ -24,6 +24,9 @@
               "name": "ActivateApp"
             },
             {
+              "name": "CloseApplication"
+            },
+            {
               "name": "MixingAudioSupported"
             },
             {
