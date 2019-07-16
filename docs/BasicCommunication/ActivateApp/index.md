@@ -45,7 +45,7 @@ If `level` is `FULL` or `LIMITED`:
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
 |priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
-|level|[Common.HMILevel](../../common/enums/#hmilevel)|false|If the hmi level of this application is to be changed to anything other than `FULL`, then this parameter is included. Should not be `NONE`.|
+|level|[Common.HMILevel](../../common/enums/#hmilevel)|false|Included if the hmi level of this application should be changed to anything other than `FULL`. Should not be `NONE`.|
 
 ### Response
 
