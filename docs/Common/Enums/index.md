@@ -98,31 +98,32 @@
 |statusBar|4||
 |mediaClock|5||
 |mediaTrack|6||
-|alertText1|7||
-|alertText2|8||
-|alertText3|9||
-|scrollableMessageBody|10||
-|initialInteractionText|11||
-|navigationText1|12||
-|navigationText2|13||
-|ETA|14||
-|totalDistance|15||
-|audioPassThruDisplayText1|16||
-|audioPassThruDisplayText2|17||
-|sliderHeader|18||
-|sliderFooter|19||
-|menuName|20||
-|secondaryText|21||
-|tertiaryText|22||
-|menuTitle|23||
-|navigationText|24||
-|notificationText|25||
-|locationName|26||
-|locationDescription|27||
-|addressLines|28||
-|phoneNumber|29||
-|timeToDestination|30||
-|turnText|31||
+|templateTitle|7|The title of the new template that will be displayed; applies to "Show"|
+|alertText1|8||
+|alertText2|9||
+|alertText3|10||
+|scrollableMessageBody|11||
+|initialInteractionText|12||
+|navigationText1|13||
+|navigationText2|14||
+|ETA|15||
+|totalDistance|16||
+|audioPassThruDisplayText1|17||
+|audioPassThruDisplayText2|18||
+|sliderHeader|19||
+|sliderFooter|20||
+|menuName|21||
+|secondaryText|22||
+|tertiaryText|23||
+|menuTitle|24||
+|navigationText|25||
+|notificationText|26||
+|locationName|27||
+|locationDescription|28||
+|addressLines|29||
+|phoneNumber|30||
+|timeToDestination|31||
+|turnText|32||
 
 ### MetadataType
 
