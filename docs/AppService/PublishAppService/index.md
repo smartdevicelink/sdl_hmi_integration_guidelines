@@ -11,7 +11,7 @@ Purpose
 
 !!! note
 
-An app service may send a PublishAppService RPC request mutiple times. Additional PublishAppService RPC requests will update the app service manifest and trigger an OnSystemCapabilityUpdated notification.
+The HMI may send a PublishAppService RPC request multiple times for a given service type. Additional PublishAppService RPC requests will update the app service manifest, rather than creating a new service, triggering an OnSystemCapabilityUpdated(MANIFEST_UPDATE) notification.
 
 !!!
 

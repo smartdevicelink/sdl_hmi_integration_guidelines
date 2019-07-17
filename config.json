@@ -483,7 +483,7 @@
               "name": "PublishAppService"
             },
             {
-              "name": "UnublishAppService"
+              "name": "UnpublishAppService"
             },
             {
               "name": "GetAppServiceData"
