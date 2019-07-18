@@ -19,6 +19,13 @@ The [`RemoteControlCapabilities`](../../common/structs/#remotecontrolcapabilitie
 This RPC has no additional parameter requirements
 
 ### Response
+!!! must 
+
+1. Provide `moduleID` and `serviceArea` in GetCapabilities_respose to SDL if it supports multiple modules per module type.  
+2. Determine and provide default `moduleID` for the moduleType and publish it as the first item in RemoteControlCapabilities.
+
+!!!
+
 
 #### Parameters
 
