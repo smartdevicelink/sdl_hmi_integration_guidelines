@@ -17,6 +17,7 @@ Purpose
 |:---|:---|:--------|:---------|
 |systemContext|[Common.SystemContext](../../common/enums/#systemcontext)|true||
 |appID|Integer|false||
+|windowID|Integer|false||
 
 ### Sequence Diagrams
 |||

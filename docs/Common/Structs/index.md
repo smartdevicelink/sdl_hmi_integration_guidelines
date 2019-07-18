@@ -1004,3 +1004,11 @@ There are no defined parameters for this struct.
 |nextInstructionDistance|Float|false||The distance to this instruction from current location. This should only be updated ever .1 unit of distance. For more accuracy the consumer can use the GPS location of itself and the next instruction|
 |nextInstructionDistanceScale|Float|false||Distance till next maneuver (starting from) from previous maneuver|
 |prompt|String|false||This is a prompt message that should be conveyed to the user through either display or voice (TTS). This param will change often as it should represent the following: approaching instruction, post instruction, alerts that affect the current navigation session, etc|
+
+### TemplateConfiguration
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|template|String|true|maxlength: 500| Predefined or dynamically created window template. Currently only predefined window template layouts are defined.|
+|dayColorScheme|Common.TemplateColorScheme|false|||
+|nightColorScheme|Common.TemplateColorScheme|false|||

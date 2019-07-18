@@ -1163,6 +1163,7 @@
 |VIDEO_STREAMING|2||
 |REMOTE_CONTROL|3||
 |APP_SERVICES|4||
+|DISPLAY|5||
 
 ### MediaType
 
@@ -1204,3 +1205,17 @@
 |:---|:----|:----------|
 |LEFT|0||
 |RIGHT|1||
+
+### WindowType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MAIN|0|This window type describes the main window on a display|
+|WIDGET|1|A widget is a small window that the app can create to provide information and soft buttons for quick app control|
+
+### PredefinedWindows
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DEFAULT_WINDOW|0|The default window is a main window pre-created on behalf of the app|
+|PRIMARY_WIDGET|1|The primary widget of the app|

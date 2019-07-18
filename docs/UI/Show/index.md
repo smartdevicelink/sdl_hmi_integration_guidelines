@@ -22,6 +22,8 @@ Purpose
 |softButtons|[Common.SoftButton](../../common/structs/#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 8|
 |customPresets|String|false|array: true<br>minsize: 0<br>maxsize: 10<br>maxlength: 500|
 |appID|Integer|true||
+|windowID|Integer|false||
+|templateConfiguration|[Common.TemplateConfiguration](../../common/structs/#templateconfiguration)|false||
 
 ### Response
 
