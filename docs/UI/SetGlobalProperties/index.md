@@ -77,6 +77,7 @@ _**Notes for HMI expected behavior:**_
 |menuIcon|[Common.Image](../../common/structs/#image)|false|-|
 |keyboardProperties|[Common.KeyboardProperties](../../common/structs/#keyboardproperties)|false|-|
 |appID|Integer|true|-|
+|menuLayout|[Common.MenuLayout](../../common/enums/#menulayout)|false|defvalue="LIST"|
 
 ### Response
 |Result |Description |Message type WebSocket|Message type D-Bus|Message Params|

@@ -439,6 +439,7 @@
 |templatesAvailable|String|true|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 100||
 |screenParams|Common.ScreenParams|false|||
 |numCustomPresetsAvailable|Integer|false|minvalue: 1<br>maxvalue: 100||
+|menuLayoutsAvailable|[Common.MenuLayout](../../common/enums/#menulayout)|false|array: true<br>minsize: 0<br>maxsize: 1000||
 
 ### TimeFormat
 
