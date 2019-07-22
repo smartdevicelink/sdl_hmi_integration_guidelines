@@ -46,7 +46,7 @@ An alert may be sent to the HMI for an application which is not currently active
 |progressIndicator|Boolean|false||
 |alertType|[Common.AlertType](../../common/enums/#alerttype)|true||
 |appID|Integer|true||
-|`alertIcon`|Image|False|Image struct determining whether static or dynamic icon. If omitted on supported displays, no (or the default if applicable) icon should be displayed.|
+|alertIcon|[Common.Image](../../common/structs/#image)|false||
 
 ### Response
 
