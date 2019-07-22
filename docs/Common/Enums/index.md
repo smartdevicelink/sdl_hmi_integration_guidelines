@@ -384,6 +384,21 @@
 |SOURCE|33|RADIO Module|
 |SHUFFLE|34|RADIO Module|
 |REPEAT|35|RADIO Module|
+|NAV_CENTER_LOCATION|36|Navigation Subscription Button|
+|NAV_ZOOM_IN|37|Navigation Subscription Button|
+|NAV_ZOOM_OUT|38|Navigation Subscription Button|
+|NAV_PAN_UP|39|Navigation Subscription Button|
+|NAV_PAN_UP_RIGHT|40|Navigation Subscription Button|
+|NAV_PAN_RIGHT|41|Navigation Subscription Button|
+|NAV_PAN_DOWN_RIGHT|42|Navigation Subscription Button|
+|NAV_PAN_DOWN|43|Navigation Subscription Button|
+|NAV_PAN_DOWN_LEFT|44|Navigation Subscription Button|
+|NAV_PAN_LEFT|45|Navigation Subscription Button|
+|NAV_PAN_UP_LEFT|46|Navigation Subscription Button|
+|NAV_TILT_TOGGLE|47|Navigation Subscription Button|
+|NAV_ROTATE_CLOCKWISE|48|Navigation Subscription Button|
+|NAV_ROTATE_COUNTERCLOCKWISE|49|Navigation Subscription Button|
+|NAV_HEADING_TOGGLE|50|Navigation Subscription Button|
 
 ### KeypressMode
 
