@@ -10,15 +10,11 @@ Core -> HMI : AlertRequest(cancelID: 1)
 
 HMI -> HMI : Alert is showing\non the HMI
 
-Mobile -> Core : CancelInteractionRequest\n(AlertID, cancelID: 1)
+Mobile -> Core : CancelInteractionRequest\n(AlertID, cancelID: 2)
 
-Core -> HMI : CancelInteractionRequest\n(AlertID, cancelID: 1)
+Core -> HMI : CancelInteractionRequest\n(AlertID, cancelID: 2)
 
-HMI -> HMI : HMI closes the ALERT
-
-HMI -> Core : AlertResponse\n(result: Aborted)
-
-Core -> Mobile : AlertResponse\n(result: Aborted)
+HMI -> HMI : Alert is still showing\nbecause the cancelIDs did not match
 
 HMI -> Core : CancelInteractionResponse\n(result: Ignored)
 

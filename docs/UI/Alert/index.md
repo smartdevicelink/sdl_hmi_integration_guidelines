@@ -46,7 +46,7 @@ An alert may be sent to the HMI for an application which is not currently active
 |progressIndicator|Boolean|false||
 |alertType|[Common.AlertType](../../common/enums/#alerttype)|true||
 |appID|Integer|true||
-|cancelID|Integer|false|can be used later with CancelInteraction RPC to specifically close this alert|
+|cancelID|Integer|false||
 
 ### Response
 

@@ -19,7 +19,7 @@ Purpose
 |timeout|Integer|true|minvalue: 0<br>maxvalue: 65535|
 |softButtons|[Common.SoftButton](../../common/structs/#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 8|
 |appID|Integer|true||
-|cancelID|Integer|false|can be used later with CancelInteraction RPC to specifically close this scrollable message|
+|cancelID|Integer|false||
 
 ### Response
 

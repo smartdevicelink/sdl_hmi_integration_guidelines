@@ -4,14 +4,24 @@ participant Mobile
 participant Core
 participant HMI
 
-Mobile -> Core : CancelInteractionRequest\n(appID, ALERT)
+Mobile -> Core : AlertRequest
 
-Core -> HMI : CancelInteractionRequest\n(appID, ALERT)
+Core -> HMI : AlertRequest
 
-HMI -> HMI : HMI Closes any active ALERT\nresponding with success if\nan ALERT was closed
+HMI -> HMI : Alert is showing\non the HMI
 
-HMI -> Core : CancelInteractionResponse
+Mobile -> Core : CancelInteractionRequest\n(AlertID)
 
-Core -> Mobile : CancelInteractionResponse
+Core -> HMI : CancelInteractionRequest\n(AlertID)
+
+HMI -> HMI : HMI closes the ALERT
+
+HMI -> Core : AlertResponse\n(result: Aborted)
+
+Core -> Mobile : AlertResponse\n(result: Aborted)
+
+HMI -> Core : CancelInteractionResponse\n(result: Success)
+
+Core -> Mobile : CancelInteractionResponse\n(result: Success)
 
 @enduml
