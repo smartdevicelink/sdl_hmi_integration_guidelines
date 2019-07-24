@@ -30,6 +30,11 @@ CancelInteraction for specific UI.Alert using optional cancelID parameter
 ![CancelInteraction](./assets/CancelInteractionSpecificAlert.png)
 |||
 
+|||
+CancelInteraction for specific UI.Alert using mismatched cancelID
+![CancelInteraction](./assets/CancelInteractionSpecificAlertWrong.png)
+|||
+
 ### Example Request
 
 ```json
