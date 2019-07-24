@@ -4,7 +4,7 @@ Type
 : Function
 
 Sender
-: Mobile
+: SDL
 
 Purpose
 : Close an interaction of the specified type
