@@ -486,6 +486,9 @@
               "name": "PublishAppService"
             },
             {
+              "name": "UnpublishAppService"
+            },
+            {
               "name": "GetAppServiceData"
             },
             {
