@@ -44,7 +44,7 @@ CancelInteraction for specific UI.Alert using mismatched cancelID
   "method" : "UI.CancelInteraction",
   "params" : {
     "appID" : 190838891,
-    "cancelID" : -1,
+    "cancelID" : 42,
     "functionID" : 12
   }
 }
