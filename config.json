@@ -374,6 +374,9 @@
             },
             {
               "name": "Slider"
+            },
+            {
+              "name": "ShowAppMenu"
             }
           ]
         },

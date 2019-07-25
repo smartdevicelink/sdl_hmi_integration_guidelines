@@ -1,0 +1,9 @@
+@startuml ShowAppMenu
+participant Core
+participant HMI
+
+Core -> HMI: UI.ShowAppMenu\n(appID: 8427)
+HMI -> HMI: Since menuID is NOT provided,\n only opens the app's menu
+HMI --> Core: UI.ShowAppMenu Response
+
+@enduml
