@@ -20,8 +20,8 @@ HMI -> Core : AlertResponse\n(result: Aborted)
 
 Core -> Mobile : AlertResponse\n(result: Aborted)
 
-HMI -> Core : CancelInteractionResponse\n(result: Ignored)
+HMI -> Core : CancelInteractionResponse\n(result: Success)
 
-Core -> Mobile : CancelInteractionResponse\n(result: Ignored)
+Core -> Mobile : CancelInteractionResponse\n(result: Success)
 
 @enduml
