@@ -22,15 +22,8 @@ SDL sends SetGlobalProperties request with specific `<vrHelp>` and `<vrHelpTitle
 2. If at any point in time, the application sends `SetGlobalProperties` RPC with **either** of `vrHelp` **or** `helpPrompt` parameters, then SDL Core shall continue with the existing behavior of forwarding such requests to HMI and SDL Core shall not delete its internal list and shall continue to update the parameter which was not provided by the application.  
 3. In case mobile app sends `AddCommand` with `CommandType = Command`, SDL must send update values of `vrHelp` via `SetGlobalProperties` to HMI. _(Note: AddCommand requests related to choice set must NOT trigger the update of "vrHelp")_
 4. In case mobile app sends _SetGlobalProperties_request_ to SDL:   
-    - with both valid values of _autoCompleteList_ and _autoCompleteText_ params, _SDL must_:   
-        - transfer _SetGlobalProperties_request_ with _autoCompleteList_ param and without (omitted) _autoCompleteText_ param to HMI;   
-        - respond with `<resultCode_received_from_HMI>` to mobile app.   
-    - with valid _autoCompleteList_ parameter with other valid params related to request and this request is allowed by Policies, _SDL must_:   
-        - transfer _SetGlobalProperties_ with all requested params to HMI;   
-        - respond with `<resultCode_received_from_HMI>` to mobile app.   
-    - without _autoCompleteList_ parameter with other valid params related to request and this request is allowed by Policies, _SDL must_:   
-        - transfer _SetGlobalProperties_ with all requested parameters to HMI (_thus, without autoCompleteList_).   
-        - respond with `<resultCode_received_from _HMI>` to mobile app.   
+    - _SDL must_ omit the `autoCompleteText` parameter when forwarding to the HMI
+        - if `autoCompleteText` is present and `autoCompleteList` is omitted, SDL will forward `autoCompleteList` with a single value, taken from `autoCompleteText`.
  
 !!! NOTE
 
@@ -38,13 +31,13 @@ By default `vrHelpTitle` value is set to application name.
 
 _**Notes for HMI expected behavior:**_
 
-1. The system shall have the ability to receive and store multiple strings for _autoCompleteText_ per app.   
-2. When the system receives a new list of strings for autoCompleteText for a particular app, the system shall delete the previous list and replace it with the new list for that app.   
-3. When any of the keyboard layouts are being used, the system shall reference the list of _autoCompleteText_ strings for that app.   
-4. As the user enters data on the keyboard, the system shall display the _autoCompleteText_ strings which match the entry.   
-5. The number of matching _autoCompleteText_ strings displayed shall only be limited by the character length constraints of the hmi.   
-6. The system shall provide the user the ability to select one of the displayed matching _autoCompleteText_ strings without having to enter the entire string.   
-7. When the user selects one of the displayed matching _autoCompleteText_ string, the system shall submit that entry and not require further user input for submission.
+1. The system shall have the ability to receive and store multiple strings from `autoCompleteList` per app.   
+2. When the system receives a new list of strings in `autoCompleteList` for a particular app, the system shall delete the previous list and replace it with the new list for that app.   
+3. When any of the keyboard layouts are being used, the system shall reference the `autoCompleteList` strings for that app.   
+4. As the user enters data on the keyboard, the system shall display values from `autoCompleteList` which match the entry.
+5. The number of matching `autoCompleteList` strings displayed shall only be limited by the character length constraints of the hmi.
+6. The system shall provide the user the ability to select one of the displayed matching `autoCompleteList` strings without having to enter the entire string.   
+7. When the user selects one of the displayed matching `autoCompleteList` strings, the system shall submit that entry and not require further user input for submission.
 
 !!!
 
