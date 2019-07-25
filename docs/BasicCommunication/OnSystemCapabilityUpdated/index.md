@@ -10,6 +10,9 @@ Purpose
 : Inform the HMI that a specific system capability has changed
 
 ### Notification
+1. HMI sends OnSystemCapabilityUpdated notification to SDL after creating a widget _(see also [CreateWindow](../../UI/CreateWindow/index.md))_.
+2. HMI sends OnSystemCapabilityUpdated notification after receiving UI.Show(templateConfiguration) request manipulating the content presented of main window or widgets.
+
 
 #### Parameters
 
