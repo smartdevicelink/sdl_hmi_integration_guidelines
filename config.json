@@ -370,13 +370,13 @@
               "name": "Show"
             },
             {
+              "name": "ShowAppMenu"
+            },
+            {
               "name": "ShowCustomForm"
             },
             {
               "name": "Slider"
-            },
-            {
-              "name": "ShowAppMenu"
             }
           ]
         },

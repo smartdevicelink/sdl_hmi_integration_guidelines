@@ -34,3 +34,31 @@ ShowAppMenu request(without menuID)
 ShowAppMenu request(with menuID)
 ![ShowAppMenu](./assets/ShowAppMenu_MenuID.png)
 |||
+
+### Example Request
+
+```json
+{
+  "id" : 120,
+  "jsonrpc" : "2.0",
+  "method" : "UI.ShowAppMenu",
+  "params" :
+  {
+    "menuID" : 313,
+    "appID" : 8726
+  }
+}
+```
+### Example Response
+
+```json
+{
+  "id" : 120,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "UI.ShowAppMenu"
+  }
+}
+```
