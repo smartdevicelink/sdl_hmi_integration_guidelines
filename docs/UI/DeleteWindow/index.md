@@ -1,4 +1,4 @@
-## Delete window
+## DeleteWindow
 
 Type
 : Function
@@ -80,7 +80,7 @@ DeleteWindow
     "message" : "The data may not be changed because it is currently in use",
     "data" :
     {
-      "UI. DeleteSubMenu "
+      "UI. DeleteWindow"
     }
   }
 }
