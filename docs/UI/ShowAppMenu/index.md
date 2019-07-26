@@ -16,7 +16,7 @@ Purpose
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |menuID|Integer|false|minvalue: 1<br>maxvalue: 2000000000|If ommited the HMI opens the app's menu.<br>If set to a sub-menu ID the HMI opens the corresponding sub-menu previously added using `AddSubMenu`|
-|appID|Integer|true|||
+|appID|Integer|true| | |
 
 ### Response
 
@@ -29,10 +29,9 @@ This RPC has no additional parameter requirements
 ShowAppMenu request(without menuID)
 ![ShowAppMenu](./assets/ShowAppMenu.png)
 |||
-
 |||
 ShowAppMenu request(with menuID)
-![ShowAppMenu](./assets/ShowAppMenu_MenuID.png)
+![ShowAppMenuwMenuID](./assets/ShowAppMenu_MenuID.png)
 |||
 
 ### Example Request
