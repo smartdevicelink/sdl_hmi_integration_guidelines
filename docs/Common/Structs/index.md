@@ -1012,3 +1012,11 @@ There are no defined parameters for this struct.
 |template|String|true|maxlength: 500| Predefined or dynamically created window template. Currently only predefined window template layouts are defined.|
 |dayColorScheme|Common.TemplateColorScheme|false|||
 |nightColorScheme|Common.TemplateColorScheme|false|||
+
+### DisplayCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|displayName|String|false||
+|windowTypeSupported|Common.WindowTypeCapabilities|false|array: true<br>minsize: 1|Informs the application how many windows the app is allowed to create per type|
+|windowCapabilities|Common.WindowCapability|false|array: true<br>minsize: 1<br>maxsize: 1000|Contains a list of capabilities of all windows related to the app.<br>Once the app has registered the capabilities of all windows are provided.<br>GetSystemCapability still allows requesting window capabilities of all windows.|
