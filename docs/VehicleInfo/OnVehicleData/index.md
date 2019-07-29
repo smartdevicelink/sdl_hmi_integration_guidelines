@@ -9,6 +9,12 @@ Sender
 Purpose
 : Inform SDL about changes to subscribed vehicle data values.
 
+!!! must
+
+Send OnVehicleData notification with the correct structure per RPC spec/schema items defined in PT
+
+!!!
+
 !!! note
 
 #### CloudAppVehicleID
