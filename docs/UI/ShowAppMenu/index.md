@@ -9,6 +9,11 @@ Sender
 Purpose
 : Show an app's menu or a corresponding sub-menu.
 
+!!! must
+
+After opening the menu, the HMI must send a [UI.OnSystemContext](../OnSystemContext) notification with `systemContext: "MENU"` to SDL.
+
+!!!
 ### Request
 
 #### Parameters
