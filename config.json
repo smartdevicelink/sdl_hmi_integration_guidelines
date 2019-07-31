@@ -370,6 +370,9 @@
               "name": "Show"
             },
             {
+              "name": "ShowAppMenu"
+            },
+            {
               "name": "ShowCustomForm"
             },
             {
