@@ -87,7 +87,6 @@ CreateWindow
 }
 ```
 
-
 ### Example Error
 
 ```json
@@ -100,7 +99,7 @@ CreateWindow
     "message" : "The data may not be changed because it is currently in use",
     "data" :
     {
-      "UI.CreateWindow "
+    "method" : "UI.CreateWindow "
     }
   }
 }
