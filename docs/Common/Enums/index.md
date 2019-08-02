@@ -853,6 +853,7 @@
 |VEHICLEDATA_ENGINEOILLIFE|28||
 |VEHICLEDATA_ELECTRONICPARKBRAKESTATUS|29||
 |VEHICLEDATA_CLOUDAPPVEHICLEID|30| Parameter used by cloud apps or the policy server to identify a head unit|
+|VEHICLEDATA_OEM_CUSTOM_DATA|31||
 
 ### VideoStreamingProtocol
 
