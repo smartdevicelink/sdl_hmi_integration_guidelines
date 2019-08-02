@@ -18,6 +18,8 @@ SDL must send OnRCStatus notification when:
     * A module is de-allocated from an application (the module is freed when application exits, disconnects, goes to HMI level NONE)
     * An application no longer has the right to control the module (for example, a policy update can revoke the application's access to a module)
 
+SDL must always include `moduleId` for each and every `ModuleData` in `allocatedModules` and `freeModules` in OnRCStatus notification.
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
