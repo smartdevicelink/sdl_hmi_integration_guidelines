@@ -767,6 +767,7 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
+|id|Common.SupportedSeat|false||
 |heatingEnabled|Boolean|false||
 |coolingEnabled|Boolean|false||
 |heatingLevel|Integer|false|minvalue="0" <br> maxvalue="100"||
