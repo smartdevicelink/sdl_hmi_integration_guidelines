@@ -48,7 +48,7 @@
 |hapticSpatialDataSupported|boolean|false| |True if the system can utilize the haptic spatial data from the source being streamed.|
 |diagonalScreenSize|Float|false||The diagonal screen size in inches.|
 |pixelPerInch|Float|false||PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
-|scale|Float|false||The scaling factor the app should use to change the size of the projecting view.|
+|scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
 
 
 ### SystemCapabilities
