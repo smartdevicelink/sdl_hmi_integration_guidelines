@@ -15,11 +15,9 @@ Purpose
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:--------------------------|
-|appName|String|false||Request new app name registration<br>Needs to be unique over all applications from the same device.<br> May not interfere with any name or synonym of any registered applications form the same device.<br>Additional applications with the same name from the same device will be rejected|
-|ngnMediaScreenAppName|String|false|maxlength: 100||
+|ttsName|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array, minsize="1" maxsize="100"|Request new ttsName registration<br>TTS string for VR recognition of the mobile application name, e.g. "Ford Drive Green".<br> Meant to overcome any failing on speech engine in properly pronouncing / understanding app name.<br>May not be empty.<br>May not start with a new line character.<br>Not unique value (SDL makes all the checks)|
 |language|[Common.Language](../../common/enums/#language)|true| | |
-|appHMIType|[Common.AppHMIType](../../common/enums/##apphmitype)|false|minsize="1"<br>maxsize="100"<br>array="true"||
-|appID|Integer|true||
+|appID|Integer|true| | |
 
 ### Response
 
