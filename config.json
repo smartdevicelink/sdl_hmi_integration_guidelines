@@ -292,6 +292,9 @@
               "name": "Alert"
             },
             {
+              "name": "CancelInteraction"
+            },
+            {
               "name": "ChangeRegistration"
             },
             {

@@ -46,6 +46,7 @@ An alert may be sent to the HMI for an application which is not currently active
 |progressIndicator|Boolean|false||
 |alertType|[Common.AlertType](../../common/enums/#alerttype)|true||
 |appID|Integer|true||
+|cancelID|Integer|false||
 |alertIcon|[Common.Image](../../common/structs/#image)|false||
 
 ### Response
