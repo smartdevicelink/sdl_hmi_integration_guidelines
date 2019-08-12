@@ -24,6 +24,9 @@
               "name": "ActivateApp"
             },
             {
+              "name": "CloseApplication"
+            },
+            {
               "name": "MixingAudioSupported"
             },
             {
@@ -370,6 +373,9 @@
               "name": "Show"
             },
             {
+              "name": "ShowAppMenu"
+            },
+            {
               "name": "ShowCustomForm"
             },
             {
@@ -484,6 +490,9 @@
           "navigation": [
             {
               "name": "PublishAppService"
+            },
+            {
+              "name": "UnpublishAppService"
             },
             {
               "name": "GetAppServiceData"

@@ -155,7 +155,7 @@
 |keyboardLayout|Common.KeyboardLayout|false|||
 |keypressMode|Common.KeypressMode|false|||
 |limitedCharacterList|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 1||
-|autoCompleteText|String|false|maxlength: 1000||
+|autoCompleteList|String|false|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 1000||
 
 ### Choice
 
