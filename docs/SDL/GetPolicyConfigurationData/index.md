@@ -69,7 +69,9 @@ Below is the example usage for GetPolicyConfigurationData request to read `versi
 	"jsonrpc" : "2.0",
 	"result" :
 	{
-            	"value" : ["{"custom_vehicle_data_mapping_url":{"version":"0.0.0"}}"],
+		"value" : [
+			"{\"custom_vehicle_data_mapping_url\":{\"version\":\"0.0.0\"}}"
+		],
 	    	"code" : 0,
 		"method" : "SDL.GetPolicyConfigurationData"
 	}
