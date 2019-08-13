@@ -11,7 +11,7 @@ Purpose
 
 !!! must
 1. Map each parameter in GetVehicleData request to its `<name>` in the case that it is listed in HMI_API.xml; `<name>` is always a single boolean value (according to API).  
-2. Consider a parameter in GetVehicleData request as `key` in case it is not listed in HMI_API.xml; `key` in GetVehicleData request may be either boolean or struct. Struct may contain either booleans or structs. 
+2. Map each parameter in GetVehicleData request to its `<key>` in the case that it is not listed in HMI_API.xml; `<key>` in GetVehicleData request may be either a boolean or struct value. If the value is a struct, it may contain either boolean or nested struct values, structured according to the vehicle data structure defined in `schema_items`. 
 3. Respond with any custom vehicle data defined in `schema_items` included in the original request. 
 
 Keys and names should not match at different levels of nesting.   
