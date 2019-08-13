@@ -42,7 +42,7 @@ Purpose
 |||
 GetPolicyConfigurationData 
 Below is the example usage for GetPolicyConfigurationData request to read `version` and endpoint `url` for `custom_vehicle_data_mapping_url`
-* HMI needs to parse the `url` / version for `custom_vehicle_data_mapping_url` from returned json 
+* HMI needs to parse the `url` version for `custom_vehicle_data_mapping_url` from returned json 
 
 ![GetPolicyConfigurationData](./assets/GetPolicyConfigurationData.png)
 |||

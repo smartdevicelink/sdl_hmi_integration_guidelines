@@ -66,11 +66,6 @@ BC.OnSystemRequest in "Proprietary" Policy Table Update Flow
 ![Proprietary PTU](./assets/OnSystemRequest_in_Proprietary_PTU_flow.png)
 |||
 
-|||
-BC.OnSystemRequest in External Proprietary Policy Table Update Flow
-![EXTERNAL proprietary](./assets/diagram_PolicyUpdate_external_proprietary.png)
-|||
-
 #### JSON Example Notification
 ```json
 {

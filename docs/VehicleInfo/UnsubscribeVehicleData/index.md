@@ -46,9 +46,9 @@ Purpose
 |cloudAppVehicleID|Boolean|false||
 
 ### Response
-!!! may
+!!! must
 
-HMI may send SubscribeVehicleData response only for ROOT level items.
+HMI must send SubscribeVehicleData response only for ROOT level items.
 
 !!!
 #### Parameters
