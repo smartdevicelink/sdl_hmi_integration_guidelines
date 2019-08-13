@@ -12,7 +12,7 @@ Purpose
 !!! must
 1. Map each parameter in GetVehicleData request to its `<name>` in the case that it is listed in HMI_API.xml; `<name>` is always a single boolean value (according to API).  
 2. Consider a parameter in GetVehicleData request as `key` in case it is not listed in HMI_API.xml; `key` in GetVehicleData request may be either boolean or struct. Struct may contain either booleans or structs. 
-3. Respond with the correct schema_items to GetVehicleData request from SDL. 
+3. Respond with any custom vehicle data defined in `schema_items` included in the original request. 
 
 Keys and names should not match at different levels of nesting.   
 Schema_items should not have duplicate `name` and `key` for different vehicle data items/sub-params, except same items is defined for different versions.  
