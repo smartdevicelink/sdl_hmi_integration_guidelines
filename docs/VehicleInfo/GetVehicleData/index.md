@@ -18,7 +18,7 @@ Keys and names should not match at different levels of nesting.
 Schema_items should not have duplicate `name` and `key` for different vehicle data items/sub-params, except same items is defined for different versions.  
 Schema_items should not have `name`/`key` equivalent to any RPC vehicle data item/sub-param.
 
-4. Respond with the structure as defined in API .xml
+4. Respond with any vehicle data defined in `HMI_API.xml` included in the original request.
 
 !!!
 
