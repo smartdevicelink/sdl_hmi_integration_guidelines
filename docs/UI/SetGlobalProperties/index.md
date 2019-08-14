@@ -74,10 +74,10 @@ _**Notes for HMI expected behavior:**_
 |vrHelpTitle|String|false|maxlength: 500|
 |vrHelp|[Common.VrHelpItem](../../common/structs/#vrhelpitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |menuTitle|String|false|maxlength: 500|
-|menuIcon|[Common.Image](../../common/structs/#image)|false|-|
-|keyboardProperties|[Common.KeyboardProperties](../../common/structs/#keyboardproperties)|false|-|
-|appID|Integer|true|-|
-|menuLayout|[Common.MenuLayout](../../common/enums/#menulayout)|false|defvalue="LIST"|
+|menuIcon|[Common.Image](../../common/structs/#image)|false||
+|keyboardProperties|[Common.KeyboardProperties](../../common/structs/#keyboardproperties)|false||
+|appID|Integer|true||
+|menuLayout|[Common.MenuLayout](../../common/enums/#menulayout)|false||
 
 ### Response
 |Result |Description |Message type WebSocket|Message type D-Bus|Message Params|
