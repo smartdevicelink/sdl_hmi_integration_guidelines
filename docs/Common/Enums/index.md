@@ -179,6 +179,13 @@
 |QWERTZ|1||
 |AZERTY|2||
 
+### MenuLayout
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|LIST|0||
+|TILES|1||
+
 ### ButtonEventMode
 
 |Name|Value|Description|
