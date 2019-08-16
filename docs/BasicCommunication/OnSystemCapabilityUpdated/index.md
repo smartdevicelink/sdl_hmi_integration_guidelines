@@ -4,10 +4,10 @@ Type
 : Notification
 
 Sender
-: SDL
+: SDL or HMI
 
 Purpose
-: Inform the HMI that a specific system capability has changed
+: Inform that a specific system capability has changed
 
 ### Notification
 1. HMI sends OnSystemCapabilityUpdated notification to SDL after creating a widget _(see also [CreateWindow](../../UI/CreateWindow/index.md))_.
