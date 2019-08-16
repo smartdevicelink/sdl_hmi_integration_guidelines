@@ -7,7 +7,7 @@ Sender
 : HMI
 
 Purpose
-: To get policy type and property
+: To get a specific field from the policy table
 
 
 ### Request
@@ -25,8 +25,8 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|policyType|String|true|minlength: 1 maxlength: 1000|
-|property|String|true|minlength: 1 maxlength: 1000|
+|policyType|String|true|minlength: 1<br>maxlength: 1000|
+|property|String|true|minlength: 1<br>maxlength: 1000|
 
 ### Response
 
@@ -34,7 +34,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|value|String|true|array: true <br> maxlength: 1000 minsize: 1 maxsize: 100|
+|value|String|true|array: true<br>maxlength: 1000<br>minsize: 1<br>maxsize: 100|
  
 
 ### Sequence Diagrams
@@ -44,6 +44,7 @@ Below is the example usage for GetPolicyConfigurationData request to read `versi
 * HMI needs to parse the `url` version for `custom_vehicle_data_mapping_url` from returned json 
 
 |||
+GetPolicyConfigurationData
 ![GetPolicyConfigurationData](./assets/GetPolicyConfigurationData.png)
 |||
 
@@ -72,7 +73,7 @@ Below is the example usage for GetPolicyConfigurationData request to read `versi
 		"value" : [
 			"{\"custom_vehicle_data_mapping_url\":{\"version\":\"0.0.0\"}}"
 		],
-	    	"code" : 0,
+		"code" : 0,
 		"method" : "SDL.GetPolicyConfigurationData"
 	}
 }

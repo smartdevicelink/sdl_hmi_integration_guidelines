@@ -116,7 +116,8 @@ GetVehicleData
 GetVehicleData
 ![GetVehicleData](./assets/VDdefinedInXMLandSchema.png)
 |||
-CustomVehicleData
+|||
+GetVehicleData with custom data
 ![CustomVehicleData](./assets/GVD_custom_data.png)
 |||
 
