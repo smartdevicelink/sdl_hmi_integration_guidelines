@@ -237,7 +237,7 @@
 |policyAppID|String|true|minlength: 1<br>maxlength: 50||
 |ttsName|Common.TTSChunk|false|array: true<br>minsize: 1<br>maxsize: 100||
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40||
-|appID|Integer|true|||
+|appID|Integer|true||Must not interfere with any name of previously registered applications from the same device|
 |hmiDisplayLanguageDesired|Common.Language|false|||
 |isMediaApplication|Boolean|false|||
 |appType|Common.AppHMIType|false|array: true<br>minsize: 1<br>maxsize: 100||
