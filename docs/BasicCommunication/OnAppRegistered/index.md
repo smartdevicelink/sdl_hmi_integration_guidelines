@@ -104,7 +104,7 @@ App Registers on Bluetooth
 	"params": {
 	  "application": {
 			"appName": "TryMe",
-			"ngnMediaScreenAppName ": "TryMe",
+			"ngnMediaScreenAppName": "TryMe",
 			"deviceInfo": {
 				"name": "GT-I9300",
 				"id": 1563462,

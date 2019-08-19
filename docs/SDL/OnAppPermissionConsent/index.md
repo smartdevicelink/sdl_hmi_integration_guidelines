@@ -61,7 +61,6 @@ c) SDL  uses `OnAppPermissionConsent` value (ON/OFF) received from HMI through i
     "source":"GUI"
   }
 }
-
 ```
 
 ### Sequence Diagrams

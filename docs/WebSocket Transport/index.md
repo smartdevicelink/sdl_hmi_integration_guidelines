@@ -79,7 +79,6 @@ Websocket Connection Diagram
 |||
 
 #### HMI Adapter Initialization
-
 |||
 HMI Adapter Init
 ![HMI Adapter Init](./assets/HMIAdapterInit.png)

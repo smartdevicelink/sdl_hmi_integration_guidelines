@@ -46,14 +46,12 @@ GetVehicleType
   "jsonrpc" : "2.0",
   "result" :
   {
-    "vehicleType" :[
-      {
-        "make" : "Ford",
-        "model" : "Fusion",
-        "modelYear" : "2013",
-        "trim" : "SE"
-      }
-    ],
+    "vehicleType" :{
+      "make" : "Ford",
+      "model" : "Fusion",
+      "modelYear" : "2013",
+      "trim" : "SE"
+    },
     "code" : 0,
     "method" : "VehicleInfo.GetVehicleType"
   }

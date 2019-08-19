@@ -13,7 +13,7 @@ Purpose
 Notifies about user/HMI allowing SDL functionality or disallowing access to all mobile apps on the specified device.
 
 !!! MUST  
-Send `OnAllowSDLFuntionality` notification to SDL as a result of user’s choice about device data consent via pop-up dialog or user’s settings change in Settings Menu (if applicable)
+Send `OnAllowSDLFunctionality` notification to SDL as a result of user’s choice about device data consent via pop-up dialog or user’s settings change in Settings Menu (if applicable)
 !!!
 
 !!! NOTE
@@ -34,7 +34,7 @@ Send `OnAllowSDLFuntionality` notification to SDL as a result of user’s choice
 |:---|:---|:--------|:---------|
 |device|[Common.DeviceInfo](../../common/structs/#deviceinfo)|false|If no device is specified permission counts for SDL functionality in general.|
 |allowed|Boolean|true|Must be true if allowed|
-|source|[Common.ConsentSource](../../common/enums/#consentsource)|true|-|
+|source|[Common.ConsentSource](../../common/enums/#consentsource)|true| |
 
 ### Sequence Diagrams
 

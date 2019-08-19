@@ -88,28 +88,25 @@ Possible Layout - ExternalConsentStatus
 	"id": 143,
 	"jsonrpc": "2.0",
 	"result": {
-		"allowedFunctions":
-
-			[{
-					"name": "Location-1",
-					"id": 1234,
-					"allowed": true
-				},
-
-				{
-					"name": "Notifications",
-					"id": 76876,
-					"allowed": false
-				}
-
-			],
-		"externalConsentStatus": [{
-			"entityType": "0",
-			"entityID": "126",
-			"status": "ON"
-		}],
-
-
+		"allowedFunctions": [
+			{
+				"name": "Location-1",
+				"id": 1234,
+				"allowed": true
+			},
+			{
+				"name": "Notifications",
+				"id": 76876,
+				"allowed": false
+			}
+		],
+		"externalConsentStatus": [
+			{
+				"entityType": 0,
+				"entityID": 126,
+				"status": "ON"
+			}
+		],
 		"code": 0,
 		"method": "SDL.GetListOfPermissions"
 	}

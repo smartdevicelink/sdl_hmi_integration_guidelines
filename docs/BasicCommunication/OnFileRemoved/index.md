@@ -43,7 +43,7 @@ File Removed from Head Unit
 #### JSON Example Notification
 ```json
 {
-  "jsonrpc": "2.0",
+	"jsonrpc": "2.0",
 	"method": "BasicCommunication.OnFileRemoved",
 	"params": {
 		"appID": 31780,

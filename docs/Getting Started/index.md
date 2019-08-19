@@ -7,7 +7,7 @@ The HMI must register each component which can communicate with SDL using the fo
 ```json
 {
   "jsonrpc": "2.0",
-  "id": 10,
+  "id": -1,
   "method": "MB.registerComponent",
   "params": {
     "componentName": componentName
