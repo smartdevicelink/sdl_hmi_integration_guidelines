@@ -48,6 +48,10 @@ Show with Soft Buttons
 Show Text Fields
 ![Show](./assets/ShowTextFields.png)
 |||
+|||
+Show Widgets
+![Show](./assets/ShowWidgets.png)
+|||
 
 ### Example Request
 
