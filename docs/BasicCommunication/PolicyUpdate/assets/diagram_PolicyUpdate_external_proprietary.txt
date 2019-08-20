@@ -1,0 +1,35 @@
+-- Policy Update Sequence
+title Policy Table Update (EXTERNAL_PROPRIETARY)
+
+participant Policy Server
+participant Mobile
+participant SDL
+participant HMI
+
+note over SDL: PT update is required
+
+SDL->HMI: SDL.OnStatusUpdate(UPDATE_NEEDED)
+SDL->SDL: Creates PT snapshot
+SDL->HMI: BC.PolicyUpdate(path_to_PTS)
+HMI-->SDL: SUCCESS: BC.PolicyUpdate
+HMI->SDL: SDL.GetPolicyConfigurationData(policyType, property)
+note over SDL: Get endpoints from policies database
+SDL-->HMI: SDL.GetPolicyConfigurationData(value)
+note over HMI: Parse `url` for `custom_vehicle_data_mapping_url`
+HMI->HMI: PT snapshot\nencryption
+HMI->SDL: BC.OnSystemRequest(url, path_to_PTS)
+SDL->HMI: SDL.OnStatusUpdate(UPDATING)
+SDL->Mobile: OnSystemRequest(url, PTS_in_binaryData)
+Mobile->Policy Server: PT snapshot (PTS)
+Policy Server->Mobile: PT update (PTU)
+Mobile->SDL: SystemRequest(PTU_in_binaryData)
+SDL-->Mobile: SUCCESS: SystemRequest
+SDL->HMI: BC.SystemRequest(path_to_PTU)
+HMI-->SDL: SUCCESS: BC.SystemRequest
+HMI->HMI: PT update\ndecryption
+HMI->SDL: SDL.OnReceivedPolicyUpdate(path_to_PTU)
+SDL->SDL: Validate PTU
+SDL->SDL: Merge PTU into Local PT
+SDL->HMI: SDL.OnStatusUpdate(UP_TO_DATE)
+SDL->HMI: BC.DecryptCertificate(path_to_CRT)
+HMI-->SDL: SUCCESS: BC.DecryptCertificate
