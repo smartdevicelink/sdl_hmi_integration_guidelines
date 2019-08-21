@@ -1219,7 +1219,7 @@
 |:---|:----|:----------|
 |REQUEST_RECEIVED|0|When a request for a Service is received.|
 |REQUEST_ACCEPTED|1|When a request for a Service is accepted.|
-|REQUEST_REJECTED|2|When a request for a Service is Rejected.|
+|REQUEST_REJECTED|2|When a request for a Service is rejected.|
 
 ### ServiceStatusUpdateReason
 
