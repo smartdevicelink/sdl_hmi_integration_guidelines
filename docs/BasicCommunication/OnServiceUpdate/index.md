@@ -52,6 +52,6 @@ OnServiceUpdate
     "params": {
         "serviceType": "RPC",
         "serviceEvent":"REQUEST_RECEIVED"
-              }
+      }
 }
 ```
