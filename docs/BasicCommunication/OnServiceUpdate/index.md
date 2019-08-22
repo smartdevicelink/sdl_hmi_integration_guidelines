@@ -19,7 +19,7 @@ Display a pop-up providing accurate feedback to the user on the status of the sy
 When a mobile navigation application is activated and sends a request for the Video Service there is a series of steps taken. 
 These steps include:
 
-* getting the current [system time](../GetSystemTime/index.md) 
+* getting the current [system time](../getsystemtime) 
 * performing a policy table update  
 * decrypting certificates and ensuring validity of the certificates  
 
