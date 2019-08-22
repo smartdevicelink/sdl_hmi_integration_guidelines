@@ -31,10 +31,12 @@ Processing these steps SDL sends OnServiceUpdate notification to HMI to provide 
 |:---|:---|:--------|:---------|
 |serviceType|[Common.ServiceType](../../common/enums/#servicetype)|true||
 |serviceEvent|[Common.ServiceEvent](../../common/enums/#serviceevent)|false||
-|reason|[Common.ServiceStatusUpdateReason](../../enums/#servicestatusupdatereason)|false||
+|reason|[Common.ServiceStatusUpdateReason](../../common/enums/#servicestatusupdatereason)|false||
 |appID|Integer|false||
 
-_Note:_ the only time when SDL would not be able provide the `appID` would be during the first StartService request for the RPC service before RAI was sent.
+!!! note
+The only time when SDL would not be able provide the `appID` would be during the first StartService request for the RPC service before RAI was sent.
+!!!
 
 ### Sequence Diagrams
 
@@ -52,6 +54,6 @@ OnServiceUpdate
     "params": {
         "serviceType": "RPC",
         "serviceEvent":"REQUEST_RECEIVED"
-      }
+    }
 }
 ```
