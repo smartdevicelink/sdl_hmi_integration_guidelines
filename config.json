@@ -380,6 +380,12 @@
             },
             {
               "name": "Slider"
+            },
+            {
+              "name": "CreateWindow"
+            },
+            {
+              "name": "DeleteWindow"
             }
           ]
         },
