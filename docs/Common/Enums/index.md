@@ -98,31 +98,32 @@
 |statusBar|4||
 |mediaClock|5||
 |mediaTrack|6||
-|alertText1|7||
-|alertText2|8||
-|alertText3|9||
-|scrollableMessageBody|10||
-|initialInteractionText|11||
-|navigationText1|12||
-|navigationText2|13||
-|ETA|14||
-|totalDistance|15||
-|audioPassThruDisplayText1|16||
-|audioPassThruDisplayText2|17||
-|sliderHeader|18||
-|sliderFooter|19||
-|menuName|20||
-|secondaryText|21||
-|tertiaryText|22||
-|menuTitle|23||
-|navigationText|24||
-|notificationText|25||
-|locationName|26||
-|locationDescription|27||
-|addressLines|28||
-|phoneNumber|29||
-|timeToDestination|30||
-|turnText|31||
+|templateTitle|7|The title of the new template that will be displayed; applies to "Show"|
+|alertText1|8||
+|alertText2|9||
+|alertText3|10||
+|scrollableMessageBody|11||
+|initialInteractionText|12||
+|navigationText1|13||
+|navigationText2|14||
+|ETA|15||
+|totalDistance|16||
+|audioPassThruDisplayText1|17||
+|audioPassThruDisplayText2|18||
+|sliderHeader|19||
+|sliderFooter|20||
+|menuName|21||
+|secondaryText|22||
+|tertiaryText|23||
+|menuTitle|24||
+|navigationText|25||
+|notificationText|26||
+|locationName|27||
+|locationDescription|28||
+|addressLines|29||
+|phoneNumber|30||
+|timeToDestination|31||
+|turnText|32||
 
 ### MetadataType
 
@@ -177,6 +178,13 @@
 |QWERTY|0||
 |QWERTZ|1||
 |AZERTY|2||
+
+### MenuLayout
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|LIST|0||
+|TILES|1||
 
 ### ButtonEventMode
 
@@ -384,6 +392,21 @@
 |SOURCE|33|RADIO Module|
 |SHUFFLE|34|RADIO Module|
 |REPEAT|35|RADIO Module|
+|NAV_CENTER_LOCATION|36|Navigation Subscription Button|
+|NAV_ZOOM_IN|37|Navigation Subscription Button|
+|NAV_ZOOM_OUT|38|Navigation Subscription Button|
+|NAV_PAN_UP|39|Navigation Subscription Button|
+|NAV_PAN_UP_RIGHT|40|Navigation Subscription Button|
+|NAV_PAN_RIGHT|41|Navigation Subscription Button|
+|NAV_PAN_DOWN_RIGHT|42|Navigation Subscription Button|
+|NAV_PAN_DOWN|43|Navigation Subscription Button|
+|NAV_PAN_DOWN_LEFT|44|Navigation Subscription Button|
+|NAV_PAN_LEFT|45|Navigation Subscription Button|
+|NAV_PAN_UP_LEFT|46|Navigation Subscription Button|
+|NAV_TILT_TOGGLE|47|Navigation Subscription Button|
+|NAV_ROTATE_CLOCKWISE|48|Navigation Subscription Button|
+|NAV_ROTATE_COUNTERCLOCKWISE|49|Navigation Subscription Button|
+|NAV_HEADING_TOGGLE|50|Navigation Subscription Button|
 
 ### KeypressMode
 
@@ -1163,6 +1186,7 @@
 |VIDEO_STREAMING|2||
 |REMOTE_CONTROL|3||
 |APP_SERVICES|4||
+|DISPLAYS|5||
 
 ### MediaType
 
@@ -1205,6 +1229,20 @@
 |LEFT|0||
 |RIGHT|1||
 
+### WindowType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MAIN|0|This window type describes the main window on a display|
+|WIDGET|1|A widget is a small window that the app can create to provide information and soft buttons for quick app control|
+
+### PredefinedWindows
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DEFAULT_WINDOW|0|The default window is a main window pre-created on behalf of the app|
+|PRIMARY_WIDGET|1|The primary widget of the app|
+
 ### ServiceType
 
 |Name|Value|Description|
@@ -1230,4 +1268,3 @@
 |INVALID_TIME|2|When a Service is rejected because the system was unable to get a valid SystemTime from HMI, which is required for certificate authentication.|  
 |PROTECTION_ENFORCED|3|When a Service is rejected because the system configuration ini file requires the service must be protected, but the app asks for an unprotected service.|
 |PROTECTION_DISABLED|4|When a mobile app requests a protected service, but the system starts an unprotected service instead.|
-

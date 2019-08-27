@@ -46,6 +46,9 @@
 |maxBitrate|Integer|false|minvalue: 0<br>maxvalue: 2147483647|The maximum bitrate of video stream that is supported, in kbps.|
 |supportedFormats|Common.VideoStreamingFormat|false|array: true|Detailed information on each format supported by this system, in its preferred order.|
 |hapticSpatialDataSupported|boolean|false| |True if the system can utilize the haptic spatial data from the source being streamed.|
+|diagonalScreenSize|Float|false|minvalue: 0|The diagonal screen size in inches.|
+|pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
+|scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
 
 
 ### SystemCapabilities
@@ -155,7 +158,7 @@
 |keyboardLayout|Common.KeyboardLayout|false|||
 |keypressMode|Common.KeypressMode|false|||
 |limitedCharacterList|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 1||
-|autoCompleteText|String|false|maxlength: 1000||
+|autoCompleteList|String|false|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 1000||
 
 ### Choice
 
@@ -206,6 +209,7 @@
 |altitude|Float|false|minvalue: -10000<br>maxvalue: 10000||
 |heading|Float|false|minvalue: 0<br>maxvalue: 359.99||
 |speed|Float|false|minvalue: 0<br>maxvalue: 500||
+|shifted|Boolean|false||True, if GPS lat/long, time, and altitude have been purposefully shifted (requires a proprietary algorithm to unshift).<br>False, if the GPS data is raw and un-shifted.<br>If not provided, then value is assumed False|
 
 ### SingleTireStatus
 
@@ -236,7 +240,7 @@
 |policyAppID|String|true|minlength: 1<br>maxlength: 50||
 |ttsName|Common.TTSChunk|false|array: true<br>minsize: 1<br>maxsize: 100||
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40||
-|appID|Integer|true|||
+|appID|Integer|true||Must not interfere with any name of previously registered applications from the same device|
 |hmiDisplayLanguageDesired|Common.Language|false|||
 |isMediaApplication|Boolean|false|||
 |appType|Common.AppHMIType|false|array: true<br>minsize: 1<br>maxsize: 100||
@@ -438,6 +442,7 @@
 |templatesAvailable|String|true|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 100||
 |screenParams|Common.ScreenParams|false|||
 |numCustomPresetsAvailable|Integer|false|minvalue: 1<br>maxvalue: 100||
+|menuLayoutsAvailable|[Common.MenuLayout](../../common/enums/#menulayout)|false|array: true<br>minsize: 0<br>maxsize: 1000||
 
 ### TimeFormat
 
@@ -504,14 +509,15 @@
 |frequencyFraction|Integer|false|minvalue:0 maxvalue:9|The fractional part of the frequency for 101.7 is 7|
 |band|Common.RadioBand|false|||
 |rdsData|Common.RdsData|false|||
-|availableHDs|Integer|false|minvalue:1 maxvalue:7|number of HD sub-channels if available|
-|hdChannel|Integer|false|minvalue:1 maxvalue:7|Current HD sub-channel if available|
+|availableHDs|Integer|false|minvalue:1 maxvalue:7|Number of HD sub-channels if available. Deprecated.|
+|hdChannel|Integer|false|minvalue:0 maxvalue:7|Current HD sub-channel if available.|
 |signalStrength|Integer|false|minvalue:0 maxvalue:100||
 |signalChangeThreshold|Integer|false|minvalue:0 maxvalue:100|If the signal strength falls below the set value for this parameter, the radio will tune to an alternative frequency|
 |radioEnable|Boolean|false||True if the radio is on, false is the radio is off|
 |state|Common.RadioState|false||||
 |sisData|Common.SisData|false||Read-only Station Information Service (SIS) data provides basic information about the station such as call sign, as well as information not displayable to the consumer such as the station identification number|
 |hdRadioEnable|Boolean|false||True if the hd radio is on, false is the radio is off|
+|availableHdChannels|Integer|false|minvalue:0 maxvalue:7 array="true" minsize="0"|The list of available hd sub-channel indexes, empty list means no Hd channel is available, read-only|
 
 ### RdsData
 
@@ -538,7 +544,7 @@
 |stationShortName|String|false|minlength="4" <br> maxlength="7"|Identifies the 4-alpha-character station call sign plus an optional (-FM) extension|
 |stationIDNumber|Common.StationIDNumber|false||Used for network Application. Consists of Country Code and FCC Facility ID.|
 |stationLongName|String|false|minlength="0" <br> maxlength="56"|Identifies the station call sign or other identifying information in the long format.|
-|stationLocation|Common.GPSData|false||Provides the 3-dimensional geographic station location.|
+|stationLocation|Common.GPSData|false||Provides the 3-dimensional geographic station location.<br>HMI should include only `longitudeDegrees`, `latitudeDegrees`, `altitude` params providing SiSData|
 |stationMessage|String|false|minlength="0" <br> maxlength="56"|May be used to convey textual information of general interest to the consumer such as weather forecasts or public service announcements. <br> Includes a high priority delivery feature to convey emergencies that may be in the listening area.|
 
 ### ClimateControlData
@@ -558,7 +564,8 @@
 |heatedSteeringWheelEnable|Boolean|false||value false means disabled/turn off, value true means enabled/turn on.|
 |heatedWindshieldEnable|Boolean|false||value false means disabled, value true means enabled.|
 |heatedRearWindowEnable|Boolean|false||value false means disabled, value true means enabled.|
-|heatedMirrorsEnable|Boolean|false||value false means disabled, value true means enabled.|
+|heatedMirrorsEnable|Boolean|false||value false means disabled, value true means enabled.|  
+|climateEnable|Boolean|false|||
 
 ### Temperature
 
@@ -598,7 +605,8 @@
 |heatedSteeringWheelAvailable|Boolean|false|| Availability of the control (enable/disable) of heated Steering Wheel. <br> True: Available, False: Not Available, Not present: Not Available.|
 |heatedWindshieldAvailable|Boolean|false|| Availability of the control (enable/disable) of heated Windshield. <br> True: Available, False: Not Available, Not present: Not Available.|
 |heatedRearWindowAvailable|Boolean|false|| Availability of the control (enable/disable) of heated Rear Window. <br> True: Available, False: Not Available, Not present: Not Available.|
-|heatedMirrorsAvailable|Boolean|false|| Availability of the control (enable/disable) of heated Mirrors. <br> True: Available, False: Not Available, Not present: Not Available.|
+|heatedMirrorsAvailable|Boolean|false|| Availability of the control (enable/disable) of heated Mirrors. <br> True: Available, False: Not Available, Not present: Not Available.|  
+|climateEnableAvailable|Boolean|false|| Availability of the control of enable/disable climate control. <br> True: Available, False: Not Available, Not present: Not Available.|
 
 ### AudioControlCapabilities
 
@@ -699,6 +707,7 @@
 |sisDataAvailable|Boolean|false|| Availability of the getting HD radio Station Information Service (SIS) data. <br> True: Available, False: Not Available, Not present: Not Available.|
 |hdRadioEnableAvailable|Boolean|false|| Availability of the control of enable/disable HD radio. <br> True: Available, False: Not Available, Not present: Not Available.|
 |siriusxmRadioAvailable|Boolean|false|| Availability of sirius XM radio. <br> True: Available, False: Not Available, Not present: Not Available.|
+|availableHdChannelsAvailable|Boolean|false|| Availability of the list of available HD sub-channel indexes. <br> True: Available, False: Not Available, Not present: Not Available.|
 
 ### ExternalConsentStatus
 
@@ -999,3 +1008,38 @@ There are no defined parameters for this struct.
 |nextInstructionDistance|Float|false||The distance to this instruction from current location. This should only be updated ever .1 unit of distance. For more accuracy the consumer can use the GPS location of itself and the next instruction|
 |nextInstructionDistanceScale|Float|false||Distance till next maneuver (starting from) from previous maneuver|
 |prompt|String|false||This is a prompt message that should be conveyed to the user through either display or voice (TTS). This param will change often as it should represent the following: approaching instruction, post instruction, alerts that affect the current navigation session, etc|
+
+### TemplateConfiguration
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|template|String|true|maxlength: 500| Predefined or dynamically created window template. Currently only predefined window template layouts are defined.|
+|dayColorScheme|Common.TemplateColorScheme|false|||
+|nightColorScheme|Common.TemplateColorScheme|false|||
+
+### DisplayCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|displayName|String|false||
+|windowTypeSupported|Common.WindowTypeCapabilities|false|array: true<br>minsize: 1|Informs the application how many windows the app is allowed to create per type|
+|windowCapabilities|Common.WindowCapability|false|array: true<br>minsize: 1<br>maxsize: 1000|Contains a list of capabilities of all windows related to the app.<br>Once the app has registered the capabilities of all windows are provided.<br>GetSystemCapability still allows requesting window capabilities of all windows.|
+
+### WindowTypeCapabilities
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|type|Common.WindowType|true|||
+|maximumNumberOfWindows|Integer|true|||
+
+### WindowCapability
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|windowID|Integer|false||The specified ID of the window. Can be set to a predefined window, or omitted for the main window on the main display.|
+|textFields|Common.TextField|false|array: true<br>minsize: 1<br>maxsize: 100|A set of all fields that support text data. See TextField|
+|imageFields|Common.ImageField|false|array: true<br>minsize: 1<br>maxsize: 100|A set of all fields that support images. See ImageField|
+|imageTypeSupported|Common.ImageType|array: true<br>minsize: 0<br>maxsize: 1000|Provides information about image types supported by the system.|
+|templatesAvailable|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 100|A set of all window templates available on the head unit.|
+|numCustomPresetsAvailable|Integer|false|minvalue: 1 <br>maxvalue: 100|The number of on-window custom presets available (if any); otherwise omitted.|
+|buttonCapabilities|Common.ButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of buttons and the capabilities of each on-window button.|
+|softButtonCapabilities|Common.SoftButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of soft buttons available on-window and the capabilities for each button.|

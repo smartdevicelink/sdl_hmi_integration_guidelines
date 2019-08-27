@@ -24,6 +24,9 @@
               "name": "ActivateApp"
             },
             {
+              "name": "CloseApplication"
+            },
+            {
               "name": "MixingAudioSupported"
             },
             {
@@ -292,6 +295,9 @@
               "name": "Alert"
             },
             {
+              "name": "CancelInteraction"
+            },
+            {
               "name": "ChangeRegistration"
             },
             {
@@ -370,10 +376,19 @@
               "name": "Show"
             },
             {
+              "name": "ShowAppMenu"
+            },
+            {
               "name": "ShowCustomForm"
             },
             {
               "name": "Slider"
+            },
+            {
+              "name": "CreateWindow"
+            },
+            {
+              "name": "DeleteWindow"
             }
           ]
         },
@@ -484,6 +499,9 @@
           "navigation": [
             {
               "name": "PublishAppService"
+            },
+            {
+              "name": "UnpublishAppService"
             },
             {
               "name": "GetAppServiceData"

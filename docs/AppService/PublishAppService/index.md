@@ -9,6 +9,13 @@ Sender
 Purpose
 : Registers a service offered by the HMI on the module
 
+!!! note
+
+The HMI may send a PublishAppService RPC request multiple times for a given service type. Additional PublishAppService RPC requests will update the app service manifest, rather than creating a new service, triggering an OnSystemCapabilityUpdated(MANIFEST_UPDATE) notification.
+
+!!!
+
+
 ### Request
 
 #### Parameters

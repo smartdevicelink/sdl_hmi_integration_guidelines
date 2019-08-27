@@ -31,6 +31,7 @@ The information about the application (name, appID, etc) is provided by SDL via 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
+|windowID|Integer|false||
 
 ### Sequence Diagrams
 |||
