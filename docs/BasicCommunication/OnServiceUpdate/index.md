@@ -50,7 +50,7 @@ OnServiceUpdate
 ```json
 {
     "jsonrpc": "2.0",
-    "method": "BC. OnServiceUpdate",
+    "method": "BC.OnServiceUpdate",
     "params": {
         "serviceType": "RPC",
         "serviceEvent":"REQUEST_RECEIVED"
