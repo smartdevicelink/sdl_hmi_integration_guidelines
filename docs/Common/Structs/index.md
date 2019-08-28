@@ -46,6 +46,9 @@
 |maxBitrate|Integer|false|minvalue: 0<br>maxvalue: 2147483647|The maximum bitrate of video stream that is supported, in kbps.|
 |supportedFormats|Common.VideoStreamingFormat|false|array: true|Detailed information on each format supported by this system, in its preferred order.|
 |hapticSpatialDataSupported|boolean|false| |True if the system can utilize the haptic spatial data from the source being streamed.|
+|diagonalScreenSize|Float|false|minvalue: 0|The diagonal screen size in inches.|
+|pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
+|scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
 
 
 ### SystemCapabilities
@@ -155,7 +158,7 @@
 |keyboardLayout|Common.KeyboardLayout|false|||
 |keypressMode|Common.KeypressMode|false|||
 |limitedCharacterList|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 1||
-|autoCompleteText|String|false|maxlength: 1000||
+|autoCompleteList|String|false|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 1000||
 
 ### Choice
 
@@ -237,7 +240,7 @@
 |policyAppID|String|true|minlength: 1<br>maxlength: 50||
 |ttsName|Common.TTSChunk|false|array: true<br>minsize: 1<br>maxsize: 100||
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40||
-|appID|Integer|true|||
+|appID|Integer|true||Must not interfere with any name of previously registered applications from the same device|
 |hmiDisplayLanguageDesired|Common.Language|false|||
 |isMediaApplication|Boolean|false|||
 |appType|Common.AppHMIType|false|array: true<br>minsize: 1<br>maxsize: 100||
@@ -440,6 +443,7 @@
 |templatesAvailable|String|true|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 100||
 |screenParams|Common.ScreenParams|false|||
 |numCustomPresetsAvailable|Integer|false|minvalue: 1<br>maxvalue: 100||
+|menuLayoutsAvailable|[Common.MenuLayout](../../common/enums/#menulayout)|false|array: true<br>minsize: 0<br>maxsize: 1000||
 
 ### TimeFormat
 
@@ -1013,6 +1017,41 @@ There are no defined parameters for this struct.
 |nextInstructionDistance|Float|false||The distance to this instruction from current location. This should only be updated ever .1 unit of distance. For more accuracy the consumer can use the GPS location of itself and the next instruction|
 |nextInstructionDistanceScale|Float|false||Distance till next maneuver (starting from) from previous maneuver|
 |prompt|String|false||This is a prompt message that should be conveyed to the user through either display or voice (TTS). This param will change often as it should represent the following: approaching instruction, post instruction, alerts that affect the current navigation session, etc|
+
+### TemplateConfiguration
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|template|String|true|maxlength: 500| Predefined or dynamically created window template. Currently only predefined window template layouts are defined.|
+|dayColorScheme|Common.TemplateColorScheme|false|||
+|nightColorScheme|Common.TemplateColorScheme|false|||
+
+### DisplayCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|displayName|String|false||
+|windowTypeSupported|Common.WindowTypeCapabilities|false|array: true<br>minsize: 1|Informs the application how many windows the app is allowed to create per type|
+|windowCapabilities|Common.WindowCapability|false|array: true<br>minsize: 1<br>maxsize: 1000|Contains a list of capabilities of all windows related to the app.<br>Once the app has registered the capabilities of all windows are provided.<br>GetSystemCapability still allows requesting window capabilities of all windows.|
+
+### WindowTypeCapabilities
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|type|Common.WindowType|true|||
+|maximumNumberOfWindows|Integer|true|||
+
+### WindowCapability
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|windowID|Integer|false||The specified ID of the window. Can be set to a predefined window, or omitted for the main window on the main display.|
+|textFields|Common.TextField|false|array: true<br>minsize: 1<br>maxsize: 100|A set of all fields that support text data. See TextField|
+|imageFields|Common.ImageField|false|array: true<br>minsize: 1<br>maxsize: 100|A set of all fields that support images. See ImageField|
+|imageTypeSupported|Common.ImageType|array: true<br>minsize: 0<br>maxsize: 1000|Provides information about image types supported by the system.|
+|templatesAvailable|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 100|A set of all window templates available on the head unit.|
+|numCustomPresetsAvailable|Integer|false|minvalue: 1 <br>maxvalue: 100|The number of on-window custom presets available (if any); otherwise omitted.|
+|buttonCapabilities|Common.ButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of buttons and the capabilities of each on-window button.|
+|softButtonCapabilities|Common.SoftButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of soft buttons available on-window and the capabilities for each button.|
 
 ### ModuleInfo
 |Name|Type|Mandatory|Additional|Description|
