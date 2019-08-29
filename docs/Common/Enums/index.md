@@ -1243,3 +1243,29 @@
 |:---|:----|:----------|
 |DEFAULT_WINDOW|0|The default window is a main window pre-created on behalf of the app|
 |PRIMARY_WIDGET|1|The primary widget of the app|
+
+### ServiceType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|VIDEO|0|Refers to the Video service.|
+|AUDIO|1|Refers to the Audio service.|
+|RPC|2|Refers to RPC service.|
+
+### ServiceEvent
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|REQUEST_RECEIVED|0|When a request for a Service is received.|
+|REQUEST_ACCEPTED|1|When a request for a Service is accepted.|
+|REQUEST_REJECTED|2|When a request for a Service is rejected.|
+
+### ServiceStatusUpdateReason
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|PTU_FAILED|0|When a Service is rejected because the system was unable to get a required Policy Table Update.|
+|INVALID_CERT|1|When a Service is rejected because the security certificate is invalid/expired.|
+|INVALID_TIME|2|When a Service is rejected because the system was unable to get a valid SystemTime from HMI, which is required for certificate authentication.|  
+|PROTECTION_ENFORCED|3|When a Service is rejected because the system configuration ini file requires the service must be protected, but the app asks for an unprotected service.|
+|PROTECTION_DISABLED|4|When a mobile app requests a protected service, but the system starts an unprotected service instead.|
