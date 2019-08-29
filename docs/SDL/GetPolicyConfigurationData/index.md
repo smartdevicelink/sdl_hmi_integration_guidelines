@@ -16,7 +16,7 @@ Purpose
  
 1. Send GetPolicyConfigurationData request to SDL with: 
     * `policyType` : Policy Struct for which property needs to be read. Must be a [valid policyType struct](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/policy/policy_regular/include/policy/policy_table/types.h#L288)
-    * `property`: Used to request a specific property of `policyType`. If empty, the entire `policyType` json value is returned
+    * `property`: Used to request a specific property of `policyType`.
 
 !!!
 
