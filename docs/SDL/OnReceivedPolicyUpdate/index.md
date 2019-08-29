@@ -38,7 +38,7 @@ Purpose
 
 |||
 SDL.OnReceivedPolicyUpdate in EXTERNAL_PROPRIETARY flow
-![Proprietary PTU](./assets/SDL.OnReceivedPolicyUpdate%20in%20EXTERNAL_PROPRIETARY%20flow.jpg)
+![Proprietary PTU](./assets/SDL.OnReceivedPolicyUpdateEXTERNAL_PROPRIETARY.png)
 |||
 |||
 SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
@@ -51,7 +51,7 @@ SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
 {
 	"id" : 176,
 	"jsonrpc" : "2.0",
-	"method" : "SDL.GetURLS",
+	"method" : "SDL.OnReceivedPolicyUpdate",
 	"params" :
 	{
 		"policyfile" : "/fs/sharedFolder/ptu.json"

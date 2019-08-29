@@ -201,10 +201,10 @@
               "name": "GetStatusUpdate"
             },
             {
-              "name": "GetURLS"
+              "name": "GetUserFriendlyMessage"
             },
             {
-              "name": "GetUserFriendlyMessage"
+              "name": "GetPolicyConfigurationData"
             },
             {
               "name": "OnAllowSDLFunctionality"
