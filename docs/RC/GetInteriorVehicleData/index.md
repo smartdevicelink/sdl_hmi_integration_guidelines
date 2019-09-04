@@ -14,7 +14,7 @@ If the parameter `subscribe` is set to `true`, the mobile application has reques
 SDL core allocates resources by a module (`moduleId` + `moduleType`).
 SDL needs to subscribe to a module if there is at least one app that subscribes to the module. SDL needs to unsubscribe from a module if no apps subscribe to the module.  
 
-SDL forwards a GetInteriorVehicleData request to HMI only if there is no cached data available for the requested module (`moduleId` + `moduleType`) or it needs to unsubscribe to the module from HMI.  
+SDL forwards a GetInteriorVehicleData request to HMI only if there is no cached data available for the requested module (`moduleId` + `moduleType`) or it needs to subscribe to/unsubscribe from the module from HMI.  
 Otherwise, SDL responds to the request with the cached data without forwarding it to HMI.
 
 The HMI should return interior vehicle data that corresponds to the requested module (`moduleId` + `moduleType`).
@@ -22,7 +22,7 @@ The HMI should return interior vehicle data that corresponds to the requested mo
 ### Request  
 
 GetInteriorVehicleData is a request originated by a Remote Control Mobile Application. 
-If the optional `moduleId` is not provided in a GetInteriorVehicleData_request from a Remote Control Mobile Application, and if there is at least one module (published by capabilities) of the same moduleType, SDL core will use the default `moduleId` (the first item) when processing the request.
+If the optional `moduleId` is not provided in a GetInteriorVehicleData_request from a Remote Control Mobile Application, and if there is at least one module (published by capabilities) of the same moduleType, SDL core will use the default `moduleId` (the moduleId of first module provided in RC capabilities for requested `moduleType`) when processing the request.
 
 If the parameter `subscribe` is set to true, the mobile application has requested to subscribe to the module data defined by the [`moduleType`](../../common/enums/#moduletype) parameter.
 
