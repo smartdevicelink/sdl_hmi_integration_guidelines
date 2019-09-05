@@ -1,0 +1,23 @@
+@startuml
+
+participant Mobile
+participant Core
+participant HMI
+
+Mobile -> Core : AlertRequest(cancelID: 1)
+
+Core -> HMI : AlertRequest(cancelID: 1)
+
+HMI -> HMI : Alert is showing\non the HMI
+
+Mobile -> Core : CancelInteractionRequest\n(AlertID, cancelID: 2)
+
+Core -> HMI : CancelInteractionRequest\n(AlertID, cancelID: 2)
+
+HMI -> HMI : Alert is still showing\nbecause the cancelIDs did not match
+
+HMI -> Core : CancelInteractionResponse\n(result: Ignored)
+
+Core -> Mobile : CancelInteractionResponse\n(result: Ignored)
+
+@enduml

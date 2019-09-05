@@ -1,0 +1,12 @@
+@startuml ShowAppMenu_MenuID
+participant Core
+participant HMI
+
+note right of HMI: SubMenu with menuID: 313\n was added
+
+Core -> HMI: UI.ShowAppMenu\n(appID: 8427, menuID: 313)
+HMI -> HMI: Since menuID is provided,\n opens the specific submenu
+HMI ->> Core: UI.OnSystemContext("MENU")
+HMI --> Core: UI.ShowAppMenu Response
+
+@enduml

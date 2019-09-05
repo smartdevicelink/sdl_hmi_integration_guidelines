@@ -1,0 +1,12 @@
+@startuml ShowAppMenu
+participant Core
+participant HMI
+
+' note right of HMI: Mobile app is the\nASP for the active\nMEDIA service
+
+Core -> HMI: UI.ShowAppMenu\n(appID: 8427)
+HMI -> HMI: Since menuID is NOT provided,\n only opens the app's menu
+HMI ->> Core: UI.OnSystemContext("MENU")
+HMI --> Core: UI.ShowAppMenu Response
+
+@enduml
