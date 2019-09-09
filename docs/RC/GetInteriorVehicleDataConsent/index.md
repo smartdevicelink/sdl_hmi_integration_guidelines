@@ -26,7 +26,7 @@ The driver is expected to have an ability to grant or deny the permission.
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |moduleType|[Common.ModuleType](../../common/enums/#moduletype)|true| |The module type that the app requests to control|
-|moduleIds|String|false|maxlength="100"|Ids of a module of same type, published by System Capability|
+|moduleIds|String|false|array: true<br>maxlength: 100|Ids of a module of same type, published by System Capability|
 |appID|Integer|true| |ID of the application that triggers the permission prompt|
 
 ### Response
@@ -34,7 +34,7 @@ The driver is expected to have an ability to grant or deny the permission.
 #### Parameters
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|allowed|Boolean|true|array="true"|"true" - if the driver grants the permission for controlling to the named app; <br> "false" - in case the driver denies the permission for controlling to the named app.|
+|allowed|Boolean|true|array: true|"true" - if the driver grants the permission for controlling to the named app; <br> "false" - in case the driver denies the permission for controlling to the named app.|
 
 ### Sequence Diagrams
 

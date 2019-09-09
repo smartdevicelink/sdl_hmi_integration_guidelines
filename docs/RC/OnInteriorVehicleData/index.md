@@ -9,14 +9,17 @@ Sender
 Purpose
 : Inform SDL about any changes in RC module settings.
 
-!!! must
+
 
 The HMI must send RC.OnInteriorVehicleData notification to SDL when module settings were changed in case of button press event or after SetInteriorVehicledata request was processed.
+
+!!! MUST
 
 The HMI must always include a `moduleId` for a `ModuleData` in OnInteriorVehicleData notification.
 
 The HMI must send RC.OnInteriorVehicleData notification with the current display mode to all mobile RC applications that are subscribed to the HMI settings  
 if the driver (or other applications) or HMI itself change the display mode in the HMI settings.
+
 !!!
 
 ### Notification

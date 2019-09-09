@@ -31,8 +31,8 @@ If the parameter `subscribe` is set to true, the mobile application has requeste
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:---------------|
 |moduleType|[Common.ModuleType](../../common/enums/#moduletype)|true||The type of a RC module to retrieve module data from the vehicle. <br> In the future, this should be the Identification of a module.|
-|moduleId|String|false|maxlength="100"|Id of a module, published by System Capability.|
-|subscribe|Boolean|false|defvalue="false"|If subscribe is true, the head unit will register OnInteriorVehicleData notifications for the requested module (moduleId and moduleType). <br> If subscribe is false, the head unit will unregister OnInteriorVehicleData notifications for the requested module (moduleId and moduleType). <br> If subscribe is not included, the subscription status of the app for the requested module (moduleId and moduleType) will remain unchanged.|
+|moduleId|String|false|maxlength: 100|Id of a module, published by System Capability.|
+|subscribe|Boolean|false||If subscribe is true, the head unit will register OnInteriorVehicleData notifications for the requested module (moduleId and moduleType). <br> If subscribe is false, the head unit will unregister OnInteriorVehicleData notifications for the requested module (moduleId and moduleType). <br> If subscribe is not included, the subscription status of the app for the requested module (moduleId and moduleType) will remain unchanged.|
 
 ### Response
 
