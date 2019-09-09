@@ -7,11 +7,11 @@ Sender
 : SDL
 
 Purpose
-: Inform HMI of user location properties set by the application in order to control RC modules
+: Inform HMI of user location properties set by the application for RC modules allocation purposes
 
 ### Description
-SDL requests to set the values of user location. The default `userLocation` should be `DRIVER`.  
-Even if the driver's seat is out of the service area of a module, driver's app is still able to control any free module that is allowed by policy.
+SDL requests to set the values of user location sent by RC application. The default `userLocation` should be `DRIVER`.  
+In case driver's seat is out of the service area of a module, driver's application should be able to control any free module that is allowed by policies.
 
 ### Request
 #### Behavior
@@ -31,10 +31,8 @@ Even if the driver's seat is out of the service area of a module, driver's app i
 
 
 ### Response
-
 #### Parameters
 This RPC has no additional parameter requirements
-
 
 ### Sequence Diagrams
 
@@ -47,7 +45,7 @@ SetGlobalProperties
 
 ```json
 {
-  "id":27,
+  "id":22,
   "jsonrpc":"2.0",
   "method":"RC.SetGlobalProperties",
   "params":{
