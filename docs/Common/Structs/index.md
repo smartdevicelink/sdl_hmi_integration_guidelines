@@ -1059,7 +1059,7 @@ There are no defined parameters for this struct.
 |moduleId|String|true|maxlength: 100|uuid of a module. "moduleId + moduleType" uniquely identify a module.| 
 |location|Common.Grid|false||Location of a module.|
 |serviceArea|Common.Grid|false||Service area of a module.|
-|allowMultipleAccess|Boolean|false|defValue=true|allow multiple users/apps to access the module or not|
+|allowMultipleAccess|Boolean|false|defValue: true|allow multiple users/apps to access the module or not|
 
 ### Grid
 |Name|Type|Mandatory|Additional|Description|
