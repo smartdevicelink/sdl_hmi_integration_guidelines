@@ -488,6 +488,9 @@
             },
             {
               "name": "OnRCStatus"
+            },
+            {
+              "name": "SetGlobalProperties"
             }
           ]
         },
