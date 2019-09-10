@@ -10,8 +10,8 @@ Purpose
 : Inform HMI of user location properties set by the application for RC modules allocation purposes
 
 ### Description
-SDL requests to set the values of user location sent by RC application. The default `userLocation` should be `DRIVER`.  
-In case driver's seat is out of the service area of a module, driver's application should be able to control any free module that is allowed by policies.
+SDL requests to set the value of user location sent by a RC application. The default `userLocation` should be `DRIVER`.  
+The driver's application should be able to control any free module that is allowed by policies(even if the driver's seat is outside the service area of a module).
 
 ### Request
 #### Behavior
