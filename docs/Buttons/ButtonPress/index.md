@@ -30,6 +30,7 @@ The system shall list all available RC radio buttons and RC climate buttons in t
 |Name|Type|Mandatory|Additional|Description|
 |:---|:----------|:---|:---------|:---------|
 |moduleType|[Common.ModuleType](../../common/enums/#moduletype)|true| |The module where the button should be pressed|
+|moduleId|String|false|maxlength="100"|Id of a module, published by System Capability.|
 |buttonName|[Common.ButtonName](../../common/enums/#buttonname)|true| | |
 |buttonPressMode|[Common.ButtonPressMode](../../common/enums/#buttonpressmode)|true| |Indicates whether this is a LONG or SHORT button press event.|
 |appID|Integer|true| |Internal SDL-assigned ID of the related application|

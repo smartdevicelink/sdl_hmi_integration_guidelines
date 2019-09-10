@@ -1,4 +1,4 @@
-## Structs
+﻿## Structs
 
 ### ImageResolution
 
@@ -269,6 +269,7 @@
 |shortPressAvailable|Boolean|true|||
 |longPressAvailable|Boolean|true|||
 |upDownAvailable|Boolean|true|||
+|moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
 
 ### VrHelpItem
 
@@ -495,6 +496,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |moduleType|Common.ModuleType|true||The moduleType indicates which type of data should be changed and identifies which data object exists in this struct. For example, if the moduleType is CLIMATE then a "climateControlData" should exist|
+|moduleId|String|false|maxlength: 100|Id of a module, published by System Capability.|
 |radioControlData|Common.RadioControlData|false|||
 |climateControlData|Common.ClimateControlData|false|||
 |audioControlData|Common.AudioControlData|false|||
@@ -591,6 +593,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |moduleName|String|true|maxlength: 100|The short friendly name of the climate control module. It should not be used to identify a module by mobile application.|
+|moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
 |fanSpeedAvailable|Boolean|false||Availability of the control of fan speed <br> True: Available, False: Not Available, Not present: Not Available.|
 |desiredTemperatureAvailable|Boolean|false||Availability of the control of desired temperature. <br> True: Available, False: Not Available, Not present: Not Available.|
 |acEnableAvailable|Boolean|false||Availability of the control of turn on/off AC. <br> True: Available, False: Not Available, Not present: Not Available.|
@@ -613,6 +616,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |moduleName|String|true|maxlength="100"|The short friendly name of the light control module. <br> It should not be used to identify a module by mobile application.|
+|moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
 |sourceAvailable|Boolean|false||Availability of the control of audio source.|
 |keepContextAvailable|Boolean|false||Availability of the parameter keepContext.|
 |volumeAvailable|Boolean|false||Availability of the control of audio volume.|
@@ -652,6 +656,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |moduleName|String|true|maxlength="100"|The short friendly name of the light control module. <br> It should not be used to identify a module by mobile application.|
+|moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
 |supportedLights|Common.LightCapabilities|true|minsize="1" <br> maxsize="100" <br> array="true"| An array of available LightCapabilities that are controllable.|
 
 
@@ -677,6 +682,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |moduleName|String|true|maxlength="100"|The short friendly name of the hmi setting module. <br> It should not be used to identify a module by mobile application.|
+|moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
 |distanceUnitAvailable|Boolean|false||Availability of the control of distance unit.|
 |temperatureUnitAvailable|Boolean|false||Availability of the control of temperature unit.|
 |displayModeUnitAvailable|Boolean|false||Availability of the control of HMI display mode.|
@@ -695,6 +701,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |moduleName|String|true|maxlength: 100| The short friendly name of the climate control module. <br> It should not be used to identify a module by mobile application.|
+|moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
 |radioEnableAvailable|Boolean|false||Availability of the control of enable/disable radio. <br> True: Available, False: Not Available, Not present: Not Available.|
 |radioBandAvailable|Boolean|false||Availability of the control of radio band. <br> True: Available, False: Not Available, Not present: Not Available.|
 |radioFrequencyAvailable|Boolean|false||Availability of the control of radio frequency. <br> True: Available, False: Not Available, Not present: Not Available.|
@@ -764,7 +771,7 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|id|Common.SupportedSeat|true|||
+|id|Common.SupportedSeat|false||
 |heatingEnabled|Boolean|false||
 |coolingEnabled|Boolean|false||
 |heatingLevel|Integer|false|minvalue="0" <br> maxvalue="100"||
@@ -786,6 +793,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |moduleName|String|true|maxlength="100"|The short friendly name of the light control module. <br> It should not be used to identify a module by mobile application.|
+|moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
 |heatingEnabledAvailable|Boolean|false|||
 |coolingEnabledAvailable|Boolean|false|||
 |heatingLevelAvailable|Boolean|false|||
@@ -895,6 +903,7 @@
 |videoStreamingCapability|Common.VideoStreamingCapability|false||Describes extended capabilities of the module's phone feature|
 |remoteControlCapability|Common.RemoteControlCapabilities|false||Describes extended capabilities of the module's phone feature|
 |appServicesCapabilities|Common.AppServicesCapabilities|false||An array of currently available services. If this is an update to the capability the affected services will include an update reason in that item|
+|seatLocationCapability|Common.SeatLocationCapability|false||Contains information about the locations of each seat|
 
 ### MediaServiceManifest
 
@@ -1043,3 +1052,34 @@ There are no defined parameters for this struct.
 |numCustomPresetsAvailable|Integer|false|minvalue: 1 <br>maxvalue: 100|The number of on-window custom presets available (if any); otherwise omitted.|
 |buttonCapabilities|Common.ButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of buttons and the capabilities of each on-window button.|
 |softButtonCapabilities|Common.SoftButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of soft buttons available on-window and the capabilities for each button.|
+
+### ModuleInfo
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|moduleId|String|true|maxlength: 100|uuid of a module. "moduleId + moduleType" uniquely identify a module.| 
+|location|Common.Grid|false||Location of a module.|
+|serviceArea|Common.Grid|false||Service area of a module.|
+|allowMultipleAccess|Boolean|false|defValue: true|allow multiple users/apps to access the module or not|
+
+### Grid
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|col|Integer|true|minvalue: -1 <br>maxvalue: 100|Describes a location (origin coordinates and span) of a vehicle component.|
+|row|Integer|true|minvalue: -1 <br>maxvalue: 100|Describes a location (origin coordinates and span) of a vehicle component.|
+|level|Integer|false|minvalue: -1 <br> maxvalue: 100 <br> defvalue: 0|Describes a location (origin coordinates and span) of a vehicle component.|
+|colspan|Integer|false|minvalue: 1 <br> maxvalue: 100 <br> defvalue: 1|Describes a location (origin coordinates and span) of a vehicle component.|
+|rowspan|Integer|false|minvalue: 1 <br> maxvalue: 100 <br> defvalue: 1|Describes a location (origin coordinates and span) of a vehicle component.|
+|levelspan|Integer|false|minvalue: 1 <br> maxvalue: 100 <br> defvalue: 1|Describes a location (origin coordinates and span) of a vehicle component.|
+
+### SeatLocationCapability
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|rows|Integer|false|minvalue: 1 <br>maxvalue: 100|Contains information about the locations of each seat.|
+|columns|Integer|false|minvalue: 1 <br>maxvalue: 100|Contains information about the locations of each seat.|
+|levels|Integer|false|minvalue: 1 <br>maxvalue: 100 <br> defvalue:1|Contains information about the locations of each seat.|
+|seats|Common.SeatLocation|false|array: true|Contains a list of SeatLocation in the vehicle, the first element is the driver's seat|
+
+### SeatLocation
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|grid|Common.Grid|false||Describes the location of a seat. HMI shall include this parameter when publishing seat locations in capabilities.|

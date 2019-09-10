@@ -1146,13 +1146,6 @@
 |RESTORE|1|Restore / apply the seat memory settings to the current seat.|
 |NONE|2|No action to be performed.|
 
-### SupportedSeat
-
-|Name|Value|Description|
-|:---|:----|:----------|
-|DRIVER|0|List possible seats that is a remote controllable seat.|
-|FRONT_PASSENGER|1|List possible seats that is a remote controllable seat.|
-
 ### DeliveryMode
 |Name|Value|Description|
 |:---|:----|:----------|
@@ -1188,6 +1181,7 @@
 |REMOTE_CONTROL|3||
 |APP_SERVICES|4||
 |DISPLAYS|5||
+|SEAT_LOCATION|6||
 
 ### MediaType
 
