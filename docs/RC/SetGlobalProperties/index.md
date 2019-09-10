@@ -19,7 +19,6 @@ The driver's application should be able to control any free module that is allow
 !!! MUST   
 
 1. Store the userLocation and associate it with appID.
-2. Respond to the request.
 
 !!!
 
