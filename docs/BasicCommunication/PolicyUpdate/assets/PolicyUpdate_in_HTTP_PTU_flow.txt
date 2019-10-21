@@ -1,0 +1,20 @@
+title Policy Table Update (HTTP)
+
+participant Policy Server
+participant Mobile
+participant SDL
+participant HMI
+
+note over SDL: PT update is required
+
+SDL->HMI: SDL.OnStatusUpdate(UPDATE_NEEDED)
+SDL->SDL: Creates PT snapshot
+SDL->HMI: SDL.OnStatusUpdate(UPDATING)
+SDL->Mobile: OnSystemRequest(url, PTS_in_binaryData)
+Mobile->Policy Server: PT snapshot (PTS)
+Policy Server->Mobile: PT update (PTU)
+Mobile->SDL: SystemRequest(PTU_in_binaryData, file_name)
+SDL-->Mobile: SUCCESS: SystemRequest
+SDL->SDL: Validate PTU
+SDL->SDL: Merge PTU into Local PT
+SDL->HMI: SDL.OnStatusUpdate(UP_TO_DATE)

@@ -39,6 +39,7 @@ A UI.PerformInteraction with a timeout value of `0` should not be timed out imme
 |timeout|Integer|true|minvalue: 5000<br>maxvalue: 100000<br>defvalue: 10000|
 |interactionLayout|[Common.LayoutMode](../../common/enums/#layoutmode)|false||
 |appID|Integer|true||
+|cancelID|Integer|false||
 
 ### Response
 

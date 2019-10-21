@@ -45,6 +45,7 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
 |menuParams|[Common.MenuParams](../../common/structs/#menuparams)|true||
 |menuIcon|[Common.Image](../../common/structs/#image)|false||
 |appID|Integer|true||
+|menuLayout|[Common.MenuLayout](../../common/enums/#menulayout)|false||
 
 ### Response
 

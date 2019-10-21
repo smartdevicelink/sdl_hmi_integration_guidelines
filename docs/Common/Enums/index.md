@@ -98,31 +98,32 @@
 |statusBar|4|The status bar on NGN *(applies to "Show")*|
 |mediaClock|5|Text value for MediaClock field *(applies to "Show")*|
 |mediaTrack|6|The track field of NGN and GEN1.1 MFD displays. This field is only available for media applications *(applies to "Show")*|
-|alertText1|7|The first line of the alert text field *(applies to "Alert")*|
-|alertText2|8|The second line of the alert text field *(applies to "Alert")*|
-|alertText3|9|The third line of the alert text field *(applies to "Alert")*|
-|scrollableMessageBody|10|Long form body of text that can include newlines and tabs *(applies to "ScrollableMessage")*|
-|initialInteractionText|11|First line suggestion for a user response (in the case of VR enabled interaction)|
-|navigationText1|12|First line of navigation text|
-|navigationText2|13|Second line of navigation text|
-|ETA|14|Estimated Time of Arrival time for navigation|
-|totalDistance|15|Total distance to destination for navigation|
-|audioPassThruDisplayText1|16|First line of text for audio pass thru|
-|audioPassThruDisplayText2|17|Second line of text for audio pass thru|
-|sliderHeader|18|Header text for slider|
-|sliderFooter|19|Footer text for slider|
-|menuName|20|Primary text for Choice|
-|secondaryText|21|Secondary text for Choice|
-|tertiaryText|22|Tertiary text for Choice|
-|menuTitle|23|Optional text to label an app menu button (for certain touchscreen platforms)|
-|navigationText|24|Navigation text for UpdateTurnList|
-|notificationText|25|Text of notification to be displayed on screen|
-|locationName|26|Optional name / title of intended location *(applies to SendLocation)*|
-|locationDescription|27|Optional description of intended location / establishment *(applies to SendLocation)*|
-|addressLines|28|Optional location address *(applies to SendLocation)*|
-|phoneNumber|29|Optional phone number of intended location / establishment *(applies to SendLocation)*|
-|timeToDestination|30||
-|turnText|31||
+|templateTitle|7|The title of the new template that will be displayed; applies to "Show"|
+|alertText1|8|The first line of the alert text field *(applies to "Alert")*|
+|alertText2|9|The second line of the alert text field *(applies to "Alert")*|
+|alertText3|10|The third line of the alert text field *(applies to "Alert")*|
+|scrollableMessageBody|11|Long form body of text that can include newlines and tabs *(applies to "ScrollableMessage")*|
+|initialInteractionText|12|First line suggestion for a user response (in the case of VR enabled interaction)|
+|navigationText1|13|First line of navigation text|
+|navigationText2|14|Second line of navigation text|
+|ETA|15|Estimated Time of Arrival time for navigation|
+|totalDistance|16|Total distance to destination for navigation|
+|audioPassThruDisplayText1|17|First line of text for audio pass thru|
+|audioPassThruDisplayText2|18|Second line of text for audio pass thru|
+|sliderHeader|19|Header text for slider|
+|sliderFooter|20|Footer text for slider|
+|menuName|21|Primary text for Choice|
+|secondaryText|22|Secondary text for Choice|
+|tertiaryText|23|Tertiary text for Choice|
+|menuTitle|24|Optional text to label an app menu button (for certain touchscreen platforms)|
+|navigationText|25|Navigation text for UpdateTurnList|
+|notificationText|26|Text of notification to be displayed on screen|
+|locationName|27|Optional name / title of intended location *(applies to SendLocation)*|
+|locationDescription|28|Optional description of intended location / establishment *(applies to SendLocation)*|
+|addressLines|29|Optional location address *(applies to SendLocation)*|
+|phoneNumber|30|Optional phone number of intended location / establishment *(applies to SendLocation)*|
+|timeToDestination|31||
+|turnText|32||
 
 ### MetadataType
 
@@ -177,6 +178,13 @@
 |QWERTY|0||
 |QWERTZ|1||
 |AZERTY|2||
+
+### MenuLayout
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|LIST|0||
+|TILES|1||
 
 ### ButtonEventMode
 
@@ -384,6 +392,21 @@
 |SOURCE|33|RADIO Module|
 |SHUFFLE|34|RADIO Module|
 |REPEAT|35|RADIO Module|
+|NAV_CENTER_LOCATION|36|Navigation Subscription Button|
+|NAV_ZOOM_IN|37|Navigation Subscription Button|
+|NAV_ZOOM_OUT|38|Navigation Subscription Button|
+|NAV_PAN_UP|39|Navigation Subscription Button|
+|NAV_PAN_UP_RIGHT|40|Navigation Subscription Button|
+|NAV_PAN_RIGHT|41|Navigation Subscription Button|
+|NAV_PAN_DOWN_RIGHT|42|Navigation Subscription Button|
+|NAV_PAN_DOWN|43|Navigation Subscription Button|
+|NAV_PAN_DOWN_LEFT|44|Navigation Subscription Button|
+|NAV_PAN_LEFT|45|Navigation Subscription Button|
+|NAV_PAN_UP_LEFT|46|Navigation Subscription Button|
+|NAV_TILT_TOGGLE|47|Navigation Subscription Button|
+|NAV_ROTATE_CLOCKWISE|48|Navigation Subscription Button|
+|NAV_ROTATE_COUNTERCLOCKWISE|49|Navigation Subscription Button|
+|NAV_HEADING_TOGGLE|50|Navigation Subscription Button|
 
 ### KeypressMode
 
@@ -856,6 +879,7 @@
 |VEHICLEDATA_ENGINEOILLIFE|28||
 |VEHICLEDATA_ELECTRONICPARKBRAKESTATUS|29||
 |VEHICLEDATA_CLOUDAPPVEHICLEID|30| Parameter used by cloud apps or the policy server to identify a head unit|
+|VEHICLEDATA_OEM_CUSTOM_DATA|31||
 
 ### VideoStreamingProtocol
 
@@ -1129,13 +1153,6 @@
 |RESTORE|1|Restore / apply the seat memory settings to the current seat.|
 |NONE|2|No action to be performed.|
 
-### SupportedSeat
-
-|Name|Value|Description|
-|:---|:----|:----------|
-|DRIVER|0|List possible seats that is a remote controllable seat.|
-|FRONT_PASSENGER|1|List possible seats that is a remote controllable seat.|
-
 ### DeliveryMode
 |Name|Value|Description|
 |:---|:----|:----------|
@@ -1170,6 +1187,8 @@
 |VIDEO_STREAMING|2||
 |REMOTE_CONTROL|3||
 |APP_SERVICES|4||
+|DISPLAYS|5||
+|SEAT_LOCATION|6||
 
 ### MediaType
 
@@ -1211,3 +1230,43 @@
 |:---|:----|:----------|
 |LEFT|0||
 |RIGHT|1||
+
+### WindowType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MAIN|0|This window type describes the main window on a display|
+|WIDGET|1|A widget is a small window that the app can create to provide information and soft buttons for quick app control|
+
+### PredefinedWindows
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DEFAULT_WINDOW|0|The default window is a main window pre-created on behalf of the app|
+|PRIMARY_WIDGET|1|The primary widget of the app|
+
+### ServiceType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|VIDEO|0|Refers to the Video service.|
+|AUDIO|1|Refers to the Audio service.|
+|RPC|2|Refers to RPC service.|
+
+### ServiceEvent
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|REQUEST_RECEIVED|0|When a request for a Service is received.|
+|REQUEST_ACCEPTED|1|When a request for a Service is accepted.|
+|REQUEST_REJECTED|2|When a request for a Service is rejected.|
+
+### ServiceStatusUpdateReason
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|PTU_FAILED|0|When a Service is rejected because the system was unable to get a required Policy Table Update.|
+|INVALID_CERT|1|When a Service is rejected because the security certificate is invalid/expired.|
+|INVALID_TIME|2|When a Service is rejected because the system was unable to get a valid SystemTime from HMI, which is required for certificate authentication.|  
+|PROTECTION_ENFORCED|3|When a Service is rejected because the system configuration ini file requires the service must be protected, but the app asks for an unprotected service.|
+|PROTECTION_DISABLED|4|When a mobile app requests a protected service, but the system starts an unprotected service instead.|

@@ -13,7 +13,7 @@ Purpose
 
 !!! MUST
 
-1. Use the appropriate uploaded file according to its workflow (IVSU, SystemRequest, RPC's). See diagrams listed below.  
+1. If `isSystemFile` is set to true, use the appropriate uploaded file according to its workflow (IVSU, SystemRequest, RPC's). See diagrams listed below.  
 2. Whenever HMI gets RPC with `Image` which has `.isTemplate` set to true, the HMI has to:
 
 - load the proper image pattern
@@ -51,10 +51,11 @@ The list of RPCs and data structures that `OnPutFile` affects are:
 |offset|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |length|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |fileSize|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
-|FileName|String|true|maxlength: 255|
 |syncFileName|String|true|maxlength: 255|
 |fileType|[Common.FileType](../../common/enums/#filetype)|true||
 |persistentFile|Boolean|false|defvalue: false|
+|isSystemFile|Boolean|false||
+|appID|Integer|false||
 
 ### Sequence Diagrams
 |||
@@ -75,8 +76,8 @@ System Request file upload using Put File
 {
   "jsonrpc" : "2.0",
   "method" : "BasicCommunication.OnPutFile",
-  "params":{
-    "fileName":"/fs/sharedFolder/app1_device1/icon.jpg",
+  "params" : {
+    "syncFileName":"/fs/sharedFolder/app1_device1/icon.jpg",
     "fileType":"GRAPHIC_JPEG"
   }
 }
