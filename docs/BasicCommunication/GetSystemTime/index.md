@@ -45,9 +45,9 @@ SDL logs the corresponding error internally and fails the handshake process if a
 If the handshake process fails, SDL behavior depends on the "ForceProtectedService"/"ForceUnprotectedService" params configured in the 'Security Manager' section of the smartDeviceLink.ini file.
 
 #### Parameters
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
-|systemTime|[Common.DateTime](docs/Common/Structs/index.md)|true|Current UTC system time|
+|systemTime|[Common.DateTime](../../common/structs/#datetime)|true|Current UTC system time|
 
 ### Sequence Diagrams
 |||

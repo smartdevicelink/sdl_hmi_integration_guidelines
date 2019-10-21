@@ -38,7 +38,7 @@ and `<language_1>` exists at "consumer_friendly_messages" section at LocalPT:
 |messageCodes|String|true|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 500|
 |language|[Common.Language](../../common/enums/#language)|false||
 
-**MessageCodes**   
+##### MessageCodes   
 Message codes specify appropriate user messages which notify the user about some events/conditions on HMI. Messages and message codes are coming from Policy Table and must be used on HMI in different information pop-ups according to HMI use-cases scenarios.
 
 |MessageCode|MessageText|
@@ -72,8 +72,7 @@ Message codes specify appropriate user messages which notify the user about some
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|messages|[Common.UserFriendlyMessage]|false|array: true<br>minsize: 1<br>maxsize: 100|
-[Common.UserFriendlyMessage]: ../../common/structs/#userfriendlymessage
+|messages|[Common.UserFriendlyMessage](../../common/structs/#userfriendlymessage)|false|array: true<br>minsize: 1<br>maxsize: 100| 
 
 ### Sequence Diagrams
 |||
@@ -100,19 +99,18 @@ GetUserFriendlyMessage for device consent
 
 ```json
 {
-  "id" : 176,
-  "jsonrpc" : "2.0",
-  "result" :
-  {
-    "messages": {
-             "messageCode": "AppPermissions",
-             "ttsString": "%appName% is requesting the use of the following ....",
-             line1: "Grant Requested",
-             line2: "Permission(s)?"
-            },
-    "code" : 0,
-    "method" : "SDL.GetUserFriendlyMessage"
-  }
+	"id": 176,
+	"jsonrpc": "2.0",
+	"result": {
+		"messages": {
+			"messageCode": "AppPermissions",
+			"ttsString": "%appName% is requesting the use of the following ....",
+			"line1": "Grant Requested",
+			"line2": "Permission(s)?"
+		},
+		"code": 0,
+		"method": "SDL.GetUserFriendlyMessage"
+	}
 }
 ```
 
@@ -128,7 +126,7 @@ GetUserFriendlyMessage for device consent
     "message" : "Some error occurred",
     "data" :
     {
-      "SDL.GetUserFriendlyMessage"
+      "method": "SDL.GetUserFriendlyMessage"
     }
   }
 }

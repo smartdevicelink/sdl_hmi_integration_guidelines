@@ -18,6 +18,12 @@ This notification is sent to SDL to notify that there won't be `IGNITION_OFF` se
 
 !!!
 
+### Notification
+
+#### Parameters
+
+This RPC has no additional parameter requirements
+
 ### Sequence Diagrams
 |||
 Wake SDL from Suspension

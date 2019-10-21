@@ -13,8 +13,7 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -23,12 +22,6 @@ Purpose
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |vrCapabilities|[Common.VrCapabilities](../../common/enums/#vrcapabilities)|false|array: true<br>minsize: 1<br>maxsize: 100|
-
-### Sequence Diagrams
-|||
-GetCapabilities
-![GetCapabilities](./assets/GetCapabilities.png)
-|||
 
 ### Example Request
 
@@ -47,7 +40,7 @@ GetCapabilities
   "jsonrpc" : "2.0",
   "result" :
   {
-    "vrCapabilities" : [TEXT],
+    "vrCapabilities" : ["TEXT"],
     "code" : 0,
     "method" : "VR.GetCapabilities"
   }
@@ -71,3 +64,9 @@ GetCapabilities
   }
 }
 ```
+
+### Sequence Diagrams
+|||
+GetCapabilities
+![GetCapabilities](./assets/GetCapabilities.png)
+|||

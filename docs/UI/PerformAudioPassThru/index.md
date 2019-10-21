@@ -55,10 +55,10 @@ PerformAudioPassThru from vehicle microphone
   {
     "audioPassThruDisplayTexts" :
     {
-         "fieldName" :  audioPassThruDisplayText1,
-     "fieldText" : "The audio capturing is in progress"
+      "fieldName" :  "audioPassThruDisplayText1",
+      "fieldText" : "The audio capturing is in progress"
     },
-    "maxDuration" : 10000,
+    "maxDuration" : 10000
   }
 }
 ```

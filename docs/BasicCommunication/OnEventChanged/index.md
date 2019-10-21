@@ -119,8 +119,8 @@ When this event is active, SDL **rejects** all app activation requests from the 
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:--------|:---------|
-|eventName|[Common.EventTypes](../../common/enums/#eventtypes)|true|-|Specifies the types of active events|
-|isActive|Boolean|true|-|Must be 'true' when the event is started on HMI. Must be 'false' when the event is ended on HMI|
+|eventName|[Common.EventTypes](../../common/enums/#eventtypes)|true||Specifies the types of active events|
+|isActive|Boolean|true||Must be 'true' when the event is started on HMI. Must be 'false' when the event is ended on HMI|
 
 ### Sequence Diagrams
 |||

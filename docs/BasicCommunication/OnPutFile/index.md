@@ -53,7 +53,7 @@ The list of RPCs and data structures that `OnPutFile` affects are:
 |fileSize|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |syncFileName|String|true|maxlength: 255|
 |fileType|[Common.FileType](../../common/enums/#filetype)|true||
-|persistentFile|Boolean|false||
+|persistentFile|Boolean|false|defvalue: false|
 |isSystemFile|Boolean|false||
 |appID|Integer|false||
 

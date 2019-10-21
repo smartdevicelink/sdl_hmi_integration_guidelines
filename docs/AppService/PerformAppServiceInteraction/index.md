@@ -22,7 +22,7 @@ If the HMI is the App Service Consumer (ASC), SDL will:
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |serviceUri|String|true||
 |serviceID|String|true||

@@ -65,43 +65,43 @@ Show Widgets
     "showStrings" :
     [
       {
-         "fieldName" : mainField1,
+         "fieldName" : "mainField1",
          "fieldText" : "Favourite Album"
       },
       {
-         "fieldName" : mediaClock,
+         "fieldName" : "mediaClock",
          "fieldText" : "1:45:12"
       },
       {
-         "fieldName" : mediaTrack,
+         "fieldName" : "mediaTrack",
          "fieldText" : "Ironic – The Collection – Alanis Morissette"
       }
     ],
-    "alignment" : LEFT_ALIGNED,
+    "alignment" : "LEFT_ALIGNED",
     "graphic" :
     {
          "value" : "tmp/SDL/app/Best_Media/AM-Collection-cover.png",
-         "imageType" : DYNAMIC
+         "imageType" : "DYNAMIC"
     },
     "softButtons" :
     [
       {
-      "type" :  BOTH,
+      "type" :  "BOTH",
       "text" : "Change Album",
       "image" :
-       [
+       {
          "value" : "tmp/SDL/app/Best_Media/change_alb_icon.jpg",
-         "imageType" : DYNAMIC
-       ],
+         "imageType" : "DYNAMIC"
+       },
       "softButtonID" : 48,
-      "systemAction" :  DEFAULT_ACTION
+      "systemAction" : "DEFAULT_ACTION"
       },
 
       {
-      "type" :  TEXT,
+      "type" :  "TEXT",
       "text" : "Change Artist",
       "softButtonID" : 57
-      },
+      }
     ],
     "customPresets" : ["Like Song", "Like Album"],
     "appID" : 8726

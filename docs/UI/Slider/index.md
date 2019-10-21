@@ -90,7 +90,7 @@ Slider with OK Button press
     "message" : "A command was aborted due to user interaction",
     "data" :
     {
-      "sliderPosition" : 5
+      "sliderPosition" : 5,
       "method" : "UI.Slider"
     }
   }

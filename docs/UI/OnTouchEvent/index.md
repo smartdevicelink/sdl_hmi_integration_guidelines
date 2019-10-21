@@ -36,12 +36,12 @@ OnTouchEvent moving two fingers one stops first
   "method" : "UI.OnTouchEvent",
   "params" :
   {
-    "type" : START,
-      " event" :[
+    "type" : "START",
+      "event" :[
              {
                 "id":0,
                 "ts":[49013],
-                "c":[{"x":323,"y":259}],
+                "c":[{"x":323,"y":259}]
               }
             ]
   }

@@ -104,26 +104,24 @@ Running the same apps from multiple devices at the same time
 #### JSON Example Notification
 ```json
 {
-  "jsonrpc" : "2.0",
-  "method" : "BasicCommunication.OnAppRegistered",
-  "params" :
-  {
-    "application" :
-      {
-        "appName" : "TryMe",
-        "ngnMediaScreenAppName " : "TryMe",
-        "deviceInfo":
-                  { "name" : "GT-I9300",
-                 "id" : 1563462,
-          "transportType" : "BLUETOOTH"
-                  },
-                  "policyAppID" : 123,
-        "appID" : 65540,
-        "hmiDisplayLanguageDesired" : ES-ES,
-        "isMediaApplication" : false
-      }
-    "resumeVRGrammars" : true
-  }
+	"jsonrpc": "2.0",
+	"method": "BasicCommunication.OnAppRegistered",
+	"params": {
+	  "application": {
+			"appName": "TryMe",
+			"ngnMediaScreenAppName": "TryMe",
+			"deviceInfo": {
+				"name": "GT-I9300",
+				"id": 1563462,
+				"transportType": "BLUETOOTH"
+			},
+			"policyAppID": 123,
+			"appID": 65540,
+			"hmiDisplayLanguageDesired": "ES-ES",
+			"isMediaApplication": false
+		},
+		"resumeVRGrammars": true
+	}
 }
 ```
 

@@ -21,9 +21,7 @@ The notification is applicable only for the case when the device is consented by
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|device|[Common.DeviceInfo]|true||
-
-[Common.DeviceInfo]: ../../common/structs/#deviceinfo
+|device|[Common.DeviceInfo](../../common/structs/#deviceinfo)|true||
 
 ### Sequence Diagrams
 
@@ -40,14 +38,12 @@ The User consents the device
 #### JSON Example Notification
 ```json
 {
-	"jsonrpc" : "2.0",
-	"method" : "SDL.OnSDLConsentNeeded",
-	"params" :  
-		{
-		"deviceInfo" : 
-		{
-				"name" : “Mary`s Phone”,
-				"id" : 8
+	"jsonrpc": "2.0",
+	"method": "SDL.OnSDLConsentNeeded",
+	"params": {
+		"deviceInfo": {
+			"name": "Mary's Phone",
+			"id": 8
 		}
 	}
 }

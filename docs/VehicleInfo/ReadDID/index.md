@@ -63,17 +63,17 @@ ReadDID Expanded result
     "didResult" :
     [
       {
-      "resultCode" : SUCCESS,
+      "resultCode" : "SUCCESS",
       "didLocation" : 35,
       "data" : "38AF"
       },
       {
-      "resultCode" : TRUNCATED_DATA,
+      "resultCode" : "TRUNCATED_DATA",
       "didLocation" : 48,
       "data" : "35"
       },
       {
-      "resultCode" : INVALID_ID,
+      "resultCode" : "INVALID_ID",
       "didLocation" : 182
       }      
     ],

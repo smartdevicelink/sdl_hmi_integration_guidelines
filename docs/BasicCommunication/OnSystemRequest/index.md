@@ -50,10 +50,7 @@ _**SyncP NOTE**_
 |length|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |timeout|Integer|false|minvalue: 0<br>maxvalue: 2000000000|
 |fileName|String|true|minlength: 1<br>maxlength: 255|
-|appID|String|false|minlength: 1<br>maxlength: 50|
-
-[Common.RequestType]: ../../common/enums/#requesttype
-[Common.FileType]: ../../common/enums/#filetype
+|appID|Integer|false||
 
 ### Sequence Diagrams
 |||

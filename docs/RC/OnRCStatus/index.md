@@ -22,11 +22,42 @@ SDL must always include `moduleId` for each and every `ModuleData` in `allocated
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
-|appID|Integer|true|ID of selected application|
-|allocatedModules|[Common.ModuleData](/docs/Common/Structs/index.md)|true|Contains a list (zero or more) of module types that are allocated to the application|
-|freeModules|[Common.ModuleData](/docs/Common/Structs/index.md)|true|Contains a list (zero or more) of module types that are free to access for the application|
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|appID|Integer|true||ID of selected application|
+|allocatedModules|[Common.ModuleData](../../common/structs/#moduledata)|true|array: true<br>minsize: 0<br>maxsize: 100|Contains a list (zero or more) of module types that are allocated to the application|
+|freeModules|[Common.ModuleData](../../common/structs/#moduledata)|true|array: true<br>minsize: 0<br>maxsize: 100|Contains a list (zero or more) of module types that are free to access for the application|
+
+#### JSON Example Notification
+
+```json
+{
+	"jsonrpc": "2.0",
+	"method": "RC.OnRCStatus",
+	"params": {
+		"allocatedModules": [],
+		"freeModules": [{
+				"moduleType": "CLIMATE"
+			},
+			{
+				"moduleType": "RADIO"
+			},
+			{
+				"moduleType": "AUDIO"
+			},
+			{
+				"moduleType": "LIGHT"
+			},
+			{
+				"moduleType": "HMI_SETTINGS"
+			},
+			{
+				"moduleType": "SEAT"
+			}
+		]
+	}
+}
+```
 
 ### Sequence Diagrams
 
@@ -34,33 +65,3 @@ SDL must always include `moduleId` for each and every `ModuleData` in `allocated
 OnRCStatus
 ![OnRCStatus](assets/OnRCStatus.png)
 |||
-
-#### JSON Example Notification
-
-```json
-{
-    "jsonrpc": "2.0",
-    "method": "RC.OnRCStatus",
-    "params": {
-        "allocatedModules" : [],
-        "freeModules" : [
-     {
-        "moduleType" : "CLIMATE"
-     },
-     {
-        "moduleType" : "RADIO"
-     },
-     {
-        "moduleType" : "AUDIO"
-     },
-     {
-        "moduleType" : "LIGHT"
-     },
-     {
-        "moduleType" : "HMI_SETTINGS"
-     },
-     {
-        "moduleType" : "SEAT"
-     }
-  ]
-}

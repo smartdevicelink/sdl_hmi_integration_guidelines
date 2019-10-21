@@ -20,6 +20,7 @@ Purpose
 |timeoutPrompt|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |timeout|Integer|true||
 |grammarID|Integer|false|array: true<br>minsize: 1<br>maxsize: 100<br>minvalue: 0<br>maxvalue: 2000000000|
+|appID|Integer|true||
 |cancelID|Integer|false||
 
 ### Response
@@ -98,7 +99,7 @@ PerformInteraction in Both Mode times out
   "jsonrpc" : "2.0",
   "result" :
   {
-    "choiceID" : 2416
+    "choiceID" : 2416,
     "code" : 0,
     "method" : "VR.PerformInteraction"
   }

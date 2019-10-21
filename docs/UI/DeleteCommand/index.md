@@ -82,7 +82,7 @@ Delete Command Application Inactive
     "message" : "One of the provided IDs is not valid",
     "data" :
     {
-      "UI. DeleteCommand"
+      "method": "UI.DeleteCommand"
     }
   }
 }

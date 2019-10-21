@@ -37,7 +37,7 @@ The request is considered to have been executed successfully only after the user
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|number|String||maxlength: 40|
+|number|String|true|maxlength: 40|
 |appID|Integer|true||
 
 ### Response
@@ -51,7 +51,7 @@ This RPC has no additional parameter requirements
 DialNumber Success
 ![DialNumberSuccess](./assets/DialNumberSuccess.jpg)
 |||
-|||
+
 |||
 DialNumber Failed
 ![DialNumberFailed](./assets/DialNumberFailed.png)

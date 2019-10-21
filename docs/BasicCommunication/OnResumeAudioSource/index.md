@@ -59,11 +59,9 @@ Audio Source Resume one audio app one phone call app
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : "BasicCommunication.OnResumeAudioSource"
-     "params" :
-   {
-      "appID" : 123
-    }
-
+  "method" : "BasicCommunication.OnResumeAudioSource",
+  "params" :{
+    "appID" : 123
+  }
 }
 ```

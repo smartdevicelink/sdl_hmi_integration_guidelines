@@ -14,8 +14,7 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -27,7 +26,7 @@ Purpose
 |audioPassThruCapabilities|[Common.AudioPassThruCapabilities](../../common/structs/#audiopassthrucapabilities)|true||
 |audioPassThruCapabilitiesList|[Common.AudioPassThruCapabilities](../../common/structs/#audiopassthrucapabilities)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |hmiZoneCapabilities|[Common.HmiZoneCapabilities](../../common/enums/#hmizonecapabilities)|true||
-|softButtonCapabilities|[Common.SoftButtonCapabilities](../../common/structs/#softbuttoncapabilities)|false||
+|softButtonCapabilities|[Common.SoftButtonCapabilities](../../common/structs/#softbuttoncapabilities)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |hmiCapabilities|[Common.HMICapabilities](../../common/structs/#hmicapabilities)|false||
 |systemCapabilities|[Common.SystemCapabilities](../../common/structs/#systemcapabilities)|false||
 

@@ -1,12 +1,15 @@
 ## UpdateDeviceList
 
-###### [TODO: looking for feedback on how to do format this section]
+Type
+: Function
 
-  * Method: BasicCommunication.UpdateDeviceList
-  * Sender: SDL
-  * Purpose: Update HMI's list of known, connected devices
+Sender
+: SDL
 
-The `UpdateAppList` request is sent after SDL has found a new device over one of the available transports.
+Purpose
+: Update HMI's list of known, connected devices
+
+The [UpdateAppList](../updateapplist) request is sent after SDL has found a new device over one of the available transports.
 
 !!! note
 

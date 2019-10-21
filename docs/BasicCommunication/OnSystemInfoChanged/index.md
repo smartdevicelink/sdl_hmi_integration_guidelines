@@ -1,9 +1,15 @@
 ## OnSystemInfoChanged
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Issued by system to SDL to notify that some system param has changed. Currently applied for Sync Language.
 
 ### Notification
-
-#### Parameters
 
 #### Parameters
 
@@ -13,5 +19,11 @@
 
 #### JSON Example Notification
 ```json
-
+{
+  "jsonrpc": "2.0",
+  "method": "BasicCommunication.OnSystemInfoChanged",
+  "params": {
+    "language": "EN-US"
+  }
+}
 ```

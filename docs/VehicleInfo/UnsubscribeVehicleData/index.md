@@ -15,6 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
+|appID|Integer|true||
 |gps|Boolean|false||
 |speed|Boolean|false||
 |rpm|Boolean|false||
@@ -130,7 +131,7 @@ UnsubscribeVehicleData unexpected disconnect
 ### Example Response
 
 ```json
-
+{
   "id" : 139,
   "jsonrpc" : "2.0",
   "result" :

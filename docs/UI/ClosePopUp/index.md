@@ -17,6 +17,12 @@ Purpose
 |:---|:---|:--------|:---------|
 |methodName|String|false||
 
+### Response
+
+#### Parameters
+
+This RPC has no additional parameter requirements
+
 ### Sequence Diagrams
 |||
 ClosePopUp for UI.PerformInteraction
@@ -29,7 +35,7 @@ ClosePopUp for UI.PerformInteraction
 {
   "id" : 79,
   "jsonrpc" : "2.0",
-  "method" : "UI.ClosePopUp",
+  "method" : "UI.ClosePopUp"
 }
 ```
 ### Example Response

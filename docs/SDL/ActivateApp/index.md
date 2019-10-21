@@ -39,21 +39,15 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Description|
-|:---|:---|:--------|:----------|
-|isSDLAllowed|Boolean|true|SDL returns:‘true’, in case the User has allowed using the device for PolicyTable Exchange. ‘false’, in case the User has not yet been asked for or in case the User has disallowed using the device for PolicyTable Exchange.|
-|device|[Common.DeviceInfo]|false||
-|isPermissionsConsentNeeded|Boolean|true||
-|isAppPermissionsRevoked|Boolean|true||
-|appRevokedPermissions|[Common.PermissionItem]|false|array: true<br>minsize: 1<br>maxsize: 100|
-|isAppRevoked|Boolean|true||
-|priority|[Common.AppPriority]|false||
-
-[Common.DeviceInfo]: ../../common/structs/#deviceinfo
-
-[Common.PermissionItem]: ../../common/structs/#permissionitem
-
-[Common.AppPriority]: ../../common/enums/#apppriority
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|isSDLAllowed|Boolean|true|scope: internal|SDL returns:‘true’, in case the User has allowed using the device for PolicyTable Exchange. ‘false’, in case the User has not yet been asked for or in case the User has disallowed using the device for PolicyTable Exchange.|
+|device|[Common.DeviceInfo](../../common/structs/#deviceinfo)|false|scope: internal||
+|isPermissionsConsentNeeded|Boolean|true|||
+|isAppPermissionsRevoked|Boolean|true|||
+|appRevokedPermissions|[Common.PermissionItem](../../common/structs/#permissionitem)|false|array: true<br>minsize: 1<br>maxsize: 100||
+|isAppRevoked|Boolean|true|||
+|priority|[Common.AppPriority](../../common/enums/#apppriority)|false|||
 
 ### Sequence Diagrams
 
@@ -93,7 +87,7 @@ ActivateApp using App Launching
 {
   "id" : 27,
   "jsonrpc" : "2.0",
-  "method" : "SDL.ActivateApp"
+  "method" : "SDL.ActivateApp",
   "params" :
   {
     "appID" : 12345

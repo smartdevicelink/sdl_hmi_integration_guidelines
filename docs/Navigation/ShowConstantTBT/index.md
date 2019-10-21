@@ -48,32 +48,32 @@ ShowConstantTBT
     "navigationTexts" :
     [
       {
-        "fieldName" :  navigationText1,
+        "fieldName" :  "navigationText1",
         "fieldText" : "Destination point: Berlin"
       },
       {
-        "fieldName" :  ETA,
+        "fieldName" :  "ETA",
         "fieldText" : "15:45"
       },
       {
-        "fieldName" :  totalDistance,
+        "fieldName" :  "totalDistance",
         "fieldText" : "658"
       }
     ],
     "turnIcon" :
-    [
+    {
          "value" : "tmp/SDL/app/Navi/icon_3245.jpeg",
-         "imageType" : DYNAMIC
-    ],
+         "imageType" : "DYNAMIC"
+    },
     "distanceToManeuver" : 168,
     "distanceToManeuverScale" : 265,
     "softButtons" :
-    [
-        "type" :  TEXT,
+    {
+        "type" :  "TEXT",
         "text" : "Close",
         "softButtonID" : 76,
-        "systemAction" :  DEFAULT_ACTION
-    ],
+        "systemAction" :  "DEFAULT_ACTION"
+    },
     "appID" : 26743
   }
 }

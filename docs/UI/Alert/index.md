@@ -91,21 +91,21 @@ Alert BOTH UI Closed before TTS finishes Speaking
     "alertStrings" :
     [
       {
-         "fieldName" : alertText1,
+         "fieldName" : "alertText1",
          "fieldText" : "WARNING"
       },
       {
-         "fieldName" : alertText2,
+         "fieldName" : "alertText2",
          "fieldText" : "Hard weather conditions"
       }
     ],
     "duration" : 5000,
     "softButtons" :
     {
-      "type" : TEXT,
+      "type" : "TEXT",
       "text" : "OK",
       "softButtonID" : 697,
-      "systemAction" : DEFAULT_ACTION
+      "systemAction" : "DEFAULT_ACTION"
     },
       "alertType": "BOTH",
     "appID" : 65539
