@@ -116,14 +116,14 @@
 |secondaryText|22|Secondary text for Choice|
 |tertiaryText|23|Tertiary text for Choice|
 |menuTitle|24|Optional text to label an app menu button (for certain touchscreen platforms)|
-|navigationText|25|Navigation text for UpdateTurnList|
-|notificationText|26|Text of notification to be displayed on screen|
-|locationName|27|Optional name / title of intended location *(applies to SendLocation)*|
-|locationDescription|28|Optional description of intended location / establishment *(applies to SendLocation)*|
-|addressLines|29|Optional location address *(applies to SendLocation)*|
-|phoneNumber|30|Optional phone number of intended location / establishment *(applies to SendLocation)*|
-|timeToDestination|31||
-|turnText|32||
+|locationName|25|Optional name / title of intended location *(applies to SendLocation)*|
+|locationDescription|26|Optional description of intended location / establishment *(applies to SendLocation)*|
+|addressLines|27|Optional location address *(applies to SendLocation)*|
+|phoneNumber|28|Optional phone number of intended location / establishment *(applies to SendLocation)*|
+|timeToDestination|29||
+|turnText|30||
+|navigationText|31|Navigation text for UpdateTurnList|
+|notificationText|32|Text of notification to be displayed on screen|
 
 ### MetadataType
 
