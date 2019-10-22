@@ -1,8 +1,13 @@
 ## SystemRequest
 
-  * Type: Function
-  * Sender: SDL
-  * Provide the path to a system file that SDL has received from the mobile application
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Provide the path to a system file that SDL has received from the mobile application
 
 SDL sends SystemRequest to the HMI when SDL receives the SystemRequest RPC from a mobile application.
 
