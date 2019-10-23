@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Notify HMI that microphone recording should begin
+: Notify HMI that capturing microphone data should begin
 
 ### Notification
 
