@@ -1,6 +1,13 @@
 ## MixingAudioSupported
 
-Purpose: inform SDL whether the vehicle audio system has the ability to speak the TTS prompts or listen to an recognize VR commands while playing audio.
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Inform SDL whether the vehicle audio system has the ability to speak the TTS prompts or listen to an recognize VR commands while playing audio
 
 !!! note
 
