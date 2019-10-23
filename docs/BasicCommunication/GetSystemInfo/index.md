@@ -1,8 +1,13 @@
 ## GetSystemInfo
 
-  * Type: Function
-  * Sender: SDL
-  * Purpose: Get head unit system information
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Get head unit system information
 
 !!! must
 

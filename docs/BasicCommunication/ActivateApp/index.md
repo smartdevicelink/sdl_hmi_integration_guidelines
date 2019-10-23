@@ -1,5 +1,14 @@
 ## ActivateApp
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Request HMI to bring a specific app to the front (aka HMI level FULL)
+
 !!! note
 
 The activated application is assumed to receive access to the head unit's display, audio and control system which are:
