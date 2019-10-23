@@ -47,7 +47,7 @@ Purpose
 |isAppPermissionsRevoked|Boolean|true|||
 |appRevokedPermissions|[Common.PermissionItem](../../common/structs/#permissionitem)|false|array: true<br>minsize: 1<br>maxsize: 100||
 |isAppRevoked|Boolean|true|||
-|priority|[Common.AppPriority](../../common/enums/#apppriority)|false|||
+|priority|[Common.AppPriority](../../common/enums/#apppriority)|false|| |
 
 ### Sequence Diagrams
 
