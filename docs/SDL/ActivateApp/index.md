@@ -43,10 +43,10 @@ Purpose
 |:---|:---|:--------|:---------|:----------|
 |isSDLAllowed|Boolean|true|scope: internal|SDL returns:‘true’, in case the User has allowed using the device for PolicyTable Exchange. ‘false’, in case the User has not yet been asked for or in case the User has disallowed using the device for PolicyTable Exchange.|
 |device|[Common.DeviceInfo](../../common/structs/#deviceinfo)|false|scope: internal||
-|isPermissionsConsentNeeded|Boolean|true|||
-|isAppPermissionsRevoked|Boolean|true|||
+|isPermissionsConsentNeeded|Boolean|true|| |
+|isAppPermissionsRevoked|Boolean|true|| |
 |appRevokedPermissions|[Common.PermissionItem](../../common/structs/#permissionitem)|false|array: true<br>minsize: 1<br>maxsize: 100||
-|isAppRevoked|Boolean|true|||
+|isAppRevoked|Boolean|true|| |
 |priority|[Common.AppPriority](../../common/enums/#apppriority)|false|| |
 
 ### Sequence Diagrams
