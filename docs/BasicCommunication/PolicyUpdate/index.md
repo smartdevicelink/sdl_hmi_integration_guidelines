@@ -80,6 +80,11 @@ BC.PolicyUpdate in "HTTP" Policy Table Update Flow
 ![HTTP PTU](./assets/PolicyUpdate_in_HTTP_PTU_flow.png)
 |||
 
+|||
+Policy Table Update with in-vehicle modem
+![PTU modem](./assets/PTU_modem_success.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request

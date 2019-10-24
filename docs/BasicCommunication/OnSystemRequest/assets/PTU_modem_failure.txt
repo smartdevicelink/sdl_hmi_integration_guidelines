@@ -1,0 +1,44 @@
+-- Policy Update Sequence
+title Policy Table Update with in-vehicle modem - Backend isn't reached by the modem
+
+participant Mobile
+participant SDL
+participant HMI
+participant Modem
+participant Policy Server
+
+note over SDL: PT update is required
+
+SDL->HMI: SDL.OnStatusUpdate(UPDATE_NEEDED)
+SDL->SDL: Creates PTSnapshot
+SDL->HMI: BC.PolicyUpdate(fileLocation,timeout,retry)
+HMI-->SDL: SUCCESS: BC.PolicyUpdate
+SDL->HMI:OnStatusUpdate(UPDATING)
+SDL->SDL: Starts timeout taken from "timeout_after_x_seconds" of Local PT
+note over HMI:Requests the urls to send PTSnapshot
+HMI->SDL: SDL.GetPolicyConfigurationData\n("policy_type=module_config", "property=endpoints")
+note over SDL: Gets endpoints from policies database
+SDL-->HMI: SDL.GetPolicyConfigurationData("endpoints":{"0x07":{...})
+HMI->HMI: PTSnapshot\nencryption
+note over HMI: Sends encrypted PTS file to the defined URL
+HMI-> Modem: Use vehicle modem to send PTS to URL
+HMI->HMI: Starts PTU timer
+Modem -> Policy Server: Sending PTS over cellular
+note over Policy Server: Processes PTS and creates PTU
+Policy Server --> Modem: Sending PTU over cellular
+note over HMI, Modem: Transfer went wrong
+note over SDL:  The timeout from "timeout_after_x_seconds"\nof Local PT is not expired
+HMI->SDL: BC.OnSystemRequest(request_type=PROPRIETARY, url, appID, encryptedFile)
+SDL->SDL: Starts timeout taken from "timeout_after_x_seconds" of Local PT
+HMI->HMI: Starts PTU timer
+SDL->Mobile: OnSystemRequest
+note over Mobile: Sends PTS to defined URL\nDownloading the PTU data
+Mobile ->SDL: SystemRequest
+SDL->HMI: BC.SystemRequest(request_type=PROPRIETARY, PTUfilename)
+note over HMI: Decrypts PTU,\nnotifies SDL about\ndecrypted PTU
+HMI->SDL: SDL.OnReceivedPolicyUpdate(<policyFile>)
+SDL->SDL:Stops timeout
+SDL->SDL: Validates PTU and merges PTU into Local PT (if valid)
+HMI-->SDL: SUCCESS: BC.SystemRequest
+SDL-->Mobile: SUCCESS: SystemRequest
+SDL->HMI: SDL.OnStatusUpdate(UP_TO_DATE)
