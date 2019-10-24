@@ -824,19 +824,38 @@
 |tz_hour|Integer|false|minvalue: -12 <br> maxvalue: 14 <br> defvalue: 0|Time zone offset in Hours with regard to UTC.|
 |tz_minute|Integer|false|minvalue: 0 <br>maxvalue: 59 <br> defvalue: 0|Time zone offset in Min with regard to UTC.|
 
+### Coordinate
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|latitudeDegrees|Float|true|minvalue: -90<br>maxvalue: 90|Latitude of the location|
+|longitudeDegrees|Float|true|minvalue: -180<br>maxvalue: 180|Longitude of the location|
+
 ### OASISAddress
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|countryName|String|false|minlength="0"<br>maxlength="200"|Name of the country (localized)|
-|countryCode|String|false|minlength="0"<br>maxlength="200"|Name of country (ISO 3166-2)|
-|postalCode|String|false|minlength="0"<br>maxlength="200"|(PLZ, ZIP, PIN, CAP etc.)|
-|administrativeArea|String|false|minlength="0"<br>maxlength="200"|Portion of country (e.g. state)|
-|subAdministrativeAre|String|false|minlength="0"<br>maxlength="200"|Portion of administrativeArea (e.g. county)|
-|locality|String|false|minlength="0"<br>maxlength="200"|Hypernym for city/village|
-|subLocality|String|false|minlength="0"<br>maxlength="200"|Hypernym for district|
-|thoroughfare|String|false|minlength="0"<br>maxlength="200"|Hypernym for street, road etc|
-|subThoroughfare|String|false|minlength="0"<br>maxlength="200"|Portion of thoroughfare (e.g. house number)|
+|countryName|String|false|minlength: 0<br>maxlength: 200|Name of the country (localized)|
+|countryCode|String|false|minlength: 0<br>maxlength: 50|Name of country (ISO 3166-2)|
+|postalCode|String|false|minlength: 0<br>maxlength: 16|(PLZ, ZIP, PIN, CAP etc.)|
+|administrativeArea|String|false|minlength: 0<br>maxlength: 200|Portion of country (e.g. state)|
+|subAdministrativeAre|String|false|minlength: 0<br>maxlength: 200|Portion of administrativeArea (e.g. county)|
+|locality|String|false|minlength: 0<br>maxlength: 200|Hypernym for city/village|
+|subLocality|String|false|minlength: 0<br>maxlength: 200|Hypernym for district|
+|thoroughfare|String|false|minlength: 0<br>maxlength: 200|Hypernym for street, road etc|
+|subThoroughfare|String|false|minlength: 0<br>maxlength: 200|Portion of thoroughfare (e.g. house number)|
+
+### LocationDetails
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|coordinate|Common.Coordinate|false||Latitude/Longitude of the location|
+|locationName|String|false|maxlength: 500|Name of location|
+|addressLines|String|false|maxlength: 500<br>array: true<br>minsize: 0<br>maxsize: 4|Location address for display purposes only|
+|locationDescription|String|false|maxlength: 500|Description intended location/establishment (if applicable)|
+|phoneNumber|String|false|maxlength: 500|Phone number of location/establishment|
+|locationImage|Common.Image|false||Image/icon of intended location|
+|searchAddress|Common.OASISAddress|false||Address to be used by navigation engines for search|
 
 ### SyncMsgVersion
 

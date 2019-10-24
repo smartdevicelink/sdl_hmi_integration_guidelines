@@ -1,0 +1,12 @@
+@startuml UnsubscribeWayPoints
+participant SDL
+participant HMI
+
+SDL -> HMI: Navigation.SubscribeWayPoints()
+HMI --> SDL: Navigation.SubscribeWayPoints(SUCCESS)
+note right of HMI: Waypoint data has changed
+HMI -> SDL: Navigation.OnWayPointChange(waypoints)
+SDL -> HMI: Navigation.UnsubscribeWayPoints()
+HMI --> SDL: Navigation.UnsubscribeWayPoints(SUCCESS)
+note right of HMI: Waypoint data has changed,\nno notification is sent to SDL
+@enduml

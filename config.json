@@ -1,6 +1,6 @@
 {
     "Authors": ["Anastasiya Britanova", "Justin Dickow", "Nicolas(Yifei) Li"],
-    "languages": ["en","zh-hans"],
+    "languages": ["en"],
     "navigation": [
         {
             "name": "Overview",
@@ -149,6 +149,18 @@
           "navigation": [
             {
               "name": "AlertManeuver"
+            },
+            {
+              "name": "GetWayPoints"
+            },
+            {
+              "name": "SubscribeWayPoints"
+            },
+            {
+              "name": "UnsubscribeWayPoints"
+            },
+            {
+              "name": "OnWayPointChange"
             },
             {
               "name": "IsReady"

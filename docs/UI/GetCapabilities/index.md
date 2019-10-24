@@ -55,28 +55,28 @@ Get Capabilities
   {
     "displayCapabilities" :
     {
-        "displayType" : "GEN2_8_DMA",
-        "textFields" : ["mainField1", "mainField2", "mediaclock", "mediaTrack", "alertText1", "alertText2", "alertText3", "scrollableMessageBody", "initialInteractionText", "navigationText1", "navigationText2", "audioPassThruDisplayText1", "audioPassThruDisplayText2", "notificationText"],
-        "mediaClockFormats" : ["CLOCK1", "CLOCKTEXT4"],
-        "graphicSupported" : true,
-        "imageCapabilities": ["DYNAMIC"]
+      "displayType" : "GEN2_8_DMA",
+      "textFields" : ["mainField1", "mainField2", "mediaclock", "mediaTrack", "alertText1", "alertText2", "alertText3", "scrollableMessageBody", "initialInteractionText", "navigationText1", "navigationText2", "audioPassThruDisplayText1", "audioPassThruDisplayText2", "notificationText"],
+      "mediaClockFormats" : ["CLOCK1", "CLOCKTEXT4"],
+      "graphicSupported" : true,
+      "imageCapabilities": ["DYNAMIC"]
     },
     "hmiCapabilities" :
     {
-        "navigation" : true,
-        "phoneCall" : true,
-        "videostreaming" : true
+      "navigation" : true,
+      "phoneCall" : true,
+      "videostreaming" : true
     },
     "systemCapabilities":
     {
       "navigationCapability":
       {
-          "sendLocationEnabled": true,
-          "getWayPointsEnabled": true
+        "sendLocationEnabled": true,
+        "getWayPointsEnabled": true
       },
       "phoneCapability":
       {
-          "dialNumberEnabled": true
+        "dialNumberEnabled": true
       },
       "videoStreamingCapability":
       {
@@ -93,18 +93,20 @@ Get Capabilities
       }
     },
     "softButtonCapabilities" :
-    {
+    [
+      {
         "shortPressAvailable" : true,
         "longPressAvailable" : true,
         "upDownAvailable" : true,
         "imageSupported" : true
-    },
+      }
+    ],
     "hmiZoneCapabilities" : "FRONT",
     "audioPassThruCapabilities" :
     {
-        "samplingRate" : "44KHZ",
-        "bitsPerSample" : "8_BIT",
-        "audioType" : "PCM"
+      "samplingRate" : "44KHZ",
+      "bitsPerSample" : "8_BIT",
+      "audioType" : "PCM"
     },
     "audioPassThruCapabilitiesList" :
     [{
