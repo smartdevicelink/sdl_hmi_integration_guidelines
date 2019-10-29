@@ -378,9 +378,9 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|fieldName|[Common.TextFieldName](../enums/#TextFieldName)|true||The name of the field for displaying the text.|
+|fieldName|[Common.TextFieldName](../enums/#textfieldname)|true||The name of the field for displaying the text.|
 |fieldText|String|true|maxlength: 500|The  text itself.|
-|fieldTypes|[Common.MetadataType](../enums/#MetadataType)|false|minsize: 0<br>maxsize: 5<br>array: true|The type of data contained in the field.|
+|fieldTypes|[Common.MetadataType](../enums/#metadatatype)|false|minsize: 0<br>maxsize: 5<br>array: true|The type of data contained in the field.|
 
 ### DeviceInfo
 
@@ -480,8 +480,8 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|protocol|[Common.VideoStreamingProtocol](../enums/#VideoStreamingProtocol)|true||Protocol type, see VideoStreamingProtocol|
-|codec|[Common.VideoStreamingCodec](../enums/#VideoStreamingCodec)|true||Codec type, see VideoStreamingCodec|
+|protocol|[Common.VideoStreamingProtocol](../enums/#videostreamingprotocol)|true||Protocol type, see VideoStreamingProtocol|
+|codec|[Common.VideoStreamingCodec](../enums/#videostreamingcodec)|true||Codec type, see VideoStreamingCodec|
 
 ### VideoConfig
 
@@ -751,7 +751,7 @@
 ### FuelRange
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|type|[Common.FuelType](../enums/#FuelType)|false|||
+|type|[Common.FuelType](../enums/#fueltype)|false|||
 |range|Float|faslse|minvalue=0<br>maxvalue=10000|The estimate range in KM the vehicle can travel based on fuel level and consumption|
 
 ### MassageModeData
@@ -1082,7 +1082,7 @@ There are no defined parameters for this struct.
 |numCustomPresetsAvailable|Integer|false|minvalue: 1 <br>maxvalue: 100|The number of on-window custom presets available (if any); otherwise omitted.|
 |buttonCapabilities|Common.ButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of buttons and the capabilities of each on-window button.|
 |softButtonCapabilities|Common.SoftButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of soft buttons available on-window and the capabilities for each button.|
-|menuLayoutsAvailable|[Common.MenuLayout](../enums/#MenuLayout)|false|array: true<br>minsize: 1<br>maxsize: 1000|An array of available menu layouts. If this parameter is not provided, only the `LIST` layout is assumed to be available|
+|menuLayoutsAvailable|[Common.MenuLayout](../enums/#menulayout)|false|array: true<br>minsize: 1<br>maxsize: 1000|An array of available menu layouts. If this parameter is not provided, only the `LIST` layout is assumed to be available|
 
 ### ModuleInfo
 |Name|Type|Mandatory|Additional|Description|
