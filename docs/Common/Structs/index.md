@@ -22,8 +22,9 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|navigation|Boolean|false|||
-|phoneCall|Boolean|false|||
+|navigation|Boolean|false||Availability of build in Nav. True: Available, False: Not Available|
+|phoneCall|Boolean|false||Availability of build in phone. True: Available, False: Not Available|
+|videoStreaming|Boolean|false||Availability of built-in video streaming. True: Available, False: Not Available|
 
 ### NavigationCapability
 
@@ -130,8 +131,8 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|url|String|true|||
-|policyAppId|String|false|||
+|url|String|true||Get URL based on service type.|
+|appID|Integer|false||ID of application that requested this RPC.|
 
 ### HeadLampStatus
 
@@ -223,10 +224,11 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|shortPressAvailable|Boolean|true|||
-|longPressAvailable|Boolean|true|||
-|upDownAvailable|Boolean|true|||
-|imageSupported|Boolean|true|||
+|shortPressAvailable|Boolean|true||The button supports a short press.<br>Whenever the button is pressed short, onButtonPressed( SHORT) must be invoked.|
+|longPressAvailable|Boolean|true||The button supports a LONG press.<br>Whenever the button is pressed long, onButtonPressed( LONG) must be invoked.|
+|upDownAvailable|Boolean|true||The button supports "button down" and "button up".<br>Whenever the button is pressed, onButtonEvent( DOWN) must be invoked.<br>Whenever the button is released, onButtonEvent( UP) must be invoked.|
+|imageSupported|Boolean|true||Must be true if the button supports referencing a static or dynamic image.|
+|textSupported|Boolean|false||The button supports the use of text.<br>If not included, the default value should be considered true that the button will support text.|
 
 ### HMIApplication
 
@@ -376,9 +378,9 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|fieldName|Common.TextFieldName|true| |The name of the field for displaying the text.|
-|fieldText|String|true|maxlength: 500|The data contained in the field.|
-|fieldType|Common.MetadataType|false|array: true<br>minSize: 0<br>maxSize: 5|The type of data contained in the field.|
+|fieldName|[Common.TextFieldName](../enums/#TextFieldName)|true||The name of the field for displaying the text.|
+|fieldText|String|true|maxlength: 500|The  text itself.|
+|fieldTypes|[Common.MetadataType](../enums/#MetadataType)|false|minsize: 0<br>maxsize: 5<br>array: true|The type of data contained in the field.|
 
 ### DeviceInfo
 
@@ -443,7 +445,6 @@
 |templatesAvailable|String|true|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 100||
 |screenParams|Common.ScreenParams|false|||
 |numCustomPresetsAvailable|Integer|false|minvalue: 1<br>maxvalue: 100||
-|menuLayoutsAvailable|[Common.MenuLayout](../../common/enums/#menulayout)|false|array: true<br>minsize: 0<br>maxsize: 1000||
 
 ### TimeFormat
 
@@ -475,6 +476,13 @@
 |imageTypeSupported|Common.FileType|false|array: true<br>minsize: 1<br>maxsize: 100||
 |imageResolution|Common.ImageResolution|false|||
 
+### VideoStreamingFormat
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|protocol|[Common.VideoStreamingProtocol](../enums/#VideoStreamingProtocol)|true||Protocol type, see VideoStreamingProtocol|
+|codec|[Common.VideoStreamingCodec](../enums/#VideoStreamingCodec)|true||Codec type, see VideoStreamingCodec|
+
 ### VideoConfig
 
 |Name|Type|Mandatory|Additional|Description|
@@ -499,6 +507,7 @@
 |moduleId|String|false|maxlength: 100|Id of a module, published by System Capability.|
 |radioControlData|Common.RadioControlData|false|||
 |climateControlData|Common.ClimateControlData|false|||
+|seatControlData|SeatControlData|false|||
 |audioControlData|Common.AudioControlData|false|||
 |lightControlData|Common.LightControlData|false|||
 |hmiSettingsControlData|Common.HMISettingsControlData|false|||
@@ -582,7 +591,6 @@
 |:---|:---|:--------|:---------|:----------|
 |climateControlCapabilities|ClimateControlCapabilities|false|array: true <br> minsize: 1 <br> maxsize: 100|If included, the platform supports RC climate controls. For this baseline version, maxsize=1. i.e. only one climate control module is supported|
 |radioControlCapabilities|RadioControlCapabilities|false|array: true <br> minsize: 1 <br> maxsize: 100|If included, the platform supports RC radio controls. For this baseline version, maxsize=1. i.e. only one climate control module is supported|
-|seatControlCapabilities|Common.SeatControlCapabilities|false|minsize="1" <br> maxsize="100" <br> array="true"|If included, the platform supports seat controls|
 |buttonCapabilities|Common.ButtonCapabilities|false|array: true <br> minsize: 1 <br> maxsize: 100|If included, the platform supports RC button controls with the included button names|
 |seatControlCapabilities|Common.SeatControlCapabilities|false|minsize="1" <br> maxsize="100" <br> array="true"|If included, the platform supports seat controls.|
 |audioControlCapabilities|Common.AudioControlCapabilities|false| minsize="1" <br> maxsize="100" <br> array="true"| If included, the platform supports audio controls.|
@@ -595,6 +603,7 @@
 |moduleName|String|true|maxlength: 100|The short friendly name of the climate control module. It should not be used to identify a module by mobile application.|
 |moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
 |fanSpeedAvailable|Boolean|false||Availability of the control of fan speed <br> True: Available, False: Not Available, Not present: Not Available.|
+|currentTemperatureAvailable|Boolean|false||Availability of the reading of current temperature.<br>True: Available, False: Not Available, Not present: Not Available.|
 |desiredTemperatureAvailable|Boolean|false||Availability of the control of desired temperature. <br> True: Available, False: Not Available, Not present: Not Available.|
 |acEnableAvailable|Boolean|false||Availability of the control of turn on/off AC. <br> True: Available, False: Not Available, Not present: Not Available.|
 |acMaxEnableAvailable|Boolean|false||Availability of the control of enable/disable air conditioning is ON on the maximum level. <br> True: Available, False: Not Available, Not present: Not Available.|
@@ -649,7 +658,7 @@
 |name|Common.LightName|true|||
 |statusAvailable|Boolean|false||Indicates if the status (ON/OFF) can be set remotely. App shall not use read-only values (RAMP_UP/RAMP_DOWN/UNKNOWN/INVALID) in a setInteriorVehicleData request.|
 |densityAvailable|Boolean|false||Indicates if the light's density can be set remotely (similar to a dimmer).|
-|RGBColorSpaceAvailable|Boolean|false||Indicates if the light's color can be set remotely by using the sRGB color space.|
+|rgbColorSpaceAvailable|Boolean|false||Indicates if the light's color can be set remotely by using the sRGB color space.|
 
 ### LightControlCapabilities
 
@@ -739,10 +748,10 @@
 |id|Integer|true|minvalue: 0<br>maxvalue: 128|A unique identifier for the haptic rectangle|
 |rect|Common.Rectangle|true| |The position of the haptic rectangle to be highlighted.<br>The center of this rectangle is considered "touched" when the element is focused and then selected.|
 
-### FuelRange  
+### FuelRange
 |Name|Type|Mandatory|Additional|Description|
-|:---|:---|:--------|:---------|:----------|  
-|type|FuelType|false|||
+|:---|:---|:--------|:---------|:----------|
+|type|[Common.FuelType](../enums/#FuelType)|false|||
 |range|Float|faslse|minvalue=0<br>maxvalue=10000|The estimate range in KM the vehicle can travel based on fuel level and consumption|
 
 ### MassageModeData
@@ -815,8 +824,8 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |millisecond|Integer|false|minvalue: 0<br> maxvalue: 999|Milliseconds – part of time - one thousandth split second|
-|seconds|Integer|false|minvalue: 0<br> maxvalue: 60|Seconds part of time|
-|minutes|Integer|false|minvalue: 0<br> maxvalue: 59|Minutes part of time|
+|second|Integer|false|minvalue: 0<br> maxvalue: 60|Seconds part of time|
+|minute|Integer|false|minvalue: 0<br> maxvalue: 59|Minutes part of time|
 |hour|Integer|false|minvalue: 0<br> maxvalue: 23|Hours part of time. Note that this structure accepts time only in 24 Hr format|
 |day|Integer|false|minvalue: 1 <br>maxvalue: 31|Day of the month|
 |month|Integer|false|minvalue: 1<br> maxvalue: 12|Month of the year|
@@ -839,7 +848,7 @@
 |countryCode|String|false|minlength: 0<br>maxlength: 50|Name of country (ISO 3166-2)|
 |postalCode|String|false|minlength: 0<br>maxlength: 16|(PLZ, ZIP, PIN, CAP etc.)|
 |administrativeArea|String|false|minlength: 0<br>maxlength: 200|Portion of country (e.g. state)|
-|subAdministrativeAre|String|false|minlength: 0<br>maxlength: 200|Portion of administrativeArea (e.g. county)|
+|subAdministrativeArea|String|false|minlength: 0<br>maxlength: 200|Portion of administrativeArea (e.g. county)|
 |locality|String|false|minlength: 0<br>maxlength: 200|Hypernym for city/village|
 |subLocality|String|false|minlength: 0<br>maxlength: 200|Hypernym for district|
 |thoroughfare|String|false|minlength: 0<br>maxlength: 200|Hypernym for street, road etc|
@@ -922,6 +931,7 @@
 |videoStreamingCapability|Common.VideoStreamingCapability|false||Describes extended capabilities of the module's phone feature|
 |remoteControlCapability|Common.RemoteControlCapabilities|false||Describes extended capabilities of the module's phone feature|
 |appServicesCapabilities|Common.AppServicesCapabilities|false||An array of currently available services. If this is an update to the capability the affected services will include an update reason in that item|
+|displayCapabilities|Common.DisplayCapability|false|array: true<br>minsize: 1<br>maxsize: 1000||
 |seatLocationCapability|Common.SeatLocationCapability|false||Contains information about the locations of each seat|
 
 ### MediaServiceManifest
@@ -944,6 +954,7 @@ There are no defined parameters for this struct.
 |queuePlaybackDuration|Integer|false||Music: The total duration of the playback queue in seconds<br>Podcast: The total duration of the playback queue in seconds<br>Audiobook: The total duration of the playback queue (e.g. the book) in seconds|
 |queueCurrentTrackNumber|Integer|false||Music: The current number (1 based) of the track in the playback queue<br>Podcast: The current number (1 based) of the episode in the playback queue<br>Audiobook: The current number (1 based) of the episode in the playback queue (e.g. the chapter number in the book)|
 |queueTotalTrackCount|Integer|false||Music: The total number of tracks in the playback queue<br>Podcast: The total number of episodes in the playback queue<br>Audiobook: The total number of sections in the playback queue (e.g. the number of chapters in the book)|
+|mediaImage|Common.Image|false||Music: The album art of the current track<br>Podcast: The podcast or chapter artwork of the current podcast episode<br>Audiobook: The book or chapter artwork of the current audiobook|
 
 ### WeatherServiceManifest
 
@@ -1071,6 +1082,7 @@ There are no defined parameters for this struct.
 |numCustomPresetsAvailable|Integer|false|minvalue: 1 <br>maxvalue: 100|The number of on-window custom presets available (if any); otherwise omitted.|
 |buttonCapabilities|Common.ButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of buttons and the capabilities of each on-window button.|
 |softButtonCapabilities|Common.SoftButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of soft buttons available on-window and the capabilities for each button.|
+|menuLayoutsAvailable|[Common.MenuLayout](../enums/#MenuLayout)|false|array: true<br>minsize: 1<br>maxsize: 1000|An array of available menu layouts. If this parameter is not provided, only the `LIST` layout is assumed to be available|
 
 ### ModuleInfo
 |Name|Type|Mandatory|Additional|Description|
