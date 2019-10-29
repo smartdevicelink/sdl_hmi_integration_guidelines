@@ -105,6 +105,9 @@
               "name": "PolicyUpdate"
             },
             {
+              "name": "DecryptCertificate"
+            },
+            {
               "name": "UpdateAppList"
             },
             {
