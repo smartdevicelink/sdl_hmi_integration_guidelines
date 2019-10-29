@@ -1,0 +1,13 @@
+@startuml DecryptCertificate
+participant HMI
+participant Core
+
+rnote over Core: PolicyTable update with new\n certificate in module_config
+
+Core -> HMI: <b>BasicCommunication.DecryptCertificate</b>\n(fileName: build/bin/storage/certificate.pem)
+HMI --> HMI: Decrypt certificate
+HMI ->> Core: <b>BasicCommunication.DecryptCertificate</b>("SUCCESS")
+Core --> Core: Load decrypted certificate data from file
+Core --> Core: Set PT's module_config.certificate\n to the decrypted certificate data
+
+@enduml

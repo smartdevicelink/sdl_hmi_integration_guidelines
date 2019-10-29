@@ -9,6 +9,10 @@ Sender
 Purpose
 : To decrypt the certificate received via the updated policy table
 
+!!! NOTE
+Currently, the RPC is sent by SDL only if the EXTERNAL_PROPRIETARY policy mode is enabled.
+!!!
+
 ### Request
 
 #### Parameters
@@ -23,6 +27,13 @@ Purpose
 
 This RPC has no additional parameter requirements
 
+### Sequence Diagrams
+
+|||
+DecryptCertificate
+![DecryptCertificate](assets/DecryptCertificate.png)
+|||
+
 ### Example Request
 
 ```json
@@ -31,7 +42,7 @@ This RPC has no additional parameter requirements
   "jsonrpc": "2.0",
   "method": "BasicCommunication.DecryptCertificate",
   "params": {
-    "fileName": "/home/user/sdl_build/bin/storage/certificate"
+    "fileName": "/home/user/sdl_build/bin/storage/certificate.pem"
   }
 }
 ```
