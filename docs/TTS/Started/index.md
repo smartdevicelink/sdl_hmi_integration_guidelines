@@ -25,7 +25,7 @@ Started during PerformInteraction
 ![Started](./assets/StartedFromPerformInteraction.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

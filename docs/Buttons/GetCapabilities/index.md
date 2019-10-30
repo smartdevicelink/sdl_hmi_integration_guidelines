@@ -30,7 +30,7 @@ GetCapabilities on system startup
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -40,7 +40,7 @@ GetCapabilities on system startup
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -91,7 +91,7 @@ GetCapabilities on system startup
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

@@ -172,7 +172,7 @@ Multiple apps activation during active embedded navigation or audio source
 ![OnEventChanged](./assets/Multiple_apps_activation_during_active_embedded_navigation_or_audio_source.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

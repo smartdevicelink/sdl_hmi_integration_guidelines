@@ -23,7 +23,7 @@ This RPC tells SDL to initiate a new device search. The [OnUpdateDeviceList](../
 
 This RPC has no additional parameter requirements
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

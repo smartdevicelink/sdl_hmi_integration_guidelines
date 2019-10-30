@@ -30,7 +30,7 @@ StartAudioStream
 ![StartAudioStream](./assets/StartAudioStream.jpg)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -44,7 +44,7 @@ StartAudioStream
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -58,7 +58,7 @@ StartAudioStream
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

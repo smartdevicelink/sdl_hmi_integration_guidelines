@@ -29,7 +29,7 @@ GetVehicleType
 ![GetVehicleType](./assets/GetVehicleType.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -39,7 +39,7 @@ GetVehicleType
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -59,7 +59,7 @@ GetVehicleType
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

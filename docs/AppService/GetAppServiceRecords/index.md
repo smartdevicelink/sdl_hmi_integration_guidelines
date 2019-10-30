@@ -38,7 +38,7 @@ GetAppServiceRecords
 ![GetAppServiceRecords](./assets/GetAppServiceRecords.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -51,7 +51,7 @@ GetAppServiceRecords
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -96,7 +96,7 @@ GetAppServiceRecords
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

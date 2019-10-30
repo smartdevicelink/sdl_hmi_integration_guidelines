@@ -32,7 +32,7 @@ OnCommand
 ![OnCommand](./assets/OnCommand.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

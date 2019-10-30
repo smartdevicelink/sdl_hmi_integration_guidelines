@@ -37,7 +37,7 @@ SetAppIcon
 ![SetAppIcon](./assets/SetAppIcon.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -56,7 +56,7 @@ SetAppIcon
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -70,7 +70,7 @@ SetAppIcon
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

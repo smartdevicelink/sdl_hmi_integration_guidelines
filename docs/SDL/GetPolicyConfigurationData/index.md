@@ -48,7 +48,7 @@ GetPolicyConfigurationData
 ![GetPolicyConfigurationData](./assets/GetPolicyConfigurationData.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -63,7 +63,7 @@ GetPolicyConfigurationData
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -80,7 +80,7 @@ GetPolicyConfigurationData
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

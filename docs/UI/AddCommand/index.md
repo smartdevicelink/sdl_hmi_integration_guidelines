@@ -82,7 +82,7 @@ AddCommand UI No Response, VR Succeeds
 ![AddCommand](./assets/AddCommandUINoResponseVRSuccess.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -108,7 +108,7 @@ AddCommand UI No Response, VR Succeeds
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -122,7 +122,7 @@ AddCommand UI No Response, VR Succeeds
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

@@ -37,7 +37,7 @@ The User consents the device
 ![OnSDLConsentNeeded](./assets/User_consents_the_device2.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
 	"jsonrpc": "2.0",

@@ -32,7 +32,7 @@ StopStream
 ![StopStream](./assets/StopStream.jpg)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -45,7 +45,7 @@ StopStream
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -59,7 +59,7 @@ StopStream
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

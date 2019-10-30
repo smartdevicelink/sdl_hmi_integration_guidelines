@@ -63,7 +63,7 @@ BC.OnSystemRequest in "Proprietary" Policy Table Update Flow
 ![Proprietary PTU](./assets/OnSystemRequest_in_Proprietary_PTU_flow.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

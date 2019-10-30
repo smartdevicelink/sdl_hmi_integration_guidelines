@@ -36,7 +36,7 @@ GetStatusUpdate
 ![GetStatusUpdate](./assets/GetStatusUpdate.jpg)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -46,7 +46,7 @@ GetStatusUpdate
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -61,7 +61,7 @@ GetStatusUpdate
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

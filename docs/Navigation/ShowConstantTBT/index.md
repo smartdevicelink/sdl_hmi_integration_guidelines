@@ -36,7 +36,7 @@ ShowConstantTBT
 ![ShowConstantTBT](./assets/ShowConstantTBT.jpg)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -79,7 +79,7 @@ ShowConstantTBT
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -93,7 +93,7 @@ ShowConstantTBT
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

@@ -44,7 +44,7 @@ IsReady
 ![IsReady](./assets/IsReady.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -54,7 +54,7 @@ IsReady
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -69,7 +69,7 @@ IsReady
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

@@ -44,7 +44,7 @@ User Activates App
 ![OnAppActivated](./assets/OnAppActivated.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

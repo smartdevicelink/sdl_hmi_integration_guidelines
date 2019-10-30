@@ -23,7 +23,7 @@ OnVideoDataStreaming
 ![OnVideoDataStreaming](./assets/OnVideoDataStreaming.jpg)
 |||
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

@@ -57,7 +57,7 @@ GetWayPoints
 ![GetWayPoints](./assets/GetWayPoints.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -72,7 +72,7 @@ GetWayPoints
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -93,7 +93,7 @@ GetWayPoints
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

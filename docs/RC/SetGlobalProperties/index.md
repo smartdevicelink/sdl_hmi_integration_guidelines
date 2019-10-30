@@ -41,7 +41,7 @@ SetGlobalProperties
 ![SetGlobalProperties](assets/RC_SetGlobalProperties.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -64,7 +64,7 @@ SetGlobalProperties
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -78,7 +78,7 @@ SetGlobalProperties
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

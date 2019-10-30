@@ -53,7 +53,7 @@ AppServiceActivation set default service
 ![AppServiceActivation](./assets/AppServiceActivation_SetAsDefault_Success.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -68,7 +68,7 @@ AppServiceActivation set default service
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -84,7 +84,7 @@ AppServiceActivation set default service
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

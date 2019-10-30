@@ -37,7 +37,7 @@ OnInteriorVehicledata
 ![OnInteriorVehicleData](assets/OnInteriorVehicleData.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
     "jsonrpc": "2.0",

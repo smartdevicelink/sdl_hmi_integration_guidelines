@@ -41,7 +41,7 @@ SetDisplayLayout Invalid Data with UI.GetCapabilities
 ![SetDisplayLayout](./assets/SetDisplayLayoutInvalidData.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -56,7 +56,7 @@ SetDisplayLayout Invalid Data with UI.GetCapabilities
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -179,7 +179,7 @@ SetDisplayLayout Invalid Data with UI.GetCapabilities
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

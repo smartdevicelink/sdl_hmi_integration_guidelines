@@ -53,7 +53,7 @@ GetInteriorVehicleData
 ![GetInteriorVehicleData](assets/GetInteriorVehicleData.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -67,7 +67,7 @@ GetInteriorVehicleData
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -103,7 +103,7 @@ GetInteriorVehicleData
 
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

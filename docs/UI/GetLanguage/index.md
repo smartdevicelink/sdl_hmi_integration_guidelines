@@ -29,7 +29,7 @@ GetLanguage
 ![GetLanguage](./assets/GetLanguage.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -39,7 +39,7 @@ GetLanguage
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -54,7 +54,7 @@ GetLanguage
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

@@ -71,7 +71,7 @@ Add Sub Menu Rejected Limit Reached
 ![AddSubMenu](./assets/AddSubMenuLimit.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -91,7 +91,7 @@ Add Sub Menu Rejected Limit Reached
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -105,7 +105,7 @@ Add Sub Menu Rejected Limit Reached
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

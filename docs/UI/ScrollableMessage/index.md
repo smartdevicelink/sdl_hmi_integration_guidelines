@@ -41,7 +41,7 @@ ScrollableMessage with STEAL_FOCUS button for background application
 ![ScrollableMessage](./assets/ScrollableMessageStealFocus.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -73,7 +73,7 @@ ScrollableMessage with STEAL_FOCUS button for background application
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -87,7 +87,7 @@ ScrollableMessage with STEAL_FOCUS button for background application
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

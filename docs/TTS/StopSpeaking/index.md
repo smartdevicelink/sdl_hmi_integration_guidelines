@@ -27,7 +27,7 @@ StopSpeaking
 ![StopSpeaking](./assets/StopSpeaking.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -37,7 +37,7 @@ StopSpeaking
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -51,7 +51,7 @@ StopSpeaking
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

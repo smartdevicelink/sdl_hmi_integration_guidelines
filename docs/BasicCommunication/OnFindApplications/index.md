@@ -41,7 +41,7 @@ OnFindApplications after Device Chosen by User
 ![OnFindApplications](./assets/OnFindApplicationsDeviceChosen.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

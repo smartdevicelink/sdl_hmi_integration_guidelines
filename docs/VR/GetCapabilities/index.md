@@ -23,7 +23,7 @@ This RPC has no additional parameter requirements
 |:---|:---|:--------|:---------|
 |vrCapabilities|[Common.VrCapabilities](../../common/enums/#vrcapabilities)|false|array: true<br>minsize: 1<br>maxsize: 100|
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -33,7 +33,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -48,7 +48,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

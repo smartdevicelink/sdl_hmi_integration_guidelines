@@ -35,7 +35,7 @@ OnAppServiceData (HMI Consumer)
 ![OnAppServiceData_HMI_ASC](./assets/OnAppServiceData_HMI_ASC.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 
 ```json
 {

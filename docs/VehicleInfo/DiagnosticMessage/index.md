@@ -28,7 +28,7 @@ Purpose
 |:---|:---|:--------|:---------|
 |messageDataResult|Integer|true|array: true<br>minsize: 1<br>maxsize: 65535<br>minvalue: 0<br>maxvalue: 255|
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -44,7 +44,7 @@ Purpose
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -59,7 +59,7 @@ Purpose
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

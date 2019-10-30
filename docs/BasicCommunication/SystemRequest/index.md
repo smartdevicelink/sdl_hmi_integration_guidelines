@@ -51,7 +51,7 @@ If SDL sends a SystemRequest with `requestSubType` parameter to an older system,
 
 This RPC has no additional parameter requirements
 
-### JSON Example Request
+### Example Request
 ```json
 {
   "id" : 59,
@@ -66,7 +66,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### JSON Example Response
+### Example Response
 ```json
 {
   "id" : 59,
@@ -79,7 +79,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### JSON Example Error
+### Example Error
 ```json
 {
   "id" : 59,

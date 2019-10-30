@@ -80,7 +80,7 @@ BC.PolicyUpdate in "HTTP" Policy Table Update Flow
 ![HTTP PTU](./assets/PolicyUpdate_in_HTTP_PTU_flow.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -97,7 +97,7 @@ BC.PolicyUpdate in "HTTP" Policy Table Update Flow
 
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -112,7 +112,7 @@ BC.PolicyUpdate in "HTTP" Policy Table Update Flow
 
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

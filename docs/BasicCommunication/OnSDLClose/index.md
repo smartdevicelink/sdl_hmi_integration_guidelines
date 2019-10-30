@@ -42,7 +42,7 @@ OnSDLClose Master Reset
 ![OnSDLClose](./assets/OnSDLCloseReset.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

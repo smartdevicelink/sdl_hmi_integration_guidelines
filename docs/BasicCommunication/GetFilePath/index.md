@@ -35,7 +35,7 @@ GetFile (HMI Provider)
 ![GetFile](./assets/GetFile.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -50,7 +50,7 @@ GetFile (HMI Provider)
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -65,7 +65,7 @@ GetFile (HMI Provider)
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

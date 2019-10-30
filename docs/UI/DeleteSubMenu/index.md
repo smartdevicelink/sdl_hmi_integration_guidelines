@@ -38,7 +38,7 @@ Delete Sub Menu Containing Commands
 ![DeleteSubMenu](./assets/DeleteSubMenuWithCommands.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -53,7 +53,7 @@ Delete Sub Menu Containing Commands
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -67,7 +67,7 @@ Delete Sub Menu Containing Commands
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

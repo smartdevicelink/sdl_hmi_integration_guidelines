@@ -45,7 +45,7 @@ SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
 ![Proprietary PTU](./assets/Proprietary_PTU_flow_.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
 	"id" : 176,

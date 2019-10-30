@@ -44,7 +44,7 @@ UI Component Ready
 ![IsReady](./assets/IsReady.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -54,7 +54,7 @@ UI Component Ready
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -69,7 +69,7 @@ UI Component Ready
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

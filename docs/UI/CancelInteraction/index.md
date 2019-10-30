@@ -41,7 +41,7 @@ CancelInteraction for specific UI.Alert using mismatched cancelID
 ![CancelInteraction](./assets/CancelInteractionSpecificAlertWrong.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -56,7 +56,7 @@ CancelInteraction for specific UI.Alert using mismatched cancelID
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -70,7 +70,7 @@ CancelInteraction for specific UI.Alert using mismatched cancelID
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

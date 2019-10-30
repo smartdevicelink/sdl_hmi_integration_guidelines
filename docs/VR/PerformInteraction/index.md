@@ -45,7 +45,7 @@ PerformInteraction in Both Mode times out
 ![PerformInteraction](./assets/PerformInteractionBothTimeout.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -93,7 +93,7 @@ PerformInteraction in Both Mode times out
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -108,7 +108,7 @@ PerformInteraction in Both Mode times out
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

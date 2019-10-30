@@ -15,7 +15,7 @@ Purpose
 
 This RPC has no additional parameter requirements
 
-### JSON Example Notification
+### Example Notification
 
 ```json
 {

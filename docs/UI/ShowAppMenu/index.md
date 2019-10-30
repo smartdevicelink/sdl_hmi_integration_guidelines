@@ -39,7 +39,7 @@ ShowAppMenu request(with menuID)
 ![ShowAppMenuwithMenuID](./assets/ShowAppMenu_MenuID.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -54,7 +54,7 @@ ShowAppMenu request(with menuID)
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -68,7 +68,7 @@ ShowAppMenu request(with menuID)
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

@@ -42,7 +42,7 @@ Purpose
 
 This RPC has no additional parameter requirements
 
-### Sequence Diagram
+### Sequence Diagrams
 |||
 SendLocation Success
 ![SendLocation](./assets/SendLocationSuccess.jpg)
@@ -59,7 +59,7 @@ SendLocation General behavior
 ![SendLocation](./assets/SendLocation_general.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -80,7 +80,7 @@ SendLocation General behavior
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -94,7 +94,7 @@ SendLocation General behavior
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

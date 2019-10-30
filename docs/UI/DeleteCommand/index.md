@@ -42,7 +42,7 @@ Delete Command Application Inactive
 ![DeleteCommand](./assets/DeleteCommandAppInactive.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -57,7 +57,7 @@ Delete Command Application Inactive
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -71,7 +71,7 @@ Delete Command Application Inactive
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

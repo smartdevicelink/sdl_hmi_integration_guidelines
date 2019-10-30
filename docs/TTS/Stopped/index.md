@@ -21,7 +21,7 @@ Stopped after StopSpeaking from SDL
 ![Stopped](./assets/Stopped.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

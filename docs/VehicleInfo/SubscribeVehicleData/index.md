@@ -99,7 +99,7 @@ SubscribeVehicleData
 ![SubscribeVehicleData](./assets/SubscribeVehicleData.jpg)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -125,7 +125,7 @@ SubscribeVehicleData
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -217,7 +217,7 @@ SubscribeVehicleData
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

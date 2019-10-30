@@ -120,7 +120,7 @@ GetVehicleData with custom data
 ![CustomVehicleData](./assets/GVD_custom_data.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -146,7 +146,7 @@ GetVehicleData with custom data
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -234,7 +234,7 @@ GetVehicleData with custom data
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

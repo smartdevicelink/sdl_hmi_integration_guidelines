@@ -31,7 +31,7 @@ OnSystemCapabilityUpdated(APP_SERVICES, REMOVED)
 ![OnSystemCapabilityUpdated_REMOVED](./assets/OnSystemCapabilityUpdated_REMOVED.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 
 ```json
 {

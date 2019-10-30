@@ -39,7 +39,7 @@ Exit All Apps on Ignition Off
 ![OnExitAllApplications](./assets/OnExitAllApps.png)
 |||
 
-### JSON Example Notification
+### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

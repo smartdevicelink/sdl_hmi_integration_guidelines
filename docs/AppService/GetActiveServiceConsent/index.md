@@ -41,7 +41,7 @@ GetActiveServiceConsent (user rejects prompt)
 ![GetActiveServiceConsent](./assets/GetActiveServiceConsent_Reject.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -54,7 +54,7 @@ GetActiveServiceConsent (user rejects prompt)
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -68,7 +68,7 @@ GetActiveServiceConsent (user rejects prompt)
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

@@ -42,7 +42,7 @@ GetCapabilities
 ![GetCapabilities](assets/IsReady_GetCapabilities.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -52,7 +52,7 @@ GetCapabilities
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -218,7 +218,7 @@ GetCapabilities
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

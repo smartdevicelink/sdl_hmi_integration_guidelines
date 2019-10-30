@@ -45,7 +45,7 @@ Slider with OK Button press
 ![Slider](./assets/SliderOK.png)
 |||
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -64,7 +64,7 @@ Slider with OK Button press
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -79,7 +79,7 @@ Slider with OK Button press
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {

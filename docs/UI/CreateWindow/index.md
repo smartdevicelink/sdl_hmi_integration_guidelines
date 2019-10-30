@@ -55,7 +55,7 @@ CreateWindow
 |||
 
 
-### JSON Example Request
+### Example Request
 
 ```json
 {
@@ -73,7 +73,7 @@ CreateWindow
 }
 ```
 
-### JSON Example Response
+### Example Response
 
 ```json
 {
@@ -87,7 +87,7 @@ CreateWindow
 }
 ```
 
-### JSON Example Error
+### Example Error
 
 ```json
 {
