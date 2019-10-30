@@ -31,7 +31,9 @@ EndAudioPassThru audio capturing already ended
 ![EndAudioPassThru](./assets/EndAudioPassThruTooLate.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -41,7 +43,7 @@ EndAudioPassThru audio capturing already ended
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -55,7 +57,7 @@ EndAudioPassThru audio capturing already ended
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

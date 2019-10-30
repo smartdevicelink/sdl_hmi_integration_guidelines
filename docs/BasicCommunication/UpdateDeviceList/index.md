@@ -61,7 +61,9 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
 
 This RPC has no additional parameter requirements
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -86,7 +88,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -99,7 +101,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -40,7 +40,9 @@ File Removed from Head Unit
 ![OnFileRemoved](./assets/OnFileRemoved.png)
 |||
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
 	"jsonrpc": "2.0",

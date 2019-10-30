@@ -28,7 +28,9 @@ OnResetTimeout for Speak GENERIC_ERROR
 ![OnResetTimeout](./assets/OnResetTimeoutGenericError.jpg)
 |||
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

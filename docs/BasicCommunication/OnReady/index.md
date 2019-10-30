@@ -22,7 +22,9 @@ In order to communicate with SDL, the HMI must send this notification after the 
 
 This RPC has no additional parameter requirements
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

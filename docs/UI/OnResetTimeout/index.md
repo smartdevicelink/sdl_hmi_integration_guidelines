@@ -32,7 +32,9 @@ OnResetTimeout KEEP_CONTEXT during alert
 ![OnResetTimeout](./assets/OnResetTimeoutKeepContextAlert.png)
 |||
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

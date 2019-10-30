@@ -68,7 +68,9 @@ GetListOfPermissions provide  External UCS Status to HMI
 Possible Layout - ExternalConsentStatus
 ![GetListOfPermissions](./assets/PossibleLayoutExternalConsentStatus.png)
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -82,7 +84,7 @@ Possible Layout - ExternalConsentStatus
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -114,7 +116,7 @@ Possible Layout - ExternalConsentStatus
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

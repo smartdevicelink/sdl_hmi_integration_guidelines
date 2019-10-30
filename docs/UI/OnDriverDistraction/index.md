@@ -37,7 +37,9 @@ OnDriverDistraction
 ![OnDriverDistraction](./assets/OnDriverDistraction.png)
 |||
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

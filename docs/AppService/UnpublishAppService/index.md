@@ -25,7 +25,9 @@ Purpose
 |:---|:---|:--------|:---------|
 |||||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -38,7 +40,7 @@ Purpose
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -51,7 +53,7 @@ Purpose
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -47,7 +47,9 @@ SetInteriorvehicleData-READ_ONLY
 ![SetInteriorvehicleData READ_ONLY](assets/setInteriorVehicleData_READ_ONLY.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -81,7 +83,7 @@ SetInteriorvehicleData-READ_ONLY
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -115,7 +117,7 @@ SetInteriorvehicleData-READ_ONLY
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

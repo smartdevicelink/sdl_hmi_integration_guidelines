@@ -70,7 +70,9 @@ SetMediaClockTimer COUNTDOWN for a deactivated application
 ![SetMediaClockTimer](./assets/SetMediaClockTimerDownDeactivate.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -92,7 +94,7 @@ SetMediaClockTimer COUNTDOWN for a deactivated application
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -106,7 +108,7 @@ SetMediaClockTimer COUNTDOWN for a deactivated application
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

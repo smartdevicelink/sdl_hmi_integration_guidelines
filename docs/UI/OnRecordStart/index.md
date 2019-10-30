@@ -31,7 +31,9 @@ OnRecordStart not sent if UI.PerformAudioPassThru rejected
 ![OnRecordStart](./assets/OnRecordStartRejected.png)
 |||
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

@@ -38,7 +38,9 @@ PublishAppService
 ![PublishAppService](./assets/PublishAppService.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -60,7 +62,7 @@ PublishAppService
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -88,7 +90,7 @@ PublishAppService
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

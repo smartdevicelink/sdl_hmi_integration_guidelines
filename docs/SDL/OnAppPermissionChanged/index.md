@@ -57,7 +57,9 @@ OnAppPermissionChanged with consent required
 ![OnAppPermissionChanged](./assets/OnAppPermissionChanged.png)
 |||
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

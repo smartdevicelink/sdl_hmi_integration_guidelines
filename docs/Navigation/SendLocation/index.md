@@ -59,7 +59,9 @@ SendLocation General behavior
 ![SendLocation](./assets/SendLocation_general.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -80,7 +82,7 @@ SendLocation General behavior
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -94,7 +96,7 @@ SendLocation General behavior
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

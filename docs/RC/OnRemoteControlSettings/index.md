@@ -34,7 +34,9 @@ OnRemoteControlSettings disabling RC
 ![OnRemoteControlSettings disabling RC](./assets/OnRemoteControlSettings_disablingRC.png)
 |||
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 
 ```json
 {

@@ -40,7 +40,9 @@ DeleteWindow
 |||
 
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -54,7 +56,7 @@ DeleteWindow
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -68,7 +70,7 @@ DeleteWindow
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

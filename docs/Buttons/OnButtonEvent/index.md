@@ -30,7 +30,9 @@ OnButtonEvent hardware button pressed and released
 ![OnButtonEvent](./assets/OnButtonEventHardKeyPressRelease.png)
 |||
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

@@ -29,7 +29,9 @@ GetLanguage
 ![GetLanguage](./assets/GetLanguage.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -39,7 +41,7 @@ GetLanguage
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -54,7 +56,7 @@ GetLanguage
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -27,7 +27,9 @@ OnSystemTimeReady
 ![OnSystemTimeReady](assets/OnSystemTimeReady_Ign_On.png)
 |||
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 
 ```json
 {

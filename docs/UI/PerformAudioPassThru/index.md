@@ -44,7 +44,9 @@ PerformAudioPassThru from vehicle microphone
 ![PerformAudioPassThru](./assets/PerformAudioPassThruMic.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -63,7 +65,7 @@ PerformAudioPassThru from vehicle microphone
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -77,7 +79,7 @@ PerformAudioPassThru from vehicle microphone
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

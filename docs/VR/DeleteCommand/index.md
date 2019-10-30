@@ -32,7 +32,9 @@ DeleteCommand
 ![DeleteCommand](./assets/DeleteCommand.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -49,7 +51,7 @@ DeleteCommand
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -63,7 +65,7 @@ DeleteCommand
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

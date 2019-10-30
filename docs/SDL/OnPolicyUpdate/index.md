@@ -28,7 +28,9 @@ Currently this notification is not used in any HMI workflows, but in case of nec
 #### Parameters
 This RPC has no additional parameter requirements.
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
 	"jsonrpc" : "2.0",

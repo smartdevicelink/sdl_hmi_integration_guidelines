@@ -40,7 +40,9 @@ SetGlobalProperties request with VRHelp and HelpPrompt params
 ![SetGlobalProperties](./assets/SetGlobalProperties_VRHelp_and_HelpPrompt.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -81,7 +83,7 @@ SetGlobalProperties request with VRHelp and HelpPrompt params
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -95,7 +97,7 @@ SetGlobalProperties request with VRHelp and HelpPrompt params
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

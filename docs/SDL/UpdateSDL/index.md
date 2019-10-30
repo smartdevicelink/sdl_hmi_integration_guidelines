@@ -59,7 +59,9 @@ UpdateSDL - PROPRIETARY Policy Table Update Flow
 ![UpdateSDL](./assets/Proprietary_PTU_flow_.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -69,7 +71,7 @@ UpdateSDL - PROPRIETARY Policy Table Update Flow
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -84,7 +86,7 @@ UpdateSDL - PROPRIETARY Policy Table Update Flow
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

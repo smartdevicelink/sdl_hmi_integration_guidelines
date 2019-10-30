@@ -30,7 +30,9 @@ Unpairing of the device is NOT a trigger for new PTU sequence.
 |deviceInternalId|String|true|minlength: 0<br>maxlength: 500|
 |deviceId|[Common.DeviceInfo](../../common/structs/#deviceinfo)|false||
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

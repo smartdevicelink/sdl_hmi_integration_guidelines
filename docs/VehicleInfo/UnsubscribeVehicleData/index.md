@@ -103,7 +103,9 @@ UnsubscribeVehicleData unexpected disconnect
 ![UnsubscribeVehicleData](./assets/UnsubscribeVehicleDataDisconnect.jpg)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -129,7 +131,7 @@ UnsubscribeVehicleData unexpected disconnect
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -221,7 +223,7 @@ UnsubscribeVehicleData unexpected disconnect
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

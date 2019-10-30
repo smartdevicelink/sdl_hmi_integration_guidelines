@@ -53,7 +53,9 @@ The User does NOT consent the device.
 ![OnAllowSDLFunctionality](./assets/User_does_not_consent_the_device1.png)
 |||
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
 	"jsonrpc" : "2.0",

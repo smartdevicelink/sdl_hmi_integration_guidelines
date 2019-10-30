@@ -64,7 +64,9 @@ PerformInteraction Timeout with Both
 ![PerformInteraction](./assets/PerformInteractionBothTimeout.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -137,7 +139,7 @@ PerformInteraction Timeout with Both
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -152,7 +154,7 @@ PerformInteraction Timeout with Both
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

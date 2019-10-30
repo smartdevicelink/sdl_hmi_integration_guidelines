@@ -29,7 +29,9 @@ Get Supported Languages
 ![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -39,7 +41,7 @@ Get Supported Languages
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -54,7 +56,7 @@ Get Supported Languages
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
