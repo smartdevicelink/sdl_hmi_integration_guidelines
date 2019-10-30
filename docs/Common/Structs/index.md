@@ -379,7 +379,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |fieldName|[Common.TextFieldName](../enums/#textfieldname)|true||The name of the field for displaying the text.|
-|fieldText|String|true|maxlength: 500|The  text itself.|
+|fieldText|String|true|maxlength: 500|The text itself.|
 |fieldTypes|[Common.MetadataType](../enums/#metadatatype)|false|minsize: 0<br>maxsize: 5<br>array: true|The type of data contained in the field.|
 
 ### DeviceInfo
