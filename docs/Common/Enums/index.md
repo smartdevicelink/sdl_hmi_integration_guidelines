@@ -851,6 +851,7 @@
 |showConstantTBTIcon|10|The primary image field for ShowConstantTBT|
 |showConstantTBTNextTurnIcon|11|The secondary image field for ShowConstantTBT|
 |locationImage|12|The optional image of a destination / location|
+|alertIcon|13|The image field for Alert|
 
 ### VehicleDataType
 
@@ -1027,7 +1028,7 @@
 |ON|0||
 |OFF|1||
 
-### FuelType  
+### FuelType
 
 |Name|Value|Description|
 |:---|:----|:----------|  
@@ -1143,6 +1144,14 @@
 |LUMBAR|0|The back of a multi-contour massage seat. or SEAT_BACK|
 |SEAT_CUSHION|1|The bottom a multi-contour massage seat. or SEAT_BOTTOM|
 
+### MassageMode
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|OFF|0||
+|LOW|1||
+|HIGH|2||
+
 ### MassageCushion
 
 |Name|Value|Description|
@@ -1160,6 +1169,13 @@
 |SAVE|0|Save current seat postions and settings to seat memory.|
 |RESTORE|1|Restore / apply the seat memory settings to the current seat.|
 |NONE|2|No action to be performed.|
+
+### SupportedSeat
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|DRIVER|0||
+|FRONT_PASSENGER|1||
 
 ### DeliveryMode
 |Name|Value|Description|
