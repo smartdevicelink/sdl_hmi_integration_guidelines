@@ -37,7 +37,7 @@ This RPC has no additional parameter requirements.
 |:---|:---|:--------|:---------|
 |attenuatedSupported|Boolean|true||
 
-### Request Example
+### JSON Example Request
 
 ```json
 {
@@ -47,7 +47,7 @@ This RPC has no additional parameter requirements.
 }
 ```
 
-### Response Example
+### JSON Example Response
 
 ```json
 {
@@ -62,7 +62,7 @@ This RPC has no additional parameter requirements.
 }
 ```
 
-### Error Example
+### JSON Example Error
 
 ```json
 {

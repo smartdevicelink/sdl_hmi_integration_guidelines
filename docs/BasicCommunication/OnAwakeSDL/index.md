@@ -30,7 +30,7 @@ Wake SDL from Suspension
 ![OnAwakeSDL](./assets/OnAwakeSDL.png)
 |||
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

@@ -29,7 +29,7 @@ Send `BC.OnIgnitionCycleOver` together with `BC.OnExitAllApplications(IGNITION_O
 
 This RPC has no additional parameter requirements
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
 	"jsonrpc" : "2.0",

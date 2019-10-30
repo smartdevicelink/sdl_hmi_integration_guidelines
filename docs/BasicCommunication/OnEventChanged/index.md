@@ -11,6 +11,8 @@ Purpose
 
 SDL uses `OnEventChanged` notification to appropriately manage the hmiLevel and audioStreamingState of each application during an active event.
 
+### Event Types
+
 ##### PHONE_CALL
 
 !!! MUST
@@ -95,7 +97,7 @@ When this event is active, SDL **rejects** all app activation requests from the 
     - If SDL receives `OnEventChanged(EMBEDDED_NAVI, isActive=true)`, SDL changes any media app in (LIMITED, AUDIBLE) to (LIMITED, ATTENUATED). After the EMBEDDED_NAVI event ends, SDL changes the media app's state to (LIMITED, AUDIBLE).
 !!!
 
-##### HMI Status of apps when `AUDIO_SOURCE` or `EMBEDDED_NAVI` event is activated
+###### HMI Status of apps when `AUDIO_SOURCE` or `EMBEDDED_NAVI` event is activated
 |appHMIType|Event|HMI State before|HMI State after|
 |:---------|:----|:---------------|:--------------|
 |Media|AUDIO_SOURCE|(FULL/LIMITED, AUDIBLE)|(BACKGROUND, NOT_AUDIBLE)|
@@ -105,7 +107,7 @@ When this event is active, SDL **rejects** all app activation requests from the 
 |Navigation|EMBEDDED_NAVI|(FULL/LIMITED, AUDIBLE)|(BACKGROUND, NOT_AUDIBLE)|
 |Non-media|EMBEDDED_NAVI|(FULL/LIMITED, AUDIBLE)|(BACKGROUND, NOT_AUDIBLE)|
 
-##### Activating apps during active `AUDIO_SOURCE` or `EMBEDDED_NAVI` event
+###### Activating apps during active `AUDIO_SOURCE` or `EMBEDDED_NAVI` event
 |appHMIType|Event|New HMI State|Keep event active|
 |:---------|:----|:------------|:----------------|
 |Media|AUDIO_SOURCE|(FULL, AUDIBLE)|false|
@@ -114,6 +116,8 @@ When this event is active, SDL **rejects** all app activation requests from the 
 |Media|EMBEDDED_NAVI|(FULL, AUDIBLE)|true|
 |Navigation|EMBEDDED_NAVI|(FULL, AUDIBLE)|false|
 |Non-media|EMBEDDED_NAVI|(FULL, NOT_AUDIBLE)|true|
+
+### Notification
 
 #### Parameters
 
@@ -168,7 +172,7 @@ Multiple apps activation during active embedded navigation or audio source
 ![OnEventChanged](./assets/Multiple_apps_activation_during_active_embedded_navigation_or_audio_source.png)
 |||
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

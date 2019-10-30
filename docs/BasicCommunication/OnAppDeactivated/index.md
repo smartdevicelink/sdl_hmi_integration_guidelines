@@ -39,7 +39,7 @@ User Switches Apps
 ![OnAppDeactivated](./assets/OnAppDeactivated.png)
 |||
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

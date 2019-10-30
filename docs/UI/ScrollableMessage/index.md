@@ -41,7 +41,7 @@ ScrollableMessage with STEAL_FOCUS button for background application
 ![ScrollableMessage](./assets/ScrollableMessageStealFocus.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -55,7 +55,7 @@ ScrollableMessage with STEAL_FOCUS button for background application
 		},
 		"timeout": 10000,
 		"softButtons": [
-      {
+			{
 				"type": "TEXT",
 				"text": "Leave onscreen",
 				"softButtonID": 15,
@@ -72,7 +72,8 @@ ScrollableMessage with STEAL_FOCUS button for background application
 	}
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -86,7 +87,7 @@ ScrollableMessage with STEAL_FOCUS button for background application
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

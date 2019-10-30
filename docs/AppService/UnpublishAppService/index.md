@@ -25,7 +25,7 @@ Purpose
 |:---|:---|:--------|:---------|
 |||||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -38,7 +38,7 @@ Purpose
 }
 ```
 
-### Example Response
+### JSON Example Response
 
 ```json
 {
@@ -48,5 +48,23 @@ Purpose
         "code" : 0,
         "method" : "AppService.UnpublishAppService"
     }
+}
+```
+
+### JSON Example Error
+
+```json
+{
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "Request timeout",
+    "data" :
+    {
+      "method" : "AppService.UnpublishAppService"
+    }
+  }
 }
 ```

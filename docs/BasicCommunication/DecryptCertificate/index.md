@@ -34,7 +34,7 @@ DecryptCertificate
 ![DecryptCertificate](assets/DecryptCertificate.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -47,7 +47,7 @@ DecryptCertificate
 }
 ```
 
-### Example Response
+### JSON Example Response
 
 ```json
 {
@@ -60,7 +60,7 @@ DecryptCertificate
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

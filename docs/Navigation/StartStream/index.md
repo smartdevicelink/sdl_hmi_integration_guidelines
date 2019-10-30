@@ -30,7 +30,7 @@ StartStream
 ![StartStream](./assets/StartStream.jpg)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -43,7 +43,8 @@ StartStream
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -57,7 +58,7 @@ StartStream
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

@@ -81,7 +81,7 @@ ActivateApp using App Launching
 ![ActivateApp](./assets/ActivateAppAppLaunch.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -94,7 +94,8 @@ ActivateApp using App Launching
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -112,7 +113,7 @@ ActivateApp using App Launching
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

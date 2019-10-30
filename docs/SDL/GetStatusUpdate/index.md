@@ -36,7 +36,7 @@ GetStatusUpdate
 ![GetStatusUpdate](./assets/GetStatusUpdate.jpg)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -45,7 +45,8 @@ GetStatusUpdate
   "method" : "SDL.GetStatusUpdate"
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -60,7 +61,7 @@ GetStatusUpdate
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

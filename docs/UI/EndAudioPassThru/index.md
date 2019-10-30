@@ -31,7 +31,7 @@ EndAudioPassThru audio capturing already ended
 ![EndAudioPassThru](./assets/EndAudioPassThruTooLate.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -40,7 +40,8 @@ EndAudioPassThru audio capturing already ended
   "method" : "UI.EndAudioPassThru"
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -54,7 +55,7 @@ EndAudioPassThru audio capturing already ended
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

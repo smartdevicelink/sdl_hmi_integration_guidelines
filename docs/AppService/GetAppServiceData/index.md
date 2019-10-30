@@ -43,7 +43,7 @@ GetAppServiceData (HMI Consumer)
 ![GetAppServiceData_HMI_ASC](./assets/GetAppServiceData_HMI_ASC.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -55,7 +55,8 @@ GetAppServiceData (HMI Consumer)
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -86,7 +87,8 @@ GetAppServiceData (HMI Consumer)
   }
 }
 ```
-### Example Error
+
+### JSON Example Error
 
 ```json
 {

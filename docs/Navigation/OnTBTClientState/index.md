@@ -23,7 +23,7 @@ OnTBTClientState
 ![OnTBTClientState](./assets/OnTBTClientState.jpg)
 |||
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

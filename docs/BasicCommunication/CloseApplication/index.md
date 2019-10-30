@@ -36,7 +36,7 @@ SDL will:
 
 This RPC has no additional parameter requirements
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -49,7 +49,8 @@ This RPC has no additional parameter requirements
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -63,7 +64,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

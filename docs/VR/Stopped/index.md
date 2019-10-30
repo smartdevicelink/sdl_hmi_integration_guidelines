@@ -21,7 +21,7 @@ Stopped when VR session ends
 ![Stopped](./assets/Stopped.png)
 |||
 
-### Example Notification
+### JSON Example Notification
 
 ```json
 {

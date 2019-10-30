@@ -56,7 +56,7 @@ UI.AddCommand no response, VR.AddCommand returns SUCCESS
 ![AddCommand](./assets/AddCommandSuccessUINoResponse.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -77,7 +77,8 @@ UI.AddCommand no response, VR.AddCommand returns SUCCESS
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -91,7 +92,7 @@ UI.AddCommand no response, VR.AddCommand returns SUCCESS
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

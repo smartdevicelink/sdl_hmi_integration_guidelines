@@ -36,7 +36,7 @@ Get Capabilities
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -45,7 +45,8 @@ Get Capabilities
   "method" : "UI.GetCapabilities"
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -124,7 +125,7 @@ Get Capabilities
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

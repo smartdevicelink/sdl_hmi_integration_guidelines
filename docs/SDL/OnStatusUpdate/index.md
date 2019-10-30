@@ -32,7 +32,7 @@ SDL operates with the following PTU statuses:
 |:---|:---|:--------|:---------|
 |status|[Common.UpdateResult](../../common/enums/#updateresult)|true||
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

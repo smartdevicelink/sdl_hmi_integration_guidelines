@@ -32,7 +32,7 @@ The list of known devices is provided to the HMI in the [UpdateDeviceList](../Up
 |:---|:---|:--------|:---------|
 |deviceInfo|[Common.DeviceInfo](../../common/structs/#deviceinfo)|true||
 
-### Example Notification
+### JSON Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

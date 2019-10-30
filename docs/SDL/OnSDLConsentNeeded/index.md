@@ -16,7 +16,9 @@ The notification is applicable only for the case when the device is consented by
 3) Display the 'device consent' dialog after getting _SDL.GetUserFriendlyMessages_response_ from SDL.   
 4) Send _OnAllowSDLFunctionality_ (true or false) after and depending on User's choice on HMI.   
 !!!
- 
+
+### Notification
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -35,7 +37,7 @@ The User consents the device
 ![OnSDLConsentNeeded](./assets/User_consents_the_device2.png)
 |||
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
 	"jsonrpc": "2.0",

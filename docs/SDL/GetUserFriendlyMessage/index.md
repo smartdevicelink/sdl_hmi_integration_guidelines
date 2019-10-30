@@ -80,7 +80,7 @@ GetUserFriendlyMessage for device consent
 ![GetUserFriendlyMessage](./assets/GetUserFriendlyMessage.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -95,7 +95,8 @@ GetUserFriendlyMessage for device consent
 
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -114,7 +115,7 @@ GetUserFriendlyMessage for device consent
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

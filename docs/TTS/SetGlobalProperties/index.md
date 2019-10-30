@@ -12,7 +12,7 @@ Purpose
 ### Description
 SDL requests to set the values for the prompts to be spoken by TTS during the User's interaction with the application over head unit.
 
-### Request  
+### Request
 On receiving `AddCommand` with `CommandType = Command` before a custom `helpPrompt` is set by the application, SDL must send updated values of `helpPrompt` via TTS.SetGlobalProperties request to HMI.
 
 #### Parameters
@@ -40,7 +40,7 @@ SetGlobalProperties request with VRHelp and HelpPrompt params
 ![SetGlobalProperties](./assets/SetGlobalProperties_VRHelp_and_HelpPrompt.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -80,7 +80,8 @@ SetGlobalProperties request with VRHelp and HelpPrompt params
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -94,7 +95,7 @@ SetGlobalProperties request with VRHelp and HelpPrompt params
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

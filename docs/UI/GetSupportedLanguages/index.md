@@ -29,7 +29,7 @@ Get Supported Languages
 ![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -38,7 +38,8 @@ Get Supported Languages
   "method" : "UI.GetSupportedLanguages"
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -53,7 +54,7 @@ Get Supported Languages
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

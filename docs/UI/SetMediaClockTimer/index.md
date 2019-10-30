@@ -11,7 +11,7 @@ Purpose
 
 The UI.SetMediaClock timer request indicates either an initial value for the media clock timer for a media application or an update to this value. The request may come for the application which is not currently active on the HMI.
 
-### Request   
+### Request
 
 !!! MUST
 1. Perform the update type indicated by the `updateMode` parameter:   
@@ -70,7 +70,7 @@ SetMediaClockTimer COUNTDOWN for a deactivated application
 ![SetMediaClockTimer](./assets/SetMediaClockTimerDownDeactivate.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -91,7 +91,8 @@ SetMediaClockTimer COUNTDOWN for a deactivated application
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -105,7 +106,7 @@ SetMediaClockTimer COUNTDOWN for a deactivated application
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

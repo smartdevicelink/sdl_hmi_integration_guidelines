@@ -31,7 +31,7 @@ UpdateTurnList
 ![UpdateTurnList](./assets/UpdateTurnList.jpg)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -98,7 +98,8 @@ UpdateTurnList
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -112,7 +113,7 @@ UpdateTurnList
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

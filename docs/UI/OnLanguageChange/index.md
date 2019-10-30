@@ -23,7 +23,7 @@ OnLanguageChange
 ![OnLanguageChange](./assets/OnLanguageChange.png)
 |||
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

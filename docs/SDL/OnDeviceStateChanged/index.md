@@ -20,6 +20,8 @@ SDL ignores all invalid notifications which come from HMI (invalid JSON, invalid
 Unpairing of the device is NOT a trigger for new PTU sequence.
 !!!
 
+### Notification
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -28,7 +30,7 @@ Unpairing of the device is NOT a trigger for new PTU sequence.
 |deviceInternalId|String|true|minlength: 0<br>maxlength: 500|
 |deviceId|[Common.DeviceInfo](../../common/structs/#deviceinfo)|false||
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

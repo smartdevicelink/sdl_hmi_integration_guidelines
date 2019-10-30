@@ -37,7 +37,7 @@ This RPC has no additional parameter requirements.
 |language|[Common.Language](../../common/enums/#language)|true||
 |wersCountryCode|String|true|maxlength: 500|
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -47,7 +47,7 @@ This RPC has no additional parameter requirements.
 }
 ```
 
-### Example Response
+### JSON Example Response
 
 ```json
 {
@@ -65,7 +65,7 @@ This RPC has no additional parameter requirements.
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

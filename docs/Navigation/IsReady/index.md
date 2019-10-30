@@ -44,7 +44,7 @@ IsReady
 ![IsReady](./assets/IsReady.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -53,7 +53,8 @@ IsReady
   "method" : "Navigation.IsReady"
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -68,7 +69,7 @@ IsReady
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

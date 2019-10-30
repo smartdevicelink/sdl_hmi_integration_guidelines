@@ -45,7 +45,7 @@ OnServiceUpdate
 ![OnServiceUpdate](assets/OnServiceUpdate.png)
 |||
 
-#### JSON Example Notification
+### JSON Example Notification
 
 ```json
 {

@@ -30,7 +30,7 @@ GetCapabilities on system startup
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -39,7 +39,8 @@ GetCapabilities on system startup
   "method" : "Buttons.GetCapabilities"
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -90,7 +91,7 @@ GetCapabilities on system startup
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

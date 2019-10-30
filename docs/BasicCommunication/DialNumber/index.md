@@ -57,7 +57,7 @@ DialNumber Failed
 ![DialNumberFailed](./assets/DialNumberFailed.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -71,7 +71,7 @@ DialNumber Failed
   }
 }
 ```
-### Example Response
+### JSON Example Response
 
 ```json
 {
@@ -85,7 +85,7 @@ DialNumber Failed
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

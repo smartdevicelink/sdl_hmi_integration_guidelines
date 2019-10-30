@@ -56,7 +56,7 @@ User Requests Update App List
 ![UpdateAppList](./assets/UpdateAppListUser.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -101,7 +101,8 @@ User Requests Update App List
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -115,7 +116,7 @@ User Requests Update App List
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

@@ -59,7 +59,7 @@ GetCapabilities
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -68,7 +68,8 @@ GetCapabilities
   "method" : "TTS.GetCapabilities"
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -84,7 +85,7 @@ GetCapabilities
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

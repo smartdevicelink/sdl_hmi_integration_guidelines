@@ -58,7 +58,8 @@ UpdateSDL UPDATE_NEEDED - EXTERNAL_PROPRIETARY Policy Table Update Flow
 UpdateSDL - PROPRIETARY Policy Table Update Flow
 ![UpdateSDL](./assets/Proprietary_PTU_flow_.png)
 |||
-### Example Request
+
+### JSON Example Request
 
 ```json
 {
@@ -68,7 +69,7 @@ UpdateSDL - PROPRIETARY Policy Table Update Flow
 }
 ```
 
-### Example Response
+### JSON Example Response
 
 ```json
 {
@@ -83,7 +84,7 @@ UpdateSDL - PROPRIETARY Policy Table Update Flow
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

@@ -17,7 +17,7 @@ Purpose
 |:---|:---|:--------|:---------|
 |statisticType|[Common.StatisticsType](../../common/enums/#statisticstype)|true||
 
-#### JSON Example Notification
+### JSON Example Notification
 
 ```json
 {

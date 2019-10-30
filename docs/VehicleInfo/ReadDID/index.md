@@ -37,7 +37,7 @@ ReadDID Expanded result
 ![ReadDID](./assets/ReadDidExpanded.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -52,7 +52,8 @@ ReadDID Expanded result
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -83,7 +84,7 @@ ReadDID Expanded result
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

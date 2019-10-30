@@ -28,7 +28,7 @@ OnAudioDataStreaming App to HMI
 ![OnAudioDataStreaming](./assets/OnAudioDataStreamingAppHMI.jpg)
 |||
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

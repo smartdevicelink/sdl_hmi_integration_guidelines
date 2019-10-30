@@ -28,7 +28,7 @@ Purpose
 |ecuHeader|Integer|true|minvalue: 0<br>maxvalue: 65535|
 |dtc|String|false|array: true<br>minsize: 1<br>maxsize: 15<br>maxlength: 10|
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -43,7 +43,8 @@ Purpose
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -59,7 +60,7 @@ Purpose
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

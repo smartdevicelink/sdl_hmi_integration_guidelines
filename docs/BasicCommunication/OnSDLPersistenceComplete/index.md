@@ -30,7 +30,7 @@ SDL Persists App Data after Suspend before Ignition Off
 ![OnSDLPersistenceComplete](./assets/OnSDLPersistenceComplete.png)
 |||
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

@@ -51,7 +51,7 @@ SendHapticData basic flow with user selection
 ![SendHapticData](./assets/SendHapticDataBasicFlow.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -77,7 +77,8 @@ SendHapticData basic flow with user selection
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -91,7 +92,7 @@ SendHapticData basic flow with user selection
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

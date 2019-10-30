@@ -27,7 +27,7 @@ OnWayPointChange
 ![OnWayPointChange](./assets/OnWayPointChange.png)
 |||
 
-### Example Notification
+### JSON Example Notification
 
 ```json
 {

@@ -40,7 +40,7 @@ OnKeyboardInput ENTRY_VOICE mode
 ![OnKeyboardInput](./assets/OnKeyboardInputVoice.png)
 |||
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

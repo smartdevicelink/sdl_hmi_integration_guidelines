@@ -29,7 +29,7 @@ GetLanguage
 ![GetLanguage](./assets/GetLanguage.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -38,7 +38,8 @@ GetLanguage
   "method" : "TTS.GetLanguage"
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -53,7 +54,7 @@ GetLanguage
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

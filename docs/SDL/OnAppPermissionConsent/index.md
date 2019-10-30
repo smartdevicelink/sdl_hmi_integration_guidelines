@@ -43,7 +43,7 @@ c) SDL  uses `OnAppPermissionConsent` value (ON/OFF) received from HMI through i
 |externalConsentStatus|[Common.ExternalConsentStatus](../../common/structs/#externalconsentstatus)|false|array: true <br>minsize: 1<br>maxsize: 100|
 |source|[Common.ConsentSource](../../common/enums/#consentsource)|true||
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

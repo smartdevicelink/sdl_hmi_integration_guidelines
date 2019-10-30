@@ -29,7 +29,7 @@ OnTouchEvent moving two fingers one stops first
 ![OnTouchEvent](./assets/OnTouchEventTwoFingersOneStop.png)
 |||
 
-#### JSON Example Notification
+### JSON Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

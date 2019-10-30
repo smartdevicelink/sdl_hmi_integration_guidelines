@@ -31,7 +31,7 @@ ChangeRegistration after OnAppRegistered
 ![ChangeRegistration](./assets/ChangeRegistration.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -45,7 +45,8 @@ ChangeRegistration after OnAppRegistered
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -59,7 +60,7 @@ ChangeRegistration after OnAppRegistered
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

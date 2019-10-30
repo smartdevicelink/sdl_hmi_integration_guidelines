@@ -53,7 +53,7 @@ Show Widgets
 ![Show](./assets/ShowWidgets.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -108,7 +108,8 @@ Show Widgets
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -122,7 +123,7 @@ Show Widgets
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {

@@ -39,7 +39,7 @@ ShowAppMenu request(with menuID)
 ![ShowAppMenuwithMenuID](./assets/ShowAppMenu_MenuID.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -53,7 +53,8 @@ ShowAppMenu request(with menuID)
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -63,6 +64,24 @@ ShowAppMenu request(with menuID)
   {
     "code" : 0,
     "method" : "UI.ShowAppMenu"
+  }
+}
+```
+
+### JSON Example Error
+
+```json
+{
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "Request timeout",
+    "data" :
+    {
+      "method" : "UI.ShowAppMenu"
+    }
   }
 }
 ```

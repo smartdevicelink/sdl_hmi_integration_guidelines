@@ -32,7 +32,7 @@ Speak
 ![Speak](./assets/Speak.png)
 |||
 
-### Example Request
+### JSON Example Request
 
 ```json
 {
@@ -51,7 +51,8 @@ Speak
   }
 }
 ```
-### Example Response
+
+### JSON Example Response
 
 ```json
 {
@@ -65,7 +66,7 @@ Speak
 }
 ```
 
-### Example Error
+### JSON Example Error
 
 ```json
 {
