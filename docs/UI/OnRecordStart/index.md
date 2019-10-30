@@ -1,5 +1,13 @@
 ## OnRecordStart
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Notify HMI that capturing microphone data should begin
 
 ### Notification
 

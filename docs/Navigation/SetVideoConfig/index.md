@@ -38,7 +38,7 @@ The HMI must return a `REJECTED` result code if it is not able to handle a strea
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|rejectedParams|String|true|array: true<br>minsize: 1<br>maxsize: 1000|
+|rejectedParams|String|false|array: true<br>minsize: 1<br>maxsize: 1000|
 
 ### Sequence Diagrams
 

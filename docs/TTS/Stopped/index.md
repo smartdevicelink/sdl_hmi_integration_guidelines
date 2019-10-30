@@ -11,6 +11,10 @@ Purpose
 
 ### Notification
 
+#### Parameters
+
+This RPC has no additional parameter requirements.
+
 ### Sequence Diagrams
 |||
 Stopped after StopSpeaking from SDL
@@ -22,7 +26,7 @@ Stopped after StopSpeaking from SDL
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : " TTS.Stopped",
+  "method" : " TTS.Stopped"
 }
 ```
 ### Example Response

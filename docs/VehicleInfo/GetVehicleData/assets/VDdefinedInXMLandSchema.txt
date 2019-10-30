@@ -1,0 +1,68 @@
+@startuml
+group For vehicle data defined in HMI_API.xml, e.g. headLampStatus
+MOBILE -> SDL : GetVehicleData ("headLampStatus" = true")
+SDL -> HMI : GetVehicleData ("headLampStatus" = true")
+HMI -> SDL : GetVehicleData (\n\t"headLampStatus" : { \n\
+        "lowBeamsOn" : true, \n\
+        "highBeamsOn" : true, \n\
+        "ambientLightSensorStatus" : "TWILIGHT_1" \n\
+    }")
+SDL -> MOBILE : GetVehicleData (\n\t"headLampStatus" : { \n\
+        "lowBeamsOn" : true, \n\
+        "highBeamsOn" : true, \n\
+        "ambientLightSensorStatus" : "TWILIGHT_1" \n\
+    }")
+end
+group  For vehicle data not defined in HMI_API.xml but defined in schema, e.g. assume headLampStatus is not defined in API
+
+MOBILE -> SDL : GetVehicleData ("headLampStatus" : true")
+SDL -> SDL : Get Structure of headLampStatus vehicle data item from schema
+SDL -> HMI : GetVehicleData (\n\t"HEAD_LAMP_STATUS" : { \n\
+       \t"LOW_BEAMS_ON" : "true", \n\
+       \t"HIGH_BEAMS_ON" : "true", \n\
+       \t"AMBIENT_LIGHT_SENSOR_STATUS" : "true" \n\
+   \t}")
+HMI -> SDL : GetVehicleData (\n\t"HEAD_LAMP_STATUS" : { \n\
+       \t"LOW_BEAMS_ON" : "true", \n\
+       \t"HIGH_BEAMS_ON" : "true", \n\
+       \t"AMBIENT_LIGHT_SENSOR_STATUS" : "TWILIGHT_1" \n\
+   \t}")
+
+SDL -> MOBILE : GetVehicleData (\n\t"headLampStatus" : { \n\
+        "lowBeamsOn" : true, \n\
+        "highBeamsOn" : true, \n\
+        "ambientLightSensorStatus" : "TWILIGHT_1" \n\
+    }")
+note right : SDL translates **keys** to **names** as defined in schema
+end
+group Assuming gps is defined in HMI_API.xml and headLampStatus is only defined in schema
+
+MOBILE -> SDL : GetVehicleData ("gps : true, ""headLampStatus" : true")
+SDL -> SDL : Get Structure of headLampStatus vehicle data item from schema
+SDL -> HMI : GetVehicleData (\n\t "gps": true, \n\t "HEAD_LAMP_STATUS" : { \n\
+       \t"LOW_BEAMS_ON" : "true", \n\
+       \t"HIGH_BEAMS_ON" : "true", \n\
+       \t"AMBIENT_LIGHT_SENSOR_STATUS" : "true" \n\
+   \t}")
+
+HMI -> SDL : GetVehicleData (\n\t"gps" : { \n\
+       \t"latitude" : 42.5487451, \n\
+       \t"longitude" : 87.42114, \n\
+   }, \n\t"HEAD_LAMP_STATUS" : { \n\
+       \t"LOW_BEAMS_ON" : "true", \n\
+       \t"HIGH_BEAMS_ON" : "true", \n\
+       \t"AMBIENT_LIGHT_SENSOR_STATUS" : "TWILIGHT_1" \n\
+   }")
+
+SDL -> MOBILE : GetVehicleData (\n\t"gps" : { \n\
+       \t"latitude" : 42.5487451, \n\
+       \t"longitude" : 87.42114, \n\
+   }, \n\t"headLampStatus" : { \n\
+        "lowBeamsOn" : true, \n\
+        "highBeamsOn" : true, \n\
+        "ambientLightSensorStatus" : "TWILIGHT_1" \n\
+    }")
+
+note right : SDL translates **keys** to **names** as defined in schema
+end
+@enduml

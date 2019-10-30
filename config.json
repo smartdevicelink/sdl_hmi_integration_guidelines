@@ -24,6 +24,9 @@
               "name": "ActivateApp"
             },
             {
+              "name": "CloseApplication"
+            },
+            {
               "name": "MixingAudioSupported"
             },
             {
@@ -102,6 +105,9 @@
               "name": "PolicyUpdate"
             },
             {
+              "name": "DecryptCertificate"
+            },
+            {
               "name": "UpdateAppList"
             },
             {
@@ -115,6 +121,9 @@
             },
             {
               "name": "GetFilePath"
+            },
+            {
+              "name": "OnServiceUpdate"
             }
           ]
         },
@@ -210,10 +219,10 @@
               "name": "GetStatusUpdate"
             },
             {
-              "name": "GetURLS"
+              "name": "GetUserFriendlyMessage"
             },
             {
-              "name": "GetUserFriendlyMessage"
+              "name": "GetPolicyConfigurationData"
             },
             {
               "name": "OnAllowSDLFunctionality"
@@ -301,6 +310,9 @@
               "name": "Alert"
             },
             {
+              "name": "CancelInteraction"
+            },
+            {
               "name": "ChangeRegistration"
             },
             {
@@ -379,10 +391,16 @@
               "name": "Show"
             },
             {
-              "name": "ShowCustomForm"
+              "name": "ShowAppMenu"
             },
             {
               "name": "Slider"
+            },
+            {
+              "name": "CreateWindow"
+            },
+            {
+              "name": "DeleteWindow"
             }
           ]
         },
@@ -485,6 +503,9 @@
             },
             {
               "name": "OnRCStatus"
+            },
+            {
+              "name": "SetGlobalProperties"
             }
           ]
         },
@@ -493,6 +514,9 @@
           "navigation": [
             {
               "name": "PublishAppService"
+            },
+            {
+              "name": "UnpublishAppService"
             },
             {
               "name": "GetAppServiceData"

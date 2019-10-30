@@ -80,16 +80,16 @@ AlertManeuver Rejected
   "params": {
     "softButtons": [
       {
-        "type": TEXT,
+        "type": "TEXT",
         "text": "Leave Onscreen",
         "softButtonID": 45,
-        "systemAction": KEEP_CONTEXT
+        "systemAction": "KEEP_CONTEXT"
       },
       {
-        "type": TEXT,
+        "type": "TEXT",
         "text": "Close",
         "softButtonID": 46,
-        "systemAction": STEAL_FOCUS
+        "systemAction": "STEAL_FOCUS"
       }
     ]
   },

@@ -101,7 +101,7 @@ AddCommand UI No Response, VR Succeeds
     "cmdIcon" :
      {
          "value" : "tmp/SDL/app/Gis_meteo/1245_28.jpeg",
-         "imageType" : DYNAMIC
+         "imageType" : "DYNAMIC"
      },
     "appID" : 65409
   }

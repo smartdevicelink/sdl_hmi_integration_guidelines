@@ -1,8 +1,13 @@
 ## GetSystemInfo
 
-  * Type: Function
-  * Sender: SDL
-  * Purpose: Get head unit system information
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Get head unit system information
 
 !!! must
 
@@ -20,8 +25,7 @@ When SDL starts, it sends GetSystemInfo to update the policies database with the
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+This RPC has no additional parameter requirements.
 
 ### Response
 

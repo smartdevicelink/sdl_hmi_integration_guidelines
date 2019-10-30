@@ -17,7 +17,8 @@ In case SDL is built with **"-DEXTENDED_POLICY: HTTP" flag**, SDL supports Polic
 **Proprietary Policies**:
 
 * Encrypt the Snapshot PT (path from ``file`` parameter) _in case_ and by the scheme required by Policies Server
-* Request Policies Server url via the next ``SDL.GetURLs`` from SDL
+* Request Policies Server url via ``SDL.GetPolicyConfigurationData`` from SDL
+* Parse the `url` received from json based on `serviceID`
 * Provide the path defined by ``file`` parameter in the next ``BC.OnSystemRequest`` that SDL will forward to mobile application
 * Recognize the PTU status notifications of ``SDL.OnStatusUpdate`` from SDL and display them in the appropriate UI menu
 !!!
@@ -40,7 +41,8 @@ TLS handshake
    * ``file`` - is the path to the Snapshot of local PolicyTable (Snapshot PT final destination is Policies Server)
    * ``timeout`` - value taken from ``"timeout_after_x_seconds"`` field of local PT
    * ``retry`` - array of values from ``"seconds_between_retries"`` field of local PT. SDL handles the PTU retry sequence (re-requesting update if fails to receive during timeout) by itself.
-4. When SDL  is built with EXTERNAL_PROPRIETARY flow, SDL _PoliciesManager_ must change the status to “UPDATING” and notify HMI with OnStatusUpdate("UPDATING") right after SnapshotPT is sent out to to mobile app via OnSystemRequest() RPC.   
+4. Custom VehicleData changes are available for application to use right after successful PTU.
+5. When SDL  is built with EXTERNAL_PROPRIETARY flow, SDL _PoliciesManager_ must change the status to “UPDATING” and notify HMI with OnStatusUpdate("UPDATING") right after SnapshotPT is sent out to to mobile app via OnSystemRequest() RPC.
 !!!
 
 #### Parameters

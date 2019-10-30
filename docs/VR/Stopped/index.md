@@ -11,6 +11,10 @@ Purpose
 
 ### Notification
 
+#### Parameters
+
+This RPC has no additional parameter requirements
+
 ### Sequence Diagrams
 |||
 Stopped when VR session ends
@@ -22,6 +26,6 @@ Stopped when VR session ends
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : "VR.Stopped",
+  "method" : "VR.Stopped"
 }
 ```

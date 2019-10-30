@@ -31,7 +31,9 @@ _**SyncP NOTE**_
  2. It's SyncP responsibility to choose an application for sending PTU and start timer (for future retry strategy) after sending OnSystemRequest to SDL.
 
 !!! MUST   
-HMI must send `OnSystemRequest`, if specific data is requested from the mobile device/cloud, or binary data needs to be sent to the mobile device.
+1. Send `OnSystemRequest`, if specific data is requested from the mobile device/cloud, or binary data needs to be sent to the mobile device.
+2. Send `OnSystemRequest` with `requestType=OEM_SPECIFIC` and `requestSubType=VEHICLE_DATA_MAPPING` to SDL to get OEM Network Mapping table.
+
 !!!
 
 ### Notification
@@ -48,10 +50,7 @@ HMI must send `OnSystemRequest`, if specific data is requested from the mobile d
 |length|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |timeout|Integer|false|minvalue: 0<br>maxvalue: 2000000000|
 |fileName|String|true|minlength: 1<br>maxlength: 255|
-|appID|String|false|minlength: 1<br>maxlength: 50|
-
-[Common.RequestType]: ../../common/enums/#requesttype
-[Common.FileType]: ../../common/enums/#filetype
+|appID|Integer|false||
 
 ### Sequence Diagrams
 |||
@@ -62,11 +61,6 @@ System Requests File Download
 |||
 BC.OnSystemRequest in "Proprietary" Policy Table Update Flow
 ![Proprietary PTU](./assets/OnSystemRequest_in_Proprietary_PTU_flow.png)
-|||
-
-|||
-BC.OnSystemRequest in External Proprietary Policy Table Update Flow
-![EXTERNAL proprietary](../policyupdate/assets/diagram_PolicyUpdate_external_proprietary.png)
 |||
 
 #### JSON Example Notification

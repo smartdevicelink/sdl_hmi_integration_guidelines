@@ -13,8 +13,7 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -47,13 +46,12 @@ GetVehicleType
   "jsonrpc" : "2.0",
   "result" :
   {
-    "vehicleType" :
-    [
+    "vehicleType" :{
       "make" : "Ford",
       "model" : "Fusion",
       "modelYear" : "2013",
       "trim" : "SE"
-    ]
+    },
     "code" : 0,
     "method" : "VehicleInfo.GetVehicleType"
   }

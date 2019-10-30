@@ -46,6 +46,18 @@ Purpose
 |cloudAppVehicleID|Boolean|false||
 
 ### Response
+!!! must
+
+HMI must send SubscribeVehicleData response only for ROOT level items.
+
+!!!
+
+!!! note 
+
+For OEM specific custom vehicle data items, `oemCustomDataType` will contain a type of OEM specific vehicle data (from schema), and `dataType` will be `VEHICLEDATA_OEM_CUSTOM_DATA`.  
+For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `dataType` will contain appropriate data type from `VehicleDataType` enum.
+
+!!!
 
 #### Parameters
 

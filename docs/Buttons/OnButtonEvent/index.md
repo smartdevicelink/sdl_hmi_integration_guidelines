@@ -37,8 +37,8 @@ OnButtonEvent hardware button pressed and released
   "method" : "Buttons.OnButtonEvent",
   "params" :
   {
-    "name" : OK,
-    "mode" : BUTTONDOWN,
+    "name" : "OK",
+    "mode" : "BUTTONDOWN"
   }
 }
 ```

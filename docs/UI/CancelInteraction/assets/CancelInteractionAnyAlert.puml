@@ -1,0 +1,27 @@
+@startuml
+
+participant Mobile
+participant Core
+participant HMI
+
+Mobile -> Core : AlertRequest
+
+Core -> HMI : AlertRequest
+
+HMI -> HMI : Alert is showing\non the HMI
+
+Mobile -> Core : CancelInteractionRequest\n(AlertID)
+
+Core -> HMI : CancelInteractionRequest\n(AlertID)
+
+HMI -> HMI : HMI closes the ALERT
+
+HMI -> Core : AlertResponse\n(result: Aborted)
+
+Core -> Mobile : AlertResponse\n(result: Aborted)
+
+HMI -> Core : CancelInteractionResponse\n(result: Success)
+
+Core -> Mobile : CancelInteractionResponse\n(result: Success)
+
+@enduml

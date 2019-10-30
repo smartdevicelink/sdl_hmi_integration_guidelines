@@ -9,6 +9,12 @@ Sender
 Purpose
 : Inform SDL about changes to subscribed vehicle data values.
 
+!!! must
+
+Send OnVehicleData notification with the correct structure per RPC spec/schema items defined in PT
+
+!!!
+
 !!! note
 
 #### CloudAppVehicleID
@@ -51,7 +57,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |clusterModeStatus|[Common.ClusterModeStatus](../../common/structs/#clustermodestatus)|false||
 |myKey|[Common.MyKey](../../common/structs/#mykey)|false||
 |turnSignal|[Common.TurnSignal](../../common/enums/#turnsignal)|false||
-|fuelRange|[Common.FuelRange](../../common/structs/#fuelrange)|false|minsize=0<br>maxsize=100<br>array=true|
+|fuelRange|[Common.FuelRange](../../common/structs/#fuelrange)|false|array: true<br>minsize: 0<br>maxsize: 100|
 |engineOilLife|Float|false|minvalue=0<br>maxvalue=100|
 |electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
 |cloudAppVehicleID|String|false||

@@ -13,8 +13,7 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -38,7 +37,7 @@ EndAudioPassThru audio capturing already ended
 {
   "id" : 79,
   "jsonrpc" : "2.0",
-  "method" : "UI.EndAudioPassThru",
+  "method" : "UI.EndAudioPassThru"
 }
 ```
 ### Example Response

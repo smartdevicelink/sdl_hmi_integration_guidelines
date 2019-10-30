@@ -11,6 +11,20 @@ Purpose
 
 ### Notification
 
+!!! must
+
+1. Inform SDL whenever the driver distraction mode is activated/deactivated on HMI.
+
+!!!
+
+Driver distraction rules may be specific to country/area, so it depends on HMI when to trigger activate/deactivate states.
+
+!!! NOTE  
+_1. Whether the app receives the notification in current HMILevel is defined by app's assigned Policies._  
+_2. SDL ignores all invalid notifications which come from HMI (invalid JSON, invalid data types/bounds etc)._
+
+!!!
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -22,6 +36,7 @@ Purpose
 OnDriverDistraction
 ![OnDriverDistraction](./assets/OnDriverDistraction.png)
 |||
+
 
 #### JSON Example Notification
 ```json

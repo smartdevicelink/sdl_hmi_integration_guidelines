@@ -32,9 +32,9 @@ Purpose
 |addressLines|String|false|array: true<br>minsize: 0<br>maxsize: 4<br>maxlength: 500|
 |phoneNumber|String|false|maxlength: 500|
 |locationImage|[Common.Image](../../common/structs/#image)|false||
-|deliveryMode| Common.DeliveryMode|false||
-|timeStamp| Common.DateTime|false||
-|address| Common.OASISAddress|false||
+|deliveryMode|[Common.DeliveryMode](../../common/enums/#deliverymode)|false||
+|timeStamp|[Common.DateTime](../../common/structs/#datetime)|false||
+|address|[Common.OASISAddress](../../common/structs/#oasisaddress)|false||
 
 ### Response
 
@@ -74,7 +74,7 @@ SendLocation General behavior
     "locationImage" :
     {
          "value" : "tmp/SDL/app/Navi/12345.jpg",
-         "imageType" : DYNAMIC
+         "imageType" : "DYNAMIC"
     }
   }
 }

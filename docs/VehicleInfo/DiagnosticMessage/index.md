@@ -28,12 +28,6 @@ Purpose
 |:---|:---|:--------|:---------|
 |messageDataResult|Integer|true|array: true<br>minsize: 1<br>maxsize: 65535<br>minvalue: 0<br>maxvalue: 255|
 
-### Sequence Diagrams
-|||
-DiagnosticMessage
-![DiagnosticMessage](./assets/DiagnosticMessage.png)
-|||
-
 ### Example Request
 
 ```json
@@ -43,7 +37,7 @@ DiagnosticMessage
   "method" : "VehicleInfo.DiagnosticMessage",
   "params" :
   {
-    "targetID" : 5456
+    "targetID" : 5456,
     "messageLength" : 1084,
     "messageData" : [1,2,3,4,5,6,7,8,9]
   }
@@ -81,3 +75,9 @@ DiagnosticMessage
   }
 }
 ```
+
+### Sequence Diagrams
+|||
+DiagnosticMessage
+![DiagnosticMessage](./assets/DiagnosticMessage.png)
+|||

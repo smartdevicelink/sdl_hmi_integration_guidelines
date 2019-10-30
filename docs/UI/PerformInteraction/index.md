@@ -36,9 +36,10 @@ A UI.PerformInteraction with a timeout value of `0` should not be timed out imme
 |choiceSet|[Common.Choice](../../common/structs/#choice)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |vrHelpTitle|String|false|maxlength: 500|
 |vrHelp|[Common.VrHelpItem](../../common/structs/#vrhelpitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
-|timeout|Integer|true|minvalue: 5000<br>maxvalue: 100000|
+|timeout|Integer|true|minvalue: 5000<br>maxvalue: 100000<br>defvalue: 10000|
 |interactionLayout|[Common.LayoutMode](../../common/enums/#layoutmode)|false||
 |appID|Integer|true||
+|cancelID|Integer|false||
 
 ### Response
 
@@ -74,7 +75,7 @@ PerformInteraction Timeout with Both
   {
     "initialText" :
     {
-         "fieldName" : initialInteractionText,
+         "fieldName" : "initialInteractionText",
          "fieldText" : "Choose the station:"
     },
 
@@ -101,10 +102,10 @@ PerformInteraction Timeout with Both
         {
          "text" : "Sky FM",
          "image" :
-          [
+          {
              "value" : "tmp/SDL/app/Pandora/icon_5410.jpg",
-             "imageType" : DYNAMIC
-          ],
+             "imageType" : "DYNAMIC"
+          },
 
          "position" : 1
         },
@@ -112,20 +113,20 @@ PerformInteraction Timeout with Both
         {
          "text" : "Paradise",
          "image" :
-          [
+          {
              "value" : "tmp/SDL/app/Pandora/icon_5423.jpeg",
-             "imageType" : DYNAMIC
-          ],
+             "imageType" : "DYNAMIC"
+          },
          "position" : 2
         },
 
         {
          "text" : "100 XR",
          "image" :
-          [
+          {
              "value" : "tmp/SDL/app/Pandora/icon_5465.jpeg",
-             "imageType" : DYNAMIC
-          ],
+             "imageType" : "DYNAMIC"
+          },
          "position" : 3
         }
     ],
@@ -143,7 +144,7 @@ PerformInteraction Timeout with Both
   "jsonrpc" : "2.0",
   "result" :
   {
-    "choiceID" : 2416
+    "choiceID" : 2416,
     "code" : 0,
     "method" : "UI.PerformInteraction"
   }

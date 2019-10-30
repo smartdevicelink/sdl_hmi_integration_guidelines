@@ -28,9 +28,7 @@ This RPC has no additional parameter requirements.
 
 |Name|Type|Mandatory|
 |:---|:---|:--------|
-|status|[Common.UpdateResult]|true|
-
-[Common.UpdateResult]: ../../common/enums/#updateresult
+|status|[Common.UpdateResult](../../common/enums/#updateresult)|true|
 
 ### Sequence Diagrams
 |||
@@ -44,7 +42,7 @@ GetStatusUpdate
 {
   "id" : 176,
   "jsonrpc" : "2.0",
-  "method" : "SDL.GetStatusUpdate",
+  "method" : "SDL.GetStatusUpdate"
 }
 ```
 ### Example Response
@@ -55,7 +53,7 @@ GetStatusUpdate
   "jsonrpc" : "2.0",
   "result" :
   {
-    "status" : "UPDATE_NEEDED"
+    "status" : "UPDATE_NEEDED",
     "code" : 0,
     "method" : "SDL.GetStatusUpdate"
   }

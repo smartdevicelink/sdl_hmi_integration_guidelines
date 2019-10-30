@@ -46,6 +46,8 @@ An alert may be sent to the HMI for an application which is not currently active
 |progressIndicator|Boolean|false||
 |alertType|[Common.AlertType](../../common/enums/#alerttype)|true||
 |appID|Integer|true||
+|cancelID|Integer|false||
+|alertIcon|[Common.Image](../../common/structs/#image)|false||
 
 ### Response
 
@@ -89,21 +91,21 @@ Alert BOTH UI Closed before TTS finishes Speaking
     "alertStrings" :
     [
       {
-         "fieldName" : alertText1,
+         "fieldName" : "alertText1",
          "fieldText" : "WARNING"
       },
       {
-         "fieldName" : alertText2,
+         "fieldName" : "alertText2",
          "fieldText" : "Hard weather conditions"
       }
     ],
     "duration" : 5000,
     "softButtons" :
     {
-      "type" : TEXT,
+      "type" : "TEXT",
       "text" : "OK",
       "softButtonID" : 697,
-      "systemAction" : DEFAULT_ACTION
+      "systemAction" : "DEFAULT_ACTION"
     },
       "alertType": "BOTH",
     "appID" : 65539

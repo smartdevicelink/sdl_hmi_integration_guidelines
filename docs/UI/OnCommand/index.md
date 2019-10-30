@@ -25,6 +25,7 @@ The HMI must send the UI.OnCommand notification to SDL when the user selects a c
 |:---|:---|:--------|:---------|
 |cmdID|Integer|true|minvalue: 0<br>maxvalue: 2000000000|
 |appID|Integer|true||
+
 ### Sequence Diagrams
 |||
 OnCommand

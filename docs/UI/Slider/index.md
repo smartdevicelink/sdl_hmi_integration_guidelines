@@ -21,6 +21,7 @@ Purpose
 |sliderFooter|String|false|array: true<br>minsize: 1<br>maxsize: 26<br>maxlength: 500|
 |timeout|Integer|true|minvalue: 1000<br>maxvalue: 65535|
 |appID|Integer|true||
+|cancelID|Integer|false||
 
 ### Response
 
@@ -89,7 +90,7 @@ Slider with OK Button press
     "message" : "A command was aborted due to user interaction",
     "data" :
     {
-      "sliderPosition" : 5
+      "sliderPosition" : 5,
       "method" : "UI.Slider"
     }
   }

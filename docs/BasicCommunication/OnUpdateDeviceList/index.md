@@ -24,6 +24,10 @@ Sending an `OnUpdateDeviceList` notification to SDL asks SDL to send back a list
 
 ### Notification
 
+#### Parameters
+
+This RPC has no additional parameter requirements
+
 ### Sequence Diagrams
 |||
 User Requests Device List Update

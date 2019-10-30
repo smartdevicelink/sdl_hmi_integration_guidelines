@@ -35,7 +35,7 @@ The HMI must send a pair [UI.OnTouchEvent](../ontouchevent) (one BEGIN and one E
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|hapticRectData|[Common.HapticRect](../../common/structs/#hapticrect)|true|array: true<br>minSize: 0<br>maxSize: 1000|
+|hapticRectData|[Common.HapticRect](../../common/structs/#hapticrect)|false|array: true<br>minsize: 0<br>maxsize: 1000|
 |appID|Integer|true||
 
 ### Response
@@ -103,7 +103,7 @@ SendHapticData basic flow with user selection
     "message" : "The HMI does not support the use of haptic data",
     "data" :
     {
-      "UI.SendHapticData"
+      "method": "UI.SendHapticData"
     }
   }
 }

@@ -13,7 +13,7 @@ Purpose
 Notifies about user/HMI allowing SDL functionality or disallowing access to all mobile apps on the specified device.
 
 !!! MUST  
-Send `OnAllowSDLFuntionality` notification to SDL as a result of user’s choice about device data consent via pop-up dialog or user’s settings change in Settings Menu (if applicable)
+Send `OnAllowSDLFunctionality` notification to SDL as a result of user’s choice about device data consent via pop-up dialog or user’s settings change in Settings Menu (if applicable)
 !!!
 
 !!! NOTE
@@ -32,13 +32,9 @@ Send `OnAllowSDLFuntionality` notification to SDL as a result of user’s choice
 
 |Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
-|device|[Common.DeviceInfo]|false|If no device is specified permission counts for SDL functionality in general.|
+|device|[Common.DeviceInfo](../../common/structs/#deviceinfo)|false|If no device is specified permission counts for SDL functionality in general.|
 |allowed|Boolean|true|Must be true if allowed|
-|source|[Common.ConsentSource]|true|-|
-
-[Common.DeviceInfo]: ../../common/structs/#deviceinfo
-[Common.ConsentSource]: ../../common/enums/#consentsource
-
+|source|[Common.ConsentSource](../../common/enums/#consentsource)|true| |
 
 ### Sequence Diagrams
 
@@ -66,12 +62,12 @@ The User does NOT consent the device.
 	{
 		"deviceInfo": 
 		{
-				"name" : “Mary`s Phone”,
+				"name" : "Mary's Phone",
 				"id" : 8
-		}
+		},
 
-		“allowed” : true,
-		“source” :”GUI”
+		"allowed" : true,
+		"source" : "GUI"
 	}
 }
 
