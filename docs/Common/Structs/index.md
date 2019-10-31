@@ -525,7 +525,7 @@
 |signalStrength|Integer|false|minvalue:0 maxvalue:100||
 |signalChangeThreshold|Integer|false|minvalue:0 maxvalue:100|If the signal strength falls below the set value for this parameter, the radio will tune to an alternative frequency|
 |radioEnable|Boolean|false||True if the radio is on, false is the radio is off|
-|state|Common.RadioState|false||||
+|state|Common.RadioState|false|||
 |sisData|Common.SisData|false||Read-only Station Information Service (SIS) data provides basic information about the station such as call sign, as well as information not displayable to the consumer such as the station identification number|
 |hdRadioEnable|Boolean|false||True if the hd radio is on, false is the radio is off|
 |availableHdChannels|Integer|false|minvalue:0 maxvalue:7 array="true" minsize="0"|The list of available hd sub-channel indexes, empty list means no Hd channel is available, read-only|
@@ -647,7 +647,7 @@
 |:---|:---|:--------|:---------|:----------|
 |source|Common.PrimaryAudioSource|false||In a getter response or a notification, it is the current primary audio source of the system. <br> In a setter request, it is the target audio source that the system shall switch to. <br> If the value is MOBILE_APP, the system shall switch to the mobile media app that issues the setter RPC.|
 |keepContext|Boolean|false||This parameter shall not be present in any getter responses or notifications. <br> This parameter is optional in a setter request. The default value is false. <br> If it is false, the system not only changes the audio source but also brings the default infotainment system UI associated with the audio source to foreground and set the application to background. <br> If it is true, the system changes the audio source, but keeps the current application's context.|
-|volume|Integer|false|minvalue="0" <br> maxvalue="100"|Reflects the volume of audio, from 0%-100%."
+|volume|Integer|false|minvalue="0" <br> maxvalue="100"|Reflects the volume of audio, from 0%-100%."|
 |equalizerSettings|Common.EqualizerSettings|false|minvalue="1" <br> maxvalue="100"<br>array ="true"|Defines the list of supported channels (band) and their current/desired settings on HMI|
 
 
@@ -701,9 +701,9 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|displayMode|Common.DisplayMode|false||
-|temperatureUnit|Common.TemperatureUnit|false||
-|distanceUnit|Common.DistanceUnit|false||
+|displayMode|Common.DisplayMode|false|||
+|temperatureUnit|Common.TemperatureUnit|false|||
+|distanceUnit|Common.DistanceUnit|false|||
 
 ### RadioControlCapabilities
 
@@ -759,13 +759,13 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |massageZone|Common.MassageZone|true|||
-|massageMode|Common.MassageMode|true||
+|massageMode|Common.MassageMode|true|||
 
 ### MassageCushionFirmness
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|cushion|Common.MassageCushion|true||
+|cushion|Common.MassageCushion|true|||
 |firmness|Integer|true|minvalue="0" <br> maxvalue="100"||
 
 ### SeatMemoryAction
@@ -780,9 +780,9 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|id|Common.SupportedSeat|false||
-|heatingEnabled|Boolean|false||
-|coolingEnabled|Boolean|false||
+|id|Common.SupportedSeat|false|||
+|heatingEnabled|Boolean|false|||
+|coolingEnabled|Boolean|false|||
 |heatingLevel|Integer|false|minvalue="0" <br> maxvalue="100"||
 |coolingLevel|Integer|false|minvalue="0" <br> maxvalue="100"||
 |horizontalPosition|Integer|false|minvalue="0" maxvalue="100"||
@@ -1060,7 +1060,7 @@ There are no defined parameters for this struct.
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|displayName|String|false||
+|displayName|String|false|||
 |windowTypeSupported|Common.WindowTypeCapabilities|false|array: true<br>minsize: 1|Informs the application how many windows the app is allowed to create per type|
 |windowCapabilities|Common.WindowCapability|false|array: true<br>minsize: 1<br>maxsize: 1000|Contains a list of capabilities of all windows related to the app.<br>Once the app has registered the capabilities of all windows are provided.<br>GetSystemCapability still allows requesting window capabilities of all windows.|
 
@@ -1077,7 +1077,7 @@ There are no defined parameters for this struct.
 |windowID|Integer|false||The specified ID of the window. Can be set to a predefined window, or omitted for the main window on the main display.|
 |textFields|Common.TextField|false|array: true<br>minsize: 1<br>maxsize: 100|A set of all fields that support text data. See TextField|
 |imageFields|Common.ImageField|false|array: true<br>minsize: 1<br>maxsize: 100|A set of all fields that support images. See ImageField|
-|imageTypeSupported|Common.ImageType|array: true<br>minsize: 0<br>maxsize: 1000|Provides information about image types supported by the system.|
+|imageTypeSupported|Common.ImageType|false|array: true<br>minsize: 0<br>maxsize: 1000|Provides information about image types supported by the system.|
 |templatesAvailable|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 100|A set of all window templates available on the head unit.|
 |numCustomPresetsAvailable|Integer|false|minvalue: 1 <br>maxvalue: 100|The number of on-window custom presets available (if any); otherwise omitted.|
 |buttonCapabilities|Common.ButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of buttons and the capabilities of each on-window button.|
