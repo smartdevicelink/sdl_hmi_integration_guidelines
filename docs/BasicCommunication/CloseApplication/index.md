@@ -36,6 +36,16 @@ SDL will:
 
 This RPC has no additional parameter requirements
 
+### Sequence Diagrams
+|||
+Close Application request from mobile application
+![Close Application request from Mobile](./assets/CloseApplicationFromMobile.png)
+|||
+|||
+Close Application after Failed Data Consent Prompt
+![Close Application Failed Data](./assets/CloseApplicationFailedData.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request
@@ -83,13 +93,3 @@ This RPC has no additional parameter requirements
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-Close Application request from mobile application
-![Close Application request from Mobile](./assets/CloseApplicationFromMobile.png)
-|||
-|||
-Close Application after Failed Data Consent Prompt
-![Close Application Failed Data](./assets/CloseApplicationFailedData.png)
-|||

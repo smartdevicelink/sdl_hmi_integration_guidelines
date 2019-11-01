@@ -51,6 +51,12 @@ If SDL sends a SystemRequest with `requestSubType` parameter to an older system,
 
 This RPC has no additional parameter requirements
 
+### Sequence Diagrams
+|||
+System Request Workflow
+![System Request](./assets/SystemRequestWorkflow.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request
@@ -97,9 +103,3 @@ This RPC has no additional parameter requirements
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-System Request Workflow
-![System Request](./assets/SystemRequestWorkflow.png)
-|||

@@ -28,6 +28,13 @@ Currently this notification is not used in any HMI workflows, but in case of nec
 #### Parameters
 This RPC has no additional parameter requirements.
 
+### Sequence Diagrams
+
+|||
+Policy Table Update flow
+![OnPolicyUpdate](./assets/OnPolicyUpdate.jpg)
+|||
+
 ### JSON Message Examples
 
 #### Example Notification
@@ -37,12 +44,3 @@ This RPC has no additional parameter requirements.
 	"method" : "SDL.OnPolicyUpdate"
 }
 ```
-
-### Sequence Diagrams
-
-|||
-Policy Table Update flow
-![OnPolicyUpdate](./assets/OnPolicyUpdate.jpg)
-|||
-
-

@@ -43,6 +43,17 @@ c) SDL  uses `OnAppPermissionConsent` value (ON/OFF) received from HMI through i
 |externalConsentStatus|[Common.ExternalConsentStatus](../../common/structs/#externalconsentstatus)|false|array: true <br>minsize: 1<br>maxsize: 100|
 |source|[Common.ConsentSource](../../common/enums/#consentsource)|true||
 
+### Sequence Diagrams
+
+|||
+OnAppPermissionConsent
+![OnAppPermissionConsent1](./assets/OnAppPermissionConsent.png)
+|||
+|||
+OnAppPermissionConsent (id<->name dependency)
+![OnAppPermissionConsent](./assets/OnAppPermissionConsent2.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Notification
@@ -64,15 +75,3 @@ c) SDL  uses `OnAppPermissionConsent` value (ON/OFF) received from HMI through i
   }
 }
 ```
-
-### Sequence Diagrams
-
-|||
-OnAppPermissionConsent
-![OnAppPermissionConsent1](./assets/OnAppPermissionConsent.png)
-|||
-|||
-OnAppPermissionConsent (id<->name dependency)
-![OnAppPermissionConsent](./assets/OnAppPermissionConsent2.png)
-|||
-

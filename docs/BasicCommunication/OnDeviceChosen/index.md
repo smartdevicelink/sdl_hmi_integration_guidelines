@@ -32,6 +32,12 @@ The list of known devices is provided to the HMI in the [UpdateDeviceList](../Up
 |:---|:---|:--------|:---------|
 |deviceInfo|[Common.DeviceInfo](../../common/structs/#deviceinfo)|true||
 
+### Sequence Diagrams
+|||
+OnDeviceChosen
+![OnDeviceChosen](./assets/OnDeviceChosen.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Notification
@@ -50,8 +56,3 @@ The list of known devices is provided to the HMI in the [UpdateDeviceList](../Up
 }
 ```
 
-### Sequence Diagrams
-|||
-OnDeviceChosen
-![OnDeviceChosen](./assets/OnDeviceChosen.png)
-|||

@@ -15,6 +15,12 @@ Purpose
 
 This RPC has no additional parameter requirements
 
+### Sequence Diagrams
+|||
+Started on PTT Button Press
+![Started](./assets/Started.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Notification
@@ -26,8 +32,3 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### Sequence Diagrams
-|||
-Started on PTT Button Press
-![Started](./assets/Started.png)
-|||

@@ -28,6 +28,12 @@ Purpose
 |ecuHeader|Integer|true|minvalue: 0<br>maxvalue: 65535|
 |dtc|String|false|array: true<br>minsize: 1<br>maxsize: 15<br>maxlength: 10|
 
+### Sequence Diagrams
+|||
+GetDTCs
+![GetDTCs](./assets/GetDTCs.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request
@@ -79,9 +85,3 @@ Purpose
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-GetDTCs
-![GetDTCs](./assets/GetDTCs.png)
-|||

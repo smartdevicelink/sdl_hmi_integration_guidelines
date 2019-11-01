@@ -29,6 +29,12 @@ Send `BC.OnIgnitionCycleOver` together with `BC.OnExitAllApplications(IGNITION_O
 
 This RPC has no additional parameter requirements
 
+### Sequence Diagrams
+|||
+OnIgnitionCycleOver in triggering a Policy Table Update flow
+![OnIgnitionCycleOver](./assets/OnIgnitionCycleOver_in_Proprietary_PTU_flow.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Notification
@@ -38,9 +44,3 @@ This RPC has no additional parameter requirements
 	"method" : "BasicCommunication.OnIgnitionCycleOver"
 }
 ```
-
-### Sequence Diagrams
-|||
-OnIgnitionCycleOver in triggering a Policy Table Update flow
-![OnIgnitionCycleOver](./assets/OnIgnitionCycleOver_in_Proprietary_PTU_flow.png)
-|||

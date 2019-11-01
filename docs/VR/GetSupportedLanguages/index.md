@@ -23,6 +23,12 @@ This RPC has no additional parameter requirements
 |:---|:---|:--------|:---------|
 |languages|[Common.Language](../../common/enums/#language)|true|array: true<br>minsize: 1<br>maxsize: 100|
 
+### Sequence Diagrams
+|||
+GetSupportedLanguages
+![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request
@@ -67,9 +73,3 @@ This RPC has no additional parameter requirements
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-GetSupportedLanguages
-![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
-|||

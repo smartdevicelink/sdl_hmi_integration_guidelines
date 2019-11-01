@@ -37,6 +37,12 @@ This RPC has no additional parameter requirements.
 |:---|:---|:--------|:---------|
 |attenuatedSupported|Boolean|true||
 
+### Sequence Diagrams
+|||
+MixingAudioSupported Messaging
+![Mixing Audio Supported](./assets/MixingAudioSupported.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request
@@ -81,9 +87,3 @@ This RPC has no additional parameter requirements.
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-MixingAudioSupported Messaging
-![Mixing Audio Supported](./assets/MixingAudioSupported.png)
-|||

@@ -61,6 +61,21 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
 
 This RPC has no additional parameter requirements
 
+### Sequence Diagrams
+
+|||
+UpdateDeviceList after SDL discovers device over BT or USB
+![Update Device List BT USB](./assets/UpdateDeviceListBTUSB.png)
+|||
+|||
+UpdateDeviceList iOS
+![Update Device List iOS](./assets/UpdateDeviceListiOS.png)
+|||
+|||
+UpdateDeviceList USB AOA
+![Update Device List AOA](./assets/UpdateDeviceListAOA.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request
@@ -116,18 +131,3 @@ This RPC has no additional parameter requirements
   }
 }
 ```
-
-### Sequence Diagrams
-
-|||
-UpdateDeviceList after SDL discovers device over BT or USB
-![Update Device List BT USB](./assets/UpdateDeviceListBTUSB.png)
-|||
-|||
-UpdateDeviceList iOS
-![Update Device List iOS](./assets/UpdateDeviceListiOS.png)
-|||
-|||
-UpdateDeviceList USB AOA
-![Update Device List AOA](./assets/UpdateDeviceListAOA.png)
-|||
