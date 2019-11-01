@@ -1,7 +1,5 @@
 ## UpdateSDL
 
-### Notification
-
 Type
 : Function
 

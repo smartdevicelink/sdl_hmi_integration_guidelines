@@ -1,8 +1,6 @@
 ## OnAppPermissionConsent
 
 
-### Notification
-
 Type
 : Notification  
 
@@ -33,6 +31,8 @@ a) SDL ignores all invalid notifications which come from HMI (invalid JSON, inva
 b) `ExternalConsentStatus` either user_dissalows or user_allows applications functional groupings depending on predefined settings in policy table.  
 c) SDL  uses `OnAppPermissionConsent` value (ON/OFF) received from HMI through ignition cycles until this value is changed by corresponding notification from HMI.
 !!!
+
+### Notification
 
 #### Parameters
 
