@@ -71,7 +71,9 @@ System Request file upload using Put File
 ![OnPutFile](./assets/OnPutFileSystemRequest.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

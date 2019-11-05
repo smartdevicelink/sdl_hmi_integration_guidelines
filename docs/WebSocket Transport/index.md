@@ -101,7 +101,9 @@ An RPC call is represented by sending a Request object to a Server. The Request 
 | "method" | A String containing the information of the method to be invoked. The format is `[componentName].[methodName]`.|
 | "params" | A structured value that holds the parameter values to be used during the invocation of the method. This property may be omitted.|
 
-### Example Requests
+### JSON Message Examples
+
+#### Example Requests
 #### Request with No Parameters
 ```json
 {
@@ -146,7 +148,9 @@ A notification is a request object without an `id` property. For all the other p
 
 The receiver should not reply to a notification, i.e. no response object needs to be returned to the client upon receipt of a notification.
 
-### Example Notifications
+### JSON Message Examples
+
+#### Example Notifications
 #### Notification With No Parameters
 ```json
 {
@@ -183,7 +187,7 @@ On receipt of a request message, the server must reply with a response. The resp
 |"jsonrpc"| Must be exactly **"2.0"**|
 |"result"| Required on Success. Must not exist if there was an error invoking the method. The result property must contain a `method` field which is the same as the corresponding request, a `code` field with **0** to indicate success or **21** to indicate success with warnings.  No other [result codes](../common/enums/#result) should be sent in the result property. The result property may also include additional properties as defined in the HMI_API.|
 
-### Example Responses
+#### Example Responses
 #### Response with No Parameters
 ```json
 {

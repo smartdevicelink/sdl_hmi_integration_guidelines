@@ -68,7 +68,9 @@ OnVehicleData
 ![OnVehicleData](./assets/OnVehicleData.jpg)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

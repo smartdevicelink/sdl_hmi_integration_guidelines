@@ -31,7 +31,9 @@ ChangeRegistration
 ![ChangeRegistration](./assets/ChangeRegistration.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -45,7 +47,8 @@ ChangeRegistration
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -59,7 +62,7 @@ ChangeRegistration
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

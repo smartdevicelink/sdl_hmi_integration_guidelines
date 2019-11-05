@@ -29,7 +29,9 @@ StopAudioStream
 ![StopAudioStream](./assets/StopAudioStream.jpg)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -41,7 +43,8 @@ StopAudioStream
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -55,7 +58,7 @@ StopAudioStream
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -29,7 +29,9 @@ ClosePopUp for UI.PerformInteraction
 ![ClosePopUp](./assets/ClosePopUp.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -38,7 +40,8 @@ ClosePopUp for UI.PerformInteraction
   "method" : "UI.ClosePopUp"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -52,7 +55,7 @@ ClosePopUp for UI.PerformInteraction
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

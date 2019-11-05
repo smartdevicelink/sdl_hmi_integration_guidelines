@@ -37,7 +37,15 @@ This RPC has no additional parameter requirements.
 |language|[Common.Language](../../common/enums/#language)|true||
 |wersCountryCode|String|true|maxlength: 500|
 
-### Example Request
+### Sequence Diagrams
+|||
+GetSystemInfo
+![GetSysteminfo](./assets/GetSystemInfo.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -47,7 +55,7 @@ This RPC has no additional parameter requirements.
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -65,7 +73,7 @@ This RPC has no additional parameter requirements.
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -82,9 +90,3 @@ This RPC has no additional parameter requirements.
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-GetSystemInfo
-![GetSysteminfo](./assets/GetSystemInfo.png)
-|||

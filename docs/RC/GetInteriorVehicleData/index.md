@@ -19,7 +19,7 @@ Otherwise, SDL responds to the request with the cached data without forwarding i
 
 The HMI should return interior vehicle data that corresponds to the requested module (`moduleId` + `moduleType`).
 
-### Request  
+### Request
 
 GetInteriorVehicleData is a request originated by a Remote Control Mobile Application. 
 If the optional `moduleId` is not provided in a GetInteriorVehicleData_request from a Remote Control Mobile Application, and if there is at least one module (published by capabilities) of the same moduleType, SDL core will use the default `moduleId` (the moduleId of first module provided in RC capabilities for requested `moduleType`) when processing the request.
@@ -53,7 +53,9 @@ GetInteriorVehicleData
 ![GetInteriorVehicleData](assets/GetInteriorVehicleData.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -67,7 +69,7 @@ GetInteriorVehicleData
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -103,7 +105,7 @@ GetInteriorVehicleData
 
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

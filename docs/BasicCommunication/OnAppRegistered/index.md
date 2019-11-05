@@ -101,7 +101,9 @@ Running the same apps from multiple devices at the same time
 ![OnAppRegistered](./assets/OnAppRegisteredMultipleDevices.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
 	"jsonrpc": "2.0",
@@ -125,7 +127,7 @@ Running the same apps from multiple devices at the same time
 }
 ```
 
-#### Cloud App JSON Example Notification
+#### Cloud App Example Notification
 
 ```json
 {

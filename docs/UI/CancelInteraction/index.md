@@ -19,6 +19,12 @@ Purpose
 |cancelID|Integer|false||
 |functionID|Integer|true|Can be any one of AlertID, PerformInteractionID, SliderID or ScrollableMessageID|
 
+### Response
+
+#### Parameters
+
+This RPC has no additional parameter requirements
+
 ### Sequence Diagrams
 |||
 CancelInteraction for any UI.Alert
@@ -35,7 +41,9 @@ CancelInteraction for specific UI.Alert using mismatched cancelID
 ![CancelInteraction](./assets/CancelInteractionSpecificAlertWrong.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -49,7 +57,8 @@ CancelInteraction for specific UI.Alert using mismatched cancelID
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -63,7 +72,7 @@ CancelInteraction for specific UI.Alert using mismatched cancelID
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

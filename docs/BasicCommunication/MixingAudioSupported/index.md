@@ -37,7 +37,15 @@ This RPC has no additional parameter requirements.
 |:---|:---|:--------|:---------|
 |attenuatedSupported|Boolean|true||
 
-### Request Example
+### Sequence Diagrams
+|||
+MixingAudioSupported Messaging
+![Mixing Audio Supported](./assets/MixingAudioSupported.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -47,7 +55,7 @@ This RPC has no additional parameter requirements.
 }
 ```
 
-### Response Example
+#### Example Response
 
 ```json
 {
@@ -62,7 +70,7 @@ This RPC has no additional parameter requirements.
 }
 ```
 
-### Error Example
+#### Example Error
 
 ```json
 {
@@ -79,9 +87,3 @@ This RPC has no additional parameter requirements.
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-MixingAudioSupported Messaging
-![Mixing Audio Supported](./assets/MixingAudioSupported.png)
-|||

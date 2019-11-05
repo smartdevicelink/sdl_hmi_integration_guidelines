@@ -79,7 +79,9 @@ Alert BOTH UI Closed before TTS finishes Speaking
 ![Alert](./assets/AlertTTS.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -112,7 +114,8 @@ Alert BOTH UI Closed before TTS finishes Speaking
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -126,7 +129,7 @@ Alert BOTH UI Closed before TTS finishes Speaking
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -31,7 +31,9 @@ SubscribeWayPoints
 ![SubscribeWayPoints](./assets/SubscribeWayPoints.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -42,7 +44,7 @@ SubscribeWayPoints
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -56,7 +58,7 @@ SubscribeWayPoints
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

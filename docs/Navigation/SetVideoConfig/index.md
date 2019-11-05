@@ -52,7 +52,9 @@ SetVideoConfig error flow
 ![SetVideoConfig](./assets/SetVideoConfigErrorFlow.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -73,7 +75,7 @@ SetVideoConfig error flow
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -87,7 +89,7 @@ SetVideoConfig error flow
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

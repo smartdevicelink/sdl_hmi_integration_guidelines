@@ -56,7 +56,9 @@ GetSystemTime
 |||
 
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -66,7 +68,7 @@ GetSystemTime
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {  
@@ -92,7 +94,7 @@ GetSystemTime
 }
 ```
 
-### Example Error  
+#### Example Error
 
 ```json
 {  

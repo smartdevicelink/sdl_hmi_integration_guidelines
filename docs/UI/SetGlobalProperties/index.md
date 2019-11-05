@@ -96,7 +96,9 @@ SetGlobalProperties for active app on HMI with VR activation
 ![SetGlobalProperties](./assets/SetGlobalPropertiesActiveVRActivate.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -149,7 +151,8 @@ SetGlobalProperties for active app on HMI with VR activation
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -163,7 +166,7 @@ SetGlobalProperties for active app on HMI with VR activation
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

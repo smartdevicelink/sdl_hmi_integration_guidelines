@@ -23,7 +23,15 @@ This RPC has no additional parameter requirements
 |:---|:---|:--------|:---------|
 |languages|[Common.Language](../../common/enums/#language)|true|array: true<br>minsize: 1<br>maxsize: 100|
 
-### Example Request
+### Sequence Diagrams
+|||
+GetSupportedLanguages
+![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -32,7 +40,8 @@ This RPC has no additional parameter requirements
   "method" : "VR.GetSupportedLanguages"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -47,7 +56,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -64,9 +73,3 @@ This RPC has no additional parameter requirements
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-GetSupportedLanguages
-![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
-|||

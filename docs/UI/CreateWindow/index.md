@@ -1,4 +1,4 @@
-## Create window
+## CreateWindow
 
 Type
 : Function
@@ -55,7 +55,9 @@ CreateWindow
 |||
 
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -73,7 +75,7 @@ CreateWindow
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -87,7 +89,7 @@ CreateWindow
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -27,7 +27,9 @@ StopSpeaking
 ![StopSpeaking](./assets/StopSpeaking.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -36,7 +38,8 @@ StopSpeaking
   "method" : "TTS.StopSpeaking"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -50,7 +53,7 @@ StopSpeaking
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

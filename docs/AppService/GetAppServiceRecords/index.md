@@ -38,7 +38,9 @@ GetAppServiceRecords
 ![GetAppServiceRecords](./assets/GetAppServiceRecords.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -51,7 +53,7 @@ GetAppServiceRecords
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -92,6 +94,24 @@ GetAppServiceRecords
         "servicePublished": true
       }
     ]
+  }
+}
+```
+
+#### Example Error
+
+```json
+{
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "Request timeout",
+    "data" :
+    {
+      "method" : "AppService.GetAppServiceRecords"
+    }
   }
 }
 ```

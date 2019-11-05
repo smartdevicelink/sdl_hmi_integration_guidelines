@@ -55,7 +55,9 @@ Audio Source Resume one audio app one phone call app
 ![OnResumeAudioSource](./assets/OnResumeAudioSourceMultiple.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

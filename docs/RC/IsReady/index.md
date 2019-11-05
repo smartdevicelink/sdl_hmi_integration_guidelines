@@ -46,7 +46,9 @@ IsReady
 ![IsReady](./assets/IsReady_GetCapabilities.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -56,7 +58,7 @@ IsReady
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -71,7 +73,7 @@ IsReady
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

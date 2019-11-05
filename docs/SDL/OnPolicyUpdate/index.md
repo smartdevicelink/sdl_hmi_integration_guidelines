@@ -23,16 +23,10 @@ Currently this notification is not used in any HMI workflows, but in case of nec
    - In case SDL receives `SDL.OnPolicyUpdate` notification from HMI, SDL PoliciesManager must start the procedure of Policy Table Update (that is, create PT Snapshot, send it to HMI for encryption, and etc. what is defined by related requirements).
 !!!
 
+### Notification
+
 #### Parameters
 This RPC has no additional parameter requirements.
-
-#### JSON Example Notification
-```json
-{
-	"jsonrpc" : "2.0",
-	"method" : "SDL.OnPolicyUpdate"
-}
-```
 
 ### Sequence Diagrams
 
@@ -41,4 +35,12 @@ Policy Table Update flow
 ![OnPolicyUpdate](./assets/OnPolicyUpdate.jpg)
 |||
 
+### JSON Message Examples
 
+#### Example Notification
+```json
+{
+	"jsonrpc" : "2.0",
+	"method" : "SDL.OnPolicyUpdate"
+}
+```

@@ -44,7 +44,9 @@ IsReady
 ![IsReady](./assets/IsReady.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -53,7 +55,8 @@ IsReady
   "method" : "VehicleInfo.IsReady"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -68,7 +71,7 @@ IsReady
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

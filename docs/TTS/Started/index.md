@@ -25,42 +25,12 @@ Started during PerformInteraction
 ![Started](./assets/StartedFromPerformInteraction.png)
 |||
 
-### Example Request
+### JSON Message Examples
 
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",
   "method" : "TTS.Started"
-}
-```
-### Example Response
-
-```json
-{
-  "id" : 37,
-  "jsonrpc" : "2.0",
-  "result" :
-  {
-    "code" : 0,
-    "method" : "TTS.Started"
-  }
-}
-```
-
-### Example Error
-
-```json
-{
-  "id" : 37,
-  "jsonrpc" : "2.0",
-  "error" :
-  {
-    "code" : 22,
-    "message" : "Something went wrong",
-    "data" :
-    {
-      "method" : "TTS.Started"
-    }
-  }
 }
 ```

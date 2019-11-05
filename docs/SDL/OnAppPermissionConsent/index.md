@@ -1,8 +1,6 @@
 ## OnAppPermissionConsent
 
 
-### Notification
-
 Type
 : Notification  
 
@@ -34,6 +32,8 @@ b) `ExternalConsentStatus` either user_dissalows or user_allows applications fun
 c) SDL  uses `OnAppPermissionConsent` value (ON/OFF) received from HMI through ignition cycles until this value is changed by corresponding notification from HMI.
 !!!
 
+### Notification
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -43,7 +43,20 @@ c) SDL  uses `OnAppPermissionConsent` value (ON/OFF) received from HMI through i
 |externalConsentStatus|[Common.ExternalConsentStatus](../../common/structs/#externalconsentstatus)|false|array: true <br>minsize: 1<br>maxsize: 100|
 |source|[Common.ConsentSource](../../common/enums/#consentsource)|true||
 
-#### JSON Example Notification
+### Sequence Diagrams
+
+|||
+OnAppPermissionConsent
+![OnAppPermissionConsent1](./assets/OnAppPermissionConsent.png)
+|||
+|||
+OnAppPermissionConsent (id<->name dependency)
+![OnAppPermissionConsent](./assets/OnAppPermissionConsent2.png)
+|||
+
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",
@@ -62,15 +75,3 @@ c) SDL  uses `OnAppPermissionConsent` value (ON/OFF) received from HMI through i
   }
 }
 ```
-
-### Sequence Diagrams
-
-|||
-OnAppPermissionConsent
-![OnAppPermissionConsent1](./assets/OnAppPermissionConsent.png)
-|||
-|||
-OnAppPermissionConsent (id<->name dependency)
-![OnAppPermissionConsent](./assets/OnAppPermissionConsent2.png)
-|||
-

@@ -48,7 +48,9 @@ PerformAppServiceInteraction with Mobile ASC
 ![PerformAppServiceInteraction](./assets/PerformAppServiceInteractionFromMobile.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -63,7 +65,7 @@ PerformAppServiceInteraction with Mobile ASC
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -77,7 +79,7 @@ PerformAppServiceInteraction with Mobile ASC
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

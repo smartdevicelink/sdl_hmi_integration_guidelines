@@ -38,7 +38,9 @@ PublishAppService
 ![PublishAppService](./assets/PublishAppService.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -60,7 +62,7 @@ PublishAppService
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -84,6 +86,24 @@ PublishAppService
       },
       "code" : 0,
       "method" : "AppService.PublishAppService"
+  }
+}
+```
+
+#### Example Error
+
+```json
+{
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "Request timeout",
+    "data" :
+    {
+      "method" : "AppService.PublishAppService"
+    }
   }
 }
 ```

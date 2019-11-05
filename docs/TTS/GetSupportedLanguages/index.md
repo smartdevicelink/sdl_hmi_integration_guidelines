@@ -29,7 +29,9 @@ GetSupportedLanguages
 ![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -38,7 +40,8 @@ GetSupportedLanguages
   "method" : "TTS.GetSupportedLanguages"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -53,7 +56,7 @@ GetSupportedLanguages
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

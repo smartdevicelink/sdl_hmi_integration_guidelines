@@ -12,6 +12,8 @@ Purpose
 The app must stop video streaming after receiving onHMIStatus with videoStreamingState=NOT_STREAMBLE. 
 If the app does not stop streaming after certain amount of time, SDL sends a StopService Control Frame to the app in protocol layer.
 
+### Request
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -30,7 +32,9 @@ StopStream
 ![StopStream](./assets/StopStream.jpg)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -42,7 +46,8 @@ StopStream
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -56,7 +61,7 @@ StopStream
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

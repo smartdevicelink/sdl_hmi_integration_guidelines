@@ -43,7 +43,9 @@ GetInteriorVehicleDataConsent
 ![GetInteriorVehicleDataConsent](assets/GetInteriorVehicleDataConsent.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -57,7 +59,7 @@ GetInteriorVehicleDataConsent
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -71,7 +73,7 @@ GetInteriorVehicleDataConsent
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

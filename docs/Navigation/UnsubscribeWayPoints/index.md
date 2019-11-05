@@ -31,7 +31,9 @@ UnsubscribeWayPoints
 ![UnsubscribeWayPoints](./assets/UnsubscribeWayPoints.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -42,7 +44,7 @@ UnsubscribeWayPoints
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -56,7 +58,7 @@ UnsubscribeWayPoints
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

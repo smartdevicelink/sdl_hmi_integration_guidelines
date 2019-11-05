@@ -17,7 +17,9 @@ Purpose
 |:---|:---|:--------|:---------|
 |language|[Common.Language](../../common/enums/#language)|true||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc": "2.0",

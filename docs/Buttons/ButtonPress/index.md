@@ -50,7 +50,9 @@ ButtonPress
 ![ButtonPress](assets/ButtonPress.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -65,7 +67,7 @@ ButtonPress
     }
 }
 ```
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -78,7 +80,7 @@ ButtonPress
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

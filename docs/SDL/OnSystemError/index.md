@@ -17,7 +17,9 @@ Purpose
 |:---|:---|:--------|:---------|
 |error|[Common.SystemError](../../common/enums/#systemerror)|true||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc": "2.0",

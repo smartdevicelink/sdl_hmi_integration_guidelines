@@ -62,51 +62,6 @@ If `level` is `FULL` or `LIMITED`:
 
 This RPC has no additional parameter requirements
 
-### Example Request
-
-```json
-{
-  "id" : 47,
-  "jsonrpc" : "2.0",
-  "method" : "BasicCommunication.ActivateApp",
-  "result" :
-  {
-    "appID" : 65368
-  }
-}
-```
-### Example Response
-
-```json
-{
-  "id" : 47,
-  "jsonrpc" : "2.0",
-  "result" :
-  {
-    "code" : 0,
-    "method" : "BasicCommunication.ActivateApp"
-  }
-}
-```
-
-### Example Error
-
-```json
-{
-  "id" : 47,
-  "jsonrpc" : "2.0",
-  "error" :
-  {
-    "code" : 13,
-    "message" : "One of the provided IDs is not valid.",
-    "data" :
-    {
-      "method" : "BasicCommunication.ActivateApp"
-    }
-  }
-}
-```
-
 ### Sequence Diagrams
 |||
 Activate App after successful Resumption
@@ -124,3 +79,52 @@ Activate App after Unexpected Disconnect
 Activate App after Accepted Data Consent Prompt
 ![Activate App Successful Data](./assets/ActivateAppSuccessfulData.png)
 |||
+
+### JSON Message Examples
+
+#### Example Request
+
+```json
+{
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.ActivateApp",
+  "result" :
+  {
+    "appID" : 65368
+  }
+}
+```
+
+#### Example Response
+
+```json
+{
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "result" :
+  {
+    "code" : 0,
+    "method" : "BasicCommunication.ActivateApp"
+  }
+}
+```
+
+#### Example Error
+
+```json
+{
+  "id" : 47,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 13,
+    "message" : "One of the provided IDs is not valid.",
+    "data" :
+    {
+      "method" : "BasicCommunication.ActivateApp"
+    }
+  }
+}
+```
+

@@ -23,16 +23,18 @@ This RPC tells SDL to initiate a new device search. The [OnUpdateDeviceList](../
 
 This RPC has no additional parameter requirements
 
-#### JSON Example Notification
+### Sequence Diagrams
+|||
+Starting Device Discovery
+![OnStartDeviceDiscovery](./assets/OnStartDeviceDiscovery.png)
+|||
+
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",
   "method" : "BasicCommunication.OnStartDeviceDiscovery"
 }
 ```
-
-### Sequence Diagrams
-|||
-Starting Device Discovery
-![OnStartDeviceDiscovery](./assets/OnStartDeviceDiscovery.png)
-|||

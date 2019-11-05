@@ -30,6 +30,7 @@ The driver's application should be able to control any free module that is allow
 
 
 ### Response
+
 #### Parameters
 This RPC has no additional parameter requirements
 
@@ -40,7 +41,9 @@ SetGlobalProperties
 ![SetGlobalProperties](assets/RC_SetGlobalProperties.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -63,7 +66,7 @@ SetGlobalProperties
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -77,7 +80,7 @@ SetGlobalProperties
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

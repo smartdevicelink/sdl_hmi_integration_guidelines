@@ -50,7 +50,9 @@ Active App Unregistered
 ![OnAppUnregistered](./assets/OnAppUnregistered.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
 ```json
 {
   "jsonrpc" : "2.0",

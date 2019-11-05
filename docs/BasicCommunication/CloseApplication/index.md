@@ -36,7 +36,19 @@ SDL will:
 
 This RPC has no additional parameter requirements
 
-### Example Request
+### Sequence Diagrams
+|||
+Close Application request from mobile application
+![Close Application request from Mobile](./assets/CloseApplicationFromMobile.png)
+|||
+|||
+Close Application after Failed Data Consent Prompt
+![Close Application Failed Data](./assets/CloseApplicationFailedData.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -49,7 +61,8 @@ This RPC has no additional parameter requirements
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -63,7 +76,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -80,13 +93,3 @@ This RPC has no additional parameter requirements
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-Close Application request from mobile application
-![Close Application request from Mobile](./assets/CloseApplicationFromMobile.png)
-|||
-|||
-Close Application after Failed Data Consent Prompt
-![Close Application Failed Data](./assets/CloseApplicationFailedData.png)
-|||

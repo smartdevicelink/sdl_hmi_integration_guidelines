@@ -70,7 +70,9 @@ AlertManeuver Rejected
 ![AlertManeuver](./assets/AlertManeuverRejected.jpg)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -97,7 +99,7 @@ AlertManeuver Rejected
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -111,7 +113,7 @@ AlertManeuver Rejected
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
