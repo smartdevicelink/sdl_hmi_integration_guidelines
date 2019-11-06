@@ -26,7 +26,7 @@ SDL will:
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |appID|Integer|true|The application to be removed from the foreground|
 

@@ -22,7 +22,7 @@ In order to work with multiple widget windows, the app needs to be able to delet
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |windowID|Integer|true|The value of '0' will always be the default main window on the main display and cannot be deleted.|
 |appID|Integer|true||
