@@ -51,10 +51,11 @@ The list of RPCs and data structures that `OnPutFile` affects are:
 |offset|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |length|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |fileSize|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
+|FileName|String|true|maxlength: 255|
 |syncFileName|String|true|maxlength: 255|
 |fileType|[Common.FileType](../../common/enums/#filetype)|true||
 |persistentFile|Boolean|false|defvalue: false|
-|isSystemFile|Boolean|false||
+|isSystemFile|Boolean|false|defvalue: false|
 |appID|Integer|false||
 
 ### Sequence Diagrams

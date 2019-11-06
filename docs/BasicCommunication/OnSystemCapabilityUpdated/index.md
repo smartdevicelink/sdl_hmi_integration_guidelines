@@ -19,6 +19,7 @@ Purpose
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |systemCapability|[Common.SystemCapability](../../common/structs/#systemcapability)|true||
+|appID|Integer|false||
 
 ### Sequence Diagrams
 |||

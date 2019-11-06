@@ -34,7 +34,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|value|String|true|array: true<br>maxlength: 1000<br>minsize: 1<br>maxsize: 100|
+|value|String|false|array: true<br>maxlength: 1000<br>minsize: 1<br>maxsize: 100|
  
 
 ### Sequence Diagrams

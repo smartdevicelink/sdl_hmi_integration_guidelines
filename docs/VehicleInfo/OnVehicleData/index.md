@@ -58,7 +58,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |myKey|[Common.MyKey](../../common/structs/#mykey)|false||
 |turnSignal|[Common.TurnSignal](../../common/enums/#turnsignal)|false||
 |fuelRange|[Common.FuelRange](../../common/structs/#fuelrange)|false|array: true<br>minsize: 0<br>maxsize: 100|
-|engineOilLife|Float|false|minvalue=0<br>maxvalue=100|
+|engineOilLife|Float|false|minvalue: 0<br>maxvalue: 100|
 |electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
 |cloudAppVehicleID|String|false||
 

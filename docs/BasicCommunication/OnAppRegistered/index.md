@@ -75,9 +75,13 @@ SDL Apps that are using the websocket transport adapter will send `OnAppRegister
 |:---|:---|:--------|:---------|
 |application|[Common.HMIApplication](../../common/structs/#hmiapplication)|true||
 |ttsName|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
-|vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40 <br> Must not interfere with any name of previously registered applications from the same device.|
+|vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40|
 |resumeVrGrammars|Boolean|false||
 |priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
+
+!!! MUST
+  Parameter `vrSynonyms` must not interfere with any name of previously registered applications from the same device.
+!!!
 
 ### Sequence Diagrams
 |||

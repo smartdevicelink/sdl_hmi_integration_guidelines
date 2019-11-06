@@ -45,7 +45,7 @@ _**SDL Note**:_
 |appUnauthorized|Boolean|false||
 |priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
 |requestType|[Common.RequestType](../../common/enums/#requesttype)|false|array: true<br>minsize: 0<br>maxsize: 100|  
-|requestSubType|String|false|array: true<br> minsize: 0<br> maxsize: 100 <br> maxlength: 100|
+|requestSubType|String|false|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 100|
 
 ### Sequence Diagrams
 _**Preconditions to the sequence:**_   

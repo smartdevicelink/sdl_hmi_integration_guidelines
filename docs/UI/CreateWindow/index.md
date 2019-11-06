@@ -41,6 +41,7 @@ This request is sent by SDL to HMI to create one or multiple widget windows.
 |type|[Common.WindowType](../../common/enums/#windowtype)|true||
 |associatedServiceType|String|false||
 |duplicateUpdatesFromWindowID|Integer|false||
+|appID|Integer|true||
 
 ### Response
 

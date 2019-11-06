@@ -49,7 +49,7 @@ SDL forwards a request from the mobile application to get waypoint/destination d
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |wayPoints|[Common.LocationDetails](../../common/structs/#locationdetails)|false|array: true<br>minsize: 1<br>maxsize: 10||
-
+|appID|Integer|true||ID of the application|
 
 ### Sequence Diagrams
 |||

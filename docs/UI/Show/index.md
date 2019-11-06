@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|showStrings|[Common.TextFieldStruct](../../common/structs/#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 7|
+|showStrings|[Common.TextFieldStruct](../../common/structs/#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 8|
 |alignment|[Common.TextAlignment](../../common/enums/#textalignment)|false||
 |graphic|[Common.Image](../../common/structs/#image)|false||
 |secondaryGraphic|[Common.Image](../../common/structs/#image)|false||
