@@ -11,7 +11,8 @@ Purpose
 
 In case SDL is built with **"-DEXTENDED_POLICY: HTTP" flag**, SDL supports PolicyTableUpdate flow **without HMI-related logic**. 
 ### Request
-``BC.PolicyUpdate`` represents SDL-generated request to start the PTU sequence.
+``BC.PolicyUpdate`` represents SDL-generated request to start the PTU sequence.  
+In case SDL is built with "-DEXTENDED_POLICY: PROPRIETARY"  or "-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY" flag and PolicyTableUpdate is required, SDL internally creates PT snapshot and sends BC.PolicyUpdate(fileLocation) to HMI to start PTU sequence.
 
 !!! MUST
 **Proprietary Policies**:
@@ -25,8 +26,8 @@ In case SDL is built with **"-DEXTENDED_POLICY: HTTP" flag**, SDL supports Polic
 
 !!! NOTE
 1. ``BC.PolicyUpdate`` dependencies:
-   * SDL sends ``BC.PolicyUpdate`` _only in case_ it's built with "-DEXTENDED_POLICY: PROPRIETARY" flag or without this flag. _Otherwise_ SDL handles the entire PTU flow by itself.
-   * If HMI fails to respond ``BC.PolicyUpdate`` or responds with error, PTU sequence will _not_ be continued.  
+   * If HMI fails to respond ``BC.PolicyUpdate`` or responds with error, PTU sequence will _not_ be continued.
+   * Once SDL receives ``BC.PolicyUpdate (SUCCESS)``response from HMI, SDL PoliciesManager must change the status to "UPDATING" and notify HMI with OnStatusUpdate("UPDATING").
 2. Triggers for sending ``BC.PolicyUpdate`` (whichever comes first):
    * Days since previous successful PTU (``"exchange_after_x_days"`` value in local PolicyTable (PT)
    * Kilometers since previous successful PTU (``"exchange_after_x_kilometers"`` value in local PT)
@@ -42,7 +43,6 @@ TLS handshake
    * ``timeout`` - value taken from ``"timeout_after_x_seconds"`` field of local PT
    * ``retry`` - array of values from ``"seconds_between_retries"`` field of local PT. SDL handles the PTU retry sequence (re-requesting update if fails to receive during timeout) by itself.
 4. Custom VehicleData changes are available for application to use right after successful PTU.
-5. When SDL  is built with EXTERNAL_PROPRIETARY flow, SDL _PoliciesManager_ must change the status to “UPDATING” and notify HMI with OnStatusUpdate("UPDATING") right after SnapshotPT is sent out to to mobile app via OnSystemRequest() RPC.
 !!!
 
 #### Parameters
