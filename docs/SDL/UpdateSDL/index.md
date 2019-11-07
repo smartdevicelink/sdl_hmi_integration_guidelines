@@ -24,8 +24,7 @@ According to result sent to HMI in UpdateSDL response, SDL will follow Policy Up
 1) UP_TO_DATE – Policy Table is now up to date, but anyway SDL starts a new policy update cycle because of user request (e.i. UpdateSDL).   
 2) UPDATING – Policy Update process is now in already progress, anyway when currently active update process will be finished, SDL must start PT Update from the beginning.   
 3) UPDATE_NEEDED – Policy Table is not up to date, update process must be started by SDL.   
-PoliciesManager must initiate the PT Update sequence (that is, PT Exchange) upon User\`s request delivered to SDL via SDL.UpdateSDL() from HMI and provide a response on a request with current PTU status to HMI.   
-_Information_: PROPRIETARY Policy flow -> SDL must change the flag from "UPDATE_NEEDED" to "UPDATING" right after _BC.PolicyUpdate_ with SnapshotPT is sent to HMI.
+PoliciesManager must initiate the PT Update sequence (that is, PT Exchange) upon User's request delivered to SDL via SDL.UpdateSDL() from HMI and provide a response on a request with current PTU status to HMI.
 !!!
 
 #### Parameters
@@ -41,20 +40,12 @@ This RPC has no additional parameter requirements.
 
 ### Sequence Diagrams
 |||
-UpdateSDL UP_TO_DATE - EXTERNAL_PROPRIETARY Policy Table Update Flow
-![UpdateSDL](./assets/UpdateSDL%20UPDATING.jpg)
+EXTERNAL_PROPRIETARY Policy Table Update Flow triggered by User
+![UpdateSDL](./assets/PTU_external_proprietary_user.png)
 |||
 |||
-UpdateSDL UPDATING - EXTERNAL_PROPRIETARY Policy Table Update Flow
-![UpdateSDL](./assets/UpdateSDL%20UPDATING.jpg)
-|||
-|||
-UpdateSDL UPDATE_NEEDED - EXTERNAL_PROPRIETARY Policy Table Update Flow
-![UpdateSDL](./assets/UpdateSDL%20UPDATE_NEEDED.jpg)
-|||
-|||
-UpdateSDL - PROPRIETARY Policy Table Update Flow
-![UpdateSDL](./assets/Proprietary_PTU_flow_.png)
+EXTERNAL_PROPRIETARY Policy Table Update Flow triggered by SDL
+![PTU_SDL](./assets/PTU_external_proprietary_SDL.png)
 |||
 
 ### JSON Message Examples

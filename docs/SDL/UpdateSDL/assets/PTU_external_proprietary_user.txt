@@ -1,0 +1,34 @@
+-- Policy Update Sequence
+title EXTERNAL_PROPRIETARY Policy Table Update requsted by user 
+
+participant User
+participant Policy Server
+participant Mobile
+participant SDL
+participant HMI
+==<align:center>SDL is built with with **"-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY"** flag\ndevice is consented==
+
+User->HMI: Request PT update (e.g. from Settings Menu)
+HMI->SDL: SDL.UpdateSDL
+opt Policy Table state is up to date
+SDL->HMI: SUCCESS UpdateSDL(UP_TO_DATE)
+note over SDL: Always starts PTU\n requested by User
+SDL->HMI: SDL.OnStatusUpdate(UPDATE_NEEDED)
+end
+
+opt Policy Table Update is currently in progress
+SDL->HMI: SUCCESS UpdateSDL(UPDATING)
+note over SDL: Waits until current PTU cycle is over\nand starts PTU requested by user 
+SDL->HMI: SDL.OnStatusUpdate(UPDATE_NEEDED)
+end
+
+opt Policy Table Update needs update
+SDL->HMI: SUCCESS UpdateSDL(UPDATE_NEEDED)
+note over SDL: Starts new PTU sequence
+SDL->HMI: SDL.OnStatusUpdate(UPDATE_NEEDED)
+end
+
+SDL->SDL: Creates PT snapshot
+SDL->HMI: BC.PolicyUpdate(path_to_PTS)
+HMI-->SDL: SUCCESS: BC.PolicyUpdate
+SDL->HMI: SDL.OnStatusUpdate(UPDATING)
