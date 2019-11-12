@@ -46,7 +46,7 @@ This request is sent by SDL to HMI to create one or multiple widget windows.
 ### Response
 
 #### Parameters
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 
 ### Sequence Diagrams

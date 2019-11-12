@@ -27,7 +27,7 @@ Check mixing audio capabilities and provided an accurate response.
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 

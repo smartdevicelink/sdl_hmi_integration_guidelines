@@ -20,7 +20,7 @@ Send a request to SDL if it needs to get a current policy update status accordin
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 

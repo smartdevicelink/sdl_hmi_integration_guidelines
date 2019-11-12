@@ -29,7 +29,7 @@ _Information_: PROPRIETARY Policy flow -> SDL must change the flag from "UPDATE_
 !!!
 
 #### Parameters
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 

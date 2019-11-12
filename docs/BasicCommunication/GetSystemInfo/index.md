@@ -25,7 +25,7 @@ When SDL starts, it sends GetSystemInfo to update the policies database with the
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 

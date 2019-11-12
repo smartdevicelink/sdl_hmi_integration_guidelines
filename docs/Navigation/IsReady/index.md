@@ -28,7 +28,7 @@ If the Navigation component responds as `unavailable`, SDL will not send further
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 

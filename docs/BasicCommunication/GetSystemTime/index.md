@@ -18,7 +18,7 @@ After sending the request SDL starts [`<DefaultTimeout>`](https://github.com/sma
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 
