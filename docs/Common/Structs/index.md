@@ -84,9 +84,9 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|eCallNotificationStatus|[Common.VehicleDataNotificationStatus](../enums/#vehicledatanotificationstatus)||||
-|auxECallNotificationStatus|[Common.VehicleDataNotificationStatus](../enums/#vehicledatanotificationstatus)||||
-|eCallConfirmationStatus|[Common.ECallConfirmationStatus](../enums/#ecallconfirmationstatus)||||
+|eCallNotificationStatus|[Common.VehicleDataNotificationStatus](../enums/#vehicledatanotificationstatus)|true|||
+|auxECallNotificationStatus|[Common.VehicleDataNotificationStatus](../enums/#vehicledatanotificationstatus)|true|||
+|eCallConfirmationStatus|[Common.ECallConfirmationStatus](../enums/#ecallconfirmationstatus)|true|||
 
 ### DIDResult
 
@@ -107,10 +107,10 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|name|[Common.TextFieldName](../enums/#textfieldname)||||
-|characterSet|[Common.CharacterSet](../enums/#characterset)||||
-|width|Integer||minvalue: 1<br>maxvalue: 500||
-|rows|Integer||minvalue: 1<br>maxvalue: 8||
+|name|[Common.TextFieldName](../enums/#textfieldname)|true|||
+|characterSet|[Common.CharacterSet](../enums/#characterset)|true|||
+|width|Integer|true|minvalue: 1<br>maxvalue: 500||
+|rows|Integer|true|minvalue: 1<br>maxvalue: 8||
 
 ### TouchCoord
 
@@ -146,10 +146,10 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|powerModeActive|Boolean||||
-|powerModeQualificationStatus|[Common.PowerModeQualificationStatus](../enums/#powermodequalificationstatus)||||
-|carModeStatus|[Common.CarModeStatus](../enums/#carmodestatus)||||
-|powerModeStatus|[Common.PowerModeStatus](../enums/#powermodestatus)||||
+|powerModeActive|Boolean|true|||
+|powerModeQualificationStatus|[Common.PowerModeQualificationStatus](../enums/#powermodequalificationstatus)|true|||
+|carModeStatus|[Common.CarModeStatus](../enums/#carmodestatus)|true|||
+|powerModeStatus|[Common.PowerModeStatus](../enums/#powermodestatus)|true|||
 
 ### KeyboardProperties
 
@@ -238,7 +238,7 @@
 |ngnMediaScreenAppName|String|false|maxlength: 100||
 |icon|String|false|||
 |deviceInfo|Common.DeviceInfo|true|||
-|secondaryDeviceInfo|Common.DeviceInfo|true||The ID, serial number, transport type that are acquired through Secondary Transport.|
+|secondaryDeviceInfo|Common.DeviceInfo|false||The ID, serial number, transport type that are acquired through Secondary Transport.|
 |policyAppID|String|true|minlength: 1<br>maxlength: 50||
 |ttsName|Common.TTSChunk|false|array: true<br>minsize: 1<br>maxsize: 100||
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40||
@@ -324,18 +324,18 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|emergencyEventType|[Common.EmergencyEventType](../enums/#emergencyeventtype)||||
-|fuelCutoffStatus|[Common.FuelCutoffStatus](../enums/#fuelcutoffstatus)||||
-|rolloverEvent|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)||||
-|maximumChangeVelocity|Integer||||
-|multipleEvents|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)||||
+|emergencyEventType|[Common.EmergencyEventType](../enums/#emergencyeventtype)|true|||
+|fuelCutoffStatus|[Common.FuelCutoffStatus](../enums/#fuelcutoffstatus)|true|||
+|rolloverEvent|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|maximumChangeVelocity|Integer|true|||
+|multipleEvents|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
 
 ### VehicleDataResult
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|dataType|[Common.VehicleDataType](../enums/#vehicledatatype)||||
-|resultCode|[Common.VehicleDataResultCode](../enums/#vehicledataresultcode)||||
+|dataType|[Common.VehicleDataType](../enums/#vehicledatatype)|true|||
+|resultCode|[Common.VehicleDataResultCode](../enums/#vehicledataresultcode)|true|||
 
 ### PresetBankCapabilities
 
@@ -406,14 +406,14 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|driverAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)||||
-|driverSideAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)||||
-|driverCurtainAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)||||
-|passengerAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)||||
-|passengerCurtainAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)||||
-|driverKneeAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)||||
-|passengerSideAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)||||
-|passengerKneeAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)||||
+|driverAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|driverSideAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|driverCurtainAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|passengerAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|passengerCurtainAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|driverKneeAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|passengerSideAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|passengerKneeAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
 
 ### RGBColor
 
@@ -427,16 +427,16 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|primaryColor|Common.RGBColor|true|||
-|secondaryColor|Common.RGBColor|true|||
-|backgroundColor|Common.RGBColor|true|||
+|primaryColor|Common.RGBColor|false|||
+|secondaryColor|Common.RGBColor|false|||
+|backgroundColor|Common.RGBColor|false|||
 
 ### DisplayCapabilities
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |displayType|[Common.DisplayType](../enums/#displaytype)|true|||
-|displayName|String|true||The name of the display the app is connected to.|
+|displayName|String|false||The name of the display the app is connected to.|
 |textFields|Common.TextField|true|array: true<br>minsize: 0<br>maxsize: 100||
 |imageFields|Common.ImageField|false|array: true<br>minsize: 1<br>maxsize: 100||
 |mediaClockFormats|[Common.MediaClockFormat](../enums/#mediaclockformat)|true|array: true<br>minsize: 0<br>maxsize: 100||
@@ -752,7 +752,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |type|[Common.FuelType](../enums/#fueltype)|false|||
-|range|Float|faslse|minvalue=0<br>maxvalue=10000|The estimate range in KM the vehicle can travel based on fuel level and consumption|
+|range|Float|false|minvalue=0<br>maxvalue=10000|The estimate range in KM the vehicle can travel based on fuel level and consumption|
 
 ### MassageModeData
 
@@ -793,7 +793,7 @@
 |headSupportHorizontalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
 |headSupportVerticalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
 |massageEnabled|Boolean|false|||
-|massageMode|Common.MassageModeData|true|minsize="1" <br> maxsize="2" <br> array="true"||
+|massageMode|Common.MassageModeData|false|minsize="1" <br> maxsize="2" <br> array="true"||
 |massageCushionFirmness|Common.MassageCushionFirmness|false|minsize="1" <br> maxsize="5" <br> array="true"||
 |memory|Common.SeatMemoryAction|false|||
 
