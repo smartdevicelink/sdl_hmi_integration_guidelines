@@ -10,6 +10,7 @@ Purpose
 : Set the UI properties of an application.
 
 ### Description
+
 SDL requests to set-up the data for VR help layout, the name and icon for in-application menu and the properties of the touchscreen keyboard.
 
 The request may arrive for the application whether being active or in background on HMI (depends on Policy Table permissions applicable to mobile application request, by default allowed to operate in all HMI levels except of NONE).
@@ -42,6 +43,7 @@ _**Notes for HMI expected behavior:**_
 !!!
 
 ### Request
+
 #### Behavior
 
 !!! MUST   
@@ -73,6 +75,7 @@ _**Notes for HMI expected behavior:**_
 |menuLayout|[Common.MenuLayout](../../common/enums/#menulayout)|false||
 
 ### Response
+
 |Result |Description |Message type WebSocket|Message type D-Bus|Message Params|
 |:------|:-----------|:---------------------|:-----------------|:-------------|
 |Success|SUCCESS: HMI has set the requested properties.|JSON response|Method return|code: 0|
@@ -91,6 +94,7 @@ In case HMI does not respond SDL's request during SDL-default timeout (10 sec), 
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 SetGlobalProperties for active app on HMI with VR activation
 ![SetGlobalProperties](./assets/SetGlobalPropertiesActiveVRActivate.png)

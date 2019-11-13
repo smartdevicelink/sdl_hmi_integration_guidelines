@@ -57,6 +57,7 @@ OnAppPermissionConsent (id<->name dependency)
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

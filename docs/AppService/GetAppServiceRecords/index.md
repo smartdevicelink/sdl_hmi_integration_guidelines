@@ -33,6 +33,7 @@ If `serviceType` is not included in request, all service records will be returne
 |serviceRecords|[Common.AppServiceRecord](../../common/structs/#appservicerecord)|false|array: true|
 
 ### Sequence Diagrams
+
 |||
 GetAppServiceRecords
 ![GetAppServiceRecords](./assets/GetAppServiceRecords.png)

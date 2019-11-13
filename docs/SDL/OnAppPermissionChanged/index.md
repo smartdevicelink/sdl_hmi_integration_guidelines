@@ -30,7 +30,7 @@ _**SDL Note**:_
 5. In case the Local PT is successfully updated AND there are new permissions that require User's consent, Policies Manager must:   
   5.1. notify HMI about 'user-consent-required' via `SDL.OnAppPermissionChanged{appID, appPermissionsConsentNeeded: true}` per each application that lacks the User's permissions.   
   5.2. provide the list of permissions that require User's consent upon request from HMI via `GetListOfPermissions(appID)`.   
- 
+
 ### Notification
 
 #### Parameters
@@ -48,10 +48,12 @@ _**SDL Note**:_
 |requestSubType|String|false|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 100|
 
 ### Sequence Diagrams
+
 _**Preconditions to the sequence:**_   
 a) SDL and HMI are started;   
 b) Device is connected to the System (SDL/HU) and is consented by the User;   
 c) Four apps are registered with SDL and HMI ('name_HMILevel'): app_FULL, app_LIMITED, app_BACKGROUND, app_NONE.
+
 |||
 OnAppPermissionChanged with consent required
 ![OnAppPermissionChanged](./assets/OnAppPermissionChanged.png)
@@ -60,6 +62,7 @@ OnAppPermissionChanged with consent required
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

@@ -38,6 +38,7 @@ If the HMI is the App Service Consumer (ASC), SDL will:
 |serviceSpecificResult|String|false||
 
 ### Sequence Diagrams
+
 |||
 PerformAppServiceInteraction with HMI ASC
 ![PerformAppServiceInteraction](./assets/PerformAppServiceInteractionFromHMI.png)

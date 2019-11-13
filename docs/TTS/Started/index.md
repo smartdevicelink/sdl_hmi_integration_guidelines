@@ -16,10 +16,12 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Started upon TTS.Speak request from SDL
 ![Started](./assets/StartedFromSpeak.png)
 |||
+
 |||
 Started during PerformInteraction
 ![Started](./assets/StartedFromPerformInteraction.png)
@@ -28,6 +30,7 @@ Started during PerformInteraction
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

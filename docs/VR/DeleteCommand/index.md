@@ -27,6 +27,7 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 DeleteCommand
 ![DeleteCommand](./assets/DeleteCommand.png)

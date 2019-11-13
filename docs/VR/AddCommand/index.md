@@ -10,6 +10,7 @@ Purpose
 : Add a command for voice recognition
 
 ### Request
+
 If the application sends `AddCommand` with the `vrCommands` parameter then SDL must maintain a list of the added `vrCommands`.  
 For each AddCommand, only the first item in the `vrCommands` array shall be added to the list.
 
@@ -35,6 +36,7 @@ Whenever the internal list of added `vrCommands` is updated SDL must:
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 AddCommand
 ![AddCommand](./assets/AddCommand.png)

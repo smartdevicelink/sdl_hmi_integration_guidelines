@@ -10,10 +10,12 @@ Purpose
 : Inform HMI of user location properties set by the application for RC modules allocation purposes
 
 ### Description
+
 SDL requests to set the value of user location sent by a RC application. The default `userLocation` should be `DRIVER`.  
 The driver's application should be able to control any free module that is allowed by policies(even if the driver's seat is outside the service area of a module).
 
 ### Request
+
 #### Behavior
 
 !!! MUST   
@@ -23,15 +25,16 @@ The driver's application should be able to control any free module that is allow
 !!!
 
 #### Parameters
+
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |userLocation|[Common.SeatLocation](../../common/structs/#seatlocation)|false||
 |appID|Integer|true||
 
-
 ### Response
 
 #### Parameters
+
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams

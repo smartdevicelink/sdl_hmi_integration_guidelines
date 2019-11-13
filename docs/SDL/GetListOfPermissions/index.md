@@ -10,6 +10,7 @@ Purpose
 : Get the list of permissions for the specified application or for all applications.
 
 ### Request
+
 !!! MUST
 
 1)	Initiate sending GetListOfPermissions with “appID” parameter in the following cases:  
@@ -22,7 +23,7 @@ _Note:_ appID is known from the corresponding SDL.ActivateApp request.
 2)	 Initiate sending GetListOfPermissions without “appID” parameter in the following cases:  
 2.1) After the User presses the button to change the permissions of all currently registered applications.
 
-Impotant:  
+Important:  
 When GetListOfPermissions is requested without “appID” parameter, the response of PermissionItem array contains the PermissionGroups (“name” parameters) for all the applications as a whole and “allowed” parameter is common for each group (e.g. if at least one of the applications has disallowed parameter for some group, “allowed” value returned for this group in the context of all application must be false). (_For more details see the diagram GetListOfPermissions without appID_).
 3)	Store the pair of values id<->name of PermissionItem structure which were obtained via GetListOfPermissions response. These pairs will be used for future notifications via [OnAppPermissionConsent](../../sdl/onapppermissionconsent) in case user’s choice for the application to allow some functionality has been updated (_For more details see_ [OnAppPermissionConsent](../../sdl/onapppermissionconsent) (id<->name dependency).
 4)	Display the received “External UCS Status” in the appropriate UI screen (_For more details see the picture ExternalConsentStatus_).

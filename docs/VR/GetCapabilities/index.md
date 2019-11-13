@@ -24,6 +24,7 @@ This RPC has no additional parameter requirements
 |vrCapabilities|[Common.VrCapabilities](../../common/enums/#vrcapabilities)|false|array: true<br>minsize: 1<br>maxsize: 100|
 
 ### Sequence Diagrams
+
 |||
 GetCapabilities
 ![GetCapabilities](./assets/GetCapabilities.png)

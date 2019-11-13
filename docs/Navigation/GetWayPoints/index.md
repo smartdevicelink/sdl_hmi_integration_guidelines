@@ -52,6 +52,7 @@ SDL forwards a request from the mobile application to get waypoint/destination d
 |appID|Integer|true||ID of the application|
 
 ### Sequence Diagrams
+
 |||
 GetWayPoints
 ![GetWayPoints](./assets/GetWayPoints.png)

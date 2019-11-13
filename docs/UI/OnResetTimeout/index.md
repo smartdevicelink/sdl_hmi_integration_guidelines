@@ -19,6 +19,7 @@ Purpose
 |methodName|String|true||
 
 ### Sequence Diagrams
+
 |||
 OnResetTimeout during PerformInteraction
 ![OnResetTimeout](./assets/OnResetTimeoutPerformInteraction.png)
@@ -35,6 +36,7 @@ OnResetTimeout KEEP_CONTEXT during alert
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

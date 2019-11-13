@@ -32,6 +32,7 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Active App shows and is deactivated then reactivated
 ![Show](./assets/ShowAppReactivated.png)

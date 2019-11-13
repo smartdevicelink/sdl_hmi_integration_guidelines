@@ -33,6 +33,7 @@ SDL operates with the following PTU statuses:
 |status|[Common.UpdateResult](../../common/enums/#updateresult)|true||
 
 ### Sequence Diagrams
+
 |||
 SDL.OnStatusUpdate in "Proprietary" Policy Table Update Flow
 ![OnStatusUpdate](./assets/OnStatusUpdate_in_Proprietary_PTU_flow.png)
@@ -41,6 +42,7 @@ SDL.OnStatusUpdate in "Proprietary" Policy Table Update Flow
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

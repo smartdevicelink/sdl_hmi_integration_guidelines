@@ -22,6 +22,7 @@ Send this notification when the list of waypoints is changed and SDL is subscrib
 |wayPoints|[Common.LocationDetails](../../common/structs/#locationdetails)|true|array: true<br>minsize: 1<br>maxsize: 10||
 
 ### Sequence Diagrams
+
 |||
 OnWayPointChange
 ![OnWayPointChange](./assets/OnWayPointChange.png)

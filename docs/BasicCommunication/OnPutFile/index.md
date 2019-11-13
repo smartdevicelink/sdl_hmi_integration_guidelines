@@ -59,6 +59,7 @@ The list of RPCs and data structures that `OnPutFile` affects are:
 |appID|Integer|false||
 
 ### Sequence Diagrams
+
 |||
 Put File used before referencing RPC
 ![OnPutFile](./assets/OnPutFileBeforeRPC.png)
@@ -75,6 +76,7 @@ System Request file upload using Put File
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

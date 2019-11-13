@@ -1,4 +1,5 @@
 ## OnSDLConsentNeeded
+
 Type
 : Notification
 
@@ -40,6 +41,7 @@ The User consents the device
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
 	"jsonrpc": "2.0",

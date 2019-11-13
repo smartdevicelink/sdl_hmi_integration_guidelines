@@ -34,6 +34,7 @@ The information about the application (name, appID, etc) is provided by SDL via 
 |windowID|Integer|false||
 
 ### Sequence Diagrams
+
 |||
 User Switches Apps
 ![OnAppDeactivated](./assets/OnAppDeactivated.png)
@@ -42,6 +43,7 @@ User Switches Apps
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

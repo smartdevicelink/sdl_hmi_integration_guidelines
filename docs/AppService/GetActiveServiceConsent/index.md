@@ -31,6 +31,7 @@ Purpose
 |activate|Boolean|true||
 
 ### Sequence Diagrams
+
 |||
 GetActiveServiceConsent (user accepts prompt)
 ![GetActiveServiceConsent](./assets/GetActiveServiceConsent_Allow.png)

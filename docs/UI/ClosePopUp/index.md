@@ -24,6 +24,7 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 ClosePopUp for UI.PerformInteraction
 ![ClosePopUp](./assets/ClosePopUp.png)

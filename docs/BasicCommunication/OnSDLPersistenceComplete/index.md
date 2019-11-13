@@ -25,6 +25,7 @@ SDL sends `OnSDLPersistenceComplete` when all data persistence operations are co
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 SDL Persists App Data after Suspend before Ignition Off
 ![OnSDLPersistenceComplete](./assets/OnSDLPersistenceComplete.png)
@@ -33,6 +34,7 @@ SDL Persists App Data after Suspend before Ignition Off
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

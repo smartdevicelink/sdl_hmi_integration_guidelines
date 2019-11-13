@@ -84,6 +84,7 @@ SDL Apps that are using the websocket transport adapter will send `OnAppRegister
 !!!
 
 ### Sequence Diagrams
+
 |||
 App Register with Resume
 ![OnAppRegistered](./assets/OnAppRegisteredResume.png)
@@ -108,6 +109,7 @@ Running the same apps from multiple devices at the same time
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
 	"jsonrpc": "2.0",

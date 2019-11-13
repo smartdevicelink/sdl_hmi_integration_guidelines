@@ -19,22 +19,27 @@ Purpose
 |data|String|false|minlength: 0<br>maxlength: 500|
 
 ### Sequence Diagrams
+
 |||
 OnKeyboardInput SINGLE_KEYPRESS mode
 ![OnKeyboardInput](./assets/OnKeyboardInputSingle.png)
 |||
+
 |||
 OnKeyboardInput QUEUE_KEYPRESSES mode
 ![OnKeyboardInput](./assets/OnKeyboardInputQueue.png)
 |||
+
 |||
 OnKeyboardInput RESEND_CURRENT_ENTRY mode
 ![OnKeyboardInput](./assets/OnKeyboardInputResend.png)
 |||
+
 |||
 OnKeyboardInput cancelled
 ![OnKeyboardInput](./assets/OnKeyboardInputCancel.png)
 |||
+
 |||
 OnKeyboardInput ENTRY_VOICE mode
 ![OnKeyboardInput](./assets/OnKeyboardInputVoice.png)
@@ -43,6 +48,7 @@ OnKeyboardInput ENTRY_VOICE mode
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

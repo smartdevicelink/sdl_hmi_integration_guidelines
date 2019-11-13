@@ -37,6 +37,7 @@ SDL sends `AlertManeuver` together with [TTS.Speak](../../tts/speak). The purpos
 If the HMI does not respond to SDL's request, after the default timeout occurs SDL will send `GENERIC_ERROR` to the corresponding mobile application.
 
 !!!
+
 ### Request
 
 #### Parameters
@@ -53,18 +54,22 @@ If the HMI does not respond to SDL's request, after the default timeout occurs S
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 AlertManeuver Default Success Path
 ![AlertManeuver](./assets/AlertManeuverDefaultSuccess.jpg)
 |||
+
 |||
 AlertManeuver from Background
 ![AlertManeuver](./assets/AlertManeuverBackground.jpg)
 |||
+
 |||
 AlertManeuver Aborted
 ![AlertManeuver](./assets/AlertManeuverAborted.jpg)
 |||
+
 |||
 AlertManeuver Rejected
 ![AlertManeuver](./assets/AlertManeuverRejected.jpg)

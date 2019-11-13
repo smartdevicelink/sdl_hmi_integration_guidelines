@@ -43,17 +43,22 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 SendLocation Success
 ![SendLocation](./assets/SendLocationSuccess.jpg)
 |||
+
 |||
 SendLocation Fail with warnings
 ![SendLocation](./assets/SendLocationFailWarning.jpg)
 |||
+
 |||
 SendLocation Fail Rejected
 ![SendLocation](./assets/SendLocationFailRejected.jpg)
+|||
+
 |||
 SendLocation General behavior
 ![SendLocation](./assets/SendLocation_general.png)

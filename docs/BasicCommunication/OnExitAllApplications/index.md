@@ -34,6 +34,7 @@ SDL requires this notification in order to accurately close the sessions with re
 |reason|[Common.ApplicationsCloseReason](../../common/enums/#applicationsclosereason)|true||
 
 ### Sequence Diagrams
+
 |||
 Exit All Apps on Ignition Off
 ![OnExitAllApplications](./assets/OnExitAllApps.png)
@@ -42,6 +43,7 @@ Exit All Apps on Ignition Off
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

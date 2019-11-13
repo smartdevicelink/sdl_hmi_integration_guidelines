@@ -33,6 +33,7 @@ The HMI may send a PublishAppService RPC request multiple times for a given serv
 |appServiceRecord|[Common.AppServiceRecord](../../common/structs/#appservicerecord)|false||
 
 ### Sequence Diagrams
+
 |||
 PublishAppService
 ![PublishAppService](./assets/PublishAppService.png)

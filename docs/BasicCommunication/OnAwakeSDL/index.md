@@ -25,6 +25,7 @@ This notification is sent to SDL to notify that there won't be `IGNITION_OFF` se
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Wake SDL from Suspension
 ![OnAwakeSDL](./assets/OnAwakeSDL.png)
@@ -33,6 +34,7 @@ Wake SDL from Suspension
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

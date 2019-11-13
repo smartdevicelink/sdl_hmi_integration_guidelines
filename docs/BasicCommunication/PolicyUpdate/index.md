@@ -10,7 +10,9 @@ Purpose
 : Inform HMI about the Policy Table Update (PTU) mechanism is triggered on SDL
 
 In case SDL is built with **"-DEXTENDED_POLICY: HTTP" flag**, SDL supports PolicyTableUpdate flow **without HMI-related logic**. 
+
 ### Request
+
 ``BC.PolicyUpdate`` represents SDL-generated request to start the PTU sequence.
 
 !!! MUST

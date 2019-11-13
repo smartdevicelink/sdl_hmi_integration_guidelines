@@ -25,6 +25,7 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 StartStream
 ![StartStream](./assets/StartStream.jpg)

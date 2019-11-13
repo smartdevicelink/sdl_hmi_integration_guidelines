@@ -27,6 +27,7 @@ If the app does not stop streaming after certain amount of time, SDL sends a Sto
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 StopStream
 ![StopStream](./assets/StopStream.jpg)

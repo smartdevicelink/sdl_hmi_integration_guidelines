@@ -20,10 +20,12 @@ Purpose
 
 
 ### Sequence Diagrams
+
 |||
 OnTouchEvent moving two fingers stop together
 ![OnTouchEvent](./assets/OnTouchEventTwoFingers.png)
 |||
+
 |||
 OnTouchEvent moving two fingers one stops first
 ![OnTouchEvent](./assets/OnTouchEventTwoFingersOneStop.png)
@@ -32,6 +34,7 @@ OnTouchEvent moving two fingers one stops first
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

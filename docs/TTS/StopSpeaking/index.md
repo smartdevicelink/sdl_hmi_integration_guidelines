@@ -22,6 +22,7 @@ This RPC has no additional parameter requirements
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 StopSpeaking
 ![StopSpeaking](./assets/StopSpeaking.png)

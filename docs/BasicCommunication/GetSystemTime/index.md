@@ -13,6 +13,7 @@ When an application needs to start a protected service with SDL core the app sen
 In order to validate the certificate and to check whether this certificate is not expired SDL core needs an accurate UTC system time value.
 
 ### Request
+
 SDL sends a GetSystemTime request after receiving a BC.OnSystemTimeReady notification from the HMI.  
 After sending the request SDL starts [`<DefaultTimeout>`](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Configuration%20file/index.md#main) (value from .ini file) waiting for response from HMI. 
 
@@ -45,11 +46,13 @@ SDL logs the corresponding error internally and fails the handshake process if a
 If the handshake process fails, SDL behavior depends on the "ForceProtectedService"/"ForceUnprotectedService" params configured in the 'Security Manager' section of the smartDeviceLink.ini file.
 
 #### Parameters
+
 |Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |systemTime|[Common.DateTime](../../common/structs/#datetime)|true|Current UTC system time|
 
 ### Sequence Diagrams
+
 |||
 GetSystemTime
 ![GetSystemTime](./assets/GetSystemTime_TLS_Handshake.png)

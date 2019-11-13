@@ -10,6 +10,7 @@ Purpose
 : Inform about allowing SDL functionality
 
 ### Notification
+
 Notifies about user/HMI allowing SDL functionality or disallowing access to all mobile apps on the specified device.
 
 !!! MUST  
@@ -56,6 +57,7 @@ The User does NOT consent the device.
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
 	"jsonrpc" : "2.0",

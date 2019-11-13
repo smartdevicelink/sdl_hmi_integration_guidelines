@@ -31,6 +31,7 @@ This RPC has no additional parameter requirements
 |status|[Common.UpdateResult](../../common/enums/#updateresult)|true|
 
 ### Sequence Diagrams
+
 |||
 GetStatusUpdate
 ![GetStatusUpdate](./assets/GetStatusUpdate.jpg)

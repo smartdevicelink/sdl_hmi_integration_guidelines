@@ -19,10 +19,12 @@ Purpose
 
 
 ### Sequence Diagrams
+
 |||
 OnAudioDataStreaming SDL to HMI
 ![OnAudioDataStreaming](./assets/OnAudioDataStreamingSDLHMI.jpg)
 |||
+
 |||
 OnAudioDataStreaming App to HMI
 ![OnAudioDataStreaming](./assets/OnAudioDataStreamingAppHMI.jpg)
@@ -31,6 +33,7 @@ OnAudioDataStreaming App to HMI
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

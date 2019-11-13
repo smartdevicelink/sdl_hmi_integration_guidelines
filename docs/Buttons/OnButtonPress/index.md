@@ -35,6 +35,7 @@ The value of customButtonID is provided by SDL within the [softButton](../../com
 |appID|Integer|false||
 
 ### Sequence Diagrams
+
 |||
 OnButtonPress short press for CUSTOM_BUTTON
 ![OnButtonPress](./assets/OnButtonPressShort.png)
@@ -51,6 +52,7 @@ OnButtonPress for hard button that only supports short press
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

@@ -25,6 +25,7 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 StartAudioStream
 ![StartAudioStream](./assets/StartAudioStream.jpg)

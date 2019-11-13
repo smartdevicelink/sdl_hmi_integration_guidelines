@@ -14,6 +14,7 @@ Purpose
 After opening the menu, the HMI must send a [UI.OnSystemContext](../OnSystemContext) notification with `systemContext: "MENU"` to SDL.
 
 !!!
+
 ### Request
 
 #### Parameters
@@ -30,6 +31,7 @@ After opening the menu, the HMI must send a [UI.OnSystemContext](../OnSystemCont
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 ShowAppMenu request(without menuID)
 ![ShowAppMenu](./assets/ShowAppMenu.png)

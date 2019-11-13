@@ -15,6 +15,7 @@ Purpose
 * **SDL->HMI** if HMI App Service Provider (ASP) is receiving a service data request
 
 !!!
+
 ### Request
 
 #### Parameters
@@ -33,6 +34,7 @@ Purpose
 |serviceData|[Common.AppServiceData](../../common/structs/#appservicedata)|false||
 
 ### Sequence Diagrams
+
 |||
 GetAppServiceData (HMI Provider)
 ![GetAppServiceData_HMI_ASP](./assets/GetAppServiceData_HMI_ASP.png)

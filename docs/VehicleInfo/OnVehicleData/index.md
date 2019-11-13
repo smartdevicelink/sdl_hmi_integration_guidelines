@@ -18,6 +18,7 @@ Send OnVehicleData notification with the correct structure per RPC spec/schema i
 !!! note
 
 #### CloudAppVehicleID
+
 * An optional parameter used by cloud apps or the policy server to identify the head unit
 * Could be used by a cloud app to identify an incoming connection from core
 * Could be used by a policy server to index cloud app configurations for a specific head unit
@@ -25,6 +26,7 @@ Send OnVehicleData notification with the correct structure per RPC spec/schema i
 The HMI will have to update this field if the user chooses to reset this value (in case the vehicle changes owners)
 
 !!!
+
 ### Notification
 
 #### Parameters
@@ -63,6 +65,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |cloudAppVehicleID|String|false||
 
 ### Sequence Diagrams
+
 |||
 OnVehicleData
 ![OnVehicleData](./assets/OnVehicleData.jpg)
@@ -71,6 +74,7 @@ OnVehicleData
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

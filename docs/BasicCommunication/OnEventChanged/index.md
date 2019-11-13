@@ -98,6 +98,7 @@ When this event is active, SDL **rejects** all app activation requests from the 
 !!!
 
 ##### HMI Status of apps when `AUDIO_SOURCE` or `EMBEDDED_NAVI` event is activated
+
 |appHMIType|Event|HMI State before|HMI State after|
 |:---------|:----|:---------------|:--------------|
 |Media|AUDIO_SOURCE|(FULL/LIMITED, AUDIBLE)|(BACKGROUND, NOT_AUDIBLE)|
@@ -108,6 +109,7 @@ When this event is active, SDL **rejects** all app activation requests from the 
 |Non-media|EMBEDDED_NAVI|(FULL/LIMITED, AUDIBLE)|(BACKGROUND, NOT_AUDIBLE)|
 
 ##### Activating apps during active `AUDIO_SOURCE` or `EMBEDDED_NAVI` event
+
 |appHMIType|Event|New HMI State|Keep event active|
 |:---------|:----|:------------|:----------------|
 |Media|AUDIO_SOURCE|(FULL, AUDIBLE)|false|
@@ -127,6 +129,7 @@ When this event is active, SDL **rejects** all app activation requests from the 
 |isActive|Boolean|true||Must be 'true' when the event is started on HMI. Must be 'false' when the event is ended on HMI|
 
 ### Sequence Diagrams
+
 |||
 PHONE_CALL, media app is active
 ![OnEventChanged](./assets/PHONE_CALL1.png)
@@ -175,6 +178,7 @@ Multiple apps activation during active embedded navigation or audio source
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

@@ -16,6 +16,7 @@ Display a pop-up providing accurate feedback to the user on the status of the sy
 !!!
 
 ### Notification
+
 When a mobile navigation application is activated and sends a request for the Video Service there is a series of steps taken. 
 These steps include:
 

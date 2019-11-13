@@ -26,6 +26,7 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 ChangeRegistration after OnAppRegistered
 ![ChangeRegistration](./assets/ChangeRegistration.png)

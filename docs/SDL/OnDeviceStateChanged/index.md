@@ -33,6 +33,7 @@ Unpairing of the device is NOT a trigger for new PTU sequence.
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

@@ -47,6 +47,7 @@ The connection to the cloud app will be created by Core after the user activates
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Application Just Registered
 ![UpdateAppList](./assets/UpdateAppListAppRegister.png)

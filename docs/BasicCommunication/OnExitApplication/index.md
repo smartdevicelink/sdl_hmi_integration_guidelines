@@ -36,6 +36,7 @@ The HMI may switch layouts or views according to the workflow after deactivation
 
   
 !!!
+
 ### Notification
 
 #### Parameters
@@ -46,6 +47,7 @@ The HMI may switch layouts or views according to the workflow after deactivation
 |appID|Integer|true||
 
 ### Sequence Diagrams
+
 |||
 User Exits Application
 ![OnExitApplication](./assets/OnExitApplicationUser.png)
@@ -58,6 +60,7 @@ Application Not Authorized
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

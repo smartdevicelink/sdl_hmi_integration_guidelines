@@ -22,6 +22,7 @@ The HMI must send a BC.OnSystemTimeReady notification to SDL when a new ignition
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 OnSystemTimeReady
 ![OnSystemTimeReady](assets/OnSystemTimeReady_Ign_On.png)

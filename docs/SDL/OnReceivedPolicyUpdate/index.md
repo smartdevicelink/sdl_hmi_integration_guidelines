@@ -48,6 +48,7 @@ SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
 	"id" : 176,

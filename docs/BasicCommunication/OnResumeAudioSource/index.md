@@ -38,6 +38,7 @@ SDL will send `OnResumeAudioSource` if the application meets both of these condi
 |appID|Integer|true||
 
 ### Sequence Diagrams
+
 |||
 Audio Source Resumption for App in FULL
 ![OnResumeAudioSource](./assets/OnResumeAudioSourceFull.png)
@@ -58,6 +59,7 @@ Audio Source Resume one audio app one phone call app
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

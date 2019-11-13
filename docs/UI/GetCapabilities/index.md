@@ -31,6 +31,7 @@ This RPC has no additional parameter requirements
 |systemCapabilities|[Common.SystemCapabilities](../../common/structs/#systemcapabilities)|false||
 
 ### Sequence Diagrams
+
 |||
 Get Capabilities
 ![GetCapabilities](./assets/GetCapabilities.png)

@@ -38,6 +38,7 @@ SDL will:
 |setAsDefault|Boolean|false||
 
 ### Sequence Diagrams
+
 |||
 AppServiceActivation activate service
 ![AppServiceActivation](./assets/AppServiceActivation_ActivateService_Success.png)

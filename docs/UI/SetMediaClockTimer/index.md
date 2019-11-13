@@ -55,8 +55,8 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
 
 This RPC has no additional parameter requirements
 
-
 ### Sequence Diagrams
+
 |||
 SetMediaClockTimer COUNTUP and COUNTDOWN for Full and Background applications
 ![SetMediaClockTimer](./assets/SetMediaClockTimerUpDownFullBackground.png)

@@ -45,38 +45,47 @@ UI.AddCommand represents a request from an application to add a command to the a
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 AddCommand Command Chosen By User
 ![AddCommand](./assets/AddCommandChosen.png)
 |||
+
 |||
 AddCommand App Inactive
 ![AddCommand](./assets/AddCommandAppInactive.png)
 |||
+
 |||
 AddCommand with sub menu
 ![AddCommand](./assets/AddCommandSubMenu.png)
 |||
+
 |||
 AddCommand positions
 ![AddCommand](./assets/AddCommandPositions.png)
 |||
+
 |||
 AddCommand Rejected Limit Reached
 ![AddCommand](./assets/AddCommandRejectedLimit.png)
 |||
+
 |||
 AddCommand UI Succeeds, VR Fails
 ![AddCommand](./assets/AddCommandVRFail.png)
 |||
+
 |||
 AddCommand UI Succeeds, VR Unresponsive
 ![AddCommand](./assets/AddCommandVRNoResponse.png)
 |||
+
 |||
 AddCommand UI Fails, VR Succeeds
 ![AddCommand](./assets/AddCommandFailVRSuccess.png)
 |||
+
 |||
 AddCommand UI No Response, VR Succeeds
 ![AddCommand](./assets/AddCommandUINoResponseVRSuccess.png)

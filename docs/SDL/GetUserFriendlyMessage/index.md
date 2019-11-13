@@ -39,6 +39,7 @@ and `<language_1>` exists at "consumer_friendly_messages" section at LocalPT:
 |language|[Common.Language](../../common/enums/#language)|false||
 
 ##### MessageCodes   
+
 Message codes specify appropriate user messages which notify the user about some events/conditions on HMI. Messages and message codes are coming from Policy Table and must be used on HMI in different information pop-ups according to HMI use-cases scenarios.
 
 |MessageCode|MessageText|
@@ -75,6 +76,7 @@ Message codes specify appropriate user messages which notify the user about some
 |messages|[Common.UserFriendlyMessage](../../common/structs/#userfriendlymessage)|false|array: true<br>minsize: 1<br>maxsize: 100| 
 
 ### Sequence Diagrams
+
 |||
 GetUserFriendlyMessage for device consent
 ![GetUserFriendlyMessage](./assets/GetUserFriendlyMessage.png)

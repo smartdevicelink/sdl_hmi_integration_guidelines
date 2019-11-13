@@ -39,6 +39,7 @@ This RPC has no additional parameter requirements
 |available|Boolean|true||
 
 ### Sequence Diagrams
+
 |||
 IsReady
 ![IsReady](./assets/IsReady.png)

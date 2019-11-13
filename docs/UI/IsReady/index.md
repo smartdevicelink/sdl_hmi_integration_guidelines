@@ -39,6 +39,7 @@ This RPC has no additional parameter requirements
 |available|Boolean|true||
 
 ### Sequence Diagrams
+
 |||
 UI Component Ready
 ![IsReady](./assets/IsReady.png)
