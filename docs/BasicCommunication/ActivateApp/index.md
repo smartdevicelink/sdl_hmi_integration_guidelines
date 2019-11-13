@@ -89,7 +89,7 @@ Activate App after Accepted Data Consent Prompt
   "id" : 47,
   "jsonrpc" : "2.0",
   "method" : "BasicCommunication.ActivateApp",
-  "result" :
+  "params" :
   {
     "appID" : 65368
   }

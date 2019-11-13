@@ -35,6 +35,7 @@ StopAudioStream
 
 ```json
 {
+  "id" : 176,
   "jsonrpc" : "2.0",
   "method" : "Navigation.StopAudioStream",
   "params" :  

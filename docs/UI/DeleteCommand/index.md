@@ -50,7 +50,7 @@ Delete Command Application Inactive
 {
   "id" : 70,
   "jsonrpc" : "2.0",
-  "method" : "UI. DeleteCommand",
+  "method" : "UI.DeleteCommand",
   "params" :
   {
     "cmdID" : 2318,
@@ -68,7 +68,7 @@ Delete Command Application Inactive
   "result" :
   {
     "code" : 0,
-    "method" : "UI. DeleteCommand"
+    "method" : "UI.DeleteCommand"
   }
 }
 ```

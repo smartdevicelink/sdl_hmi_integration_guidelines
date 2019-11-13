@@ -75,19 +75,17 @@ GetSystemTime
    "id":59546,
    "jsonrpc":"2.0",
    "result":{  
-      "systemTime":[  
-         {  
-            "millisecond":11,
-            "second":111,
-            "minute":111,
-            "hour":11,
-            "day":1,
-            "month":11,
-            "year":2017,
-            "tz_hour":1,
-            "tz_minute":11
-         }
-      ],
+      "systemTime": {  
+         "millisecond":11,
+         "second":111,
+         "minute":111,
+         "hour":11,
+         "day":1,
+         "month":11,
+         "year":2017,
+         "tz_hour":1,
+         "tz_minute":11
+      },
       "code":0,
       "method":"BasicCommunication.GetSystemTime"
    }

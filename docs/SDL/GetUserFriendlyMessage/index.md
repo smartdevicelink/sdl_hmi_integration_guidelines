@@ -91,8 +91,8 @@ GetUserFriendlyMessage for device consent
   "method" : "SDL.GetUserFriendlyMessage",
   "params" :
   {
-    "messageCodes": "AppPermissions",    
-      "language" : "EN-GB"
+    "messageCodes": ["AppPermissions"],
+    "language" : "EN-GB"
   }
 
 }

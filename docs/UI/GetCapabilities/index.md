@@ -62,6 +62,7 @@ Get Capabilities
       "textFields" : ["mainField1", "mainField2", "mediaclock", "mediaTrack", "alertText1", "alertText2", "alertText3", "scrollableMessageBody", "initialInteractionText", "navigationText1", "navigationText2", "audioPassThruDisplayText1", "audioPassThruDisplayText2", "notificationText"],
       "mediaClockFormats" : ["CLOCK1", "CLOCKTEXT4"],
       "graphicSupported" : true,
+      "templatesAvailable" : ["MEDIA"],
       "imageCapabilities": ["DYNAMIC"]
     },
     "hmiCapabilities" :

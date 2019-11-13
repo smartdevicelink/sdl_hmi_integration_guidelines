@@ -65,7 +65,7 @@ MixingAudioSupported Messaging
   {
     "attenuatedSupported" : true,
     "code" : 0,
-    "method" : "BasicCommunication. MixingAudioSupported"
+    "method" : "BasicCommunication.MixingAudioSupported"
   }
 }
 ```

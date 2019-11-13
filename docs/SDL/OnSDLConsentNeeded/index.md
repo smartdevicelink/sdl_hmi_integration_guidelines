@@ -45,9 +45,9 @@ The User consents the device
 	"jsonrpc": "2.0",
 	"method": "SDL.OnSDLConsentNeeded",
 	"params": {
-		"deviceInfo": {
+		"device": {
 			"name": "Mary's Phone",
-			"id": 8
+			"id": "8"
 		}
 	}
 }

@@ -93,9 +93,9 @@ AlertManeuver Rejected
         "softButtonID": 46,
         "systemAction": "STEAL_FOCUS"
       }
-    ]
-  },
+    ],
   "appID": 96
+  }
 }
 ```
 

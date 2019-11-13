@@ -72,7 +72,7 @@ User Requests Update App List
       {
         "appName" : "Beautiful Sound",
         "ngnMediaScreenAppName " : "BeauSo",
-        "deviceName" : "Jerry`s Phone",
+        "deviceName" : "Jerry's Phone",
         "appID" : 65544,
         "hmiDisplayLanguageDesired" : "DE-DE",
         "isMediaApplication" : true

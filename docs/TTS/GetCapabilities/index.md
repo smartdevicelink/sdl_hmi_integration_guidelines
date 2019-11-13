@@ -79,7 +79,7 @@ GetCapabilities
   "jsonrpc" : "2.0",
   "result" :
   {
-    "capabilities" : ["TEXT"],
+    "speechCapabilities" : ["TEXT"],
     "prerecordedSpeechCapabilities" : ["HELP_JINGLE", "INITIAL_JINGLE", "LISTEN_JINGLE", "POSITIVE_JINGLE", "NEGATIVE_JINGLE"],
     "code" : 0,
     "method" : "TTS.GetCapabilities"

@@ -126,7 +126,8 @@ UnsubscribeVehicleData unexpected disconnect
     "deviceStatus" : true,
     "wiperStatus" : true,
     "headLampStatus" : true,
-    "accPedalPosition" : true
+    "accPedalPosition" : true,
+    "appID" : 65368
   }
 }
 ```

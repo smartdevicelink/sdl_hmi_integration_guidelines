@@ -80,9 +80,10 @@ GetWayPoints
 {
 	"id" : 543,
 	"jsonrpc" : "2.0",
-	"method" : "Navigation.GetWayPoints",
 	"result" :
 	{
+		"code" : 0,
+		"method" : "Navigation.GetWayPoints",
 		"wayPoints" :
 		[
 			{
@@ -107,7 +108,7 @@ GetWayPoints
 		"message" : "The data sent is invalid",
 		"data" :
 		{
-			"method" : "Navigation.GetWaypoints"
+			"method" : "Navigation.GetWayPoints"
 		}
 	}
 }

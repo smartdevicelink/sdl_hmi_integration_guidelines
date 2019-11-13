@@ -63,6 +63,7 @@ ButtonPress
         "appID": 680015438,
         "buttonName": "VOLUME_UP",
         "buttonPressMode": "LONG",
+        "moduleId" : "12jie32ice496hnr68swe",
         "moduleType": "RADIO"
     }
 }

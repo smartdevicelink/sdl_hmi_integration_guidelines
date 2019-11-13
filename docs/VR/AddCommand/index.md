@@ -64,7 +64,7 @@ UI.AddCommand no response, VR.AddCommand returns SUCCESS
 {
   "id" : 119,
   "jsonrpc" : "2.0",
-  "method" : "VR. AddCommand",
+  "method" : "VR.AddCommand",
   "params" :
   {
     "cmdID" : 4365,
@@ -74,8 +74,9 @@ UI.AddCommand no response, VR.AddCommand returns SUCCESS
          "Exit",
          "Quit"
     ],
-     "grammarID":123,
-  "appID" : 64467
+    "grammarID" : 123,
+    "type" : "Command",
+    "appID" : 64467
   }
 }
 ```

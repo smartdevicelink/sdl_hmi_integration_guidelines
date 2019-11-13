@@ -76,7 +76,7 @@ GetActiveServiceConsent (user rejects prompt)
 {
    "id" : 1000,
    "jsonrpc" : "2.0",
-   "result" : {
+   "error" : {
       "code" : 13,
       "message" : "No known service with given ID",
       "data" : {

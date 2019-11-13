@@ -65,7 +65,7 @@ DialNumber Failed
 {
   "id" : 59,
   "jsonrpc" : "2.0",
-  "method" : "BasicCommunication. DialNumber",
+  "method" : "BasicCommunication.DialNumber",
   "params" :
   {
         "number" : "*111#",

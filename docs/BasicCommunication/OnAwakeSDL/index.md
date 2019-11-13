@@ -36,6 +36,6 @@ Wake SDL from Suspension
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : "BasicCommunication. OnAwakeSDL"
+  "method" : "BasicCommunication.OnAwakeSDL"
 }
 ```

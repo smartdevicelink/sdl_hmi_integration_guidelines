@@ -37,7 +37,10 @@ ClosePopUp for UI.PerformInteraction
 {
   "id" : 79,
   "jsonrpc" : "2.0",
-  "method" : "UI.ClosePopUp"
+  "method" : "UI.ClosePopUp",
+  "params" : {
+    "methodName" : "UI.PerformInteraction"
+  }
 }
 ```
 

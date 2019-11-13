@@ -77,7 +77,8 @@ SendLocation General behavior
     {
          "value" : "tmp/SDL/app/Navi/12345.jpg",
          "imageType" : "DYNAMIC"
-    }
+    },
+    "appID" : 65368
   }
 }
 ```

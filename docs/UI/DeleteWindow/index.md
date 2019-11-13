@@ -51,7 +51,8 @@ DeleteWindow
   "method" : "UI.DeleteWindow",
   "params" :
   {
-    "windowID":2
+    "windowID" : 2,
+    "appID" : 65368
   }
 }
 ```
@@ -82,7 +83,7 @@ DeleteWindow
     "message" : "The data may not be changed because it is currently in use",
     "data" :
     {
-      "UI. DeleteWindow"
+      "method" : "UI.DeleteWindow"
     }
   }
 }

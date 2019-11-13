@@ -90,7 +90,7 @@ AddCommand UI No Response, VR Succeeds
 {
   "id" : 215,
   "jsonrpc" : "2.0",
-  "method" : "UI. AddCommand",
+  "method" : "UI.AddCommand",
   "params" :
   {
     "cmdID" : 2318,

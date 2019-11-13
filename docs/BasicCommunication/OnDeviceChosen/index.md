@@ -44,15 +44,14 @@ OnDeviceChosen
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : "BasicCommunication.OnDevcieChosen",
+  "method" : "BasicCommunication.OnDeviceChosen",
   "params" :
   {
     "deviceInfo" :
     {
-        "name" : "Jerry`s Phone",
-        "id" : 3
+        "name" : "Jerry's Phone",
+        "id" : "3"
     }
   }
 }
 ```
-

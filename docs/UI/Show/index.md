@@ -61,7 +61,7 @@ Show Widgets
 {
   "id" : 120,
   "jsonrpc" : "2.0",
-  "method" : "UI. Show",
+  "method" : "UI.Show",
   "params" :
   {
     "showStrings" :

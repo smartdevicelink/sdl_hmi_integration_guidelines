@@ -55,12 +55,15 @@ PerformAudioPassThru from vehicle microphone
   "method" : "UI.PerformAudioPassThru",
   "params" :
   {
-    "audioPassThruDisplayTexts" :
-    {
-      "fieldName" :  "audioPassThruDisplayText1",
-      "fieldText" : "The audio capturing is in progress"
-    },
-    "maxDuration" : 10000
+    "audioPassThruDisplayTexts" : [
+      {
+        "fieldName" :  "audioPassThruDisplayText1",
+        "fieldText" : "The audio capturing is in progress"
+      }
+    ],
+    "maxDuration" : 10000,
+    "muteAudio" : false,
+    "appID": 65368
   }
 }
 ```

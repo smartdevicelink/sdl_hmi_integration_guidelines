@@ -67,8 +67,8 @@ ShowConstantTBT
          "value" : "tmp/SDL/app/Navi/icon_3245.jpeg",
          "imageType" : "DYNAMIC"
     },
-    "distanceToManeuver" : 168,
-    "distanceToManeuverScale" : 265,
+    "distanceToManeuver" : 168.5,
+    "distanceToManeuverScale" : 265.75,
     "softButtons" :
     {
         "type" :  "TEXT",

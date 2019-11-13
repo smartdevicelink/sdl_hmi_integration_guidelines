@@ -71,7 +71,8 @@ CreateWindow
     "windowID":2,
     "associatedServiceType":"MEDIA",
     "type":"WIDGET",
-    "duplicateUpdatesFromWindowID":0
+    "duplicateUpdatesFromWindowID":0,
+    "appID": 65368
   }
 }
 ```
@@ -102,7 +103,7 @@ CreateWindow
     "message" : "The data may not be changed because it is currently in use",
     "data" :
     {
-    "method" : "UI.CreateWindow "
+    "method" : "UI.CreateWindow"
     }
   }
 }

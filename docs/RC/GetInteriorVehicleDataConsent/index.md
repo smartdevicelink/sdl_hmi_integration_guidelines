@@ -66,7 +66,7 @@ GetInteriorVehicleDataConsent
     "id": 38,
     "jsonrpc": "2.0",
     "result": {
-        "allowed": true,
+        "allowed": [true, false],
         "code": 0,
         "method": "RC.GetInteriorVehicleDataConsent"
     }

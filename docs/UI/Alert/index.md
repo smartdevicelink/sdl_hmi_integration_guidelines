@@ -87,7 +87,7 @@ Alert BOTH UI Closed before TTS finishes Speaking
 {
   "id" : 92,
   "jsonrpc" : "2.0",
-  "method" : "UI. Alert",
+  "method" : "UI.Alert",
   "params" :
   {
     "alertStrings" :

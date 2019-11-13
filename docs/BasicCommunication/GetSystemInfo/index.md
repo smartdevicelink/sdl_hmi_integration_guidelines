@@ -64,12 +64,10 @@ GetSystemInfo
   "result" : {
     "code" : 0,
     "method" : "BasicCommunication.GetSystemInfo",
-    "params" : {
-        "ccpu_version" : "12.1.3",
-        "language" : "EN-US",
-        "wersCountryCode" : "WAEGB"
-        }
-    }
+    "ccpu_version" : "12.1.3",
+    "language" : "EN-US",
+    "wersCountryCode" : "WAEGB"
+  }
 }
 ```
 

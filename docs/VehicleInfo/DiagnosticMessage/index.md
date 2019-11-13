@@ -47,7 +47,8 @@ DiagnosticMessage
   {
     "targetID" : 5456,
     "messageLength" : 1084,
-    "messageData" : [1,2,3,4,5,6,7,8,9]
+    "messageData" : [1,2,3,4,5,6,7,8,9],
+    "appID" : 65368
   }
 }
 ```
@@ -62,7 +63,7 @@ DiagnosticMessage
   {
     "messageDataResult" : [1,2,3,4,5,6],
     "code" : 0,
-    "method" : "VehicleInfo.GetDTCs"
+    "method" : "VehicleInfo.DiagnosticMessage"
   }
 }
 ```
@@ -79,7 +80,7 @@ DiagnosticMessage
     "message" : "Data not available",
     "data" :
     {
-      "method" : "VehicleInfo.GetDTCs"
+      "method" : "VehicleInfo.DiagnosticMessage"
     }
   }
 }

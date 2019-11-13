@@ -178,7 +178,7 @@ Multiple apps activation during active embedded navigation or audio source
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : "OnEventChanged",
+  "method" : "BasicCommunication.OnEventChanged",
   "params" :
   {
     "eventName" : "PHONE_CALL",

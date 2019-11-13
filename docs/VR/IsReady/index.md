@@ -64,7 +64,7 @@ IsReady
   "jsonrpc" : "2.0",
   "result" :
   {
-    "availabe" : true,
+    "available" : true,
     "code" : 0,
     "method" : "VR.IsReady"
   }

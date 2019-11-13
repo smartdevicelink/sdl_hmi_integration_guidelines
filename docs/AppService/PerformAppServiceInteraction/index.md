@@ -85,7 +85,7 @@ PerformAppServiceInteraction with Mobile ASC
 {
    "id" : 1000,
    "jsonrpc" : "2.0",
-   "result" : {
+   "error" : {
       "code" : 1,
       "message" : "No known service interaction matching URI",
       "data" : {

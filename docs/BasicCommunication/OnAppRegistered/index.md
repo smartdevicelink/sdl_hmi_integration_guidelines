@@ -118,10 +118,10 @@ Running the same apps from multiple devices at the same time
 			"ngnMediaScreenAppName": "TryMe",
 			"deviceInfo": {
 				"name": "GT-I9300",
-				"id": 1563462,
+				"id": "1563462",
 				"transportType": "BLUETOOTH"
 			},
-			"policyAppID": 123,
+			"policyAppID": "123",
 			"appID": 65540,
 			"hmiDisplayLanguageDesired": "ES-ES",
 			"isMediaApplication": false

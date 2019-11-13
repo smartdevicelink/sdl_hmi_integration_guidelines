@@ -90,7 +90,7 @@ UpdateDeviceList USB AOA
     "deviceList" :
     [      
       {
-        "name" : "Jerry`s Phone",
+        "name" : "Jerry's Phone",
         "id" : 3
       },
 

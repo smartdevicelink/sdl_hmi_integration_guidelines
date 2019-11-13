@@ -60,7 +60,7 @@ Active App Unregistered
   "params" :
   {
     "appID" : 65539,
-      "unexpectedDisconnect":"false"
+      "unexpectedDisconnect": false
   }
 }
 ```
