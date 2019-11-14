@@ -36,8 +36,7 @@ OnCommand
   "params" :
   {
     "cmdID" : 4365,
-      "grammarID" : 11,
-      "appID" : 12564
+    "appID" : 12564
   }
 }
 ```

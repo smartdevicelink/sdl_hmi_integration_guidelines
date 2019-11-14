@@ -69,7 +69,6 @@ GetAppServiceData (HMI Consumer)
   "result": {
     "code": 0,
     "method": "AppService.GetAppServiceData",
-    "resultCode": 0,
     "serviceData": {
       "mediaServiceData": {
         "isExplicit": false,
@@ -86,8 +85,7 @@ GetAppServiceData (HMI Consumer)
       },
       "serviceID": "9c6697b90f561cc599af19f81e9cf68a6848d6df1cdd63820d75ebfd7c727a20",
       "serviceType": "MEDIA"
-    },
-    "success": true
+    }
   }
 }
 ```

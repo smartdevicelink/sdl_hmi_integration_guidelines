@@ -50,8 +50,7 @@ User Switches Apps
   "method" : "BasicCommunication.OnAppDeactivated",
   "params" :
   {
-    "appID" : 65544,
-    "reason" : "PHONECALL"
+    "appID" : 65544
   }
 }
 ```

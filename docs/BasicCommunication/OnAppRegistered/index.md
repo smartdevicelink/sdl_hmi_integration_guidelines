@@ -130,7 +130,7 @@ Running the same apps from multiple devices at the same time
 			"hmiDisplayLanguageDesired": "ES-ES",
 			"isMediaApplication": false
 		},
-		"resumeVRGrammars": true
+		"resumeVrGrammars": true
 	}
 }
 ```

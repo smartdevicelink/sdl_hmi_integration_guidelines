@@ -53,7 +53,7 @@ OnFindApplications after Device Chosen by User
   "method" : "BasicCommunication.OnFindApplications",
   "params" :
   {
-    "deviceinfo" :
+    "deviceInfo" :
       {
         "name" : "XT910",
         "id" : 4

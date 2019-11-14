@@ -69,7 +69,7 @@ Get Capabilities
     {
       "navigation" : true,
       "phoneCall" : true,
-      "videostreaming" : true
+      "videoStreaming" : true
     },
     "systemCapabilities":
     {

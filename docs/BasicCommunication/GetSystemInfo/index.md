@@ -41,7 +41,7 @@ This RPC has no additional parameter requirements
 
 |||
 GetSystemInfo
-![GetSysteminfo](./assets/GetSystemInfo.png)
+![GetSystemInfo](./assets/GetSystemInfo.png)
 |||
 
 ### JSON Message Examples

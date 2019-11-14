@@ -64,7 +64,7 @@ The User does NOT consent the device.
 	"method" : "SDL.OnAllowSDLFunctionality",
 	"params" :  
 	{
-		"deviceInfo": 
+		"device": 
 		{
 				"name" : "Mary's Phone",
 				"id" : 8

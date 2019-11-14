@@ -32,7 +32,7 @@ When GetListOfPermissions is requested without “appID” parameter, the respon
 a) The information about the application (name, ID, etc.) is provided by SDL via either BasicCommunication.UpdateAppList or BasicCommunication.OnAppRegistered RPCs.  
 b) If HMI has never sent externalConsentStatus before (via [OnAppPermissionConsent](../../sdl/onapppermissionconsent)), SDL will respond with empty array.  
 c) User can go to settings on HMI and enable or disable "External UCS" for an "entity". HMI will notify SDL accordingly (_see figure ExternalConsentStatus_).  
-d) The resulting allowance of functional grouping is informed by parameter “allowedFunctions” to HMI in accordinance with result of ExternalConsentStatus.
+d) The resulting allowance of functional grouping is informed by parameter “allowedFunctions” to HMI in accordance with result of ExternalConsentStatus.
 
 #### Parameters
 
@@ -66,8 +66,10 @@ GetListOfPermissions provide  External UCS Status to HMI
 ![GetListOfPermissions](./assets/GetListOfPermissionsInformingHMI.png)
 |||
 
+#### Possible Layout - ExternalConsentStatus
+
 |||
-Possible Layout - ExternalConsentStatus
+Possible Layout
 ![GetListOfPermissions](./assets/PossibleLayoutExternalConsentStatus.png)
 |||
 
