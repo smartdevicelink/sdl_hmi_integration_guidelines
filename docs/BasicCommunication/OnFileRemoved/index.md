@@ -23,7 +23,6 @@ SDL notifies the HMI about removing files only if the files were located in the 
 
 !!!
 
-
 ### Notification
 
 #### Parameters

@@ -20,7 +20,6 @@ SDL forwards a request from the mobile application to get waypoint/destination d
 
 **SDL Note:** In case HMI does not respond to this request within SDL's default timeout (10s by default, [UI.OnResetTimeout](../../ui/onresettimeout) will reset this), SDL will return `GENERIC_ERROR` code to the corresponding mobile app's request
 
-
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|

@@ -1,6 +1,5 @@
 ## OnAppPermissionConsent
 
-
 Type
 : Notification  
 

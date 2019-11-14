@@ -15,7 +15,6 @@ If `serviceType` is not included in request, all service records will be returne
 
 !!!
 
-
 ### Request
 
 #### Parameters

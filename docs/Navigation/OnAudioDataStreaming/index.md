@@ -17,7 +17,6 @@ Purpose
 |:---|:---|:--------|:---------|
 |available|Boolean|true||
 
-
 ### Sequence Diagrams
 
 |||

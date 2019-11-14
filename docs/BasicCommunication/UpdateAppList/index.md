@@ -31,7 +31,6 @@ Cloud apps will appear in the app list before they are connected and registered.
 The connection to the cloud app will be created by Core after the user activates the app via [SDL.ActivateApp](../../SDL/ActivateApp).
 !!!
 
-
 ### Request
 
 #### Parameters

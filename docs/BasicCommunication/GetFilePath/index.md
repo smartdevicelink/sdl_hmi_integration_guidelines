@@ -19,7 +19,6 @@ Purpose
 |fileType|[Common.FileType](../../common/enums/#filetype)|false||
 |appServiceId|String|false||
 
-
 ### Response
 
 #### Parameters

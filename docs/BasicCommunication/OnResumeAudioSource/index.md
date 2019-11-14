@@ -28,7 +28,6 @@ SDL will send `OnResumeAudioSource` if the application meets both of these condi
 
 !!!
 
-
 ### Notification
 
 #### Parameters

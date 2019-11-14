@@ -9,7 +9,6 @@ Sender
 Purpose
 : Inform HMI and mobile application about changes in RC module allocation.
 
-
 ### Notification
 
 SDL must send OnRCStatus notification when:

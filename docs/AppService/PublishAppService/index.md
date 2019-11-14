@@ -15,7 +15,6 @@ The HMI may send a PublishAppService RPC request multiple times for a given serv
 
 !!!
 
-
 ### Request
 
 #### Parameters

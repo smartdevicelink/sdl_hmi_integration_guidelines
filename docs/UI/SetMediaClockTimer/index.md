@@ -37,8 +37,6 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
 3. Initially, the appID together with other application-related information is provided by SDL within one of _UpdateAppList_ and _OnAppRegistered_ RPCs.   
 !!!
 
-
-
 #### Parameters
 
 |Name|Type|Mandatory|Description|

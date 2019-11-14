@@ -9,7 +9,6 @@ Sender
 Purpose
 : Inform SDL of the UI capabilities of the vehicle.
 
-
 ### Request
 
 #### Parameters

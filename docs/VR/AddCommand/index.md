@@ -18,7 +18,6 @@ Whenever the internal list of added `vrCommands` is updated SDL must:
 * construct the `vrHelp` and `helpPrompt`  parameters using the data from the list SDL created internally  
 * send these parameters to the HMI via the `SetGlobalProperties` RPC
 
-
 #### Parameters
 
 |Name|Type|Mandatory|Additional|

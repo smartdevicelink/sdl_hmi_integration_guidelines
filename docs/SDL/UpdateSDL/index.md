@@ -9,7 +9,6 @@ Sender
 Purpose
 : Update the Policy Table request
 
-
 ### Request
 
 The request notifies PolicyManager about Policy Table Update is requested by User on HMI.   

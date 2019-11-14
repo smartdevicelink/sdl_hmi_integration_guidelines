@@ -35,8 +35,6 @@ The system shall list all available RC radio buttons and RC climate buttons in t
 |buttonPressMode|[Common.ButtonPressMode](../../common/enums/#buttonpressmode)|true| |Indicates whether this is a LONG or SHORT button press event.|
 |appID|Integer|true| |Internal SDL-assigned ID of the related application|
 
-
-
 ### Response
 
 #### Parameters

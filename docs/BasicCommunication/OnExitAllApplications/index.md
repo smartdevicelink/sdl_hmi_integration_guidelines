@@ -21,10 +21,6 @@ SDL requires this notification in order to accurately close the sessions with re
 
 !!!
 
-
-
-
-
 ### Notification
 
 #### Parameters

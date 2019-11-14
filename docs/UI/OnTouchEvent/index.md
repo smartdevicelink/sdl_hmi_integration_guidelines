@@ -18,7 +18,6 @@ Purpose
 |type|[Common.TouchType](../../common/enums/#touchtype)|true||
 |event|[Common.TouchEvent](../../common/structs/#touchevent)|true|array: true<br>minsize: 1<br>maxsize: 10|
 
-
 ### Sequence Diagrams
 
 |||
