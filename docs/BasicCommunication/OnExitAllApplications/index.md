@@ -13,7 +13,7 @@ SDL requires this notification in order to accurately close the sessions with re
 
 !!! MUST
 
-  * Send `OnExitAllApplications` with the appropriate `reason` upon one of the users's actions:
+  * Send `OnExitAllApplications` with the appropriate `reason` upon one of the user's actions:
     * Master Reset
     * Key set to Ignition Off (Refer to the diagram below).
     * Key set to Suspend (Refer to the diagram below).

@@ -10,7 +10,7 @@ Purpose
 : Emulate button press event on HMI for the common climate or radio control buttons in vehicle
 
 ButtonPress represents a request from an application to change settings of requested RC module by pressing the appropriate button.
-This RPC can be sent to the HMI from an application that is registered with REMOTE_CONTROL appHMIType and in one of the following states: FULL, LIMITTED, BACKGROUND.
+This RPC can be sent to the HMI from an application that is registered with REMOTE_CONTROL appHMIType and in one of the following states: FULL, LIMITED, BACKGROUND.
 Module signed by the application in such request has to be available on HMI and allowed for control change settings.
 The system shall list all available RC radio buttons and RC climate buttons in the existing ButtonCapabilities list.
 

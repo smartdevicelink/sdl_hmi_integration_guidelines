@@ -28,7 +28,7 @@ The possible componentNames are:
 
 Once the components are registered, the HMI must notify sdl that it is ready to begin further communication using the [BasicCommunication.OnReady](../basiccommunication/onready) notification.
 
-Upon receipt of the OnReady notification, SDL will begin checking the availablility of the different HMI components via a chain of requests:
+Upon receipt of the OnReady notification, SDL will begin checking the availability of the different HMI components via a chain of requests:
 
   * `UI.IsReady` - The display availability
   * `VR.IsReady` - The voice recognition module availability
@@ -38,6 +38,7 @@ Upon receipt of the OnReady notification, SDL will begin checking the availablil
   * `RC.IsReady` - Indicates whether vehicle RC modules are present and ready to communicate with SDL
  
 ## Registering for Notifications
+
 The HMI must also register for notifications individually using the following RPC format
 
 ```json
@@ -68,7 +69,6 @@ The HMI must:
 If the response to any of the component `IsReady` requests contains `{"available": false}`, SDL will no longer communicate with that component.
 
 !!!
-
 
 ### IsReady Sequence Diagram
 

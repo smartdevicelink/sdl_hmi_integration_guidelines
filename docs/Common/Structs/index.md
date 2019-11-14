@@ -44,13 +44,12 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |preferredResolution|Common.ImageResolution|false| |The preferred resolution of a video stream for decoding and rendering on HMI.|
-|maxBitrate|Integer|false|minvalue: 0<br>maxvalue: 2147483647|The maximum bitrate of video stream that is supported, in kbps.|
+|maxBitrate|Integer|false|minvalue: 0<br>maxvalue: 2147483647|The maximum bitrate of video stream that is supported, in Kbps.|
 |supportedFormats|Common.VideoStreamingFormat|false|array: true|Detailed information on each format supported by this system, in its preferred order.|
 |hapticSpatialDataSupported|Boolean|false| |True if the system can utilize the haptic spatial data from the source being streamed.|
 |diagonalScreenSize|Float|false|minvalue: 0|The diagonal screen size in inches.|
 |pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
 |scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
-
 
 ### SystemCapabilities
 
@@ -210,7 +209,7 @@
 |altitude|Float|false|minvalue: -10000<br>maxvalue: 10000||
 |heading|Float|false|minvalue: 0<br>maxvalue: 359.99||
 |speed|Float|false|minvalue: 0<br>maxvalue: 500||
-|shifted|Boolean|false||True, if GPS lat/long, time, and altitude have been purposefully shifted (requires a proprietary algorithm to unshift).<br>False, if the GPS data is raw and un-shifted.<br>If not provided, then value is assumed False|
+|shifted|Boolean|false||True, if GPS lat/long, time, and altitude have been purposefully shifted (requires a proprietary algorithm to un-shift).<br>False, if the GPS data is raw and un-shifted.<br>If not provided, then value is assumed False|
 
 ### SingleTireStatus
 
@@ -493,6 +492,7 @@
 |height|Integer|false| |Height of the video stream, in pixels.|
 
 ### ExternalConsentStatus
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |entityType|Integer|true|minvalue: 0<br>maxvalue: 128|The entityType which status is informed by "status" param.|
@@ -544,12 +544,14 @@
 |REG|String|false||Region|
 
 ### StationIDNumber
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |countryCode|Integer|false|minvalue: 0<br>maxvalue: 999|Binary Representation of ITU Country Code. USA Code is 001.|
 |fccFacilityId|Integer|false|minvalue: 0<br>maxvalue: 999999|Binary representation  of unique facility ID assigned by the FCC; FCC controlled for U.S. territory|
 
 ### SisData
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |stationShortName|String|false|minlength: 4<br>maxlength: 7|Identifies the 4-alpha-character station call sign plus an optional (-FM) extension|
@@ -598,6 +600,7 @@
 |lightControlCapabilities|Common.LightControlCapabilities|false||If included, the platform supports light controls.|
 
 ### ClimateControlCapabilities
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |moduleName|String|true|maxlength: 100|The short friendly name of the climate control module. It should not be used to identify a module by mobile application.|
@@ -640,7 +643,6 @@
 |channelName|String|false|maxlength: 50|Read-only channel / frequency name (e.i. "Treble, Midrange, Bass" or "125 Hz")|
 |channelSetting|Integer|true|minvalue: 0<br>maxvalue: 100|Reflects the setting, from 0%-100%.|
 
-
 ### AudioControlData
 
 |Name|Type|Mandatory|Additional|Description|
@@ -649,7 +651,6 @@
 |keepContext|Boolean|false||This parameter shall not be present in any getter responses or notifications. <br> This parameter is optional in a setter request. The default value is false. <br> If it is false, the system not only changes the audio source but also brings the default infotainment system UI associated with the audio source to foreground and set the application to background. <br> If it is true, the system changes the audio source, but keeps the current application's context.|
 |volume|Integer|false|minvalue: 0<br>maxvalue: 100|Reflects the volume of audio, from 0%-100%."|
 |equalizerSettings|Common.EqualizerSettings|false|minsize: 1<br>maxsize: 100<br>array: true|Defines the list of supported channels (band) and their current/desired settings on HMI|
-
 
 ### LightCapabilities
 
@@ -668,7 +669,6 @@
 |moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
 |supportedLights|Common.LightCapabilities|true|minsize: 1<br>maxsize: 100<br>array: true| An array of available LightCapabilities that are controllable.|
 
-
 ### LightState
 
 |Name|Type|Mandatory|Additional|Description|
@@ -678,13 +678,11 @@
 |density|Float|false|minvalue: 0<br>maxvalue: 1||
 |color|Common.RGBColor|false|||
 
-
 ### LightControlData
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |lightState|Common.LightState|true|minsize: 1<br>maxsize: 100<br>array: true|An array of LightNames and their current or desired status. <br> Status of the LightNames that are not listed in the array shall remain unchanged.|
-
 
 ### HMISettingsControlCapabilities
 
@@ -695,7 +693,6 @@
 |distanceUnitAvailable|Boolean|false||Availability of the control of distance unit.|
 |temperatureUnitAvailable|Boolean|false||Availability of the control of temperature unit.|
 |displayModeUnitAvailable|Boolean|false||Availability of the control of HMI display mode.|
-
 
 ### HMISettingsControlData
 
@@ -743,12 +740,14 @@
 |height|Float|true| |The height of the rectangle|
 
 ### HapticRect
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |id|Integer|true|minvalue: 0<br>maxvalue: 2000000000|A unique identifier for the haptic rectangle|
 |rect|Common.Rectangle|true| |The position of the haptic rectangle to be highlighted.<br>The center of this rectangle is considered "touched" when the element is focused and then selected.|
 
 ### FuelRange
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |type|[Common.FuelType](../enums/#fueltype)|false|||
@@ -887,7 +886,6 @@
 |mediaServiceManifest|Common.MediaServiceManifest|false|||
 |weatherServiceManifest|Common.WeatherServiceManifest|false|||
 |navigationServiceManifest|Common.NavigationServiceManifest|false|||
-
 
 ### AppServiceRecord
 
@@ -1072,6 +1070,7 @@ There are no defined parameters for this struct
 |maximumNumberOfWindows|Integer|true|||
 
 ### WindowCapability
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |windowID|Integer|false||The specified ID of the window. Can be set to a predefined window, or omitted for the main window on the main display.|
@@ -1085,6 +1084,7 @@ There are no defined parameters for this struct
 |menuLayoutsAvailable|[Common.MenuLayout](../enums/#menulayout)|false|array: true<br>minsize: 1<br>maxsize: 1000|An array of available menu layouts. If this parameter is not provided, only the `LIST` layout is assumed to be available|
 
 ### ModuleInfo
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |moduleId|String|true|maxlength: 100|uuid of a module. "moduleId + moduleType" uniquely identify a module.| 
@@ -1093,6 +1093,7 @@ There are no defined parameters for this struct
 |allowMultipleAccess|Boolean|false|defvalue: true|allow multiple users/apps to access the module or not|
 
 ### Grid
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |col|Integer|true|minvalue: -1<br>maxvalue: 100|Describes a location (origin coordinates and span) of a vehicle component.|
@@ -1103,6 +1104,7 @@ There are no defined parameters for this struct
 |levelspan|Integer|false|minvalue: 1<br>maxvalue: 100<br>defvalue: 1|Describes a location (origin coordinates and span) of a vehicle component.|
 
 ### SeatLocationCapability
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |rows|Integer|false|minvalue: 1<br>maxvalue: 100|Contains information about the locations of each seat.|
@@ -1111,6 +1113,7 @@ There are no defined parameters for this struct
 |seats|Common.SeatLocation|false|array: true|Contains a list of SeatLocation in the vehicle, the first element is the driver's seat|
 
 ### SeatLocation
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |grid|Common.Grid|false||Describes the location of a seat. HMI shall include this parameter when publishing seat locations in capabilities.|

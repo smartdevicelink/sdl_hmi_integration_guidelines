@@ -12,7 +12,7 @@ Purpose
 SDL will send `OnAppRegistered`:
 
   1. After an SDL-enabled application has registered successfully.
-  2. When the device was reconnected after an unexpected disconnect and a previously connected SDL application reregisters. SDL makes a decision if the data resumption process is applicable for the application.
+  2. When the device was reconnected after an unexpected disconnect and a previously connected SDL application re-registers. SDL makes a decision if the data resumption process is applicable for the application.
   3. When the HMI sends an `OnFindApplications` notification via the users request.
 
 Regarding data resumption:
@@ -26,14 +26,14 @@ Data resumption means that an application may request to restore data used in th
 
 If the application resumes data successfully:
 
-  * SDL will provide `OnAppRegistered` with `resumeVrGrammars`:`true` to notify the HMI that `VRGrammars` must be resumed. On this event, the HMI must restore the application related `VRGgrammars` for the appID received via an `OnAppRegistered` notification.
+  * SDL will provide `OnAppRegistered` with `resumeVrGrammars`:`true` to notify the HMI that `VRGrammars` must be resumed. On this event, the HMI must restore the application related `VRGrammars` for the appID received via an `OnAppRegistered` notification.
   * SDL must restore application-related data and send to the HMI after an `OnAppRegistered` notification:
     * `AddCommand`(Menu + VR)
     * `AddSubMenu`
     * `CreateInteractionChoiceSet`
     * `SetGlobalProperties`
     * `SubscribeButton`
-    * `SubscibeVehicleData`
+    * `SubscribeVehicleData`
 
 If the application does NOT resume data successfully:
 
@@ -48,7 +48,7 @@ If the application does NOT resume data successfully:
   3. Compile and store `VRGrammars` for the `vrSynonyms` parameter, and arrange them for the user to be able to use via voice recognition. Note: The VR commands to activate an application must be accessible when viewing a different active application or the list of registered applications.
   4. Provide the user with the possibility to choose an application among a list of registered applications.
   5. Send an `OnAppActivated` notification to SDL when the user activates an app via the `UI` or `VR`.   
-  6. Manage application events by priority. HMI gets proirity information from _OnAppRegistered_, _UpdateAppList_, _ActivateApp_ HMI API.  
+  6. Manage application events by priority. HMI gets priority information from _OnAppRegistered_, _UpdateAppList_, _ActivateApp_ HMI API.  
   7. HMI must set app icon and create the app title in the mobile apps list in case SDL provides `<icon>` via `OnAppRegistered` notification.  
   8. HMI must set default app icon in case SDL omits `<icon>` at `OnAppRegistered` notification.  
   9. Differentiate the same app across different devices.

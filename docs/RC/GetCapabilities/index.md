@@ -23,7 +23,7 @@ This RPC has no additional parameter requirements
 
 !!! must 
 
-1. Provide `moduleInfo` with `moduleID` for each module of all module types in GetCapabilities_respose to SDL if it supports multiple modules per module type.  
+1. Provide `moduleInfo` with `moduleID` for each module of all module types in GetCapabilities response to SDL if it supports multiple modules per module type.  
 2. Determine and provide default `moduleID` for the moduleType and publish it as the first item in RemoteControlCapabilities.
 3. Publish how many rows, columns and levels are available for the vehicle and the list of modules in properly defined grids.
 

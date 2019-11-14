@@ -21,7 +21,7 @@ After opening the menu, the HMI must send a [UI.OnSystemContext](../OnSystemCont
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|menuID|Integer|false|minvalue: 1<br>maxvalue: 2000000000|If ommited the HMI opens the app's menu.<br>If set to a sub-menu ID the HMI opens the corresponding sub-menu previously added using [UI.AddSubMenu](../AddSubMenu)|
+|menuID|Integer|false|minvalue: 1<br>maxvalue: 2000000000|If omitted the HMI opens the app's menu.<br>If set to a sub-menu ID the HMI opens the corresponding sub-menu previously added using [UI.AddSubMenu](../AddSubMenu)|
 |appID|Integer|true| | |
 
 ### Response
@@ -39,7 +39,7 @@ ShowAppMenu request(without menuID)
 
 |||
 ShowAppMenu request(with menuID)
-![ShowAppMenuwithMenuID](./assets/ShowAppMenu_MenuID.png)
+![ShowAppMenuWithMenuID](./assets/ShowAppMenu_MenuID.png)
 |||
 
 ### JSON Message Examples

@@ -7,7 +7,7 @@ Sender
 : HMI
 
 Purpose
-: Sent by system to record statiscs and error counts. Increases statistics specified by statisticType by one.
+: Sent by system to record statistics and error counts. Increases statistics specified by statisticType by one.
 
 ### Notification
 

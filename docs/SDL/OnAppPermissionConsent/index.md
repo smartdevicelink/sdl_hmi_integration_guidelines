@@ -12,7 +12,7 @@ Purpose
 Initiated by HMI for specifying the allowance for the application to perform some functionality. The notification informs the Policy Manager about some changes in application permissions that affect application behavior on HMI.  
 
 !!! MUST
-1) Send `OnAppPermissionConsent` when user answers to prompt about app's permisstions consent.  
+1) Send `OnAppPermissionConsent` when user answers to prompt about app's permissions consent.  
 2) Send `OnAppPermissionConsent` when user enters settings menu and allows/disallows app's permissions.  
 3) Use the pair of values id<->name in PermissionItem structure which were obtained via `GetListOfPermissions` response  
 4) Send `OnAppPermissionConsent` when user changes `ExternalConsentStatus`.
@@ -27,7 +27,7 @@ Initiated by HMI for specifying the allowance for the application to perform som
 
 !!! NOTE  
 a) SDL ignores all invalid notifications which come from HMI (invalid JSON, invalid data types/bounds etc).  
-b) `ExternalConsentStatus` either user_dissalows or user_allows applications functional groupings depending on predefined settings in policy table.  
+b) `ExternalConsentStatus` either user_disallows or user_allows applications functional groupings depending on predefined settings in policy table.  
 c) SDL  uses `OnAppPermissionConsent` value (ON/OFF) received from HMI through ignition cycles until this value is changed by corresponding notification from HMI.
 !!!
 

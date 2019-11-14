@@ -66,7 +66,7 @@ GetLanguage
   "error" :
   {
     "code" : 22,
-    "message" : "During the API call the unknown error has occured",
+    "message" : "During the API call the unknown error has occurred",
     "data" :
     {
       "method" : "VR.GetLanguage"

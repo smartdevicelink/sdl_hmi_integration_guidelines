@@ -11,7 +11,7 @@ Purpose
 
 
 
-The HMI must send RC.OnInteriorVehicleData notification to SDL when module settings were changed in case of button press event or after SetInteriorVehicledata request was processed.
+The HMI must send RC.OnInteriorVehicleData notification to SDL when module settings were changed in case of button press event or after SetInteriorVehicleData request was processed.
 
 !!! MUST
 
