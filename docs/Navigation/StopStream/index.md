@@ -27,6 +27,7 @@ If the app does not stop streaming after certain amount of time, SDL sends a Sto
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 StopStream
 ![StopStream](./assets/StopStream.jpg)
@@ -38,6 +39,7 @@ StopStream
 
 ```json
 {
+  "id" : 176,
   "jsonrpc" : "2.0",
   "method" : "Navigation.StopStream",
   "params" :  

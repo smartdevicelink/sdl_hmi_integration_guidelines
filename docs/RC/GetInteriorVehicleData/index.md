@@ -50,7 +50,7 @@ HMI must return in GetInteriorVehicleData_response the current value of the disp
 
 |||
 GetInteriorVehicleData
-![GetInteriorVehicleData](assets/GetInteriorVehicleData.png)
+![GetInteriorVehicleData](./assets/GetInteriorVehicleData.png)
 |||
 
 ### JSON Message Examples

@@ -38,6 +38,7 @@ SDL will:
 |setAsDefault|Boolean|false||
 
 ### Sequence Diagrams
+
 |||
 AppServiceActivation activate service
 ![AppServiceActivation](./assets/AppServiceActivation_ActivateService_Success.png)
@@ -92,7 +93,7 @@ AppServiceActivation set default service
 {
    "id" : 1000,
    "jsonrpc" : "2.0",
-   "result" : {
+   "error" : {
       "code" : 13,
       "message" : "No known service with given ID",
       "data" : {

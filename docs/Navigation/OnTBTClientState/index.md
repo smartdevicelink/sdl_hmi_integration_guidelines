@@ -18,6 +18,7 @@ Purpose
 |state|[Common.TBTState](../../common/enums/#tbtstate)|true||
 
 ### Sequence Diagrams
+
 |||
 OnTBTClientState
 ![OnTBTClientState](./assets/OnTBTClientState.jpg)
@@ -26,6 +27,7 @@ OnTBTClientState
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

@@ -24,6 +24,7 @@ This RPC has no additional parameter requirements
 |language|[Common.Language](../../common/enums/#language)|true||
 
 ### Sequence Diagrams
+
 |||
 GetLanguage
 ![GetLanguage](./assets/GetLanguage.png)
@@ -65,7 +66,7 @@ GetLanguage
   "error" :
   {
     "code" : 22,
-    "message" : "During the API call the unknown error has occured",
+    "message" : "During the API call the unknown error has occurred",
     "data" :
     {
       "method" : "VR.GetLanguage"

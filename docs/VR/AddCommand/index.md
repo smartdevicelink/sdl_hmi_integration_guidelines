@@ -10,13 +10,13 @@ Purpose
 : Add a command for voice recognition
 
 ### Request
+
 If the application sends `AddCommand` with the `vrCommands` parameter then SDL must maintain a list of the added `vrCommands`.  
 For each AddCommand, only the first item in the `vrCommands` array shall be added to the list.
 
 Whenever the internal list of added `vrCommands` is updated SDL must:  
 * construct the `vrHelp` and `helpPrompt`  parameters using the data from the list SDL created internally  
 * send these parameters to the HMI via the `SetGlobalProperties` RPC
-
 
 #### Parameters
 
@@ -35,22 +35,27 @@ Whenever the internal list of added `vrCommands` is updated SDL must:
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 AddCommand
 ![AddCommand](./assets/AddCommand.png)
 |||
+
 |||
 UI.AddCommand returns SUCCESS, VR.AddCommand fails
 ![AddCommand](./assets/AddCommandVRFail.png)
 |||
+
 |||
 UI.AddCommand returns SUCCESS, VR.AddCommand no response
 ![AddCommand](./assets/AddCommandNoResponse.png)
 |||
+
 |||
 UI.AddCommand fails, VR.AddCommand returns SUCCESS
 ![AddCommand](./assets/AddCommandSuccessUIFail.png)
 |||
+
 |||
 UI.AddCommand no response, VR.AddCommand returns SUCCESS
 ![AddCommand](./assets/AddCommandSuccessUINoResponse.png)
@@ -64,7 +69,7 @@ UI.AddCommand no response, VR.AddCommand returns SUCCESS
 {
   "id" : 119,
   "jsonrpc" : "2.0",
-  "method" : "VR. AddCommand",
+  "method" : "VR.AddCommand",
   "params" :
   {
     "cmdID" : 4365,
@@ -74,8 +79,9 @@ UI.AddCommand no response, VR.AddCommand returns SUCCESS
          "Exit",
          "Quit"
     ],
-     "grammarID":123,
-  "appID" : 64467
+    "grammarID" : 123,
+    "type" : "Command",
+    "appID" : 64467
   }
 }
 ```

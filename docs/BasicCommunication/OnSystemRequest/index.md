@@ -53,6 +53,7 @@ _**SyncP NOTE**_
 |appID|Integer|false||
 
 ### Sequence Diagrams
+
 |||
 System Requests File Download
 ![OnSystemRequest](./assets/OnSystemRequest.png)
@@ -66,6 +67,7 @@ BC.OnSystemRequest in "Proprietary" Policy Table Update Flow
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

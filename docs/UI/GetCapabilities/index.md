@@ -9,7 +9,6 @@ Sender
 Purpose
 : Inform SDL of the UI capabilities of the vehicle.
 
-
 ### Request
 
 #### Parameters
@@ -31,6 +30,7 @@ This RPC has no additional parameter requirements
 |systemCapabilities|[Common.SystemCapabilities](../../common/structs/#systemcapabilities)|false||
 
 ### Sequence Diagrams
+
 |||
 Get Capabilities
 ![GetCapabilities](./assets/GetCapabilities.png)
@@ -62,13 +62,14 @@ Get Capabilities
       "textFields" : ["mainField1", "mainField2", "mediaclock", "mediaTrack", "alertText1", "alertText2", "alertText3", "scrollableMessageBody", "initialInteractionText", "navigationText1", "navigationText2", "audioPassThruDisplayText1", "audioPassThruDisplayText2", "notificationText"],
       "mediaClockFormats" : ["CLOCK1", "CLOCKTEXT4"],
       "graphicSupported" : true,
+      "templatesAvailable" : ["MEDIA"],
       "imageCapabilities": ["DYNAMIC"]
     },
     "hmiCapabilities" :
     {
       "navigation" : true,
       "phoneCall" : true,
-      "videostreaming" : true
+      "videoStreaming" : true
     },
     "systemCapabilities":
     {

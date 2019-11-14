@@ -21,7 +21,7 @@ Purpose
 
 #### Parameters
 
-The request does not have specific parameters.
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -39,6 +39,7 @@ The request does not have specific parameters.
 |available|Boolean|true||
 
 ### Sequence Diagrams
+
 |||
 IsReady
 ![IsReady](./assets/IsReady.png)
@@ -64,7 +65,7 @@ IsReady
   "jsonrpc" : "2.0",
   "result" :
   {
-    "availabe" : true,
+    "available" : true,
     "code" : 0,
     "method" : "VehicleInfo.IsReady"
   }

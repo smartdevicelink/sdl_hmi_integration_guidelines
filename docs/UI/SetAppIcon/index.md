@@ -10,6 +10,7 @@ Purpose
 : Display the application's specified icon in the HMI's application list.
 
 ### Request
+
 !!! MUST  
 1. Keep track and store the the name and file referencing the app icon each time a successful `SetAppIcon` request occurs from the mobile app.  
 2. Display the requested icon together with the application name in the HMI list of registered applications:  
@@ -18,6 +19,7 @@ Purpose
 3. Display default app icon if the mobile application had not previously set an icon successfully and/or the file does not exist on HMI.    
 
 !!!
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -32,6 +34,7 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 SetAppIcon
 ![SetAppIcon](./assets/SetAppIcon.png)

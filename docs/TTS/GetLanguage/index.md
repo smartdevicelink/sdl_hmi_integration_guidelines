@@ -13,7 +13,7 @@ Purpose
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -24,6 +24,7 @@ This RPC has no additional parameter requirements.
 |language|[Common.Language](../../common/enums/#language)|true||
 
 ### Sequence Diagrams
+
 |||
 GetLanguage
 ![GetLanguage](./assets/GetLanguage.png)

@@ -25,6 +25,7 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 StartAudioStream
 ![StartAudioStream](./assets/StartAudioStream.jpg)
@@ -36,6 +37,7 @@ StartAudioStream
 
 ```json
 {
+  "id" : 176,
   "jsonrpc" : "2.0",
   "method" : "Navigation.StartAudioStream",
   "params" :  

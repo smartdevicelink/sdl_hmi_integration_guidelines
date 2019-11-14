@@ -1,4 +1,5 @@
 ## OnReady
+
 Type
 : Notification
 
@@ -23,6 +24,7 @@ In order to communicate with SDL, the HMI must send this notification after the 
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 OnReady WebSocket
 ![OnReady](./assets/OnReady.png)
@@ -31,6 +33,7 @@ OnReady WebSocket
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

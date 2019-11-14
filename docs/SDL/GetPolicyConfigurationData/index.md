@@ -9,7 +9,6 @@ Sender
 Purpose
 : To get a specific field from the policy table
 
-
 ### Request
 
 !!! MUST
@@ -19,7 +18,6 @@ Purpose
     * `property`: Used to request a specific property of `policyType`.
 
 !!!
-
 
 #### Parameters
 
@@ -34,7 +32,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|value|String|true|array: true<br>maxlength: 1000<br>minsize: 1<br>maxsize: 100|
+|value|String|false|array: true<br>maxlength: 1000<br>minsize: 1<br>maxsize: 100|
  
 
 ### Sequence Diagrams

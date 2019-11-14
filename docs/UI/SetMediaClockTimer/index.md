@@ -37,8 +37,6 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
 3. Initially, the appID together with other application-related information is provided by SDL within one of _UpdateAppList_ and _OnAppRegistered_ RPCs.   
 !!!
 
-
-
 #### Parameters
 
 |Name|Type|Mandatory|Description|
@@ -55,16 +53,18 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
 
 This RPC has no additional parameter requirements
 
-
 ### Sequence Diagrams
+
 |||
 SetMediaClockTimer COUNTUP and COUNTDOWN for Full and Background applications
 ![SetMediaClockTimer](./assets/SetMediaClockTimerUpDownFullBackground.png)
 |||
+
 |||
 SetMediaClockTimer Pause and Resume for Active Application
 ![SetMediaClockTimer](./assets/SetMediaClockTimerPauseResumeActive.png)
 |||
+
 |||
 SetMediaClockTimer COUNTDOWN for a deactivated application
 ![SetMediaClockTimer](./assets/SetMediaClockTimerDownDeactivate.png)

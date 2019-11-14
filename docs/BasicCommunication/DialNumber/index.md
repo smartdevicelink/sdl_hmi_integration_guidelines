@@ -22,10 +22,10 @@ SDL looks to see if the phone number entered is correct before passing to the HM
 !!! MUST
 
   1. Show DialNumber pop-up on HMI with 2 buttons, "Call" and "Cancel".
-  2. Send the notification OnAppDeactivated(PHONECALL) to SDL when the phone call is started on the HMI. The notification must be sent to all applications that have active audio sources on the HMI.
+  2. Send the notification OnAppDeactivated(PHONE_CALL) to SDL when the phone call is started on the HMI. The notification must be sent to all applications that have active audio sources on the HMI.
   3. Send the notification BC.OnOnPhoneCall(isActive:true) to SDL when the phone call is started on the HMI.
   3. Send the notification BC.OnOnPhoneCall(isActive:false) to SDL when the phone call is ended on the HMI.
-  4. Always respond to BC.DialNumber with a response code. If the HMI does not respond, the mobile application will never get a response from from SDL because default timeouts do not apply to the DailNumber mobile API.
+  4. Always respond to BC.DialNumber with a response code. If the HMI does not respond, the mobile application will never get a response from from SDL because default timeouts do not apply to the DialNumber mobile API.
 
 !!!
 
@@ -47,6 +47,7 @@ The request is considered to have been executed successfully only after the user
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 DialNumber Success
 ![DialNumberSuccess](./assets/DialNumberSuccess.jpg)
@@ -65,7 +66,7 @@ DialNumber Failed
 {
   "id" : 59,
   "jsonrpc" : "2.0",
-  "method" : "BasicCommunication. DialNumber",
+  "method" : "BasicCommunication.DialNumber",
   "params" :
   {
         "number" : "*111#",
@@ -73,6 +74,7 @@ DialNumber Failed
   }
 }
 ```
+
 #### Example Response
 
 ```json

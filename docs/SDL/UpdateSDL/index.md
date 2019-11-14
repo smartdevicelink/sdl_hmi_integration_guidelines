@@ -9,8 +9,8 @@ Sender
 Purpose
 : Update the Policy Table request
 
-
 ### Request
+
 The request notifies PolicyManager about Policy Table Update is requested by User on HMI.   
 The below describes the behavior related to EXTERNAL_PROPRIETARY Policy flow only.
 
@@ -29,7 +29,8 @@ _Information_: PROPRIETARY Policy flow -> SDL must change the flag from "UPDATE_
 !!!
 
 #### Parameters
-This RPC has no additional parameter requirements.
+
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -40,18 +41,22 @@ This RPC has no additional parameter requirements.
 |result|[Common.UpdateResult](../../common/enums/#updateresult)|true|Specify result: no update needed, update was successful/unsuccessful, etc.|
 
 ### Sequence Diagrams
+
 |||
 UpdateSDL UP_TO_DATE - EXTERNAL_PROPRIETARY Policy Table Update Flow
 ![UpdateSDL](./assets/UpdateSDL%20UPDATING.jpg)
 |||
+
 |||
 UpdateSDL UPDATING - EXTERNAL_PROPRIETARY Policy Table Update Flow
 ![UpdateSDL](./assets/UpdateSDL%20UPDATING.jpg)
 |||
+
 |||
 UpdateSDL UPDATE_NEEDED - EXTERNAL_PROPRIETARY Policy Table Update Flow
 ![UpdateSDL](./assets/UpdateSDL%20UPDATE_NEEDED.jpg)
 |||
+
 |||
 UpdateSDL - PROPRIETARY Policy Table Update Flow
 ![UpdateSDL](./assets/Proprietary_PTU_flow_.png)

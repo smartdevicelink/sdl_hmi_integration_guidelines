@@ -33,6 +33,7 @@ The list of known devices is provided to the HMI in the [UpdateDeviceList](../Up
 |deviceInfo|[Common.DeviceInfo](../../common/structs/#deviceinfo)|true||
 
 ### Sequence Diagrams
+
 |||
 OnDeviceChosen
 ![OnDeviceChosen](./assets/OnDeviceChosen.png)
@@ -41,18 +42,18 @@ OnDeviceChosen
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : "BasicCommunication.OnDevcieChosen",
+  "method" : "BasicCommunication.OnDeviceChosen",
   "params" :
   {
     "deviceInfo" :
     {
-        "name" : "Jerry`s Phone",
-        "id" : 3
+        "name" : "Jerry's Phone",
+        "id" : "3"
     }
   }
 }
 ```
-

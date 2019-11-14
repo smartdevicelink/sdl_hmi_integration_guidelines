@@ -20,6 +20,7 @@ Purpose
 |windowID|Integer|false||
 
 ### Sequence Diagrams
+
 |||
 OnSystemContext for different HMI States
 ![OnSystemContext](./assets/OnSystemContext.png)
@@ -28,6 +29,7 @@ OnSystemContext for different HMI States
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

@@ -25,6 +25,7 @@ Purpose
 !!! note
 
 #### CloudAppVehicleID
+
 * An optional parameter used by cloud apps or the policy server to identify the head unit
 * Could be used by a cloud app to identify an incoming connection from core
 * Could be used by a policy server to index cloud app configurations for a specific head unit
@@ -32,6 +33,7 @@ Purpose
 The HMI will have to update this field if the user chooses to reset this value (in case the vehicle changes owners)
 
 !!!
+
 ### Request
 
 #### Parameters
@@ -107,14 +109,17 @@ The HMI will have to update this field if the user chooses to reset this value (
 |cloudAppVehicleID|String|false||
 
 ### Sequence Diagrams
+
 |||
 GetVehicleData
 ![GetVehicleData](./assets/GetVehicleData.jpg)
 |||
+
 |||
 GetVehicleData
 ![GetVehicleData](./assets/VDdefinedInXMLandSchema.png)
 |||
+
 |||
 GetVehicleData with custom data
 ![CustomVehicleData](./assets/GVD_custom_data.png)

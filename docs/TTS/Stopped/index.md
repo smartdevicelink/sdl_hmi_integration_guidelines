@@ -13,9 +13,10 @@ Purpose
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Stopped after StopSpeaking from SDL
 ![Stopped](./assets/Stopped.png)
@@ -24,6 +25,7 @@ Stopped after StopSpeaking from SDL
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

@@ -24,6 +24,7 @@ This RPC has no additional parameter requirements
 |languages|[Common.Language](../../common/enums/#language)|true|array: true<br>minsize: 1<br>maxsize: 100|
 
 ### Sequence Diagrams
+
 |||
 Get Supported Languages
 ![GetSupportedLanguages](./assets/GetSupportedLanguages.png)

@@ -50,7 +50,7 @@ If `level` is `FULL` or `LIMITED`:
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
 |priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
@@ -63,18 +63,22 @@ If `level` is `FULL` or `LIMITED`:
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Activate App after successful Resumption
 ![Activate App Successful Resume](./assets/ActivateAppSuccessfulResume.png)
 |||
+
 |||
 Activate App after failed Resumption
 ![Activate App Failed Resume](./assets/ActivateAppFailedResume.png)
 |||
+
 |||
 Activate App after Unexpected Disconnect
 ![Activate App Unexpected Disconnect](./assets/ActivateAppUnexpectedDisconnect.png)
 |||
+
 |||
 Activate App after Accepted Data Consent Prompt
 ![Activate App Successful Data](./assets/ActivateAppSuccessfulData.png)
@@ -89,7 +93,7 @@ Activate App after Accepted Data Consent Prompt
   "id" : 47,
   "jsonrpc" : "2.0",
   "method" : "BasicCommunication.ActivateApp",
-  "result" :
+  "params" :
   {
     "appID" : 65368
   }

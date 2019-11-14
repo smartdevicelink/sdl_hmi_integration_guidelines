@@ -13,7 +13,7 @@ Purpose
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -25,6 +25,7 @@ This RPC has no additional parameter requirements.
 |presetBankCapabilities|[Common.PresetBankCapabilities](../../common/structs/#presetbankcapabilities)|false||
 
 ### Sequence Diagrams
+
 |||
 GetCapabilities on system startup
 ![GetCapabilities](./assets/GetCapabilities.png)

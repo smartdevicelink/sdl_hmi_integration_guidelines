@@ -24,9 +24,10 @@ Purpose
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Speak
 ![Speak](./assets/Speak.png)
@@ -49,7 +50,8 @@ Speak
         "text" : "Please say a command", 
         "type" : "TEXT"
       }
-    ]
+    ],
+    "appID": 65368
   }
 }
 ```
