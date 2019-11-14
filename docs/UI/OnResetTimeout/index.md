@@ -24,10 +24,12 @@ Purpose
 OnResetTimeout during PerformInteraction
 ![OnResetTimeout](./assets/OnResetTimeoutPerformInteraction.png)
 |||
+
 |||
 OnResetTimeout during ScrollableMessage
 ![OnResetTimeout](./assets/OnResetTimeoutScrollableMessage.png)
 |||
+
 |||
 OnResetTimeout KEEP_CONTEXT during alert
 ![OnResetTimeout](./assets/OnResetTimeoutKeepContextAlert.png)

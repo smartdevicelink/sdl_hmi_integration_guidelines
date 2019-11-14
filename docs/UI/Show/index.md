@@ -37,18 +37,22 @@ This RPC has no additional parameter requirements
 Active App shows and is deactivated then reactivated
 ![Show](./assets/ShowAppReactivated.png)
 |||
+
 |||
 Inactive App Sends Show
 ![Show](./assets/ShowAppInactive.png)
 |||
+
 |||
 Show with Soft Buttons
 ![Show](./assets/ShowSoftButtons.png)
 |||
+
 |||
 Show Text Fields
 ![Show](./assets/ShowTextFields.png)
 |||
+
 |||
 Show Widgets
 ![Show](./assets/ShowWidgets.png)

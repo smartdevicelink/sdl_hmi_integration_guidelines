@@ -61,10 +61,12 @@ This RPC has no additional parameter requirements
 SetMediaClockTimer COUNTUP and COUNTDOWN for Full and Background applications
 ![SetMediaClockTimer](./assets/SetMediaClockTimerUpDownFullBackground.png)
 |||
+
 |||
 SetMediaClockTimer Pause and Resume for Active Application
 ![SetMediaClockTimer](./assets/SetMediaClockTimerPauseResumeActive.png)
 |||
+
 |||
 SetMediaClockTimer COUNTDOWN for a deactivated application
 ![SetMediaClockTimer](./assets/SetMediaClockTimerDownDeactivate.png)

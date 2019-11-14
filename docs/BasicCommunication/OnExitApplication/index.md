@@ -52,6 +52,7 @@ The HMI may switch layouts or views according to the workflow after deactivation
 User Exits Application
 ![OnExitApplication](./assets/OnExitApplicationUser.png)
 |||
+
 |||
 Application Not Authorized
 ![OnExitApplication](./assets/OnExitApplicationUnauth.png)

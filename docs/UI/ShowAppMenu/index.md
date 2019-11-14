@@ -36,6 +36,7 @@ This RPC has no additional parameter requirements
 ShowAppMenu request(without menuID)
 ![ShowAppMenu](./assets/ShowAppMenu.png)
 |||
+
 |||
 ShowAppMenu request(with menuID)
 ![ShowAppMenuwithMenuID](./assets/ShowAppMenu_MenuID.png)

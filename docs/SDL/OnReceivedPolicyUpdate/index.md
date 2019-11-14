@@ -40,6 +40,7 @@ Purpose
 SDL.OnReceivedPolicyUpdate in EXTERNAL_PROPRIETARY flow
 ![Proprietary PTU](./assets/SDL.OnReceivedPolicyUpdateEXTERNAL_PROPRIETARY.png)
 |||
+
 |||
 SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
 ![Proprietary PTU](./assets/Proprietary_PTU_flow_.png)

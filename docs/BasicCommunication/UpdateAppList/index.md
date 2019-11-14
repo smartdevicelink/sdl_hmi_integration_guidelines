@@ -52,6 +52,7 @@ This RPC has no additional parameter requirements
 Application Just Registered
 ![UpdateAppList](./assets/UpdateAppListAppRegister.png)
 |||
+
 |||
 User Requests Update App List
 ![UpdateAppList](./assets/UpdateAppListUser.png)

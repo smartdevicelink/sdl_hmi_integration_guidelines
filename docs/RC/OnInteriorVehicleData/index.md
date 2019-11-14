@@ -33,8 +33,8 @@ if the driver (or other applications) or HMI itself change the display mode in t
 ### Sequence Diagrams
 
 |||
-OnInteriorVehicledata
-![OnInteriorVehicleData](assets/OnInteriorVehicleData.png)
+OnInteriorVehicleData
+![OnInteriorVehicleData](./assets/OnInteriorVehicleData.png)
 |||
 
 ### JSON Message Examples

@@ -41,18 +41,22 @@ This RPC has no additional parameter requirements
 AddCommand
 ![AddCommand](./assets/AddCommand.png)
 |||
+
 |||
 UI.AddCommand returns SUCCESS, VR.AddCommand fails
 ![AddCommand](./assets/AddCommandVRFail.png)
 |||
+
 |||
 UI.AddCommand returns SUCCESS, VR.AddCommand no response
 ![AddCommand](./assets/AddCommandNoResponse.png)
 |||
+
 |||
 UI.AddCommand fails, VR.AddCommand returns SUCCESS
 ![AddCommand](./assets/AddCommandSuccessUIFail.png)
 |||
+
 |||
 UI.AddCommand no response, VR.AddCommand returns SUCCESS
 ![AddCommand](./assets/AddCommandSuccessUINoResponse.png)

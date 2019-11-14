@@ -32,7 +32,7 @@ SDL must always include `moduleId` for each and every `ModuleData` in `allocated
 
 |||
 OnRCStatus
-![OnRCStatus](assets/OnRCStatus.png)
+![OnRCStatus](./assets/OnRCStatus.png)
 |||
 
 ### JSON Message Examples

@@ -66,8 +66,10 @@ GetListOfPermissions provide  External UCS Status to HMI
 ![GetListOfPermissions](./assets/GetListOfPermissionsInformingHMI.png)
 |||
 
+|||
 Possible Layout - ExternalConsentStatus
 ![GetListOfPermissions](./assets/PossibleLayoutExternalConsentStatus.png)
+|||
 
 ### JSON Message Examples
 

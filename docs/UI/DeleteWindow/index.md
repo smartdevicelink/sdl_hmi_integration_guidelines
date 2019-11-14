@@ -40,7 +40,6 @@ DeleteWindow
 ![DeleteWindow](./assets/DeleteWindow.png)
 |||
 
-
 ### JSON Message Examples
 
 #### Example Request

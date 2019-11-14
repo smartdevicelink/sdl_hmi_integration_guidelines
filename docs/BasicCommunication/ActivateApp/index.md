@@ -68,14 +68,17 @@ This RPC has no additional parameter requirements
 Activate App after successful Resumption
 ![Activate App Successful Resume](./assets/ActivateAppSuccessfulResume.png)
 |||
+
 |||
 Activate App after failed Resumption
 ![Activate App Failed Resume](./assets/ActivateAppFailedResume.png)
 |||
+
 |||
 Activate App after Unexpected Disconnect
 ![Activate App Unexpected Disconnect](./assets/ActivateAppUnexpectedDisconnect.png)
 |||
+
 |||
 Activate App after Accepted Data Consent Prompt
 ![Activate App Successful Data](./assets/ActivateAppSuccessfulData.png)

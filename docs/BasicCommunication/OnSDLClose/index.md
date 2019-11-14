@@ -38,6 +38,7 @@ This RPC has no additional parameter requirements
 OnSDLClose Ingition Cycle
 ![OnSDLClose](./assets/OnSDLCloseIgnition.png)
 |||
+
 |||
 OnSDLClose Master Reset
 ![OnSDLClose](./assets/OnSDLCloseReset.png)

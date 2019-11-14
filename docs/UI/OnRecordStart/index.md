@@ -23,10 +23,12 @@ Purpose
 OnRecordStart with TTS.Speak
 ![OnRecordStart](./assets/OnRecordStartSpeak.png)
 |||
+
 |||
 OnRecordStart without TTS.Speak
 ![OnRecordStart](./assets/OnRecordStartNoSpeak.png)
 |||
+
 |||
 OnRecordStart not sent if UI.PerformAudioPassThru rejected
 ![OnRecordStart](./assets/OnRecordStartRejected.png)

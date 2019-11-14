@@ -41,7 +41,7 @@ The driver is expected to have an ability to grant or deny the permission.
 
 |||
 GetInteriorVehicleDataConsent
-![GetInteriorVehicleDataConsent](assets/GetInteriorVehicleDataConsent.png)
+![GetInteriorVehicleDataConsent](./assets/GetInteriorVehicleDataConsent.png)
 |||
 
 ### JSON Message Examples

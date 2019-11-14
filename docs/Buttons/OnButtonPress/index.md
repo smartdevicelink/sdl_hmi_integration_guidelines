@@ -40,10 +40,12 @@ The value of customButtonID is provided by SDL within the [softButton](../../com
 OnButtonPress short press for CUSTOM_BUTTON
 ![OnButtonPress](./assets/OnButtonPressShort.png)
 |||
+
 |||
 OnButtonPress long press for hard button
 ![OnButtonPress](./assets/OnButtonPressLongHardKey.png)
 |||
+
 |||
 OnButtonPress for hard button that only supports short press
 ![OnButtonPress](./assets/OnButtonPressHardKeyShortOnly.png)

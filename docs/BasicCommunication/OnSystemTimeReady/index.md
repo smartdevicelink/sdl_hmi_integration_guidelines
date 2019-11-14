@@ -25,7 +25,7 @@ This RPC has no additional parameter requirements
 
 |||
 OnSystemTimeReady
-![OnSystemTimeReady](assets/OnSystemTimeReady_Ign_On.png)
+![OnSystemTimeReady](./assets/OnSystemTimeReady_Ign_On.png)
 |||
 
 ### JSON Message Examples

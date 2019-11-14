@@ -64,10 +64,12 @@ The list of RPCs and data structures that `OnPutFile` affects are:
 Put File used before referencing RPC
 ![OnPutFile](./assets/OnPutFileBeforeRPC.png)
 |||
+
 |||
 Put File used after referencing RPC
 ![OnPutFile](./assets/OnPutFileAfterRPC.png)
 |||
+
 |||
 System Request file upload using Put File
 ![OnPutFile](./assets/OnPutFileSystemRequest.png)

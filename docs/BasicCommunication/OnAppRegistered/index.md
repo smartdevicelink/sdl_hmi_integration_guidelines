@@ -89,18 +89,22 @@ SDL Apps that are using the websocket transport adapter will send `OnAppRegister
 App Register with Resume
 ![OnAppRegistered](./assets/OnAppRegisteredResume.png)
 |||
+
 |||
 App Register without Resume
 ![OnAppRegistered](./assets/OnAppRegisteredNoResume.png)
 |||
+
 |||
 App Registers on USB
 ![OnAppRegistered](./assets/OnAppRegisteredUSB.png)
 |||
+
 |||
 App Registers on Bluetooth
 ![OnAppRegistered](./assets/OnAppRegisteredBT.png)
 |||
+
 |||
 Running the same apps from multiple devices at the same time
 ![OnAppRegistered](./assets/OnAppRegisteredMultipleDevices.png)

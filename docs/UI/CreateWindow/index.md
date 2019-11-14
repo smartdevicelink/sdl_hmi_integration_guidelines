@@ -55,7 +55,6 @@ CreateWindow
 ![CreateWindow](./assets/CreateWindow.png)
 |||
 
-
 ### JSON Message Examples
 
 #### Example Request

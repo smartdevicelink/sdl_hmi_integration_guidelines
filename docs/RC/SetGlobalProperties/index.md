@@ -41,7 +41,7 @@ This RPC has no additional parameter requirements
 
 |||
 SetGlobalProperties
-![SetGlobalProperties](assets/RC_SetGlobalProperties.png)
+![SetGlobalProperties](./assets/RC_SetGlobalProperties.png)
 |||
 
 ### JSON Message Examples

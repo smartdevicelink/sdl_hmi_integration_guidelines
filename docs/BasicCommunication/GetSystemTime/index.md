@@ -58,7 +58,6 @@ GetSystemTime
 ![GetSystemTime](./assets/GetSystemTime_TLS_Handshake.png)
 |||
 
-
 ### JSON Message Examples
 
 #### Example Request

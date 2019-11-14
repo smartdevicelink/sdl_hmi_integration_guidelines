@@ -43,7 +43,7 @@ The only time when SDL would not be able provide the `appID` would be during the
 
 |||
 OnServiceUpdate
-![OnServiceUpdate](assets/OnServiceUpdate.png)
+![OnServiceUpdate](./assets/OnServiceUpdate.png)
 |||
 
 ### JSON Message Examples

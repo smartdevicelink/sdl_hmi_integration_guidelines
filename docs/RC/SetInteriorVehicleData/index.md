@@ -41,12 +41,12 @@ RC.SetInteriorvehicledata represents a request from an application to change set
 
 |||
 SetInteriorVehicleData
-![SetInteriorVehicleData](assets/SetInteriorVehicleData.png)
+![SetInteriorVehicleData](./assets/SetInteriorVehicleData.png)
 |||
 
 |||
 SetInteriorvehicleData-READ_ONLY
-![SetInteriorvehicleData READ_ONLY](assets/setInteriorVehicleData_READ_ONLY.png)
+![SetInteriorvehicleData READ_ONLY](./assets/setInteriorVehicleData_READ_ONLY.png)
 |||
 
 ### JSON Message Examples

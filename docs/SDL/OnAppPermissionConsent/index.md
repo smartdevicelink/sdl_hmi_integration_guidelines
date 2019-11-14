@@ -49,6 +49,7 @@ c) SDL  uses `OnAppPermissionConsent` value (ON/OFF) received from HMI through i
 OnAppPermissionConsent
 ![OnAppPermissionConsent1](./assets/OnAppPermissionConsent.png)
 |||
+
 |||
 OnAppPermissionConsent (id<->name dependency)
 ![OnAppPermissionConsent](./assets/OnAppPermissionConsent2.png)

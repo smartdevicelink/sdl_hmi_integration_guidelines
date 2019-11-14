@@ -47,7 +47,7 @@ This RPC has no additional parameter requirements
 
 |||
 ButtonPress
-![ButtonPress](assets/ButtonPress.png)
+![ButtonPress](./assets/ButtonPress.png)
 |||
 
 ### JSON Message Examples
