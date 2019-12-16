@@ -1,3 +1,4 @@
+  
 -- Policy Update Sequence
 title Policy Table Update (EXTERNAL_PROPRIETARY)
 
@@ -19,7 +20,6 @@ note over SDL: Get endpoints from policies database
 SDL-->HMI: SDL.GetPolicyConfigurationData(value)
 HMI->HMI: PT snapshot\nencryption
 HMI->SDL: BC.OnSystemRequest(url, path_to_PTS)
-HMI->HMI: Starts timer 
 SDL->SDL: Restarts timeout taken from "timeout_after_x_seconds" of Local PT
 SDL->Mobile: OnSystemRequest(url, PTS_in_binaryData)
 Mobile->Policy Server: PT snapshot (PTS)

@@ -21,7 +21,6 @@ SDL-->HMI: SDL.GetPolicyConfigurationData("endpoints":{"0x07":{...})
 HMI->HMI: PT snapshot\nencryption
 note over HMI: Sends encrypted PTS file to the defined URL
 HMI-> Modem: Use vehicle modem to send PTS to URL
-HMI->HMI: Starts PTU timer
 Modem -> Policy Server: Sending PTS over cellular
 note over Policy Server: Processes PTS and creates PTU
 Policy Server-->Modem: Sending PTU over cellular
