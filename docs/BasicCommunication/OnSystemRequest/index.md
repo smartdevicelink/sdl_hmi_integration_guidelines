@@ -11,13 +11,13 @@ Purpose
 
 **HTTP flow**
 
-* SDL sends the Policy Table Snapshot (PTS) as binary data via an `OnSystemRequest` mobile request from the system to the back-end. Both the "url" that the PTS will be forwarded to and the "timeout" must be taken from the Local Policy Table.
-    * If no "url" is provided in the Local Policy Table, it is supposed that the mobile application will send the Policy Table Update data back to SDL.
+* SDL sends the Policy Table Snapshot (PTS) as binary data via an `OnSystemRequest` mobile request from the system to the back-end. Both the `url` that the PTS will be forwarded to and the `timeout` must be taken from the Local Policy Table.
+    * If no `url` is provided in the Local Policy Table, it is supposed that the mobile application will send the Policy Table Update data back to SDL.
 
 `RequestType` defines the type of the requested data from a mobile device or the cloud. The HMI may request this data, but it is SDL's responsibility to block a `SystemRequest` in case the request intends to transfer a data type not allowed by the Policy Table.  
 `requestSubType` is filled for supporting OEM proprietary data exchanges.
 
-The HMI is informed about `requestTypes`, `requestSubType` that are allowed by policies via [OnAppPermissionChanged](../../sdl/onapppermissionchanged) and [OnAppRegistered](../onappregistered).
+The HMI is informed about `requestTypes`, `requestSubType` that are allowed by Policies via [OnAppPermissionChanged](../../sdl/onapppermissionchanged) and [OnAppRegistered](../onappregistered).
 
 !!! NOTE
 
@@ -27,8 +27,8 @@ In case Policy Table contains some value for `requestSubType` param and the HMI 
 !!!
 
 _**SyncP NOTE**_   
- 1. It is SyncP responsibility to encrypt and encode PTS file and provide it to SDL via OnSystemRequest HMI API ("filename") parameter.      
- 2. It is SyncP responsibility to choose an application for sending PTU and start timer (for future retry strategy) after sending OnSystemRequest to SDL.
+ 1. It is SyncP responsibility to encrypt and encode PTS file and provide it to SDL via OnSystemRequest HMI API (`filename`) parameter.      
+ 2. It is SyncP responsibility to choose an application for sending PTU and start timer (for future retry strategy) after sending `OnSystemRequest` to SDL.
 
 !!! MUST   
 1. Send `OnSystemRequest`, if specific data is requested from the mobile device/cloud, or binary data needs to be sent to the mobile device.
