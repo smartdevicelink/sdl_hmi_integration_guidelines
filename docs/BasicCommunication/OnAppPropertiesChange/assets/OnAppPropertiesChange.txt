@@ -1,0 +1,19 @@
+title OnAppPropertiesChange 
+
+participant App
+participant SDL
+participant HMI
+
+==<align:center>Pre-conditions: 1. SDL and HMI are started==  
+
+opt OnAppPropertiesChange - Changes to existing set properties
+HMI -> SDL: BC.SetAppProperties(policyAppID:"123")
+SDL-->HMI: BC.SetAppProperties(SUCCESS)
+SDL->HMI: BC.OnAppPropertiesChange()
+end 
+
+opt OnAppPropertiesChange - Changes to properties due PTU
+note over SDL: PTU is performed\nthe update contains app properties of the policyAppID
+SDL->HMI: BC.OnAppPropertiesChange()
+end
+
