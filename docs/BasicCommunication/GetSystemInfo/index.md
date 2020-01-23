@@ -25,7 +25,7 @@ When SDL starts, it sends GetSystemInfo to update the policies database with the
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -38,9 +38,10 @@ This RPC has no additional parameter requirements.
 |wersCountryCode|String|true|maxlength: 500|
 
 ### Sequence Diagrams
+
 |||
 GetSystemInfo
-![GetSysteminfo](./assets/GetSystemInfo.png)
+![GetSystemInfo](./assets/GetSystemInfo.png)
 |||
 
 ### JSON Message Examples
@@ -64,12 +65,10 @@ GetSystemInfo
   "result" : {
     "code" : 0,
     "method" : "BasicCommunication.GetSystemInfo",
-    "params" : {
-        "ccpu_version" : "12.1.3",
-        "language" : "EN-US",
-        "wersCountryCode" : "WAEGB"
-        }
-    }
+    "ccpu_version" : "12.1.3",
+    "language" : "EN-US",
+    "wersCountryCode" : "WAEGB"
+  }
 }
 ```
 

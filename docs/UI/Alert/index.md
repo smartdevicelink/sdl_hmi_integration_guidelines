@@ -58,22 +58,27 @@ An alert may be sent to the HMI for an application which is not currently active
 |tryAgainTime|Integer|false|minvalue: 0<br>maxvalue: 2000000000|
 
 ### Sequence Diagrams
+
 |||
 Alert closed by DEFAULT_ACTION
 ![Alert](./assets/AlertDefaultAction.png)
 |||
+
 |||
 Alert closed by STEAL_FOCUS
 ![Alert](./assets/AlertStealFocus.png)
 |||
+
 |||
 Alert Aborted by VR Session
 ![Alert](./assets/AlertAborted.png)
 |||
+
 |||
 Alert Rejected
 ![Alert](./assets/AlertRejected.png)
 |||
+
 |||
 Alert BOTH UI Closed before TTS finishes Speaking
 ![Alert](./assets/AlertTTS.png)
@@ -87,7 +92,7 @@ Alert BOTH UI Closed before TTS finishes Speaking
 {
   "id" : 92,
   "jsonrpc" : "2.0",
-  "method" : "UI. Alert",
+  "method" : "UI.Alert",
   "params" :
   {
     "alertStrings" :

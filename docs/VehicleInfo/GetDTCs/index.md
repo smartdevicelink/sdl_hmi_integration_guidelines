@@ -29,6 +29,7 @@ Purpose
 |dtc|String|false|array: true<br>minsize: 1<br>maxsize: 15<br>maxlength: 10|
 
 ### Sequence Diagrams
+
 |||
 GetDTCs
 ![GetDTCs](./assets/GetDTCs.png)

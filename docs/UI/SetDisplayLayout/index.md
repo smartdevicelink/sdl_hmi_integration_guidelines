@@ -32,10 +32,12 @@ Purpose
 |presetBankCapabilities|[Common.PresetBankCapabilities](../../common/structs/#presetbankcapabilities)|false||
 
 ### Sequence Diagrams
+
 |||
 SetDisplayLayout Successful with UI.GetCapabilities
 ![SetDisplayLayout](./assets/SetDisplayLayoutSuccessGetCapabilities.png)
 |||
+
 |||
 SetDisplayLayout Invalid Data with UI.GetCapabilities
 ![SetDisplayLayout](./assets/SetDisplayLayoutInvalidData.png)

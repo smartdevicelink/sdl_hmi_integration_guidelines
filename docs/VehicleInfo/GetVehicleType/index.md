@@ -24,6 +24,7 @@ This RPC has no additional parameter requirements
 |vehicleType|[Common.VehicleType](../../common/structs/#vehicletype)|true||
 
 ### Sequence Diagrams
+
 |||
 GetVehicleType
 ![GetVehicleType](./assets/GetVehicleType.png)

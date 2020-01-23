@@ -29,7 +29,6 @@ This request is sent by SDL to HMI to create one or multiple widget windows.
 
 !!!
 
-
 ### Request
 
 #### Parameters
@@ -41,19 +40,20 @@ This request is sent by SDL to HMI to create one or multiple widget windows.
 |type|[Common.WindowType](../../common/enums/#windowtype)|true||
 |associatedServiceType|String|false||
 |duplicateUpdatesFromWindowID|Integer|false||
+|appID|Integer|true||
 
 ### Response
 
 #### Parameters
-This RPC has no additional parameter requirements.
 
+This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 CreateWindow
 ![CreateWindow](./assets/CreateWindow.png)
 |||
-
 
 ### JSON Message Examples
 
@@ -70,7 +70,8 @@ CreateWindow
     "windowID":2,
     "associatedServiceType":"MEDIA",
     "type":"WIDGET",
-    "duplicateUpdatesFromWindowID":0
+    "duplicateUpdatesFromWindowID":0,
+    "appID": 65368
   }
 }
 ```
@@ -101,7 +102,7 @@ CreateWindow
     "message" : "The data may not be changed because it is currently in use",
     "data" :
     {
-    "method" : "UI.CreateWindow "
+    "method" : "UI.CreateWindow"
     }
   }
 }

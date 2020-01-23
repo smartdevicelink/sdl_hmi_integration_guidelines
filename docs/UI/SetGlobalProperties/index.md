@@ -10,6 +10,7 @@ Purpose
 : Set the UI properties of an application.
 
 ### Description
+
 SDL requests to set-up the data for VR help layout, the name and icon for in-application menu and the properties of the touchscreen keyboard.
 
 The request may arrive for the application whether being active or in background on HMI (depends on Policy Table permissions applicable to mobile application request, by default allowed to operate in all HMI levels except of NONE).
@@ -18,7 +19,7 @@ The `vrHelp` parameter of the `SetGlobalProperties` RPC is used by the system to
 
 SDL sends SetGlobalProperties request with specific `<vrHelp>` and `<vrHelpTitle>` values to HMI in next cases:   
 
-1.	If at any point in time, the application sends `SetGlobalProperties` RPC with the `vrHelp` **and** `helpPrompt` parameters, then SDL Core shall continue with the existing behavior of forwarding such requests to HMI and SDL Core shall delete its internal list and stop sending `SetGlobalProperties` RPC to HMI after each AddCommmand/DeleteCommand request received from mobile.
+1.	If at any point in time, the application sends `SetGlobalProperties` RPC with the `vrHelp` **and** `helpPrompt` parameters, then SDL Core shall continue with the existing behavior of forwarding such requests to HMI and SDL Core shall delete its internal list and stop sending `SetGlobalProperties` RPC to HMI after each AddCommand/DeleteCommand request received from mobile.
 2. If at any point in time, the application sends `SetGlobalProperties` RPC with **either** of `vrHelp` **or** `helpPrompt` parameters, then SDL Core shall continue with the existing behavior of forwarding such requests to HMI and SDL Core shall not delete its internal list and shall continue to update the parameter which was not provided by the application.  
 3. In case mobile app sends `AddCommand` with `CommandType = Command`, SDL must send update values of `vrHelp` via `SetGlobalProperties` to HMI. _(Note: AddCommand requests related to choice set must NOT trigger the update of "vrHelp")_
 4. In case mobile app sends _SetGlobalProperties_request_ to SDL:   
@@ -42,6 +43,7 @@ _**Notes for HMI expected behavior:**_
 !!!
 
 ### Request
+
 #### Behavior
 
 !!! MUST   
@@ -73,6 +75,7 @@ _**Notes for HMI expected behavior:**_
 |menuLayout|[Common.MenuLayout](../../common/enums/#menulayout)|false||
 
 ### Response
+
 |Result |Description |Message type WebSocket|Message type D-Bus|Message Params|
 |:------|:-----------|:---------------------|:-----------------|:-------------|
 |Success|SUCCESS: HMI has set the requested properties.|JSON response|Method return|code: 0|
@@ -91,6 +94,7 @@ In case HMI does not respond SDL's request during SDL-default timeout (10 sec), 
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 SetGlobalProperties for active app on HMI with VR activation
 ![SetGlobalProperties](./assets/SetGlobalPropertiesActiveVRActivate.png)

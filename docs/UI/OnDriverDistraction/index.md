@@ -32,6 +32,7 @@ _2. SDL ignores all invalid notifications which come from HMI (invalid JSON, inv
 |state|[Common.DriverDistractionState](../../common/enums/#driverdistractionstate)|true||
 
 ### Sequence Diagrams
+
 |||
 OnDriverDistraction
 ![OnDriverDistraction](./assets/OnDriverDistraction.png)
@@ -40,6 +41,7 @@ OnDriverDistraction
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

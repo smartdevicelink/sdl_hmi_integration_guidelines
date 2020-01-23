@@ -27,7 +27,7 @@ Check mixing audio capabilities and provided an accurate response.
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -38,6 +38,7 @@ This RPC has no additional parameter requirements.
 |attenuatedSupported|Boolean|true||
 
 ### Sequence Diagrams
+
 |||
 MixingAudioSupported Messaging
 ![Mixing Audio Supported](./assets/MixingAudioSupported.png)
@@ -65,7 +66,7 @@ MixingAudioSupported Messaging
   {
     "attenuatedSupported" : true,
     "code" : 0,
-    "method" : "BasicCommunication. MixingAudioSupported"
+    "method" : "BasicCommunication.MixingAudioSupported"
   }
 }
 ```

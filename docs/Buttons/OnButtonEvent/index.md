@@ -21,10 +21,12 @@ Purpose
 |appID|Integer|false||
 
 ### Sequence Diagrams
+
 |||
 OnButtonEvent for CUSTOM_BUTTON pressed and released
 ![OnButtonEvent](./assets/OnButtonEventPressRelease.png)
 |||
+
 |||
 OnButtonEvent hardware button pressed and released
 ![OnButtonEvent](./assets/OnButtonEventHardKeyPressRelease.png)
@@ -33,6 +35,7 @@ OnButtonEvent hardware button pressed and released
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

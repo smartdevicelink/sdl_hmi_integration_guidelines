@@ -18,6 +18,7 @@ Purpose
 |available|Boolean|true||
 
 ### Sequence Diagrams
+
 |||
 OnVideoDataStreaming
 ![OnVideoDataStreaming](./assets/OnVideoDataStreaming.jpg)
@@ -26,6 +27,7 @@ OnVideoDataStreaming
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

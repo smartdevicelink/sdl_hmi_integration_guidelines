@@ -44,13 +44,12 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |preferredResolution|Common.ImageResolution|false| |The preferred resolution of a video stream for decoding and rendering on HMI.|
-|maxBitrate|Integer|false|minvalue: 0<br>maxvalue: 2147483647|The maximum bitrate of video stream that is supported, in kbps.|
+|maxBitrate|Integer|false|minvalue: 0<br>maxvalue: 2147483647|The maximum bitrate of video stream that is supported, in Kbps.|
 |supportedFormats|Common.VideoStreamingFormat|false|array: true|Detailed information on each format supported by this system, in its preferred order.|
-|hapticSpatialDataSupported|boolean|false| |True if the system can utilize the haptic spatial data from the source being streamed.|
+|hapticSpatialDataSupported|Boolean|false| |True if the system can utilize the haptic spatial data from the source being streamed.|
 |diagonalScreenSize|Float|false|minvalue: 0|The diagonal screen size in inches.|
 |pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
 |scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
-
 
 ### SystemCapabilities
 
@@ -72,7 +71,7 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|pressureTelltale|Common.WarningLightStatus|false|||
+|pressureTelltale|[Common.WarningLightStatus](../enums/#warninglightstatus)|false|||
 |leftFront|Common.SingleTireStatus|false|||
 |rightFront|Common.SingleTireStatus|false|||
 |leftRear|Common.SingleTireStatus|false|||
@@ -84,15 +83,15 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|eCallNotificationStatus|Common.VehicleDataNotificationStatus||||
-|auxECallNotificationStatus|Common.VehicleDataNotificationStatus||||
-|eCallConfirmationStatus|Common.ECallConfirmationStatus||||
+|eCallNotificationStatus|[Common.VehicleDataNotificationStatus](../enums/#vehicledatanotificationstatus)|true|||
+|auxECallNotificationStatus|[Common.VehicleDataNotificationStatus](../enums/#vehicledatanotificationstatus)|true|||
+|eCallConfirmationStatus|[Common.ECallConfirmationStatus](../enums/#ecallconfirmationstatus)|true|||
 
 ### DIDResult
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|resultCode|Common.VehicleDataResultCode|true|||
+|resultCode|[Common.VehicleDataResultCode](../enums/#vehicledataresultcode)|true|||
 |didLocation|Integer|true|minvalue: 0<br>maxvalue: 65535||
 |data|String|false|maxlength: 5000||
 
@@ -101,16 +100,16 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |text|String|true|maxlength: 500|The text/phonemes to be spoken or the name of an audio file to play|
-|type|Common.SpeechCapabilities|true||Describes how to interpret the text field (as plain text, a file name, etc.)|
+|type|[Common.SpeechCapabilities](../enums/#speechcapabilities)|true||Describes how to interpret the text field (as plain text, a file name, etc.)|
 
 ### TextField
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|name|Common.TextFieldName||||
-|characterSet|Common.CharacterSet||||
-|width|Integer||minvalue: 1<br>maxvalue: 500||
-|rows|Integer||minvalue: 1<br>maxvalue: 8||
+|name|[Common.TextFieldName](../enums/#textfieldname)|true|||
+|characterSet|[Common.CharacterSet](../enums/#characterset)|true|||
+|width|Integer|true|minvalue: 1<br>maxvalue: 500||
+|rows|Integer|true|minvalue: 1<br>maxvalue: 8||
 
 ### TouchCoord
 
@@ -123,9 +122,9 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|samplingRate|Common.SamplingRate|true|||
-|bitsPerSample|Common.BitsPerSample|true|||
-|audioType|Common.AudioType|true|||
+|samplingRate|[Common.SamplingRate](../enums/#samplingrate)|true|||
+|bitsPerSample|[Common.BitsPerSample](../enums/#bitspersample)|true|||
+|audioType|[Common.AudioType](../enums/#audiotype)|true|||
 
 ### ServiceInfo
 
@@ -140,24 +139,24 @@
 |:---|:---|:--------|:---------|:----------|
 |lowBeamsOn|Boolean|true|||
 |highBeamsOn|Boolean|true|||
-|ambientLightSensorStatus|Common.AmbientLightStatus|true|||
+|ambientLightSensorStatus|[Common.AmbientLightStatus](../enums/#ambientlightstatus)|true|||
 
 ### ClusterModeStatus
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|powerModeActive|Boolean||||
-|powerModeQualificationStatus|Common.PowerModeQualificationStatus||||
-|carModeStatus|Common.CarModeStatus||||
-|powerModeStatus|Common.PowerModeStatus||||
+|powerModeActive|Boolean|true|||
+|powerModeQualificationStatus|[Common.PowerModeQualificationStatus](../enums/#powermodequalificationstatus)|true|||
+|carModeStatus|[Common.CarModeStatus](../enums/#carmodestatus)|true|||
+|powerModeStatus|[Common.PowerModeStatus](../enums/#powermodestatus)|true|||
 
 ### KeyboardProperties
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|language|Common.Language|false|||
-|keyboardLayout|Common.KeyboardLayout|false|||
-|keypressMode|Common.KeypressMode|false|||
+|language|[Common.Language](../enums/#language)|false|||
+|keyboardLayout|[Common.KeyboardLayout](../enums/#keyboardlayout)|false|||
+|keypressMode|[Common.KeypressMode](../enums/#keypressmode)|false|||
 |limitedCharacterList|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 1||
 |autoCompleteList|String|false|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 1000||
 
@@ -170,7 +169,7 @@
 |image|Common.Image|false|||
 |secondaryText|String|false|maxlength: 500||
 |tertiaryText|String|false|maxlength: 500||
-|secondaryImage|Image|false|||
+|secondaryImage|Common.Image|false|||
 
 ### DeviceStatus
 
@@ -181,11 +180,11 @@
 |callActive|Boolean|false|||
 |phoneRoaming|Boolean|false|||
 |textMsgAvailable|Boolean|false|||
-|battLevelStatus|Common.DeviceLevelStatus|false|||
+|battLevelStatus|[Common.DeviceLevelStatus](../enums/#devicelevelstatus)|false|||
 |stereoAudioOutputMuted|Boolean|false|||
 |monoAudioOutputMuted|Boolean|false|||
-|signalLevelStatus|Common.DeviceLevelStatus|false|||
-|primaryAudioSource|Common.PrimaryAudioSource|false|||
+|signalLevelStatus|[Common.DeviceLevelStatus](../enums/#devicelevelstatus)|false|||
+|primaryAudioSource|[Common.PrimaryAudioSource](../enums/#primaryaudiosource)|false|||
 |eCallEventActive|Boolean|false|||
 
 ### GPSData
@@ -200,23 +199,23 @@
 |utcHours|Integer|false|minvalue: 0<br>maxvalue: 23||
 |utcMinutes|Integer|false|minvalue: 0<br>maxvalue: 59||
 |utcSeconds|Integer|false|minvalue: 0<br>maxvalue: 59||
-|compassDirection|Common.CompassDirection|false|||
+|compassDirection|[Common.CompassDirection](../enums/#compassdirection)|false|||
 |pdop|Float|false|minvalue: 0<br>maxvalue: 1000||
 |hdop|Float|false|minvalue: 0<br>maxvalue: 1000||
 |vdop|Float|false|minvalue: 0<br>maxvalue: 1000||
 |actual|Boolean|false|||
 |satellites|Integer|false|minvalue: 0<br>maxvalue: 31||
-|dimension|Common.Dimension|false|||
+|dimension|[Common.Dimension](../enums/#dimension)|false|||
 |altitude|Float|false|minvalue: -10000<br>maxvalue: 10000||
 |heading|Float|false|minvalue: 0<br>maxvalue: 359.99||
 |speed|Float|false|minvalue: 0<br>maxvalue: 500||
-|shifted|Boolean|false||True, if GPS lat/long, time, and altitude have been purposefully shifted (requires a proprietary algorithm to unshift).<br>False, if the GPS data is raw and un-shifted.<br>If not provided, then value is assumed False|
+|shifted|Boolean|false||True, if GPS lat/long, time, and altitude have been purposefully shifted (requires a proprietary algorithm to un-shift).<br>False, if the GPS data is raw and un-shifted.<br>If not provided, then value is assumed False|
 
 ### SingleTireStatus
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|status|Common.ComponentVolumeStatus|true|||
+|status|[Common.ComponentVolumeStatus](../enums/#componentvolumestatus)|true|||
 |tpms|[Common.TPMS](../enums/#tpms)|false||The status of TPMS according to the particular tire.|
 |pressure|Float|false|minvalue: 0<br>maxvalue: 2000|The pressure value of the particular tire in kilopascals.|
 
@@ -238,17 +237,17 @@
 |ngnMediaScreenAppName|String|false|maxlength: 100||
 |icon|String|false|||
 |deviceInfo|Common.DeviceInfo|true|||
-|secondaryDeviceInfo|Common.DeviceInfo|true||The ID, serial number, transport type that are acquired through Secondary Transport.|
+|secondaryDeviceInfo|Common.DeviceInfo|false||The ID, serial number, transport type that are acquired through Secondary Transport.|
 |policyAppID|String|true|minlength: 1<br>maxlength: 50||
 |ttsName|Common.TTSChunk|false|array: true<br>minsize: 1<br>maxsize: 100||
 |vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40||
 |appID|Integer|true||Must not interfere with any name of previously registered applications from the same device|
-|hmiDisplayLanguageDesired|Common.Language|false|||
+|hmiDisplayLanguageDesired|[Common.Language](../enums/#language)|false|||
 |isMediaApplication|Boolean|false|||
-|appType|Common.AppHMIType|false|array: true<br>minsize: 1<br>maxsize: 100||
+|appType|[Common.AppHMIType](../enums/#apphmitype)|false|array: true<br>minsize: 1<br>maxsize: 100||
 |greyOut|Boolean|false|||
-|requestType|Common.RequestType|false|array: true<br>minsize: 0<br>maxsize: 100||
-|requestSubType|String|false|array:true <br> minsize:0 <br>maxsize:100 <br> maxlength:100|The list of SystemRequest's requestSubTypes allowed by policies for the named application.<br>If the app sends a requestSubType which is not specified in this list, then that request should be rejected.<br>An empty array signifies that any value of requestSubType is allowed for this app. <br> If this parameter is omitted, then a request with any value of requestSubType is now allowed for this app|
+|requestType|[Common.RequestType](../enums/#requesttype)|false|array: true<br>minsize: 0<br>maxsize: 100||
+|requestSubType|String|false|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 100|The list of SystemRequest's requestSubTypes allowed by policies for the named application.<br>If the app sends a requestSubType which is not specified in this list, then that request should be rejected.<br>An empty array signifies that any value of requestSubType is allowed for this app. <br> If this parameter is omitted, then a request with any value of requestSubType is now allowed for this app|
 |dayColorScheme|Common.TemplateColorScheme|false|||
 |nightColorScheme|Common.TemplateColorScheme|false|||
 |isCloudApplication|Boolean|false|||
@@ -267,7 +266,7 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|name|Common.ButtonName|true|||
+|name|[Common.ButtonName](../enums/#buttonname)|true|||
 |shortPressAvailable|Boolean|true|||
 |longPressAvailable|Boolean|true|||
 |upDownAvailable|Boolean|true|||
@@ -286,8 +285,8 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |parkBrakeActive|Boolean|true|||
-|ignitionStableStatus|Common.IgnitionStableStatus|true|||
-|ignitionStatus|Common.IgnitionStatus|true|||
+|ignitionStableStatus|[Common.IgnitionStableStatus](../enums/#ignitionstablestatus)|true|||
+|ignitionStatus|[Common.IgnitionStatus](../enums/#ignitionstatus)|true|||
 |driverDoorAjar|Boolean|false|||
 |passengerDoorAjar|Boolean|false|||
 |rearLeftDoorAjar|Boolean|false|||
@@ -297,21 +296,21 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|driverBeltDeployed|Common.VehicleDataEventStatus|false|||
-|passengerBeltDeployed|Common.VehicleDataEventStatus|false|||
-|passengerBuckleBelted|Common.VehicleDataEventStatus|false|||
-|driverBuckleBelted|Common.VehicleDataEventStatus|false|||
-|leftRow2BuckleBelted|Common.VehicleDataEventStatus|false|||
-|passengerChildDetected|Common.VehicleDataEventStatus|false|||
-|rightRow2BuckleBelted|Common.VehicleDataEventStatus|false|||
-|middleRow2BuckleBelted|Common.VehicleDataEventStatus|false|||
-|middleRow3BuckleBelted|Common.VehicleDataEventStatus|false|||
-|leftRow3BuckleBelted|Common.VehicleDataEventStatus|false|||
-|rightRow3BuckleBelted|Common.VehicleDataEventStatus|false|||
-|leftRearInflatableBelted|Common.VehicleDataEventStatus|false|||
-|rightRearInflatableBelted|Common.VehicleDataEventStatus|false|||
-|middleRow1BeltDeployed|Common.VehicleDataEventStatus|false|||
-|middleRow1BuckleBelted|Common.VehicleDataEventStatus|false|||
+|driverBeltDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|passengerBeltDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|passengerBuckleBelted|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|driverBuckleBelted|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|leftRow2BuckleBelted|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|passengerChildDetected|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|rightRow2BuckleBelted|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|middleRow2BuckleBelted|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|middleRow3BuckleBelted|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|leftRow3BuckleBelted|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|rightRow3BuckleBelted|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|leftRearInflatableBelted|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|rightRearInflatableBelted|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|middleRow1BeltDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
+|middleRow1BuckleBelted|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|false|||
 
 ### Turn
 
@@ -324,18 +323,18 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|emergencyEventType|Common.EmergencyEventType||||
-|fuelCutoffStatus|Common.FuelCutoffStatus||||
-|rolloverEvent|Common.VehicleDataEventStatus||||
-|maximumChangeVelocity|Common.VehicleDataEventStatus||||
-|multipleEvents|Common.VehicleDataEventStatus||||
+|emergencyEventType|[Common.EmergencyEventType](../enums/#emergencyeventtype)|true|||
+|fuelCutoffStatus|[Common.FuelCutoffStatus](../enums/#fuelcutoffstatus)|true|||
+|rolloverEvent|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|maximumChangeVelocity|Integer|true|minvalue: 0<br>maxvalue: 255||
+|multipleEvents|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
 
 ### VehicleDataResult
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|dataType|Common.VehicleDataType||||
-|resultCode|Common.VehicleDataResultCode||||
+|dataType|[Common.VehicleDataType](../enums/#vehicledatatype)|true|||
+|resultCode|[Common.VehicleDataResultCode](../enums/#vehicledataresultcode)|true|||
 
 ### PresetBankCapabilities
 
@@ -388,32 +387,32 @@
 |:---|:---|:--------|:---------|:----------|
 |name|String|true|||
 |id|String|true|||
-|transportType|Common.TransportType|false|||
+|transportType|[Common.TransportType](../enums/#transporttype)|false|||
 |isSDLAllowed|Boolean|false|||
 
 ### SoftButton
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|type|Common.SoftButtonType|true|||
+|type|[Common.SoftButtonType](../enums/#softbuttontype)|true|||
 |text|String|false|maxlength: 500||
 |image|Common.Image|false|||
 |isHighlighted|Boolean|false|||
 |softButtonID|Integer|true|minvalue: 0<br>maxvalue: 65535||
-|systemAction|Common.SystemAction|true|||
+|systemAction|[Common.SystemAction](../enums/#systemaction)|true|||
 
 ### AirbagStatus
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|driverAirbagDeployed|Common.VehicleDataEventStatus||||
-|driverSideAirbagDeployed|Common.VehicleDataEventStatus||||
-|driverCurtainAirbagDeployed|Common.VehicleDataEventStatus||||
-|passengerAirbagDeployed|Common.VehicleDataEventStatus||||
-|passengerCurtainAirbagDeployed|Common.VehicleDataEventStatus||||
-|driverKneeAirbagDeployed|Common.VehicleDataEventStatus||||
-|passengerSideAirbagDeployed|Common.VehicleDataEventStatus||||
-|passengerKneeAirbagDeployed|Common.VehicleDataEventStatus||||
+|driverAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|driverSideAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|driverCurtainAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|passengerAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|passengerCurtainAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|driverKneeAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|passengerSideAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
+|passengerKneeAirbagDeployed|[Common.VehicleDataEventStatus](../enums/#vehicledataeventstatus)|true|||
 
 ### RGBColor
 
@@ -427,20 +426,20 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|primaryColor|Common.RGBColor|true|||
-|secondaryColor|Common.RGBColor|true|||
-|backgroundColor|Common.RGBColor|true|||
+|primaryColor|Common.RGBColor|false|||
+|secondaryColor|Common.RGBColor|false|||
+|backgroundColor|Common.RGBColor|false|||
 
 ### DisplayCapabilities
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|displayType|Common.DisplayType|true|||
-|displayName|String|true||The name of the display the app is connected to.|
+|displayType|[Common.DisplayType](../enums/#displaytype)|true|||
+|displayName|String|false||The name of the display the app is connected to.|
 |textFields|Common.TextField|true|array: true<br>minsize: 0<br>maxsize: 100||
 |imageFields|Common.ImageField|false|array: true<br>minsize: 1<br>maxsize: 100||
-|mediaClockFormats|Common.MediaClockFormat|true|array: true<br>minsize: 0<br>maxsize: 100||
-|imageCapabilities|Common.ImageType|false|array: true<br>minsize: 0<br>maxsize: 2||
+|mediaClockFormats|[Common.MediaClockFormat](../enums/#mediaclockformat)|true|array: true<br>minsize: 0<br>maxsize: 100||
+|imageCapabilities|[Common.ImageType](../enums/#imagetype)|false|array: true<br>minsize: 0<br>maxsize: 2||
 |graphicSupported|Boolean|true|||
 |templatesAvailable|String|true|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 100||
 |screenParams|Common.ScreenParams|false|||
@@ -459,21 +458,21 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |value|String|true|maxlength: 65535|The path to the dynamic image stored on HU or the static binary image itself.<br>**Note:** There is no guarantee that the image reference is valid at the time it is received.|
-|imageType|Common.ImageType|true||Describes whether it is a static or dynamic image.|
+|imageType|[Common.ImageType](../enums/#imagetype)|true||Describes whether it is a static or dynamic image.|
 |isTemplate|Boolean|false||Optional value to specify whether it's a template image. A template image can be (re)colored by the HMI as needed by using an image pattern.|
 
 ### MyKey
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|e911Override|Common.VehicleDataStatus|true|||
+|e911Override|[Common.VehicleDataStatus](../enums/#vehicledatastatus)|true|||
 
 ### ImageField
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|name|Common.ImageFieldName|true|||
-|imageTypeSupported|Common.FileType|false|array: true<br>minsize: 1<br>maxsize: 100||
+|name|[Common.ImageFieldName](../enums/#imagefieldname)|true|||
+|imageTypeSupported|[Common.FileType](../enums/#filetype)|false|array: true<br>minsize: 1<br>maxsize: 100||
 |imageResolution|Common.ImageResolution|false|||
 
 ### VideoStreamingFormat
@@ -487,27 +486,28 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|protocol|Common.VideoStreamingProtocol|false| |The video protocol configuration.|
-|codec|Common.VideoStreamingCodec|false| |The video codec configuration.|
+|protocol|[Common.VideoStreamingProtocol](../enums/#videostreamingprotocol)|false| |The video protocol configuration.|
+|codec|[Common.VideoStreamingCodec](../enums/#videostreamingcodec)|false| |The video codec configuration.|
 |width|Integer|false| |Width of the video stream, in pixels.|
 |height|Integer|false| |Height of the video stream, in pixels.|
 
 ### ExternalConsentStatus
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |entityType|Integer|true|minvalue: 0<br>maxvalue: 128|The entityType which status is informed by "status" param.|
 |entityID|Integer|true|minvalue: 0<br>maxvalue: 128|The corresponding ID of entityType which status is informed by "status" param.|
-|status|Common.EntityStatus|true||Status of External User Consent Settings entity: "ON" or "OFF"|
+|status|[Common.EntityStatus](../enums/#entitystatus)|true||Status of External User Consent Settings entity: "ON" or "OFF"|
 
 ### ModuleData
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|moduleType|Common.ModuleType|true||The moduleType indicates which type of data should be changed and identifies which data object exists in this struct. For example, if the moduleType is CLIMATE then a "climateControlData" should exist|
+|moduleType|[Common.ModuleType](../enums/#moduletype)|true||The moduleType indicates which type of data should be changed and identifies which data object exists in this struct. For example, if the moduleType is CLIMATE then a "climateControlData" should exist|
 |moduleId|String|false|maxlength: 100|Id of a module, published by System Capability.|
 |radioControlData|Common.RadioControlData|false|||
 |climateControlData|Common.ClimateControlData|false|||
-|seatControlData|SeatControlData|false|||
+|seatControlData|Common.SeatControlData|false|||
 |audioControlData|Common.AudioControlData|false|||
 |lightControlData|Common.LightControlData|false|||
 |hmiSettingsControlData|Common.HMISettingsControlData|false|||
@@ -516,62 +516,64 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|frequencyInteger|Integer|false|minvalue:0 maxvalue:1710|The integer part of the frequency ie for 101.7 this value should be 101|
-|frequencyFraction|Integer|false|minvalue:0 maxvalue:9|The fractional part of the frequency for 101.7 is 7|
-|band|Common.RadioBand|false|||
+|frequencyInteger|Integer|false|minvalue: 0<br>maxvalue: 1710|The integer part of the frequency ie for 101.7 this value should be 101|
+|frequencyFraction|Integer|false|minvalue: 0<br>maxvalue: 9|The fractional part of the frequency for 101.7 is 7|
+|band|[Common.RadioBand](../enums/#radioband)|false|||
 |rdsData|Common.RdsData|false|||
-|availableHDs|Integer|false|minvalue:1 maxvalue:7|Number of HD sub-channels if available. Deprecated.|
-|hdChannel|Integer|false|minvalue:0 maxvalue:7|Current HD sub-channel if available.|
-|signalStrength|Integer|false|minvalue:0 maxvalue:100||
-|signalChangeThreshold|Integer|false|minvalue:0 maxvalue:100|If the signal strength falls below the set value for this parameter, the radio will tune to an alternative frequency|
+|availableHDs|Integer|false|minvalue: 1<br>maxvalue: 7|Number of HD sub-channels if available. Deprecated.|
+|hdChannel|Integer|false|minvalue: 0<br>maxvalue: 7|Current HD sub-channel if available.|
+|signalStrength|Integer|false|minvalue: 0<br>maxvalue: 100||
+|signalChangeThreshold|Integer|false|minvalue: 0<br>maxvalue: 100|If the signal strength falls below the set value for this parameter, the radio will tune to an alternative frequency|
 |radioEnable|Boolean|false||True if the radio is on, false is the radio is off|
-|state|Common.RadioState|false|||
+|state|[Common.RadioState](../enums/#radiostate)|false|||
 |sisData|Common.SisData|false||Read-only Station Information Service (SIS) data provides basic information about the station such as call sign, as well as information not displayable to the consumer such as the station identification number|
 |hdRadioEnable|Boolean|false||True if the hd radio is on, false is the radio is off|
-|availableHdChannels|Integer|false|minvalue:0 maxvalue:7 array="true" minsize="0"|The list of available hd sub-channel indexes, empty list means no Hd channel is available, read-only|
+|availableHdChannels|Integer|false|minvalue: 0<br>maxvalue: 7<br>array: true<br>minsize: 0<br>maxsize: 8|The list of available hd sub-channel indexes, empty list means no Hd channel is available, read-only|
 
 ### RdsData
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|PS|String|false|minlength:0<br>maxlength:8|Program Service Name|
-|RT|String|false|minlength:0<br>maxlength:64|Radio Text|
-|CT|String|false|minlength:24 maxlength:24|The clock text in UTC format as YYYY-MM-DDThh:mm:ss.sTZD|
-|PI|String|false|minlength:0 maxlength:6|Program Identification - the call sign for the radio station|
-|PTY|Integer|false|minvalue:0 maxvalue:31|The program type - The region should be used to differentiate between EU and North America program types|
+|PS|String|false|minlength: 0<br>maxlength: 8|Program Service Name|
+|RT|String|false|minlength: 0<br>maxlength: 64|Radio Text|
+|CT|String|false|minlength: 24<br>maxlength: 24|The clock text in UTC format as YYYY-MM-DDThh:mm:ss.sTZD|
+|PI|String|false|minlength: 0<br>maxlength: 6|Program Identification - the call sign for the radio station|
+|PTY|Integer|false|minvalue: 0<br>maxvalue: 31|The program type - The region should be used to differentiate between EU and North America program types|
 |TP|Boolean|false||Traffic Program Identification - Identifies a station that offers traffic|
 |TA|Boolean|false||Traffic Announcement Identification - Indicates an ongoing traffic announcement|
 |REG|String|false||Region|
 
 ### StationIDNumber
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|countryCode|Integer|false|minvalue="0" <br> maxvalue="999"|Binary Representation of ITU Country Code. USA Code is 001.|
-|fccFacilityId|Integer|false|minvalue="0" <br> maxvalue="999999"|Binary representation  of unique facility ID assigned by the FCC; FCC controlled for U.S. territory|
+|countryCode|Integer|false|minvalue: 0<br>maxvalue: 999|Binary Representation of ITU Country Code. USA Code is 001.|
+|fccFacilityId|Integer|false|minvalue: 0<br>maxvalue: 999999|Binary representation  of unique facility ID assigned by the FCC; FCC controlled for U.S. territory|
 
 ### SisData
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|stationShortName|String|false|minlength="4" <br> maxlength="7"|Identifies the 4-alpha-character station call sign plus an optional (-FM) extension|
+|stationShortName|String|false|minlength: 4<br>maxlength: 7|Identifies the 4-alpha-character station call sign plus an optional (-FM) extension|
 |stationIDNumber|Common.StationIDNumber|false||Used for network Application. Consists of Country Code and FCC Facility ID.|
-|stationLongName|String|false|minlength="0" <br> maxlength="56"|Identifies the station call sign or other identifying information in the long format.|
+|stationLongName|String|false|minlength: 0<br>maxlength: 56|Identifies the station call sign or other identifying information in the long format.|
 |stationLocation|Common.GPSData|false||Provides the 3-dimensional geographic station location.<br>HMI should include only `longitudeDegrees`, `latitudeDegrees`, `altitude` params providing SiSData|
-|stationMessage|String|false|minlength="0" <br> maxlength="56"|May be used to convey textual information of general interest to the consumer such as weather forecasts or public service announcements. <br> Includes a high priority delivery feature to convey emergencies that may be in the listening area.|
+|stationMessage|String|false|minlength: 0<br>maxlength: 56|May be used to convey textual information of general interest to the consumer such as weather forecasts or public service announcements. <br> Includes a high priority delivery feature to convey emergencies that may be in the listening area.|
 
 ### ClimateControlData
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|fanSpeed|Integer|false|minvalue: 0 <br> maxvalue: 100||
-|currentTemperature|Temperature|false|||
-|desiredTemperature|Temperature|false|||
+|fanSpeed|Integer|false|minvalue: 0<br>maxvalue: 100||
+|currentTemperature|Common.Temperature|false|||
+|desiredTemperature|Common.Temperature|false|||
 |acEnable|Boolean|false|||
 |circulateAirEnable|Boolean|false|||
 |autoModeEnable|Boolean|false|||
-|defrostZone|DefrostZone|false|||
+|defrostZone|[Common.DefrostZone](../enums/#defrostzone)|false|||
 |dualModeEnable|Boolean|false|||
 |acMaxEnable|Boolean|false|||
-|ventilationMode|VentilationMode|false|||
+|ventilationMode|[Common.VentilationMode](../enums/#ventilationmode)|false|||
 |heatedSteeringWheelEnable|Boolean|false||value false means disabled/turn off, value true means enabled/turn on.|
 |heatedWindshieldEnable|Boolean|false||value false means disabled, value true means enabled.|
 |heatedRearWindowEnable|Boolean|false||value false means disabled, value true means enabled.|
@@ -582,22 +584,23 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|unit|TemperatureUnit|true||Temperature Unit|
+|unit|[Common.TemperatureUnit](../enums/#temperatureunit)|true||Temperature Unit|
 |value|Float|true||The temperature value is in TemperatureUnit specified unit|
 
 ### RemoteControlCapabilities
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|climateControlCapabilities|ClimateControlCapabilities|false|array: true <br> minsize: 1 <br> maxsize: 100|If included, the platform supports RC climate controls. For this baseline version, maxsize=1. i.e. only one climate control module is supported|
-|radioControlCapabilities|RadioControlCapabilities|false|array: true <br> minsize: 1 <br> maxsize: 100|If included, the platform supports RC radio controls. For this baseline version, maxsize=1. i.e. only one climate control module is supported|
-|buttonCapabilities|Common.ButtonCapabilities|false|array: true <br> minsize: 1 <br> maxsize: 100|If included, the platform supports RC button controls with the included button names|
-|seatControlCapabilities|Common.SeatControlCapabilities|false|minsize="1" <br> maxsize="100" <br> array="true"|If included, the platform supports seat controls.|
-|audioControlCapabilities|Common.AudioControlCapabilities|false| minsize="1" <br> maxsize="100" <br> array="true"| If included, the platform supports audio controls.|
+|climateControlCapabilities|Common.ClimateControlCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|If included, the platform supports RC climate controls. For this baseline version, maxsize=1. i.e. only one climate control module is supported|
+|radioControlCapabilities|Common.RadioControlCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|If included, the platform supports RC radio controls. For this baseline version, maxsize=1. i.e. only one climate control module is supported|
+|buttonCapabilities|Common.ButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|If included, the platform supports RC button controls with the included button names|
+|seatControlCapabilities|Common.SeatControlCapabilities|false|minsize: 1<br>maxsize: 100<br>array: true|If included, the platform supports seat controls.|
+|audioControlCapabilities|Common.AudioControlCapabilities|false|minsize: 1<br>maxsize: 100<br>array: true| If included, the platform supports audio controls.|
 |hmiSettingsControlCapabilities|Common.HMISettingsControlCapabilities|false||If included, the platform supports hmi setting controls.|
 |lightControlCapabilities|Common.LightControlCapabilities|false||If included, the platform supports light controls.|
 
 ### ClimateControlCapabilities
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |moduleName|String|true|maxlength: 100|The short friendly name of the climate control module. It should not be used to identify a module by mobile application.|
@@ -611,9 +614,9 @@
 |autoModeEnableAvailable|Boolean|false||Availability of the control of enable/disable auto mode. <br> True: Available, False: Not Available, Not present: Not Available.|
 |dualModeEnableAvailable|Boolean|false||Availability of the control of enable/disable dual mode. <br> True: Available, False: Not Available, Not present: Not Available.|
 |defrostZoneAvailable|Boolean|false||Availability of the control of defrost zones. <br> True: Available, False: Not Available, Not present: Not Available.|
-|defrostZone|DefrostZone|false|array: true <br> minsize: 1 <br> maxsize: 100|A set of all defrost zones that are controllable.|
+|defrostZone|[Common.DefrostZone](../enums/#defrostzone)|false|array: true<br>minsize: 1<br>maxsize: 100|A set of all defrost zones that are controllable.|
 |ventilationModeAvailable|Boolean|false|| Availability of the control of air ventilation mode. <br> True: Available, False: Not Available, Not present: Not Available.|
-|ventilationMode|VentilationMode|false|array: true <br> minsize: 1 <br> maxsize: 100|A set of all ventilation modes that are controllable|
+|ventilationMode|[Common.VentilationMode](../enums/#ventilationmode)|false|array: true<br>minsize: 1<br>maxsize: 100|A set of all ventilation modes that are controllable|
 |heatedSteeringWheelAvailable|Boolean|false|| Availability of the control (enable/disable) of heated Steering Wheel. <br> True: Available, False: Not Available, Not present: Not Available.|
 |heatedWindshieldAvailable|Boolean|false|| Availability of the control (enable/disable) of heated Windshield. <br> True: Available, False: Not Available, Not present: Not Available.|
 |heatedRearWindowAvailable|Boolean|false|| Availability of the control (enable/disable) of heated Rear Window. <br> True: Available, False: Not Available, Not present: Not Available.|
@@ -624,38 +627,36 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|moduleName|String|true|maxlength="100"|The short friendly name of the light control module. <br> It should not be used to identify a module by mobile application.|
+|moduleName|String|true|maxlength: 100|The short friendly name of the light control module. <br> It should not be used to identify a module by mobile application.|
 |moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
 |sourceAvailable|Boolean|false||Availability of the control of audio source.|
 |keepContextAvailable|Boolean|false||Availability of the parameter keepContext.|
 |volumeAvailable|Boolean|false||Availability of the control of audio volume.|
 |equalizerAvailable|Boolean|false||Availability of the control of Equalizer Settings.|
-|equalizerMaxChannelId|Integer|false|minvalue="1" <br> maxvalue="100"|Must be included if equalizerAvailable=true, and assume all IDs starting from 1 to this value are valid.|
+|equalizerMaxChannelId|Integer|false|minvalue: 1<br>maxvalue: 100|Must be included if equalizerAvailable=true, and assume all IDs starting from 1 to this value are valid.|
 
 ### EqualizerSettings
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|channelId|Integer|true|minvalue="1" <br> maxvalue="100"|Defines the each Equalizer channel settings.|
-|channelName|String|false|maxlength="50"|Read-only channel / frequency name (e.i. "Treble, Midrange, Bass" or "125 Hz")|
-|channelSetting|Integer|true|minvalue="0" <br> maxvalue="100"|Reflects the setting, from 0%-100%.|
-
+|channelId|Integer|true|minvalue: 1<br>maxvalue: 100|Defines the each Equalizer channel settings.|
+|channelName|String|false|maxlength: 50|Read-only channel / frequency name (e.i. "Treble, Midrange, Bass" or "125 Hz")|
+|channelSetting|Integer|true|minvalue: 0<br>maxvalue: 100|Reflects the setting, from 0%-100%.|
 
 ### AudioControlData
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|source|Common.PrimaryAudioSource|false||In a getter response or a notification, it is the current primary audio source of the system. <br> In a setter request, it is the target audio source that the system shall switch to. <br> If the value is MOBILE_APP, the system shall switch to the mobile media app that issues the setter RPC.|
+|source|[Common.PrimaryAudioSource](../enums/#primaryaudiosource)|false||In a getter response or a notification, it is the current primary audio source of the system. <br> In a setter request, it is the target audio source that the system shall switch to. <br> If the value is MOBILE_APP, the system shall switch to the mobile media app that issues the setter RPC.|
 |keepContext|Boolean|false||This parameter shall not be present in any getter responses or notifications. <br> This parameter is optional in a setter request. The default value is false. <br> If it is false, the system not only changes the audio source but also brings the default infotainment system UI associated with the audio source to foreground and set the application to background. <br> If it is true, the system changes the audio source, but keeps the current application's context.|
-|volume|Integer|false|minvalue="0" <br> maxvalue="100"|Reflects the volume of audio, from 0%-100%."|
-|equalizerSettings|Common.EqualizerSettings|false|minvalue="1" <br> maxvalue="100"<br>array ="true"|Defines the list of supported channels (band) and their current/desired settings on HMI|
-
+|volume|Integer|false|minvalue: 0<br>maxvalue: 100|Reflects the volume of audio, from 0%-100%."|
+|equalizerSettings|Common.EqualizerSettings|false|minsize: 1<br>maxsize: 100<br>array: true|Defines the list of supported channels (band) and their current/desired settings on HMI|
 
 ### LightCapabilities
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|name|Common.LightName|true|||
+|name|[Common.LightName](../enums/#lightname)|true|||
 |statusAvailable|Boolean|false||Indicates if the status (ON/OFF) can be set remotely. App shall not use read-only values (RAMP_UP/RAMP_DOWN/UNKNOWN/INVALID) in a setInteriorVehicleData request.|
 |densityAvailable|Boolean|false||Indicates if the light's density can be set remotely (similar to a dimmer).|
 |rgbColorSpaceAvailable|Boolean|false||Indicates if the light's color can be set remotely by using the sRGB color space.|
@@ -664,46 +665,42 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|moduleName|String|true|maxlength="100"|The short friendly name of the light control module. <br> It should not be used to identify a module by mobile application.|
+|moduleName|String|true|maxlength: 100|The short friendly name of the light control module. <br> It should not be used to identify a module by mobile application.|
 |moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
-|supportedLights|Common.LightCapabilities|true|minsize="1" <br> maxsize="100" <br> array="true"| An array of available LightCapabilities that are controllable.|
-
+|supportedLights|Common.LightCapabilities|true|minsize: 1<br>maxsize: 100<br>array: true| An array of available LightCapabilities that are controllable.|
 
 ### LightState
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|id|Common.LightName|true||The name of a light or a group of lights.|
-|status|Common.LightName|true|||
-|density|Float|false|minvalue="0" <br> maxvalue="1"||
+|id|[Common.LightName](../enums/#lightname)|true||The name of a light or a group of lights.|
+|status|[Common.LightStatus](../enums/#lightstatus)|true|||
+|density|Float|false|minvalue: 0<br>maxvalue: 1||
 |color|Common.RGBColor|false|||
-
 
 ### LightControlData
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|lightState|Common.LightState|true|minsize="1" <br> maxsize="100" <br> array="true"|An array of LightNames and their current or desired status. <br> Status of the LightNames that are not listed in the array shall remain unchanged.|
-
+|lightState|Common.LightState|true|minsize: 1<br>maxsize: 100<br>array: true|An array of LightNames and their current or desired status. <br> Status of the LightNames that are not listed in the array shall remain unchanged.|
 
 ### HMISettingsControlCapabilities
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|moduleName|String|true|maxlength="100"|The short friendly name of the hmi setting module. <br> It should not be used to identify a module by mobile application.|
+|moduleName|String|true|maxlength: 100|The short friendly name of the hmi setting module. <br> It should not be used to identify a module by mobile application.|
 |moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
 |distanceUnitAvailable|Boolean|false||Availability of the control of distance unit.|
 |temperatureUnitAvailable|Boolean|false||Availability of the control of temperature unit.|
 |displayModeUnitAvailable|Boolean|false||Availability of the control of HMI display mode.|
 
-
 ### HMISettingsControlData
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|displayMode|Common.DisplayMode|false|||
-|temperatureUnit|Common.TemperatureUnit|false|||
-|distanceUnit|Common.DistanceUnit|false|||
+|displayMode|[Common.DisplayMode](../enums/#displaymode)|false|||
+|temperatureUnit|[Common.TemperatureUnit](../enums/#temperatureunit)|false|||
+|distanceUnit|[Common.DistanceUnit](../enums/#distanceunit)|false|||
 
 ### RadioControlCapabilities
 
@@ -731,7 +728,7 @@
 |:---|:---|:--------|:---------|:----------|
 |entityType|Integer|true|minvalue: 0<br>maxvalue: 128|The entityType which status is informed by "status" param.|
 |entityID|Integer|true|minvalue: 0<br>maxvalue: 128|The corresponding ID of entityType which status is informed by "status" param.|
-|status|Common.EntityStatus|true||Status of External User Consent Settings entity: "ON" or "OFF"|
+|status|[Common.EntityStatus](../enums/#entitystatus)|true||Status of External User Consent Settings entity: "ON" or "OFF"|
 
 ### Rectangle
 
@@ -743,65 +740,67 @@
 |height|Float|true| |The height of the rectangle|
 
 ### HapticRect
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|id|Integer|true|minvalue: 0<br>maxvalue: 128|A unique identifier for the haptic rectangle|
+|id|Integer|true|minvalue: 0<br>maxvalue: 2000000000|A unique identifier for the haptic rectangle|
 |rect|Common.Rectangle|true| |The position of the haptic rectangle to be highlighted.<br>The center of this rectangle is considered "touched" when the element is focused and then selected.|
 
 ### FuelRange
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |type|[Common.FuelType](../enums/#fueltype)|false|||
-|range|Float|faslse|minvalue=0<br>maxvalue=10000|The estimate range in KM the vehicle can travel based on fuel level and consumption|
+|range|Float|false|minvalue: 0<br>maxvalue: 10000|The estimate range in KM the vehicle can travel based on fuel level and consumption|
 
 ### MassageModeData
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|massageZone|Common.MassageZone|true|||
-|massageMode|Common.MassageMode|true|||
+|massageZone|[Common.MassageZone](../enums/#massagezone)|true|||
+|massageMode|[Common.MassageMode](../enums/#massagemode)|true|||
 
 ### MassageCushionFirmness
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|cushion|Common.MassageCushion|true|||
-|firmness|Integer|true|minvalue="0" <br> maxvalue="100"||
+|cushion|[Common.MassageCushion](../enums/#massagecushion)|true|||
+|firmness|Integer|true|minvalue: 0<br>maxvalue: 100||
 
 ### SeatMemoryAction
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|id|Integer|true|minvalue="1" <br> maxvalue="10" ||
-|label|String|false|maxlength="100"||
-|action|Common.SeatMemoryActionType|true|||
+|id|Integer|true|minvalue: 1<br>maxvalue: 10||
+|label|String|false|maxlength: 100||
+|action|[Common.SeatMemoryActionType](../enums/#seatmemoryactiontype)|true|||
 
 ### SeatControlData
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|id|Common.SupportedSeat|false|||
+|id|[Common.SupportedSeat](../enums/#supportedseat)|false|||
 |heatingEnabled|Boolean|false|||
 |coolingEnabled|Boolean|false|||
-|heatingLevel|Integer|false|minvalue="0" <br> maxvalue="100"||
-|coolingLevel|Integer|false|minvalue="0" <br> maxvalue="100"||
-|horizontalPosition|Integer|false|minvalue="0" maxvalue="100"||
-|verticalPosition|Integer|false|minvalue="0" maxvalue="100"||
-|frontVerticalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
-|backVerticalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
-|backTiltAngle|Integer|false|minvalue="0" <br> maxvalue="100"||
-|headSupportHorizontalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
-|headSupportVerticalPosition|Integer|false|minvalue="0" <br> maxvalue="100"||
+|heatingLevel|Integer|false|minvalue: 0<br>maxvalue: 100||
+|coolingLevel|Integer|false|minvalue: 0<br>maxvalue: 100||
+|horizontalPosition|Integer|false|minvalue: 0<br>maxvalue: 100||
+|verticalPosition|Integer|false|minvalue: 0<br>maxvalue: 100||
+|frontVerticalPosition|Integer|false|minvalue: 0<br>maxvalue: 100||
+|backVerticalPosition|Integer|false|minvalue: 0<br>maxvalue: 100||
+|backTiltAngle|Integer|false|minvalue: 0<br>maxvalue: 100||
+|headSupportHorizontalPosition|Integer|false|minvalue: 0<br>maxvalue: 100||
+|headSupportVerticalPosition|Integer|false|minvalue: 0<br>maxvalue: 100||
 |massageEnabled|Boolean|false|||
-|massageMode|Common.MassageModeData|true|minsize="1" <br> maxsize="2" <br> array="true"||
-|massageCushionFirmness|Common.MassageCushionFirmness|false|minsize="1" <br> maxsize="5" <br> array="true"||
+|massageMode|Common.MassageModeData|false|minsize: 1<br>maxsize: 2<br>array: true||
+|massageCushionFirmness|Common.MassageCushionFirmness|false|minsize: 1<br>maxsize: 5<br>array: true||
 |memory|Common.SeatMemoryAction|false|||
 
 ### SeatControlCapabilities
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|moduleName|String|true|maxlength="100"|The short friendly name of the light control module. <br> It should not be used to identify a module by mobile application.|
+|moduleName|String|true|maxlength: 100|The short friendly name of the light control module. <br> It should not be used to identify a module by mobile application.|
 |moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
 |heatingEnabledAvailable|Boolean|false|||
 |coolingEnabledAvailable|Boolean|false|||
@@ -823,15 +822,15 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|millisecond|Integer|false|minvalue: 0<br> maxvalue: 999|Milliseconds – part of time - one thousandth split second|
-|second|Integer|false|minvalue: 0<br> maxvalue: 60|Seconds part of time|
-|minute|Integer|false|minvalue: 0<br> maxvalue: 59|Minutes part of time|
-|hour|Integer|false|minvalue: 0<br> maxvalue: 23|Hours part of time. Note that this structure accepts time only in 24 Hr format|
-|day|Integer|false|minvalue: 1 <br>maxvalue: 31|Day of the month|
-|month|Integer|false|minvalue: 1<br> maxvalue: 12|Month of the year|
-|year|Integer|false|minvalue: 0 <br>maxvalue: 4095|The year in YYYY format|
-|tz_hour|Integer|false|minvalue: -12 <br> maxvalue: 14 <br> defvalue: 0|Time zone offset in Hours with regard to UTC.|
-|tz_minute|Integer|false|minvalue: 0 <br>maxvalue: 59 <br> defvalue: 0|Time zone offset in Min with regard to UTC.|
+|millisecond|Integer|false|minvalue: 0<br>maxvalue: 999|Milliseconds – part of time - one thousandth split second|
+|second|Integer|false|minvalue: 0<br>maxvalue: 60|Seconds part of time|
+|minute|Integer|false|minvalue: 0<br>maxvalue: 59|Minutes part of time|
+|hour|Integer|false|minvalue: 0<br>maxvalue: 23|Hours part of time. Note that this structure accepts time only in 24 Hr format|
+|day|Integer|false|minvalue: 1<br>maxvalue: 31|Day of the month|
+|month|Integer|false|minvalue: 1<br>maxvalue: 12|Month of the year|
+|year|Integer|false|maxvalue: 4095|The year in YYYY format|
+|tz_hour|Integer|false|minvalue: -12<br>maxvalue: 14<br>defvalue: 0|Time zone offset in Hours with regard to UTC.|
+|tz_minute|Integer|false|minvalue: 0<br>maxvalue: 59<br>defvalue: 0|Time zone offset in Min with regard to UTC.|
 
 ### Coordinate
 
@@ -888,7 +887,6 @@
 |weatherServiceManifest|Common.WeatherServiceManifest|false|||
 |navigationServiceManifest|Common.NavigationServiceManifest|false|||
 
-
 ### AppServiceRecord
 
 |Name|Type|Mandatory|Additional|Description|
@@ -936,7 +934,7 @@
 
 ### MediaServiceManifest
 
-There are no defined parameters for this struct.
+There are no defined parameters for this struct
 
 ### MediaServiceData
 
@@ -973,7 +971,7 @@ There are no defined parameters for this struct.
 |title|String|false|||
 |summary|String|false|||
 |expires|Common.DateTime|false|||
-|regions|String|false|array: true<br>minsize: 1<br> maxsize: 99||
+|regions|String|false|array: true<br>minsize: 1<br>maxsize: 99||
 |severity|String|false|||
 |timeIssued|Common.DateTime|false|||
 
@@ -1028,7 +1026,7 @@ There are no defined parameters for this struct.
 |locationDetails|Common.LocationDetails|true|||
 |action|[Common.NavigationAction](../enums/#navigationaction)|true|||
 |eta|Common.DateTime|false|||
-|bearing|Integer|false|minvalue: 0<br>maxvalue:359|The angle at which this instruction takes place. For example, 0 would mean straight, less than 45 is bearing right, greater than 135 is sharp right, between 45 and 135 is a regular right, and 180 is a U-Turn, etc|
+|bearing|Integer|false|minvalue: 0<br>maxvalue: 359|The angle at which this instruction takes place. For example, 0 would mean straight, less than 45 is bearing right, greater than 135 is sharp right, between 45 and 135 is a regular right, and 180 is a U-Turn, etc|
 |junctionType|[Common.NavigationJunction](../enums/#navigationjunction)|false|||
 |drivingSide|[Common.Direction](../enums/#direction)|false||Used to infer which side of the road this instruction takes place. For a U-Turn (action=TURN, bearing=180) this will determine which direction the turn should take place|
 |details|String|false||This is a string representation of this instruction, used to display instructions to the users. This is not intended to be read aloud to the users, see the param prompt in NavigationServiceData for that|
@@ -1068,49 +1066,54 @@ There are no defined parameters for this struct.
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|type|Common.WindowType|true|||
+|type|[Common.WindowType](../enums/#windowtype)|true|||
 |maximumNumberOfWindows|Integer|true|||
 
 ### WindowCapability
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |windowID|Integer|false||The specified ID of the window. Can be set to a predefined window, or omitted for the main window on the main display.|
 |textFields|Common.TextField|false|array: true<br>minsize: 1<br>maxsize: 100|A set of all fields that support text data. See TextField|
 |imageFields|Common.ImageField|false|array: true<br>minsize: 1<br>maxsize: 100|A set of all fields that support images. See ImageField|
-|imageTypeSupported|Common.ImageType|false|array: true<br>minsize: 0<br>maxsize: 1000|Provides information about image types supported by the system.|
-|templatesAvailable|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 100|A set of all window templates available on the head unit.|
-|numCustomPresetsAvailable|Integer|false|minvalue: 1 <br>maxvalue: 100|The number of on-window custom presets available (if any); otherwise omitted.|
+|imageTypeSupported|[Common.ImageType](../enums/#imagetype)|false|array: true<br>minsize: 0<br>maxsize: 1000|Provides information about image types supported by the system.|
+|templatesAvailable|String|false|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 100|A set of all window templates available on the head unit.|
+|numCustomPresetsAvailable|Integer|false|minvalue: 1<br>maxvalue: 100|The number of on-window custom presets available (if any); otherwise omitted.|
 |buttonCapabilities|Common.ButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of buttons and the capabilities of each on-window button.|
 |softButtonCapabilities|Common.SoftButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of soft buttons available on-window and the capabilities for each button.|
 |menuLayoutsAvailable|[Common.MenuLayout](../enums/#menulayout)|false|array: true<br>minsize: 1<br>maxsize: 1000|An array of available menu layouts. If this parameter is not provided, only the `LIST` layout is assumed to be available|
 
 ### ModuleInfo
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |moduleId|String|true|maxlength: 100|uuid of a module. "moduleId + moduleType" uniquely identify a module.| 
 |location|Common.Grid|false||Location of a module.|
 |serviceArea|Common.Grid|false||Service area of a module.|
-|allowMultipleAccess|Boolean|false|defValue: true|allow multiple users/apps to access the module or not|
+|allowMultipleAccess|Boolean|false|defvalue: true|allow multiple users/apps to access the module or not|
 
 ### Grid
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|col|Integer|true|minvalue: -1 <br>maxvalue: 100|Describes a location (origin coordinates and span) of a vehicle component.|
-|row|Integer|true|minvalue: -1 <br>maxvalue: 100|Describes a location (origin coordinates and span) of a vehicle component.|
-|level|Integer|false|minvalue: -1 <br> maxvalue: 100 <br> defvalue: 0|Describes a location (origin coordinates and span) of a vehicle component.|
-|colspan|Integer|false|minvalue: 1 <br> maxvalue: 100 <br> defvalue: 1|Describes a location (origin coordinates and span) of a vehicle component.|
-|rowspan|Integer|false|minvalue: 1 <br> maxvalue: 100 <br> defvalue: 1|Describes a location (origin coordinates and span) of a vehicle component.|
-|levelspan|Integer|false|minvalue: 1 <br> maxvalue: 100 <br> defvalue: 1|Describes a location (origin coordinates and span) of a vehicle component.|
+|col|Integer|true|minvalue: -1<br>maxvalue: 100|Describes a location (origin coordinates and span) of a vehicle component.|
+|row|Integer|true|minvalue: -1<br>maxvalue: 100|Describes a location (origin coordinates and span) of a vehicle component.|
+|level|Integer|false|minvalue: -1<br>maxvalue: 100<br>defvalue: 0|Describes a location (origin coordinates and span) of a vehicle component.|
+|colspan|Integer|false|minvalue: 1<br>maxvalue: 100<br>defvalue: 1|Describes a location (origin coordinates and span) of a vehicle component.|
+|rowspan|Integer|false|minvalue: 1<br>maxvalue: 100<br>defvalue: 1|Describes a location (origin coordinates and span) of a vehicle component.|
+|levelspan|Integer|false|minvalue: 1<br>maxvalue: 100<br>defvalue: 1|Describes a location (origin coordinates and span) of a vehicle component.|
 
 ### SeatLocationCapability
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|rows|Integer|false|minvalue: 1 <br>maxvalue: 100|Contains information about the locations of each seat.|
-|columns|Integer|false|minvalue: 1 <br>maxvalue: 100|Contains information about the locations of each seat.|
-|levels|Integer|false|minvalue: 1 <br>maxvalue: 100 <br> defvalue:1|Contains information about the locations of each seat.|
+|rows|Integer|false|minvalue: 1<br>maxvalue: 100|Contains information about the locations of each seat.|
+|columns|Integer|false|minvalue: 1<br>maxvalue: 100|Contains information about the locations of each seat.|
+|levels|Integer|false|minvalue: 1<br>maxvalue: 100<br>defvalue: 1|Contains information about the locations of each seat.|
 |seats|Common.SeatLocation|false|array: true|Contains a list of SeatLocation in the vehicle, the first element is the driver's seat|
 
 ### SeatLocation
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |grid|Common.Grid|false||Describes the location of a seat. HMI shall include this parameter when publishing seat locations in capabilities.|

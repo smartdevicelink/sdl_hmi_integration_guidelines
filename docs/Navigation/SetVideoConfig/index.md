@@ -95,11 +95,14 @@ SetVideoConfig error flow
 {
   "id" : 70,
   "jsonrpc" : "2.0",
-  "result" :
+  "error" :
   {
     "code" : 4,
-    "rejectedParams": ["codec", "width"],
-    "method" : "Navigation.SetVideoConfig"
+    "message" : "Invalid config params",
+    "data" : {
+      "rejectedParams": ["codec", "width"],
+      "method" : "Navigation.SetVideoConfig"
+    }
   }
 }
 ```

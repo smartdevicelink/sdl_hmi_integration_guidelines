@@ -28,6 +28,7 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 ChangeRegistration
 ![ChangeRegistration](./assets/ChangeRegistration.png)
@@ -44,7 +45,7 @@ ChangeRegistration
   "method" : "UI.ChangeRegistration",
   "params" :
   {
-    "Language" : "PT-PT",
+    "language" : "PT-PT",
     "appID" : 65146
   }
 }

@@ -19,14 +19,17 @@ Purpose
 |methodName|String|true||
 
 ### Sequence Diagrams
+
 |||
 OnResetTimeout during PerformInteraction
 ![OnResetTimeout](./assets/OnResetTimeoutPerformInteraction.png)
 |||
+
 |||
 OnResetTimeout during ScrollableMessage
 ![OnResetTimeout](./assets/OnResetTimeoutScrollableMessage.png)
 |||
+
 |||
 OnResetTimeout KEEP_CONTEXT during alert
 ![OnResetTimeout](./assets/OnResetTimeoutKeepContextAlert.png)
@@ -35,9 +38,14 @@ OnResetTimeout KEEP_CONTEXT during alert
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : "UI.OnResetTimeout"
+  "method" : "UI.OnResetTimeout",
+  "params" : {
+    "appID" : 65368,
+    "methodName" : "Navigation.GetWayPoints"
+  }
 }
 ```

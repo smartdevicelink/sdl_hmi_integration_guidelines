@@ -21,9 +21,7 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
-|||||
+This RPC has no additional parameter requirements
 
 ### JSON Message Examples
 

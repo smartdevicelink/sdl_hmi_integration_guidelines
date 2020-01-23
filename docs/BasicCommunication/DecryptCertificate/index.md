@@ -31,7 +31,7 @@ This RPC has no additional parameter requirements
 
 |||
 DecryptCertificate
-![DecryptCertificate](assets/DecryptCertificate.png)
+![DecryptCertificate](./assets/DecryptCertificate.png)
 |||
 
 ### JSON Message Examples

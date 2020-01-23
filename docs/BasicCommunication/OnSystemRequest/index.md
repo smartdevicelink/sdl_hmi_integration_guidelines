@@ -55,6 +55,7 @@ _**SyncP NOTE**_
 |appID|Integer|false||
 
 ### Sequence Diagrams
+
 |||
 System Requests File Download
 ![OnSystemRequest](./assets/OnSystemRequest.png)
@@ -73,6 +74,7 @@ BC.OnSystemRequest in Policy Table Update Flow with in-vehicle modem
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

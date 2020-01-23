@@ -28,14 +28,17 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 ScrollableMessage scrolled and closed by timeout
 ![ScrollableMessage](./assets/ScrollableMessageScrollTimeout.png)
 |||
+
 |||
 ScrollableMessage with soft buttons pressed by user
 ![ScrollableMessage](./assets/ScrollableMessageSoftButtonPress.png)
 |||
+
 |||
 ScrollableMessage with STEAL_FOCUS button for background application
 ![ScrollableMessage](./assets/ScrollableMessageStealFocus.png)

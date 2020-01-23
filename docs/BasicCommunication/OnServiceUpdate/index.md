@@ -16,6 +16,7 @@ Display a pop-up providing accurate feedback to the user on the status of the sy
 !!!
 
 ### Notification
+
 When a mobile navigation application is activated and sends a request for the Video Service there is a series of steps taken. 
 These steps include:
 
@@ -42,7 +43,7 @@ The only time when SDL would not be able provide the `appID` would be during the
 
 |||
 OnServiceUpdate
-![OnServiceUpdate](assets/OnServiceUpdate.png)
+![OnServiceUpdate](./assets/OnServiceUpdate.png)
 |||
 
 ### JSON Message Examples
@@ -52,7 +53,7 @@ OnServiceUpdate
 ```json
 {
     "jsonrpc": "2.0",
-    "method": "BC.OnServiceUpdate",
+    "method": "BasicCommunication.OnServiceUpdate",
     "params": {
         "serviceType": "RPC",
         "serviceEvent":"REQUEST_RECEIVED"

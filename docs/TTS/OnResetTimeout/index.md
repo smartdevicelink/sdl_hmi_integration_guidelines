@@ -19,10 +19,12 @@ Purpose
 |methodName|String|true||
 
 ### Sequence Diagrams
+
 |||
 OnResetTimeout for Speak SUCCESS
 ![OnResetTimeout](./assets/OnResetTimeoutSpeakSuccess.jpg)
 |||
+
 |||
 OnResetTimeout for Speak GENERIC_ERROR
 ![OnResetTimeout](./assets/OnResetTimeoutGenericError.jpg)
@@ -31,6 +33,7 @@ OnResetTimeout for Speak GENERIC_ERROR
 ### JSON Message Examples
 
 #### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

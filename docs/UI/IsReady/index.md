@@ -21,7 +21,7 @@ Purpose
 
 #### Parameters
 
-The request does not have specific parameters.
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -39,6 +39,7 @@ The request does not have specific parameters.
 |available|Boolean|true||
 
 ### Sequence Diagrams
+
 |||
 UI Component Ready
 ![IsReady](./assets/IsReady.png)

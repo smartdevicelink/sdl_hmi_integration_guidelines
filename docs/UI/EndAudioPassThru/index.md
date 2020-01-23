@@ -22,10 +22,12 @@ This RPC has no additional parameter requirements
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 EndAudioPassThru stops audio capturing
 ![EndAudioPassThru](./assets/EndAudioPassThru.png)
 |||
+
 |||
 EndAudioPassThru audio capturing already ended
 ![EndAudioPassThru](./assets/EndAudioPassThruTooLate.png)

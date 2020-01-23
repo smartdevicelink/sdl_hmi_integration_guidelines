@@ -13,7 +13,7 @@ Purpose
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -22,6 +22,7 @@ This RPC has no additional parameter requirements.
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 StopSpeaking
 ![StopSpeaking](./assets/StopSpeaking.png)

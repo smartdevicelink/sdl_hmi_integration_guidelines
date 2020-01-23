@@ -9,8 +9,8 @@ Sender
 Purpose
 : Update the Policy Table request
 
-
 ### Request
+
 The request notifies PolicyManager about Policy Table Update is requested by User on HMI.   
 The below describes the behavior related to EXTERNAL_PROPRIETARY Policy flow only.
 
@@ -28,7 +28,8 @@ PoliciesManager must initiate the PT Update sequence (that is, PT Exchange) upon
 !!!
 
 #### Parameters
-This RPC has no additional parameter requirements.
+
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -39,10 +40,12 @@ This RPC has no additional parameter requirements.
 |result|[Common.UpdateResult](../../common/enums/#updateresult)|true|Specify result: no update needed, update was successful/unsuccessful, etc.|
 
 ### Sequence Diagrams
+
 |||
 EXTERNAL_PROPRIETARY Policy Table Update Flow triggered by User
 ![UpdateSDL](./assets/PTU_external_proprietary_user.png)
 |||
+
 |||
 EXTERNAL_PROPRIETARY Policy Table Update Flow triggered by SDL
 ![PTU_SDL](./assets/PTU_external_proprietary_SDL.png)

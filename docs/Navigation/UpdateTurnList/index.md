@@ -26,6 +26,7 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 UpdateTurnList
 ![UpdateTurnList](./assets/UpdateTurnList.jpg)
@@ -96,7 +97,8 @@ UpdateTurnList
         "isHighlighted" : true,
         "softButtonID" : 118,
         "systemAction" :  "DEFAULT_ACTION"
-    }
+    },
+    "appID" : 65368
   }
 }
 ```

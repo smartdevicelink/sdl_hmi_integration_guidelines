@@ -67,10 +67,12 @@ This RPC has no additional parameter requirements
 UpdateDeviceList after SDL discovers device over BT or USB
 ![Update Device List BT USB](./assets/UpdateDeviceListBTUSB.png)
 |||
+
 |||
 UpdateDeviceList iOS
 ![Update Device List iOS](./assets/UpdateDeviceListiOS.png)
 |||
+
 |||
 UpdateDeviceList USB AOA
 ![Update Device List AOA](./assets/UpdateDeviceListAOA.png)
@@ -90,7 +92,7 @@ UpdateDeviceList USB AOA
     "deviceList" :
     [      
       {
-        "name" : "Jerry`s Phone",
+        "name" : "Jerry's Phone",
         "id" : 3
       },
 
