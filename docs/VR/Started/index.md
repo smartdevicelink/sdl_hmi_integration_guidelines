@@ -15,7 +15,16 @@ Purpose
 
 This RPC has no additional parameter requirements
 
-#### JSON Example Notification
+### Sequence Diagrams
+
+|||
+Started on PTT Button Press
+![Started](./assets/Started.png)
+|||
+
+### JSON Message Examples
+
+#### Example Notification
 
 ```json
 {
@@ -23,9 +32,3 @@ This RPC has no additional parameter requirements
   "method" : "VR.Started"
 }
 ```
-
-### Sequence Diagrams
-|||
-Started on PTT Button Press
-![Started](./assets/Started.png)
-|||

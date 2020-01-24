@@ -35,6 +35,7 @@ SDL sends this notification when:
 Information about the application (name, appID, etc) is provided by SDL via [BC.UpdateAppList](../updateapplist) or [BC.OnAppRegistered](../onappregistered).
 
 !!!
+
 ### Notification
 
 #### Parameters
@@ -45,12 +46,16 @@ Information about the application (name, appID, etc) is provided by SDL via [BC.
 |appID|Integer|true||
 
 ### Sequence Diagrams
+
 |||
 Active App Unregistered
 ![OnAppUnregistered](./assets/OnAppUnregistered.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",
@@ -58,7 +63,7 @@ Active App Unregistered
   "params" :
   {
     "appID" : 65539,
-      "unexpectedDisconnect":"false"
+      "unexpectedDisconnect": false
   }
 }
 ```

@@ -24,12 +24,15 @@ This RPC has no additional parameter requirements
 |languages|[Common.Language](../../common/enums/#language)|true|array: true<br>minsize: 1<br>maxsize: 100|
 
 ### Sequence Diagrams
+
 |||
 Get Supported Languages
 ![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -38,7 +41,8 @@ Get Supported Languages
   "method" : "UI.GetSupportedLanguages"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -53,7 +57,7 @@ Get Supported Languages
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -38,6 +38,7 @@ If the HMI is the App Service Consumer (ASC), SDL will:
 |serviceSpecificResult|String|false||
 
 ### Sequence Diagrams
+
 |||
 PerformAppServiceInteraction with HMI ASC
 ![PerformAppServiceInteraction](./assets/PerformAppServiceInteractionFromHMI.png)
@@ -48,7 +49,9 @@ PerformAppServiceInteraction with Mobile ASC
 ![PerformAppServiceInteraction](./assets/PerformAppServiceInteractionFromMobile.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -63,7 +66,7 @@ PerformAppServiceInteraction with Mobile ASC
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -77,13 +80,13 @@ PerformAppServiceInteraction with Mobile ASC
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
    "id" : 1000,
    "jsonrpc" : "2.0",
-   "result" : {
+   "error" : {
       "code" : 1,
       "message" : "No known service interaction matching URI",
       "data" : {

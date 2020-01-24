@@ -13,7 +13,7 @@ Purpose
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -24,12 +24,15 @@ This RPC has no additional parameter requirements.
 |language|[Common.Language](../../common/enums/#language)|true||
 
 ### Sequence Diagrams
+
 |||
 GetLanguage
 ![GetLanguage](./assets/GetLanguage.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -38,7 +41,8 @@ GetLanguage
   "method" : "TTS.GetLanguage"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -53,7 +57,7 @@ GetLanguage
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

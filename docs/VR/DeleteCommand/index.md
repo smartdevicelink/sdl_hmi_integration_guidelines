@@ -27,18 +27,21 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 DeleteCommand
 ![DeleteCommand](./assets/DeleteCommand.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
   "id" : 147,
   "jsonrpc" : "2.0",
-  "method" : "VR. DeleteCommand",
+  "method" : "VR.DeleteCommand",
   "params" :
   {
     "cmdID" : 4365,
@@ -48,7 +51,8 @@ DeleteCommand
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -62,7 +66,7 @@ DeleteCommand
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -1,4 +1,5 @@
 ## Overview
+
 This document provides the information for integrating the SmartDeviceLink (SDL) Embedded Component (generally referred to as SDL Core) with vehicle Head Unit (HU)
 
 SDL is a system that is installed on the HU and allows a connected application on the mobile device to utilize some vehicle functionality such as text-to-speech, voice recognition, display, hardware buttons, etc.
@@ -16,6 +17,7 @@ This guideline describes:
    * Examples for each function call in different message formats corresponding to the transports currently supported
 
 ## How to use this guide
+
 The SDL HMI Integration guidelines may seem daunting at first, but we're not asking you to read them from cover to cover at the start of your exploration into SDL. We recommend an implementation of SDL HMI as follows
 
   1. Get connected to SDL by following the [Getting Started](../getting-started) portion of these guidelines

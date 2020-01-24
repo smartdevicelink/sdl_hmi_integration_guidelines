@@ -32,23 +32,28 @@ HMI must send an 'OnFindApplications' notification when the user requests to fin
 |deviceInfo|[Common.DeviceInfo](../../common/structs/#deviceinfo)|false||
 
 ### Sequence Diagrams
+
 |||
 User Choice After OnAppRegistered
 ![OnFindApplications](./assets/OnFindApplications.png)
 |||
+
 |||
 OnFindApplications after Device Chosen by User
 ![OnFindApplications](./assets/OnFindApplicationsDeviceChosen.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",
   "method" : "BasicCommunication.OnFindApplications",
   "params" :
   {
-    "deviceinfo" :
+    "deviceInfo" :
       {
         "name" : "XT910",
         "id" : 4

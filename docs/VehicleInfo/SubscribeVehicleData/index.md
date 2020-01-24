@@ -46,6 +46,7 @@ Purpose
 |cloudAppVehicleID|Boolean|false||
 
 ### Response
+
 !!! must
 
 HMI must send SubscribeVehicleData response only for ROOT level items.
@@ -94,12 +95,15 @@ For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `d
 |cloudAppVehicleID|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
+
 |||
 SubscribeVehicleData
 ![SubscribeVehicleData](./assets/SubscribeVehicleData.jpg)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -124,7 +128,8 @@ SubscribeVehicleData
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -216,7 +221,7 @@ SubscribeVehicleData
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

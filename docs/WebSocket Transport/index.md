@@ -1,5 +1,7 @@
 # Connecting to SDL
+
 ## Requirements to HMI Adapter
+
 WebSocket is the primary means of communicating with the SDL component from the vehicle. In a basic example, an HTML5 HMI would use a native WebSocket library to communicate with SDL Core.
 
 The HMI Adapter must:
@@ -13,6 +15,7 @@ The HMI Adapter must:
 !!!
 
 ## Handshake
+
 For opening a WebSocket connection, a handshake must be performed.
 
 !!! info
@@ -26,6 +29,7 @@ For opening a WebSocket connection, a handshake must be performed.
 !!!
 
 ## HMI Component Registration
+
 Once all the requested connections are opened, the HMI must send the JSON request for registering each component.
 
 ### Request
@@ -51,7 +55,9 @@ SDL Provides a JSON Response
 ### Component Registration Examples
 
 #### Register Component JSON Messages
+
 ##### Request
+
 ``` json
 {
   "id": 700,
@@ -62,7 +68,9 @@ SDL Provides a JSON Response
   }
 }
 ```
+
 ##### Response
+
 ``` json
 {
   "id": 700,
@@ -71,20 +79,22 @@ SDL Provides a JSON Response
 }
 ```
 
-
 #### WebSocket Connection Diagram
+
 |||
 Websocket Connection Diagram
 ![WebSocket Connection Diagram](./assets/WebSocketConnectionDiagram.png)
 |||
 
 #### HMI Adapter Initialization
+
 |||
 HMI Adapter Init
 ![HMI Adapter Init](./assets/HMIAdapterInit.png)
 |||
 
 # JSON Message Format
+
 This section describes the message structure for communication between your HMI and SDL. The JSON RPC 2.0 format is taken as a basis.
 
 From this point forward the actors for exchanging messages will be considered:
@@ -92,6 +102,7 @@ From this point forward the actors for exchanging messages will be considered:
   - **Server** - can provide responses to requests from a Client and send notifications
 
 ## Request
+
 An RPC call is represented by sending a Request object to a Server. The Request object has the following properties
 
 | Property | Description    |
@@ -101,8 +112,10 @@ An RPC call is represented by sending a Request object to a Server. The Request 
 | "method" | A String containing the information of the method to be invoked. The format is `[componentName].[methodName]`.|
 | "params" | A structured value that holds the parameter values to be used during the invocation of the method. This property may be omitted.|
 
-### Example Requests
+### JSON Message Examples
+
 #### Request with No Parameters
+
 ```json
 {
   "id": 125,
@@ -110,7 +123,9 @@ An RPC call is represented by sending a Request object to a Server. The Request 
   "method": "Buttons.GetCapabilities"
 }
 ```
+
 #### Request with Parameters
+
 ```json
 {
   "id": 92,
@@ -142,19 +157,24 @@ An RPC call is represented by sending a Request object to a Server. The Request 
 ```
 
 ## Notification
+
 A notification is a request object without an `id` property. For all the other properties, see the Request Section above.
 
 The receiver should not reply to a notification, i.e. no response object needs to be returned to the client upon receipt of a notification.
 
-### Example Notifications
+### JSON Message Examples
+
 #### Notification With No Parameters
+
 ```json
 {
   "jsonrpc": "2.0",
   "method": "UI.OnReady"
 }
 ```
+
 #### Notifications With Parameters
+
 ```json
 {
   "jsonrpc": "2.0",
@@ -175,6 +195,7 @@ The receiver should not reply to a notification, i.e. no response object needs t
 ```
 
 ## Response
+
 On receipt of a request message, the server must reply with a response. The response is expressed as a single JSON Object with the following properties.
 
 | Property | Description    |
@@ -183,8 +204,10 @@ On receipt of a request message, the server must reply with a response. The resp
 |"jsonrpc"| Must be exactly **"2.0"**|
 |"result"| Required on Success. Must not exist if there was an error invoking the method. The result property must contain a `method` field which is the same as the corresponding request, a `code` field with **0** to indicate success or **21** to indicate success with warnings.  No other [result codes](../common/enums/#result) should be sent in the result property. The result property may also include additional properties as defined in the HMI_API.|
 
-### Example Responses
+### JSON Message Examples
+
 #### Response with No Parameters
+
 ```json
 {
   "id": 167,
@@ -195,7 +218,9 @@ On receipt of a request message, the server must reply with a response. The resp
   }
 }
 ```
+
 #### Response with Parameters
+
 ```json
 {
   "id": 125,
@@ -240,8 +265,10 @@ The error object has the following members:
 | "jsonrpc"| Must be exactly "2.0"|
 | "error" | Required on error. Must not exist if there was no error triggered during invocation. The error field must contain a `code` field with the [result code](../common/enums/#result) value that indicates the error type that occurred, a `message` field containing the string that provides a short description of the error, and a `data` field that must contain the `method` from the original request.|
 
-### Examples
+### JSON Message Examples
+
 #### Response with Error
+
 ```json
 {
   "id": 103,

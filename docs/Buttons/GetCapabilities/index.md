@@ -13,7 +13,7 @@ Purpose
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -25,12 +25,15 @@ This RPC has no additional parameter requirements.
 |presetBankCapabilities|[Common.PresetBankCapabilities](../../common/structs/#presetbankcapabilities)|false||
 
 ### Sequence Diagrams
+
 |||
 GetCapabilities on system startup
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -39,7 +42,8 @@ GetCapabilities on system startup
   "method" : "Buttons.GetCapabilities"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -90,7 +94,7 @@ GetCapabilities on system startup
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -16,7 +16,7 @@ Purpose
 1. Send `SDL.ActivateApp`.  
 2. Send a request to SDL to get messages for specified permissions (via `GetUserFriendlyMessage`) and notify user that provided permissions of application were decreased in case HMI gets  "isAppPermissionRevoked:true" respond from SDL PoliciesManager.  
 3. Send `GetListOfPermissions` request to SDL in order to obtain list of message codes for functional groups needed by application for user to consent when PoliciesManager responds with "isPermissionsConsentNeeded: true" .  
-4. Display Dialog and on result of user selection to send `OnAllowSDLFuncionality` specifying device from `ActivateApp` response, source of choice (UI/VR) and allowed set to true/false (if user ignores question, this is automatically set to false) when HMI receives `SDL.ActivateApp` (isSDLAllowed: false).
+4. Display Dialog and on result of user selection to send `OnAllowSDLFunctionality` specifying device from `ActivateApp` response, source of choice (UI/VR) and allowed set to true/false (if user ignores question, this is automatically set to false) when HMI receives `SDL.ActivateApp` (isSDLAllowed: false).
 !!!
 
 !!! NOTE   
@@ -81,7 +81,9 @@ ActivateApp using App Launching
 ![ActivateApp](./assets/ActivateAppAppLaunch.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -94,7 +96,8 @@ ActivateApp using App Launching
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -112,7 +115,7 @@ ActivateApp using App Launching
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

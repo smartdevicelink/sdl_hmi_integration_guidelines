@@ -420,9 +420,9 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|SINGLE_KEYPRESS|0|Each keypress is individually sent as the user presses the keyboard keys|
-|QUEUE_KEYPRESSES|1|The keypresses are queued and a string is eventually sent once the user chooses to submit their entry|
-|RESEND_CURRENT_ENTRY|2|The keypresses are queue and a string is sent each time the user presses a keyboard key; the string contains the entire current entry|
+|SINGLE_KEYPRESS|0|Each keyPress is individually sent as the user presses the keyboard keys|
+|QUEUE_KEYPRESSES|1|The keyPresses are queued and a string is eventually sent once the user chooses to submit their entry|
+|RESEND_CURRENT_ENTRY|2|The keyPresses are queue and a string is sent each time the user presses a keyboard key; the string contains the entire current entry|
 
 ### WiperStatus
 
@@ -1166,7 +1166,7 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|SAVE|0|Save current seat postions and settings to seat memory.|
+|SAVE|0|Save current seat positions and settings to seat memory.|
 |RESTORE|1|Restore / apply the seat memory settings to the current seat.|
 |NONE|2|No action to be performed.|
 
@@ -1178,6 +1178,7 @@
 |FRONT_PASSENGER|1||
 
 ### DeliveryMode
+
 |Name|Value|Description|
 |:---|:----|:----------|
 |PROMPT|0||
@@ -1246,7 +1247,7 @@
 |TRAVERSABLE_ROUNDABOUT|4|Similar to a roundabout, however the center of the roundabout is fully traversable. Also known as a mini-roundabout|
 |JUGHANDLE|5|A junction where lefts diverge to the right, then curve to the left, converting a left turn to a crossing maneuver|
 |ALL_WAY_YIELD|6|Multiple way intersection that allows traffic to flow based on priority; most commonly right of way and first in, first out|
-|TURN_AROUND|7|A junction designated for traffic turn arounds|
+|TURN_AROUND|7|A junction designated for traffic turnarounds|
 
 ### Direction
 

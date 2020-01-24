@@ -51,20 +51,25 @@ A UI.PerformInteraction with a timeout value of `0` should not be timed out imme
 |manualTextEntry|String|false|minlength: 0<br>maxlength: 500|
 
 ### Sequence Diagrams
+
 |||
 PerformInteraction Successful with VR Only
 ![PerformInteraction](./assets/PerformInteractionVROnly.png)
 |||
+
 |||
 PerformInteraction Successful with Manual Only
 ![PerformInteraction](./assets/PerformInteractionManualOnly.png)
 |||
+
 |||
 PerformInteraction Timeout with Both
 ![PerformInteraction](./assets/PerformInteractionBothTimeout.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -136,7 +141,8 @@ PerformInteraction Timeout with Both
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -151,7 +157,7 @@ PerformInteraction Timeout with Both
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

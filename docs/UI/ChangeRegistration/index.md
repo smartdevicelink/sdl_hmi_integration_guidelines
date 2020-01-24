@@ -28,12 +28,15 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 ChangeRegistration
 ![ChangeRegistration](./assets/ChangeRegistration.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -42,12 +45,13 @@ ChangeRegistration
   "method" : "UI.ChangeRegistration",
   "params" :
   {
-    "Language" : "PT-PT",
+    "language" : "PT-PT",
     "appID" : 65146
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -61,7 +65,7 @@ ChangeRegistration
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

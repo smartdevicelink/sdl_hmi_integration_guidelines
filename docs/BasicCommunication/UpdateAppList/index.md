@@ -31,7 +31,6 @@ Cloud apps will appear in the app list before they are connected and registered.
 The connection to the cloud app will be created by Core after the user activates the app via [SDL.ActivateApp](../../SDL/ActivateApp).
 !!!
 
-
 ### Request
 
 #### Parameters
@@ -47,16 +46,20 @@ The connection to the cloud app will be created by Core after the user activates
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Application Just Registered
 ![UpdateAppList](./assets/UpdateAppListAppRegister.png)
 |||
+
 |||
 User Requests Update App List
 ![UpdateAppList](./assets/UpdateAppListUser.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -70,7 +73,7 @@ User Requests Update App List
       {
         "appName" : "Beautiful Sound",
         "ngnMediaScreenAppName " : "BeauSo",
-        "deviceName" : "Jerry`s Phone",
+        "deviceName" : "Jerry's Phone",
         "appID" : 65544,
         "hmiDisplayLanguageDesired" : "DE-DE",
         "isMediaApplication" : true
@@ -101,7 +104,8 @@ User Requests Update App List
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -115,7 +119,7 @@ User Requests Update App List
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

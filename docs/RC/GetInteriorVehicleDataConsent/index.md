@@ -32,6 +32,7 @@ The driver is expected to have an ability to grant or deny the permission.
 ### Response
 
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |allowed|Boolean|true|array: true|"true" - if the driver grants the permission for controlling to the named app; <br> "false" - in case the driver denies the permission for controlling to the named app.|
@@ -40,10 +41,12 @@ The driver is expected to have an ability to grant or deny the permission.
 
 |||
 GetInteriorVehicleDataConsent
-![GetInteriorVehicleDataConsent](assets/GetInteriorVehicleDataConsent.png)
+![GetInteriorVehicleDataConsent](./assets/GetInteriorVehicleDataConsent.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -57,21 +60,21 @@ GetInteriorVehicleDataConsent
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
     "id": 38,
     "jsonrpc": "2.0",
     "result": {
-        "allowed": true,
+        "allowed": [true, false],
         "code": 0,
         "method": "RC.GetInteriorVehicleDataConsent"
     }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

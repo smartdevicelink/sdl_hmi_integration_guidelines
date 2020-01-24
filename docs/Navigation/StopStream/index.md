@@ -12,6 +12,8 @@ Purpose
 The app must stop video streaming after receiving onHMIStatus with videoStreamingState=NOT_STREAMBLE. 
 If the app does not stop streaming after certain amount of time, SDL sends a StopService Control Frame to the app in protocol layer.
 
+### Request
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -25,15 +27,19 @@ If the app does not stop streaming after certain amount of time, SDL sends a Sto
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 StopStream
 ![StopStream](./assets/StopStream.jpg)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
+  "id" : 176,
   "jsonrpc" : "2.0",
   "method" : "Navigation.StopStream",
   "params" :  
@@ -42,7 +48,8 @@ StopStream
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -56,7 +63,7 @@ StopStream
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

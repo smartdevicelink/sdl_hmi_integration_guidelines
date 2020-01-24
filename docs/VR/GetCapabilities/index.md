@@ -23,7 +23,16 @@ This RPC has no additional parameter requirements
 |:---|:---|:--------|:---------|
 |vrCapabilities|[Common.VrCapabilities](../../common/enums/#vrcapabilities)|false|array: true<br>minsize: 1<br>maxsize: 100|
 
-### Example Request
+### Sequence Diagrams
+
+|||
+GetCapabilities
+![GetCapabilities](./assets/GetCapabilities.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -32,7 +41,8 @@ This RPC has no additional parameter requirements
   "method" : "VR.GetCapabilities"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -47,7 +57,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -64,9 +74,3 @@ This RPC has no additional parameter requirements
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-GetCapabilities
-![GetCapabilities](./assets/GetCapabilities.png)
-|||

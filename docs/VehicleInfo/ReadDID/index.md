@@ -28,16 +28,20 @@ Purpose
 |didResult|[Common.DIDResult](../../common/structs/#didresult)|false|array: true<br>minsize: 0<br>maxsize: 1000|
 
 ### Sequence Diagrams
+
 |||
 ReadDID General Processing
 ![ReadDID](./assets/ReadDidGeneral.png)
 |||
+
 |||
 ReadDID Expanded result
 ![ReadDID](./assets/ReadDidExpanded.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -52,7 +56,8 @@ ReadDID Expanded result
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -83,7 +88,7 @@ ReadDID Expanded result
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

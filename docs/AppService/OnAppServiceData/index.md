@@ -15,6 +15,7 @@ Purpose
 * **SDL->HMI** if HMI App Service Consumer (ASC) is receiving updated service data
 
 !!!
+
 ### Notification
 
 #### Parameters
@@ -23,8 +24,8 @@ Purpose
 |:---|:---|:--------|:---------|
 |serviceData|[Common.AppServiceData](../../common/structs/#appservicedata)|true||
 
-
 ### Sequence Diagrams
+
 |||
 OnAppServiceData (HMI Provider)
 ![OnAppServiceData_HMI_ASP](./assets/OnAppServiceData_HMI_ASP.png)
@@ -35,7 +36,9 @@ OnAppServiceData (HMI Consumer)
 ![OnAppServiceData_HMI_ASC](./assets/OnAppServiceData_HMI_ASC.png)
 |||
 
-### Example Notification
+### JSON Message Examples
+
+#### Example Notification
 
 ```json
 {

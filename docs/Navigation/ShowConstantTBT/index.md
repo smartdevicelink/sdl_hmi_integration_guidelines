@@ -31,12 +31,15 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 ShowConstantTBT
 ![ShowConstantTBT](./assets/ShowConstantTBT.jpg)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -65,8 +68,8 @@ ShowConstantTBT
          "value" : "tmp/SDL/app/Navi/icon_3245.jpeg",
          "imageType" : "DYNAMIC"
     },
-    "distanceToManeuver" : 168,
-    "distanceToManeuverScale" : 265,
+    "distanceToManeuver" : 168.5,
+    "distanceToManeuverScale" : 265.75,
     "softButtons" :
     {
         "type" :  "TEXT",
@@ -78,7 +81,8 @@ ShowConstantTBT
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -92,7 +96,7 @@ ShowConstantTBT
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

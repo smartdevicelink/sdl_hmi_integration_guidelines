@@ -21,7 +21,7 @@ Purpose
 
 #### Parameters
 
-The request does not have specific parameters.
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -39,12 +39,15 @@ The request does not have specific parameters.
 |available|Boolean|true||
 
 ### Sequence Diagrams
+
 |||
 IsReady
 ![IsReady](./assets/IsReady.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -53,7 +56,8 @@ IsReady
   "method" : "VR.IsReady"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -61,14 +65,14 @@ IsReady
   "jsonrpc" : "2.0",
   "result" :
   {
-    "availabe" : true,
+    "available" : true,
     "code" : 0,
     "method" : "VR.IsReady"
   }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

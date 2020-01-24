@@ -30,7 +30,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|value|String|true|array: true<br>maxlength: 1000<br>minsize: 1<br>maxsize: 100|
+|value|String|false|array: true<br>maxlength: 1000<br>minsize: 1<br>maxsize: 100|
  
 
 ### Sequence Diagrams
@@ -44,7 +44,9 @@ GetPolicyConfigurationData
 ![GetPolicyConfigurationData](./assets/GetPolicyConfigurationData.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -59,7 +61,7 @@ GetPolicyConfigurationData
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -76,7 +78,7 @@ GetPolicyConfigurationData
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

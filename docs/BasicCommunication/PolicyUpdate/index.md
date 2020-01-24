@@ -10,7 +10,9 @@ Purpose
 : Inform HMI about the Policy Table Update (PTU) mechanism is triggered on SDL
 
 In case SDL is built with **"-DEXTENDED_POLICY: HTTP" flag**, SDL supports PolicyTableUpdate flow **without HMI-related logic**. 
+
 ### Request
+
 ``BC.PolicyUpdate`` represents SDL-generated request to start the PTU sequence.
 
 !!! MUST
@@ -36,7 +38,7 @@ a. The triggers for checking the cert expiration status are:
 Ignition On
 TLS handshake
    * New application (that is, not-yet existing in local PT) registration
-   * In case the status of PTU is UPDATE_NEEDED due to failed retry stratery at previous ignition cycle
+   * In case the status of PTU is UPDATE_NEEDED due to failed retry strategy at previous ignition cycle
 3. Parameters values origin:
    * ``file`` - is the path to the Snapshot of local PolicyTable (Snapshot PT final destination is Policies Server)
    * ``timeout`` - value taken from ``"timeout_after_x_seconds"`` field of local PT
@@ -51,7 +53,7 @@ TLS handshake
 |:---|:---|:--------|:---------|:----------|
 |file|String|true|minlength: 1<br>maxlength: 255|Location of policy table snapshot. It’s defined in smartDeviceLink.ini as  “PathToSnapshot” parameter|
 |timeout|Integer|true|minvalue: 0<br>maxvalue: 65535|Send attempt timeout in seconds, it’s a value from the Policy Table.|
-|retry|Integer|true|array: true<br>minsize: 1<br>maxsize: 5<br>minvalue: 0<br>maxvalue: 65535|Array of delays to wait after failed atempts, it’s a value from the Policy Table|
+|retry|Integer|true|array: true<br>minsize: 1<br>maxsize: 5<br>minvalue: 0<br>maxvalue: 65535|Array of delays to wait after failed attempts, it’s a value from the Policy Table|
 
 ### Response
 
@@ -80,7 +82,9 @@ BC.PolicyUpdate in "HTTP" Policy Table Update Flow
 ![HTTP PTU](./assets/PolicyUpdate_in_HTTP_PTU_flow.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -96,7 +100,8 @@ BC.PolicyUpdate in "HTTP" Policy Table Update Flow
 }
 
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -111,7 +116,7 @@ BC.PolicyUpdate in "HTTP" Policy Table Update Flow
 
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
