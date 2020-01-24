@@ -15,11 +15,11 @@ Purpose
 #### Parameters
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|appID|String|false|maxlength: "100"|
+|policyAppID|String|false|maxlength: "100"|
 
 
 ### Response
-In case `appID` is ommited in the request, SDL provides all app properties in the response.
+In case `policyAppID` is ommited in the request, SDL provides all app properties in the response.
 
 #### Parameters
 |Name|Type|Mandatory|Additional|

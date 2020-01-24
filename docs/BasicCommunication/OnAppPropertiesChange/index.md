@@ -29,11 +29,17 @@ SDL must notify HMI about webEngine app properties change (e.g. after PTU with t
   "method" : "BasicCommunication.OnAppPropertiesChange",
   "params" :
   {
-    "properties" : 123456
+    "properties" : {
+      "nicknames": {"Hello Sdl1"}, 
+      "policyAppID": "12345678", 
+      "enabled": true, 
+      "authToken": "AuthToken8888", 
+      "transportType": "WS", 
+      "hybridAppPreference": "CLOUD"
+    }
   }
 }
 ```
-{ properties:{nicknames:{"Hello Sdl1", "HelloSdl2"}, policyAppID:"12345678", enabled: true, authToken:"AuthToken8888", transportType:"WS", hybridAppPreference: "CLOUD"}} )
 
 ### Sequence Diagrams
 |||
