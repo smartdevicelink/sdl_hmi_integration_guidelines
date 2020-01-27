@@ -37,8 +37,8 @@ Purpose
 ### Sequence Diagrams
 
 |||
-SDL.OnReceivedPolicyUpdate in EXTERNAL_PROPRIETARY flow
-![Proprietary PTU](./assets/SDL.OnReceivedPolicyUpdateEXTERNAL_PROPRIETARY.png)
+SDL.OnReceivedPolicyUpdate in "External Proprietary" Policy Table Update Flow
+![Proprietary PTU](./assets/External_Proprietary_PTU_flow.png)
 |||
 
 |||

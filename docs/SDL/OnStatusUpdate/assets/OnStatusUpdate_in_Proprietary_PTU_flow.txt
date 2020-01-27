@@ -1,12 +1,10 @@
 title Policy Table Update (PROPRIETARY)
-
 participant Policy Server
 participant Mobile
 participant SDL
 participant HMI
 ==<align:center>SDL is built with with **"-DEXTENDED_POLICY: PROPRIETARY"** flag==
 note over SDL: PT update is required
-
 SDL->HMI: SDL.OnStatusUpdate(UPDATE_NEEDED)
 SDL->SDL: Creates PT snapshot
 SDL->HMI: BC.PolicyUpdate(path_to_PTS)

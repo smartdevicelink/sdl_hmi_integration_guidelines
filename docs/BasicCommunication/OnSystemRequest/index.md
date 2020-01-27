@@ -67,6 +67,11 @@ BC.OnSystemRequest in "Proprietary" Policy Table Update Flow
 |||
 
 |||
+BC.OnSystemRequest in "External Proprietary" Policy Table Update Flow
+![External ProprietaryPTU](./assets/diagram_PolicyUpdate_external_proprietary.png)
+|||
+
+|||
 BC.OnSystemRequest in Policy Table Update Flow with in-vehicle modem
 ![OnSystemRequest PTU modem](./assets/PTU_modem_failure.png)
 |||
