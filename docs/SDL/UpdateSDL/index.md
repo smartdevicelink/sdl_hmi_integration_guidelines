@@ -24,7 +24,8 @@ According to result sent to HMI in UpdateSDL response, SDL will follow Policy Up
 1) UP_TO_DATE – Policy Table is now up to date, but anyway SDL starts a new policy update cycle because of user request (e.i. UpdateSDL).   
 2) UPDATING – Policy Update process is now in already progress, anyway when currently active update process will be finished, SDL must start PT Update from the beginning.   
 3) UPDATE_NEEDED – Policy Table is not up to date, update process must be started by SDL.   
-PoliciesManager must initiate the PT Update sequence (that is, PT Exchange) upon User's request delivered to SDL via SDL.UpdateSDL() from HMI and provide a response on a request with current PTU status to HMI.
+
+PoliciesManager must initiate the PT Update sequence upon user's request, which is delivered to SDL via `SDL.UpdateSDL()` from the HMI,  and provide a response with current the PTU status to the HMI.
 !!!
 
 #### Parameters

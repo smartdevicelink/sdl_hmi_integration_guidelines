@@ -9,7 +9,8 @@ participant Policy Server
 note over SDL: PT update is required
 
 SDL->HMI: SDL.OnStatusUpdate(UPDATE_NEEDED)
-SDL->SDL: Creates PTSnapshot
+SDL->SDL: Creates PT snapshot
+
 SDL->HMI: BC.PolicyUpdate(fileLocation,timeout,retry)
 HMI-->SDL: SUCCESS: BC.PolicyUpdate()
 SDL->HMI:OnStatusUpdate(UPDATING)
@@ -17,7 +18,7 @@ SDL->SDL: Starts timeout taken from "timeout_after_x_seconds" of Local PT
 note over HMI:Requests the urls to send PTSnapshot
 HMI->SDL: SDL.GetPolicyConfigurationData\n("policy_type=module_config", "property=endpoints")
 note over SDL: Gets endpoints from policies database
-SDL-->HMI: SDL.GetPolicyConfigurationData("endpoints":{"0x07":{...})
+SDL-->HMI: SDL.GetPolicyConfigurationData\n(["{\"0x07\":{\"default\":[\"http://x.x.x.x:3000/api/1/policies\"]}, ...}"])
 HMI->HMI: PT snapshot\nencryption
 note over HMI: Sends encrypted PTS file to the defined URL
 linear
@@ -30,5 +31,5 @@ Modem --> HMI: Transfer PTU back to HMI
 note over HMI: Decrypts PTU,\nnotifies SDL about\ndecrypted PTU
 HMI->SDL: SDL.OnReceivedPolicyUpdate(<policyFile>)
 SDL->SDL:Stops timeout
-note over SDL: Validates PTU\nPTU is correct\nMerges PTU into Local PT
+SDL->SDL: Validates PTU and merges PTU into Local PT (if valid)
 SDL->HMI: SDL.OnStatusUpdate(UP_TO_DATE)

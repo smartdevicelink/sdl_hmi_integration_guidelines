@@ -14,7 +14,7 @@ In case SDL is built with **"-DEXTENDED_POLICY: HTTP" flag**, SDL supports Polic
 ### Request
 
 ``BC.PolicyUpdate`` represents SDL-generated request to start the PTU sequence.  
-In case SDL is built with "-DEXTENDED_POLICY: PROPRIETARY"  or "-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY" flag and PolicyTableUpdate is required, SDL internally creates PT snapshot and sends BC.PolicyUpdate(fileLocation) to HMI to start PTU sequence.
+In case SDL is built with **"-DEXTENDED_POLICY: PROPRIETARY"**  or **"-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY"** flag and PolicyTableUpdate is required, SDL internally creates PT snapshot and sends BC.PolicyUpdate(path_to_PTS) to HMI to start PTU sequence.
 
 
 !!! MUST
@@ -30,7 +30,7 @@ In case SDL is built with "-DEXTENDED_POLICY: PROPRIETARY"  or "-DEXTENDED_POLIC
 !!! NOTE
 1. ``BC.PolicyUpdate`` dependencies:
    * If HMI fails to respond ``BC.PolicyUpdate`` or responds with error, PTU sequence will _not_ be continued.
-   * Once SDL receives ``BC.PolicyUpdate (SUCCESS)``response from HMI, SDL PoliciesManager must change the status to "UPDATING" and notify HMI with OnStatusUpdate("UPDATING").
+   * Once SDL receives ``BC.PolicyUpdate (SUCCESS)``response from HMI, SDL _PoliciesManager_ must change the status to "UPDATING" and notify HMI with OnStatusUpdate("UPDATING").
 2. Triggers for sending ``BC.PolicyUpdate`` (whichever comes first):
    * Days since previous successful PTU (``"exchange_after_x_days"`` value in local PolicyTable (PT)
    * Kilometers since previous successful PTU (``"exchange_after_x_kilometers"`` value in local PT)
