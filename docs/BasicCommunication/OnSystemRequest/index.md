@@ -68,7 +68,7 @@ BC.OnSystemRequest in "Proprietary" Policy Table Update Flow
 
 |||
 BC.OnSystemRequest in "External Proprietary" Policy Table Update Flow
-![External ProprietaryPTU](./assets/diagram_PolicyUpdate_external_proprietary.png)
+![External ProprietaryPTU](./assets/OnSystemRequest_in_External_Proprietary_PTU_flow.png)
 |||
 
 |||

@@ -6,7 +6,7 @@ participant Policy Server
 participant Mobile
 participant SDL
 participant HMI
-==<align:center>SDL is built with with **"-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY"** flag\ndevice is consented==
+==<align:center>SDL is built with with **"-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY"** flag\nDevice is consented==
 note over SDL: PT update is required
 
 SDL->HMI: SDL.OnStatusUpdate(UPDATE_NEEDED)
@@ -17,7 +17,7 @@ SDL->HMI: SDL.OnStatusUpdate(UPDATING)
 SDL->SDL: Starts timeout taken from "timeout_after_x_seconds" of Local PT
 HMI->SDL: SDL.GetPolicyConfigurationData\n(policy_type=module_config, property=endpoints)
 note over SDL: Get endpoints from policies database
-SDL-->HMI: SDL.GetPolicyConfigurationData(value)
+SDL-->HMI: SDL.GetPolicyConfigurationData\n(["{\"0x07\":{\"default\":[\"http://x.x.x.x:3000/api/1/policies\"]}, ...}"])
 HMI->HMI: PT snapshot\nencryption
 HMI->SDL: BC.OnSystemRequest(url, path_to_PTS)
 SDL->SDL: Restarts timeout taken from "timeout_after_x_seconds" of Local PT

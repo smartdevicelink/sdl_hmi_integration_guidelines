@@ -28,7 +28,8 @@ linear off
 note over Policy Server: Processes PTS and creates PTU
 Policy Server->> Modem: Sending PTU over cellular
 Modem --> HMI: Transfer PTU back to HMI
-note over HMI: Decrypts PTU,\nnotifies SDL about\ndecrypted PTU
+note over HMI: Decrypts PTU
+note over HMI: Notifies SDL 
 HMI->SDL: SDL.OnReceivedPolicyUpdate(<policyFile>)
 SDL->SDL:Stops timeout
 SDL->SDL: Validates PTU and merges PTU into Local PT (if valid)
