@@ -43,7 +43,7 @@ SDL->HMI: BC.SystemRequest(request_type=PROPRIETARY, PTUfilename)
 note over HMI: Decrypts PTU
 note over HMI: Notifies SDL about\ndecrypted PTU
 HMI->SDL: SDL.OnReceivedPolicyUpdate(<policyFile>)
-SDL->SDL:Stops timeout
+SDL->SDL: Stops timeout
 SDL->SDL: Validates PTU and merges PTU into Local PT (if valid)
 HMI-->SDL: SUCCESS: BC.SystemRequest
 SDL-->Mobile: SUCCESS: SystemRequest
