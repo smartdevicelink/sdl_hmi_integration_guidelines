@@ -8,12 +8,13 @@ participant HMI
 
 opt SetAppProperties for a new WebEngine app 
 
-HMI -> SDL: BC.SetAppProperties(policyAppID:"123", enabled=true)
+HMI -> SDL: BC.SetAppProperties(policyAppID:"123", enabled:true)
 SDL-->HMI: BC.SetAppProperties(SUCCESS)
+SDL->HMI: BC.OnAppPropertiesChange()
 SDL->HMI: BC.UpdateAppList(deviceID)
 HMI-->SDL: BC.UpdateAppList(SUCCESS)
-SDL->HMI: SDL.ActivateApp()
-HMI-->SDL: SDL.ActivateApp response(SUCCESS)
+HMI->SDL: SDL.ActivateApp()
+SDL-->HMI: SDL.ActivateApp response(SUCCESS)
 HMI->SDL: BC.OnAppActivated
 
 note over HMI: WebEngine app is displayed\nin the main window on the HMI
@@ -22,26 +23,25 @@ SDL->Local Web App: OnHMIStatus(hmiLevel, windowID)
 end
 
 opt SetAppProperties - Changes to properties of existing WebEngine app
-HMI -> SDL: BC.SetAppProperties(policyAppID:"123", enabled=true)
+HMI -> SDL: BC.SetAppProperties(policyAppID:"123", enabled:true, **nicknames: {"Hello Sdl1"}**)
 SDL-->HMI: BC.SetAppProperties(SUCCESS)
 SDL->HMI: BC.OnAppPropertiesChange()
 end
 
 opt SetAppProperties (enabled=false)
-HMI -> SDL: BC.SetAppProperties(policyAppID:"123", enabled=false)
+HMI -> SDL: BC.SetAppProperties(policyAppID:"123", enabled:false)
 SDL-->HMI: BC.SetAppProperties(SUCCESS)
-SDL->HMI: SDL.ActivateApp()
 SDL->HMI: BC.OnAppPropertiesChange()
 end
 
 opt SetAppProperties with unknown parameter
-HMI -> SDL: BC.SetAppProperties(unknown parameter, policyAppID:"123",enabled=true)
+HMI -> SDL: BC.SetAppProperties(unknown parameter, policyAppID:"123",enabled:true)
 SDL ->SDL: Cut off the unknown parameter
 
 note over SDL:Process the request as assigned
 end
 
 opt SetAppProperties with missed mandatory parameters/with invalid parameters
-HMI -> SDL: BC.SetAppProperties(nicknames=HelloSDL)
+HMI -> SDL: BC.SetAppProperties(nicknames:HelloSDL)
 SDL-->HMI: BC.SetAppProperties(INVALID_DATA)
 end

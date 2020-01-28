@@ -7,7 +7,7 @@ Sender
 : HMI
 
 Purpose
-: Get the current properties of a local (web) application
+: Get the current properties of an application
 
 
 ### Request
@@ -54,10 +54,8 @@ In case `policyAppID` is ommited in the request, SDL provides all app properties
       },
       "policyAppID" : 123456, 
       "enabled": true, 
-      "authToken":"AuthToken1234", 
       "transportType":"WS", 
-      "hybridAppPreference": "CLOUD", 
-      "endpoint": "index.html"
+      "hybridAppPreference": "BOTH"
       },
     "code" : 0,
     "method" : "BasicCommunication.GetAppProperties"

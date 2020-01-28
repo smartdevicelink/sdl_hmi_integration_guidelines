@@ -59,10 +59,8 @@ This RPC has no additional parameter requirements.
       },
       "policyAppID" : 123456, 
       "enabled": true, 
-      "authToken":"AuthToken1234", 
       "transportType":"WS", 
-      "hybridAppPreference": "CLOUD", 
-      "endpoint": "index.html"
+      "hybridAppPreference": "CLOUD"
       },
     "code" : 0,
     "method" : "BasicCommunication.GetAppProperties"
