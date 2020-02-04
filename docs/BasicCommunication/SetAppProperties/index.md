@@ -28,8 +28,6 @@ Purpose
 
 !!!
 
-!!!
-
 ### Request
 
 #### Parameters
