@@ -19,7 +19,7 @@ Purpose
 
 
 ### Response
-In case `policyAppID` is ommited in the request, SDL provides all app properties in the response.
+In case `policyAppID` is omitted in the request, SDL provides all app properties in the response.
 
 #### Parameters
 |Name|Type|Mandatory|Additional|

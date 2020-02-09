@@ -11,13 +11,13 @@ Purpose
 
 !!! must
 
-1. Send `SetAppProperties`(enabled=true) if webEngine app is installed.
+1. Send `SetAppProperties` (enabled=true) to install a web engine app.
 
 !!!
 
 !!! may
 * Request `UpdateSDL` after setting app properties to enforce SDL to perform PTU.
-* Send `SetAppProperties`(enabled=false) to add not-installed webEngine apps to SDL
+* Send `SetAppProperties` (enabled=false) to add web engine apps to SDL that won't be installed on the HMI
 
 !!!
 

@@ -12,8 +12,7 @@ SDL-->HMI: BC.SetAppProperties(SUCCESS)
 SDL->HMI: BC.OnAppPropertiesChange()
 end 
 
-opt OnAppPropertiesChange - Changes to properties due PTU
+opt OnAppPropertiesChange - Changes to properties due to PTU
 note over SDL: PTU is performed\nthe update contains app properties of the policyAppID
 SDL->HMI: BC.OnAppPropertiesChange()
 end
-

@@ -11,7 +11,7 @@ Purpose
 
 !!! must
 
-SDL must notify HMI about webEngine app properties change (e.g. after PTU with the appropriate parameters for the web app).
+SDL must notify the HMI when a web engine app's properties change, such as after a PTU with the appropriate parameters for the web app.
 
 !!!
 
@@ -30,7 +30,7 @@ SDL must notify HMI about webEngine app properties change (e.g. after PTU with t
   "params" :
   {
     "properties" : {
-      "nicknames": {"Hello Sdl1"}, 
+      "nicknames": ["Hello Sdl1"],
       "policyAppID": "12345678", 
       "enabled": true, 
       "authToken": "AuthToken8888", 
