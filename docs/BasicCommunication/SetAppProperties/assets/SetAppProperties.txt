@@ -42,6 +42,6 @@ note over SDL:Process the request as assigned
 end
 
 opt SetAppProperties with missed mandatory parameters/with invalid parameters
-HMI -> SDL: BC.SetAppProperties(nicknames:HelloSDL)
+HMI -> SDL: BC.SetAppProperties(nicknames:"987")
 SDL-->HMI: BC.SetAppProperties(INVALID_DATA)
 end

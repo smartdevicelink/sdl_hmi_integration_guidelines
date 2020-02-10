@@ -22,13 +22,13 @@ SDL-->HMI: BC.GetAppProperties(DATA_NOT_AVAILABLE)
 end
 
 opt GetAppProperties - request with unknown parameter
-HMI -> SDL: BC.GetAppProperties(unknown parameter:unknown parameter, policyAppID:"123",enabled:true)
+HMI -> SDL: BC.GetAppProperties(unknown parameter:"value", policyAppID:"123",enabled:true)
 SDL ->SDL: Cut off the unknown parameter
 
 note over SDL:Process the request as assigned
 end
 
 opt GetAppProperties - request with invalid parameters
-HMI -> SDL: BC.GetAppProperties(policyAppID:123)
+HMI -> SDL: BC.GetAppProperties(policyAppID:true)
 SDL-->HMI: BC.GetAppProperties(INVALID_DATA)
 end

@@ -16,7 +16,7 @@ Purpose
 !!!
 
 !!! may
-* Request `UpdateSDL` after setting app properties to enforce SDL to perform PTU.
+* Send an [UpdateSDL](../../sdl/updatesdl) RPC after setting app properties to force SDL to perform a PTU.
 * Send `SetAppProperties` (enabled=false) to add web engine apps to SDL that won't be installed on the HMI
 
 !!!
@@ -45,24 +45,28 @@ This RPC has no additional parameter requirements.
 ### Example Request
 ```json
 {
-  "id" : 47,
-  "jsonrpc" : "2.0",
-  "method" : "BasicCommunication.SetAppProperties",
-  "params" :
-  {
-    "properties": {
-          "nicknames":
-          {
-              "Hello Sdl"
-      },
-      "policyAppID" : 123456, 
-      "enabled": true, 
-      "transportType":"WS", 
-      "hybridAppPreference": "CLOUD"
-      },
-    "code" : 0,
-    "method" : "BasicCommunication.GetAppProperties"
-    }
+   "id":47,
+   "jsonrpc":"2.0",
+   "method" : "BasicCommunication.SetAppProperties",
+   "params" : {
+      "properties":[
+         {
+            "nicknames":[
+               "Hello Sdl"
+            
+],
+            "policyAppID":123456,
+            "enabled":true,
+            "transportType":"WS",
+            "hybridAppPreference":"CLOUD"
+         
+}
+      
+],
+      "code":0,
+      "method":"BasicCommunication.SetAppProperties"
+   
+}
 }
 ```
 
@@ -75,7 +79,7 @@ This RPC has no additional parameter requirements.
   "result" : 
   {
     "code" : 0,
-    "method" : "BasicCommunication.SetAppProperties",
+    "method" : "BasicCommunication.SetAppProperties"
     }
 }
 ```
