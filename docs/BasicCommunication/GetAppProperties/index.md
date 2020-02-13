@@ -30,11 +30,10 @@ In case `policyAppID` is omitted in the request, SDL provides all app properties
 ### Example Request
 ```json
 {
-  "id" : 47,
-  "jsonrpc" : "2.0",
-  "method" : "BasicCommunication.GetAppProperties",
-  "params" :
-  {
+  "id": 47,
+  "jsonrpc": "2.0",
+  "method": "BasicCommunication.GetAppProperties",
+  "params": {
     "policyAppID" : 123456
   }
 }
@@ -44,27 +43,23 @@ In case `policyAppID` is omitted in the request, SDL provides all app properties
 
 ```json
 {
-   "id":47,
-   "jsonrpc":"2.0",
-   "result":{
-      "properties":[
-         {
-            "nicknames":[
-               "Hello Sdl"
-            
-],
-            "policyAppID":123456,
-            "enabled":true,
-            "transportType":"WS",
-            "hybridAppPreference":"BOTH"
-         
-}
-      
-],
-      "code":0,
-      "method":"BasicCommunication.GetAppProperties"
-   
-}
+  "id": 47,
+  "jsonrpc": "2.0",
+  "result": {
+    "properties": [
+        {
+          "nicknames": [
+            "Hello Sdl"
+          ],
+          "policyAppID": 123456,
+          "enabled": true,
+          "transportType": "WS",
+          "hybridAppPreference": "BOTH"
+        }
+    ],
+    "code": 0,
+    "method": "BasicCommunication.GetAppProperties"
+  }
 }
 ```
 
@@ -72,15 +67,13 @@ In case `policyAppID` is omitted in the request, SDL provides all app properties
 
 ```json
 {
-  "id" : 47,
-  "jsonrpc" : "2.0",
-  "error" :
-  {
-    "code" : 11,
-    "message" : "Invalid data",
-    "data" :
-    {
-      "method" : "BasicCommunication.GetAppProperties"
+  "id": 47,
+  "jsonrpc": "2.0",
+  "error": {
+    "code": 11,
+    "message": "Invalid data",
+    "data": {
+      "method": "BasicCommunication.GetAppProperties"
     }
   }
 }

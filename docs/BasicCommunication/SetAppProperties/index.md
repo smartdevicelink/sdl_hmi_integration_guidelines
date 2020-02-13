@@ -45,28 +45,24 @@ This RPC has no additional parameter requirements.
 ### Example Request
 ```json
 {
-   "id":47,
-   "jsonrpc":"2.0",
-   "method" : "BasicCommunication.SetAppProperties",
-   "params" : {
-      "properties":[
-         {
-            "nicknames":[
-               "Hello Sdl"
-            
-],
-            "policyAppID":123456,
-            "enabled":true,
-            "transportType":"WS",
-            "hybridAppPreference":"CLOUD"
-         
-}
-      
-],
-      "code":0,
-      "method":"BasicCommunication.SetAppProperties"
-   
-}
+  "id":47,
+  "jsonrpc": "2.0",
+  "method" : "BasicCommunication.SetAppProperties",
+  "params" : {
+    "properties": [
+        {
+          "nicknames": [
+            "Hello Sdl"
+          ],
+          "policyAppID": 123456,
+          "enabled": true,
+          "transportType": "WS",
+          "hybridAppPreference": "CLOUD"
+        }
+    ],
+    "code":0,
+    "method":"BasicCommunication.SetAppProperties"
+  }
 }
 ```
 
@@ -76,11 +72,10 @@ This RPC has no additional parameter requirements.
 {
   "id" : 47,
   "jsonrpc" : "2.0",
-  "result" : 
-  {
+  "result" : {
     "code" : 0,
     "method" : "BasicCommunication.SetAppProperties"
-    }
+  }
 }
 ```
 
@@ -88,15 +83,13 @@ This RPC has no additional parameter requirements.
 
 ```json
 {
-  "id" : 47,
-  "jsonrpc" : "2.0",
-  "error" :
-  {
-    "code" : 11,
-    "message" : "Invalid data",
-    "data" :
-    {
-      "method" : "BasicCommunication.SetAppProperties"
+  "id": 47,
+  "jsonrpc": "2.0",
+  "error": {
+    "code": 11,
+    "message": "Invalid data",
+    "data": {
+      "method": "BasicCommunication.GetAppProperties"
     }
   }
 }

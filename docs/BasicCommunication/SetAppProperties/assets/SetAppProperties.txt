@@ -4,7 +4,6 @@ participant Local Web App
 participant SDL
 participant HMI
 
-==<align:center>Pre-conditions: 1. SDL and HMI are started==
 
 opt SetAppProperties for a new WebEngine app 
 

@@ -4,7 +4,7 @@ participant Local Web App
 participant SDL
 participant HMI
 
-==<align:center>Pre-conditions: 1. SDL and HMI are started\n 2. application's properties were set via BC.SetAppProperties from HMI==  
+==<align:center>Pre-conditions: 1. Application's properties were set via BC.SetAppProperties from HMI==  
 
 opt GetAppProperties - Happy path
 HMI -> SDL: BC.GetAppProperties(policyAppID:"123")
@@ -22,7 +22,7 @@ SDL-->HMI: BC.GetAppProperties(DATA_NOT_AVAILABLE)
 end
 
 opt GetAppProperties - request with unknown parameter
-HMI -> SDL: BC.GetAppProperties(unknown parameter:"value", policyAppID:"123",enabled:true)
+HMI -> SDL: BC.GetAppProperties(unknown parameter:"value", policyAppID:"123")
 SDL ->SDL: Cut off the unknown parameter
 
 note over SDL:Process the request as assigned
