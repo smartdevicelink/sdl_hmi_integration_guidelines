@@ -49,7 +49,7 @@ This RPC has no additional parameter requirements.
   "jsonrpc": "2.0",
   "method" : "BasicCommunication.SetAppProperties",
   "params" : {
-    "properties": [
+    "properties": 
         {
           "nicknames": [
             "Hello Sdl"
@@ -59,7 +59,7 @@ This RPC has no additional parameter requirements.
           "transportType": "WS",
           "hybridAppPreference": "CLOUD"
         }
-    ],
+    ,
     "code":0,
     "method":"BasicCommunication.SetAppProperties"
   }
