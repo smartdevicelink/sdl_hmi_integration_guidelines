@@ -81,6 +81,11 @@ ActivateApp using App Launching
 ![ActivateApp](./assets/ActivateAppAppLaunch.png)
 |||
 
+|||
+The User activates a web app
+![ActivateApp](./assets/ActivateWebApp.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request

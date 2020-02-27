@@ -1117,3 +1117,16 @@ There are no defined parameters for this struct
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |grid|Common.Grid|false||Describes the location of a seat. HMI shall include this parameter when publishing seat locations in capabilities.|
+
+### AppProperties
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|nicknames|String|false|minlength: 0<br>maxlength: 100<br>array: true<br>minsize: 0<br>maxsize: 100|An array of app names an app is allowed to register with. If included in a SetAppProperties request, this value will overwrite the existing "nicknames" field in the app policies section of the policy table|
+|policyAppID|String|true|minlength: 1<br>maxlength: 100||
+|enabled|Boolean|false||If true, the app will be marked as "available" or "installed" and will be included in HMI RPC UpdateAppList|
+|authToken|String|false|maxlength: 65535|Used to authenticate connection on app activation|
+|transportType|String|false|maxlength: 100|Specifies the connection type Core should use. The Core role (server or client) is dependent of "endpoint" being specified.<br>See "endpoint" for details|
+|hybridAppPreference|Common.HybridAppPreference|false||Specifies the user preference to use one specific app type or all available types|
+|endpoint|String|false|maxlength: 65535|If specified, which Core uses a client implementation of the connection type and attempts to connect to the endpoint when this app is selected (activated).<br>If omitted, Core won't attempt to connect as the app selection (activation) is managed outside of Core. Instead it uses a server implementation of the connection type and expects the app to connect|
+
