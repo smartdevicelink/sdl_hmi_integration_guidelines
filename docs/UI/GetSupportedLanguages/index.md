@@ -26,7 +26,7 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
-Get Supported Languages
+GetSupportedLanguages
 ![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
 |||
 

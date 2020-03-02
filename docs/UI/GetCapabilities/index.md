@@ -32,7 +32,7 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
-Get Capabilities
+GetCapabilities
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
 

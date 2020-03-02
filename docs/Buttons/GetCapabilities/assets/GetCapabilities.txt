@@ -1,0 +1,56 @@
+participant App
+participant SDL
+participant HMI
+
+HMI->SDL:BC.OnReady
+SDL->HMI:Buttons.IsReady
+HMI-->SDL:Buttons.IsReady (code:0)
+note over SDL:<align:center>`HMICapabilitiesCacheFile`\nis not available
+SDL->SDL:Create `HMICapabilitiesCacheFile`
+
+opt Use of cached capabilities data
+
+opt On system start up
+note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilitiesCacheFile`
+SDL->HMI:Buttons.GetCapabilities
+HMI-->SDL:Buttons.GetCapabilities (params)
+SDL->SDL:Cache received data\nin `HMICapabilitiesCacheFile`
+App->SDL:GetCapabilities
+SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
+SDL-->App:GetCapabilities (params)
+end
+
+opt In subsequent ignition cycles
+note over SDL:<align:center> Capabilities data is available\nin`HMICapabilitiesCacheFile`
+App->SDL:GetCapabilities
+SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
+SDL-->App:GetCapabilities (params)
+end
+end
+
+opt Use of default capabilities data
+
+opt No response from HMI
+note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilitiesCacheFile`
+SDL->HMI:Buttons.GetCapabilities
+note over HMI:<align:center>No\nresponse
+App->SDL:GetCapabilities
+SDL->SDL:Load default data\nfrom **`hmi_capabilities.json`**
+SDL-->App:GetCapabilities (params)
+end
+
+opt Some capabilities data is missing in HMI response
+SDL->HMI:Buttons.GetCapabilities
+HMI-->SDL:Buttons.GetCapabilities (params)
+SDL->SDL:Cache received data\nin `HMICapabilitiesCacheFile`
+note over SDL:<align:center>**<presetBankCapabilities>** data\nis missing in HMI response
+App->SDL:GetCapabilities
+SDL->SDL:Load available cached data\nfrom **`HMICapabilitiesCacheFile`**
+SDL->SDL:Load default <presetBankCapabilities>\nfrom **`hmi_capabilities.json`**
+SDL-->App:GetCapabilities (<presetBankCapabilities>, params)
+note over SDL:<align:center> Requests missing\n**<presetBankCapabilities>** data from HMI\nin subsequent ignition cycle
+end
+end
+
+
+

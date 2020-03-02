@@ -1,0 +1,25 @@
+title OnLanguageChange
+
+participant App
+participant SDL
+participant HMI
+
+note over App,HMI:<align:center> **//Pre-conditions://**\n1. App registered with **EN-US** language\n2. Current VR language is **EN-US**
+
+note over HMI:<align:center>User switched\nVR language to **<FR-CA>**
+
+HMI->>SDL:VR.OnLanguageChange (<**FR-CA**>)
+SDL->>SDL:<align:center>Overwrite contents\nof OnLanguageChange notification\nin `HMICapabilitiesCacheFile`
+SDL->>App:OnLanguageChange (<**FR-CA**>)
+
+note over SDL:<align:center> Unregister <appID>\nwith language different\nfrom current VR language
+SDL->>HMI:BC.OnAppUnregistered (<appID>, **<EN-US>**)
+
+note over HMI:<align:center>Clear up data\nassociated with <appID>
+
+note over HMI:<align:center>Show layout\naccording to HMI workflow
+
+App->>SDL:RegisterAppInterface (<appID>, **<FR-CA>**)
+SDL->>HMI:BC.RegisterAppInterface (<appID>, **<FR-CA>**)
+note over HMI:<align:center>Store the provided data\nassociating it with <appID> 
+note over HMI:<align:center>Add <appID> to the list\nof registered applications
