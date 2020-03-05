@@ -53,17 +53,17 @@ A UI.PerformInteraction with a timeout value of `0` should not be timed out imme
 ### Sequence Diagrams
 
 |||
-PerformInteraction Successful with VR Only
+PerformInteraction in VR Mode completed successfully
 ![PerformInteraction](./assets/PerformInteractionVROnly.png)
 |||
 
 |||
-PerformInteraction Successful with Manual Only
+PerformInteraction in Manual Only Mode completed successfully
 ![PerformInteraction](./assets/PerformInteractionManualOnly.png)
 |||
 
 |||
-PerformInteraction Timeout with Both
+PerformInteraction in Both Mode timed out
 ![PerformInteraction](./assets/PerformInteractionBoth.png)
 |||
 
