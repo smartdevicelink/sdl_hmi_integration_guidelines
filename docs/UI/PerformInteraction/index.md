@@ -64,7 +64,7 @@ PerformInteraction Successful with Manual Only
 
 |||
 PerformInteraction Timeout with Both
-![PerformInteraction](./assets/PerformInteractionBothTimeout.png)
+![PerformInteraction](./assets/PerformInteractionBoth.png)
 |||
 
 ### JSON Message Examples
