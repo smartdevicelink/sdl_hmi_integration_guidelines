@@ -752,6 +752,10 @@
 |:---|:---|:--------|:---------|:----------|
 |type|[Common.FuelType](../enums/#fueltype)|false|||
 |range|Float|false|minvalue: 0<br>maxvalue: 10000|The estimate range in KM the vehicle can travel based on fuel level and consumption|
+|level|Float|false|minvalue: 0<br>maxvalue: 10000|The relative remaining capacity of this fuel type (percentage)|
+|levelState|[Common.ComponentVolumeStatus](../enums/#componentvolumestatus)|false||The fuel level state|
+|capacity|Float|false|minvalue: 0<br>maxvalue: 10000|The absolute capacity of this fuel type|
+|capacityUnit|[Common.CapacityUnit](../enums/#capacityunit)|false||The unit of the capacity of this fuel type such as liters for gasoline or kWh for batteries|
 
 ### MassageModeData
 
