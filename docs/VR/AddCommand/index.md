@@ -18,7 +18,7 @@ Whenever the internal list of added `vrCommands` is updated SDL Core must:
 * Construct the `vrHelp` and `helpPrompt`  parameters using the data from the list SDL created internally.  
 * Send these parameters to the HMI via the `SetGlobalProperties` RPC.
 
-If the application sends a `CreateInteractionChoiceSet` RPC request that contains `vrCommand` parameters, SDL Core will send the HMI a `VR.AddCommand` request.
+If the application sends a `CreateInteractionChoiceSet` RPC request that contains `vrCommand` parameters, SDL Core will send the HMI a `VR.AddCommand` request for each `Choice`.
 
 !!! note
 The parameter `type` included in the `VR.AddCommand` request is the differentiator the HMI should use to know if the VR Command originated from an `AddCommand` RPC or a `CreateInteractionChoiceSet` RPC.
