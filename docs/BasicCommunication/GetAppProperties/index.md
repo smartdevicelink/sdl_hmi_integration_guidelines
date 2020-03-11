@@ -61,7 +61,7 @@ GetAppProperties
           "nicknames": [
             "Hello Sdl"
           ],
-          "policyAppID": 123456,
+          "policyAppID": "123456",
           "enabled": true,
           "transportType": "WS",
           "hybridAppPreference": "BOTH"
