@@ -15,13 +15,25 @@ SDL must notify the HMI when a web engine app's properties change, such as after
 
 !!!
 
+### Notification
+
 #### Parameters
+
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |properties|[Common.AppProperties](../../common/structs/#appproperties)|true||
 
+### Sequence Diagrams
 
-### Example Notification
+|||
+OnAppPropertiesChange
+![OnAppPropertiesChange](./assets/OnAppPropertiesChange.png)
+|||
+
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "id" : 47,
@@ -40,9 +52,3 @@ SDL must notify the HMI when a web engine app's properties change, such as after
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-OnAppPropertiesChange
-![OnAppPropertiesChange](./assets/OnAppPropertiesChange.png)
-|||

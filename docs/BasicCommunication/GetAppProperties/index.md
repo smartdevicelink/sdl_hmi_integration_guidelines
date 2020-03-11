@@ -9,25 +9,35 @@ Sender
 Purpose
 : Get the current properties of an application
 
-
 ### Request
 
 #### Parameters
+
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|policyAppID|String|false|maxlength: "100"|
-
+|policyAppID|String|false|maxlength: 100|
 
 ### Response
+
 In case `policyAppID` is omitted in the request, SDL provides all app properties in the response.
 
 #### Parameters
+
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |properties|[Common.AppProperties](../../common/structs/#appproperties)|false|array: true<br>minsize: 1|
 
+### Sequence Diagrams
 
-### Example Request
+|||
+GetAppProperties
+![GetAppProperties](./assets/GetAppProperties.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
+
 ```json
 {
   "id": 47,
@@ -39,7 +49,7 @@ In case `policyAppID` is omitted in the request, SDL provides all app properties
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -63,7 +73,7 @@ In case `policyAppID` is omitted in the request, SDL provides all app properties
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -78,9 +88,3 @@ In case `policyAppID` is omitted in the request, SDL provides all app properties
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-GetAppProperties
-![GetAppProperties](./assets/GetAppProperties.png)
-|||

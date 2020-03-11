@@ -31,18 +31,28 @@ Purpose
 ### Request
 
 #### Parameters
+
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |properties|[Common.AppProperties](../../common/structs/#appproperties)|true||
-
 
 ### Response
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
-### Example Request
+### Sequence Diagrams
+
+|||
+SetAppProperties
+![SetAppProperties](./assets/SetAppProperties.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
+
 ```json
 {
   "id":47,
@@ -54,19 +64,16 @@ This RPC has no additional parameter requirements.
           "nicknames": [
             "Hello Sdl"
           ],
-          "policyAppID": 123456,
+          "policyAppID": "123456",
           "enabled": true,
           "transportType": "WS",
           "hybridAppPreference": "CLOUD"
         }
-    ,
-    "code":0,
-    "method":"BasicCommunication.SetAppProperties"
   }
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -79,7 +86,7 @@ This RPC has no additional parameter requirements.
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -89,14 +96,8 @@ This RPC has no additional parameter requirements.
     "code": 11,
     "message": "Invalid data",
     "data": {
-      "method": "BasicCommunication.GetAppProperties"
+      "method": "BasicCommunication.SetAppProperties"
     }
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-SetAppProperties
-![SetAppProperties](./assets/SetAppProperties.png)
-|||

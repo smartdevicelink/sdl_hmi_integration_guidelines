@@ -1297,6 +1297,7 @@
 |PROTECTION_DISABLED|4|When a mobile app requests a protected service, but the system starts an unprotected service instead.|
 
 ### HybridAppPreference
+
 |Name|Value|Description|
 |:---|:----|:----------|
 |MOBILE|0||
