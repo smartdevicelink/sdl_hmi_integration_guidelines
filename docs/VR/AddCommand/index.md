@@ -11,12 +11,23 @@ Purpose
 
 ### Request
 
-If the application sends `AddCommand` with the `vrCommands` parameter then SDL must maintain a list of the added `vrCommands`.  
+If the application sends `AddCommand` with the `vrCommands` parameter then SDL Core will maintain a list of the added `vrCommands`.  
 For each AddCommand, only the first item in the `vrCommands` array shall be added to the list.
 
-Whenever the internal list of added `vrCommands` is updated SDL must:  
-* construct the `vrHelp` and `helpPrompt`  parameters using the data from the list SDL created internally  
-* send these parameters to the HMI via the `SetGlobalProperties` RPC
+Whenever the internal list of added `vrCommands` is updated SDL Core must:  
+* Construct the `vrHelp` and `helpPrompt`  parameters using the data from the list SDL created internally.  
+* Send these parameters to the HMI via the `SetGlobalProperties` RPC.
+
+If the application sends a `CreateInteractionChoiceSet` RPC request that contains `vrCommand` parameters, SDL Core will send the HMI a `VR.AddCommand` request for each `Choice`.
+
+!!! note
+The parameter `type` included in the `VR.AddCommand` request is the differentiator the HMI should use to know if the VR Command originated from an `AddCommand` RPC or a `CreateInteractionChoiceSet` RPC.
+
+`Choice` type VR Commands should only be used during a `PerformInteraction` RPC Request.
+
+`Command` type VR Commands should only be used when the user wants to interact with the App's Menu.
+
+!!!
 
 #### Parameters
 
