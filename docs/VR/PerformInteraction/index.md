@@ -44,8 +44,8 @@ PerformInteraction in Manual Only Mode completed successfully
 |||
 
 |||
-PerformInteraction in Both Mode times out
-![PerformInteraction](./assets/PerformInteractionBothTimeout.png)
+PerformInteraction in Both Mode timed out
+![PerformInteraction](./assets/PerformInteractionBoth.png)
 |||
 
 ### JSON Message Examples
