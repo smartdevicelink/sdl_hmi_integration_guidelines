@@ -22,7 +22,7 @@ A request sent by SDL to display a list of choices to the user.
 
 !!! note
 
-A UI.PerformInteraction with a timeout value of `0` should not be timed out immediately. Instead, it should use some default timeout value predetermined by the HMI.
+A UI.PerformInteraction with a timeout value of zero should not be timed out immediately. Instead, it should use some default timeout value predetermined by the HMI.
 
 !!!
 
