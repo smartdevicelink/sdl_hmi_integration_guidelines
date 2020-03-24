@@ -1130,3 +1130,11 @@ There are no defined parameters for this struct
 |hybridAppPreference|[Common.HybridAppPreference](../enums/#hybridapppreference)|false||Specifies the user preference to use one specific app type or all available types|
 |endpoint|String|false|maxlength: 65535|If specified, which Core uses a client implementation of the connection type and attempts to connect to the endpoint when this app is selected (activated).<br>If omitted, Core won't attempt to connect as the app selection (activation) is managed outside of Core. Instead it uses a server implementation of the connection type and expects the app to connect|
 
+### StabilityControlsStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|escSystem|[Common.VehicleDataStatus](../enums/#vehicledatastatus)|false||true if vehicle stability control is ON,<br>else false|
+|trailerSwayControl|[Common.VehicleDataStatus](../enums/#vehicledatastatus)|false||true if vehicle trailer sway control is ON,<br>else false|
+
+
