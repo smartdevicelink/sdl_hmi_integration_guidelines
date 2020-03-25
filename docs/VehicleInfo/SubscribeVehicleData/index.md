@@ -44,6 +44,7 @@ Purpose
 |engineOilLife|Boolean|false||
 |electronicParkBrakeStatus|Boolean|false||
 |cloudAppVehicleID|Boolean|false||
+|handsOffSteering|Bolean|false|To indicate whether driver hands<br>are off the steering wheel
 
 ### Response
 
@@ -93,6 +94,7 @@ For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `d
 |engineOilLife|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |electronicParkBrakeStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |cloudAppVehicleID|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|handsOffSteering|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false|To indicate whether driver hands<br>are off the steering wheel|
 
 ### Sequence Diagrams
 
