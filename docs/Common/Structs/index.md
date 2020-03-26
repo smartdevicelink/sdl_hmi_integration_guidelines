@@ -1134,8 +1134,8 @@ There are no defined parameters for this struct
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|approximatePosition|Integer|true|minvalue: 0<br>maxvalue: 100|The approximate percentage<br>that the window is open -<br>0 being fully closed,<br>100 being fully open|
-|deviation|Integer|true|minvalue: 0<br>maxvalue: 100|The percentage deviation of the approximatePosition.<br>e.g. If the approximatePosition is 50<br>and the deviation is 10,<br>then the window's location is somewhere between 40 and 60|
+|approximatePosition|Integer|true|minvalue: 0<br>maxvalue: 100|The approximate percentage that the window is open -<br>0 being fully closed, 100 being fully open|
+|deviation|Integer|true|minvalue: 0<br>maxvalue: 100|The percentage deviation of the approximatePosition.<br>e.g. If the approximatePosition is 50 and the deviation is 10,<br>then the window's location is somewhere between 40 and 60|
 
 ### WindowStatus
 
