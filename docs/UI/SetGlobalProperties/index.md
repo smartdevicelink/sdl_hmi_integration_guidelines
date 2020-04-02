@@ -101,7 +101,7 @@ SetGlobalProperties for active app on HMI with VR activation
 |||
 
 |||
-SetGlobalProperties for active app within TTS.SetGlobalProperties_request, UI.SetGlobalProperties_request, VR.Started, VR.Stopped.   
+SetGlobalProperties for active app with TTS.SetGlobalProperties_request, UI.SetGlobalProperties_request, VR.Started, VR.Stopped.   
 ![SetGlobalProperties](./assets/SetGlobalProperties_TTS_UI_VR.png)
 |||
 
