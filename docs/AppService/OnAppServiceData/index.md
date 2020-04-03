@@ -15,6 +15,7 @@ Purpose
 * **SDL->HMI** if HMI <span title="App Service Consumer">ASC</span> is receiving updated service data
 
 !!!
+
 ### Notification
 
 #### Parameters
