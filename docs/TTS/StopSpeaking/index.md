@@ -13,8 +13,7 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -23,12 +22,15 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 StopSpeaking
 ![StopSpeaking](./assets/StopSpeaking.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -37,7 +39,8 @@ StopSpeaking
   "method" : "TTS.StopSpeaking"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -51,7 +54,7 @@ StopSpeaking
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

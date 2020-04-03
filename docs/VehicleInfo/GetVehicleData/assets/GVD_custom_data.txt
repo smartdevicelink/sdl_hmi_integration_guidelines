@@ -1,0 +1,38 @@
+@startuml
+group Request for custom vehicle data not defined in HMI_API.xml but defined in schema
+
+MOBILE -> SDL: GetVehicleData({"custom_vd_item1_integer":true})
+SDL -> SDL: SDL translates **names** to **keys** as defined in schema
+SDL -> HMI: VI.GetVehicleDataa("OEM_REF_INT":true)
+HMI -> SDL: VI.GetVehicleData(\n{"method":"VehicleInfo.GetVehicleData",\n "code":0,\n "OEM_REF_INT":50})
+SDL -> SDL: SDL translates **keys** to **names** as defined in schema
+SDL -> MOBILE: GetVehicleData(\n{"resultCode":"SUCCESS",\n "custom_vd_item1_integer":50,\n "success":true})
+
+end
+
+group Request for `gps` defined in HMI_API.xml and `custom_vd_item_string` defined only in schema
+
+MOBILE -> SDL : GetVehicleData ("gps : true",\n\t "custom_vd_item_array_string" : true")
+SDL -> SDL: SDL translates **names** to **keys** as defined in schema
+SDL -> HMI : GetVehicleData (\n\t "gps": true, \n\t "OEM_REF_ARR_STR":true") 
+HMI -> SDL: VI.GetVehicleData(\n{"method":"VehicleInfo.GetVehicleData",\n\t"code":0,\n\t"gps" : { \n\
+       \t\t"latitude" : 42.5487451, \n\
+       \t\t"longitude" : 87.42114, \n\
+   \t}, \n\t"OEM_REF_ARR_STR": \n\
+        \t["string_el_1", \n\
+        \t"string_el_2", \n\
+        \t"string_el_3"]\n\
+   }")
+SDL -> SDL: SDL translates **keys** to **names** as defined in schema
+
+SDL -> MOBILE : GetVehicleData (\n\t"gps" : { \n\
+       \t\t"latitude" : 42.5487451, \n\
+       \t\t"longitude" : 87.42114, \n\
+   \t},\n\t"custom_vd_item_array_string": \n\
+        \t["string_el_1", \n\
+        \t"string_el_2", \n\
+        \t"string_el_3"]\n\
+   }")
+
+end
+@enduml

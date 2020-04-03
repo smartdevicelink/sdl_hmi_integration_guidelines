@@ -22,11 +22,11 @@ If the HMI is the <span title="App Service Consumer">ASC</span>, SDL will:
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |serviceUri|String|true||
 |serviceID|String|true||
-|originApp|String|false|Non-mandatory only if HMI is the <span title="App Service Consumer">ASC</span>|
+|originApp|String|false|Non-mandatory only if HMI is the ASC|
 |requestServiceActive|Boolean|false||
 
 ### Response
@@ -38,17 +38,20 @@ If the HMI is the <span title="App Service Consumer">ASC</span>, SDL will:
 |serviceSpecificResult|String|false||
 
 ### Sequence Diagrams
+
 |||
 PerformAppServiceInteraction with HMI <span title="App Service Consumer">ASC</span>
 ![PerformAppServiceInteraction](./assets/PerformAppServiceInteractionFromHMI.png)
 |||
 
 |||
-PerformAppServiceInteraction with Mobile <span title="App Service Consumer">ASC</span>
+PerformAppServiceInteraction with Mobile ASC
 ![PerformAppServiceInteraction](./assets/PerformAppServiceInteractionFromMobile.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -63,7 +66,7 @@ PerformAppServiceInteraction with Mobile <span title="App Service Consumer">ASC<
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -77,13 +80,13 @@ PerformAppServiceInteraction with Mobile <span title="App Service Consumer">ASC<
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
    "id" : 1000,
    "jsonrpc" : "2.0",
-   "result" : {
+   "error" : {
       "code" : 1,
       "message" : "No known service interaction matching URI",
       "data" : {

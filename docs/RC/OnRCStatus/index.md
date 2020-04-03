@@ -9,7 +9,6 @@ Sender
 Purpose
 : Inform HMI and mobile application about changes in RC module allocation.
 
-
 ### Notification
 
 SDL must send OnRCStatus notification when:
@@ -18,47 +17,53 @@ SDL must send OnRCStatus notification when:
     * A module is de-allocated from an application (the module is freed when application exits, disconnects, goes to HMI level NONE)
     * An application no longer has the right to control the module (for example, a policy update can revoke the application's access to a module)
 
+SDL must always include `moduleId` for each and every `ModuleData` in `allocatedModules` and `freeModules` in OnRCStatus notification.
+
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
-|appID|Integer|true|ID of selected application|
-|allocatedModules|[Common.ModuleData](/docs/Common/Structs/index.md)|true|Contains a list (zero or more) of module types that are allocated to the application|
-|freeModules|[Common.ModuleData](/docs/Common/Structs/index.md)|true|Contains a list (zero or more) of module types that are free to access for the application|
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|appID|Integer|true||ID of selected application|
+|allocatedModules|[Common.ModuleData](../../common/structs/#moduledata)|true|array: true<br>minsize: 0<br>maxsize: 100|Contains a list (zero or more) of module types that are allocated to the application|
+|freeModules|[Common.ModuleData](../../common/structs/#moduledata)|true|array: true<br>minsize: 0<br>maxsize: 100|Contains a list (zero or more) of module types that are free to access for the application|
 
 ### Sequence Diagrams
 
 |||
 OnRCStatus
-![OnRCStatus](assets/OnRCStatus.png)
+![OnRCStatus](./assets/OnRCStatus.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
 
 ```json
 {
-    "jsonrpc": "2.0",
-    "method": "RC.OnRCStatus",
-    "params": {
-        "allocatedModules" : [],
-        "freeModules" : [
-     {
-        "moduleType" : "CLIMATE"
-     },
-     {
-        "moduleType" : "RADIO"
-     },
-     {
-        "moduleType" : "AUDIO"
-     },
-     {
-        "moduleType" : "LIGHT"
-     },
-     {
-        "moduleType" : "HMI_SETTINGS"
-     },
-     {
-        "moduleType" : "SEAT"
-     }
-  ]
+	"jsonrpc": "2.0",
+	"method": "RC.OnRCStatus",
+	"params": {
+		"allocatedModules": [],
+		"freeModules": [{
+				"moduleType": "CLIMATE"
+			},
+			{
+				"moduleType": "RADIO"
+			},
+			{
+				"moduleType": "AUDIO"
+			},
+			{
+				"moduleType": "LIGHT"
+			},
+			{
+				"moduleType": "HMI_SETTINGS"
+			},
+			{
+				"moduleType": "SEAT"
+			}
+		],
+		"appID" : 65368
+	}
 }
+```

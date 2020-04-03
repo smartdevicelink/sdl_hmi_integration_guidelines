@@ -20,12 +20,16 @@ Purpose
 |appID|Integer|true||
 
 ### Sequence Diagrams
+
 |||
 OnButtonSubscription
 ![OnButtonSubscription](./assets/OnButtonSubscription.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

@@ -13,17 +13,13 @@ SDL requires this notification in order to accurately close the sessions with re
 
 !!! MUST
 
-  * Send `OnExitAllApplications` with the appropriate `reason` upon one of the users's actions:
+  * Send `OnExitAllApplications` with the appropriate `reason` upon one of the user's actions:
     * Master Reset
     * Key set to Ignition Off (Refer to the diagram below).
     * Key set to Suspend (Refer to the diagram below).
     * Key set to ACC
 
 !!!
-
-
-
-
 
 ### Notification
 
@@ -34,12 +30,16 @@ SDL requires this notification in order to accurately close the sessions with re
 |reason|[Common.ApplicationsCloseReason](../../common/enums/#applicationsclosereason)|true||
 
 ### Sequence Diagrams
+
 |||
 Exit All Apps on Ignition Off
 ![OnExitAllApplications](./assets/OnExitAllApps.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

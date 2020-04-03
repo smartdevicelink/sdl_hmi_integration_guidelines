@@ -13,8 +13,7 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -26,12 +25,15 @@ Purpose
 |presetBankCapabilities|[Common.PresetBankCapabilities](../../common/structs/#presetbankcapabilities)|false||
 
 ### Sequence Diagrams
+
 |||
 GetCapabilities on system startup
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -40,7 +42,8 @@ GetCapabilities on system startup
   "method" : "Buttons.GetCapabilities"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -51,47 +54,47 @@ GetCapabilities on system startup
     "capabilities" :
     [
       {
-        "name" : OK,
+        "name" : "OK",
         "shortPressAvailable" : true,
         "longPressAvailable" : true,
         "upDownAvailable" : true
       },
       {
-        "name" : SEEKLEFT,
+        "name" : "SEEKLEFT",
         "shortPressAvailable" : true,
         "longPressAvailable" : true,
         "upDownAvailable" : true
       },
       {
-        "name" : SEEKRIGHT,
+        "name" : "SEEKRIGHT",
         "shortPressAvailable" : true,
         "longPressAvailable" : true,
         "upDownAvailable" : true
       },
       {
-        "name" : TUNEUP,
+        "name" : "TUNEUP",
         "shortPressAvailable" : true,
         "longPressAvailable" : true,
         "upDownAvailable" : true
       },
       {
-        "name" : TUNEDOWN,
+        "name" : "TUNEDOWN",
         "shortPressAvailable" : true,
         "longPressAvailable" : true,
         "upDownAvailable" : true
-      },
+      }
     ],
     "presetBankCapabilities" :
-    [
+    {
       "onScreenPresetsAvailable" : true
-    ],
+    },
     "code" : 0,
     "method" : "Buttons.GetCapabilities"
   }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

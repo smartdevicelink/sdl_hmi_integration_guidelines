@@ -21,24 +21,29 @@ Purpose
 |appID|Integer|false||
 
 ### Sequence Diagrams
+
 |||
 OnButtonEvent for CUSTOM_BUTTON pressed and released
 ![OnButtonEvent](./assets/OnButtonEventPressRelease.png)
 |||
+
 |||
 OnButtonEvent hardware button pressed and released
 ![OnButtonEvent](./assets/OnButtonEventHardKeyPressRelease.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",
   "method" : "Buttons.OnButtonEvent",
   "params" :
   {
-    "name" : OK,
-    "mode" : BUTTONDOWN,
+    "name" : "OK",
+    "mode" : "BUTTONDOWN"
   }
 }
 ```

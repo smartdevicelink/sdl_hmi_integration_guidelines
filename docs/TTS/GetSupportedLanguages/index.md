@@ -13,8 +13,7 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -25,12 +24,15 @@ Purpose
 |languages|[Common.Language](../../common/enums/#language)|true|array: true<br>minsize: 1<br>maxsize: 100|
 
 ### Sequence Diagrams
+
 |||
 GetSupportedLanguages
 ![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -39,7 +41,8 @@ GetSupportedLanguages
   "method" : "TTS.GetSupportedLanguages"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -47,14 +50,14 @@ GetSupportedLanguages
   "jsonrpc" : "2.0",
   "result" :
   {
-    "languages" : [AR-SA, DE-DE, EN-GB, EN-US, ES-ES, FR-FR, IT-IT],
+    "languages" : ["AR-SA", "DE-DE", "EN-GB", "EN-US", "ES-ES", "FR-FR", "IT-IT"],
     "code" : 0,
     "method" : "TTS.GetSupportedLanguages"
   }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

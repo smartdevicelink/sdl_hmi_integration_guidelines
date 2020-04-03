@@ -1,7 +1,5 @@
 ## UpdateSDL
 
-### Notification
-
 Type
 : Function
 
@@ -11,8 +9,8 @@ Sender
 Purpose
 : Update the Policy Table request
 
-
 ### Request
+
 The request notifies PolicyManager about Policy Table Update is requested by User on HMI.   
 The below describes the behavior related to EXTERNAL_PROPRIETARY Policy flow only.
 
@@ -26,12 +24,13 @@ According to result sent to HMI in UpdateSDL response, SDL will follow Policy Up
 1) UP_TO_DATE – Policy Table is now up to date, but anyway SDL starts a new policy update cycle because of user request (e.i. UpdateSDL).   
 2) UPDATING – Policy Update process is now in already progress, anyway when currently active update process will be finished, SDL must start PT Update from the beginning.   
 3) UPDATE_NEEDED – Policy Table is not up to date, update process must be started by SDL.   
-PoliciesManager must initiate the PT Update sequence (that is, PT Exchange) upon User\`s request delivered to SDL via SDL.UpdateSDL() from HMI and provide a response on a request with current PTU status to HMI.   
-_Information_: PROPRIETARY Policy flow -> SDL must change the flag from "UPDATE_NEEDED" to "UPDATING" right after _BC.PolicyUpdate_ with SnapshotPT is sent to HMI.
+
+PoliciesManager must initiate the PT Update sequence upon user's request, which is delivered to SDL via `SDL.UpdateSDL()` from the HMI,  and provide a response with current the PTU status to the HMI.
 !!!
 
 #### Parameters
-This RPC has no additional parameter requirements.
+
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -39,28 +38,23 @@ This RPC has no additional parameter requirements.
 
 |Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
-|result|[Common.UpdateResult]|true|Specify result: no update needed, update was successful/unsuccessful, etc.|
-
-[Common.UpdateResult]: ../../common/enums/#updateresult
+|result|[Common.UpdateResult](../../common/enums/#updateresult)|true|Specify result: no update needed, update was successful/unsuccessful, etc.|
 
 ### Sequence Diagrams
+
 |||
-UpdateSDL UP_TO_DATE - EXTERNAL_PROPRIETARY Policy Table Update Flow
-![UpdateSDL](./assets/UpdateSDL%20UPDATING.jpg)
+EXTERNAL_PROPRIETARY Policy Table Update Flow triggered by User
+![UpdateSDL](./assets/PTU_external_proprietary_user.png)
 |||
+
 |||
-UpdateSDL UPDATING - EXTERNAL_PROPRIETARY Policy Table Update Flow
-![UpdateSDL](./assets/UpdateSDL%20UPDATING.jpg)
+EXTERNAL_PROPRIETARY Policy Table Update Flow triggered by SDL
+![PTU_SDL](./assets/PTU_external_proprietary_SDL.png)
 |||
-|||
-UpdateSDL UPDATE_NEEDED - EXTERNAL_PROPRIETARY Policy Table Update Flow
-![UpdateSDL](./assets/UpdateSDL%20UPDATE_NEEDED.jpg)
-|||
-|||
-UpdateSDL - PROPRIETARY Policy Table Update Flow
-![UpdateSDL](./assets/Proprietary_PTU_flow_.png)
-|||
-### Example Request
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -70,7 +64,7 @@ UpdateSDL - PROPRIETARY Policy Table Update Flow
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -78,14 +72,14 @@ UpdateSDL - PROPRIETARY Policy Table Update Flow
 	"jsonrpc" : "2.0",
 	"result" : 
 	{
-		“result” : “UPDATING”
+		"result" : "UPDATING",
 		"code" : 0,
 		"method" : "SDL.UpdateSDL"
 	}
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

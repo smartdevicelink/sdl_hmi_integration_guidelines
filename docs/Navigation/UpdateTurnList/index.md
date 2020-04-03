@@ -26,12 +26,15 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 UpdateTurnList
 ![UpdateTurnList](./assets/UpdateTurnList.jpg)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -44,61 +47,63 @@ UpdateTurnList
     [
       {
         "navigationText" :  
-        [
-          "fieldName" :  navigationText,
+        {
+          "fieldName" :  "navigationText",
           "fieldText" : "Turn Right"
-        ],
+        },
         "turnIcon" :
-        [
+        {
            "value" : "tmp/SDL/app/Navi/icon_turn_right.jpeg",
-           "imageType" :  DYNAMIC
-        ]
+           "imageType" :  "DYNAMIC"
+        }
       },
 
       {
         "navigationText" :  
-        [
-          "fieldName" :  navigationText,
+        {
+          "fieldName" :  "navigationText",
           "fieldText" : "Turn Left"
-        ],
+        },
         "turnIcon" :
-        [
+        {
            "value" : "tmp/SDL/app/Navi/icon_turn_left.jpeg",
-           "imageType" :  DYNAMIC
-        ]
+           "imageType" :  "DYNAMIC"
+        }
       },
 
       {
         "navigationText" :  
-        [
-          "fieldName" :  navigationText,
+        {
+          "fieldName" :  "navigationText",
           "fieldText" : "Go Forward"
-        ],
+        },
         "turnIcon" :
-        [
+        {
            "value" : "tmp/SDL/app/Navi/icon_go_forward.jpeg",
-           "imageType" :  DYNAMIC
-        ]
+           "imageType" :  "DYNAMIC"
+        }
       }
     ],
 
     "softButtons" :
-    [
-        "type" :  BOTH,
+    {
+        "type" :  "BOTH",
         "text" : "Return",
         "image" :
-        [
+        {
            "value" : "tmp/SDL/app/Navi/icon_583.jpg",
-           "imageType" : DYNAMIC
-        ],
+           "imageType" : "DYNAMIC"
+        },
         "isHighlighted" : true,
         "softButtonID" : 118,
-        "systemAction" :  DEFAULT_ACTION
-    ]
+        "systemAction" :  "DEFAULT_ACTION"
+    },
+    "appID" : 65368
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -112,7 +117,7 @@ UpdateTurnList
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

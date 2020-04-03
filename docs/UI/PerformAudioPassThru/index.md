@@ -27,24 +27,30 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 PerformAudioPassThru requested with TTS.Speak
 ![PerformAudioPassThru](./assets/PerformAudioPassThruSpeak.png)
 |||
+
 |||
 PerformAudioPassThru with EndAudioPassThru
 ![PerformAudioPassThru](./assets/PerformAudioPassThruEndAudio.png)
 |||
+
 |||
 PerformAudioPassThru not supported
 ![PerformAudioPassThru](./assets/PerformAudioPassThruNotSupported.png)
 |||
+
 |||
 PerformAudioPassThru from vehicle microphone
 ![PerformAudioPassThru](./assets/PerformAudioPassThruMic.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -53,16 +59,20 @@ PerformAudioPassThru from vehicle microphone
   "method" : "UI.PerformAudioPassThru",
   "params" :
   {
-    "audioPassThruDisplayTexts" :
-    {
-         "fieldName" :  audioPassThruDisplayText1,
-     "fieldText" : "The audio capturing is in progress"
-    },
+    "audioPassThruDisplayTexts" : [
+      {
+        "fieldName" :  "audioPassThruDisplayText1",
+        "fieldText" : "The audio capturing is in progress"
+      }
+    ],
     "maxDuration" : 10000,
+    "muteAudio" : false,
+    "appID": 65368
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -76,7 +86,7 @@ PerformAudioPassThru from vehicle microphone
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

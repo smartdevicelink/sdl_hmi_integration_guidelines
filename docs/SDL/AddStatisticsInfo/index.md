@@ -1,5 +1,13 @@
 ## AddStatisticsInfo
 
+Type
+: Notification
+
+Sender
+: HMI
+
+Purpose
+: Sent by system to record statistics and error counts. Increases statistics specified by statisticType by one.
 
 ### Notification
 
@@ -9,19 +17,16 @@
 |:---|:---|:--------|:---------|
 |statisticType|[Common.StatisticsType](../../common/enums/#statisticstype)|true||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Notification
 
 ```json
-
-```
-### Example Response
-
-```json
-
-```
-
-### Example Error
-
-```json
-
+{
+  "jsonrpc": "2.0",
+  "method": "SDL.AddStatisticsInfo",
+  "params": {
+    "statisticType": "iAPP_BUFFER_FULL"
+  }
+}
 ```

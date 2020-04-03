@@ -1,6 +1,6 @@
 {
     "Authors": ["Anastasiya Britanova", "Justin Dickow", "Nicolas(Yifei) Li"],
-    "languages": ["en","zh-hans"],
+    "languages": ["en"],
     "navigation": [
         {
             "name": "Overview",
@@ -22,6 +22,9 @@
             },
             {
               "name": "ActivateApp"
+            },
+            {
+              "name": "CloseApplication"
             },
             {
               "name": "MixingAudioSupported"
@@ -102,6 +105,9 @@
               "name": "PolicyUpdate"
             },
             {
+              "name": "DecryptCertificate"
+            },
+            {
               "name": "UpdateAppList"
             },
             {
@@ -115,6 +121,18 @@
             },
             {
               "name": "GetFilePath"
+            },
+            {
+              "name": "OnServiceUpdate"
+            },
+            {
+              "name": "GetAppProperties"
+            },
+            {
+              "name": "SetAppProperties"
+            },
+            {
+              "name": "OnAppPropertiesChange"
             }
           ]
         },
@@ -145,6 +163,18 @@
               "name": "AlertManeuver"
             },
             {
+              "name": "GetWayPoints"
+            },
+            {
+              "name": "SubscribeWayPoints"
+            },
+            {
+              "name": "UnsubscribeWayPoints"
+            },
+            {
+              "name": "OnWayPointChange"
+            },
+            {
               "name": "IsReady"
             },
             {
@@ -158,6 +188,9 @@
             },
             {
               "name": "SendLocation"
+            },
+            {
+              "name": "SetVideoConfig"
             },
             {
               "name": "ShowConstantTBT"
@@ -195,10 +228,10 @@
               "name": "GetStatusUpdate"
             },
             {
-              "name": "GetURLS"
+              "name": "GetUserFriendlyMessage"
             },
             {
-              "name": "GetUserFriendlyMessage"
+              "name": "GetPolicyConfigurationData"
             },
             {
               "name": "OnAllowSDLFunctionality"
@@ -286,6 +319,9 @@
               "name": "Alert"
             },
             {
+              "name": "CancelInteraction"
+            },
+            {
               "name": "ChangeRegistration"
             },
             {
@@ -361,16 +397,19 @@
               "name": "SetMediaClockTimer"
             },
             {
-              "name": "SetVideoConfig"
-            },
-            {
               "name": "Show"
             },
             {
-              "name": "ShowCustomForm"
+              "name": "ShowAppMenu"
             },
             {
               "name": "Slider"
+            },
+            {
+              "name": "CreateWindow"
+            },
+            {
+              "name": "DeleteWindow"
             }
           ]
         },
@@ -473,6 +512,38 @@
             },
             {
               "name": "OnRCStatus"
+            },
+            {
+              "name": "SetGlobalProperties"
+            }
+          ]
+        },
+        {
+          "name": "AppService",
+          "navigation": [
+            {
+              "name": "PublishAppService"
+            },
+            {
+              "name": "UnpublishAppService"
+            },
+            {
+              "name": "GetAppServiceData"
+            },
+            {
+              "name": "OnAppServiceData"
+            },
+            {
+              "name": "PerformAppServiceInteraction"
+            },
+            {
+              "name": "GetActiveServiceConsent"
+            },
+            {
+              "name": "GetAppServiceRecords"
+            },
+            {
+              "name": "AppServiceActivation"
             }
           ]
         },

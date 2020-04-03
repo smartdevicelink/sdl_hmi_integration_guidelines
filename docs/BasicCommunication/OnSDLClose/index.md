@@ -20,7 +20,7 @@ Purpose
 
 !!! NOTE
 
-SDL unregisters applications if the transports are still availble after an `Ignition Off`.
+SDL unregisters applications if the transports are still available after an `Ignition Off`.
 
 SDL cleans up applications' persistent data if the HMI calls for a `Factory Reset` or `Master Reset` via [OnExitAllApplications](../onexitallapplications).
 
@@ -28,17 +28,26 @@ SDL cleans up applications' persistent data if the HMI calls for a `Factory Rese
 
 ### Notification
 
+#### Parameters
+
+This RPC has no additional parameter requirements
+
 ### Sequence Diagrams
+
 |||
-OnSDLClose Ingition Cycle
+OnSDLClose Ignition Cycle
 ![OnSDLClose](./assets/OnSDLCloseIgnition.png)
 |||
+
 |||
 OnSDLClose Master Reset
-![OnSDLClose](./assets/OnSDLCLoseReset.png)
+![OnSDLClose](./assets/OnSDLCloseReset.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

@@ -13,7 +13,7 @@ Purpose
 
 !!! MUST
 
-1. Use the appropriate uploaded file according to its workflow (IVSU, SystemRequest, RPC's). See diagrams listed below.  
+1. If `isSystemFile` is set to true, use the appropriate uploaded file according to its workflow (IVSU, SystemRequest, RPC's). See diagrams listed below.  
 2. Whenever HMI gets RPC with `Image` which has `.isTemplate` set to true, the HMI has to:
 
 - load the proper image pattern
@@ -54,30 +54,38 @@ The list of RPCs and data structures that `OnPutFile` affects are:
 |FileName|String|true|maxlength: 255|
 |syncFileName|String|true|maxlength: 255|
 |fileType|[Common.FileType](../../common/enums/#filetype)|true||
-|persistentFile|Boolean|false||
+|persistentFile|Boolean|false|defvalue: false|
+|isSystemFile|Boolean|false|defvalue: false|
+|appID|Integer|false||
 
 ### Sequence Diagrams
+
 |||
 Put File used before referencing RPC
 ![OnPutFile](./assets/OnPutFileBeforeRPC.png)
 |||
+
 |||
 Put File used after referencing RPC
 ![OnPutFile](./assets/OnPutFileAfterRPC.png)
 |||
+
 |||
 System Request file upload using Put File
 ![OnPutFile](./assets/OnPutFileSystemRequest.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : "BasicCommunication.OnPutFile"
-  {
-     "fileName":"/fs/sharedFolder/app1_device1/icon.jpg",
-     "fileType":"GRAPHIC_JPEG"
-    }
+  "method" : "BasicCommunication.OnPutFile",
+  "params" : {
+    "syncFileName":"/fs/sharedFolder/app1_device1/icon.jpg",
+    "fileType":"GRAPHIC_JPEG"
+  }
 }
 ```

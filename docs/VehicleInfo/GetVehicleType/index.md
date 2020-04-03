@@ -13,8 +13,7 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -25,12 +24,15 @@ Purpose
 |vehicleType|[Common.VehicleType](../../common/structs/#vehicletype)|true||
 
 ### Sequence Diagrams
+
 |||
 GetVehicleType
 ![GetVehicleType](./assets/GetVehicleType.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -39,7 +41,8 @@ GetVehicleType
   "method" : "VehicleInfo.GetVehicleType"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -47,20 +50,19 @@ GetVehicleType
   "jsonrpc" : "2.0",
   "result" :
   {
-    "vehicleType" :
-    [
+    "vehicleType" :{
       "make" : "Ford",
       "model" : "Fusion",
       "modelYear" : "2013",
       "trim" : "SE"
-    ]
+    },
     "code" : 0,
     "method" : "VehicleInfo.GetVehicleType"
   }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

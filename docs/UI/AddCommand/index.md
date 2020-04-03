@@ -45,50 +45,61 @@ UI.AddCommand represents a request from an application to add a command to the a
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 AddCommand Command Chosen By User
 ![AddCommand](./assets/AddCommandChosen.png)
 |||
+
 |||
 AddCommand App Inactive
 ![AddCommand](./assets/AddCommandAppInactive.png)
 |||
+
 |||
 AddCommand with sub menu
 ![AddCommand](./assets/AddCommandSubMenu.png)
 |||
+
 |||
 AddCommand positions
 ![AddCommand](./assets/AddCommandPositions.png)
 |||
+
 |||
 AddCommand Rejected Limit Reached
 ![AddCommand](./assets/AddCommandRejectedLimit.png)
 |||
+
 |||
 AddCommand UI Succeeds, VR Fails
 ![AddCommand](./assets/AddCommandVRFail.png)
 |||
+
 |||
 AddCommand UI Succeeds, VR Unresponsive
 ![AddCommand](./assets/AddCommandVRNoResponse.png)
 |||
+
 |||
 AddCommand UI Fails, VR Succeeds
 ![AddCommand](./assets/AddCommandFailVRSuccess.png)
 |||
+
 |||
 AddCommand UI No Response, VR Succeeds
 ![AddCommand](./assets/AddCommandUINoResponseVRSuccess.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
   "id" : 215,
   "jsonrpc" : "2.0",
-  "method" : "UI. AddCommand",
+  "method" : "UI.AddCommand",
   "params" :
   {
     "cmdID" : 2318,
@@ -101,13 +112,14 @@ AddCommand UI No Response, VR Succeeds
     "cmdIcon" :
      {
          "value" : "tmp/SDL/app/Gis_meteo/1245_28.jpeg",
-         "imageType" : DYNAMIC
+         "imageType" : "DYNAMIC"
      },
     "appID" : 65409
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -121,7 +133,7 @@ AddCommand UI No Response, VR Succeeds
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -10,6 +10,7 @@ Purpose
 : Set the UI properties of an application.
 
 ### Description
+
 SDL requests to set-up the data for VR help layout, the name and icon for in-application menu and the properties of the touchscreen keyboard.
 
 The request may arrive for the application whether being active or in background on HMI (depends on Policy Table permissions applicable to mobile application request, by default allowed to operate in all HMI levels except of NONE).
@@ -18,19 +19,12 @@ The `vrHelp` parameter of the `SetGlobalProperties` RPC is used by the system to
 
 SDL sends SetGlobalProperties request with specific `<vrHelp>` and `<vrHelpTitle>` values to HMI in next cases:   
 
-1.	If at any point in time, the application sends `SetGlobalProperties` RPC with the `vrHelp` **and** `helpPrompt` parameters, then SDL Core shall continue with the existing behavior of forwarding such requests to HMI and SDL Core shall delete its internal list and stop sending `SetGlobalProperties` RPC to HMI after each AddCommmand/DeleteCommand request received from mobile.
+1.	If at any point in time, the application sends `SetGlobalProperties` RPC with the `vrHelp` **and** `helpPrompt` parameters, then SDL Core shall continue with the existing behavior of forwarding such requests to HMI and SDL Core shall delete its internal list and stop sending `SetGlobalProperties` RPC to HMI after each AddCommand/DeleteCommand request received from mobile.
 2. If at any point in time, the application sends `SetGlobalProperties` RPC with **either** of `vrHelp` **or** `helpPrompt` parameters, then SDL Core shall continue with the existing behavior of forwarding such requests to HMI and SDL Core shall not delete its internal list and shall continue to update the parameter which was not provided by the application.  
 3. In case mobile app sends `AddCommand` with `CommandType = Command`, SDL must send update values of `vrHelp` via `SetGlobalProperties` to HMI. _(Note: AddCommand requests related to choice set must NOT trigger the update of "vrHelp")_
 4. In case mobile app sends _SetGlobalProperties_request_ to SDL:   
-    - with both valid values of _autoCompleteList_ and _autoCompleteText_ params, _SDL must_:   
-        - transfer _SetGlobalProperties_request_ with _autoCompleteList_ param and without (omitted) _autoCompleteText_ param to HMI;   
-        - respond with `<resultCode_received_from_HMI>` to mobile app.   
-    - with valid _autoCompleteList_ parameter with other valid params related to request and this request is allowed by Policies, _SDL must_:   
-        - transfer _SetGlobalProperties_ with all requested params to HMI;   
-        - respond with `<resultCode_received_from_HMI>` to mobile app.   
-    - without _autoCompleteList_ parameter with other valid params related to request and this request is allowed by Policies, _SDL must_:   
-        - transfer _SetGlobalProperties_ with all requested parameters to HMI (_thus, without autoCompleteList_).   
-        - respond with `<resultCode_received_from _HMI>` to mobile app.   
+    - _SDL must_ omit the `autoCompleteText` parameter when forwarding to the HMI
+        - if `autoCompleteText` is present and `autoCompleteList` is omitted, SDL will forward `autoCompleteList` with a single value, taken from `autoCompleteText`.
  
 !!! NOTE
 
@@ -38,17 +32,18 @@ By default `vrHelpTitle` value is set to application name.
 
 _**Notes for HMI expected behavior:**_
 
-1. The system shall have the ability to receive and store multiple strings for _autoCompleteText_ per app.   
-2. When the system receives a new list of strings for autoCompleteText for a particular app, the system shall delete the previous list and replace it with the new list for that app.   
-3. When any of the keyboard layouts are being used, the system shall reference the list of _autoCompleteText_ strings for that app.   
-4. As the user enters data on the keyboard, the system shall display the _autoCompleteText_ strings which match the entry.   
-5. The number of matching _autoCompleteText_ strings displayed shall only be limited by the character length constraints of the hmi.   
-6. The system shall provide the user the ability to select one of the displayed matching _autoCompleteText_ strings without having to enter the entire string.   
-7. When the user selects one of the displayed matching _autoCompleteText_ string, the system shall submit that entry and not require further user input for submission.
+1. The system shall have the ability to receive and store multiple strings from `autoCompleteList` per app.   
+2. When the system receives a new list of strings in `autoCompleteList` for a particular app, the system shall delete the previous list and replace it with the new list for that app.   
+3. When any of the keyboard layouts are being used, the system shall reference the `autoCompleteList` strings for that app.   
+4. As the user enters data on the keyboard, the system shall display values from `autoCompleteList` which match the entry.
+5. The number of matching `autoCompleteList` strings displayed shall only be limited by the character length constraints of the hmi.
+6. The system shall provide the user the ability to select one of the displayed matching `autoCompleteList` strings without having to enter the entire string.   
+7. When the user selects one of the displayed matching `autoCompleteList` strings, the system shall submit that entry and not require further user input for submission.
 
 !!!
 
 ### Request
+
 #### Behavior
 
 !!! MUST   
@@ -74,11 +69,13 @@ _**Notes for HMI expected behavior:**_
 |vrHelpTitle|String|false|maxlength: 500|
 |vrHelp|[Common.VrHelpItem](../../common/structs/#vrhelpitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |menuTitle|String|false|maxlength: 500|
-|menuIcon|[Common.Image](../../common/structs/#image)|false|-|
-|keyboardProperties|[Common.KeyboardProperties](../../common/structs/#keyboardproperties)|false|-|
-|appID|Integer|true|-|
+|menuIcon|[Common.Image](../../common/structs/#image)|false||
+|keyboardProperties|[Common.KeyboardProperties](../../common/structs/#keyboardproperties)|false||
+|appID|Integer|true||
+|menuLayout|[Common.MenuLayout](../../common/enums/#menulayout)|false||
 
 ### Response
+
 |Result |Description |Message type WebSocket|Message type D-Bus|Message Params|
 |:------|:-----------|:---------------------|:-----------------|:-------------|
 |Success|SUCCESS: HMI has set the requested properties.|JSON response|Method return|code: 0|
@@ -97,12 +94,20 @@ In case HMI does not respond SDL's request during SDL-default timeout (10 sec), 
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 SetGlobalProperties for active app on HMI with VR activation
 ![SetGlobalProperties](./assets/SetGlobalPropertiesActiveVRActivate.png)
 |||
 
-### Example Request
+|||
+SetGlobalProperties for active app with TTS.SetGlobalProperties_request, UI.SetGlobalProperties_request, VR.Started, VR.Stopped.   
+![SetGlobalProperties](./assets/SetGlobalProperties_TTS_UI_VR.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -117,37 +122,37 @@ SetGlobalProperties for active app on HMI with VR activation
         {
          "text" : "Pause",
          "image" :
-          [
+          {
              "value" : "tmp/SDL/app/Pandora/icon_1067.jpg",
-             "imageType" : DYNAMIC
-          ],
+             "imageType" : "DYNAMIC"
+          },
          "position" : 1
         },
         {
          "text" : "Resume",
          "image" :
-          [
+          {
              "value" : "tmp/SDL/app/Pandora/icon_1083.jpeg",
-             "imageType" : DYNAMIC
-          ],
+             "imageType" : "DYNAMIC"
+          },
          "position" : 2
         },
         {
          "text" : "Skip",
          "image" :
-          [
+          {
              "value" : "tmp/SDL/app/Pandora/icon_1013.jpeg",
-             "imageType" : DYNAMIC
-          ],
+             "imageType" : "DYNAMIC"
+          },
          "position" : 3
         },
         {
          "text" : "Bookmark",
          "image" :
-          [
+          {
              "value" : "tmp/SDL/app/Pandora/icon_1046.jpeg",
-             "imageType" : DYNAMIC
-          ],
+             "imageType" : "DYNAMIC"
+          },
          "position" : 4
         }
     ],
@@ -155,7 +160,8 @@ SetGlobalProperties for active app on HMI with VR activation
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -169,7 +175,7 @@ SetGlobalProperties for active app on HMI with VR activation
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

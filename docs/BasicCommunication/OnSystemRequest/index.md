@@ -31,7 +31,11 @@ _**SyncP NOTE**_
  2. It's SyncP responsibility to choose an application for sending PTU and start timer (for future retry strategy) after sending OnSystemRequest to SDL.
 
 !!! MUST   
-HMI must send `OnSystemRequest`, if specific data is requested from the mobile device/cloud, or binary data needs to be sent to the mobile device.
+1. Send `OnSystemRequest`, if specific data is requested from the mobile device/cloud, or binary data needs to be sent to the mobile device.
+2. Send `OnSystemRequest` with `requestType=OEM_SPECIFIC` and `requestSubType=VEHICLE_DATA_MAPPING` to SDL to get OEM Network Mapping table.
+3. NOT send `OnSystemRequest` to SDL while delivering PTS to the policy server using the in-vehicle modem.
+4. Send `OnSystemRequest` to SDL (to forward it to a mobile app) in case HMI can't successfully retrieve PTU from the policy server using the in-vehicle modem.
+
 !!!
 
 ### Notification
@@ -48,12 +52,10 @@ HMI must send `OnSystemRequest`, if specific data is requested from the mobile d
 |length|Integer|false|minvalue: 0<br>maxvalue: 100000000000|
 |timeout|Integer|false|minvalue: 0<br>maxvalue: 2000000000|
 |fileName|String|true|minlength: 1<br>maxlength: 255|
-|appID|String|false|minlength: 1<br>maxlength: 50|
-
-[Common.RequestType]: ../../common/enums/#requesttype
-[Common.FileType]: ../../common/enums/#filetype
+|appID|Integer|false||
 
 ### Sequence Diagrams
+
 |||
 System Requests File Download
 ![OnSystemRequest](./assets/OnSystemRequest.png)
@@ -65,11 +67,19 @@ BC.OnSystemRequest in "Proprietary" Policy Table Update Flow
 |||
 
 |||
-BC.OnSystemRequest in External Proprietary Policy Table Update Flow
-![EXTERNAL proprietary](../policyupdate/assets/diagram_PolicyUpdate_external_proprietary.png)
+BC.OnSystemRequest in "External Proprietary" Policy Table Update Flow
+![External ProprietaryPTU](./assets/OnSystemRequest_in_External_Proprietary_PTU_flow.png)
 |||
 
-#### JSON Example Notification
+|||
+BC.OnSystemRequest in Policy Table Update Flow with in-vehicle modem
+![OnSystemRequest PTU modem](./assets/PTU_modem_failure.png)
+|||
+
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

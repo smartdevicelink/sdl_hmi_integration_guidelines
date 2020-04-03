@@ -22,7 +22,7 @@ A request sent by SDL to display a list of choices to the user.
 
 !!! note
 
-A UI.PerformInteraction with a timeout value of `0` should not be timed out immediately. Instead, it should use some default timeout value predetermined by the HMI.
+A UI.PerformInteraction with a timeout value of zero should not be timed out immediately. Instead, it should use some default timeout value predetermined by the HMI.
 
 !!!
 
@@ -36,9 +36,10 @@ A UI.PerformInteraction with a timeout value of `0` should not be timed out imme
 |choiceSet|[Common.Choice](../../common/structs/#choice)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |vrHelpTitle|String|false|maxlength: 500|
 |vrHelp|[Common.VrHelpItem](../../common/structs/#vrhelpitem)|false|array: true<br>minsize: 1<br>maxsize: 100|
-|timeout|Integer|true|minvalue: 5000<br>maxvalue: 100000|
+|timeout|Integer|true|minvalue: 5000<br>maxvalue: 100000<br>defvalue: 10000|
 |interactionLayout|[Common.LayoutMode](../../common/enums/#layoutmode)|false||
 |appID|Integer|true||
+|cancelID|Integer|false||
 
 ### Response
 
@@ -50,20 +51,25 @@ A UI.PerformInteraction with a timeout value of `0` should not be timed out imme
 |manualTextEntry|String|false|minlength: 0<br>maxlength: 500|
 
 ### Sequence Diagrams
+
 |||
-PerformInteraction Successful with VR Only
+PerformInteraction in VR Mode completed successfully
 ![PerformInteraction](./assets/PerformInteractionVROnly.png)
 |||
+
 |||
-PerformInteraction Successful with Manual Only
+PerformInteraction in Manual Only Mode completed successfully
 ![PerformInteraction](./assets/PerformInteractionManualOnly.png)
 |||
+
 |||
-PerformInteraction Timeout with Both
-![PerformInteraction](./assets/PerformInteractionBothTimeout.png)
+PerformInteraction in Both Mode timed out
+![PerformInteraction](./assets/PerformInteractionBoth.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -74,7 +80,7 @@ PerformInteraction Timeout with Both
   {
     "initialText" :
     {
-         "fieldName" : initialInteractionText,
+         "fieldName" : "initialInteractionText",
          "fieldText" : "Choose the station:"
     },
 
@@ -101,10 +107,10 @@ PerformInteraction Timeout with Both
         {
          "text" : "Sky FM",
          "image" :
-          [
+          {
              "value" : "tmp/SDL/app/Pandora/icon_5410.jpg",
-             "imageType" : DYNAMIC
-          ],
+             "imageType" : "DYNAMIC"
+          },
 
          "position" : 1
         },
@@ -112,20 +118,20 @@ PerformInteraction Timeout with Both
         {
          "text" : "Paradise",
          "image" :
-          [
+          {
              "value" : "tmp/SDL/app/Pandora/icon_5423.jpeg",
-             "imageType" : DYNAMIC
-          ],
+             "imageType" : "DYNAMIC"
+          },
          "position" : 2
         },
 
         {
          "text" : "100 XR",
          "image" :
-          [
+          {
              "value" : "tmp/SDL/app/Pandora/icon_5465.jpeg",
-             "imageType" : DYNAMIC
-          ],
+             "imageType" : "DYNAMIC"
+          },
          "position" : 3
         }
     ],
@@ -135,7 +141,8 @@ PerformInteraction Timeout with Both
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -143,14 +150,14 @@ PerformInteraction Timeout with Both
   "jsonrpc" : "2.0",
   "result" :
   {
-    "choiceID" : 2416
+    "choiceID" : 2416,
     "code" : 0,
     "method" : "UI.PerformInteraction"
   }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

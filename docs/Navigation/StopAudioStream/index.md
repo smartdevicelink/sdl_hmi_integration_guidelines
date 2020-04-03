@@ -1,7 +1,7 @@
 ## StopAudioStream
 
 Type
-: Notification
+: Function
 
 Sender
 : SDL
@@ -24,15 +24,19 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 StopAudioStream
 ![StopAudioStream](./assets/StopAudioStream.jpg)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
+  "id" : 176,
   "jsonrpc" : "2.0",
   "method" : "Navigation.StopAudioStream",
   "params" :  
@@ -41,7 +45,8 @@ StopAudioStream
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -55,7 +60,7 @@ StopAudioStream
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

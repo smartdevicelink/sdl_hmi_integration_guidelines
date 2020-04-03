@@ -24,16 +24,18 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Speak
 ![Speak](./assets/Speak.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -48,11 +50,13 @@ Speak
         "text" : "Please say a command", 
         "type" : "TEXT"
       }
-    ]
+    ],
+    "appID": 65368
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -66,7 +70,7 @@ Speak
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

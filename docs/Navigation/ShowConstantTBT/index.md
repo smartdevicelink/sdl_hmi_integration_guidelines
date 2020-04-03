@@ -31,12 +31,15 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 ShowConstantTBT
 ![ShowConstantTBT](./assets/ShowConstantTBT.jpg)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -48,37 +51,38 @@ ShowConstantTBT
     "navigationTexts" :
     [
       {
-        "fieldName" :  navigationText1,
+        "fieldName" :  "navigationText1",
         "fieldText" : "Destination point: Berlin"
       },
       {
-        "fieldName" :  ETA,
+        "fieldName" :  "ETA",
         "fieldText" : "15:45"
       },
       {
-        "fieldName" :  totalDistance,
+        "fieldName" :  "totalDistance",
         "fieldText" : "658"
       }
     ],
     "turnIcon" :
-    [
+    {
          "value" : "tmp/SDL/app/Navi/icon_3245.jpeg",
-         "imageType" : DYNAMIC
-    ],
-    "distanceToManeuver" : 168,
-    "distanceToManeuverScale" : 265,
+         "imageType" : "DYNAMIC"
+    },
+    "distanceToManeuver" : 168.5,
+    "distanceToManeuverScale" : 265.75,
     "softButtons" :
-    [
-        "type" :  TEXT,
+    {
+        "type" :  "TEXT",
         "text" : "Close",
         "softButtonID" : 76,
-        "systemAction" :  DEFAULT_ACTION
-    ],
+        "systemAction" :  "DEFAULT_ACTION"
+    },
     "appID" : 26743
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -92,7 +96,7 @@ ShowConstantTBT
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -13,11 +13,11 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
-|ttsName|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
-|language|[Common.Language](../../common/enums/#language)|true||
-|appID|Integer|true||
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:--------------------------|
+|ttsName|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|Request new ttsName registration<br>TTS string for VR recognition of the mobile application name, e.g. "Ford Drive Green".<br> Meant to overcome any failing on speech engine in properly pronouncing / understanding app name.<br>May not be empty.<br>May not start with a new line character.<br>Not unique value (SDL makes all the checks)|
+|language|[Common.Language](../../common/enums/#language)|true| | |
+|appID|Integer|true| | |
 
 ### Response
 
@@ -26,12 +26,15 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 ChangeRegistration after OnAppRegistered
 ![ChangeRegistration](./assets/ChangeRegistration.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -40,12 +43,13 @@ ChangeRegistration after OnAppRegistered
   "method" : "TTS.ChangeRegistration",
   "params" :
   {
-    "language" : DE-DE,
+    "language" : "DE-DE",
     "appID" : 65539
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -59,7 +63,7 @@ ChangeRegistration after OnAppRegistered
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

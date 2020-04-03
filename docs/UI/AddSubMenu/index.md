@@ -45,6 +45,7 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
 |menuParams|[Common.MenuParams](../../common/structs/#menuparams)|true||
 |menuIcon|[Common.Image](../../common/structs/#image)|false||
 |appID|Integer|true||
+|menuLayout|[Common.MenuLayout](../../common/enums/#menulayout)|false||
 
 ### Response
 
@@ -53,24 +54,30 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Add Sub Menu for Active App
 ![AddSubMenu](./assets/AddSubMenuActiveApp.png)
 |||
+
 |||
 Add Sub Menu for Inactive App
 ![AddSubMenu](./assets/AddSubMenuInactiveApp.png)
 |||
+
 |||
 Add Sub Menu with positions
 ![AddSubMenu](./assets/AddSubMenuPositions.png)
 |||
+
 |||
 Add Sub Menu Rejected Limit Reached
 ![AddSubMenu](./assets/AddSubMenuLimit.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -89,7 +96,8 @@ Add Sub Menu Rejected Limit Reached
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -103,7 +111,7 @@ Add Sub Menu Rejected Limit Reached
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

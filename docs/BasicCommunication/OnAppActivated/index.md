@@ -17,6 +17,7 @@ When `OnAppActivated` is received, SDL sends an `ActivateApp` request to confirm
 
   1. Send an `OnAppActivated` notification when the user chooses an application on the HMI.
   2. Wait for `ActivateApp` before the HMI can display the application related screen.
+  3. Send `OnAppActivated` notification with the widget's `windowID` to move the widget to HMI_FULL when it becomes visible on HMI.
 
 !!!
 
@@ -32,18 +33,22 @@ When `OnAppActivated` is received, SDL sends an `ActivateApp` request to confirm
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |appID|Integer|true|ID of the application to be activated on the HMI|
-
+|windowID|Integer|false||
 
 ### Sequence Diagrams
+
 |||
 User Activates App
 ![OnAppActivated](./assets/OnAppActivated.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

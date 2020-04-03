@@ -11,7 +11,9 @@ Purpose
 
 SDL uses `OnEventChanged` notification to appropriately manage the hmiLevel and audioStreamingState of each application during an active event.
 
-##### PHONE_CALL
+### Event Types
+
+#### PHONE_CALL
 
 !!! MUST
 1. Send notification with appropriate parameter value when active call on HMI has been started/ended.
@@ -32,7 +34,7 @@ Upon receiving `OnEventChanged(PHONE_CALL)`, SDL will:
 |true|Change the HMI state of all applications currently either in FULL or LIMITED to (BACKGROUND, NOT_AUDIBLE)|
 |false|Return applications to the same HMI state they had prior to the event|
 
-##### EMERGENCY_EVENT
+#### EMERGENCY_EVENT
 
 EMERGENCY_EVENT is an HMI-specific event used when "Emergency event" or "Rear view camera" are active. The main idea of this from the SDL<->HMI point of view is that navigation/audio streaming mustn't interfere with Rear Camera View mode. The HMI is responsible for managing audio/video data while EMERGENCY_EVENT is active.
 
@@ -51,7 +53,7 @@ Upon receiving `OnEventChanged(EMERGENCY_EVENT)`, SDL will:
 While the event is active, the app is not allowed to stream audio and it will not be heard by the user (due to other audio and/or system events blocking it).
 !!!
 
-##### DEACTIVATE_HMI
+#### DEACTIVATE_HMI
 
 !!! MUST
 1. Send notification with appropriate parameter value when all apps should be deactivated/restored.
@@ -69,7 +71,7 @@ Upon receiving `OnEventChanged(DEACTIVATE_HMI)`, SDL will:
 When this event is active, SDL **rejects** all app activation requests from the HMI.
 !!!
 
-##### AUDIO_SOURCE/EMBEDDED_NAVI
+#### AUDIO_SOURCE/EMBEDDED_NAVI
 
 !!! MUST
 1. Send notification to SDL with appropriate parameter value when embedded navigation or audio source is activated/deactivated.
@@ -96,6 +98,7 @@ When this event is active, SDL **rejects** all app activation requests from the 
 !!!
 
 ##### HMI Status of apps when `AUDIO_SOURCE` or `EMBEDDED_NAVI` event is activated
+
 |appHMIType|Event|HMI State before|HMI State after|
 |:---------|:----|:---------------|:--------------|
 |Media|AUDIO_SOURCE|(FULL/LIMITED, AUDIBLE)|(BACKGROUND, NOT_AUDIBLE)|
@@ -106,6 +109,7 @@ When this event is active, SDL **rejects** all app activation requests from the 
 |Non-media|EMBEDDED_NAVI|(FULL/LIMITED, AUDIBLE)|(BACKGROUND, NOT_AUDIBLE)|
 
 ##### Activating apps during active `AUDIO_SOURCE` or `EMBEDDED_NAVI` event
+
 |appHMIType|Event|New HMI State|Keep event active|
 |:---------|:----|:------------|:----------------|
 |Media|AUDIO_SOURCE|(FULL, AUDIBLE)|false|
@@ -115,14 +119,17 @@ When this event is active, SDL **rejects** all app activation requests from the 
 |Navigation|EMBEDDED_NAVI|(FULL, AUDIBLE)|false|
 |Non-media|EMBEDDED_NAVI|(FULL, NOT_AUDIBLE)|true|
 
+### Notification
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:--------|:---------|
-|eventName|[Common.EventTypes](../../common/enums/#eventtypes)|true|-|Specifies the types of active events|
-|isActive|Boolean|true|-|Must be 'true' when the event is started on HMI. Must be 'false' when the event is ended on HMI|
+|eventName|[Common.EventTypes](../../common/enums/#eventtypes)|true||Specifies the types of active events|
+|isActive|Boolean|true||Must be 'true' when the event is started on HMI. Must be 'false' when the event is ended on HMI|
 
 ### Sequence Diagrams
+
 |||
 PHONE_CALL, media app is active
 ![OnEventChanged](./assets/PHONE_CALL1.png)
@@ -168,11 +175,14 @@ Multiple apps activation during active embedded navigation or audio source
 ![OnEventChanged](./assets/Multiple_apps_activation_during_active_embedded_navigation_or_audio_source.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : "OnEventChanged",
+  "method" : "BasicCommunication.OnEventChanged",
   "params" :
   {
     "eventName" : "PHONE_CALL",

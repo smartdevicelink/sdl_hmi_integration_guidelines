@@ -9,20 +9,21 @@ Sender
 Purpose
 : To suspend/restore SDL's services due to a low voltage event
 
-### Description  
+### Description
+
 A 'LowVoltage' event occurs on HMI when battery voltage hits below a certain predefined threshold set by the system.  
 In case of such event, SDL operations are halted including receiving and processing of normal RPC messages from HMI. 
 
 HMI sends system signals of the range SIGRTMIN - SIGRTMAX for LowVoltage, WakeUp and IgnitionOff to all smartDeviceLinkCore processes. 
 
-!!!
-MUST  
+!!! MUST  
 1. Send `LOW_VOLTAGE` signal to SDL when a 'LowVoltage' event occurs
 2. Send `WAKE_UP` signal to SDL when the voltage recovers
 3. Send `IGNITION_OFF` signal when SDL processes have to be terminated, applications have to be unregistered due SDL functionality suspension during a LOW VOLTAGE event
 !!!
 
 #### SDL behavior in case of a `LOW_VOLTAGE` event:
+
 * SDL ignores all the requests from mobile applications without providing any kind of response.
 * SDL ignores all responses and messages from HMI except for `WAKE_UP` or `IGNITION_OFF` signals.
 * SDL stops audio/video streaming services.
@@ -34,6 +35,7 @@ MUST
 After the voltage level is restored HMI sends `WAKE_UP` signal to SDL and SDL processes its regular work and all operations resumption.
 
 #### SDL behavior after receiving a "WAKE_UP" signal:
+
 * After receiving a `WAKE_UP` signal, all applications will be unregistered and the device disconnected.
 * If `LOW_VOLTAGE` was received at the moment of writing to policies database, SDL and Policies Manager must keep policies database correct and working. After `WAKE_UP` policy database reflects the last known correct state.
 * SDL must be able to start up correctly in the next ignition cycle after it was powered off in low voltage state.   

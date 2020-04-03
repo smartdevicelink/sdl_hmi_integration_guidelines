@@ -13,11 +13,11 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
-|vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40|
-|language|[Common.Language](../../common/enums/#language)|true||
-|appID|Integer|true||
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:---------|
+|vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40|Request new VR synonyms registration<br>Defines an additional voice recognition command.<br>Must not interfere with any name of previously registered applications from the same device.|
+|language|[Common.Language](../../common/enums/#language)|true||The language application wants to switch to.|
+|appID|Integer|true||ID of application that concerns this RPC.|
 
 ### Response
 
@@ -26,12 +26,15 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 ChangeRegistration
 ![ChangeRegistration](./assets/ChangeRegistration.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -45,7 +48,8 @@ ChangeRegistration
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -59,7 +63,7 @@ ChangeRegistration
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

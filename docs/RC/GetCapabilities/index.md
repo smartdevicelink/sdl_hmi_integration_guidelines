@@ -12,6 +12,7 @@ Purpose
 GetCapabilities is a request originated by SDL Core after receiving an [`IsReady`](../isready) Response from the Remote Control interface. If the HMI responds to GetCapabilities with the [`RemoteControlCapabilities`](../../common/structs/#remotecontrolcapabilities) parameter, this struct will overwrite any Remote Control related capabilities that are stored in the [`hmi_capabilities.json`](https://github.com/smartdevicelink/sdl_core/blob/master/src/appMain/hmi_capabilities.json) configuration file.
 
 The [`RemoteControlCapabilities`](../../common/structs/#remotecontrolcapabilities) struct will be stored by SDL Core, and used when a mobile application performs a `GetSystemCapability` request.
+
 ### Request
 
 #### Parameters
@@ -20,20 +21,31 @@ This RPC has no additional parameter requirements
 
 ### Response
 
+!!! must 
+
+1. Provide `moduleInfo` with `moduleID` for each module of all module types in GetCapabilities response to SDL if it supports multiple modules per module type.  
+2. Determine and provide default `moduleID` for the moduleType and publish it as the first item in RemoteControlCapabilities.
+3. Publish how many rows, columns and levels are available for the vehicle and the list of modules in properly defined grids.
+
+!!!
+
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |remoteControlCapability|[Common.RemoteControlCapabilities](../../common/structs/#remotecontrolcapabilities)|false|See RemoteControlCapabilities, all available RC modules and buttons shall be returned|
+|seatLocationCapability|[Common.SeatLocationCapability](../../common/structs/#seatlocationcapability)|false|See SeatLocationCapability, all available seat locations shall be returned.|
 
 ### Sequence Diagrams
 
 |||
 GetCapabilities
-![GetCapabilities](assets/IsReady_GetCapabilities.png)
+![GetCapabilities](./assets/IsReady_GetCapabilities.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -43,7 +55,7 @@ GetCapabilities
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -208,7 +220,8 @@ GetCapabilities
   }
 }
 ```
-### Example Error
+
+#### Example Error
 
 ```json
 {

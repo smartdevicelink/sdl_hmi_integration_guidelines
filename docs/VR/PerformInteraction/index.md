@@ -20,6 +20,8 @@ Purpose
 |timeoutPrompt|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |timeout|Integer|true||
 |grammarID|Integer|false|array: true<br>minsize: 1<br>maxsize: 100<br>minvalue: 0<br>maxvalue: 2000000000|
+|appID|Integer|true||
+|cancelID|Integer|false||
 
 ### Response
 
@@ -30,20 +32,25 @@ Purpose
 |choiceID|Integer|false|minvalue: 0<br>maxvalue: 2000000000|
 
 ### Sequence Diagrams
+
 |||
 PerformInteraction in VR Mode completed successfully
 ![PerformInteraction](./assets/PerformInteractionSuccess.png)
 |||
+
 |||
 PerformInteraction in Manual Only Mode completed successfully
 ![PerformInteraction](./assets/PerformInteractionManualSuccess.png)
 |||
+
 |||
-PerformInteraction in Both Mode times out
-![PerformInteraction](./assets/PerformInteractionBothTimeout.png)
+PerformInteraction in Both Mode timed out
+![PerformInteraction](./assets/PerformInteractionBoth.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -85,11 +92,13 @@ PerformInteraction in Both Mode times out
     ],
 
     "timeout" : 10000,
-    "grammarID" : 245
+    "grammarID" : 245,
+    "appID" : 101
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -97,14 +106,14 @@ PerformInteraction in Both Mode times out
   "jsonrpc" : "2.0",
   "result" :
   {
-    "choiceID" : 2416
+    "choiceID" : 2416,
     "code" : 0,
     "method" : "VR.PerformInteraction"
   }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

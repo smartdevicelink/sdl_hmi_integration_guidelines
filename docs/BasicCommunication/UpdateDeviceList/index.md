@@ -1,12 +1,15 @@
 ## UpdateDeviceList
 
-###### [TODO: looking for feedback on how to do format this section]
+Type
+: Function
 
-  * Method: BasicCommunication.UpdateDeviceList
-  * Sender: SDL
-  * Purpose: Update HMI's list of known, connected devices
+Sender
+: SDL
 
-The `UpdateAppList` request is sent after SDL has found a new device over one of the available transports.
+Purpose
+: Update HMI's list of known, connected devices
+
+The [UpdateAppList](../updateapplist) request is sent after SDL has found a new device over one of the available transports.
 
 !!! note
 
@@ -27,6 +30,10 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
     * SDL learns about a new device connected over Wifi
     * SDL sends `BasicCommunication.UpdateDeviceList` with the name and id of the discovered device to the HMI
     * SDL sends `BasicCommunication.OnAppRegistered` to the HMI and does not wait for `OnDeviceChosen` or `OnFindApplications` notifications
+  4. Cloud App Websockets
+    * The application manager queries the policy table for cloud app policy entries
+    * For each policy table entry, the websocket transport adapter creates a cloud device for each cloud application.
+    * SDL sends `BasicCommunication.UpdateDeviceList` with the names, IDs, and **transportType: CLOUD_WEBSOCKET** for each cloud device
 
 !!!
 
@@ -54,7 +61,26 @@ The SDL's default Transport Manager (TM) and Transport Adapters (TA) behave in t
 
 This RPC has no additional parameter requirements
 
-### Example Request
+### Sequence Diagrams
+
+|||
+UpdateDeviceList after SDL discovers device over BT or USB
+![Update Device List BT USB](./assets/UpdateDeviceListBTUSB.png)
+|||
+
+|||
+UpdateDeviceList iOS
+![Update Device List iOS](./assets/UpdateDeviceListiOS.png)
+|||
+
+|||
+UpdateDeviceList USB AOA
+![Update Device List AOA](./assets/UpdateDeviceListAOA.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -66,7 +92,7 @@ This RPC has no additional parameter requirements
     "deviceList" :
     [      
       {
-        "name" : "Jerry`s Phone",
+        "name" : "Jerry's Phone",
         "id" : 3
       },
 
@@ -79,7 +105,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -92,7 +118,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -107,18 +133,3 @@ This RPC has no additional parameter requirements
   }
 }
 ```
-
-### Sequence Diagrams
-
-|||
-UpdateDeviceList after SDL discovers device over BT or USB
-![Update Device List BT USB](./assets/UpdateDeviceListBTUSB.png)
-|||
-|||
-UpdateDeviceList iOS
-![Update Device List iOS](./assets/UpdateDeviceListiOS.png)
-|||
-|||
-UpdateDeviceList USB AOA
-![Update Device List AOA](./assets/UpdateDeviceListAOA.png)
-|||

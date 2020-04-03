@@ -13,8 +13,7 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -22,8 +21,10 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|speechCapabilities|[Common.SpeechCapabilities](../../common/enums/#speechcapabilities)|true|array: true<br>minsize: 1<br>maxsize: 5|
-|prerecordedSpeechCapabilities|[Common.PrerecordedSpeech](../../common/enums/#prerecordedspeech)|true|array: true<br>minsize: 1<br>maxsize: 5|
+|speechCapabilities|[Common.SpeechCapabilities](../../common/enums/#speechcapabilities)|true|array: true<br>minsize: 1<br>maxsize: 100|
+|prerecordedSpeechCapabilities|[Common.PrerecordedSpeech](../../common/enums/#prerecordedspeech)|true|array: true<br>minsize: 1<br>maxsize: 100|
+
+##### SpeechCapabilities
 
 !!! NOTE
 
@@ -53,12 +54,15 @@ Purpose
 !!!
 
 ### Sequence Diagrams
+
 |||
 GetCapabilities
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -67,7 +71,8 @@ GetCapabilities
   "method" : "TTS.GetCapabilities"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -75,15 +80,15 @@ GetCapabilities
   "jsonrpc" : "2.0",
   "result" :
   {
-    "capabilities" : [TEXT],
-    "prerecordedSpeechCapabilities" : [HELP_JINGLE, INITIAL_JINGLE, LISTEN_JINGLE, POSITIVE_JINGLE, NEGATIVE_JINGLE],
+    "speechCapabilities" : ["TEXT"],
+    "prerecordedSpeechCapabilities" : ["HELP_JINGLE", "INITIAL_JINGLE", "LISTEN_JINGLE", "POSITIVE_JINGLE", "NEGATIVE_JINGLE"],
     "code" : 0,
     "method" : "TTS.GetCapabilities"
   }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

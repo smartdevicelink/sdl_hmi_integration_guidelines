@@ -11,10 +11,11 @@ Purpose
 
 !!! note
 
-* **HMI->SDL** if HMI <span title="App Service Consumer">ASC</span> is requesting service data
-* **SDL->HMI** if HMI <span title="App Service Provider">ASP</span> is receiving a service data request
+* **HMI->SDL** if HMI App Service Consumer (ASC) is requesting service data
+* **SDL->HMI** if HMI App Service Provider (ASP) is receiving a service data request
 
 !!!
+
 ### Request
 
 #### Parameters
@@ -33,6 +34,7 @@ Purpose
 |serviceData|[Common.AppServiceData](../../common/structs/#appservicedata)|false||
 
 ### Sequence Diagrams
+
 |||
 GetAppServiceData (HMI Provider)
 ![GetAppServiceData_HMI_ASP](./assets/GetAppServiceData_HMI_ASP.png)
@@ -43,7 +45,9 @@ GetAppServiceData (HMI Consumer)
 ![GetAppServiceData_HMI_ASC](./assets/GetAppServiceData_HMI_ASC.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -55,7 +59,8 @@ GetAppServiceData (HMI Consumer)
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -64,7 +69,6 @@ GetAppServiceData (HMI Consumer)
   "result": {
     "code": 0,
     "method": "AppService.GetAppServiceData",
-    "resultCode": 0,
     "serviceData": {
       "mediaServiceData": {
         "isExplicit": false,
@@ -81,12 +85,12 @@ GetAppServiceData (HMI Consumer)
       },
       "serviceID": "9c6697b90f561cc599af19f81e9cf68a6848d6df1cdd63820d75ebfd7c727a20",
       "serviceType": "MEDIA"
-    },
-    "success": true
+    }
   }
 }
 ```
-### Example Error
+
+#### Example Error
 
 ```json
 {

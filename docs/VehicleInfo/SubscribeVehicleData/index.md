@@ -43,8 +43,22 @@ Purpose
 |fuelRange|Boolean|false||
 |engineOilLife|Boolean|false||
 |electronicParkBrakeStatus|Boolean|false||
+|cloudAppVehicleID|Boolean|false||
 
 ### Response
+
+!!! must
+
+HMI must send SubscribeVehicleData response only for ROOT level items.
+
+!!!
+
+!!! note 
+
+For OEM specific custom vehicle data items, `oemCustomDataType` will contain a type of OEM specific vehicle data (from schema), and `dataType` will be `VEHICLEDATA_OEM_CUSTOM_DATA`.  
+For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `dataType` will contain appropriate data type from `VehicleDataType` enum.
+
+!!!
 
 #### Parameters
 
@@ -78,14 +92,18 @@ Purpose
 |fuelRange|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |engineOilLife|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |electronicParkBrakeStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|cloudAppVehicleID|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
+
 |||
 SubscribeVehicleData
 ![SubscribeVehicleData](./assets/SubscribeVehicleData.jpg)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -110,7 +128,8 @@ SubscribeVehicleData
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -202,7 +221,7 @@ SubscribeVehicleData
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

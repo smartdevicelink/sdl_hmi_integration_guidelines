@@ -9,6 +9,31 @@ Sender
 Purpose
 : Get current values of specified vehicle data types.
 
+!!! must
+1. Map each parameter in GetVehicleData request to its `<name>` in the case that it is listed in HMI_API.xml; `<name>` is always a single boolean value (according to API).  
+2. Map each parameter in GetVehicleData request to its `<key>` in the case that it is not listed in HMI_API.xml; `<key>` in GetVehicleData request may be either a boolean or struct value. If the value is a struct, it may contain either boolean or nested struct values, structured according to the vehicle data structure defined in `schema_items`. 
+3. Respond with any custom vehicle data defined in `schema_items` included in the original request. 
+    * Keys and names should not match at different levels of nesting.   
+    * Schema_items should not have duplicate `name` and `key` for different vehicle data items/sub-params, except same items is defined for different versions.  
+    * Schema_items should not have `name`/`key` equivalent to any RPC vehicle data item/sub-param.
+
+4. Respond with any vehicle data defined in `HMI_API.xml` included in the original request.
+
+!!!
+
+
+!!! note
+
+#### CloudAppVehicleID
+
+* An optional parameter used by cloud apps or the policy server to identify the head unit
+* Could be used by a cloud app to identify an incoming connection from core
+* Could be used by a policy server to index cloud app configurations for a specific head unit
+
+The HMI will have to update this field if the user chooses to reset this value (in case the vehicle changes owners)
+
+!!!
+
 ### Request
 
 #### Parameters
@@ -44,6 +69,7 @@ Purpose
 |fuelRange|Boolean|false||
 |engineOilLife|Boolean|false||
 |electronicParkBrakeStatus|Boolean|false||
+|cloudAppVehicleID|Boolean|false||
 
 ### Response
 
@@ -77,17 +103,31 @@ Purpose
 |clusterModeStatus|[Common.ClusterModeStatus](../../common/structs/#clustermodestatus)|false||
 |myKey|[Common.MyKey](../../common/structs/#mykey)|false||  
 |turnSignal|[Common.TurnSignal](../../common/enums/#turnsignal)|false||
-|fuelRange|[Common.FuelRange](../../common/structs/#fuelrange)|false|minsize=0<br>maxsize=100<br>array=true|
-|engineOilLife|Float|false|minvalue=0<br>maxvalue=100|
+|fuelRange|[Common.FuelRange](../../common/structs/#fuelrange)|false|array: true<br>minsize: 0<br>maxsize: 100|
+|engineOilLife|Float|false|minvalue: 0<br>maxvalue: 100|
 |electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
+|cloudAppVehicleID|String|false||
 
 ### Sequence Diagrams
+
 |||
 GetVehicleData
 ![GetVehicleData](./assets/GetVehicleData.jpg)
 |||
 
-### Example Request
+|||
+GetVehicleData
+![GetVehicleData](./assets/VDdefinedInXMLandSchema.png)
+|||
+
+|||
+GetVehicleData with custom data
+![CustomVehicleData](./assets/GVD_custom_data.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -112,7 +152,8 @@ GetVehicleData
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -165,7 +206,7 @@ GetVehicleData
     "beltStatus" :
     {
         "driverBeltDeployed" : "YES",
-        "passengerBeltDeployed" : "YES",
+        "passengerBeltDeployed" : "YES"
     },
     "bodyInformation" :
     {
@@ -200,7 +241,7 @@ GetVehicleData
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -25,13 +25,18 @@ The HMI must send the UI.OnCommand notification to SDL when the user selects a c
 |:---|:---|:--------|:---------|
 |cmdID|Integer|true|minvalue: 0<br>maxvalue: 2000000000|
 |appID|Integer|true||
+
 ### Sequence Diagrams
+
 |||
 OnCommand
 ![OnCommand](./assets/OnCommand.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

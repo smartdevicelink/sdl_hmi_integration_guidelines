@@ -21,7 +21,7 @@ Purpose
 
 #### Parameters
 
-The request does not have specific parameters.
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -39,12 +39,15 @@ The request does not have specific parameters.
 |available|Boolean|true||
 
 ### Sequence Diagrams
+
 |||
 IsReady
 ![IsReady](./assets/IsReady.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -53,7 +56,8 @@ IsReady
   "method" : "TTS.IsReady"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -68,7 +72,7 @@ IsReady
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

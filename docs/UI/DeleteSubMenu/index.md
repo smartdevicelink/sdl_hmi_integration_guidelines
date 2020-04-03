@@ -33,22 +33,21 @@ The application's menu must no longer display the sub menu whose `menuID` matche
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Delete Sub Menu Containing Commands
 ![DeleteSubMenu](./assets/DeleteSubMenuWithCommands.png)
 |||
-|||
-Delete Sub Menu that is on screen
-![DeleteSubMenu](./assets/DeleteSubMenuOnScreen.png)
-|||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
   "id" : 70,
   "jsonrpc" : "2.0",
-  "method" : "UI. DeleteSubMenu",
+  "method" : "UI.DeleteSubMenu",
   "params" :
   {
     "menuID" : 345,
@@ -56,7 +55,8 @@ Delete Sub Menu that is on screen
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -65,12 +65,12 @@ Delete Sub Menu that is on screen
   "result" :
   {
     "code" : 0,
-    "method" : "UI. DeleteSubMenu"
+    "method" : "UI.DeleteSubMenu"
   }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -82,7 +82,7 @@ Delete Sub Menu that is on screen
     "message" : "The data may not be changed because it is currently in use",
     "data" :
     {
-      "UI. DeleteSubMenu "
+      "method": "UI.DeleteSubMenu"
     }
   }
 }

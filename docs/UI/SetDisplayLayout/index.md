@@ -32,16 +32,20 @@ Purpose
 |presetBankCapabilities|[Common.PresetBankCapabilities](../../common/structs/#presetbankcapabilities)|false||
 
 ### Sequence Diagrams
+
 |||
 SetDisplayLayout Successful with UI.GetCapabilities
 ![SetDisplayLayout](./assets/SetDisplayLayoutSuccessGetCapabilities.png)
 |||
+
 |||
 SetDisplayLayout Invalid Data with UI.GetCapabilities
 ![SetDisplayLayout](./assets/SetDisplayLayoutInvalidData.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -55,7 +59,8 @@ SetDisplayLayout Invalid Data with UI.GetCapabilities
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -65,8 +70,8 @@ SetDisplayLayout Invalid Data with UI.GetCapabilities
   {
     "displayCapabilities" :
     {
-        "displayType" : GEN2_8_DMA,
-        "textFields" : [mainField1, mainField2, alertText1, alertText2, alertText3, scrollableMessageBody, initialInteractionText, navigationText1, navigationText2, audioPassThruDisplayText1, audioPassThruDisplayText2, notificationText]
+        "displayType" : "GEN2_8_DMA",
+        "textFields" : ["mainField1", "mainField2", "alertText1", "alertText2", "alertText3", "scrollableMessageBody", "initialInteractionText", "navigationText1", "navigationText2", "audioPassThruDisplayText1", "audioPassThruDisplayText2", "notificationText"],
         "imageFields" :
         [
           {
@@ -97,11 +102,11 @@ SetDisplayLayout Invalid Data with UI.GetCapabilities
              "resolutionWidth" : 64,
              "resolutionHeight" : 64
             }
-          },
+          }
         ],
 
-        "mediaClockFormats" : [CLOCK1, CLOCKTEXT4],
-        "imageCapabilities" : [DYNAMIC],
+        "mediaClockFormats" : ["CLOCK1", "CLOCKTEXT4"],
+        "imageCapabilities" : ["DYNAMIC"],
         "graphicSupported" : true,
         "templatesAvailable" : ["DEFAULT", "MEDIA", "NON-MEDIA"],
 
@@ -126,35 +131,35 @@ SetDisplayLayout Invalid Data with UI.GetCapabilities
     "buttonCapabilities" :
     [
       {
-        "name" : OK,
+        "name" : "OK",
         "shortPressAvailable" : true,
         "longPressAvailable" : true,
         "upDownAvailable" : true
       },
       {
-        "name" : SEEKLEFT,
+        "name" : "SEEKLEFT",
         "shortPressAvailable" : true,
         "longPressAvailable" : true,
         "upDownAvailable" : true
       },
       {
-        "name" : SEEKRIGHT,
+        "name" : "SEEKRIGHT",
         "shortPressAvailable" : true,
         "longPressAvailable" : true,
         "upDownAvailable" : true
       },
       {
-        "name" : TUNEUP,
+        "name" : "TUNEUP",
         "shortPressAvailable" : true,
         "longPressAvailable" : true,
         "upDownAvailable" : true
       },
       {
-        "name" : TUNEDOWN,
+        "name" : "TUNEDOWN",
         "shortPressAvailable" : true,
         "longPressAvailable" : true,
         "upDownAvailable" : true
-      },
+      }
     ],
 
     "softButtonCapabilities" :
@@ -178,7 +183,7 @@ SetDisplayLayout Invalid Data with UI.GetCapabilities
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

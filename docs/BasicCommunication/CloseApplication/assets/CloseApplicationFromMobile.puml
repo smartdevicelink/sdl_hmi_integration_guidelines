@@ -1,0 +1,17 @@
+@startuml
+
+participant Mobile
+participant Core
+participant HMI
+
+note left of Mobile: Application is in\nhmi level FULL
+
+Mobile -> Core : CloseApplication()
+Core -> HMI : CloseApplication(appID)
+
+note right of HMI: Application is no longer\nin foreground
+
+HMI --> Core : CloseApplication(SUCCESS)
+Core ->> Mobile : OnHMIStatus(NONE)
+Core --> Mobile : CloseApplication(SUCCESS)
+@enduml

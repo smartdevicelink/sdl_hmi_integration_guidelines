@@ -32,26 +32,29 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|policyFile|String|true|minlength: 1<br>maxlength: 255|
+|policyfile|String|true|minlength: 1<br>maxlength: 255|
 
 ### Sequence Diagrams
 
 |||
-SDL.OnReceivedPolicyUpdate in EXTERNAL_PROPRIETARY flow
-![Proprietary PTU](./assets/SDL.OnReceivedPolicyUpdate%20in%20EXTERNAL_PROPRIETARY%20flow.jpg)
+SDL.OnReceivedPolicyUpdate in "External Proprietary" Policy Table Update Flow
+![Proprietary PTU](./assets/External_Proprietary_PTU_flow.png)
 |||
+
 |||
 SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
 ![Proprietary PTU](./assets/Proprietary_PTU_flow_.png)
 |||
 
+### JSON Message Examples
 
-#### JSON Example Notification
+#### Example Notification
+
 ```json
 {
 	"id" : 176,
 	"jsonrpc" : "2.0",
-	"method" : "SDL.GetURLS",
+	"method" : "SDL.OnReceivedPolicyUpdate",
 	"params" :
 	{
 		"policyfile" : "/fs/sharedFolder/ptu.json"

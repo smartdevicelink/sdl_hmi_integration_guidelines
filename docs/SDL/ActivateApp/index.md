@@ -16,7 +16,7 @@ Purpose
 1. Send `SDL.ActivateApp`.  
 2. Send a request to SDL to get messages for specified permissions (via `GetUserFriendlyMessage`) and notify user that provided permissions of application were decreased in case HMI gets  "isAppPermissionRevoked:true" respond from SDL PoliciesManager.  
 3. Send `GetListOfPermissions` request to SDL in order to obtain list of message codes for functional groups needed by application for user to consent when PoliciesManager responds with "isPermissionsConsentNeeded: true" .  
-4. Display Dialog and on result of user selection to send `OnAllowSDLFuncionality` specifying device from `ActivateApp` response, source of choice (UI/VR) and allowed set to true/false (if user ignores question, this is automatically set to false) when HMI receives `SDL.ActivateApp` (isSDLAllowed: false).
+4. Display Dialog and on result of user selection to send `OnAllowSDLFunctionality` specifying device from `ActivateApp` response, source of choice (UI/VR) and allowed set to true/false (if user ignores question, this is automatically set to false) when HMI receives `SDL.ActivateApp` (isSDLAllowed: false).
 !!!
 
 !!! NOTE   
@@ -39,21 +39,15 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Description|
-|:---|:---|:--------|:----------|
-|isSDLAllowed|Boolean|true|SDL returns:‘true’, in case the User has allowed using the device for PolicyTable Exchange. ‘false’, in case the User has not yet been asked for or in case the User has disallowed using the device for PolicyTable Exchange.|
-|device|[Common.DeviceInfo]|false||
-|isPermissionsConsentNeeded|Boolean|true||
-|isAppPermissionsRevoked|Boolean|true||
-|appRevokedPermissions|[Common.PermissionItem]|false|array: true<br>minsize: 1<br>maxsize: 100|
-|isAppRevoked|Boolean|true||
-|priority|[Common.AppPriority]|false||
-
-[Common.DeviceInfo]: ../../common/structs/#deviceinfo
-
-[Common.PermissionItem]: ../../common/structs/#permissionitem
-
-[Common.AppPriority]: ../../common/enums/#apppriority
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|isSDLAllowed|Boolean|true|scope: internal|SDL returns:‘true’, in case the User has allowed using the device for PolicyTable Exchange. ‘false’, in case the User has not yet been asked for or in case the User has disallowed using the device for PolicyTable Exchange.|
+|device|[Common.DeviceInfo](../../common/structs/#deviceinfo)|false|scope: internal||
+|isPermissionsConsentNeeded|Boolean|true|| |
+|isAppPermissionsRevoked|Boolean|true|| |
+|appRevokedPermissions|[Common.PermissionItem](../../common/structs/#permissionitem)|false|array: true<br>minsize: 1<br>maxsize: 100||
+|isAppRevoked|Boolean|true|| |
+|priority|[Common.AppPriority](../../common/enums/#apppriority)|false|| |
 
 ### Sequence Diagrams
 
@@ -87,20 +81,28 @@ ActivateApp using App Launching
 ![ActivateApp](./assets/ActivateAppAppLaunch.png)
 |||
 
-### Example Request
+|||
+The User activates a web app
+![ActivateApp](./assets/ActivateWebApp.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
   "id" : 27,
   "jsonrpc" : "2.0",
-  "method" : "SDL.ActivateApp"
+  "method" : "SDL.ActivateApp",
   "params" :
   {
     "appID" : 12345
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -118,7 +120,7 @@ ActivateApp using App Launching
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

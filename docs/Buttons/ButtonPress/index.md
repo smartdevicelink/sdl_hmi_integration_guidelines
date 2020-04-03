@@ -10,7 +10,7 @@ Purpose
 : Emulate button press event on HMI for the common climate or radio control buttons in vehicle
 
 ButtonPress represents a request from an application to change settings of requested RC module by pressing the appropriate button.
-This RPC can be sent to the HMI from an application that is registered with REMOTE_CONTROL appHMIType and in one of the following states: FULL, LIMITTED, BACKGROUND.
+This RPC can be sent to the HMI from an application that is registered with REMOTE_CONTROL appHMIType and in one of the following states: FULL, LIMITED, BACKGROUND.
 Module signed by the application in such request has to be available on HMI and allowed for control change settings.
 The system shall list all available RC radio buttons and RC climate buttons in the existing ButtonCapabilities list.
 
@@ -30,11 +30,10 @@ The system shall list all available RC radio buttons and RC climate buttons in t
 |Name|Type|Mandatory|Additional|Description|
 |:---|:----------|:---|:---------|:---------|
 |moduleType|[Common.ModuleType](../../common/enums/#moduletype)|true| |The module where the button should be pressed|
+|moduleId|String|false|maxlength: 100|Id of a module, published by System Capability.|
 |buttonName|[Common.ButtonName](../../common/enums/#buttonname)|true| | |
 |buttonPressMode|[Common.ButtonPressMode](../../common/enums/#buttonpressmode)|true| |Indicates whether this is a LONG or SHORT button press event.|
 |appID|Integer|true| |Internal SDL-assigned ID of the related application|
-
-
 
 ### Response
 
@@ -46,10 +45,12 @@ This RPC has no additional parameter requirements
 
 |||
 ButtonPress
-![ButtonPress](assets/ButtonPress.png)
+![ButtonPress](./assets/ButtonPress.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -60,11 +61,13 @@ ButtonPress
         "appID": 680015438,
         "buttonName": "VOLUME_UP",
         "buttonPressMode": "LONG",
+        "moduleId" : "12jie32ice496hnr68swe",
         "moduleType": "RADIO"
     }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -77,7 +80,7 @@ ButtonPress
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

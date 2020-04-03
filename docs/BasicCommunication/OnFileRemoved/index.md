@@ -23,7 +23,6 @@ SDL notifies the HMI about removing files only if the files were located in the 
 
 !!!
 
-
 ### Notification
 
 #### Parameters
@@ -35,22 +34,24 @@ SDL notifies the HMI about removing files only if the files were located in the 
 |appID|Integer|true||
 
 ### Sequence Diagrams
+
 |||
 File Removed from Head Unit
 ![OnFileRemoved](./assets/OnFileRemoved.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
-  "jsonrpc" : "2.0",
-  "method" : "BasicCommunication.OnFileRemoved"
-     "params" :
-  {
-      "appID" : 31780,
-"fileName" : "/fs/rwdata/storage/sdl/Emergency584421907/syncFileName",
-      "fileType" : "GRAPHIC_BMP"      
-  }
-
+	"jsonrpc": "2.0",
+	"method": "BasicCommunication.OnFileRemoved",
+	"params": {
+		"appID": 31780,
+		"fileName": "/fs/rwdata/storage/sdl/Emergency584421907/syncFileName",
+		"fileType": "GRAPHIC_BMP"
+	}
 }
 ```

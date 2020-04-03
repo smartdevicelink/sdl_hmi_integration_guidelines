@@ -1,10 +1,15 @@
 ## OnStartDeviceDiscovery
 
-  * Type: Notification
-  * Sender: HMI
-  * Purpose: Initiate device search
+Type
+: Notification
 
-On receipt of this notification SDL starts searching for devices on all available transports. Afterwards, SDL provides the search results via [UpdateDeviceList](../updatedevicelist).
+Sender
+: HMI
+
+Purpose
+: Initiate device search
+
+On receipt of this notification, SDL starts searching for devices on all available transports. Afterwards, SDL provides the search results via [UpdateDeviceList](../updatedevicelist).
 
 !!! note
 
@@ -12,21 +17,26 @@ This RPC tells SDL to initiate a new device search. The [OnUpdateDeviceList](../
 
 !!!
 
-### Example Notification
-```json
-{
-  "jsonrpc" : "2.0",
-  "method" : "BasicCommunication.OnStartDeviceDiscovery"
-}
-```
+### Notification
+
+#### Parameters
+
+This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Starting Device Discovery
 ![OnStartDeviceDiscovery](./assets/OnStartDeviceDiscovery.png)
 |||
 
-#### JSON Example Notification
-```json
+### JSON Message Examples
 
+#### Example Notification
+
+```json
+{
+  "jsonrpc" : "2.0",
+  "method" : "BasicCommunication.OnStartDeviceDiscovery"
+}
 ```

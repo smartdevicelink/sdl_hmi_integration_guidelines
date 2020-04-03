@@ -28,8 +28,7 @@ If the Navigation component responds as `unavailable`, SDL will not send further
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -40,12 +39,15 @@ If the Navigation component responds as `unavailable`, SDL will not send further
 |available|Boolean|true||
 
 ### Sequence Diagrams
+
 |||
 IsReady
 ![IsReady](./assets/IsReady.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -54,7 +56,8 @@ IsReady
   "method" : "Navigation.IsReady"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -62,14 +65,14 @@ IsReady
   "jsonrpc" : "2.0",
   "result" :
   {
-    "availabe" : true,
+    "available" : true,
     "code" : 0,
     "method" : "Navigation.IsReady"
   }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

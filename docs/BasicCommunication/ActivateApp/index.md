@@ -1,5 +1,14 @@
 ## ActivateApp
 
+Type
+: Function
+
+Sender
+: SDL
+
+Purpose
+: Request HMI to bring a specific app to the front (aka HMI level FULL)
+
 !!! note
 
 The activated application is assumed to receive access to the head unit's display, audio and control system which are:
@@ -21,6 +30,7 @@ This request may be sent:
 
 ### Behavior
 
+If `level` is `FULL` or `LIMITED`: 
 !!! must
 
   1. Activate the application on the HMI
@@ -40,11 +50,11 @@ This request may be sent:
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
 |priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
-|level|[Common.HMILevel](../../common/enums/#hmilevel)|false||
+|level|[Common.HMILevel](../../common/enums/#hmilevel)|false|Included if the hmi level of this application should be changed to anything other than `FULL`. Should not be `NONE`.|
 
 ### Response
 
@@ -52,20 +62,45 @@ This request may be sent:
 
 This RPC has no additional parameter requirements
 
-### Example Request
+### Sequence Diagrams
+
+|||
+Activate App after successful Resumption
+![Activate App Successful Resume](./assets/ActivateAppSuccessfulResume.png)
+|||
+
+|||
+Activate App after failed Resumption
+![Activate App Failed Resume](./assets/ActivateAppFailedResume.png)
+|||
+
+|||
+Activate App after Unexpected Disconnect
+![Activate App Unexpected Disconnect](./assets/ActivateAppUnexpectedDisconnect.png)
+|||
+
+|||
+Activate App after Accepted Data Consent Prompt
+![Activate App Successful Data](./assets/ActivateAppSuccessfulData.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
   "id" : 47,
   "jsonrpc" : "2.0",
   "method" : "BasicCommunication.ActivateApp",
-  "result" :
+  "params" :
   {
     "appID" : 65368
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -79,7 +114,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -97,24 +132,3 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### Sequence Diagrams
-|||
-Activate App after successful Resumption
-![Activate App Successful Resume](./assets/ActivateAppSuccessfulResume.png)
-|||
-|||
-Activate App after failed Resumption
-![Activate App Failed Resume](./assets/ActivateAppFailedResume.png)
-|||
-|||
-Activate App after Unexpected Disconnect
-![Activate App Unexpected Disconnect](./assets/ActivateAppUnexpectedDisconnect.png)
-|||
-|||
-Activate App after Accepted Data Consent Prompt
-![Activate App Successful Data](./assets/ActivateAppSuccessfulData.png)
-|||
-|||
-Activate App after Failed Data Consent Prompt
-![Activate App Failed Data](./assets/ActivateAppFailedData.png)
-|||

@@ -15,7 +15,6 @@ If `serviceType` is not included in request, all service records will be returne
 
 !!!
 
-
 ### Request
 
 #### Parameters
@@ -30,15 +29,18 @@ If `serviceType` is not included in request, all service records will be returne
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|serviceRecords|[Common.AppServiceRecord](../../common/structs/#appservicerecord)|true|array: true|
+|serviceRecords|[Common.AppServiceRecord](../../common/structs/#appservicerecord)|false|array: true|
 
 ### Sequence Diagrams
+
 |||
 GetAppServiceRecords
 ![GetAppServiceRecords](./assets/GetAppServiceRecords.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -51,7 +53,7 @@ GetAppServiceRecords
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -92,6 +94,24 @@ GetAppServiceRecords
         "servicePublished": true
       }
     ]
+  }
+}
+```
+
+#### Example Error
+
+```json
+{
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "Request timeout",
+    "data" :
+    {
+      "method" : "AppService.GetAppServiceRecords"
+    }
   }
 }
 ```

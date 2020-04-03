@@ -21,6 +21,7 @@ Purpose
 |sliderFooter|String|false|array: true<br>minsize: 1<br>maxsize: 26<br>maxlength: 500|
 |timeout|Integer|true|minvalue: 1000<br>maxvalue: 65535|
 |appID|Integer|true||
+|cancelID|Integer|false||
 
 ### Response
 
@@ -31,20 +32,25 @@ Purpose
 |sliderPosition|Integer|false|minvalue: 1<br>maxvalue: 26|
 
 ### Sequence Diagrams
+
 |||
 Slider with static footer displayed closed by timeout
 ![Slider](./assets/SliderTimeout.png)
 |||
+
 |||
 Slider with dynamic footer aborted
 ![Slider](./assets/SliderAbort.png)
 |||
+
 |||
 Slider with OK Button press
 ![Slider](./assets/SliderOK.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -62,7 +68,8 @@ Slider with OK Button press
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -77,7 +84,7 @@ Slider with OK Button press
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -89,7 +96,7 @@ Slider with OK Button press
     "message" : "A command was aborted due to user interaction",
     "data" :
     {
-      "sliderPosition" : 5
+      "sliderPosition" : 5,
       "method" : "UI.Slider"
     }
   }

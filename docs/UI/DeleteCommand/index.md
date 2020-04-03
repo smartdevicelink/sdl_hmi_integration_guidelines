@@ -33,22 +33,26 @@ The application's menu must no longer display the command whose `cmdID` matches 
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Delete Command with Menu Open
 ![DeleteCommand](./assets/DeleteCommandMenuOpen.png)
 |||
+
 |||
 Delete Command Application Inactive
 ![DeleteCommand](./assets/DeleteCommandAppInactive.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
   "id" : 70,
   "jsonrpc" : "2.0",
-  "method" : "UI. DeleteCommand",
+  "method" : "UI.DeleteCommand",
   "params" :
   {
     "cmdID" : 2318,
@@ -56,7 +60,8 @@ Delete Command Application Inactive
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -65,12 +70,12 @@ Delete Command Application Inactive
   "result" :
   {
     "code" : 0,
-    "method" : "UI. DeleteCommand"
+    "method" : "UI.DeleteCommand"
   }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -82,7 +87,7 @@ Delete Command Application Inactive
     "message" : "One of the provided IDs is not valid",
     "data" :
     {
-      "UI. DeleteCommand"
+      "method": "UI.DeleteCommand"
     }
   }
 }
