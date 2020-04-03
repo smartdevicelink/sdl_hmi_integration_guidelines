@@ -16,7 +16,7 @@ Process `serviceUri` according to whatever predefined schema is offered by the H
 !!!
 
 !!! NOTE
-If the HMI is the <span title="App Service Consumer">ASC</span>, SDL will:
+If the HMI is the App Service Consumer (<span title="App Service Consumer">ASC</span>), SDL will:
 1. Activate the service specified with `serviceID` if `requestServiceActive` is set to `true`
 !!!
 
