@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Get the supported TTS languages
+: Get the supported <span title="Text To Speech">TTS</span> languages
 
 ### Request
 

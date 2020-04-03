@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Inform SDL of the VR capabilities of the vehicle.
+: Inform SDL of the <span title="Voice Recognition">VR</span> capabilities of the vehicle.
 
 ### Request
 

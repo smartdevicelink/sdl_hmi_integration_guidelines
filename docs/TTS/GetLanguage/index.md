@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Get the current TTS language.
+: Get the current <span title="Text To Speech">TTS</span> language.
 
 ### Request
 

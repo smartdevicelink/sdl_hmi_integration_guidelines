@@ -7,11 +7,11 @@ Sender
 : SDL
 
 Purpose
-: Set the properties for the TTS component.
+: Set the properties for the <span title="Text To Speech">TTS</span> component.
 
 ### Description
 
-SDL requests to set the values for the prompts to be spoken by TTS during the User's interaction with the application over head unit.
+SDL requests to set the values for the prompts to be spoken by <span title="Text To Speech">TTS</span> during the User's interaction with the application over head unit.
 
 ### Request
 

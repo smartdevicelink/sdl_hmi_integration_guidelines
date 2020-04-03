@@ -13,7 +13,7 @@ If the HMI reports to SDL via [Buttons.GetCapabilities](../getcapabilities) that
 
 !!! must
 
-The hmi must send the name of the button pressed, the press mode detected, and ID of the button if it has type `CUSTOM_BUTTON` and the appID related to the button press. If only `SHORT` button press mode is supported, the hmi should send `SHORT` regardless of the time of the button press.
+The HMI must send the name of the button pressed, the press mode detected, and ID of the button if it has type `CUSTOM_BUTTON` and the appID related to the button press. If only `SHORT` button press mode is supported, the HMI should send `SHORT` regardless of the time of the button press.
 
 !!!
 

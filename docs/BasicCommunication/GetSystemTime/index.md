@@ -7,10 +7,10 @@ Sender
 : SDL
 
 Purpose
-: Obtain current UTC time  
+: Obtain current <span title="Universal Time Coordinate">UTC</span> time  
 
 When an application needs to start a protected service with SDL core the app sends a certificate to SDL during the TLS or DTLS handshake process.  
-In order to validate the certificate and to check whether this certificate is not expired SDL core needs an accurate UTC system time value.
+In order to validate the certificate and to check whether this certificate is not expired SDL core needs an accurate <span title="Universal Time Coordinate">UTC</span> system time value.
 
 ### Request
 
@@ -49,7 +49,7 @@ If the handshake process fails, SDL behavior depends on the "ForceProtectedServi
 
 |Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
-|systemTime|[Common.DateTime](../../common/structs/#datetime)|true|Current UTC system time|
+|systemTime|[Common.DateTime](../../common/structs/#datetime)|true|Current <span title="Universal Time Coordinate">UTC</span> system time|
 
 ### Sequence Diagrams
 

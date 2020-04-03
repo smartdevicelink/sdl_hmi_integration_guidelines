@@ -7,7 +7,7 @@ Sender
 : HMI
 
 Purpose
-: Inform SDL about the start of a VR session
+: Inform SDL about the start of a <span title="Voice Recognition">VR</span> session
 
 ### Notification
 

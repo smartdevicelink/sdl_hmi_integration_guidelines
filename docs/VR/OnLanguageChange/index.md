@@ -7,7 +7,7 @@ Sender
 : HMI
 
 Purpose
-: Inform SDL that the language of the VR engine has changed.
+: Inform SDL that the language of the <span title="Voice Recognition">VR</span> engine has changed.
 
 ### Notification
 

@@ -64,7 +64,7 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
-UpdateDeviceList after SDL discovers device over BT or USB
+UpdateDeviceList after SDL discovers device over <span title="Bluetooth">BT</span> or USB
 ![Update Device List BT USB](./assets/UpdateDeviceListBTUSB.png)
 |||
 

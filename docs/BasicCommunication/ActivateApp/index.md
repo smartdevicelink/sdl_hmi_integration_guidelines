@@ -38,7 +38,7 @@ If `level` is `FULL` or `LIMITED`:
     * Display the corresponding template in the case one was previously requested by [UI.SetDisplayLayout](../../UI/SetDisplayLayout) for that application
     * Apply [UI.SetGlobalProperties](../../UI/SetGlobalProperties) associated with the named `appID`, if any
     * Apply [UI.AddSubMenu](../../UI/AddSubMenu) associated with the named `appID`, if any
-  2. Make VR commands accessible from previous [VR.AddCommand](../VR/AddCommand) for the named `appID` during the same ignition cycle
+  2. Make <span title="Voice Recognition">VR</span> commands accessible from previous [VR.AddCommand](../VR/AddCommand) for the named `appID` during the same ignition cycle
   3. Apply [TTS.SetGlobalProperties](../../TTS/SetGlobalProperties) associated with the `appID` in case previously requested since application registration
   4. Assign priority based on the `priority` parameter received. If the parameter is omitted, the HMI must assign a priority of `NONE` by default
   5. Respond with `SUCCESS` result code after the previous requirements have been met
@@ -54,7 +54,7 @@ If `level` is `FULL` or `LIMITED`:
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
 |priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
-|level|[Common.HMILevel](../../common/enums/#hmilevel)|false|Included if the hmi level of this application should be changed to anything other than `FULL`. Should not be `NONE`.|
+|level|[Common.HMILevel](../../common/enums/#hmilevel)|false|Included if the HMI level of this application should be changed to anything other than `FULL`. Should not be `NONE`.|
 
 ### Response
 

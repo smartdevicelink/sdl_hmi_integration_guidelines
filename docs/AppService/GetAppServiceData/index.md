@@ -11,8 +11,8 @@ Purpose
 
 !!! note
 
-* **HMI->SDL** if HMI App Service Consumer (ASC) is requesting service data
-* **SDL->HMI** if HMI App Service Provider (ASP) is receiving a service data request
+* **HMI->SDL** if HMI App Service Consumer (<span title="App Service Consumer">ASC</span>) is requesting service data
+* **SDL->HMI** if HMI App Service Provider (<span title="App Service Provider">ASP</span>) is receiving a service data request
 
 !!!
 

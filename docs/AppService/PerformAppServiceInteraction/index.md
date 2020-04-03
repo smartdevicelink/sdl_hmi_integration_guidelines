@@ -26,7 +26,7 @@ If the HMI is the <span title="App Service Consumer">ASC</span>, SDL will:
 |:---|:---|:--------|:---------|
 |serviceUri|String|true||
 |serviceID|String|true||
-|originApp|String|false|Non-mandatory only if HMI is the ASC|
+|originApp|String|false|Non-mandatory only if HMI is the <span title="App Service Consumer">ASC</span>|
 |requestServiceActive|Boolean|false||
 
 ### Response
@@ -45,7 +45,7 @@ PerformAppServiceInteraction with HMI <span title="App Service Consumer">ASC</sp
 |||
 
 |||
-PerformAppServiceInteraction with Mobile ASC
+PerformAppServiceInteraction with Mobile <span title="App Service Consumer">ASC</span>
 ![PerformAppServiceInteraction](./assets/PerformAppServiceInteractionFromMobile.png)
 |||
 

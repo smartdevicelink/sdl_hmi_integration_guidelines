@@ -9,7 +9,7 @@ Sender
 Purpose
 : Inform the application it is no longer active on the HMI
 
-SDL requires this notification in order to keep the mobile application from sending RPC's related to the HMI's functionality (e.g. adding commands for VR, starting an interaction with the user, speaking text via TTS, etc).
+SDL requires this notification in order to keep the mobile application from sending RPC's related to the HMI's functionality (e.g. adding commands for <span title="Voice Recognition">VR</span>, starting an interaction with the user, speaking text via <span title="Text To Speech">TTS</span>, etc).
 
 
 In the event a navigation application is in `FULL` and the HMI sends `OnAppDeactivated`, SDL must set the navigation application to `LIMITED` with the AudioStreamingState set to `AUDIBLE`, VideoStreamingState `STREAMABLE`.

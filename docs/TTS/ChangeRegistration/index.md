@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Change the language of the TTS component.
+: Change the language of the <span title="Text To Speech">TTS</span> component.
 
 ### Request
 
@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:--------------------------|
-|ttsName|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|Request new ttsName registration<br>TTS string for VR recognition of the mobile application name, e.g. "Ford Drive Green".<br> Meant to overcome any failing on speech engine in properly pronouncing / understanding app name.<br>May not be empty.<br>May not start with a new line character.<br>Not unique value (SDL makes all the checks)|
+|ttsName|[Common.TTSChunk](../../common/structs/#ttschunk)|false|array: true<br>minsize: 1<br>maxsize: 100|Request new ttsName registration<br><span title="Text To Speech">TTS</span> string for <span title="Voice Recognition">VR</span> recognition of the mobile application name, e.g. "Ford Drive Green".<br> Meant to overcome any failing on speech engine in properly pronouncing / understanding app name.<br>May not be empty.<br>May not start with a new line character.<br>Not unique value (SDL makes all the checks)|
 |language|[Common.Language](../../common/enums/#language)|true| | |
 |appID|Integer|true| | |
 

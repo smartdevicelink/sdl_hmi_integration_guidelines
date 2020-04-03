@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Inform SDL whether the vehicle audio system has the ability to speak the TTS prompts or listen to an recognize VR commands while playing audio
+: Inform SDL whether the vehicle audio system has the ability to speak the <span title="Text To Speech">TTS</span> prompts or listen to and recognize <span title="Voice Recognition">VR</span> commands while playing audio
 
 !!! note
 
