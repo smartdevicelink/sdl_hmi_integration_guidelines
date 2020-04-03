@@ -1114,3 +1114,10 @@ There are no defined parameters for this struct.
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |grid|Common.Grid|false||Describes the location of a seat. HMI shall include this parameter when publishing seat locations in capabilities.|
+
+### GearStatus
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|userSelectedGear|[Common.PRNDL](../enums/#prndl)|false||Gear position selected by the user<br>i.e. Park, Drive, Reverse|
+|actualGear|[Common.PRNDL](../enums/#prndl)|false||Actual Gear in use by the transmission|
+|transmissionType|[Common.TransmissionType](../enums/#transmissiontype)|false||Tells the transmission type|
