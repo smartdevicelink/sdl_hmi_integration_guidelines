@@ -889,6 +889,7 @@
 |VEHICLEDATA_ELECTRONICPARKBRAKESTATUS|29||
 |VEHICLEDATA_CLOUDAPPVEHICLEID|30| Parameter used by cloud apps or the policy server to identify a head unit|
 |VEHICLEDATA_OEM_CUSTOM_DATA|31||
+|VEHICLEDATA_GEARSTATUS|32||
 
 ### VideoStreamingProtocol
 
@@ -936,8 +937,10 @@
 |SIXTH|11||
 |SEVENTH|12||
 |EIGHTH|13||
-|UNKNOWN|14||
-|FAULT|15||
+|NINTH|14||
+|TENTH|15||
+|UNKNOWN|16||
+|FAULT|17||
 
 ### TPMS
 
@@ -1303,3 +1306,16 @@
 |MOBILE|0||
 |CLOUD|1||
 |BOTH|2||
+
+### TransmissionType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MANUAL|0|Manual transmission.|
+|AUTOMATIC|1|Automatic transmission.|
+|SEMI_AUTOMATIC|2|Semi automatic transmission.|
+|DUAL_CLUTCH|3|Dual clutch transmission.|
+|CONTINUOUSLY_VARIABLE|4|Continuously variable transmission(CVT).|
+|INFINITELY_VARIABLE|5|Infinitely variable transmission.|
+|ELECTRIC_VARIABLE|6|Electric variable transmission.|
+|DIRECT_DRIVE|7|Direct drive between engine and wheels.|
