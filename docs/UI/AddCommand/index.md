@@ -72,22 +72,22 @@ AddCommand Rejected Limit Reached
 |||
 
 |||
-AddCommand UI Succeeds, VR Fails
+AddCommand UI Succeeds, <abbr title="Voice Recognition">VR</abbr> Fails
 ![AddCommand](./assets/AddCommandVRFail.png)
 |||
 
 |||
-AddCommand UI Succeeds, VR Unresponsive
+AddCommand UI Succeeds, <abbr title="Voice Recognition">VR</abbr> Unresponsive
 ![AddCommand](./assets/AddCommandVRNoResponse.png)
 |||
 
 |||
-AddCommand UI Fails, VR Succeeds
+AddCommand UI Fails, <abbr title="Voice Recognition">VR</abbr> Succeeds
 ![AddCommand](./assets/AddCommandFailVRSuccess.png)
 |||
 
 |||
-AddCommand UI No Response, VR Succeeds
+AddCommand UI No Response, <abbr title="Voice Recognition">VR</abbr> Succeeds
 ![AddCommand](./assets/AddCommandUINoResponseVRSuccess.png)
 |||
 

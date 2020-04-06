@@ -21,7 +21,7 @@ SDL may send this request after connecting to a device, and an application succe
 
 !!! NOTE
 
-SDL adds the VR synonyms of a registered application to the HMI via [OnAppRegistered](../onappregistered).
+SDL adds the <abbr title="Voice Recognition">VR</abbr> synonyms of a registered application to the HMI via [OnAppRegistered](../onappregistered).
 
 !!!
 
