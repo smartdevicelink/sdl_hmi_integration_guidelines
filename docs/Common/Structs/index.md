@@ -209,7 +209,7 @@
 |altitude|Float|false|minvalue: -10000<br>maxvalue: 10000||
 |heading|Float|false|minvalue: 0<br>maxvalue: 359.99||
 |speed|Float|false|minvalue: 0<br>maxvalue: 500||
-|shifted|Boolean|false||True, if <span title="Global Positioning System">GPS</span> lat/long, time, and altitude have been purposefully shifted (requires a proprietary algorithm to un-shift).<br>False, if the <span title="Global Positioning System">GPS</span> data is raw and un-shifted.<br>If not provided, then value is assumed False|
+|shifted|Boolean|false||True, if <abbr title="Global Positioning System">GPS</abbr> lat/long, time, and altitude have been purposefully shifted (requires a proprietary algorithm to un-shift).<br>False, if the <abbr title="Global Positioning System">GPS</abbr> data is raw and un-shifted.<br>If not provided, then value is assumed False|
 
 ### SingleTireStatus
 
@@ -536,7 +536,7 @@
 |:---|:---|:--------|:---------|:----------|
 |PS|String|false|minlength: 0<br>maxlength: 8|Program Service Name|
 |RT|String|false|minlength: 0<br>maxlength: 64|Radio Text|
-|CT|String|false|minlength: 24<br>maxlength: 24|The clock text in <span title="Universal Time Coordinate">UTC</span> format as YYYY-MM-DDThh:mm:ss.sTZD|
+|CT|String|false|minlength: 24<br>maxlength: 24|The clock text in <abbr title="Universal Time Coordinate">UTC</abbr> format as YYYY-MM-DDThh:mm:ss.sTZD|
 |PI|String|false|minlength: 0<br>maxlength: 6|Program Identification - the call sign for the radio station|
 |PTY|Integer|false|minvalue: 0<br>maxvalue: 31|The program type - The region should be used to differentiate between EU and North America program types|
 |TP|Boolean|false||Traffic Program Identification - Identifies a station that offers traffic|
@@ -829,8 +829,8 @@
 |day|Integer|false|minvalue: 1<br>maxvalue: 31|Day of the month|
 |month|Integer|false|minvalue: 1<br>maxvalue: 12|Month of the year|
 |year|Integer|false|maxvalue: 4095|The year in YYYY format|
-|tz_hour|Integer|false|minvalue: -12<br>maxvalue: 14<br>defvalue: 0|Time zone offset in Hours with regard to <span title="Universal Time Coordinate">UTC</span>.|
-|tz_minute|Integer|false|minvalue: 0<br>maxvalue: 59<br>defvalue: 0|Time zone offset in Min with regard to <span title="Universal Time Coordinate">UTC</span>.|
+|tz_hour|Integer|false|minvalue: -12<br>maxvalue: 14<br>defvalue: 0|Time zone offset in Hours with regard to <abbr title="Universal Time Coordinate">UTC</abbr>.|
+|tz_minute|Integer|false|minvalue: 0<br>maxvalue: 59<br>defvalue: 0|Time zone offset in Min with regard to <abbr title="Universal Time Coordinate">UTC</abbr>.|
 
 ### Coordinate
 
@@ -880,7 +880,7 @@
 |serviceName|String|false||Unique name of this service|
 |serviceType|String|true||The type of service that is to be offered by this app|
 |serviceIcon|Common.Image|false||The icon to be associated with this service. Most likely the same as the appIcon|
-|allowAppConsumers|Boolean|false|defvalue: false|If true, app service consumers beyond the <span title="In Vehicle Infotainment">IVI</span> system will be able to access this service. If false, only the <span title="In Vehicle Infotainment">IVI</span> system will be able consume the service. If not provided, it is assumed to be false|
+|allowAppConsumers|Boolean|false|defvalue: false|If true, app service consumers beyond the <abbr title="In Vehicle Infotainment">IVI</abbr> system will be able to access this service. If false, only the <abbr title="In Vehicle Infotainment">IVI</abbr> system will be able consume the service. If not provided, it is assumed to be false|
 |rpcSpecVersion|Common.SyncMsgVersion|false||This is the max RPC Spec version the app service understands. This is important during the RPC passthrough functionality. If not included, it is assumed the max version of the module is acceptable|
 |handledRPCs|Integer|false|array: true|This field contains the Function IDs for the RPCs that this service intends to handle correctly. This means the service will provide meaningful responses|
 |mediaServiceManifest|Common.MediaServiceManifest|false|||
@@ -1042,9 +1042,9 @@ There are no defined parameters for this struct
 |destinationETA|Common.DateTime|false|||
 |instructions|Common.NavigationInstruction|false|array: true|This array should be ordered with all remaining instructions. The start of this array should always contain the next instruction|
 |nextInstructionETA|Common.DateTime|false|||
-|nextInstructionDistance|Float|false||The distance to this instruction from current location. This should only be updated ever .1 unit of distance. For more accuracy the consumer can use the <span title="Global Positioning System">GPS</span> location of itself and the next instruction|
+|nextInstructionDistance|Float|false||The distance to this instruction from current location. This should only be updated ever .1 unit of distance. For more accuracy the consumer can use the <abbr title="Global Positioning System">GPS</abbr> location of itself and the next instruction|
 |nextInstructionDistanceScale|Float|false||Distance till next maneuver (starting from) from previous maneuver|
-|prompt|String|false||This is a prompt message that should be conveyed to the user through either display or voice (<span title="Text To Speech">TTS</span>). This param will change often as it should represent the following: approaching instruction, post instruction, alerts that affect the current navigation session, etc|
+|prompt|String|false||This is a prompt message that should be conveyed to the user through either display or voice (<abbr title="Text To Speech">TTS</abbr>). This param will change often as it should represent the following: approaching instruction, post instruction, alerts that affect the current navigation session, etc|
 
 ### TemplateConfiguration
 

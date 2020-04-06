@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Request <span title="Diagnostic Trouble Code">DTC</span>s from vehicle.
+: Request <abbr title="Diagnostic Trouble Code">DTC</abbr>s from vehicle.
 
 ### Request
 

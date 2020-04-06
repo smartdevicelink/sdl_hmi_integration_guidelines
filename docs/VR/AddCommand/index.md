@@ -23,9 +23,9 @@ If the application sends a `CreateInteractionChoiceSet` RPC request that contain
 !!! note
 The parameter `type` included in the `VR.AddCommand` request is the differentiator the HMI should use to know if the VR Command originated from an `AddCommand` RPC or a `CreateInteractionChoiceSet` RPC.
 
-`Choice` type <span title="Voice Recognition">VR</span> Commands should only be used during a `PerformInteraction` RPC Request.
+`Choice` type <abbr title="Voice Recognition">VR</abbr> Commands should only be used during a `PerformInteraction` RPC Request.
 
-`Command` type <span title="Voice Recognition">VR</span> Commands should only be used when the user wants to interact with the App's Menu.
+`Command` type <abbr title="Voice Recognition">VR</abbr> Commands should only be used when the user wants to interact with the App's Menu.
 
 !!!
 

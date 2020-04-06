@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:---------|
-|vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40|Request new <span title="Voice Recognition">VR</span> synonyms registration<br>Defines an additional voice recognition command.<br>Must not interfere with any name of previously registered applications from the same device.|
+|vrSynonyms|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 40|Request new <abbr title="Voice Recognition">VR</abbr> synonyms registration<br>Defines an additional voice recognition command.<br>Must not interfere with any name of previously registered applications from the same device.|
 |language|[Common.Language](../../common/enums/#language)|true||The language application wants to switch to.|
 |appID|Integer|true||ID of application that concerns this RPC.|
 

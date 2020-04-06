@@ -12,7 +12,7 @@ Purpose
 SDL sends this notification when:
 
   1. The named application has unregistered from the mobile side via an appropriate RPC.
-  2. The connection and corresponding session(s) are closed due to transport connection issues (for example, WiFi/<span title="Bluetooth">BT</span> connection closing on mobile device, USB unplugging, etc.).
+  2. The connection and corresponding session(s) are closed due to transport connection issues (for example, WiFi/<abbr title="Bluetooth">BT</abbr> connection closing on mobile device, USB unplugging, etc.).
   3. A HeartBeat timeout occurs between the mobile device and SDL Core (if a HeartBeat timeout is set).
 
 !!! MUST

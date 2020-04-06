@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Perform a <span title="Voice Recognition">VR</span> interaction with the User.
+: Perform a <abbr title="Voice Recognition">VR</abbr> interaction with the User.
 
 ### Request
 
@@ -34,7 +34,7 @@ Purpose
 ### Sequence Diagrams
 
 |||
-PerformInteraction in <span title="Voice Recognition">VR</span> Mode completed successfully
+PerformInteraction in <abbr title="Voice Recognition">VR</abbr> Mode completed successfully
 ![PerformInteraction](./assets/PerformInteractionSuccess.png)
 |||
 

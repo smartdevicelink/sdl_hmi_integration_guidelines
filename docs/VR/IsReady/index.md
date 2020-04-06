@@ -7,15 +7,15 @@ Sender
 : SDL
 
 Purpose
-: Request ready state of <span title="Voice Recognition">VR</span> Module
+: Request ready state of <abbr title="Voice Recognition">VR</abbr> Module
 
 ### Request
 
 !!! note
 
 1. SDL sends `VR.IsReady` request after HMI confirms its readiness via `BC.OnReady` notification.
-2. If HMI responds with `"available":false`, SDL will not further communicate over <span title="Voice Recognition">VR</span> interface with HMI.
-3. If HMI does not respond during SDL's default timeout, SDL will continue to send RPCs over <span title="Voice Recognition">VR</span> interface to HMI.
+2. If HMI responds with `"available":false`, SDL will not further communicate over <abbr title="Voice Recognition">VR</abbr> interface with HMI.
+3. If HMI does not respond during SDL's default timeout, SDL will continue to send RPCs over <abbr title="Voice Recognition">VR</abbr> interface to HMI.
 
 !!!
 
@@ -27,7 +27,7 @@ This RPC has no additional parameter requirements
 
 !!! must
 
-1. Check whether <span title="Voice Recognition">VR</span> module is available and ready.
+1. Check whether <abbr title="Voice Recognition">VR</abbr> module is available and ready.
 2. Respond correspondingly to results of this check.
 
 !!!

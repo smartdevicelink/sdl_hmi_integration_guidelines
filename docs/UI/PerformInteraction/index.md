@@ -53,7 +53,7 @@ A UI.PerformInteraction with a timeout value of zero should not be timed out imm
 ### Sequence Diagrams
 
 |||
-PerformInteraction in <span title="Voice Recognition">VR</span> Mode completed successfully
+PerformInteraction in <abbr title="Voice Recognition">VR</abbr> Mode completed successfully
 ![PerformInteraction](./assets/PerformInteractionVROnly.png)
 |||
 
