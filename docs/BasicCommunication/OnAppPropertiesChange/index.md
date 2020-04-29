@@ -11,7 +11,7 @@ Purpose
 
 !!! must
 
-SDL must notify the HMI when a web engine app's properties change, such as after a PTU with the appropriate parameters for the web app.
+SDL must notify the HMI when a WebEngine app's properties change, such as after a PTU with the appropriate parameters for the web app.
 
 !!!
 
