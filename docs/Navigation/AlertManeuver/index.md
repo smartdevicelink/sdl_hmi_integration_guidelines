@@ -15,7 +15,7 @@ SDL sends `AlertManeuver` together with [TTS.Speak](../../tts/speak). The purpos
 
   1. Notify the user by [TTS.Speak](../../tts/speak), which is sent along with `AlertManeuver`.
   2. Display the `AlertManeuver` dialog with an alert icon and one of the following:
-    * Up to three soft buttons defined within the `softButtons` paremeter.
+    * Up to three soft buttons defined within the `softButtons` parameter.
     * HMI-defined `Close` soft button if a request without `softButtons` is received.
   3. Process `SystemContext` behavior for `AlertManeuver` in the same way an `Alert` is handled.
 
@@ -37,6 +37,7 @@ SDL sends `AlertManeuver` together with [TTS.Speak](../../tts/speak). The purpos
 If the HMI does not respond to SDL's request, after the default timeout occurs SDL will send `GENERIC_ERROR` to the corresponding mobile application.
 
 !!!
+
 ### Request
 
 #### Parameters
@@ -53,24 +54,30 @@ If the HMI does not respond to SDL's request, after the default timeout occurs S
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 AlertManeuver Default Success Path
 ![AlertManeuver](./assets/AlertManeuverDefaultSuccess.jpg)
 |||
+
 |||
 AlertManeuver from Background
 ![AlertManeuver](./assets/AlertManeuverBackground.jpg)
 |||
+
 |||
 AlertManeuver Aborted
 ![AlertManeuver](./assets/AlertManeuverAborted.jpg)
 |||
+
 |||
 AlertManeuver Rejected
 ![AlertManeuver](./assets/AlertManeuverRejected.jpg)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -91,13 +98,13 @@ AlertManeuver Rejected
         "softButtonID": 46,
         "systemAction": "STEAL_FOCUS"
       }
-    ]
-  },
+    ],
   "appID": 96
+  }
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -111,7 +118,7 @@ AlertManeuver Rejected
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

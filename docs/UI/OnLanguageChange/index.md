@@ -18,12 +18,16 @@ Purpose
 |language|[Common.Language](../../common/enums/#language)|true||
 
 ### Sequence Diagrams
+
 |||
 OnLanguageChange
 ![OnLanguageChange](./assets/OnLanguageChange.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

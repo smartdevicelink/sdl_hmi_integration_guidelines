@@ -20,9 +20,9 @@ Inform the User about the status of PTU by updating the appropriate UI screens.
 !!! note
 
 SDL operates with the following PTU statuses:
-* UPDATE_NEEDED - one of the triggers for PTU occurs (see [BC.PolicyUpdate](../../BasicCommunication/PolicyUpdate/index.md#Request))
-* UPDATING - SDL starts the PTU flow by creating the Snapshot of Local Policy Table
-* UP_TO_DATE - SDL merges the Updated Policy Table to the Local one
+- `UPDATE_NEEDED` - one of the triggers for PTU occurs (see [BC.PolicyUpdate](../../BasicCommunication/PolicyUpdate/index.md#Request))
+- `UPDATING` - SDL starts the PTU flow by creating the Snapshot of Local Policy Table (after receiving a successful SDL.PolicyUpdate response from HMI)
+- `UP_TO_DATE` - SDL merges the Updated Policy Table to the Local one
 
 !!!
 
@@ -32,7 +32,17 @@ SDL operates with the following PTU statuses:
 |:---|:---|:--------|:---------|
 |status|[Common.UpdateResult](../../common/enums/#updateresult)|true||
 
-#### JSON Example Notification
+### Sequence Diagrams
+
+|||
+SDL.OnStatusUpdate in "Proprietary" Policy Table Update Flow
+![OnStatusUpdate](./assets/OnStatusUpdate_in_Proprietary_PTU_flow.png)
+|||
+
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",
@@ -43,9 +53,3 @@ SDL operates with the following PTU statuses:
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-SDL.OnStatusUpdate in "Proprietary" Policy Table Update Flow
-![OnStatusUpdate](./assets/OnStatusUpdate_in_Proprietary_PTU_flow.png)
-|||

@@ -33,6 +33,8 @@ _**SyncP NOTE**_
 !!! MUST   
 1. Send `OnSystemRequest`, if specific data is requested from the mobile device/cloud, or binary data needs to be sent to the mobile device.
 2. Send `OnSystemRequest` with `requestType=OEM_SPECIFIC` and `requestSubType=VEHICLE_DATA_MAPPING` to SDL to get OEM Network Mapping table.
+3. NOT send `OnSystemRequest` to SDL while delivering PTS to the policy server using the in-vehicle modem.
+4. Send `OnSystemRequest` to SDL (to forward it to a mobile app) in case HMI can't successfully retrieve PTU from the policy server using the in-vehicle modem.
 
 !!!
 
@@ -53,6 +55,7 @@ _**SyncP NOTE**_
 |appID|Integer|false||
 
 ### Sequence Diagrams
+
 |||
 System Requests File Download
 ![OnSystemRequest](./assets/OnSystemRequest.png)
@@ -63,7 +66,20 @@ BC.OnSystemRequest in "Proprietary" Policy Table Update Flow
 ![Proprietary PTU](./assets/OnSystemRequest_in_Proprietary_PTU_flow.png)
 |||
 
-#### JSON Example Notification
+|||
+BC.OnSystemRequest in "External Proprietary" Policy Table Update Flow
+![External ProprietaryPTU](./assets/OnSystemRequest_in_External_Proprietary_PTU_flow.png)
+|||
+
+|||
+BC.OnSystemRequest in Policy Table Update Flow with in-vehicle modem
+![OnSystemRequest PTU modem](./assets/PTU_modem_failure.png)
+|||
+
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

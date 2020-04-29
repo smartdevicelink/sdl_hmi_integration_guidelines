@@ -14,13 +14,14 @@ Purpose
 After opening the menu, the HMI must send a [UI.OnSystemContext](../OnSystemContext) notification with `systemContext: "MENU"` to SDL.
 
 !!!
+
 ### Request
 
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|menuID|Integer|false|minvalue: 1<br>maxvalue: 2000000000|If ommited the HMI opens the app's menu.<br>If set to a sub-menu ID the HMI opens the corresponding sub-menu previously added using [UI.AddSubMenu](../AddSubMenu)|
+|menuID|Integer|false|minvalue: 1<br>maxvalue: 2000000000|If omitted the HMI opens the app's menu.<br>If set to a sub-menu ID the HMI opens the corresponding sub-menu previously added using [UI.AddSubMenu](../AddSubMenu)|
 |appID|Integer|true| | |
 
 ### Response
@@ -30,16 +31,20 @@ After opening the menu, the HMI must send a [UI.OnSystemContext](../OnSystemCont
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 ShowAppMenu request(without menuID)
 ![ShowAppMenu](./assets/ShowAppMenu.png)
 |||
+
 |||
 ShowAppMenu request(with menuID)
-![ShowAppMenuwithMenuID](./assets/ShowAppMenu_MenuID.png)
+![ShowAppMenuWithMenuID](./assets/ShowAppMenu_MenuID.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -53,7 +58,8 @@ ShowAppMenu request(with menuID)
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -63,6 +69,24 @@ ShowAppMenu request(with menuID)
   {
     "code" : 0,
     "method" : "UI.ShowAppMenu"
+  }
+}
+```
+
+#### Example Error
+
+```json
+{
+  "id" : 176,
+  "jsonrpc" : "2.0",
+  "error" :
+  {
+    "code" : 22,
+    "message" : "Request timeout",
+    "data" :
+    {
+      "method" : "UI.ShowAppMenu"
+    }
   }
 }
 ```

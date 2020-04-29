@@ -7,13 +7,13 @@ Sender
 : SDL
 
 Purpose
-: Inform SDL of the TTS capabilities of the vehicle.
+: Inform SDL of the <abbr title="Text To Speech">TTS</abbr> capabilities of the vehicle.
 
 ### Request
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -29,7 +29,7 @@ This RPC has no additional parameter requirements.
 !!! NOTE
 
   Description of possible SpeechCapabilities
-  TTS is performed by the HMI through:
+  <abbr title="Text To Speech">TTS</abbr> is performed by the HMI through:
   
   1. TEXT - Plain text format. TTSChunks with this type provide plain text to be spoken in the `text` field
   2. SAPI_PHONEMES - Microsoft Speech API Format. TTSChunks with this type provide a group of phonemes with this format in the `text` field
@@ -54,12 +54,15 @@ This RPC has no additional parameter requirements.
 !!!
 
 ### Sequence Diagrams
+
 |||
 GetCapabilities
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -68,7 +71,8 @@ GetCapabilities
   "method" : "TTS.GetCapabilities"
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -76,7 +80,7 @@ GetCapabilities
   "jsonrpc" : "2.0",
   "result" :
   {
-    "capabilities" : ["TEXT"],
+    "speechCapabilities" : ["TEXT"],
     "prerecordedSpeechCapabilities" : ["HELP_JINGLE", "INITIAL_JINGLE", "LISTEN_JINGLE", "POSITIVE_JINGLE", "NEGATIVE_JINGLE"],
     "code" : 0,
     "method" : "TTS.GetCapabilities"
@@ -84,7 +88,7 @@ GetCapabilities
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

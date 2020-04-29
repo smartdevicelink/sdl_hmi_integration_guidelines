@@ -1,4 +1,5 @@
 ## OnIgnitionCycleOver
+
 Type
 : Notification
 
@@ -29,16 +30,20 @@ Send `BC.OnIgnitionCycleOver` together with `BC.OnExitAllApplications(IGNITION_O
 
 This RPC has no additional parameter requirements
 
-#### JSON Example Notification
+### Sequence Diagrams
+
+|||
+OnIgnitionCycleOver in triggering a Policy Table Update flow
+![OnIgnitionCycleOver](./assets/OnIgnitionCycleOver_in_Proprietary_PTU_flow.png)
+|||
+
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
 	"jsonrpc" : "2.0",
 	"method" : "BasicCommunication.OnIgnitionCycleOver"
 }
 ```
-
-### Sequence Diagrams
-|||
-OnIgnitionCycleOver in triggering a Policy Table Update flow
-![OnIgnitionCycleOver](./assets/OnIgnitionCycleOver_in_Proprietary_PTU_flow.png)
-|||

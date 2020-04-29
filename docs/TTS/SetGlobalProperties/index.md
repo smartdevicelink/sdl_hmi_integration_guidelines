@@ -7,12 +7,14 @@ Sender
 : SDL
 
 Purpose
-: Set the properties for the TTS component.
+: Set the properties for the <abbr title="Text To Speech">TTS</abbr> component.
 
 ### Description
-SDL requests to set the values for the prompts to be spoken by TTS during the User's interaction with the application over head unit.
 
-### Request  
+SDL requests to set the values for the prompts to be spoken by <abbr title="Text To Speech">TTS</abbr> during the User's interaction with the application over head unit.
+
+### Request
+
 On receiving `AddCommand` with `CommandType = Command` before a custom `helpPrompt` is set by the application, SDL must send updated values of `helpPrompt` via TTS.SetGlobalProperties request to HMI.
 
 #### Parameters
@@ -30,6 +32,7 @@ On receiving `AddCommand` with `CommandType = Command` before a custom `helpProm
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 SetGlobalProperties
 ![SetGlobalProperties](./assets/SetGlobalProperties.png)
@@ -40,7 +43,9 @@ SetGlobalProperties request with VRHelp and HelpPrompt params
 ![SetGlobalProperties](./assets/SetGlobalProperties_VRHelp_and_HelpPrompt.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -80,7 +85,8 @@ SetGlobalProperties request with VRHelp and HelpPrompt params
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -94,7 +100,7 @@ SetGlobalProperties request with VRHelp and HelpPrompt params
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

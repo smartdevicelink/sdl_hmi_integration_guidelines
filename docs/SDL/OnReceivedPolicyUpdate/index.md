@@ -37,16 +37,19 @@ Purpose
 ### Sequence Diagrams
 
 |||
-SDL.OnReceivedPolicyUpdate in EXTERNAL_PROPRIETARY flow
-![Proprietary PTU](./assets/SDL.OnReceivedPolicyUpdateEXTERNAL_PROPRIETARY.png)
+SDL.OnReceivedPolicyUpdate in "External Proprietary" Policy Table Update Flow
+![Proprietary PTU](./assets/External_Proprietary_PTU_flow.png)
 |||
+
 |||
 SDL.OnReceivedPolicyUpdate in "Proprietary" Policy Table Update Flow
 ![Proprietary PTU](./assets/Proprietary_PTU_flow_.png)
 |||
 
+### JSON Message Examples
 
-#### JSON Example Notification
+#### Example Notification
+
 ```json
 {
 	"id" : 176,

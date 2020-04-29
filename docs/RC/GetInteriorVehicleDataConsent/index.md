@@ -9,8 +9,13 @@ Sender
 Purpose
 : Request for driver's permission to RC module for the specified application
 
-RC.GetInteriorVehicleDataConsent must be sent to HMI in case application in HMILevel FULL requested access to RC module that is already in use by another application. 
-HMI is expected to display a permission prompt to the driver showing the RC module and app details (for example, app's name).
+RC.GetInteriorVehicleDataConsent is sent to the HMI if:
+1. The [access mode](../../common/enums/#rcaccessmode) is `ASK_DRIVER` and
+2. An application (in HMILevel FULL) requests access to an RC module that is already in use by another application.
+
+The `AUTO_ALLOW` and `AUTO_DENY` RC access modes are automatically handled by SDL. For more information about consent rules, see the [Remote Control Consent](https://smartdevicelink.com/en/guides/core/feature-documentation/remote-control-guide/#consent) section.
+
+The HMI is expected to display a permission prompt to the driver showing the RC module and app details (for example, app's name).
 The driver is expected to have an ability to grant or deny the permission.
 
 !!! must
@@ -32,6 +37,7 @@ The driver is expected to have an ability to grant or deny the permission.
 ### Response
 
 #### Parameters
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |allowed|Boolean|true|array: true|"true" - if the driver grants the permission for controlling to the named app; <br> "false" - in case the driver denies the permission for controlling to the named app.|
@@ -40,10 +46,12 @@ The driver is expected to have an ability to grant or deny the permission.
 
 |||
 GetInteriorVehicleDataConsent
-![GetInteriorVehicleDataConsent](assets/GetInteriorVehicleDataConsent.png)
+![GetInteriorVehicleDataConsent](./assets/GetInteriorVehicleDataConsent.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -57,21 +65,21 @@ GetInteriorVehicleDataConsent
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
     "id": 38,
     "jsonrpc": "2.0",
     "result": {
-        "allowed": true,
+        "allowed": [true, false],
         "code": 0,
         "method": "RC.GetInteriorVehicleDataConsent"
     }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -31,6 +31,7 @@ Purpose
 |activate|Boolean|true||
 
 ### Sequence Diagrams
+
 |||
 GetActiveServiceConsent (user accepts prompt)
 ![GetActiveServiceConsent](./assets/GetActiveServiceConsent_Allow.png)
@@ -41,7 +42,9 @@ GetActiveServiceConsent (user rejects prompt)
 ![GetActiveServiceConsent](./assets/GetActiveServiceConsent_Reject.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -54,7 +57,7 @@ GetActiveServiceConsent (user rejects prompt)
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -68,13 +71,13 @@ GetActiveServiceConsent (user rejects prompt)
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
    "id" : 1000,
    "jsonrpc" : "2.0",
-   "result" : {
+   "error" : {
       "code" : 13,
       "message" : "No known service with given ID",
       "data" : {

@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Perform a VR interaction with the User.
+: Perform a <abbr title="Voice Recognition">VR</abbr> interaction with the User.
 
 ### Request
 
@@ -32,20 +32,25 @@ Purpose
 |choiceID|Integer|false|minvalue: 0<br>maxvalue: 2000000000|
 
 ### Sequence Diagrams
+
 |||
-PerformInteraction in VR Mode completed successfully
+PerformInteraction in <abbr title="Voice Recognition">VR</abbr> Mode completed successfully
 ![PerformInteraction](./assets/PerformInteractionSuccess.png)
 |||
+
 |||
 PerformInteraction in Manual Only Mode completed successfully
 ![PerformInteraction](./assets/PerformInteractionManualSuccess.png)
 |||
+
 |||
-PerformInteraction in Both Mode times out
-![PerformInteraction](./assets/PerformInteractionBothTimeout.png)
+PerformInteraction in Both Mode timed out
+![PerformInteraction](./assets/PerformInteractionBoth.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -92,7 +97,8 @@ PerformInteraction in Both Mode times out
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -107,7 +113,7 @@ PerformInteraction in Both Mode times out
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

@@ -9,12 +9,11 @@ Sender
 Purpose
 : Provide information to SDL about presence of any of remote controllable module and its readiness to cooperate with SDL, invoked at SDL system start up.
 
-
 ### Request
 
 #### Parameters
 
-The request does not have specific parameters.
+This RPC has no additional parameter requirements
 
 !!! note
 
@@ -46,7 +45,9 @@ IsReady
 ![IsReady](./assets/IsReady_GetCapabilities.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -56,7 +57,7 @@ IsReady
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -71,7 +72,7 @@ IsReady
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

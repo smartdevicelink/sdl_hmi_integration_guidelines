@@ -25,15 +25,19 @@ Purpose
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 StartStream
 ![StartStream](./assets/StartStream.jpg)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
+  "id" : 176,
   "jsonrpc" : "2.0",
   "method" : "Navigation.StartStream",
   "params" :  
@@ -43,7 +47,8 @@ StartStream
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -57,7 +62,7 @@ StartStream
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -69,7 +74,7 @@ StartStream
     "message" : "Start stream failed or some other error occurred",
     "data" :
     {
-      "method" : "Navigation. StartStream"
+      "method" : "Navigation.StartStream"
     }
   }
 }

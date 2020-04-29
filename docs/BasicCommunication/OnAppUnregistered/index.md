@@ -12,7 +12,7 @@ Purpose
 SDL sends this notification when:
 
   1. The named application has unregistered from the mobile side via an appropriate RPC.
-  2. The connection and corresponding session(s) are closed due to transport connection issues (for example, WiFi/BT connection closing on mobile device, USB unplugging, etc.).
+  2. The connection and corresponding session(s) are closed due to transport connection issues (for example, WiFi/<abbr title="Bluetooth">BT</abbr> connection closing on mobile device, USB unplugging, etc.).
   3. A HeartBeat timeout occurs between the mobile device and SDL Core (if a HeartBeat timeout is set).
 
 !!! MUST
@@ -35,6 +35,7 @@ SDL sends this notification when:
 Information about the application (name, appID, etc) is provided by SDL via [BC.UpdateAppList](../updateapplist) or [BC.OnAppRegistered](../onappregistered).
 
 !!!
+
 ### Notification
 
 #### Parameters
@@ -45,12 +46,16 @@ Information about the application (name, appID, etc) is provided by SDL via [BC.
 |appID|Integer|true||
 
 ### Sequence Diagrams
+
 |||
 Active App Unregistered
 ![OnAppUnregistered](./assets/OnAppUnregistered.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",
@@ -58,7 +63,7 @@ Active App Unregistered
   "params" :
   {
     "appID" : 65539,
-      "unexpectedDisconnect":"false"
+      "unexpectedDisconnect": false
   }
 }
 ```

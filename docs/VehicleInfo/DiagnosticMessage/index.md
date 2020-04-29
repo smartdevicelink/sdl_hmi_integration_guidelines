@@ -28,7 +28,16 @@ Purpose
 |:---|:---|:--------|:---------|
 |messageDataResult|Integer|true|array: true<br>minsize: 1<br>maxsize: 65535<br>minvalue: 0<br>maxvalue: 255|
 
-### Example Request
+### Sequence Diagrams
+
+|||
+DiagnosticMessage
+![DiagnosticMessage](./assets/DiagnosticMessage.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -39,11 +48,13 @@ Purpose
   {
     "targetID" : 5456,
     "messageLength" : 1084,
-    "messageData" : [1,2,3,4,5,6,7,8,9]
+    "messageData" : [1,2,3,4,5,6,7,8,9],
+    "appID" : 65368
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -53,12 +64,12 @@ Purpose
   {
     "messageDataResult" : [1,2,3,4,5,6],
     "code" : 0,
-    "method" : "VehicleInfo.GetDTCs"
+    "method" : "VehicleInfo.DiagnosticMessage"
   }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -70,14 +81,8 @@ Purpose
     "message" : "Data not available",
     "data" :
     {
-      "method" : "VehicleInfo.GetDTCs"
+      "method" : "VehicleInfo.DiagnosticMessage"
     }
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-DiagnosticMessage
-![DiagnosticMessage](./assets/DiagnosticMessage.png)
-|||

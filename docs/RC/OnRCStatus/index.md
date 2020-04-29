@@ -9,7 +9,6 @@ Sender
 Purpose
 : Inform HMI and mobile application about changes in RC module allocation.
 
-
 ### Notification
 
 SDL must send OnRCStatus notification when:
@@ -28,7 +27,16 @@ SDL must always include `moduleId` for each and every `ModuleData` in `allocated
 |allocatedModules|[Common.ModuleData](../../common/structs/#moduledata)|true|array: true<br>minsize: 0<br>maxsize: 100|Contains a list (zero or more) of module types that are allocated to the application|
 |freeModules|[Common.ModuleData](../../common/structs/#moduledata)|true|array: true<br>minsize: 0<br>maxsize: 100|Contains a list (zero or more) of module types that are free to access for the application|
 
-#### JSON Example Notification
+### Sequence Diagrams
+
+|||
+OnRCStatus
+![OnRCStatus](./assets/OnRCStatus.png)
+|||
+
+### JSON Message Examples
+
+#### Example Notification
 
 ```json
 {
@@ -54,14 +62,8 @@ SDL must always include `moduleId` for each and every `ModuleData` in `allocated
 			{
 				"moduleType": "SEAT"
 			}
-		]
+		],
+		"appID" : 65368
 	}
 }
 ```
-
-### Sequence Diagrams
-
-|||
-OnRCStatus
-![OnRCStatus](assets/OnRCStatus.png)
-|||

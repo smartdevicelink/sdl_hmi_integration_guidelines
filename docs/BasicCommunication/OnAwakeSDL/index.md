@@ -14,7 +14,7 @@ This notification is sent to SDL to notify that there won't be `IGNITION_OFF` se
 !!! MAY
 
   1. Send `OnAwakeSDL` if the `ACC` does not change, but the driver door is opened and closed two times.
-  2. Send `OnAwakeSDL` ifif the `ACC` key position is set to `On`.
+  2. Send `OnAwakeSDL` if the `ACC` key position is set to `On`.
 
 !!!
 
@@ -25,15 +25,19 @@ This notification is sent to SDL to notify that there won't be `IGNITION_OFF` se
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Wake SDL from Suspension
 ![OnAwakeSDL](./assets/OnAwakeSDL.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",
-  "method" : "BasicCommunication. OnAwakeSDL"
+  "method" : "BasicCommunication.OnAwakeSDL"
 }
 ```

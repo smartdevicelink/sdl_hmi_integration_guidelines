@@ -26,7 +26,7 @@ SDL will:
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |appID|Integer|true|The application to be removed from the foreground|
 
@@ -36,20 +36,35 @@ SDL will:
 
 This RPC has no additional parameter requirements
 
-### Example Request
+### Sequence Diagrams
+
+|||
+Close Application request from mobile application
+![Close Application request from Mobile](./assets/CloseApplicationFromMobile.png)
+|||
+
+|||
+Close Application after Failed Data Consent Prompt
+![Close Application Failed Data](./assets/CloseApplicationFailedData.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
   "id" : 47,
   "jsonrpc" : "2.0",
-  "method" : "BasicCommunication.ActivateApp",
-  "result" :
+  "method" : "BasicCommunication.CloseApplication",
+  "params" :
   {
     "appID" : 65368
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -58,12 +73,12 @@ This RPC has no additional parameter requirements
   "result" :
   {
     "code" : 0,
-    "method" : "BasicCommunication.ActivateApp"
+    "method" : "BasicCommunication.CloseApplication"
   }
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -75,18 +90,8 @@ This RPC has no additional parameter requirements
     "message" : "The provided appID is not valid.",
     "data" :
     {
-      "method" : "BasicCommunication.ActivateApp"
+      "method" : "BasicCommunication.CloseApplication"
     }
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-Close Application request from mobile application
-![Close Application request from Mobile](./assets/CloseApplicationFromMobile.png)
-|||
-|||
-Close Application after Failed Data Consent Prompt
-![Close Application Failed Data](./assets/CloseApplicationFailedData.png)
-|||

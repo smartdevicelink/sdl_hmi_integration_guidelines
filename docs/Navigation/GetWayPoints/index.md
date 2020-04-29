@@ -20,7 +20,6 @@ SDL forwards a request from the mobile application to get waypoint/destination d
 
 **SDL Note:** In case HMI does not respond to this request within SDL's default timeout (10s by default, [UI.OnResetTimeout](../../ui/onresettimeout) will reset this), SDL will return `GENERIC_ERROR` code to the corresponding mobile app's request
 
-
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|
@@ -49,17 +48,18 @@ SDL forwards a request from the mobile application to get waypoint/destination d
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |wayPoints|[Common.LocationDetails](../../common/structs/#locationdetails)|false|array: true<br>minsize: 1<br>maxsize: 10||
-
+|appID|Integer|true||ID of the application|
 
 ### Sequence Diagrams
+
 |||
 GetWayPoints
 ![GetWayPoints](./assets/GetWayPoints.png)
 |||
 
-### JSON Messages Examples
+### JSON Message Examples
 
-### Example Request
+#### Example Request
 
 ```json
 {
@@ -74,15 +74,16 @@ GetWayPoints
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
 	"id" : 543,
 	"jsonrpc" : "2.0",
-	"method" : "Navigation.GetWayPoints",
 	"result" :
 	{
+		"code" : 0,
+		"method" : "Navigation.GetWayPoints",
 		"wayPoints" :
 		[
 			{
@@ -95,7 +96,7 @@ GetWayPoints
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -107,7 +108,7 @@ GetWayPoints
 		"message" : "The data sent is invalid",
 		"data" :
 		{
-			"method" : "Navigation.GetWaypoints"
+			"method" : "Navigation.GetWayPoints"
 		}
 	}
 }

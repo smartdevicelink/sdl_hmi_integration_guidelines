@@ -22,25 +22,27 @@ In order to work with multiple widget windows, the app needs to be able to delet
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |windowID|Integer|true|The value of '0' will always be the default main window on the main display and cannot be deleted.|
-
+|appID|Integer|true||
 
 ### Response
 
 #### Parameters
-This RPC has no additional parameter requirements.
 
+This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 DeleteWindow
 ![DeleteWindow](./assets/DeleteWindow.png)
 |||
 
+### JSON Message Examples
 
-### Example Request
+#### Example Request
 
 ```json
 {
@@ -49,12 +51,13 @@ DeleteWindow
   "method" : "UI.DeleteWindow",
   "params" :
   {
-    "windowID":2
+    "windowID" : 2,
+    "appID" : 65368
   }
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -68,7 +71,7 @@ DeleteWindow
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -80,7 +83,7 @@ DeleteWindow
     "message" : "The data may not be changed because it is currently in use",
     "data" :
     {
-      "UI. DeleteWindow"
+      "method" : "UI.DeleteWindow"
     }
   }
 }

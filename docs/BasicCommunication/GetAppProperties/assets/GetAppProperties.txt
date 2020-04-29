@@ -1,0 +1,34 @@
+title GetAppProperties 
+
+participant Local Web App
+participant SDL
+participant HMI
+
+==<align:center>Pre-conditions: 1. Application's properties were set via BC.SetAppProperties from HMI==  
+
+opt GetAppProperties - Happy path
+HMI -> SDL: BC.GetAppProperties(policyAppID:"123")
+SDL-->HMI: BC.GetAppProperties(policyAppID:"123", SUCCESS)
+end 
+
+opt GetAppProperties - request without `policyAppID`
+HMI -> SDL:BC.GetAppProperties()
+SDL-->HMI: BC.GetAppProperties(all applications properties, SUCCESS)
+end
+
+opt GetAppProperties - request with wrong `policyAppID`
+HMI -> SDL: BC.GetAppProperties(policyAppID:"1 \2qwer'ty3")
+SDL-->HMI: BC.GetAppProperties(DATA_NOT_AVAILABLE)
+end
+
+opt GetAppProperties - request with unknown parameter
+HMI -> SDL: BC.GetAppProperties(unknown parameter:"value", policyAppID:"123")
+SDL ->SDL: Cut off the unknown parameter
+
+note over SDL:Process the request as assigned
+end
+
+opt GetAppProperties - request with invalid parameters
+HMI -> SDL: BC.GetAppProperties(policyAppID:true)
+SDL-->HMI: BC.GetAppProperties(INVALID_DATA)
+end

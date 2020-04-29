@@ -33,12 +33,15 @@ The application's menu must no longer display the sub menu whose `menuID` matche
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 Delete Sub Menu Containing Commands
 ![DeleteSubMenu](./assets/DeleteSubMenuWithCommands.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -52,7 +55,8 @@ Delete Sub Menu Containing Commands
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -66,7 +70,7 @@ Delete Sub Menu Containing Commands
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

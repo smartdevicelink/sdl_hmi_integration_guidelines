@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Inform SDL whether the vehicle audio system has the ability to speak the TTS prompts or listen to an recognize VR commands while playing audio
+: Inform SDL whether the vehicle audio system has the ability to speak the <abbr title="Text To Speech">TTS</abbr> prompts or listen to and recognize <abbr title="Voice Recognition">VR</abbr> commands while playing audio
 
 !!! note
 
@@ -27,7 +27,7 @@ Check mixing audio capabilities and provided an accurate response.
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Response
 
@@ -37,7 +37,16 @@ This RPC has no additional parameter requirements.
 |:---|:---|:--------|:---------|
 |attenuatedSupported|Boolean|true||
 
-### Request Example
+### Sequence Diagrams
+
+|||
+MixingAudioSupported Messaging
+![Mixing Audio Supported](./assets/MixingAudioSupported.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -47,7 +56,7 @@ This RPC has no additional parameter requirements.
 }
 ```
 
-### Response Example
+#### Example Response
 
 ```json
 {
@@ -57,12 +66,12 @@ This RPC has no additional parameter requirements.
   {
     "attenuatedSupported" : true,
     "code" : 0,
-    "method" : "BasicCommunication. MixingAudioSupported"
+    "method" : "BasicCommunication.MixingAudioSupported"
   }
 }
 ```
 
-### Error Example
+#### Example Error
 
 ```json
 {
@@ -79,9 +88,3 @@ This RPC has no additional parameter requirements.
   }
 }
 ```
-
-### Sequence Diagrams
-|||
-MixingAudioSupported Messaging
-![Mixing Audio Supported](./assets/MixingAudioSupported.png)
-|||

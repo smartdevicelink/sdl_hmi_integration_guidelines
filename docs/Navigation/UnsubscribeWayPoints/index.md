@@ -26,12 +26,15 @@ This RPC has no additional parameter requirements
 This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
+
 |||
 UnsubscribeWayPoints
 ![UnsubscribeWayPoints](./assets/UnsubscribeWayPoints.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -42,7 +45,7 @@ UnsubscribeWayPoints
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -56,7 +59,7 @@ UnsubscribeWayPoints
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

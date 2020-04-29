@@ -7,7 +7,7 @@ Sender
 : HMI
 
 Purpose
-: Inform SDL that an application's VR command was recognized.
+: Inform SDL that an application's <abbr title="Voice Recognition">VR</abbr> command was recognized.
 
 ### Notification
 
@@ -19,12 +19,16 @@ Purpose
 |appID|Integer|true||
 
 ### Sequence Diagrams
+
 |||
 OnCommand
 ![OnCommand](./assets/OnCommand.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",
@@ -32,8 +36,7 @@ OnCommand
   "params" :
   {
     "cmdID" : 4365,
-      "grammarID" : 11,
-      "appID" : 12564
+    "appID" : 12564
   }
 }
 ```

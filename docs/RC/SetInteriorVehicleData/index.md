@@ -9,7 +9,7 @@ Sender
 Purpose
 : Set RC module settings
 
-RC.SetInteriorvehicledata represents a request from an application to change settings of requested RC module. This RPC can be sent to the HMI for an application that is registered with REMOTE_CONTROL appHMIType and in one of the following states: FULL, LIMITTED, BACKGROUND. Module signed by the application in such request has to be available on HMI and allowed for control change settings
+RC.SetInteriorVehicleData represents a request from an application to change settings of requested RC module. This RPC can be sent to the HMI for an application that is registered with REMOTE_CONTROL appHMIType and in one of the following states: FULL, LIMITED, BACKGROUND. Module signed by the application in such request has to be available on HMI and allowed for control change settings
 
 !!! must
 
@@ -38,16 +38,20 @@ RC.SetInteriorvehicledata represents a request from an application to change set
 |moduleData|[Common.ModuleData](../../common/structs/#moduledata)|true| | |
 
 ### Sequence Diagrams
+
 |||
 SetInteriorVehicleData
-![SetInteriorVehicleData](assets/SetInteriorVehicleData.png)
-|||
-|||
-SetInteriorvehicleData-READ_ONLY
-![SetInteriorvehicleData READ_ONLY](assets/setInteriorVehicleData_READ_ONLY.png)
+![SetInteriorVehicleData](./assets/SetInteriorVehicleData.png)
 |||
 
-### Example Request
+|||
+SetInteriorVehicleData-READ_ONLY
+![SetInteriorVehicleData READ_ONLY](./assets/setInteriorVehicleData_READ_ONLY.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -81,7 +85,7 @@ SetInteriorvehicleData-READ_ONLY
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -115,7 +119,7 @@ SetInteriorvehicleData-READ_ONLY
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

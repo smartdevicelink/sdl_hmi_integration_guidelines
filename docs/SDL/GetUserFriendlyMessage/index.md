@@ -12,8 +12,8 @@ Purpose
 ### Request
 
 !!! MUST
-* Request message text to notify user via UI or/and TTS message about some event is happening. Message text may also be requested for some specific dialogs on HMI which require user’s answers.  
-* Notify user according to HMI flow via UI pop-ups or/and TTS messages, the text for them obtained in GetUserFriendlyMessage response in correspondence to messageCodes requested.
+* Request message text to notify user via UI or/and <abbr title="Text To Speech">TTS</abbr> message about some event is happening. Message text may also be requested for some specific dialogs on HMI which require user’s answers.  
+* Notify user according to HMI flow via UI pop-ups or/and <abbr title="Text To Speech">TTS</abbr> messages, the text for them obtained in GetUserFriendlyMessage response in correspondence to messageCodes requested.
 !!!
 
 !!! NOTE    
@@ -39,6 +39,7 @@ and `<language_1>` exists at "consumer_friendly_messages" section at LocalPT:
 |language|[Common.Language](../../common/enums/#language)|false||
 
 ##### MessageCodes   
+
 Message codes specify appropriate user messages which notify the user about some events/conditions on HMI. Messages and message codes are coming from Policy Table and must be used on HMI in different information pop-ups according to HMI use-cases scenarios.
 
 |MessageCode|MessageText|
@@ -52,7 +53,7 @@ Message codes specify appropriate user messages which notify the user about some
 |DataConsentHelp|Updates are about the size of an email, and the occurrence of updates depends on your vehicle usage and when a new app is found on your device. See your Owner Guide for more information.|
 |DisableApps|Disabling automatic updates will also disable sync mobile apps. You will not be able to use any mobile apps with SYNC. Please press yes to confirm or no to cancel.|
 |DrivingCharacteristics|An app can access the following driving characteristics: Fuel Consumption, MyKey, Seat Belt Status.|
-|Location|An app can access vehicle GPS and speed.|
+|Location|An app can access vehicle <abbr title="Global Positioning System">GPS</abbr> and speed.|
 |Notifications|An app can send notifications when running in the background.|
 |SettingDisableUpdates|Disable Updates|
 |SettingEnableUpdates|Enable Apps|
@@ -75,12 +76,15 @@ Message codes specify appropriate user messages which notify the user about some
 |messages|[Common.UserFriendlyMessage](../../common/structs/#userfriendlymessage)|false|array: true<br>minsize: 1<br>maxsize: 100| 
 
 ### Sequence Diagrams
+
 |||
 GetUserFriendlyMessage for device consent
 ![GetUserFriendlyMessage](./assets/GetUserFriendlyMessage.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -89,13 +93,14 @@ GetUserFriendlyMessage for device consent
   "method" : "SDL.GetUserFriendlyMessage",
   "params" :
   {
-    "messageCodes": "AppPermissions",    
-      "language" : "EN-GB"
+    "messageCodes": ["AppPermissions"],
+    "language" : "EN-GB"
   }
 
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -114,7 +119,7 @@ GetUserFriendlyMessage for device consent
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

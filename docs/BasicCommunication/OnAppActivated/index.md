@@ -39,12 +39,16 @@ When `OnAppActivated` is received, SDL sends an `ActivateApp` request to confirm
 |windowID|Integer|false||
 
 ### Sequence Diagrams
+
 |||
 User Activates App
 ![OnAppActivated](./assets/OnAppActivated.png)
 |||
 
-#### JSON Example Notification
+### JSON Message Examples
+
+#### Example Notification
+
 ```json
 {
   "jsonrpc" : "2.0",

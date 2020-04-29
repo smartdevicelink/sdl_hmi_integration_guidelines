@@ -1,0 +1,58 @@
+@startuml
+
+participant SDL
+participant HMI.UI
+participant HMI.TTS
+participant HMI.VR
+
+note over SDL : application has requested\nPerformInteraction in mode BOTH
+
+SDL -> HMI.VR : VR.PerformInteraction(grammarID, initialPrompt, timeoutPrompt, timeout, cancelID)
+
+note over HMI.VR : Store values of prompts\nand the timeout,\nstart counting timeout
+
+SDL -> HMI.UI : UI.PerformInteraction(appID, vrHelpItems, choiceSet, timeout, cancelID)
+
+note over HMI.VR : Begin VR session
+
+HMI.VR -> SDL : VR.Started
+
+HMI.TTS -> SDL : TTS.Started
+
+note over HMI.TTS : Speak initial prompt
+
+note over HMI.UI : Display VR Help Items
+
+HMI.UI -> SDL : UI.OnSystemContext(VR_SESSION)
+
+HMI.TTS -> SDL : TTS.Stopped
+
+note over HMI.VR : Timeout is approaching
+
+HMI.TTS -> SDL : TTS.Started
+
+note over HMI.TTS : Speak timeout prompt
+
+HMI.TTS -> SDL : TTS.Stopped
+
+note over HMI.VR : VR Timeout
+
+note over HMI.UI : Close dialog with VR Help Items
+
+HMI.VR --> SDL : VR.PerformInteraction(TIMEOUT)
+
+note over HMI.UI : Display choices\nStart timeout
+
+HMI.UI -> SDL : UI.OnSystemContext(HMI_OBSCURED)
+
+HMI.TTS -> SDL : TTS.Started
+
+note over HMI.TTS : Speak timeout prompt
+
+HMI.TTS -> SDL : TTS.Stopped
+
+note over HMI.UI : Timeout reached
+
+HMI.UI --> SDL : UI.PerformInteraction(TIMEOUT)
+
+@enduml

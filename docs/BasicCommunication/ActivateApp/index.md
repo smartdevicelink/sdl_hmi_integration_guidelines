@@ -38,7 +38,7 @@ If `level` is `FULL` or `LIMITED`:
     * Display the corresponding template in the case one was previously requested by [UI.SetDisplayLayout](../../UI/SetDisplayLayout) for that application
     * Apply [UI.SetGlobalProperties](../../UI/SetGlobalProperties) associated with the named `appID`, if any
     * Apply [UI.AddSubMenu](../../UI/AddSubMenu) associated with the named `appID`, if any
-  2. Make VR commands accessible from previous [VR.AddCommand](../VR/AddCommand) for the named `appID` during the same ignition cycle
+  2. Make <abbr title="Voice Recognition">VR</abbr> commands accessible from previous [VR.AddCommand](../VR/AddCommand) for the named `appID` during the same ignition cycle
   3. Apply [TTS.SetGlobalProperties](../../TTS/SetGlobalProperties) associated with the `appID` in case previously requested since application registration
   4. Assign priority based on the `priority` parameter received. If the parameter is omitted, the HMI must assign a priority of `NONE` by default
   5. Respond with `SUCCESS` result code after the previous requirements have been met
@@ -50,11 +50,11 @@ If `level` is `FULL` or `LIMITED`:
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
+|Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
 |priority|[Common.AppPriority](../../common/enums/#apppriority)|false||
-|level|[Common.HMILevel](../../common/enums/#hmilevel)|false|Included if the hmi level of this application should be changed to anything other than `FULL`. Should not be `NONE`.|
+|level|[Common.HMILevel](../../common/enums/#hmilevel)|false|Included if the HMI level of this application should be changed to anything other than `FULL`. Should not be `NONE`.|
 
 ### Response
 
@@ -62,20 +62,45 @@ If `level` is `FULL` or `LIMITED`:
 
 This RPC has no additional parameter requirements
 
-### Example Request
+### Sequence Diagrams
+
+|||
+Activate App after successful Resumption
+![Activate App Successful Resume](./assets/ActivateAppSuccessfulResume.png)
+|||
+
+|||
+Activate App after failed Resumption
+![Activate App Failed Resume](./assets/ActivateAppFailedResume.png)
+|||
+
+|||
+Activate App after Unexpected Disconnect
+![Activate App Unexpected Disconnect](./assets/ActivateAppUnexpectedDisconnect.png)
+|||
+
+|||
+Activate App after Accepted Data Consent Prompt
+![Activate App Successful Data](./assets/ActivateAppSuccessfulData.png)
+|||
+
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
   "id" : 47,
   "jsonrpc" : "2.0",
   "method" : "BasicCommunication.ActivateApp",
-  "result" :
+  "params" :
   {
     "appID" : 65368
   }
 }
 ```
-### Example Response
+
+#### Example Response
 
 ```json
 {
@@ -89,7 +114,7 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
@@ -107,20 +132,3 @@ This RPC has no additional parameter requirements
 }
 ```
 
-### Sequence Diagrams
-|||
-Activate App after successful Resumption
-![Activate App Successful Resume](./assets/ActivateAppSuccessfulResume.png)
-|||
-|||
-Activate App after failed Resumption
-![Activate App Failed Resume](./assets/ActivateAppFailedResume.png)
-|||
-|||
-Activate App after Unexpected Disconnect
-![Activate App Unexpected Disconnect](./assets/ActivateAppUnexpectedDisconnect.png)
-|||
-|||
-Activate App after Accepted Data Consent Prompt
-![Activate App Successful Data](./assets/ActivateAppSuccessfulData.png)
-|||

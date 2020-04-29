@@ -52,7 +52,9 @@ SetVideoConfig error flow
 ![SetVideoConfig](./assets/SetVideoConfigErrorFlow.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
@@ -73,7 +75,7 @@ SetVideoConfig error flow
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -87,17 +89,20 @@ SetVideoConfig error flow
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {
   "id" : 70,
   "jsonrpc" : "2.0",
-  "result" :
+  "error" :
   {
     "code" : 4,
-    "rejectedParams": ["codec", "width"],
-    "method" : "Navigation.SetVideoConfig"
+    "message" : "Invalid config params",
+    "data" : {
+      "rejectedParams": ["codec", "width"],
+      "method" : "Navigation.SetVideoConfig"
+    }
   }
 }
 ```
