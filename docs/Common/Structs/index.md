@@ -639,7 +639,7 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|channelId|Integer|true|minvalue: 1<br>maxvalue: 100|Defines the each Equalizer channel settings.|
+|channelId|Integer|true|minvalue: 1<br>maxvalue: 100|Defines the equalizer channel id|
 |channelName|String|false|maxlength: 50|Read-only channel / frequency name (e.i. "Treble, Midrange, Bass" or "125 Hz")|
 |channelSetting|Integer|true|minvalue: 0<br>maxvalue: 100|Reflects the setting, from 0%-100%.|
 
