@@ -7,7 +7,7 @@ Sender
 : HMI
 
 Purpose
-: Inform SDL that the language for the <abbr title="Text To Speech">TTS</abbr> component has changed.
+: Inform SDL that the language for the TTS component has changed.
 
 ### Notification
 
@@ -20,7 +20,6 @@ Purpose
 ### Sequence Diagrams
 
 |||
-OnLanguageChange
 ![OnLanguageChange](./assets/OnLanguageChange.png)
 |||
 

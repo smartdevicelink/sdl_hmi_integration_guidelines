@@ -1,0 +1,26 @@
+title OnLanguageChange
+
+participant App
+participant SDL
+participant HMI
+
+note over App,HMI:<align:center> **//Pre-conditions://**\n1. App registered with **EN-US** language\n2. Current HMI TTS language is **EN-US**
+
+note over HMI:<align:center>User switched\nHMI TTS language\nto **<FR-CA>**
+
+HMI->>SDL:TTS.OnLanguageChange (<**FR-CA**>)
+SDL->>SDL:<align:center>Overwrite contents\nof OnLanguageChange notification\nin `HMICapabilitiesCacheFile`
+SDL->>App:OnLanguageChange (<**FR-CA**>)
+
+note over SDL:<align:center> Unregister <appID>\nwith language different\nfrom current HMI TTS language
+SDL->>HMI:BC.OnAppUnregistered (<appID>,**<EN-US>**)
+
+note over HMI:<align:center>Clear up data\nassociated with <appID>
+
+note over HMI:<align:center>Display HMI default screen\n(e.g.HMI main menu)
+
+App->>SDL:RegisterAppInterface (<appID>, **<FR-CA>**)
+SDL->>HMI:BC.RegisterAppInterface (<appID>, **<FR-CA>**)
+
+note over HMI:<align:center>Store the provided data\nassociating it with <appID> 
+note over HMI:<align:center>Add <appID> to the list\nof registered applications

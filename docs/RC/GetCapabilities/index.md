@@ -40,7 +40,7 @@ This RPC has no additional parameter requirements
 
 |||
 GetCapabilities
-![GetCapabilities](./assets/IsReady_GetCapabilities.png)
+![GetCapabilities](./assets/GetCapabilities.png)
 |||
 
 ### JSON Message Examples

@@ -1,0 +1,44 @@
+participant App
+participant SDL
+participant HMI
+
+HMI->SDL:BC.OnReady
+SDL->HMI:VR.IsReady
+HMI-->SDL:VR.IsReady (code:0)
+note over SDL:<align:center>`HMICapabilitiesCacheFile`\nis not available
+SDL->SDL:Create `HMICapabilitiesCacheFile`
+
+opt Use of cached capabilities data
+
+opt On system start up
+note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilitiesCacheFile`
+SDL->HMI:VR.GetLanguage
+HMI-->SDL:VR.GetCapabilities (params)
+SDL->SDL:Cache received data\nin `HMICapabilitiesCacheFile`
+App->SDL:GetLanguage
+SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
+SDL-->App:      GetLanguage (params)          
+end
+
+opt In subsequent ignition cycles
+note over SDL:<align:center> Capabilities data is available\nin`HMICapabilitiesCacheFile`
+App->SDL:GetLanguage
+SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
+SDL-->App:     GetLanguage (params)          
+end
+end
+
+opt Use of default capabilities data - No response from HMI
+
+note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilitiesCacheFile`
+SDL->HMI:VR.GetLanguage
+note over HMI:<align:center>No response
+App->SDL:GetLanguage
+SDL->SDL:Load default data\nfrom **`hmi_capabilities.json`**
+SDL-->App:      GetLanguage (params)          
+
+note over SDL:<align:center> Requests\ncapabilities data from HMI\nin subsequent ignition cycle
+end
+
+
+
