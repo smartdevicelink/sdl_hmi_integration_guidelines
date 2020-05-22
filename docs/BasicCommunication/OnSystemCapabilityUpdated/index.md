@@ -20,6 +20,7 @@ Purpose
     * `availabletemplates`, `buttonCapabilities` and `imageTypeSupported` should reflect the general capabilities of the window/system.
 
 !!! NOTE
+
 Template `WEB_VIEW` is only allowed for the WebEngine applications with `AppHMIType`=`WEB_VIEW`.
 !!!
 

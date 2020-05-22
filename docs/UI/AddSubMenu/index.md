@@ -75,6 +75,10 @@ Add Sub Menu Rejected Limit Reached
 ![AddSubMenu](./assets/AddSubMenuLimit.png)
 |||
 
+|||
+![AddSubMenu](./assets/AddSubMenuWebEngineApp.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request
