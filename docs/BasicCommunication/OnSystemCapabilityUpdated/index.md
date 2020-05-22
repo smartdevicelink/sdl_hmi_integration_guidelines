@@ -22,6 +22,7 @@ Purpose
 !!! NOTE
 
 Template `WEB_VIEW` is only allowed for the WebEngine applications with `AppHMIType`=`WEB_VIEW`.
+
 !!!
 
 #### Parameters

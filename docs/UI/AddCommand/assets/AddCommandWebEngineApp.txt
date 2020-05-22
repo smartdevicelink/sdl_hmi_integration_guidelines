@@ -1,4 +1,3 @@
-title AddCommand for WebEngine Application
 participant Local Web App
 participant SDL
 participant HMI

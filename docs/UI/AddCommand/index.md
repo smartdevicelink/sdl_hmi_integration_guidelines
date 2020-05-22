@@ -92,7 +92,8 @@ AddCommand UI No Response, <abbr title="Voice Recognition">VR</abbr> Succeeds
 |||
 
 |||
-![AddCommand](.assets/AddCommandWebEngineApp.png)
+AddCommand for WebEngine App
+![AddCommand](./assets/AddCommandWebEngineApp.png)
 |||
 
 ### JSON Message Examples
