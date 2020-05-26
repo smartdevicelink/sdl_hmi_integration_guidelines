@@ -3,7 +3,7 @@ participant App
 participant SDL
 participant HMI
 App->SDL:RAI
-note over App:<align:center>RAI request processing\non hold until\nhmi_cooperating_ = true
+note left of App:<align:center>RAI request processing\non hold until\nhmi_cooperating_ = true
 HMI->SDL:BC.OnReady
 SDL->SDL:ONHMIStartedCooperation
 note over SDL:<align:center>Do not set\nhmi_cooperating_= true\nyet
