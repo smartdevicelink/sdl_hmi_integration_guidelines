@@ -1,0 +1,15 @@
+title GetSystemInfo ccpu_version is the same
+participant App
+participant SDL
+participant HMI
+App->SDL:RAI
+note over App:<align:center>RAI request processing\non hold until\nhmi_cooperating_ = true
+HMI->SDL:BC.OnReady
+SDL->SDL:ONHMIStartedCooperation
+note over SDL:<align:center>Do not set\nhmi_cooperating_= true\nyet
+SDL->HMI:BC.GetSystemInfo
+HMI-->SDL:BC.GetSystemInfo
+note over SDL:<align:center>ccpu version is the same
+note over SDL:<align:center>`HMICapabilitiesCache` file\ncontains all components\ncapabilities data
+SDL->SDL:Set hmi_cooperating = true
+SDL-->App:RAI
