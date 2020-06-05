@@ -1,0 +1,22 @@
+title PerformInteraction for WebEngine Applications
+
+participant Local Web App
+participant SDL
+participant HMI
+note over Local Web App, HMI:<align:center>**Preconditions:**\n1. appID is active on HMI, application template is `WEB_VIEW`\n2. HMI shows app/template title on template layout
+note over HMI:<align:center>Display appID web page view\nin the main window
+Local Web App->SDL:PerformInteraction (InteractionMode: VR_ONLY)
+SDL->HMI:[VR, UI].PerformInteraction (params)
+note over HMI:<align:center>Store request data\nassociating it with appID
+HMI->>SDL:[VR, TTS].Started
+note over HMI:<align:center>Overlay current display with\nPerformInteraction pop-up\ndisplaying VR help items 
+HMI->>SDL:UI.OnsystemContext (VRSESSION)
+SDL->>Local Web App:OnHMIStatus (VRSESSION)
+note over HMI:<align:center>PerformInteraction request\ntimed out
+HMI->>SDL:[VR, TTS].Stopped
+HMI->>SDL:[VR, UI].PerformInteraction (TIMEOUT)
+SDL->>Local Web App:PerformInteraction (TIMEOUT)
+note over HMI:<align:center>Close pop-up with VR help items
+note over HMI:<align:center>Display appID web page view\nin the main window
+HMI->>SDL:UI.OnSystemContext (MAIN)
+SDL->>Local Web App:OnHMIStatus (MAIN)
