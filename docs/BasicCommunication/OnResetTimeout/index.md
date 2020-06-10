@@ -10,34 +10,28 @@ Purpose
 : Inform SDL about RPC instance for which timeout needs to be reset 
 
 ### Notification
-HMI can send this notification across all the interfaces and for all the request RPCs to notify that timeout needs to be reset.
+HMI can send this notification used by functions in all interfaces to notify that timeout needs to be reset.
 
 !!! must
   * send OnResetTimeout to SDL in case HMI needs more time for processing a request from mobile application
   * fine tune the wait time per method call as needed
   * control number of reset timeouts and duration of each reset timeout for endless or finite method timeout
 
-Send OnResetTimeout notification in the following cases 
-1. CreateInteractionChoiceSet/AddCommand
-    1. Time taken to add VR grammar varies by underlying voice module and number of VR commands. We have seen the request getting timeout before the entire batch of VR commands can be processed.
-2. SendLocation
-    1. SendLocation popup remains on HMI to wait for user's selection. 
-3. SetInteriorVehicleData
-    1. Time for completion of a set action varies by target module. This can potentially be significantly more than SDL predefined timeout
-4. GetInteriorVehicleDataConsent
-    1. This is a user side HMI dialogue which needs input from user.
-5. Alert
-    1. This is a user side HMI dialogue which needs input from user.
-6. Slider
-    1. This is a user side HMI dialogue which needs input from user.
-7. PerformInteraction
-    1. This is a user side HMI dialogue which needs input from user.
-8. ScrollableMessage
-    1. This is a user side HMI dialogue which needs input from user.
-9. DialNumber
-    1. This is a user side HMI dialogue which needs input from user.
-10. Any other request which can potentially take more time than predefined SDL timeout
+!!!
 
+HMI can OnResetTimeout to inform SDL that the timeout of the recently called **UI RPC** is reset by definite User's actions.
+
+!!! must
+  * send OnResetTimeout to SDL upon every Users keypress processing UI.PerfromInteraction(layoutMode:KEYBOARD) request 
+  * send OnResetTimeout to SDL upon Users actions over the message (e.g. scrolling) processing UI.ScrollableMessage request
+  * send OnResetTimeout to SDL upon KEEP_CONTEXT soft button (defined within UI.ScrollableMessage RPC) press
+!!!
+
+HMI can send OnResetTimeout to reset the timeout for some **TTS RPC** running on HMI (e.g.Speak).  
+SDL's default timeout for any response from HMI is 10 seconds. So it needs to know if some TTS RPC is still running on HMI to predict sending wrong response by timeout. OnResetTimeout notifies SDL to reset the timeout for some TTS RPC running on HMI (e.g.Speak).
+
+!!! must
+  * send OnResetTimeout to SDL in case HMI speak event lasts longer than 10 seconds
 !!!
 
 _Note: Currently there is no version negotiation between HMI and Core, so older HMI implementations will not work with this new version of Core._
@@ -54,9 +48,25 @@ _Note: Currently there is no version negotiation between HMI and Core, so older 
 OnResetTimeout for Speak SUCCESS
 ![OnResetTimeout](./assets/OnResetTimeoutSpeakSuccess.jpg)
 |||
+
 |||
 OnResetTimeout for Speak GENERIC_ERROR
 ![OnResetTimeout](./assets/OnResetTimeoutGenericError.jpg)
+|||
+
+|||
+OnResetTimeout for Alert
+![OnResetTimeout](./assets/OnResetTimeoutKeepContextAlert.png)
+|||
+
+|||
+OnResetTimeout for PerformInteraction
+![OnResetTimeout](./assets/OnResetTimeoutPerformInteraction.png)
+|||
+
+|||
+OnResetTimeout for ScrollableMessage
+![OnResetTimeout](./assets/OnResetTimeoutScrollableMessage.png)
 |||
 
 #### JSON Example Notification

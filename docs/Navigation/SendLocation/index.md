@@ -36,12 +36,9 @@ Purpose
 |address| Common.OASISAddress|false||
 
 ### Response
+In case HMI needs more time for processing SendLocation request, HMI must send BC.OnResetTimeout notification to SDL for reseting timeout.
 
-!!!must
-Send OnResetTimeout notification to SDL to reset timeout in case while processing SendLocation request HMI waits for user's selection.
-!!!
-
-_SDL Note: In case HMI does not respond SDL's request during SDL default timeout, SDL will return GENERIC_ERROR code to the corresponding mobile app's request._
+_SDL Note: In case HMI does not respond SDL's request during timeout, SDL will return GENERIC_ERROR code to the corresponding mobile app's request._
 
 #### Parameters
 

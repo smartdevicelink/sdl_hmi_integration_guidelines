@@ -19,7 +19,9 @@ SDL sends the `UI.Alert` RPC when some information needs to be displayed to the 
   4. Display the alert dialog with the text information in the `alertFields` array and optional `softButtons` and optional `displayIndicator` indicating a timeout for the alert
   5. Send [Buttons.OnButtonPress](../../buttons/onbuttonpress) and/or [Buttons.OnButtonEvent](../../buttons/onbuttonevent) notifications if soft buttons associated with the alert are pressed by the user
   6. Dismiss the alert after the duration has passed since receipt of the request
-  7. Send `BC.OnResetTimeout` to SDL in case HMI needs input from user and hence more time to process UI.Alert request
+  7. In case HMI needs more time for processing UI.Alert request, HMI must send BC.OnResetTimeout notification to SDL for reseting timeout.
+
+_SDL Note: In case HMI does not respond SDL's request during timeout, SDL will return GENERIC_ERROR code to the corresponding mobile app's request._ 
 !!!
 
 !!! may
@@ -30,8 +32,9 @@ The HMI may provide the user with a system defined "close" button providing the 
 
 !!! note
 
-An alert may be sent to the HMI for an application which is not currently active. If the alert contains `softButtons` then the duration will be set to `0`
+- An alert may be sent to the HMI for an application which is not currently active. If the alert contains `softButtons` then the duration will be set to `0`
 
+- Timeout for UI.Alert(`<softButtons>`) never expires, thus `BC.OnResetTimeout` logic is not applicable in this case
 !!!
 
 ### Request

@@ -11,9 +11,9 @@ Purpose
 
 ### Request
 
-!!! must
-Send `BC.OnResetTimeout` to SDL in case HMI needs input from user and hence more time to process `UI.ScrollableMessage` RPC
-!!!
+In case HMI needs more time for processing UI.ScrollableMessage request, HMI must send BC.OnResetTimeout notification to SDL for reseting timeout.
+
+_SDL Note: In case HMI does not respond SDL's request during timeout, SDL will return GENERIC_ERROR code to the corresponding mobile app's request._
 
 #### Parameters
 
