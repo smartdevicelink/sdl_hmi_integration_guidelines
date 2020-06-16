@@ -8,8 +8,6 @@ With SDL as the connectivity middleware in a vehicle's infotainment system, appl
 
 This guideline describes:
 
-   * The types of transports supported by SDL for communication with the HMI
-   * How to connect over one of the supported transports
    * The types of messages and message formats used for communication
    * The API that needs to be supported by the vehicle HMI
    * Drawings showing exemplary display layouts for illustrating expected HMI behavior
@@ -20,7 +18,7 @@ This guideline describes:
 
 The SDL HMI Integration guidelines may seem daunting at first, but we're not asking you to read them from cover to cover at the start of your exploration into SDL. We recommend an implementation of SDL HMI as follows
 
-  1. Get connected to SDL by following the [Getting Started](../getting-started) portion of these guidelines
+  1. Get connected to SDL by following the [Integrating Your HMI](https://smartdevicelink.com/en/guides/core/integrating-your-hmi/sdl-core-and-hmi-communication/) portion of the SDL Core Guides
   2. Once you're connected and registered, connect a sample app such as the [iOS RPC Builder](https://github.com/smartdevicelink/rpc_builder_app_ios) to start to understand the RPC messaging layer in SDL between core and your HMI.
   3. From there, you'll notice messages such as BasicCommunication.UpdateAppList. Use this guide to understand what those messages mean and how they can be leveraged in your HMI to provide the best possible user experience.
 
