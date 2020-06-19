@@ -40,11 +40,13 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
+GetSystemInfo ccpu_version is the same
 ![ccpu_versionSame](./assets/ccpu_versionSame.png)
 |||
 
 |||
-![ccpu_verisonChanged](./assets/ccpu_versionChanged.png)
+GetSystemInfo ccpu_version changed
+![ccpu_versionChanged](./assets/ccpu_versionChanged.png)
 |||
 
 ### JSON Message Examples

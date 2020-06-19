@@ -1,4 +1,3 @@
-title GetSystemInfo ccpu_version changed
 participant App
 participant SDL
 participant HMI
@@ -13,7 +12,7 @@ opt ccpu_version changed - Happy Path
 SDL->SDL:<align:center>Delete capabilities data\nfrom `HMICapabilitesCache` file
 loop for each interface
 SDL->HMI:[VR,UI,TTS...].IsReady
-HMI-->SDL:[VR,UI,TTS...]Is.Ready
+HMI-->SDL:[VR,UI,TTS...]IsReady
 SDL->HMI:[VR,UI,TTS...]GetCapabilities
 note over SDL:<align:center>Wait for all\nGetCapabilities\nresponses
 note over HMI:<align:center>Provide all components\ncapabilities data
@@ -25,7 +24,7 @@ opt ccpu version changed - HMI response failure
 SDL->SDL:<align:center>Delete capabilities data\nfrom `HMICapabilitesCache` file
 loop for each interface
 SDL->HMI:[VR,UI,TTS...].IsReady
-HMI-->SDL:[VR,UI,TTS...].Is.Ready
+HMI-->SDL:[VR,UI,TTS...].IsReady
 SDL->HMI:[VR,UI,TTS...]GetCapabilities
 note over SDL:<align:center>Wait for all\nGetCapabilities\nresponses
 note over HMI:<align:center>One or more\nGetCapabilities request\nfail or timeout

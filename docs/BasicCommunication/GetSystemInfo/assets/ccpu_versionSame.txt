@@ -1,4 +1,3 @@
-title GetSystemInfo ccpu_version is the same
 participant App
 participant SDL
 participant HMI
