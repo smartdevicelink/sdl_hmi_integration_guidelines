@@ -44,7 +44,7 @@ Purpose
 |engineOilLife|Boolean|false||
 |electronicParkBrakeStatus|Boolean|false||
 |cloudAppVehicleID|Boolean|false||
-|handsOffSteering|Bolean|false||
+|handsOffSteering|Boolean|false||
 
 ### Response
 
