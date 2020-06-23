@@ -1,5 +1,3 @@
-title OnLanguageChange
-
 participant App
 participant SDL
 participant HMI
@@ -9,7 +7,7 @@ note over App,HMI:<align:center> **//Pre-conditions://**\n1. App registered with
 note over HMI:<align:center>User switched\nVR language to **<FR-CA>**
 
 HMI->>SDL:VR.OnLanguageChange (<**FR-CA**>)
-SDL->>SDL:<align:center>Overwrite contents\nof OnLanguageChange notification\nin `HMICapabilitiesCacheFile`
+SDL->>SDL:<align:center><align:center>Overwrite current language\nin `HMICapabilitiesCacheFile`
 SDL->>App:OnLanguageChange (<**FR-CA**>)
 
 note over SDL:<align:center> Unregister <appID>\nwith language different\nfrom current VR language
