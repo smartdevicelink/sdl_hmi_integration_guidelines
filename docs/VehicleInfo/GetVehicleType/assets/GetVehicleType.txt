@@ -2,9 +2,10 @@ participant App
 participant SDL
 participant HMI
 
-HMI->SDL:BC.OnReady
+App->SDL:RegisterAppInterface
+HMI->>SDL:BC.OnReady
 SDL->HMI:VehicleInfo.IsReady
-HMI-->SDL:VehicleInfo.IsReady (code:0)
+HMI-->SDL:VehicleInfo.IsReady (`SUCCESS`)
 note over SDL:<align:center>`HMICapabilitiesCacheFile`\nis not available
 SDL->SDL:Create `HMICapabilitiesCacheFile`
 
@@ -15,16 +16,14 @@ note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilit
 SDL->HMI:VehicleInfo.GetVehicleType
 HMI-->SDL:VehicleInfo.GetVehicleType (params)
 SDL->SDL:Cache received data\nin `HMICapabilitiesCacheFile`
-App->SDL:GetVehicleType
 SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
-SDL-->App:GetVehicleType (params)
+SDL-->App:RegisterAppInterface (params)
 end
 
 opt In subsequent ignition cycles
 note over SDL:<align:center> Capabilities data is available\nin`HMICapabilitiesCacheFile`
-App->SDL:GetVehicleType
 SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
-SDL-->App:GetVehicleType (params)
+SDL-->App:RegisterAppInterface (params)
 end
 end
 
@@ -33,12 +32,8 @@ opt Use of default capabilities data - No response from HMI
 note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilitiesCacheFile`
 SDL->HMI:VehicleInfo.GetVehicleType
 note over HMI:<align:center>No response
-App->SDL:GetVehicleType
+note over SDL:<align:center>Request and persist \nHMI capabilities\nin subsequent ignition cycle
 SDL->SDL:Load default data\nfrom **`hmi_capabilities.json`**
-SDL-->App:    GetVehicleType (params)   
-note over SDL:<align:center> Requests\ncapabilities data from HMI\nin subsequent ignition cycle
+note over SDL:<align:center>Use default data\nfor App-SDL communication\nwithin this ignition cycle
+SDL-->App:RegisterAppInterface (params)
 end
-
-
-
-

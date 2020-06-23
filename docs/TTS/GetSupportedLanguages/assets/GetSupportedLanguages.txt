@@ -1,44 +1,23 @@
 participant App
 participant SDL
 participant HMI
-
-HMI->SDL:BC.OnReady
+App->SDL:RegisterAppInterface
+HMI->>SDL:BC.OnReady
 SDL->HMI:TTS.IsReady
-HMI-->SDL:TTS.IsReady (code:0)
+HMI-->SDL:TTS.IsReady (`SUCCESS`)
 note over SDL:<align:center>`HMICapabilitiesCacheFile`\nis not available
 SDL->SDL:Create `HMICapabilitiesCacheFile`
-
-opt Use of cached capabilities data
-
-opt On system start up
-note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilitiesCacheFile`
+note over SDL:<align:center>GetSupportedLanguages data\nis not available\nin `HMICapabilitiesCacheFile`
+opt GetSupportedLanguages - Happy Path
 SDL->HMI:TTS.GetSupportedLanguages
-HMI-->SDL:TTS.GetSupportedLanguages (params)
-SDL->SDL:Cache received data\nin `HMICapabilitiesCacheFile`
-App->SDL:GetSupportedLanguages
-SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
-SDL-->App:   GetSupportedLanguages (params)
+HMI-->SDL:TTS.GetSupportedLanguages (`SUCCESS`, params)
+SDL->SDL:<align:center>Cache received data\nin `HMICapabilitiesCacheFile`
+note right of SDL:<align:center>Use received data\nfor App-SDL communication
 end
-
-opt In subsequent ignition cycles
-note over SDL:<align:center> Capabilities data is available\nin`HMICapabilitiesCacheFile`
-App->SDL:GetSupportedLanguages
-SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
-SDL-->App:  GetSupportedLanguages (params)
+opt GetSupportedLanguages - No response from HMI
+note over HMI:No response
+note right of SDL:<align:center>Request data from HMI\nin subsequent ignition cycle
+SDL->SDL:Load default data\nfrom `hmi_capabilities.json`
+note right of SDL:<align:center>Use default data\nfor App-SDL communication\nwithin this ignition cycle
 end
-end
-
-opt Use of default capabilities data - No response from HMI
-
-note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilitiesCacheFile`
-SDL->HMI:TTS.GetSupportedLanguages
-note over HMI:<align:center>No response
-App->SDL:GetSupportedLanguages
-SDL->SDL:Load default data\nfrom **`hmi_capabilities.json`**
-SDL-->App:    GetSupportedLanguages (params)
-note over SDL:<align:center> Requests\ncapabilities data from HMI\nin subsequent ignition cycle
-end
-
-
-
-
+SDL-->App:RegisterAppInterface (params)

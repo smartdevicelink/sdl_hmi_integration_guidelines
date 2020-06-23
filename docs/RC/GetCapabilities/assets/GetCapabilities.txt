@@ -1,10 +1,10 @@
 participant App
 participant SDL
 participant HMI
-
-HMI->SDL:BC.OnReady
+App->SDL:RegisterAppInterface
+HMI->>SDL:BC.OnReady
 SDL->HMI:RC.IsReady
-HMI-->SDL:RC.IsReady (code:0)
+HMI-->SDL:RC.IsReady (`SUCCESS`)
 note over SDL:<align:center>`HMICapabilitiesCacheFile`\nis not available
 SDL->SDL:Create `HMICapabilitiesCacheFile`
 
@@ -15,16 +15,14 @@ note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilit
 SDL->HMI:RC.GetCapabilities
 HMI-->SDL:RC.GetCapabilities (params)
 SDL->SDL:Cache received data\nin `HMICapabilitiesCacheFile`
-App->SDL:GetCapabilities
 SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
-SDL-->App:GetCapabilities (params)
+SDL-->App:RegisterAppInterface (params)
 end
 
 opt In subsequent ignition cycles
 note over SDL:<align:center> Capabilities data is available\nin`HMICapabilitiesCacheFile`
-App->SDL:GetCapabilities
 SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
-SDL-->App:GetCapabilities (params)
+SDL-->App:RegisterAppInterface (params)
 end
 end
 
@@ -34,23 +32,20 @@ opt No response from HMI
 note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilitiesCacheFile`
 SDL->HMI:RC.GetCapabilities
 note over HMI:<align:center>No\nresponse
-App->SDL:GetCapabilities
+note over SDL:<align:center>Request and persist \nHMI capabilities\nin subsequent ignition cycle
 SDL->SDL:Load default data\nfrom **`hmi_capabilities.json`**
-SDL-->App:GetCapabilities (params)
+note over SDL:<align:center>Use default data\nfor App-SDL communication\nwithin this ignition cycle
+SDL-->App:RegisterAppInterface (params)
 end
 
 opt Some capabilities data is missing in HMI response
 SDL->HMI:RC.GetCapabilities
 HMI-->SDL:RC.GetCapabilities (params)
 SDL->SDL:Cache received data\nin `HMICapabilitiesCacheFile`
-note over SDL:<align:center>**<seatLocationCapability>** data\nis missing in HMI response
-App->SDL:GetCapabilities
+note over SDL:<align:center>**`seatLocationCapability`** data\nis missing in HMI response
 SDL->SDL:Load available cached data\nfrom **`HMICapabilitiesCacheFile`**
-SDL->SDL:Load default <systemCapabilities>\nfrom **`hmi_capabilities.json`**
-SDL-->App:GetCapabilities (<seatLocationCapability>, params)
-note over SDL:<align:center> Requests missing\n**<seatLocationCapability>** data from HMI\nin subsequent ignition cycle
+SDL->SDL:Load default `seatLocationCapability`\nfrom **`hmi_capabilities.json`**
+SDL-->App:RegisterAppInterface (`seatLocationCapability`, params)
+note over SDL:<align:center>Request and persist \nmissing HMI capabilities\nin subsequent ignition cycle
 end
 end
-
-
-
