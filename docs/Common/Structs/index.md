@@ -51,6 +51,13 @@
 |pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
 |scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
 
+### DriverDistractionCapability
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|menuLength|Integer|false||The number of items allowed in a Choice Set or Command menu while the driver is distracted|
+|subMenuDepth|Boolean|Integer||The depth of submenus allowed when the driver is distracted. e.g. 3 == top level menu -> submenu -> submenu; 1 == top level menu only|
+
+
 ### SystemCapabilities
 
 |Name|Type|Mandatory|Additional|Description|
@@ -58,6 +65,7 @@
 |navigationCapability|Common.NavigationCapability|false|||
 |phoneCapability|Common.PhoneCapability|false|||
 |videoStreamingCapability|Common.VideoStreamingCapability|false|||
+|driverDistractionCapability|Common.DriverDistractionCapability|false||Describes capabilities when the driver is distracted|
 
 ### MenuParams
 
@@ -931,6 +939,7 @@
 |appServicesCapabilities|Common.AppServicesCapabilities|false||An array of currently available services. If this is an update to the capability the affected services will include an update reason in that item|
 |displayCapabilities|Common.DisplayCapability|false|array: true<br>minsize: 1<br>maxsize: 1000||
 |seatLocationCapability|Common.SeatLocationCapability|false||Contains information about the locations of each seat|
+|driverDistractionCapability|Common.DriverDistractionCapability|false||Describes capabilities when the driver is distracted|
 
 ### MediaServiceManifest
 
