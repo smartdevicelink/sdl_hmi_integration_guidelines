@@ -1,7 +1,6 @@
 participant App
 participant SDL
 participant HMI
-App->SDL:RegisterAppInterface
 HMI->>SDL:BC.OnReady
 SDL->HMI:RC.IsReady
 HMI-->SDL:RC.IsReady (`SUCCESS`)
@@ -15,14 +14,16 @@ note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilit
 SDL->HMI:RC.GetCapabilities
 HMI-->SDL:RC.GetCapabilities (params)
 SDL->SDL:Cache received data\nin `HMICapabilitiesCacheFile`
+App->SDL:GetSystemCapability (`REMOTE_CONTROL`)
 SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
-SDL-->App:RegisterAppInterface (params)
+SDL-->App:GetSystemCapability (params)
 end
 
 opt In subsequent ignition cycles
 note over SDL:<align:center> Capabilities data is available\nin`HMICapabilitiesCacheFile`
+App->SDL:GetSystemCapability (`REMOTE_CONTROL`)
 SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
-SDL-->App:RegisterAppInterface (params)
+SDL-->App:GetSystemCapability (params)
 end
 end
 
@@ -33,9 +34,10 @@ note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilit
 SDL->HMI:RC.GetCapabilities
 note over HMI:<align:center>No\nresponse
 note over SDL:<align:center>Request and persist \nHMI capabilities\nin subsequent ignition cycle
-SDL->SDL:Load default data\nfrom **`hmi_capabilities.json`**
 note over SDL:<align:center>Use default data\nfor App-SDL communication\nwithin this ignition cycle
-SDL-->App:RegisterAppInterface (params)
+App->SDL:GetSystemCapability (`REMOTE_CONTROL`)
+SDL->SDL:Load default data\nfrom **`hmi_capabilities.json`**
+SDL-->App:GetSystemCapability (params)
 end
 
 opt Some capabilities data is missing in HMI response
@@ -43,9 +45,10 @@ SDL->HMI:RC.GetCapabilities
 HMI-->SDL:RC.GetCapabilities (params)
 SDL->SDL:Cache received data\nin `HMICapabilitiesCacheFile`
 note over SDL:<align:center>**`seatLocationCapability`** data\nis missing in HMI response
+App->SDL:GetSystemCapability (`REMOTE_CONTROL`)
 SDL->SDL:Load available cached data\nfrom **`HMICapabilitiesCacheFile`**
 SDL->SDL:Load default `seatLocationCapability`\nfrom **`hmi_capabilities.json`**
-SDL-->App:RegisterAppInterface (`seatLocationCapability`, params)
+SDL-->App:GetSystemCapability(`seatLocationCapability`, params)
 note over SDL:<align:center>Request and persist \nmissing HMI capabilities\nin subsequent ignition cycle
 end
 end

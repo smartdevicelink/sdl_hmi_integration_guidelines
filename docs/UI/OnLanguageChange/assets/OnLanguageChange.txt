@@ -7,7 +7,7 @@ note over App,HMI:<align:center> **//Pre-conditions://**\n1. `appID` is register
 note over HMI:<align:center>User switched\nlanguage to **`FR-CA`**
 
 HMI->>SDL:UI.OnLanguageChange (**`FR-CA`**)
-SDL->>SDL:<align:center><align:center>Overwrite current language\nin `HMICapabilitiesCacheFile`
+SDL->>SDL:<align:center><align:center>Overwrite current HMI UI language\nin `HMICapabilitiesCacheFile`
 SDL->>App:OnLanguageChange (**`FR-CA`**)
 
 note over SDL:<align:center> Unregister application\nwith language different\nfrom current HMI UI language

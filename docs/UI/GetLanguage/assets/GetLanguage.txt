@@ -17,10 +17,11 @@ note right of SDL:<align:center>Use received data\nfor App-SDL communication
 end
 
 opt GetLanguage - No response from HMI
+SDL->HMI:UI.GetLanguage
 note over HMI:No response
 note right of SDL:<align:center>Request data from HMI\nin subsequent ignition cycle
 SDL->SDL:Load default data\nfrom `hmi_capabilities.json`
 note right of SDL:<align:center>Use default data\nfor App-SDL communication\nwithin this ignition cycle
 end 
 
-SDL-->App:RegisterAppInterface
+SDL-->App:RegisterAppInterface (params)
