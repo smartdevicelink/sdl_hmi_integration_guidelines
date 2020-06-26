@@ -264,6 +264,9 @@
 |TYPE5SET|1||
 |CID1SET|2||
 |CID2SET|3||
+|ASCII|4||
+|ISO_8859_1|5||
+|UTF_8|6||
 
 ### SamplingRate
 
