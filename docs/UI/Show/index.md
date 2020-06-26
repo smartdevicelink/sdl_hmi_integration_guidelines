@@ -9,6 +9,15 @@ Sender
 Purpose
 : Update fields displayed on the HMI for the specified application.
 
+!!! NOTE
+
+For the applications with `WEB_VIEW` template `UI.Show` is not allowed to support:
+* textfields
+* soft buttons
+* graphics
+
+!!!
+
 ### Request
 
 #### Parameters
