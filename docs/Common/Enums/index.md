@@ -264,9 +264,9 @@
 |TYPE5SET|1||
 |CID1SET|2||
 |CID2SET|3||
-|ASCII|4||
-|ISO_8859_1|5||
-|UTF_8|6||
+|ASCII|4|ASCII as defined in https://en.wikipedia.org/wiki/ASCII(codes 0-127).<br>Non-printable characters such as tabs and back spaces are ignored.|
+|ISO_8859_1|5|Latin-1, as defined in https://en.wikipedia.org/wiki/ISO/IEC_8859-1|
+|UTF_8|6|The UTF-8 character set that uses variable bytes per code point.<br>See https://en.wikipedia.org/wiki/UTF-8 for more details.<br>This is the preferred character set.|
 
 ### SamplingRate
 
