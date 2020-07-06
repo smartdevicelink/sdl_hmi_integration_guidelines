@@ -1,18 +1,18 @@
 participant Local Web App
 participant SDL
 participant HMI
-note over Local Web App, HMI:<align:center>**Preconditions:**\n1. appID is active on HMI, application template is `WEB_VIEW`\n2. HMI shows app/template title on template layout
+note over Local Web App, HMI:<align:center>**Preconditions:**\n1. `appID` is active on HMI, `AppHMIType` is `WEB_VIEW`\n2. `appID` active template is `WEB_VIEW`\n3. HMI shows app/template title on template layout
 
-note over HMI:<align:center>Display appID web page view\nin the main window
+note over HMI:<align:center>Display `appID` web page view\nin the main window
 note over HMI:<align:center>`EXIT` button is displayed,\n`MENU` button is **not** displayed
-Local Web App->SDL:AddSubMenu (appID, params)
-SDL->HMI:UI.AddSubMenu (appID, params)
+Local Web App->SDL:AddSubMenu (`appID`, params)
+SDL->HMI:UI.AddSubMenu (`appID`, params)
 note over HMI:<align:center>Store received data\nassociating it with `appID`
 note over HMI:<align:center>`EXIT` button is **not** displayed,\n`MENU` button is displayed
-HMI-->SDL:UI.AddSubMenu (SUCCESS)
-SDL-->Local Web App:AddSubMenu (SUCCESS)
-note over HMI:<align:center>User presses `MENU` button
-HMI->>SDL:UI.OnSystemContext (MENU)
-SDL->>Local Web App:UI.OnSystemContext (MENU)
+HMI-->SDL:UI.AddSubMenu (`SUCCESS`)
+SDL-->Local Web App:AddSubMenu (`SUCCESS`)
+note over HMI:<align:center>User taps `MENU` button
+HMI->>SDL:UI.OnSystemContext (`MENU`)
+SDL->>Local Web App:UI.OnSystemContext (`MENU`)
 note over HMI:<align:center>Show the list\nof in-app `MENU` items
 note over HMI:<align:center>`EXIT` button is displayed\nin the list of in-app MENU items 
