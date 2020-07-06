@@ -1,0 +1,16 @@
+title Close Application request from Local Web App
+
+participant Local Web App
+participant SDL
+participant HMI
+
+note over Local Web App, HMI:<align:center>*Preconditions:*\n 1.Web app (WEB_VIEW) is registred and activated on the HMI\n 2. HMI displays the WEB_VIEW template
+
+note over HMI: User taps "Close app" button
+Local Web App->SDL: CloseApplication
+SDL->HMI: BC.CloseApplication(appID)
+HMI->SDL: BC.OnAppDeactivated(appID)
+HMI-->SDL:BC.CloseApplication(SUCCESS)
+SDL->Local Web App: OnHMIStatus(NONE, NOT_STREAMABLE, NOT_AUDIBLE)
+note over HMI: Local Web App is no longer in foreground
+SDL-->Local Web App: CloseApplication(SUCCESS)

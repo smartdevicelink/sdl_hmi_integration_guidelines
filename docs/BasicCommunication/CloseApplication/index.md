@@ -48,6 +48,10 @@ Close Application after Failed Data Consent Prompt
 ![Close Application Failed Data](./assets/CloseApplicationFailedData.png)
 |||
 
+|||
+![Close Application Local Web App](./assets/CloseApplicationLocalWebApp.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request
