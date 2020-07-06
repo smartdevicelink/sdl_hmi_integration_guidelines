@@ -1,0 +1,14 @@
+participant Local Web App
+participant SDL
+participant HMI
+
+note over Local Web App, HMI:<align:center> *Preconditions:*\n 1.Web app (WEB_VIEW) is registred and activated on the HMI\n 2. HMI displays the WEB_VIEW template
+
+Local Web App->SDL:<align:center> CreateWindow\n(windowID=widget's_id,windowName=Name,\n type=WIDGET, duplicateUpdatesFromWindowID=0)
+SDL->HMI: <align:center> UI.CreateWindow\n(windowID=widget's_id, windowName=Name,\ntype=WIDGET, duplicateUpdatesFromWindowID=0)
+HMI-->SDL: UI.CreateWindow (SUCCESS)
+SDL-->Local Web App: CreateWindow(SUCCESS)
+SDL-->Local Web App: OnHMIStatus (NONE,windowID= widget's_id)
+HMI->SDL: BC.OnSystemCapabilityUpdated(params)
+SDL->Local Web App: OnSystemCapabilityUpdated (params)
+note over HMI: Widget is present in a list on the HMI

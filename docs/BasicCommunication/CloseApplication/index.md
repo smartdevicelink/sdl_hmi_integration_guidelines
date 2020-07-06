@@ -49,6 +49,7 @@ Close Application after Failed Data Consent Prompt
 |||
 
 |||
+Close Application request from Local Web App  
 ![Close Application Local Web App](./assets/CloseApplicationLocalWebApp.png)
 |||
 
