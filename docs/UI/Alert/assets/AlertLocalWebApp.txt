@@ -2,7 +2,7 @@ participant Local Web App
 participant SDL
 participant HMI
 
-note over Local Web App, HMI:<align:center>*Preconditions:*\n 1.Web app (WEB_VIEW) is registred and activated on the HMI\n 2. HMI displays the WEB_VIEW template
+note over Local Web App, HMI:<align:center>**Preconditions:**\n  1.Web app (WEB_VIEW) is registred and activated on the HMI\n 2. HMI displays the WEB_VIEW template
 
 Local Web App->SDL: Alert (alertText)
 SDL->HMI: UI.Alert (alertStrings, appID)
@@ -10,7 +10,7 @@ HMI->SDL: UI.OnSystemContext (systemContext=ALERT,appID)
 
 note over HMI: <align:center>The Alert pop-up is displayed on HMI\n overlaying WEB_VIEW area
 
-note over HMI: <align:center>User closes the Alert pop-up\n*Touch event first goes through the POP-UP area*
+note over HMI: <align:center>User closes the Alert pop-up\n**Touch event first goes through the POP-UP area**
 
 HMI->SDL: Buttons.OnButtonEvent
 HMI-->SDL: UI.Alert:(SUCCESS)

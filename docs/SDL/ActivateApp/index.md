@@ -88,7 +88,7 @@ The User activates a web app
 
 |||
 Web Application Activation  
-![ActivateApp Local Web App](./assets/ActivateAppLocalWebApp)
+![ActivateApp Local Web App](./assets/ActivateAppLocalWebApp.png)
 |||
 
 ### JSON Message Examples

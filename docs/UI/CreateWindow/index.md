@@ -57,7 +57,7 @@ CreateWindow
 
 |||
 Local Web App(WEB_VIEW) creates a widget that duplicates main window  
-![CreateWindow Local Web App](./assets/CreateWindowLocalWebApp)
+![CreateWindow Local Web App](./assets/CreateWindowLocalWebApp.png)
 |||
 
 ### JSON Message Examples
