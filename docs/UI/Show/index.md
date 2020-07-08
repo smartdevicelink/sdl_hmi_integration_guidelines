@@ -67,6 +67,11 @@ Show Widgets
 ![Show](./assets/ShowWidgets.png)
 |||
 
+|||
+Show request to set/change template WEB_VIEW
+![Show](./assets/ShowWEB_VIEW.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request

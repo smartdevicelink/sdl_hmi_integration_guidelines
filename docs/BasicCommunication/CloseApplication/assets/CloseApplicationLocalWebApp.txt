@@ -2,7 +2,7 @@ participant Local Web App
 participant SDL
 participant HMI
 
-note over Local Web App, HMI:<align:center>**Preconditions:**\n  1.Web app (WEB_VIEW) is registred and activated on the HMI\n 2. HMI displays the WEB_VIEW template
+note over Local Web App, HMI:<align:center>**Preconditions:**\n  1.Web app (WEB_VIEW) is registered and activated on the HMI\n 2. HMI displays the WEB_VIEW template
 
 note over Local Web App: User taps "Close app" button  
 Local Web App->SDL: CloseApplication

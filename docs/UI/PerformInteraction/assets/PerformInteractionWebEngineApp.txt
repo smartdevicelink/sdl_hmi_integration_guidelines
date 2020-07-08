@@ -11,11 +11,12 @@ note over HMI:<align:center>Overlay current display with\nPerformInteraction pop
 HMI->>SDL:UI.OnsystemContext (systemContext=VRSESSION, appID, params)
 SDL->>LocalWebApp:OnHMIStatus (VRSESSION)
 HMI->>SDL:[VR, TTS].Stopped
-note over HMI: User close pop-up with VR help items
-note over HMI: Disply UI-choice list
+note over HMI: User closes pop-up with VR help items
+HMI->>SDL:[VR].PerformInteraction(aborted)
+note over HMI: Display UI-choice list
 HMI->>SDL:UI.OnsystemContext (systemContext=HMI_OBSCURED, appID, params)
 note over HMI:<align:center>User chooses one of the items\n in the choiceList before timeout expiration
-HMI->>SDL:[VR, TTS].PerformInteraction (choiceID)
+HMI->>SDL:[UI].PerformInteraction (choiceID)
 SDL->>LocalWebApp:PerformInteraction (SUCCESS)
 note over HMI:<align:center>Display appID web page view\nin the main window
 HMI->>SDL:UI.OnSystemContext (systemContext=MAIN, appID, params)
