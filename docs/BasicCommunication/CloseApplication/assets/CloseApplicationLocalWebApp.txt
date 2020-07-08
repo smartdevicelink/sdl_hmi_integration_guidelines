@@ -4,7 +4,7 @@ participant HMI
 
 note over Local Web App, HMI:<align:center>**Preconditions:**\n  1.Web app (WEB_VIEW) is registred and activated on the HMI\n 2. HMI displays the WEB_VIEW template
 
-note over HMI: User taps "Close app" button  
+note over Local Web App: User taps "Close app" button  
 Local Web App->SDL: CloseApplication
 SDL->HMI: BC.CloseApplication(appID)
 HMI->SDL: BC.OnAppDeactivated(appID)

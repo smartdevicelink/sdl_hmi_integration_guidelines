@@ -1,22 +1,22 @@
-title PerformInteraction for WebEngine Applications
-
-participant Local Web App
+participant LocalWebApp
 participant SDL
 participant HMI
-note over Local Web App, HMI:<align:center>**Preconditions:**\n1. appID is active on HMI, application template is `WEB_VIEW`\n2. HMI shows app/template title on template layout
-note over HMI:<align:center>Display appID web page view\nin the main window
-Local Web App->SDL:PerformInteraction (InteractionMode: VR_ONLY)
+note over LocalWebApp, HMI:<align:center>**Preconditions:**\n1. Aplication (with `appID`) is active on HMI, application template is `WEB_VIEW`\n2. HMI shows app/template title on template layout
+note over HMI:Display Aplication web page view\nin the main window
+LocalWebApp->SDL:PerformInteraction (InteractionMode: BOTH)
 SDL->HMI:[VR, UI].PerformInteraction (params)
-note over HMI:<align:center>Store request data\nassociating it with appID
+note over HMI:<align:center>Store values of prompts\nand the timeout,\nstart counting timeout
 HMI->>SDL:[VR, TTS].Started
-note over HMI:<align:center>Overlay current display with\nPerformInteraction pop-up\ndisplaying VR help items 
-HMI->>SDL:UI.OnsystemContext (VRSESSION)
-SDL->>Local Web App:OnHMIStatus (VRSESSION)
-note over HMI:<align:center>PerformInteraction request\ntimed out
+note over HMI:<align:center>Overlay current display with\nPerformInteraction pop-up\ndisplaying VR help items\n **Touch event first goes through the POP-UP area** 
+HMI->>SDL:UI.OnsystemContext (systemContext=VRSESSION, appID, params)
+SDL->>LocalWebApp:OnHMIStatus (VRSESSION)
 HMI->>SDL:[VR, TTS].Stopped
-HMI->>SDL:[VR, UI].PerformInteraction (TIMEOUT)
-SDL->>Local Web App:PerformInteraction (TIMEOUT)
-note over HMI:<align:center>Close pop-up with VR help items
+note over HMI: User close pop-up with VR help items
+note over HMI: Disply UI-choice list
+HMI->>SDL:UI.OnsystemContext (systemContext=HMI_OBSCURED, appID, params)
+note over HMI:<align:center>User chooses one of the items\n in the choiceList before timeout expiration
+HMI->>SDL:[VR, TTS].PerformInteraction (choiceID)
+SDL->>LocalWebApp:PerformInteraction (SUCCESS)
 note over HMI:<align:center>Display appID web page view\nin the main window
-HMI->>SDL:UI.OnSystemContext (MAIN)
-SDL->>Local Web App:OnHMIStatus (MAIN)
+HMI->>SDL:UI.OnSystemContext (systemContext=MAIN, appID, params)
+SDL->>LocalWebApp:OnHMIStatus (MAIN)

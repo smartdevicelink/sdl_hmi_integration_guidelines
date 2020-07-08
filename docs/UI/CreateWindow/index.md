@@ -56,7 +56,7 @@ CreateWindow
 |||
 
 |||
-Local Web App(WEB_VIEW) creates a widget that duplicates main window  
+Processing the creation of widget which duplicates main window when application has active WEB_VIEW template
 ![CreateWindow Local Web App](./assets/CreateWindowLocalWebApp.png)
 |||
 

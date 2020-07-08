@@ -82,11 +82,6 @@ ActivateApp using App Launching
 |||
 
 |||
-The User activates a web app
-![ActivateApp](./assets/ActivateWebApp.png)
-|||
-
-|||
 Web Application Activation  
 ![ActivateApp Local Web App](./assets/ActivateAppLocalWebApp.png)
 |||
