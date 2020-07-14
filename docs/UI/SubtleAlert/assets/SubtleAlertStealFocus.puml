@@ -1,0 +1,74 @@
+@startuml SubtleAlertStealFocus
+
+participant Core
+participant HMI.UI
+participant HMI.Buttons
+participant HMI.TTS
+
+skinparam NoteTextAlignment center
+
+note over HMI.UI
+app1 layout 
+is active
+
+app2 is in
+BACKGROUND
+end note
+
+Core -> HMI.UI: UI.SubtleAlert(\n\
+  params,\n\
+  appID2, softButtons, BOTH\n\
+)
+Core -> HMI.TTS: TTS.Speak(\n\
+  ttsChunks, appID2, SUBTLE_ALERT\n\
+)
+
+note over HMI.UI
+Display notification
+dialog on screen
+over app1 with
+specified data
+end note
+
+HMI.UI ->> Core: UI.OnSystemContext(ALERT, appID2)
+HMI.UI ->> Core: UI.OnSystemContext(HMI_OBSCURED)
+
+note over HMI.TTS
+Speak the
+requested text
+end note
+
+
+HMI.TTS --> Core: TTS.Speak(SUCCESS)
+
+note over HMI.Buttons, HMI.UI
+User presses 
+softbutton with
+STEAL_FOCUS
+in SubtleAlert
+dialog
+end note
+
+HMI.Buttons ->> Core: Buttons.OnButtonEvent(BUTTONDOWN)
+HMI.Buttons ->> Core: Buttons.OnButtonEvent(BUTTONUP)
+HMI.Buttons ->> Core: Buttons.OnButtonPress(SHORT)
+
+note over HMI.UI
+SubtleAlert dialog
+is closed
+
+app1 is deactivated
+and put into
+BACKGROUND
+
+app2 is activated
+and put into 
+HMI level FULL
+end note
+
+HMI.UI --> Core: UI.SubtleAlert(SUCCESS)
+
+HMI.UI ->> Core: UI.OnSystemContext(MAIN, appID1)
+HMI.UI ->> Core: UI.OnSystemContext(MAIN, appID2)
+
+@enduml

@@ -367,6 +367,9 @@
               "name": "OnResetTimeout"
             },
             {
+              "name": "OnSubtleAlertPressed"
+            },
+            {
               "name": "OnSystemContext"
             },
             {
@@ -404,6 +407,9 @@
             },
             {
               "name": "Slider"
+            },
+            {
+              "name": "SubtleAlert"
             },
             {
               "name": "CreateWindow"
