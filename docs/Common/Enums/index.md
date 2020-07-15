@@ -927,7 +927,7 @@
 |PARK|0|Parking|
 |REVERSE|1|Reverse gear|
 |NEUTRAL|2|No gear|
-|DRIVE|3|Regula Drive mode|
+|DRIVE|3|Regular Drive mode|
 |SPORT|4|Drive Sport mode|
 |LOWGEAR|5|1st gear hold|
 |FIRST|6||
