@@ -63,7 +63,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |engineOilLife|Float|false|minvalue: 0<br>maxvalue: 100|
 |electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
 |cloudAppVehicleID|String|false||
-|windowStatus|[Common.WindowStatus](../../common/structs/#windowstatus)|false|array: true<br>minvalue: 0<br> maxvalue: 100|
+|windowStatus|[Common.WindowStatus](../../common/structs/#windowstatus)|false|array: true<br>minsize: 0<br>maxsize: 100|
 
 ### Sequence Diagrams
 
