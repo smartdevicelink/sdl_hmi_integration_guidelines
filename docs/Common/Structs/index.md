@@ -1142,4 +1142,4 @@ There are no defined parameters for this struct
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |location|[Common.Grid](../structs/#grid)|true|||
-|state|[Common.WindowState](../sructs/#windowstate)|true|||
+|state|[Common.WindowState](../structs/#windowstate)|true|||
