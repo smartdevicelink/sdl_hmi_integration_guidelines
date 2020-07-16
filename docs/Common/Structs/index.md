@@ -1131,6 +1131,7 @@ There are no defined parameters for this struct
 |endpoint|String|false|maxlength: 65535|If specified, which Core uses a client implementation of the connection type and attempts to connect to the endpoint when this app is selected (activated).<br>If omitted, Core won't attempt to connect as the app selection (activation) is managed outside of Core. Instead it uses a server implementation of the connection type and expects the app to connect|
 
 ### GearStatus
+
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |userSelectedGear|[Common.PRNDL](../enums/#prndl)|false||Gear position selected by the user<br>i.e. Park, Drive, Reverse|

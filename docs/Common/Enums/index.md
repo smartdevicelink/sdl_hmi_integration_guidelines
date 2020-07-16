@@ -891,7 +891,6 @@
 |VEHICLEDATA_CLOUDAPPVEHICLEID|31| Parameter used by cloud apps or the policy server to identify a head unit|
 |VEHICLEDATA_OEM_CUSTOM_DATA|32||
 
-
 ### VideoStreamingProtocol
 
 |Name|Value|Description|
@@ -1318,5 +1317,5 @@
 |DUAL_CLUTCH|3|Dual clutch transmission.|
 |CONTINUOUSLY_VARIABLE|4|Continuously variable transmission(CVT).|
 |INFINITELY_VARIABLE|5|Infinitely variable transmission.|
-|ELECTRIC_VARIABLE|6|Electric variable transmission.|
+|ELECTRIC_VARIABLE|6|Electric variable transmission.|  
 |DIRECT_DRIVE|7|Direct drive between engine and wheels.|
