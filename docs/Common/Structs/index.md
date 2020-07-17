@@ -55,7 +55,7 @@
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |menuLength|Integer|false||The number of items allowed in a Choice Set or Command menu while the driver is distracted|
-|subMenuDepth|Boolean|Integer||The depth of submenus allowed when the driver is distracted. e.g. 3 == top level menu -> submenu -> submenu; 1 == top level menu only|
+|subMenuDepth|Integer|false|minvalue: 1|The depth of submenus allowed when the driver is distracted. e.g. 3 == top level menu -> submenu -> submenu; 1 == top level menu only|
 
 
 ### SystemCapabilities
@@ -1138,4 +1138,3 @@ There are no defined parameters for this struct
 |transportType|String|false|maxlength: 100|Specifies the connection type Core should use. The Core role (server or client) is dependent of "endpoint" being specified.<br>See "endpoint" for details|
 |hybridAppPreference|[Common.HybridAppPreference](../enums/#hybridapppreference)|false||Specifies the user preference to use one specific app type or all available types|
 |endpoint|String|false|maxlength: 65535|If specified, which Core uses a client implementation of the connection type and attempts to connect to the endpoint when this app is selected (activated).<br>If omitted, Core won't attempt to connect as the app selection (activation) is managed outside of Core. Instead it uses a server implementation of the connection type and expects the app to connect|
-
