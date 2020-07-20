@@ -10,6 +10,7 @@ note over HMI:<align:center>Store received data\nassociating it with `appID`
 HMI-->SDL:UI.AddSubMenu (SUCCESS)
 SDL-->LocalWebApp:AddSubMenu (SUCCESS)
 note over LocalWebApp:User taps MENU button
+SDL->HMI: UI.ShowAppMenu (appID)
 HMI->>SDL:UI.OnSystemContext (systemContext=MENU, appID, params)
 SDL->>LocalWebApp:OnHMIStatus (MENU)
 note over HMI:<align:center>Show the list of MENU items\n AddSubMenu is accessible for User's choice

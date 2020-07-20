@@ -13,7 +13,8 @@ note over HMI: <align:center>The Alert pop-up is displayed on HMI\n overlaying W
 note over HMI: <align:center>User closes the Alert pop-up\n**Touch event first goes through the POP-UP area**
 
 HMI->SDL: Buttons.OnButtonEvent
-HMI-->SDL: UI.Alert:(SUCCESS)
+HMI-->SDL: UI.Alert (SUCCESS)
+SDL--> Local Web App:Alert (SUCCESS)
 HMI -> SDL: UI.OnSystemContext(systemContext=MAIN,appID)
 
 note over HMI: <align:center> Further touch events processing\nis returned back to the WEB_VIEW area
