@@ -29,7 +29,7 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
 
   * SDL can request that a submenu be added to another submenu if the parentID parameter is present in the request's menu parameters.
   * A parentID value of 0 indicates the submenu is part of the top level menu.
-  * If subMenuDepth is 1, all submenus should be disabled. Only the top level menu should be accessible during driver distraction.
+  * If subMenuDepth is 1, all submenus should be disabled during driver distraction, meaning that only the top level menu should be accessible.
   * HMI does not display any image in case the application does not provide an image for display on the sub menu.
   * HMI does not display any image in case the image referenced by the application for display on the submenu is invalid or is not available.
   * To remove an icon already sent, the app would have to delete the submenu and add it again without the icon.Otherwise, if the submenu is not deleted, another request with the same submenu id will be rejected.
