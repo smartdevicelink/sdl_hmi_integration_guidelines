@@ -13,6 +13,17 @@ Purpose
 
 1. HMI sends OnSystemCapabilityUpdated notification to SDL after creating a widget _(see also [CreateWindow](../../UI/CreateWindow/index.md))_.
 2. HMI sends OnSystemCapabilityUpdated notification after receiving UI.Show(templateConfiguration) request manipulating the content presented of main window or widgets.
+3. HMI sends OnSystemCapabilityUpdated(VIDEO_STREAMING) notification to notify a subscribed mobile application that video streaming resolution has switched.
+
+#### Recommendations for how various screen modes have to be handled
+
+If the change is a Picture-in-Picture-type change, scale the current video stream to the size you desire without going through this flow. Touches should never be passed to the app. Either a system menu/buttons should be displayed when selected, or the selection should bring the user immediately back to the full-screen app.
+
+If the change is a split-screen type change (and cannot be handled by scaling the original video), then go through this flow. If the app does not support your custom split-resolution, either don't allow the user to put the app in split screen, or scale the video stream to a size that fits the window and use "black bars" to fill the rest of the window. Touches may be passed to the app in certain limited cases.
+
+ * The window must have a width of at least 3" and a height of at least 3".
+
+ * The touches must be offset for the developer so that 0,0 continues to be in the top-left corner of the app window. If these requirements are not met, either a system menu / buttons should be displayed when selected, or the selection should bring the user immediately back to the full-screen app.
 
 #### Parameters
 
@@ -31,6 +42,11 @@ OnSystemCapabilityUpdated(APP_SERVICES, PUBLISHED)
 |||
 OnSystemCapabilityUpdated(APP_SERVICES, REMOVED)
 ![OnSystemCapabilityUpdated_REMOVED](./assets/OnSystemCapabilityUpdated_REMOVED.png)
+|||
+
+|||
+OnSystemCapabilityUpdated(VIDEO_STREAMING) Streaming Resolution Switching
+![OnSystemCapabilityUpdated_VIDEO_STREAMING](./assets/OnSystemCapabilityUpdated_VIDEO_STREAMING.png)
 |||
 
 ### JSON Message Examples

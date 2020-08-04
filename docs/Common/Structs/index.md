@@ -50,6 +50,7 @@
 |diagonalScreenSize|Float|false|minvalue: 0|The diagonal screen size in inches.|
 |pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
 |scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
+|additionalVideoStreamingCapabilities|Common.VideoStreamingCapability|false|array: true<br>minsize: 0<br>maxsize: 100|
 
 ### SystemCapabilities
 
@@ -1129,4 +1130,11 @@ There are no defined parameters for this struct
 |transportType|String|false|maxlength: 100|Specifies the connection type Core should use. The Core role (server or client) is dependent of "endpoint" being specified.<br>See "endpoint" for details|
 |hybridAppPreference|[Common.HybridAppPreference](../enums/#hybridapppreference)|false||Specifies the user preference to use one specific app type or all available types|
 |endpoint|String|false|maxlength: 65535|If specified, which Core uses a client implementation of the connection type and attempts to connect to the endpoint when this app is selected (activated).<br>If omitted, Core won't attempt to connect as the app selection (activation) is managed outside of Core. Instead it uses a server implementation of the connection type and expects the app to connect|
+
+### AppCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|appCapabilityType|[Common.AppCapabilityType](../enums/#appcapabilitytype)|true||Used as a descriptor of what data to expect in this struct. The corresponding param to this enum should be included and the only other param included|
+|videoStreamingCapability|Common.VideoStreamingCapability|false||Describes supported capabilities for video streaming|
 

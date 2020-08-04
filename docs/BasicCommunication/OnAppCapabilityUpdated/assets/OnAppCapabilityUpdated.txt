@@ -1,0 +1,26 @@
+participant App
+participant SDL
+participant HMI
+
+
+seq Obtaining VideoStreamingCapabilities during HMI initialization  
+
+SDL->HMI: UI.GetCapabilities
+HMI-->SDL:<align:center> UI.GetCapabilities\n(systemCapabilities=videoStreamingCapability,\n[additionalVideoStreamingCapabilities])
+end 
+
+note over App, HMI: RAI
+
+seq App receives VideoStreamingCapabilities supported by the system
+
+App->SDL:<align:center> GetSystemCapability\n(systemCapabilityType=VIDEO_STREAMING,\nsubscribe=true)
+SDL-->App:<align:center> GetSystemCapability\nsystemCapability=videoStreamingCapability,\n[additionalVideoStreamingCapabilities])
+
+end
+
+seq App provides supported VideoStreamingCapabilities
+
+App->>SDL:<align:center> OnAppCapabilityUpdated\nappCapability=videoStreamingCapability,\n[additionalVideoStreamingCapabilities])
+SDL->>HMI:<align:center> BC.OnAppCapabilityUpdated\nappCapability=videoStreamingCapability,\n[additionalVideoStreamingCapabilities])
+
+end

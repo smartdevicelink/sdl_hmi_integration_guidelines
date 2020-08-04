@@ -1303,3 +1303,9 @@
 |MOBILE|0||
 |CLOUD|1||
 |BOTH|2||
+
+### AppCapabilityType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|VIDEO_STREAMING|0||
