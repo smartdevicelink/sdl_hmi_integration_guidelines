@@ -45,6 +45,7 @@ Purpose
 |engineOilLife|Boolean|false||
 |electronicParkBrakeStatus|Boolean|false||
 |cloudAppVehicleID|Boolean|false||
+|gearStatus|Boolean|false||
 |stabilityControlsStatus|Boolean|false||
 
 ### Response
@@ -95,6 +96,7 @@ For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `d
 |engineOilLife|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |electronicParkBrakeStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |cloudAppVehicleID|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|gearStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |stabilityControlsStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
