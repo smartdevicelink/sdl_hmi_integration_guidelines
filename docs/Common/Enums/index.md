@@ -1308,7 +1308,6 @@
 |CLOUD|1||
 |BOTH|2||
 
-<<<<<<< HEAD
 ### TransmissionType
 
 |Name|Value|Description|
@@ -1319,9 +1318,8 @@
 |DUAL_CLUTCH|3|Dual clutch transmission.|
 |CONTINUOUSLY_VARIABLE|4|Continuously variable transmission(CVT).|
 |INFINITELY_VARIABLE|5|Infinitely variable transmission.|
-|ELECTRIC_VARIABLE|6|Electric variable transmission.|  
+|ELECTRIC_VARIABLE|6|Electric variable transmission.|
 |DIRECT_DRIVE|7|Direct drive between engine and wheels.|
-=======
 ### CapacityUnit
 
 |Name|Value|Description|
@@ -1329,4 +1327,3 @@
 |LITERS|0||
 |KILOWATTHOURS|1||
 |KILOGRAMS|2||
->>>>>>> origin/develop
