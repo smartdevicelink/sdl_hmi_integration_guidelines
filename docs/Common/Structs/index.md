@@ -752,6 +752,10 @@
 |:---|:---|:--------|:---------|:----------|
 |type|[Common.FuelType](../enums/#fueltype)|false|||
 |range|Float|false|minvalue: 0<br>maxvalue: 10000|The estimate range in KM the vehicle can travel based on fuel level and consumption|
+|level|Float|false|minvalue: -6<br>maxvalue: 1000000|The relative remaining capacity of this fuel type (percentage)|
+|levelState|[Common.ComponentVolumeStatus](../enums/#componentvolumestatus)|false||The fuel level state|
+|capacity|Float|false|minvalue: 0<br>maxvalue: 1000000|The absolute capacity of this fuel type|
+|capacityUnit|[Common.CapacityUnit](../enums/#capacityunit)|false||The unit of the capacity of this fuel type such as liters for gasoline or kWh for batteries|
 
 ### MassageModeData
 
@@ -1137,3 +1141,11 @@ There are no defined parameters for this struct
 |userSelectedGear|[Common.PRNDL](../enums/#prndl)|false||Gear position selected by the user<br>i.e. Park, Drive, Reverse|
 |actualGear|[Common.PRNDL](../enums/#prndl)|false||Actual Gear in use by the transmission|
 |transmissionType|[Common.TransmissionType](../enums/#transmissiontype)|false||Tells the transmission type|
+
+### StabilityControlsStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|escSystem|[Common.VehicleDataStatus](../enums/#vehicledatastatus)|false||true if vehicle stability control is ON,<br>else false|
+|trailerSwayControl|[Common.VehicleDataStatus](../enums/#vehicledatastatus)|false||true if vehicle trailer sway control is ON,<br>else false|
+

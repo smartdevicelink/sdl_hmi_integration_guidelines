@@ -20,7 +20,7 @@ Purpose
 ### Sequence Diagrams
 
 |||
-OnLanguageChange
+OnLanguageChange  
 ![OnLanguageChange](./assets/OnLanguageChange.png)
 |||
 

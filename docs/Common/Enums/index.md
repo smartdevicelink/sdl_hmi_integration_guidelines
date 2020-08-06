@@ -890,6 +890,7 @@
 |VEHICLEDATA_ELECTRONICPARKBRAKESTATUS|30||
 |VEHICLEDATA_CLOUDAPPVEHICLEID|31| Parameter used by cloud apps or the policy server to identify a head unit|
 |VEHICLEDATA_OEM_CUSTOM_DATA|32||
+|VEHICLEDATA_STABILITYCONTROLSSTATUS|33||
 
 ### VideoStreamingProtocol
 
@@ -1307,6 +1308,7 @@
 |CLOUD|1||
 |BOTH|2||
 
+<<<<<<< HEAD
 ### TransmissionType
 
 |Name|Value|Description|
@@ -1319,3 +1321,12 @@
 |INFINITELY_VARIABLE|5|Infinitely variable transmission.|
 |ELECTRIC_VARIABLE|6|Electric variable transmission.|  
 |DIRECT_DRIVE|7|Direct drive between engine and wheels.|
+=======
+### CapacityUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|LITERS|0||
+|KILOWATTHOURS|1||
+|KILOGRAMS|2||
+>>>>>>> origin/develop
