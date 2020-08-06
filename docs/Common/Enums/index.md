@@ -1303,3 +1303,11 @@
 |MOBILE|0||
 |CLOUD|1||
 |BOTH|2||
+
+### CapacityUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|LITERS|0||
+|KILOWATTHOURS|1||
+|KILOGRAMS|2||
