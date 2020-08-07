@@ -753,6 +753,10 @@
 |:---|:---|:--------|:---------|:----------|
 |type|[Common.FuelType](../enums/#fueltype)|false|||
 |range|Float|false|minvalue: 0<br>maxvalue: 10000|The estimate range in KM the vehicle can travel based on fuel level and consumption|
+|level|Float|false|minvalue: -6<br>maxvalue: 1000000|The relative remaining capacity of this fuel type (percentage)|
+|levelState|[Common.ComponentVolumeStatus](../enums/#componentvolumestatus)|false||The fuel level state|
+|capacity|Float|false|minvalue: 0<br>maxvalue: 1000000|The absolute capacity of this fuel type|
+|capacityUnit|[Common.CapacityUnit](../enums/#capacityunit)|false||The unit of the capacity of this fuel type such as liters for gasoline or kWh for batteries|
 
 ### MassageModeData
 
@@ -1131,10 +1135,24 @@ There are no defined parameters for this struct
 |hybridAppPreference|[Common.HybridAppPreference](../enums/#hybridapppreference)|false||Specifies the user preference to use one specific app type or all available types|
 |endpoint|String|false|maxlength: 65535|If specified, which Core uses a client implementation of the connection type and attempts to connect to the endpoint when this app is selected (activated).<br>If omitted, Core won't attempt to connect as the app selection (activation) is managed outside of Core. Instead it uses a server implementation of the connection type and expects the app to connect|
 
+### GearStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|userSelectedGear|[Common.PRNDL](../enums/#prndl)|false||Gear position selected by the user<br>i.e. Park, Drive, Reverse|
+|actualGear|[Common.PRNDL](../enums/#prndl)|false||Actual Gear in use by the transmission|
+|transmissionType|[Common.TransmissionType](../enums/#transmissiontype)|false||Tells the transmission type|
+
+### StabilityControlsStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|escSystem|[Common.VehicleDataStatus](../enums/#vehicledatastatus)|false||true if vehicle stability control is ON,<br>else false|
+|trailerSwayControl|[Common.VehicleDataStatus](../enums/#vehicledatastatus)|false||true if vehicle trailer sway control is ON,<br>else false|
+
 ### AppCapability
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |appCapabilityType|[Common.AppCapabilityType](../enums/#appcapabilitytype)|true||Used as a descriptor of what data to expect in this struct. The corresponding param to this enum should be included and the only other param included|
 |videoStreamingCapability|Common.VideoStreamingCapability|false||Describes supported capabilities for video streaming|
-
