@@ -319,6 +319,9 @@
               "name": "Alert"
             },
             {
+              "name": "SubtleAlert"
+            },
+            {
               "name": "CancelInteraction"
             },
             {
@@ -407,9 +410,6 @@
             },
             {
               "name": "Slider"
-            },
-            {
-              "name": "SubtleAlert"
             },
             {
               "name": "CreateWindow"
