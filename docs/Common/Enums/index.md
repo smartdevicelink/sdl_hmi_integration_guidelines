@@ -1218,6 +1218,7 @@
 |APP_SERVICES|4||
 |DISPLAYS|5||
 |SEAT_LOCATION|6||
+|DRIVER_DISTRACTION|7|Describes capabilities when the driver is distracted|
 
 ### MediaType
 

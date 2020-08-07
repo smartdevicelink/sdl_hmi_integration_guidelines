@@ -17,13 +17,15 @@ UI.AddCommand represents a request from an application to add a command to the a
   2. The user must be able to enter the Menu while the related application is in the FULL state
   3. Store the data provided in this RPC with the requesting application's appID
   4. Add the command to the application's menu at the position specified in the `menuParams`
+  5. If driver distraction state is enabled, the number of shown items should be limited by the driver distraction system capability parameter [menuLength](../../common/struct/#driverdistractioncapability)
 
 !!!
 
 !!! note
 
   * If SDL sends the HMI a UI.AddCommand and a VR.AddCommand, and receives a SUCCESS from one and a failure from the other, SDL will send a UI.DeleteCommand for the AddCommand which succeeded.
-  * If the `menuParams` contains a `parentID` the command is part of a sub menu. SDL adds SubMenu Commands to the top level Menu via [UI.AddSubMenu](../addsubmenu)
+  * If the `menuParams` contains a `parentID`, the command is part of a sub menu. SDL adds new sub menus via the [UI.AddSubMenu](../addsubmenu) request.
+  * If some command list items are hidden due to driver distraction, the HMI can note that some menu items are hidden for the drivers safety.
   
 !!!
 
