@@ -103,3 +103,25 @@ OnSystemCapabilityUpdated(VIDEO_STREAMING) Streaming Resolution Switching
   }
 }
 ```
+#### Videosteaming Switching Example Notification
+
+```json
+{
+   "jsonrpc":"2.0",
+   "method":"BasicCommunication.OnSystemCapabilityUpdated",
+   "params":{
+      "appID":489377304,
+      "systemCapability":{
+         "systemCapabilityType":"VIDEO_STREAMING",
+         "videoStreamingCapability":{
+            "preferredResolution":{
+               "resolutionWidth":800,
+               "resolutionHeight":380
+            },
+            "maxBitrate":20000,
+            "scale":1
+         }
+      }
+   }
+}
+```
