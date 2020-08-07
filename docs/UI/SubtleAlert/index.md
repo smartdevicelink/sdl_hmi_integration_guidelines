@@ -7,18 +7,18 @@ Sender
 : SDL
 
 Purpose
-: Display an subtle notification-style alert message on the HMI
+: Display a subtle notification-style alert message on the HMI
 
 SDL sends the `UI.SubtleAlert` RPC when some information needs to be displayed to the user on a display in a non-intrusive way. The request includes an optional array of `softButtons` which the user can use to take action on the alert. The alert can also be selected directly to bring the associated application to the foreground.
 
 !!! must
 
   1. If the alert includes a soft button of type `STEAL_FOCUS` and the user presses the button, the HMI must bring the app associated with the SubtleAlert into full screen mode.
-  2. If the user selects the alert directly (without selecting one of the softbuttons), the HMI must send a `UI.OnSubtleAlertPressed` notification to SDL and activate the app that is associated with this SubtleAlert. The alert must then be dismissed from the HMI.
+  2. If the user selects the alert directly (without selecting one of the softbuttons), the HMI must send a [UI.OnSubtleAlertPressed](../onsubtlealertpressed) notification to SDL and activate the app that is associated with this SubtleAlert. The alert must then be dismissed from the HMI.
   3. The HMI must send [UI.OnSystemContext](../onsystemcontext) with type `ALERT` for the application which is in `FULL` mode.
   4. Respond to the SubtleAlert earlier than SDL's default timeout of 10 seconds - applicable only to alerts without `softButtons`.
-  5. Display the notification dialog with the text information in the `alertStrings` array and optional `softButtons`
-  6. Send [Buttons.OnButtonPress](../../buttons/onbuttonpress) and/or [Buttons.OnButtonEvent](../../buttons/onbuttonevent) notifications if soft buttons associated with the notification are pressed by the user
+  5. Display the notification dialog with the text information in the `alertStrings` array and optional `softButtons`.
+  6. Send [Buttons.OnButtonPress](../../buttons/onbuttonpress) and/or [Buttons.OnButtonEvent](../../buttons/onbuttonevent) notifications if soft buttons associated with the notification are pressed by the user.
   7. Dismiss the alert after the duration has passed since receipt of the request and send a `TIMED_OUT` response to SDL.
 
 !!!
@@ -61,27 +61,27 @@ An SubtleAlert message may be sent to the HMI for an application which is not cu
 
 |||
 SubtleAlert closed by DEFAULT_ACTION
-![SubtleAlert](./assets/AlertDefaultAction.png)
+![SubtleAlert](./assets/SubtleAlertDefaultAction.png)
 |||
 
 |||
 SubtleAlert closed by STEAL_FOCUS
-![SubtleAlert](./assets/AlertStealFocus.png)
+![SubtleAlert](./assets/SubtleAlertStealFocus.png)
 |||
 
 |||
 SubtleAlert Aborted by <abbr title="Voice Recognition">VR</abbr> Session
-![SubtleAlert](./assets/AlertAborted.png)
+![SubtleAlert](./assets/SubtleAlertAborted.png)
 |||
 
 |||
 SubtleAlert Rejected
-![SubtleAlert](./assets/AlertRejected.png)
+![SubtleAlert](./assets/SubtleAlertRejected.png)
 |||
 
 |||
 SubtleAlert BOTH UI Closed before <abbr title="Text To Speech">TTS</abbr> finishes Speaking
-![SubtleAlert](./assets/AlertTTS.png)
+![SubtleAlert](./assets/SubtleAlertTTSAborted.png)
 |||
 
 ### JSON Message Examples
