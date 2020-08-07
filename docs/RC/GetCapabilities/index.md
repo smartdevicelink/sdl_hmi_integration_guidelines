@@ -39,8 +39,8 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
-GetCapabilities
-![GetCapabilities](./assets/IsReady_GetCapabilities.png)
+GetCapabilities  
+![GetCapabilities](./assets/GetCapabilities.png)
 |||
 
 ### JSON Message Examples
