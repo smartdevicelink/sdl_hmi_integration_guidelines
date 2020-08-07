@@ -26,7 +26,7 @@ If the HMI is the App Service Consumer (ASC), SDL will:
 |:---|:---|:--------|:---------|
 |serviceUri|String|true||
 |serviceID|String|true||
-|originApp|String|false|Non-mandatory only if HMI is the ASC|
+|originApp|String|false|Non-mandatory only if HMI is the <abbr title="App Service Consumer">ASC</abbr>|
 |requestServiceActive|Boolean|false||
 
 ### Response
@@ -40,12 +40,12 @@ If the HMI is the App Service Consumer (ASC), SDL will:
 ### Sequence Diagrams
 
 |||
-PerformAppServiceInteraction with HMI ASC
+PerformAppServiceInteraction with HMI <abbr title="App Service Consumer">ASC</abbr>
 ![PerformAppServiceInteraction](./assets/PerformAppServiceInteractionFromHMI.png)
 |||
 
 |||
-PerformAppServiceInteraction with Mobile ASC
+PerformAppServiceInteraction with Mobile <abbr title="App Service Consumer">ASC</abbr>
 ![PerformAppServiceInteraction](./assets/PerformAppServiceInteractionFromMobile.png)
 |||
 

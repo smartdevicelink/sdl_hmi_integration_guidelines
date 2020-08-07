@@ -51,6 +51,13 @@
 |pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
 |scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
 
+### DriverDistractionCapability
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|menuLength|Integer|false||The number of items allowed in a Choice Set or Command menu while the driver is distracted|
+|subMenuDepth|Integer|false|minvalue: 1|The depth of submenus allowed when the driver is distracted. e.g. 3 == top level menu -> submenu -> submenu; 1 == top level menu only|
+
+
 ### SystemCapabilities
 
 |Name|Type|Mandatory|Additional|Description|
@@ -58,6 +65,7 @@
 |navigationCapability|Common.NavigationCapability|false|||
 |phoneCapability|Common.PhoneCapability|false|||
 |videoStreamingCapability|Common.VideoStreamingCapability|false|||
+|driverDistractionCapability|Common.DriverDistractionCapability|false||Describes capabilities when the driver is distracted|
 
 ### MenuParams
 
@@ -209,7 +217,7 @@
 |altitude|Float|false|minvalue: -10000<br>maxvalue: 10000||
 |heading|Float|false|minvalue: 0<br>maxvalue: 359.99||
 |speed|Float|false|minvalue: 0<br>maxvalue: 500||
-|shifted|Boolean|false||True, if GPS lat/long, time, and altitude have been purposefully shifted (requires a proprietary algorithm to un-shift).<br>False, if the GPS data is raw and un-shifted.<br>If not provided, then value is assumed False|
+|shifted|Boolean|false||True, if <abbr title="Global Positioning System">GPS</abbr> lat/long, time, and altitude have been purposefully shifted (requires a proprietary algorithm to un-shift).<br>False, if the <abbr title="Global Positioning System">GPS</abbr> data is raw and un-shifted.<br>If not provided, then value is assumed False|
 
 ### SingleTireStatus
 
@@ -536,7 +544,7 @@
 |:---|:---|:--------|:---------|:----------|
 |PS|String|false|minlength: 0<br>maxlength: 8|Program Service Name|
 |RT|String|false|minlength: 0<br>maxlength: 64|Radio Text|
-|CT|String|false|minlength: 24<br>maxlength: 24|The clock text in UTC format as YYYY-MM-DDThh:mm:ss.sTZD|
+|CT|String|false|minlength: 24<br>maxlength: 24|The clock text in <abbr title="Universal Time Coordinate">UTC</abbr> format as YYYY-MM-DDThh:mm:ss.sTZD|
 |PI|String|false|minlength: 0<br>maxlength: 6|Program Identification - the call sign for the radio station|
 |PTY|Integer|false|minvalue: 0<br>maxvalue: 31|The program type - The region should be used to differentiate between EU and North America program types|
 |TP|Boolean|false||Traffic Program Identification - Identifies a station that offers traffic|
@@ -639,7 +647,7 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|channelId|Integer|true|minvalue: 1<br>maxvalue: 100|Defines the each Equalizer channel settings.|
+|channelId|Integer|true|minvalue: 1<br>maxvalue: 100|Defines the equalizer channel id|
 |channelName|String|false|maxlength: 50|Read-only channel / frequency name (e.i. "Treble, Midrange, Bass" or "125 Hz")|
 |channelSetting|Integer|true|minvalue: 0<br>maxvalue: 100|Reflects the setting, from 0%-100%.|
 
@@ -688,7 +696,7 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|moduleName|String|true|maxlength: 100|The short friendly name of the hmi setting module. <br> It should not be used to identify a module by mobile application.|
+|moduleName|String|true|maxlength: 100|The short friendly name of the HMI setting module. <br> It should not be used to identify a module by mobile application.|
 |moduleInfo|Common.ModuleInfo|false||Information about a RC module, including its id.|
 |distanceUnitAvailable|Boolean|false||Availability of the control of distance unit.|
 |temperatureUnitAvailable|Boolean|false||Availability of the control of temperature unit.|
@@ -752,6 +760,10 @@
 |:---|:---|:--------|:---------|:----------|
 |type|[Common.FuelType](../enums/#fueltype)|false|||
 |range|Float|false|minvalue: 0<br>maxvalue: 10000|The estimate range in KM the vehicle can travel based on fuel level and consumption|
+|level|Float|false|minvalue: -6<br>maxvalue: 1000000|The relative remaining capacity of this fuel type (percentage)|
+|levelState|[Common.ComponentVolumeStatus](../enums/#componentvolumestatus)|false||The fuel level state|
+|capacity|Float|false|minvalue: 0<br>maxvalue: 1000000|The absolute capacity of this fuel type|
+|capacityUnit|[Common.CapacityUnit](../enums/#capacityunit)|false||The unit of the capacity of this fuel type such as liters for gasoline or kWh for batteries|
 
 ### MassageModeData
 
@@ -829,8 +841,8 @@
 |day|Integer|false|minvalue: 1<br>maxvalue: 31|Day of the month|
 |month|Integer|false|minvalue: 1<br>maxvalue: 12|Month of the year|
 |year|Integer|false|maxvalue: 4095|The year in YYYY format|
-|tz_hour|Integer|false|minvalue: -12<br>maxvalue: 14<br>defvalue: 0|Time zone offset in Hours with regard to UTC.|
-|tz_minute|Integer|false|minvalue: 0<br>maxvalue: 59<br>defvalue: 0|Time zone offset in Min with regard to UTC.|
+|tz_hour|Integer|false|minvalue: -12<br>maxvalue: 14<br>defvalue: 0|Time zone offset in Hours with regard to <abbr title="Universal Time Coordinate">UTC</abbr>.|
+|tz_minute|Integer|false|minvalue: 0<br>maxvalue: 59<br>defvalue: 0|Time zone offset in Min with regard to <abbr title="Universal Time Coordinate">UTC</abbr>.|
 
 ### Coordinate
 
@@ -880,7 +892,7 @@
 |serviceName|String|false||Unique name of this service|
 |serviceType|String|true||The type of service that is to be offered by this app|
 |serviceIcon|Common.Image|false||The icon to be associated with this service. Most likely the same as the appIcon|
-|allowAppConsumers|Boolean|false|defvalue: false|If true, app service consumers beyond the IVI system will be able to access this service. If false, only the IVI system will be able consume the service. If not provided, it is assumed to be false|
+|allowAppConsumers|Boolean|false|defvalue: false|If true, app service consumers beyond the <abbr title="In Vehicle Infotainment">IVI</abbr> system will be able to access this service. If false, only the <abbr title="In Vehicle Infotainment">IVI</abbr> system will be able consume the service. If not provided, it is assumed to be false|
 |rpcSpecVersion|Common.SyncMsgVersion|false||This is the max RPC Spec version the app service understands. This is important during the RPC passthrough functionality. If not included, it is assumed the max version of the module is acceptable|
 |handledRPCs|Integer|false|array: true|This field contains the Function IDs for the RPCs that this service intends to handle correctly. This means the service will provide meaningful responses|
 |mediaServiceManifest|Common.MediaServiceManifest|false|||
@@ -931,6 +943,7 @@
 |appServicesCapabilities|Common.AppServicesCapabilities|false||An array of currently available services. If this is an update to the capability the affected services will include an update reason in that item|
 |displayCapabilities|Common.DisplayCapability|false|array: true<br>minsize: 1<br>maxsize: 1000||
 |seatLocationCapability|Common.SeatLocationCapability|false||Contains information about the locations of each seat|
+|driverDistractionCapability|Common.DriverDistractionCapability|false||Describes capabilities when the driver is distracted|
 
 ### MediaServiceManifest
 
@@ -1042,9 +1055,9 @@ There are no defined parameters for this struct
 |destinationETA|Common.DateTime|false|||
 |instructions|Common.NavigationInstruction|false|array: true|This array should be ordered with all remaining instructions. The start of this array should always contain the next instruction|
 |nextInstructionETA|Common.DateTime|false|||
-|nextInstructionDistance|Float|false||The distance to this instruction from current location. This should only be updated ever .1 unit of distance. For more accuracy the consumer can use the GPS location of itself and the next instruction|
+|nextInstructionDistance|Float|false||The distance to this instruction from current location. This should only be updated ever .1 unit of distance. For more accuracy the consumer can use the <abbr title="Global Positioning System">GPS</abbr> location of itself and the next instruction|
 |nextInstructionDistanceScale|Float|false||Distance till next maneuver (starting from) from previous maneuver|
-|prompt|String|false||This is a prompt message that should be conveyed to the user through either display or voice (TTS). This param will change often as it should represent the following: approaching instruction, post instruction, alerts that affect the current navigation session, etc|
+|prompt|String|false||This is a prompt message that should be conveyed to the user through either display or voice (<abbr title="Text To Speech">TTS</abbr>). This param will change often as it should represent the following: approaching instruction, post instruction, alerts that affect the current navigation session, etc|
 
 ### TemplateConfiguration
 
@@ -1130,3 +1143,31 @@ There are no defined parameters for this struct
 |hybridAppPreference|[Common.HybridAppPreference](../enums/#hybridapppreference)|false||Specifies the user preference to use one specific app type or all available types|
 |endpoint|String|false|maxlength: 65535|If specified, which Core uses a client implementation of the connection type and attempts to connect to the endpoint when this app is selected (activated).<br>If omitted, Core won't attempt to connect as the app selection (activation) is managed outside of Core. Instead it uses a server implementation of the connection type and expects the app to connect|
 
+### GearStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|userSelectedGear|[Common.PRNDL](../enums/#prndl)|false||Gear position selected by the user<br>i.e. Park, Drive, Reverse|
+|actualGear|[Common.PRNDL](../enums/#prndl)|false||Actual Gear in use by the transmission|
+|transmissionType|[Common.TransmissionType](../enums/#transmissiontype)|false||Tells the transmission type|
+
+### StabilityControlsStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|escSystem|[Common.VehicleDataStatus](../enums/#vehicledatastatus)|false||true if vehicle stability control is ON,<br>else false|
+|trailerSwayControl|[Common.VehicleDataStatus](../enums/#vehicledatastatus)|false||true if vehicle trailer sway control is ON,<br>else false|
+
+### WindowState
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|approximatePosition|Integer|true|minvalue: 0<br>maxvalue: 100|The approximate percentage that the window is open -<br>0 being fully closed, 100 being fully open|
+|deviation|Integer|true|minvalue: 0<br>maxvalue: 100|The percentage deviation of the approximatePosition.<br>e.g. If the approximatePosition is 50 and the deviation is 10,<br>then the window's location is somewhere between 40 and 60|
+
+### WindowStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true|||
+|state|Common.WindowState|true|||

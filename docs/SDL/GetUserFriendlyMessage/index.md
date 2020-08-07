@@ -12,8 +12,8 @@ Purpose
 ### Request
 
 !!! MUST
-* Request message text to notify user via UI or/and TTS message about some event is happening. Message text may also be requested for some specific dialogs on HMI which require user’s answers.  
-* Notify user according to HMI flow via UI pop-ups or/and TTS messages, the text for them obtained in GetUserFriendlyMessage response in correspondence to messageCodes requested.
+* Request message text to notify user via UI or/and <abbr title="Text To Speech">TTS</abbr> message about some event is happening. Message text may also be requested for some specific dialogs on HMI which require user’s answers.  
+* Notify user according to HMI flow via UI pop-ups or/and <abbr title="Text To Speech">TTS</abbr> messages, the text for them obtained in GetUserFriendlyMessage response in correspondence to messageCodes requested.
 !!!
 
 !!! NOTE    
@@ -53,7 +53,7 @@ Message codes specify appropriate user messages which notify the user about some
 |DataConsentHelp|Updates are about the size of an email, and the occurrence of updates depends on your vehicle usage and when a new app is found on your device. See your Owner Guide for more information.|
 |DisableApps|Disabling automatic updates will also disable sync mobile apps. You will not be able to use any mobile apps with SYNC. Please press yes to confirm or no to cancel.|
 |DrivingCharacteristics|An app can access the following driving characteristics: Fuel Consumption, MyKey, Seat Belt Status.|
-|Location|An app can access vehicle GPS and speed.|
+|Location|An app can access vehicle <abbr title="Global Positioning System">GPS</abbr> and speed.|
 |Notifications|An app can send notifications when running in the background.|
 |SettingDisableUpdates|Disable Updates|
 |SettingEnableUpdates|Enable Apps|

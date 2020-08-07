@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Get the current TTS language.
+: Get the current <abbr title="Text To Speech">TTS</abbr> language.
 
 ### Request
 
@@ -26,7 +26,7 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
-GetLanguage
+GetLanguage  
 ![GetLanguage](./assets/GetLanguage.png)
 |||
 

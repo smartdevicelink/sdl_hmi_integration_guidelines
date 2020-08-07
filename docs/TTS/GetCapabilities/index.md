@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Inform SDL of the TTS capabilities of the vehicle.
+: Inform SDL of the <abbr title="Text To Speech">TTS</abbr> capabilities of the vehicle.
 
 ### Request
 
@@ -29,7 +29,7 @@ This RPC has no additional parameter requirements
 !!! NOTE
 
   Description of possible SpeechCapabilities
-  TTS is performed by the HMI through:
+  <abbr title="Text To Speech">TTS</abbr> is performed by the HMI through:
   
   1. TEXT - Plain text format. TTSChunks with this type provide plain text to be spoken in the `text` field
   2. SAPI_PHONEMES - Microsoft Speech API Format. TTSChunks with this type provide a group of phonemes with this format in the `text` field
@@ -56,7 +56,7 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
-GetCapabilities
+GetCapabilities  
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
 

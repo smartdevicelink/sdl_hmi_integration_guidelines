@@ -7,7 +7,7 @@ Sender
 : HMI
 
 Purpose
-: Inform SDL that TTS has stopped.
+: Inform SDL that <abbr title="Text To Speech">TTS</abbr> has stopped.
 
 ### Notification
 
