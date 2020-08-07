@@ -7,7 +7,7 @@ Sender
 : HMI
 
 Purpose
-: Inform SDL that an application's VR command was recognized.
+: Inform SDL that an application's <abbr title="Voice Recognition">VR</abbr> command was recognized.
 
 ### Notification
 

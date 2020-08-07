@@ -7,7 +7,7 @@ Sender
 : HMI
 
 Purpose
-: Inform SDL about the end of a VR session.
+: Inform SDL about the end of a <abbr title="Voice Recognition">VR</abbr> session.
 
 ### Notification
 
@@ -18,7 +18,7 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
-Stopped when VR session ends
+Stopped when <abbr title="Voice Recognition">VR</abbr> session ends
 ![Stopped](./assets/Stopped.png)
 |||
 

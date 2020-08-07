@@ -70,7 +70,7 @@ Alert closed by STEAL_FOCUS
 |||
 
 |||
-Alert Aborted by VR Session
+Alert Aborted by <abbr title="Voice Recognition">VR</abbr> Session
 ![Alert](./assets/AlertAborted.png)
 |||
 
@@ -80,7 +80,7 @@ Alert Rejected
 |||
 
 |||
-Alert BOTH UI Closed before TTS finishes Speaking
+Alert BOTH UI Closed before <abbr title="Text To Speech">TTS</abbr> finishes Speaking
 ![Alert](./assets/AlertTTS.png)
 |||
 

@@ -88,12 +88,12 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|TEXT|0|Uses plain text for performing TTS|
-|SAPI_PHONEMES|1|Uses the Speech API Phoneme representation of a phrase for performing TTS|
-|LHPLUS_PHONEMES|2|Uses the LH+ Phoneme representation of a phrase for performing TTS|
+|TEXT|0|Uses plain text for performing <abbr title="Text To Speech">TTS</abbr>|
+|SAPI_PHONEMES|1|Uses the Speech API Phoneme representation of a phrase for performing <abbr title="Text To Speech">TTS</abbr>|
+|LHPLUS_PHONEMES|2|Uses the LH+ Phoneme representation of a phrase for performing <abbr title="Text To Speech">TTS</abbr>|
 |PRE_RECORDED|3||
 |SILENCE|4||
-|FILE|5|Uses an audio file sent to SDL via a PutFile RPC to perform TTS or play generic sounds in conjunction with TTS|
+|FILE|5|Uses an audio file sent to SDL via a PutFile RPC to perform <abbr title="Text To Speech">TTS</abbr> or play generic sounds in conjunction with <abbr title="Text To Speech">TTS</abbr>|
 
 ### TextFieldName
 
@@ -111,7 +111,7 @@
 |alertText2|9|The second line of the alert text field *(applies to "Alert")*|
 |alertText3|10|The third line of the alert text field *(applies to "Alert")*|
 |scrollableMessageBody|11|Long form body of text that can include newlines and tabs *(applies to "ScrollableMessage")*|
-|initialInteractionText|12|First line suggestion for a user response (in the case of VR enabled interaction)|
+|initialInteractionText|12|First line suggestion for a user response (in the case of <abbr title="Voice Recognition">VR</abbr> enabled interaction)|
 |navigationText1|13|First line of navigation text|
 |navigationText2|14|Second line of navigation text|
 |ETA|15|Estimated Time of Arrival time for navigation|
@@ -227,7 +227,7 @@
 |Name|Value|Description|
 |:---|:----|:----------|
 |MAIN|0|The app's persistent display (whether media/non-media/navigation) is fully visible onscreen <br> There is currently no user interaction (user-initiated or app-initiated) with the head-unit|
-|VRSESSION|1|The system is currently in a VR session (with whatever dedicated VR screen being overlaid onscreen)|
+|VRSESSION|1|The system is currently in a <abbr title="Voice Recognition">VR</abbr> session (with whatever dedicated <abbr title="Voice Recognition">VR</abbr> screen being overlaid onscreen)|
 |MENU|2| The system is currently displaying a system or in-App menu onscreen|
 |HMI_OBSCURED|3|The app's display HMI is currently obscuring with either a system or other app's overlay (except of Alert element)|
 |ALERT|4| Broadcast only to whichever app has an alert currently being displayed|
@@ -288,11 +288,11 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|CLOCK1|0|`minutesFieldWidth = 2`<br>`minutesFieldMax = 19`<br>`secondsFieldWidth = 2`<br>`secondsFieldMax = 99`<br>`maxHours = 19`<br>`maxMinutes = 59`<br>`maxSeconds = 59`<br>Is used for Type II, NGN and CID head units|
+|CLOCK1|0|`minutesFieldWidth = 2`<br>`minutesFieldMax = 19`<br>`secondsFieldWidth = 2`<br>`secondsFieldMax = 99`<br>`maxHours = 19`<br>`maxMinutes = 59`<br>`maxSeconds = 59`<br>Is used for Type II, NGN and <abbr title="Center Information Display">CID</abbr> head units|
 |CLOCK2|1|`minutesFieldWidth = 3`<br>`minutesFieldMax = 199`<br>`secondsFieldWidth = 2`<br>`secondsFieldMax = 99`<br>`maxHours = 59`<br>`maxMinutes = 59`<br>`maxSeconds = 59`<br>Is used for Type V head units|
 |CLOCK3|2|`minutesFieldWidth = 2`<br>`minutesFieldMax = 59`<br>`secondsFieldWidth = 2`<br>`secondsFieldMax = 59`<br>`maxHours = 9`<br>`maxMinutes = 59`<br>`maxSeconds = 59`<br>Is used for GEN1.1 (i.e. MFD3/4/5) head units|
 |CLOCKTEXT1|3|5 characters possible<br>`Format:      1|sp   c   :|sp   c   c`<br>`1|sp : digit "1" or space`<br>`c    : character out of following character set: sp|0-9|[letters]`<br>`:|sp : colon or space`<br>Is used for Type II head unit|
-|CLOCKTEXT2|4|5 chars possible<br>`Format:      1|sp   c   :|sp   c   c`<br>`1|sp : digit "1" or space`<br>`c    : character out of following character set: sp|0-9|[letters]`<br>`:|sp : colon or space`<br>Is used for CID and NGN head unit|
+|CLOCKTEXT2|4|5 chars possible<br>`Format:      1|sp   c   :|sp   c   c`<br>`1|sp : digit "1" or space`<br>`c    : character out of following character set: sp|0-9|[letters]`<br>`:|sp : colon or space`<br>Is used for <abbr title="Center Information Display">CID</abbr> and NGN head unit|
 |CLOCKTEXT3|5|6 chars possible<br>`Format:      1|sp   c   c   :|sp   c   c`<br>`1|sp : digit "1" or space`<br>`c    : character out of following character set: sp|0-9|[letters]`<br>`:|sp : colon or space`<br>Is used for Type V head unit|
 |CLOCKTEXT4|6|6 chars possible <br>`Format:      c   :|sp   c   c   :   c   c`<br>`:|sp : colon or space`<br>`c    : character out of following character set: sp|0-9|[letters]`.<br>Is used for GEN1.1 (i.e. MFD3/4/5) head units|
 
@@ -637,7 +637,7 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|NO_FIX|0|No GPS at all|
+|NO_FIX|0|No <abbr title="Global Positioning System">GPS</abbr> at all|
 |2D|1|Longitude and lattitude|
 |3D|2|Longitude and lattitude and altitude|
 
@@ -857,7 +857,7 @@
 
 |Name|Value|Description|
 |:---|:----|:----------|
-|VEHICLEDATA_GPS|0|Notifies GPSData may be subscribed|
+|VEHICLEDATA_GPS|0|Notifies [GPSData](../structs/#gpsdata) may be subscribed|
 |VEHICLEDATA_SPEED|1||
 |VEHICLEDATA_RPM|2||
 |VEHICLEDATA_FUELLEVEL|3||
@@ -865,31 +865,33 @@
 |VEHICLEDATA_FUELCONSUMPTION|5||
 |VEHICLEDATA_EXTERNTEMP|6||
 |VEHICLEDATA_VIN|7||
-|VEHICLEDATA_PRNDL|8||
-|VEHICLEDATA_TIREPRESSURE|9||
-|VEHICLEDATA_ODOMETER|10||
-|VEHICLEDATA_BELTSTATUS|11||
-|VEHICLEDATA_BODYINFO|12||
-|VEHICLEDATA_DEVICESTATUS|13||
-|VEHICLEDATA_ECALLINFO|14||
-|VEHICLEDATA_AIRBAGSTATUS|15||
-|VEHICLEDATA_EMERGENCYEVENT|16||
-|VEHICLEDATA_CLUSTERMODESTATUS|17||
-|VEHICLEDATA_MYKEY|18||
-|VEHICLEDATA_BRAKING|19||
-|VEHICLEDATA_WIPERSTATUS|20||
-|VEHICLEDATA_HEADLAMPSTATUS|21||
-|VEHICLEDATA_BATTVOLTAGE|22||
-|VEHICLEDATA_ENGINETORQUE|23||
-|VEHICLEDATA_ACCPEDAL|24||
-|VEHICLEDATA_STEERINGWHEEL|25||
-|VEHICLEDATA_TURNSIGNAL|26||
-|VEHICLEDATA_FUELRANGE|27||
-|VEHICLEDATA_ENGINEOILLIFE|28||
-|VEHICLEDATA_ELECTRONICPARKBRAKESTATUS|29||
-|VEHICLEDATA_CLOUDAPPVEHICLEID|30| Parameter used by cloud apps or the policy server to identify a head unit|
-|VEHICLEDATA_OEM_CUSTOM_DATA|31||
-|VEHICLEDATA_WINDOWSTATUS|32||
+|VEHICLEDATA_GEARSTATUS|8||
+|VEHICLEDATA_PRNDL|9||
+|VEHICLEDATA_TIREPRESSURE|10||
+|VEHICLEDATA_ODOMETER|11||
+|VEHICLEDATA_BELTSTATUS|12||
+|VEHICLEDATA_BODYINFO|13||
+|VEHICLEDATA_DEVICESTATUS|14||
+|VEHICLEDATA_ECALLINFO|15||
+|VEHICLEDATA_AIRBAGSTATUS|16||
+|VEHICLEDATA_EMERGENCYEVENT|17||
+|VEHICLEDATA_CLUSTERMODESTATUS|18||
+|VEHICLEDATA_MYKEY|19||
+|VEHICLEDATA_BRAKING|20||
+|VEHICLEDATA_WIPERSTATUS|21||
+|VEHICLEDATA_HEADLAMPSTATUS|22||
+|VEHICLEDATA_BATTVOLTAGE|23||
+|VEHICLEDATA_ENGINETORQUE|24||
+|VEHICLEDATA_ACCPEDAL|25||
+|VEHICLEDATA_STEERINGWHEEL|26||
+|VEHICLEDATA_TURNSIGNAL|27||
+|VEHICLEDATA_FUELRANGE|28||
+|VEHICLEDATA_ENGINEOILLIFE|29||
+|VEHICLEDATA_ELECTRONICPARKBRAKESTATUS|30||
+|VEHICLEDATA_CLOUDAPPVEHICLEID|31| Parameter used by cloud apps or the policy server to identify a head unit|
+|VEHICLEDATA_OEM_CUSTOM_DATA|32||
+|VEHICLEDATA_STABILITYCONTROLSSTATUS|33||
+|VEHICLEDATA_WINDOWSTATUS|34||
 
 ### VideoStreamingProtocol
 
@@ -926,7 +928,7 @@
 |PARK|0|Parking|
 |REVERSE|1|Reverse gear|
 |NEUTRAL|2|No gear|
-|DRIVE|3||
+|DRIVE|3|Regular Drive mode|
 |SPORT|4|Drive Sport mode|
 |LOWGEAR|5|1st gear hold|
 |FIRST|6||
@@ -937,8 +939,10 @@
 |SIXTH|11||
 |SEVENTH|12||
 |EIGHTH|13||
-|UNKNOWN|14||
-|FAULT|15||
+|NINTH|14||
+|TENTH|15||
+|UNKNOWN|16||
+|FAULT|17||
 
 ### TPMS
 
@@ -1304,3 +1308,23 @@
 |MOBILE|0||
 |CLOUD|1||
 |BOTH|2||
+
+### TransmissionType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MANUAL|0|Manual transmission.|
+|AUTOMATIC|1|Automatic transmission.|
+|SEMI_AUTOMATIC|2|Semi automatic transmission.|
+|DUAL_CLUTCH|3|Dual clutch transmission.|
+|CONTINUOUSLY_VARIABLE|4|Continuously variable transmission(CVT).|
+|INFINITELY_VARIABLE|5|Infinitely variable transmission.|
+|ELECTRIC_VARIABLE|6|Electric variable transmission.|
+|DIRECT_DRIVE|7|Direct drive between engine and wheels.|
+### CapacityUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|LITERS|0||
+|KILOWATTHOURS|1||
+|KILOGRAMS|2||

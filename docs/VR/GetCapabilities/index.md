@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Inform SDL of the VR capabilities of the vehicle.
+: Inform SDL of the <abbr title="Voice Recognition">VR</abbr> capabilities of the vehicle.
 
 ### Request
 
@@ -26,7 +26,7 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
-GetCapabilities
+GetCapabilities  
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
 
