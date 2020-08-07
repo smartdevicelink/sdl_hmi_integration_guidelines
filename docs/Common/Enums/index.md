@@ -891,6 +891,7 @@
 |VEHICLEDATA_CLOUDAPPVEHICLEID|31| Parameter used by cloud apps or the policy server to identify a head unit|
 |VEHICLEDATA_OEM_CUSTOM_DATA|32||
 |VEHICLEDATA_STABILITYCONTROLSSTATUS|33||
+|VEHICLEDATA_WINDOWSTATUS|34||
 
 ### VideoStreamingProtocol
 

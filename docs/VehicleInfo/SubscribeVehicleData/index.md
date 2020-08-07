@@ -46,6 +46,7 @@ Purpose
 |cloudAppVehicleID|Boolean|false||
 |gearStatus|Boolean|false||
 |stabilityControlsStatus|Boolean|false||
+|windowStatus|Boolean|false||
 
 ### Response
 
@@ -97,6 +98,7 @@ For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `d
 |cloudAppVehicleID|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |gearStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |stabilityControlsStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|windowStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
 
