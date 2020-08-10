@@ -48,6 +48,7 @@ Purpose
 |gearStatus|Boolean|false||
 |stabilityControlsStatus|Boolean|false||
 |windowStatus|Boolean|false||
+|handsOffSteering|Boolean|false||
 
 ### Response
 
@@ -100,6 +101,7 @@ For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `d
 |gearStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |stabilityControlsStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |windowStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|handsOffSteering|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
 

@@ -73,6 +73,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |gearStatus|Boolean|false||
 |stabilityControlsStatus|Boolean|false||
 |windowStatus|Boolean|false||
+|handsOffSteering|Boolean|false||
 
 ### Response
 
@@ -113,6 +114,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |gearStatus|[Common.GearStatus](../../common/structs/#gearstatus)|false||
 |stabilityControlsStatus|[Common.StabilityControlsStatus](../../common/structs/#stabilitycontrolsstatus)|false||
 |windowStatus|[Common.WindowStatus](../../common/structs/#windowstatus)|false|array: true<br>minsize: 0<br>maxsize: 100|
+|handsOffSteering|Boolean|false||
 
 ### Sequence Diagrams
 
