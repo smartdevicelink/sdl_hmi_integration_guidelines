@@ -39,7 +39,7 @@ If `level` is `FULL` or `LIMITED`:
   * Display the corresponding template in the case one was previously requested by [UI.SetDisplayLayout](../../UI/SetDisplayLayout) for that application
   * Apply [UI.SetGlobalProperties](../../UI/SetGlobalProperties) associated with the named `appID`, if any
   * Apply [UI.AddSubMenu](../../UI/AddSubMenu) associated with the named `appID`, if any
-  * Display the web page view in the main window of the application, in case the application `AppHMIType` is `WEB_VIEW`
+  * Display the web page view in the main window of the application, in case the application `AppHMIType` is `WEB_VIEW` and a template has not yet been set.
   2. Make <abbr title="Voice Recognition">VR</abbr> commands accessible from previous [VR.AddCommand](../VR/AddCommand) for the named `appID` during the same ignition cycle
   3. Apply [TTS.SetGlobalProperties](../../TTS/SetGlobalProperties) associated with the `appID` in case previously requested since application registration
   4. Assign priority based on the `priority` parameter received. If the parameter is omitted, the HMI must assign a priority of `NONE` by default
@@ -133,4 +133,3 @@ Activate App after Accepted Data Consent Prompt
   }
 }
 ```
-
