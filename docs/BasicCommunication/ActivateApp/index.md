@@ -36,7 +36,7 @@ If `level` is `FULL` or `LIMITED`:
 
   1. Activate the application on the HMI
   * Display [UI.Show](../../UI/Show) related parameters associated with the named `appID` in the case they were previously requested within ignition cycle
-  * Display the corresponding template in the case one was previously requested by [UI.SetDisplayLayout](../../UI/SetDisplayLayout) for that application
+  * Display the corresponding template in the case one was previously requested by [UI.Show](../../UI/Show) for that application
   * Apply [UI.SetGlobalProperties](../../UI/SetGlobalProperties) associated with the named `appID`, if any
   * Apply [UI.AddSubMenu](../../UI/AddSubMenu) associated with the named `appID`, if any
   * Display the web page view in the main window of the application, in case the application `AppHMIType` is `WEB_VIEW` and a template has not yet been set.
