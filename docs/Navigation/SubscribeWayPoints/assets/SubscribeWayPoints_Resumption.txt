@@ -1,0 +1,22 @@
+participant App
+participant SDL
+participant HMI
+
+note over App, HMI:<align:center>**Pre-conditions:**\n  1. App is registered and activated\n2.App is successfully subscribed to wayPoint-related data
+
+note over App, HMI:<align:center> Application gets disconnected on Ignition Off
+SDL->SDL:Store the status of subscription to wayPoints-related data
+SDL->HMI: Navigation.UnsubscribeWayPoints()
+HMI-->SDL:Navigation.UnsubscribeWayPoints(SUCCESS)
+note over App, HMI:<align:center>Ignition On 
+
+
+App->SDL: RegisterAppInterface(hashID, params)
+
+note over SDL:<align:center> Check <hashID>\n <hashID> is valid\n Start data resumption
+
+SDL-->App: RegisterAppInterface(SUCCESS)
+
+note over SDL:<align:center> Resume HMI Level\n Resume status of subsciption to wayPoint-related data
+
+SDL->HMI: Navigation.SubscribeWayPoints()
