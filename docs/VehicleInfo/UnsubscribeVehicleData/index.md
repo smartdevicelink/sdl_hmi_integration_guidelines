@@ -59,6 +59,8 @@ HMI must send SubscribeVehicleData response only for ROOT level items.
 For OEM specific custom vehicle data items, `oemCustomDataType` will contain a type of OEM specific vehicle data (from schema), and `dataType` will be `VEHICLEDATA_OEM_CUSTOM_DATA`.  
 For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `dataType` will contain appropriate data type from `VehicleDataType` enum.
 
+In the case during data resumption with multiple application a subscription is already used by other applications, this means that the subscription is actual and SDL should not send unsubscribe requests to HMI.
+
 !!!
 
 #### Parameters
@@ -105,6 +107,11 @@ UnsubscribeVehicleData
 |||
 UnsubscribeVehicleData unexpected disconnect
 ![UnsubscribeVehicleData](./assets/UnsubscribeVehicleDataDisconnect.jpg)
+|||
+
+|||
+UnsubscribeVehicleData during data resumption and erroneous response from HMI
+![UnsubscribeVehicleData](./assets/MultipleAppErrorHandling.png)
 |||
 
 ### JSON Message Examples

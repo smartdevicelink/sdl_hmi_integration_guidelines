@@ -24,7 +24,7 @@ UI.AddCommand represents a request from an application to add a command to the a
 
   * If SDL sends the HMI a UI.AddCommand and a VR.AddCommand, and receives a SUCCESS from one and a failure from the other, SDL will send a UI.DeleteCommand for the AddCommand which succeeded.
   * If the `menuParams` contains a `parentID` the command is part of a sub menu. SDL adds SubMenu Commands to the top level Menu via [UI.AddSubMenu](../addsubmenu)
-  
+  * During data resumption SDL sends UI.AddCommands to HMI by `internal_consecutiveNumber` in the same order as they were created by mobile app in previous ignition cycle.
 !!!
 
 ### Request
@@ -89,6 +89,11 @@ AddCommand UI Fails, <abbr title="Voice Recognition">VR</abbr> Succeeds
 |||
 AddCommand UI No Response, <abbr title="Voice Recognition">VR</abbr> Succeeds
 ![AddCommand](./assets/AddCommandUINoResponseVRSuccess.png)
+|||
+
+|||
+AddCommand restoring during data resumption
+![AddCommand](./assets/AddCommand_Resumption.png)
 |||
 
 ### JSON Message Examples
