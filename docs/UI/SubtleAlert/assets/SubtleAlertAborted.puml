@@ -1,0 +1,40 @@
+@startuml SubtleAlertAborted
+
+participant Core
+participant HMI.UI
+participant HMI.VR
+
+skinparam NoteTextAlignment center
+
+note over HMI.UI
+app1 layout 
+is active
+end note
+
+Core -> HMI.UI: UI.SubtleAlert(params, alertType: UI)
+
+note over HMI.UI
+Display notification 
+dialog on screen 
+with specified data
+end note
+
+HMI.UI ->> Core: UI.OnSystemContext(ALERT, appID1)
+
+note over HMI.VR
+VR is activated
+by user
+end note
+
+HMI.VR -> Core: VR.Started()
+
+HMI.UI ->> Core: UI.OnSystemContext(VRSESSION)
+
+note over HMI.UI
+SubtleAlert is
+interrupted by VR
+end note
+
+HMI.UI --> Core: UI.SubtleAlert(ABORTED)
+
+@enduml
