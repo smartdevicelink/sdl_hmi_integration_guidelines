@@ -11,7 +11,7 @@ Purpose
 
 ### Notification
 
-SDL sends OnAppCapabilityUpdated notification to HMI to provide supported by application <abbr title="Video Streaming Capabilities"> VSC</abbr>
+SDL sends OnAppCapabilityUpdated notification to HMI to provide supported by application <abbr title="Video Streaming Capabilities">VSC</abbr>
 
 !!! may
 
@@ -29,6 +29,7 @@ In case older application does not support sending `OnAppCapabilityUpdated` noti
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
 |appCapability|[Common.AppCapability](../../common/structs/#appcapability)|true||
+|appID|Integer|true||
 
 ### Sequence Diagrams
 
@@ -47,6 +48,7 @@ Negotiation of Video Streaming Capabilities between HMI and Mobile Application
    "jsonrpc":"2.0",
    "method":"BasicCommunication.OnAppCapabilityUpdated",
    "params":{
+      "appID":65544,
       "appCapability":{
          "appCapabilityType":"VIDEO_STREAMING",
          "videoStreamingCapability":{
