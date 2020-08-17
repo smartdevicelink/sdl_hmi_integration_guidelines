@@ -15,7 +15,6 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|appID|Integer|true||
 |gps|Boolean|false||
 |speed|Boolean|false||
 |rpm|Boolean|false||
@@ -138,8 +137,7 @@ UnsubscribeVehicleData unexpected disconnect
     "deviceStatus" : true,
     "wiperStatus" : true,
     "headLampStatus" : true,
-    "accPedalPosition" : true,
-    "appID" : 65368
+    "accPedalPosition" : true
   }
 }
 ```
