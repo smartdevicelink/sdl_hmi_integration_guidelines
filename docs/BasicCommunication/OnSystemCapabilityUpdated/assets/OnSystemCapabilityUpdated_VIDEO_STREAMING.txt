@@ -9,7 +9,7 @@ seq HMI notifies application of new Video Streaming Capabilities
 note over HMI:<align:center> User changes\nstreaming resolution
 
 HMI->HMI: Stop displaying video
-HMI->>SDL:<align:center> BC.OnSystemCapabilityUpdated\n(videoStreamingCapability=VideoStreamingCapability)
+HMI->>SDL:<align:center> BC.OnSystemCapabilityUpdated\n(appID, videoStreamingCapability=VideoStreamingCapability)
 SDL->>App:<align:center> OnSystemCapabilityUpdated\n(videoStreamingCapability=VideoStreamingCapability)
 App->App: CallBack
 end

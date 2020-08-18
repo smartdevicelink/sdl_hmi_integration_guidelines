@@ -16,11 +16,13 @@ SDL sends OnAppCapabilityUpdated notification to HMI to provide supported by app
 !!! may
 
 HMI may switch video streaming resolution according to values provided by application in OnAppCapabilityUpdated notification. (_see also [OnSystemCapabilityUpdated](../OnSystemCapabilityUpdated/index.)_)
+
+If HMI doesn't receive OnAppCapabilityUpdated notification or receives OnAppCapabilityUpdated without `additionalVideoStreamingCapabilities`, HMI should not send OnSystemCapabilityUpdated notification and the user should not be able to change the resolution.
 !!!
 
 !!! note
 
-In case older application does not support sending `OnAppCapabilityUpdated` notification, HMI must treat this application as one that does not support dynamic resolution switching and allow only full-screen mode for it.
+In case older application does not support sending `OnAppCapabilityUpdated` notification, HMI must treat this application as one that does not support dynamic resolution switching and allow only default screen mode for it.
 
 !!!
 
