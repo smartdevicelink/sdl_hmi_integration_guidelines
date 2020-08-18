@@ -55,7 +55,7 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|supportedDynamicImageFieldNames|Common.ImageFieldName|false|array: true|An array of ImageFieldName values for which the system supports sending OnFileUpdate notifications. If you send an Image struct for that image field with a name without having uploaded the image data using PutFile that matches that name, the system will request that you upload the data with PutFile at a later point when the HMI needs it. The HMI will then display the image in the appropriate field. If not sent, assume false.|
+|supportedDynamicImageFieldNames|[Common.ImageFieldName](../enums/#imagefieldname)|false|array: true<br>minsize: 1|An array of ImageFieldName values for which the system supports sending OnFileUpdate notifications. If you send an Image struct for that image field with a name without having uploaded the image data using PutFile that matches that name, the system will request that you upload the data with PutFile at a later point when the HMI needs it. The HMI will then display the image in the appropriate field. If not sent, assume false.|
 |supportsDynamicSubMenus|Boolean|false||If true, the head unit supports dynamic sub-menus by sending OnUpdateSubMenu notifications. If true, you should not send AddCommands that attach to a parentID for an AddSubMenu until OnUpdateSubMenu is received with the menuID. At that point, you should send all AddCommands with a parentID that match the menuID. If not set, assume false.|
 
 ### SystemCapabilities
@@ -1089,7 +1089,7 @@ There are no defined parameters for this struct
 |buttonCapabilities|Common.ButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of buttons and the capabilities of each on-window button.|
 |softButtonCapabilities|Common.SoftButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of soft buttons available on-window and the capabilities for each button.|
 |menuLayoutsAvailable|[Common.MenuLayout](../enums/#menulayout)|false|array: true<br>minsize: 1<br>maxsize: 1000|An array of available menu layouts. If this parameter is not provided, only the `LIST` layout is assumed to be available|
-|dynamicUpdateCapabilities|[DynamicUpdateCapabilities](#dynamicupdatecapabilities)|false||Contains the head unit's capabilities for dynamic updating features declaring if the module will send dynamic update RPCs|
+|dynamicUpdateCapabilities|Common.DynamicUpdateCapabilities|false||Contains the head unit's capabilities for dynamic updating features declaring if the module will send dynamic update RPCs|
 
 ### ModuleInfo
 
@@ -1137,4 +1137,3 @@ There are no defined parameters for this struct
 |transportType|String|false|maxlength: 100|Specifies the connection type Core should use. The Core role (server or client) is dependent of "endpoint" being specified.<br>See "endpoint" for details|
 |hybridAppPreference|[Common.HybridAppPreference](../enums/#hybridapppreference)|false||Specifies the user preference to use one specific app type or all available types|
 |endpoint|String|false|maxlength: 65535|If specified, which Core uses a client implementation of the connection type and attempts to connect to the endpoint when this app is selected (activated).<br>If omitted, Core won't attempt to connect as the app selection (activation) is managed outside of Core. Instead it uses a server implementation of the connection type and expects the app to connect|
-
