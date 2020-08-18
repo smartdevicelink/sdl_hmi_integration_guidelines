@@ -36,6 +36,7 @@ If the application resumes data successfully:
     * `SubscribeVehicleData`
     * `SubscribeWayPoints`
     * `CreateWindow`
+    * `GetInteriorVehicleData`
 
 If HMI responds with any kind of error or does not respond to any requests sent during resumption, SDL must revert already restored data with appropriate RPCs:
     * `DeleteCommand`
