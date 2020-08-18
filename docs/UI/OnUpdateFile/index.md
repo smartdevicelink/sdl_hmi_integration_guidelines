@@ -40,3 +40,4 @@ Requesting missing menuIcon for submenu
     "fileName": "image_file_name.png"
   }
 }
+```
