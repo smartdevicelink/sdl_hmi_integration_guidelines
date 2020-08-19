@@ -1,3 +1,4 @@
+  
 participant App
 participant SDL
 participant HMI
@@ -10,13 +11,13 @@ SDL->HMI: Navigation.UnsubscribeWayPoints()
 HMI-->SDL:Navigation.UnsubscribeWayPoints(SUCCESS)
 note over App, HMI:<align:center>Ignition On 
 
-
 App->SDL: RegisterAppInterface(hashID, params)
 
 note over SDL:<align:center> Check <hashID>\n <hashID> is valid\n Start data resumption
 
-SDL-->App: RegisterAppInterface(SUCCESS)
-
-note over SDL:<align:center> Resume HMI Level\n Resume status of subsciption to wayPoint-related data
+note over SDL:<align:center> Resume status of subsciption to wayPoint-related data
 
 SDL->HMI: Navigation.SubscribeWayPoints()
+HMI-->SDL:Navigation.SubscribeWayPoints(SUCCESS)
+
+SDL-->App: RegisterAppInterface(SUCCESS)
