@@ -379,6 +379,12 @@
               "name": "OnTouchEvent"
             },
             {
+              "name": "OnUpdateFile"
+            },
+            {
+              "name": "OnUpdateSubMenu"
+            },
+            {
               "name": "PerformAudioPassThru"
             },
             {

@@ -855,6 +855,7 @@
 |showConstantTBTNextTurnIcon|11|The secondary image field for ShowConstantTBT|
 |locationImage|12|The optional image of a destination / location|
 |alertIcon|13|The image field for Alert|
+|subMenuIcon|14|The image field for AddSubMenu.menuIcon|
 
 ### VehicleDataType
 
