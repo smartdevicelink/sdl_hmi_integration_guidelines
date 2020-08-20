@@ -15,7 +15,6 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|appID|Integer|true||
 |gps|Boolean|false||
 |speed|Boolean|false||
 |rpm|Boolean|false||
@@ -45,6 +44,10 @@ Purpose
 |engineOilLife|Boolean|false||
 |electronicParkBrakeStatus|Boolean|false||
 |cloudAppVehicleID|Boolean|false||
+|gearStatus|Boolean|false||
+|stabilityControlsStatus|Boolean|false||
+|windowStatus|Boolean|false||
+|handsOffSteering|Boolean|false||
 
 ### Response
 
@@ -94,6 +97,10 @@ For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `d
 |engineOilLife|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |electronicParkBrakeStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |cloudAppVehicleID|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|gearStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|stabilityControlsStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|windowStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|handsOffSteering|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
 
@@ -130,8 +137,7 @@ UnsubscribeVehicleData unexpected disconnect
     "deviceStatus" : true,
     "wiperStatus" : true,
     "headLampStatus" : true,
-    "accPedalPosition" : true,
-    "appID" : 65368
+    "accPedalPosition" : true
   }
 }
 ```

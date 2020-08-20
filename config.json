@@ -319,6 +319,9 @@
               "name": "Alert"
             },
             {
+              "name": "SubtleAlert"
+            },
+            {
               "name": "CancelInteraction"
             },
             {
@@ -365,6 +368,9 @@
             },
             {
               "name": "OnResetTimeout"
+            },
+            {
+              "name": "OnSubtleAlertPressed"
             },
             {
               "name": "OnSystemContext"
