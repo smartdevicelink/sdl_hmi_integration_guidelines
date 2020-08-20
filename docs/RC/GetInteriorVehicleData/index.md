@@ -43,7 +43,7 @@ HMI must return in GetInteriorVehicleData_response the current value of the disp
 
 !!! NOTE
 
-If during resumption HMI responds with error to GetInteriorVehicleData request SDL reverts already subscribed data and fails resumption, removing information about this subscription.  
+If during resumption HMI responds with error to GetInteriorVehicleData request or responds with SUCCESS to GetInteriorVehicleData but with parameter isSubscribed=false, SDL reverts already subscribed data and fails resumption for related application(s), removing information about this subscription. 
 In the case after reverting the subscription, there is no application subscribed to a certain module type, SDL sends GetInteriorVehicleData (subscribe=false) to HMI and clears cache for this module type. 
 
 !!!
