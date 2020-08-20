@@ -13,6 +13,7 @@ HMI -> Core: UI.OnUpdateSubMenu (menuID: 1)
 Core -> App: OnHMIStatus (systemContext: MENU)
 Core -> App: OnUpdateSubMenu (menuID: 1)
 App -> Core: AddCommand (parentID: 1)
-Core --> App: AddCommand (Success)
 Core -> HMI: UI.AddCommand (parentID: 1)
 note right of HMI: HMI has populated submenu with new add command
+HMI --> Core: UI.AddCommand (Success)
+Core --> App: AddCommand (Success)
