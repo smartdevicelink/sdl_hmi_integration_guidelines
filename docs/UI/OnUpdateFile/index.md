@@ -25,7 +25,6 @@ Requesting missing menuIcon for submenu
 ![OnUpdateFile](./assets/OnUpdateFile.png)
 |||
 
-
 ### JSON Message Examples
 
 #### Example Notification
