@@ -1,0 +1,23 @@
+participant LocalWebApp
+participant SDL
+participant HMI
+note over LocalWebApp, HMI:<align:center>**Preconditions:**\n1. Aplication (with `appID`) is active on HMI, application template is `WEB_VIEW`\n2. HMI shows app/template title on template layout
+note over HMI:Display Aplication web page view\nin the main window
+LocalWebApp->SDL:PerformInteraction (InteractionMode: BOTH)
+SDL->HMI:[VR, UI].PerformInteraction (params)
+note over HMI:<align:center>Store values of prompts\nand the timeout,\nstart counting timeout
+HMI->>SDL:[VR, TTS].Started
+note over HMI:<align:center>Overlay current display with\nPerformInteraction pop-up\ndisplaying VR help items\n **Touch event first goes through the POP-UP area** 
+HMI->>SDL:UI.OnsystemContext (systemContext=VRSESSION, appID, params)
+SDL->>LocalWebApp:OnHMIStatus (VRSESSION)
+HMI->>SDL:[VR, TTS].Stopped
+note over HMI: User closes pop-up with VR help items
+HMI->>SDL:[VR].PerformInteraction(aborted)
+note over HMI: Display UI-choice list
+HMI->>SDL:UI.OnsystemContext (systemContext=HMI_OBSCURED, appID, params)
+note over HMI:<align:center>User chooses one of the items\n in the choiceList before timeout expiration
+HMI->>SDL:[UI].PerformInteraction (choiceID)
+SDL->>LocalWebApp:PerformInteraction (SUCCESS)
+note over HMI:<align:center>Display appID web page view\nin the main window
+HMI->>SDL:UI.OnSystemContext (systemContext=MAIN, appID, params)
+SDL->>LocalWebApp:OnHMIStatus (MAIN)

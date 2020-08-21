@@ -84,6 +84,11 @@ Alert BOTH UI Closed before <abbr title="Text To Speech">TTS</abbr> finishes Spe
 ![Alert](./assets/AlertTTS.png)
 |||
 
+|||
+Alert sent by Local Web App  
+![Alert Local Web App](./assets/AlertLocalWebApp.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request
