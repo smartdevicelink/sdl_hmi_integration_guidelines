@@ -19,7 +19,7 @@ Otherwise, SDL responds to the request with the cached data without forwarding i
 
 The HMI should return interior vehicle data that corresponds to the requested module (`moduleId` + `moduleType`).
 
-During data resumption process SDL sends GetInteriorVehicleData(subscribe=true) request to HMI and stores data received from HMI in cache.
+During the data resumption process, SDL sends GetInteriorVehicleData(subscribe=true) request to the HMI and stores data received from the HMI in cache.
 
 ### Request
 
@@ -44,7 +44,7 @@ HMI must return in GetInteriorVehicleData_response the current value of the disp
 !!! NOTE
 
 If during resumption HMI responds with error to GetInteriorVehicleData request or responds with SUCCESS to GetInteriorVehicleData but with parameter isSubscribed=false, SDL reverts already subscribed data and fails resumption for related application(s), removing information about this subscription. 
-In the case after reverting the subscription, there is no application subscribed to a certain module type, SDL sends GetInteriorVehicleData (subscribe=false) to HMI and clears cache for this module type. 
+After reverting the subscription, if there is no application subscribed to a certain module type, SDL sends GetInteriorVehicleData (subscribe=false) to the HMI and clears the cache for this module type.
 
 !!!
 

@@ -38,7 +38,7 @@ If the application resumes data successfully:
     * `CreateWindow`
     * `GetInteriorVehicleData`
 
-If HMI responds with any kind of error or does not respond to any requests, or responds with success result code but failed to subscribe to interior vehicle data for a RC module sent during resumption, SDL must revert already restored data with appropriate RPCs:
+If the HMI responds with any kind of error, does not respond to any requests or responds with success result code but fails to subscribe to interior vehicle data for an RC module sent during resumption, SDL must revert already restored data with appropriate RPCs:
     * `DeleteCommand`
     * `DeleteSubMenu`
     * `DeleteInteractionChoiceSet`
