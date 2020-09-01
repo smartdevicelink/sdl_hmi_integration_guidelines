@@ -25,7 +25,7 @@ note over App, HMI: Application gets disconnected on Ignition Off not later than
 App->SDL: RegisterAppInterface(hashID, params)
 
 note over SDL:<align:center> Check <hashID>\n <hashID> is valid\n Start data resumption
-SDL->SDL:<align:center>Retrieve consecutively //AddCommands// from the resumption list\nusing <internal_consecutiveNumber>
+SDL->SDL:<align:center>Consecutively retrieve //AddCommands// from the resumption list\nusing <internal_consecutiveNumber>
 SDL->HMI: VR.AddCommand_1(menuParams)
 SDL->HMI: VR.AddCommand_2(menuParams)
 SDL->HMI: VR.AddCommand_3(menuParams)

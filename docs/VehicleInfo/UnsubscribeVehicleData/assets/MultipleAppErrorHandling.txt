@@ -1,0 +1,22 @@
+@startuml
+actor App1
+actor App2
+actor SDL
+actor HMI
+App1 -> SDL: Register with resumption (resumption data : 1, 2)
+App2 -> SDL: Register with resumption (resumption data : 2, 3, 4)
+SDL -> HMI: Subscribe 1
+SDL -> HMI: Subscribe 2
+SDL -> HMI: Subscribe 3
+SDL -> HMI: Subscribe 4
+HMI -> SDL: 1 SUCCESS
+HMI -> SDL: 2 SUCCESS
+HMI -> SDL: 3 FAILED
+HMI -> SDL: 4 SUCCESS
+SDL -> App1: SUCCESS
+SDL -> HMI: Unsubscribe 4
+SDL -> App2: FAIL_RESUMPTION
+note right
+SDL should not unsubscribe data 2 on HMI
+end note
+@enduml (edited)
