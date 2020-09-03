@@ -28,7 +28,7 @@ UI.AddCommand represents a request from an application to add a command to the a
   * If some command list items are hidden due to driver distraction, the HMI can note that some menu items are hidden for the drivers safety.
   * If the `menuParams` contains a `parentID` the command is part of a sub menu. SDL adds SubMenu Commands to the top level Menu via [UI.AddSubMenu](../addsubmenu)
   * During data resumption SDL sends UI.AddCommands to HMI by `internal_consecutiveNumber` in the same order as they were created by mobile app in previous ignition cycle.
-=======
+
 !!!
 
 ### Request

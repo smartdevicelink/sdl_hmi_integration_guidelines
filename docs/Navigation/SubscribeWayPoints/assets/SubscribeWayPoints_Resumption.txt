@@ -15,7 +15,7 @@ App->SDL: RegisterAppInterface(hashID, params)
 
 note over SDL:<align:center> Check <hashID>\n <hashID> is valid\n Start data resumption
 
-note over SDL:<align:center> Resume status of subsciption to wayPoint-related data
+note over SDL:<align:center> Resume status of subscription to wayPoint-related data
 
 SDL->HMI: Navigation.SubscribeWayPoints()
 HMI-->SDL:Navigation.SubscribeWayPoints(SUCCESS)
