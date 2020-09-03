@@ -15,7 +15,7 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|url|String|true|minlength: 21<br>maxlength: 500|
+|url|String|true|minlength: 21|
 |appID|Integer|true||
 
 ### Response

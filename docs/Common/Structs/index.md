@@ -51,6 +51,22 @@
 |pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
 |scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
 
+<<<<<<< HEAD
+### DynamicUpdateCapabilities
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|supportedDynamicImageFieldNames|[Common.ImageFieldName](../enums/#imagefieldname)|false|array: true<br>minsize: 1|An array of ImageFieldName values for which the system supports sending OnFileUpdate notifications. If you send an Image struct for that image field with a name without having uploaded the image data using PutFile that matches that name, the system will request that you upload the data with PutFile at a later point when the HMI needs it. The HMI will then display the image in the appropriate field. If not sent, assume false.|
+|supportsDynamicSubMenus|Boolean|false||If true, the head unit supports dynamic sub-menus by sending OnUpdateSubMenu notifications. If true, you should not send AddCommands that attach to a parentID for an AddSubMenu until OnUpdateSubMenu is received with the menuID. At that point, you should send all AddCommands with a parentID that match the menuID. If not set, assume false.|
+=======
+### DriverDistractionCapability
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|menuLength|Integer|false||The number of items allowed in a Choice Set or Command menu while the driver is distracted|
+|subMenuDepth|Integer|false|minvalue: 1|The depth of submenus allowed when the driver is distracted. e.g. 3 == top level menu -> submenu -> submenu; 1 == top level menu only|
+
+>>>>>>> origin/develop
+
 ### SystemCapabilities
 
 |Name|Type|Mandatory|Additional|Description|
@@ -58,6 +74,7 @@
 |navigationCapability|Common.NavigationCapability|false|||
 |phoneCapability|Common.PhoneCapability|false|||
 |videoStreamingCapability|Common.VideoStreamingCapability|false|||
+|driverDistractionCapability|Common.DriverDistractionCapability|false||Describes capabilities when the driver is distracted|
 
 ### MenuParams
 
@@ -752,6 +769,10 @@
 |:---|:---|:--------|:---------|:----------|
 |type|[Common.FuelType](../enums/#fueltype)|false|||
 |range|Float|false|minvalue: 0<br>maxvalue: 10000|The estimate range in KM the vehicle can travel based on fuel level and consumption|
+|level|Float|false|minvalue: -6<br>maxvalue: 1000000|The relative remaining capacity of this fuel type (percentage)|
+|levelState|[Common.ComponentVolumeStatus](../enums/#componentvolumestatus)|false||The fuel level state|
+|capacity|Float|false|minvalue: 0<br>maxvalue: 1000000|The absolute capacity of this fuel type|
+|capacityUnit|[Common.CapacityUnit](../enums/#capacityunit)|false||The unit of the capacity of this fuel type such as liters for gasoline or kWh for batteries|
 
 ### MassageModeData
 
@@ -931,6 +952,7 @@
 |appServicesCapabilities|Common.AppServicesCapabilities|false||An array of currently available services. If this is an update to the capability the affected services will include an update reason in that item|
 |displayCapabilities|Common.DisplayCapability|false|array: true<br>minsize: 1<br>maxsize: 1000||
 |seatLocationCapability|Common.SeatLocationCapability|false||Contains information about the locations of each seat|
+|driverDistractionCapability|Common.DriverDistractionCapability|false||Describes capabilities when the driver is distracted|
 
 ### MediaServiceManifest
 
@@ -1082,6 +1104,7 @@ There are no defined parameters for this struct
 |buttonCapabilities|Common.ButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of buttons and the capabilities of each on-window button.|
 |softButtonCapabilities|Common.SoftButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of soft buttons available on-window and the capabilities for each button.|
 |menuLayoutsAvailable|[Common.MenuLayout](../enums/#menulayout)|false|array: true<br>minsize: 1<br>maxsize: 1000|An array of available menu layouts. If this parameter is not provided, only the `LIST` layout is assumed to be available|
+|dynamicUpdateCapabilities|Common.DynamicUpdateCapabilities|false||Contains the head unit's capabilities for dynamic updating features declaring if the module will send dynamic update RPCs|
 
 ### ModuleInfo
 
@@ -1130,3 +1153,31 @@ There are no defined parameters for this struct
 |hybridAppPreference|[Common.HybridAppPreference](../enums/#hybridapppreference)|false||Specifies the user preference to use one specific app type or all available types|
 |endpoint|String|false|maxlength: 65535|If specified, which Core uses a client implementation of the connection type and attempts to connect to the endpoint when this app is selected (activated).<br>If omitted, Core won't attempt to connect as the app selection (activation) is managed outside of Core. Instead it uses a server implementation of the connection type and expects the app to connect|
 
+### GearStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|userSelectedGear|[Common.PRNDL](../enums/#prndl)|false||Gear position selected by the user<br>i.e. Park, Drive, Reverse|
+|actualGear|[Common.PRNDL](../enums/#prndl)|false||Actual Gear in use by the transmission|
+|transmissionType|[Common.TransmissionType](../enums/#transmissiontype)|false||Tells the transmission type|
+
+### StabilityControlsStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|escSystem|[Common.VehicleDataStatus](../enums/#vehicledatastatus)|false||true if vehicle stability control is ON,<br>else false|
+|trailerSwayControl|[Common.VehicleDataStatus](../enums/#vehicledatastatus)|false||true if vehicle trailer sway control is ON,<br>else false|
+
+### WindowState
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|approximatePosition|Integer|true|minvalue: 0<br>maxvalue: 100|The approximate percentage that the window is open -<br>0 being fully closed, 100 being fully open|
+|deviation|Integer|true|minvalue: 0<br>maxvalue: 100|The percentage deviation of the approximatePosition.<br>e.g. If the approximatePosition is 50 and the deviation is 10,<br>then the window's location is somewhere between 40 and 60|
+
+### WindowStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true|||
+|state|Common.WindowState|true|||
