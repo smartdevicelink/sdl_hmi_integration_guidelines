@@ -27,7 +27,7 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
-GetCapabilities on system startup
+GetCapabilities  
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
 

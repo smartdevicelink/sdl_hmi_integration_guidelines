@@ -13,6 +13,17 @@ Purpose
 
 1. HMI sends OnSystemCapabilityUpdated notification to SDL after creating a widget _(see also [CreateWindow](../../UI/CreateWindow/index.md))_.
 2. HMI sends OnSystemCapabilityUpdated notification after receiving UI.Show(templateConfiguration) request manipulating the content presented of main window or widgets.
+3. HMI should not send `WEB_VIEW` template in `WindowCapability` for any widgets, and applications with `AppHMIType` other than `WEB_VIEW`.
+4. If the application changes template to `WEB_VIEW`, HMI should send OnSystemCapabilityUpdated with the following `textFields` restrictions in `WindowCapability`:
+    * `menuName` and `templateTitle` should be included, if they are visible on HMI.
+    * `mainField1-4`, `statusBar` and `mediaTrack` should not be included if OEM implemented the `WEB_VIEW` template without these text fields.
+    * `availabletemplates`, `buttonCapabilities` and `imageTypeSupported` should reflect the general capabilities of the window/system.
+
+!!! NOTE
+
+Template `WEB_VIEW` is only allowed for the WebEngine applications with `AppHMIType`=`WEB_VIEW`.
+
+!!!
 
 #### Parameters
 

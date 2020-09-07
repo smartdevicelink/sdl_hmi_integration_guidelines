@@ -1,0 +1,19 @@
+participant App
+participant Core
+participant HMI
+HMI -> Core: UI.OnSystemCapabilityUpdated \n\t type: DISPLAYS,\n\t supportsDynamicSubMenus: true
+Core -> App: OnSystemCapabilityUpdated \n\t type: DISPLAYS,\n\t supportsDynamicSubMenus: true
+App -> Core: AddSubMenu (menuID: 1)
+Core -> HMI: UI.AddSubMenu (menuID: 1)
+HMI --> Core: UI.AddSubMenu (SUCCESS)
+Core --> App: AddSubMenu (SUCCESS)
+note right of HMI: User opens menu, HMI requests submenu commands are updated
+HMI-> Core: UI.OnSystemContext: MENU
+HMI -> Core: UI.OnUpdateSubMenu (menuID: 1)
+Core -> App: OnHMIStatus (systemContext: MENU)
+Core -> App: OnUpdateSubMenu (menuID: 1)
+App -> Core: AddCommand (parentID: 1)
+Core -> HMI: UI.AddCommand (parentID: 1)
+note right of HMI: HMI has populated submenu with new add command
+HMI --> Core: UI.AddCommand (Success)
+Core --> App: AddCommand (Success)

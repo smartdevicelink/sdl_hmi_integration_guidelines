@@ -44,6 +44,10 @@ Purpose
 |engineOilLife|Boolean|false||
 |electronicParkBrakeStatus|Boolean|false||
 |cloudAppVehicleID|Boolean|false||
+|gearStatus|Boolean|false||
+|stabilityControlsStatus|Boolean|false||
+|windowStatus|Boolean|false||
+|handsOffSteering|Boolean|false||
 
 ### Response
 
@@ -95,6 +99,10 @@ If multiple applications are trying to restore the same subscription, SDL should
 |engineOilLife|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |electronicParkBrakeStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |cloudAppVehicleID|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|gearStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|stabilityControlsStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|windowStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|handsOffSteering|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
 
