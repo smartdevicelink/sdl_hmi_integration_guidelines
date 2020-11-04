@@ -28,7 +28,7 @@ This RPC has no additional parameter requirements
 |softButtonCapabilities|[Common.SoftButtonCapabilities](../../common/structs/#softbuttoncapabilities)|false|array: true<br>minsize: 1<br>maxsize: 100|
 |hmiCapabilities|[Common.HMICapabilities](../../common/structs/#hmicapabilities)|false||
 |systemCapabilities|[Common.SystemCapabilities](../../common/structs/#systemcapabilities)|false||
-|pcmStreamCapabilities|[Commom.AudioPassThruCapabilities](../../common/structs/#audiopassthrucapabilities)|false||
+|pcmStreamCapabilities|[Common.AudioPassThruCapabilities](../../common/structs/#audiopassthrucapabilities)|false||
 
 ### Sequence Diagrams
 

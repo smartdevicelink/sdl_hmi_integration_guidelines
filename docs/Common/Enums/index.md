@@ -1329,6 +1329,7 @@
 |INFINITELY_VARIABLE|5|Infinitely variable transmission.|
 |ELECTRIC_VARIABLE|6|Electric variable transmission.|
 |DIRECT_DRIVE|7|Direct drive between engine and wheels.|
+
 ### CapacityUnit
 
 |Name|Value|Description|

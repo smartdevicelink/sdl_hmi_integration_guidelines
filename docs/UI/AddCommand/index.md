@@ -100,6 +100,7 @@ AddCommand for WebEngine App
 ![AddCommand](./assets/AddCommandWebEngineApp.png)
 |||
 
+|||
 AddCommand restoring during data resumption
 ![AddCommand](./assets/AddCommand_Resumption.png)
 |||

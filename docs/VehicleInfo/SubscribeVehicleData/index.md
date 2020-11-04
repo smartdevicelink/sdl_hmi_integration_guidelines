@@ -121,7 +121,6 @@ Error handling for subscriptions during parallel resumption of two applications
 ![SubscribeVehicleData](./assets/MultipleAppErrorHandling.png)
 |||
 
-
 ### JSON Message Examples
 
 #### Example Request
