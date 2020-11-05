@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Get the supported <abbr title="Text To Speech">TTS</abbr> languages
+: Get the supported <abbr title="Text To Speech">TTS</abbr> languages.
 
 ### Request
 
@@ -26,7 +26,7 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
-GetSupportedLanguages
+GetSupportedLanguages  
 ![GetSupportedLanguages](./assets/GetSupportedLanguages.png)
 |||
 

@@ -311,6 +311,9 @@
               "name": "Alert"
             },
             {
+              "name": "SubtleAlert"
+            },
+            {
               "name": "CancelInteraction"
             },
             {
@@ -359,10 +362,19 @@
               "name": "OnResetTimeout"
             },
             {
+              "name": "OnSubtleAlertPressed"
+            },
+            {
               "name": "OnSystemContext"
             },
             {
               "name": "OnTouchEvent"
+            },
+            {
+              "name": "OnUpdateFile"
+            },
+            {
+              "name": "OnUpdateSubMenu"
             },
             {
               "name": "PerformAudioPassThru"

@@ -68,6 +68,7 @@
 |SYSTEM|9||
 |PROJECTION|10||
 |REMOTE_CONTROL|11||
+|WEB_VIEW|12||
 
 ### CloudConnectionStatus
 
@@ -264,6 +265,9 @@
 |TYPE5SET|1||
 |CID1SET|2||
 |CID2SET|3||
+|ASCII|4|ASCII as defined in https://en.wikipedia.org/wiki/ASCII(codes 0-127).<br>Non-printable characters such as tabs and back spaces are ignored.|
+|ISO_8859_1|5|Latin-1, as defined in https://en.wikipedia.org/wiki/ISO/IEC_8859-1|
+|UTF_8|6|The UTF-8 character set that uses variable bytes per code point.<br>See https://en.wikipedia.org/wiki/UTF-8 for more details.<br>This is the preferred character set.|
 
 ### SamplingRate
 
@@ -571,6 +575,7 @@
 |UNAUTHORIZED_TRANSPORT_REGISTRATION|2|By getting this value, SDL unregisters the named application|
 |UNSUPPORTED_HMI_RESOURCE|3|By getting this value, SDL unregisters the named application|
 |CLOSE_CLOUD_CONNECTION|4|By getting this value, SDL puts the named app to NONE HMILevel. Used by the HMI to close a cloud app connection|
+|RESOURCE_CONSTRAINT|5|By getting this value, SDL should unregister the application to allow the HMI to close the application.|
 
 ### IgnitionStatus
 
@@ -852,6 +857,7 @@
 |showConstantTBTNextTurnIcon|11|The secondary image field for ShowConstantTBT|
 |locationImage|12|The optional image of a destination / location|
 |alertIcon|13|The image field for Alert|
+|subMenuIcon|14|The image field for AddSubMenu.menuIcon|
 
 ### VehicleDataType
 
@@ -865,30 +871,34 @@
 |VEHICLEDATA_FUELCONSUMPTION|5||
 |VEHICLEDATA_EXTERNTEMP|6||
 |VEHICLEDATA_VIN|7||
-|VEHICLEDATA_PRNDL|8||
-|VEHICLEDATA_TIREPRESSURE|9||
-|VEHICLEDATA_ODOMETER|10||
-|VEHICLEDATA_BELTSTATUS|11||
-|VEHICLEDATA_BODYINFO|12||
-|VEHICLEDATA_DEVICESTATUS|13||
-|VEHICLEDATA_ECALLINFO|14||
-|VEHICLEDATA_AIRBAGSTATUS|15||
-|VEHICLEDATA_EMERGENCYEVENT|16||
-|VEHICLEDATA_CLUSTERMODESTATUS|17||
-|VEHICLEDATA_MYKEY|18||
-|VEHICLEDATA_BRAKING|19||
-|VEHICLEDATA_WIPERSTATUS|20||
-|VEHICLEDATA_HEADLAMPSTATUS|21||
-|VEHICLEDATA_BATTVOLTAGE|22||
-|VEHICLEDATA_ENGINETORQUE|23||
-|VEHICLEDATA_ACCPEDAL|24||
-|VEHICLEDATA_STEERINGWHEEL|25||
-|VEHICLEDATA_TURNSIGNAL|26||
-|VEHICLEDATA_FUELRANGE|27||
-|VEHICLEDATA_ENGINEOILLIFE|28||
-|VEHICLEDATA_ELECTRONICPARKBRAKESTATUS|29||
-|VEHICLEDATA_CLOUDAPPVEHICLEID|30| Parameter used by cloud apps or the policy server to identify a head unit|
-|VEHICLEDATA_OEM_CUSTOM_DATA|31||
+|VEHICLEDATA_GEARSTATUS|8||
+|VEHICLEDATA_PRNDL|9||
+|VEHICLEDATA_TIREPRESSURE|10||
+|VEHICLEDATA_ODOMETER|11||
+|VEHICLEDATA_BELTSTATUS|12||
+|VEHICLEDATA_BODYINFO|13||
+|VEHICLEDATA_DEVICESTATUS|14||
+|VEHICLEDATA_ECALLINFO|15||
+|VEHICLEDATA_AIRBAGSTATUS|16||
+|VEHICLEDATA_EMERGENCYEVENT|17||
+|VEHICLEDATA_CLUSTERMODESTATUS|18||
+|VEHICLEDATA_MYKEY|19||
+|VEHICLEDATA_BRAKING|20||
+|VEHICLEDATA_WIPERSTATUS|21||
+|VEHICLEDATA_HEADLAMPSTATUS|22||
+|VEHICLEDATA_BATTVOLTAGE|23||
+|VEHICLEDATA_ENGINETORQUE|24||
+|VEHICLEDATA_ACCPEDAL|25||
+|VEHICLEDATA_STEERINGWHEEL|26||
+|VEHICLEDATA_TURNSIGNAL|27||
+|VEHICLEDATA_FUELRANGE|28||
+|VEHICLEDATA_ENGINEOILLIFE|29||
+|VEHICLEDATA_ELECTRONICPARKBRAKESTATUS|30||
+|VEHICLEDATA_CLOUDAPPVEHICLEID|31| Parameter used by cloud apps or the policy server to identify a head unit|
+|VEHICLEDATA_OEM_CUSTOM_DATA|32||
+|VEHICLEDATA_STABILITYCONTROLSSTATUS|33||
+|VEHICLEDATA_WINDOWSTATUS|34||
+|VEHICLEDATA_HANDSOFFSTEERING|35||
 
 ### VideoStreamingProtocol
 
@@ -925,7 +935,7 @@
 |PARK|0|Parking|
 |REVERSE|1|Reverse gear|
 |NEUTRAL|2|No gear|
-|DRIVE|3||
+|DRIVE|3|Regular Drive mode|
 |SPORT|4|Drive Sport mode|
 |LOWGEAR|5|1st gear hold|
 |FIRST|6||
@@ -936,8 +946,10 @@
 |SIXTH|11||
 |SEVENTH|12||
 |EIGHTH|13||
-|UNKNOWN|14||
-|FAULT|15||
+|NINTH|14||
+|TENTH|15||
+|UNKNOWN|16||
+|FAULT|17||
 
 ### TPMS
 
@@ -1214,6 +1226,7 @@
 |APP_SERVICES|4||
 |DISPLAYS|5||
 |SEAT_LOCATION|6||
+|DRIVER_DISTRACTION|7|Describes capabilities when the driver is distracted|
 
 ### MediaType
 
@@ -1303,3 +1316,24 @@
 |MOBILE|0||
 |CLOUD|1||
 |BOTH|2||
+
+### TransmissionType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|MANUAL|0|Manual transmission.|
+|AUTOMATIC|1|Automatic transmission.|
+|SEMI_AUTOMATIC|2|Semi automatic transmission.|
+|DUAL_CLUTCH|3|Dual clutch transmission.|
+|CONTINUOUSLY_VARIABLE|4|Continuously variable transmission(CVT).|
+|INFINITELY_VARIABLE|5|Infinitely variable transmission.|
+|ELECTRIC_VARIABLE|6|Electric variable transmission.|
+|DIRECT_DRIVE|7|Direct drive between engine and wheels.|
+
+### CapacityUnit
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|LITERS|0||
+|KILOWATTHOURS|1||
+|KILOGRAMS|2||

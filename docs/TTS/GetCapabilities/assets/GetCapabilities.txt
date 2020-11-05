@@ -1,0 +1,38 @@
+participant App
+participant SDL
+participant HMI
+App->SDL:RegisterAppInterface
+HMI->>SDL:BC.OnReady
+SDL->HMI:TTS.IsReady
+HMI-->SDL:TTS.IsReady (`SUCCESS`)
+note over SDL:<align:center>`HMICapabilitiesCacheFile`\nis not available
+SDL->SDL:Create `HMICapabilitiesCacheFile`
+
+opt Use of cached capabilities data
+
+opt On system start up
+note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilitiesCacheFile`
+SDL->HMI:TTS.GetCapabilities
+HMI-->SDL:TTS.GetCapabilities (params)
+SDL->SDL:Cache received data\nin `HMICapabilitiesCacheFile`
+SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
+SDL-->App:RegisterAppInterface (params)
+end
+
+opt In subsequent ignition cycles
+note over SDL:<align:center> Capabilities data is available\nin`HMICapabilitiesCacheFile`
+SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
+SDL-->App:RegisterAppInterface (params)
+end
+end
+
+opt Use of default capabilities data - No response from HMI
+
+note over SDL:<align:center> Capabilities data is not available\nin`HMICapabilitiesCacheFile`
+SDL->HMI:TTS.GetCapabilities
+note over HMI:<align:center>No response
+note over SDL:<align:center>Request and persist \nHMI capabilities\nin subsequent ignition cycle
+SDL->SDL:Load default data\nfrom **`hmi_capabilities.json`**
+note over SDL:<align:center>Use default data\nfor App-SDL communication\nwithin this ignition cycle
+SDL-->App:RegisterAppInterface (params)
+end
