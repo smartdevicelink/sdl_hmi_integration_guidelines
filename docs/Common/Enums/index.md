@@ -1303,3 +1303,13 @@
 |MOBILE|0||
 |CLOUD|1||
 |BOTH|2||
+
+### DoorStatusType 
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|CLOSED|0|The status is selected if a door is closed and unlocked or <br> if a door is closed and unknown locked state|
+|LOCKED|1|The status is selected if a door is closed and locked|
+|AJAR|2|The status is selected if a door is open|
+|REMOVED|3|The status is selected if a door is physically removed|
+
