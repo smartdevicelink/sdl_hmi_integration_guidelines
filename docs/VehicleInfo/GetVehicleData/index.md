@@ -70,6 +70,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |engineOilLife|Boolean|false||
 |electronicParkBrakeStatus|Boolean|false||
 |cloudAppVehicleID|Boolean|false||
+|seatOccupancy|Boolean|false||
 
 ### Response
 
@@ -107,6 +108,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |engineOilLife|Float|false|minvalue: 0<br>maxvalue: 100|
 |electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
 |cloudAppVehicleID|String|false||
+|seatOccupancy|[Common.SeatOccupancy](../../common/structs/#seatoccupancy)|false|
 
 ### Sequence Diagrams
 

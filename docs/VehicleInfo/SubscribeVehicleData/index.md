@@ -44,6 +44,7 @@ Purpose
 |engineOilLife|Boolean|false||
 |electronicParkBrakeStatus|Boolean|false||
 |cloudAppVehicleID|Boolean|false||
+|seatOccupancy|Boolean|false||
 
 ### Response
 
@@ -93,6 +94,7 @@ For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `d
 |engineOilLife|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |electronicParkBrakeStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |cloudAppVehicleID|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|seatOccupancy|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false|
 
 ### Sequence Diagrams
 

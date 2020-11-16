@@ -1130,3 +1130,16 @@ There are no defined parameters for this struct
 |hybridAppPreference|[Common.HybridAppPreference](../enums/#hybridapppreference)|false||Specifies the user preference to use one specific app type or all available types|
 |endpoint|String|false|maxlength: 65535|If specified, which Core uses a client implementation of the connection type and attempts to connect to the endpoint when this app is selected (activated).<br>If omitted, Core won't attempt to connect as the app selection (activation) is managed outside of Core. Instead it uses a server implementation of the connection type and expects the app to connect|
 
+### SeatStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|seatLocation|Common.SeatLocation|true|||
+|conditionActive|Boolean|true|||
+
+### SeatOccupancy
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|seatsOccupied|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are occupied.|
+|seatsBelted|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are belted.|
