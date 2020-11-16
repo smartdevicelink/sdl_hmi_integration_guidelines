@@ -1130,3 +1130,12 @@ There are no defined parameters for this struct
 |hybridAppPreference|[Common.HybridAppPreference](../enums/#hybridapppreference)|false||Specifies the user preference to use one specific app type or all available types|
 |endpoint|String|false|maxlength: 65535|If specified, which Core uses a client implementation of the connection type and attempts to connect to the endpoint when this app is selected (activated).<br>If omitted, Core won't attempt to connect as the app selection (activation) is managed outside of Core. Instead it uses a server implementation of the connection type and expects the app to connect|
 
+### ClimateData 
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|externalTemperature|[Common.Temperature]()|false||The external temperature in degrees celsius|
+|cabinTemperature[Common.Temperature]()|false||Internal ambient cabin temperature in degrees celsius|
+|atmosphericPressure|float|false|minvalue="0" maxvalue="2000"|Current atmospheric pressure in mBar|
+
+

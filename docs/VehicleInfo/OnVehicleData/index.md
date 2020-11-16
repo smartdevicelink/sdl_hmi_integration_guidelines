@@ -63,6 +63,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |engineOilLife|Float|false|minvalue: 0<br>maxvalue: 100|
 |electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
 |cloudAppVehicleID|String|false||
+|climateData|[Common.ClimateData](../../common/structs/#climatedata)|false||
 
 ### Sequence Diagrams
 
