@@ -71,13 +71,13 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|pressureTelltale|[Common.WarningLightStatus](../enums/#warninglightstatus)|false|||
-|leftFront|Common.SingleTireStatus|false|||
-|rightFront|Common.SingleTireStatus|false|||
-|leftRear|Common.SingleTireStatus|false|||
-|rightRear|Common.SingleTireStatus|false|||
-|innerLeftRear|Common.SingleTireStatus|false|||
-|innerRightRear|Common.SingleTireStatus|false|||
+|pressureTelltale|[Common.WarningLightStatus](../enums/#warninglightstatus)|false||Status of the Tire Pressure Telltale. See WarningLightStatus|
+|leftFront|Common.SingleTireStatus|false||The status of the left front tire.|
+|rightFront|Common.SingleTireStatus|false||The status of the right front tire.|
+|leftRear|Common.SingleTireStatus|false||The status of the left rear tire.|
+|rightRear|Common.SingleTireStatus|false||The status of the right rear tire.|
+|innerLeftRear|Common.SingleTireStatus|false||The status of the inner left rear.|
+|innerRightRear|Common.SingleTireStatus|false||The status of the inner right rear.|
 
 ### ECallInfo
 
