@@ -1135,7 +1135,6 @@ There are no defined parameters for this struct
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |externalTemperature|[Common.Temperature]()|false||The external temperature in degrees celsius|
-|cabinTemperature[Common.Temperature]()|false||Internal ambient cabin temperature in degrees celsius|
+|cabinTemperature| [Common.Temperature]|false||Internal ambient cabin temperature in degrees celsius|
 |atmosphericPressure|float|false|minvalue="0" maxvalue="2000"|Current atmospheric pressure in mBar|
-
 
