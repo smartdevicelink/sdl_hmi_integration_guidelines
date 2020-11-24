@@ -17,7 +17,7 @@ Purpose
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
 |cancelID|Integer|false||
-|functionID|Integer|true|Can be any one of AlertID, PerformInteractionID, SliderID or ScrollableMessageID|
+|functionID|Integer|true|Can be any one of AlertID, PerformInteractionID, SliderID, ScrollableMessageID, or SubtleAlertID|
 
 ### Response
 

@@ -67,6 +67,11 @@ PerformInteraction in Both Mode timed out
 ![PerformInteraction](./assets/PerformInteractionBoth.png)
 |||
 
+|||
+PerformInteraction in Both Mode WebEngineApp
+![PerformInteractionWebEngineApp](./assets/PerformInteractionWebEngineApp.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request
