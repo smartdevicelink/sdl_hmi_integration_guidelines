@@ -292,8 +292,8 @@
 |rearLeftDoorAjar|Boolean|false||References signal "DrStatRl_B_Actl". Deprecated starting with RPC Spec 7.1.0|
 |rearRightDoorAjar|Boolean|false||References signal "DrStatRr_B_Actl". Deprecated starting with RPC Spec 7.1.0|
 |doorStatuses|Common.DoorStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for doors if Ajar/Closed/Locked|
-|gateStatuses|Common.GateStatuses|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for trunk/hood/etc. if Ajar/Closed/Locked|
-|roofStatuses|Common.RoofStatuses|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for roof/convertible roof/sunroof/moonroof etc., if Closed/Ajar/Removed etc.|
+|gateStatuses|Common.GateStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for trunk/hood/etc. if Ajar/Closed/Locked|
+|roofStatuses|Common.RoofStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for roof/convertible roof/sunroof/moonroof etc., if Closed/Ajar/Removed etc.|
 
 ### BeltStatus
 
@@ -1145,7 +1145,7 @@ There are no defined parameters for this struct
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |location|Common.Grid|true||Describes the status of location of trunk/hood/etc.|
-|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a parameter of trunk/hood/etc.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of trunk/hood/etc.|
 
 ### RoofStatus
 
@@ -1168,4 +1168,3 @@ There are no defined parameters for this struct
 | Roof is closed and unknown locked state | CLOSED  | `approximatePosition` = 0 & `deviation` = 0 |
 | Roof is open  | AJAR  | actual values of `approximatePosition` & `deviation` |
 | Roof is physically removed  | REMOVED  | can be omitted OR `approximatePosition` = 0 & `deviation` = 0 |
-
