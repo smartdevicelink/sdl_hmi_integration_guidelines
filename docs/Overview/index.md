@@ -52,3 +52,7 @@ Abbreviations used in this document are collected in the table below
 |UTC|Universal Time Coordinate|
 |VDOP|Vertical Dilution of Precision|
 |VR|Voice Recognition|
+
+## Previous versions of these docs
+
+This documentation is transpiled from markdown in the [sdl_hmi_integrations GitHub repository](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/) to HTML. To view the guides for previous releases, you can navigate to the [releases page](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/releases) to view or download the markdown files.

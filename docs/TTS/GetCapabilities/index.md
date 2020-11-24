@@ -56,7 +56,7 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
-GetCapabilities
+GetCapabilities  
 ![GetCapabilities](./assets/GetCapabilities.png)
 |||
 

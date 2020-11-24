@@ -55,6 +55,11 @@ CreateWindow
 ![CreateWindow](./assets/CreateWindow.png)
 |||
 
+|||
+Processing the creation of widget which duplicates main window when application has active WEB_VIEW template
+![CreateWindow Local Web App](./assets/CreateWindowLocalWebApp.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request

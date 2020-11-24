@@ -1,0 +1,18 @@
+participant App
+participant Core
+participant HMI
+HMI -> Core: UI.OnSystemCapabilityUpdated \n\t type: DISPLAYS,\n\t supportsDynamicImageFieldNames: ["subMenuIcon"]
+Core -> App: OnSystemCapabilityUpdated \n\t type: DISPLAYS,\n\t supportsDynamicImageFieldNames: ["subMenuIcon"]
+App -> Core: AddSubMenu (menuIcon: missing_file.png)
+Core -> HMI: UI.AddSubMenu (menuIcon: missing_file.png)
+HMI --> Core: UI.AddSubMenu (SUCCESS)
+Core --> App: AddSubMenu (SUCCESS)
+note right of HMI: User opens menu, HMI requests missing menu icon
+HMI-> Core: UI.OnSystemContext: MENU
+HMI -> Core: UI.OnUpdateFile (fileName: missing_file.png)
+Core -> App: OnHMIStatus (systemContext: MENU)
+Core -> App: OnUpdateFile (fileName: missing_file.png)
+App -> Core: Putfile (syncFileName: missing_file.png)
+Core --> App: Putfile (Success)
+Core -> HMI: BC.OnPutFile (FileName: missing_file.png)
+note right of HMI: HMI is able to display the missing submenu icon

@@ -1,0 +1,37 @@
+participant App
+participant SDL
+participant HMI
+
+note over App, HMI:<align:center>**Pre-conditions:**\n  1. App is registered and activated
+
+App->SDL: AddCommand_1(menuParams)
+SDL->SDL:<align:center> generate <internal_consecutiveNumber>\nand assign it to the requested AddCommand_1
+SDL->HMI: UI.AddCommand_1(menuParams)
+App->SDL: AddCommand_2(menuParams)
+SDL->SDL:<align:center> generate <internal_consecutiveNumber>\nand assign it to the requested AddCommand_2
+SDL->HMI: UI.AddCommand_2(menuParams)
+App->SDL: AddCommand_3(menuParams)
+SDL->SDL:<align:center> generate <internal_consecutiveNumber>\nand assign it to the requested AddCommand_3
+SDL->HMI: UI.AddCommand_3(menuParams)
+HMI-->SDL: UI.AddCommand_1(SUCCESS)
+SDL-->App: AddCommand_1(SUCCESS)
+HMI-->SDL: UI.AddCommand_2(SUCCESS)
+SDL-->App: AddCommand_2(SUCCESS)
+HMI-->SDL: UI.AddCommand_3(SUCCESS)
+SDL-->App: AddCommand_3(SUCCESS)
+
+note over App, HMI: Application gets disconnected on Ignition Off not later than 3 ignition consecutive cycles
+
+App->SDL: RegisterAppInterface(hashID, params)
+
+note over SDL:<align:center> Check <hashID>\n <hashID> is valid\n Start data resumption
+SDL->SDL:<align:center>Consecutively retrieve //AddCommands// from the resumption list\nusing <internal_consecutiveNumber>
+SDL->HMI: UI.AddCommand_1(menuParams)
+SDL->HMI: UI.AddCommand_2(menuParams)
+SDL->HMI: UI.AddCommand_3(menuParams)
+
+opt Received <hashID> value is different from the <hashID> stored on SDL for the application
+note over SDL:<align:center> Check <hashID>\n <hashID> is invalid
+SDL->App: RegisterAppInterface(RESUME_FAILED)
+SDL->SDL:<align:center> Clean up all data\npersisted for the pair <appID, deviceID>
+end

@@ -1,0 +1,16 @@
+@startuml
+actor App1
+actor App2
+actor SDL
+actor HMI
+App1 -> SDL: Register with resumption (resumption data : 1, 2)
+App2 -> SDL: Register with resumption (resumption data : 2, 3)
+SDL -> HMI: Subscribe 1
+SDL -> HMI: Subscribe 2 (for App1)
+SDL -> HMI: Subscribe 3
+HMI --> SDL: Subscribe(ERROR 2)
+SDL --> App1: RAI (RESUME_FAILED)
+SDL -> HMI: Subscribe 2 (for App2)
+HMI --> SDL: Subscribe (SUCCESS2)
+SDL --> App2: RAI (SUCCESS)
+@enduml (edited)

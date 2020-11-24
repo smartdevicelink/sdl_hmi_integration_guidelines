@@ -26,7 +26,7 @@ This RPC has no additional parameter requirements
 ### Sequence Diagrams
 
 |||
-GetVehicleType
+GetVehicleType  
 ![GetVehicleType](./assets/GetVehicleType.png)
 |||
 
