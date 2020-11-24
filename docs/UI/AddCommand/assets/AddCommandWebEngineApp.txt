@@ -1,0 +1,19 @@
+participant LocalWebApp
+participant SDL
+participant HMI
+note over LocalWebApp, HMI:<align:center>**Preconditions:**\n1. Aplication (with `appID`) is active on HMI, `AppHMIType` is `WEB_VIEW`\n2. Aplication active template is `WEB_VIEW`\n3. HMI shows app/template title on template layout
+note over HMI:<align:center>Display app web page view\nin the main window
+note over LocalWebApp: MENU button\n is displayed
+LocalWebApp->SDL:AddCommand (appID, params)
+SDL->HMI:UI.AddCommand (appID, params)
+note over HMI:<align:center>Store received data\nassociating it with `appID`
+HMI-->SDL:UI.AddCommand (SUCCESS)
+SDL-->LocalWebApp:AddCommand (SUCCESS)
+note over LocalWebApp:User taps MENU button
+LocalWebApp->SDL: ShowAppMenu()
+SDL --> HMI:  UI.ShowAppMenu (appID)
+HMI->>SDL:UI.OnSystemContext (systemContext=MENU, appID, params)
+SDL->>LocalWebApp:OnHMIStatus (MENU)
+note over HMI:<align:center>Show the list of MENU items\n AddCommand is accessible for User's choice
+HMI --> SDL:  UI.ShowAppMenu (appID)
+SDL-->LocalWebApp:ShowAppMenu (SUCCESS)

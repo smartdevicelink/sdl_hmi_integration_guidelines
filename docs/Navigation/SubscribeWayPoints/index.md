@@ -15,6 +15,10 @@ Purpose
 Send future waypoint updates to SDL using [Navigation.OnWayPointChange](../onwaypointchange)
 !!!
 
+!!! note
+SDL restores status of subscription to wayPoints-related data during data resumption during 3 consecutive ignition cycles.
+!!!
+
 #### Parameters
 
 This RPC has no additional parameter requirements
@@ -30,6 +34,11 @@ This RPC has no additional parameter requirements
 |||
 SubscribeWayPoints
 ![SubscribeWayPoints](./assets/SubscribeWayPoints.png)
+|||
+
+|||
+SubscribeWayPoints Resumption
+![SubscribeWayPoints](./assets/SubscribeWayPoints_Resumption.png)
 |||
 
 ### JSON Message Examples

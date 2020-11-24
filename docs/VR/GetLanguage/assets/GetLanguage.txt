@@ -1,0 +1,27 @@
+participant App
+participant SDL
+participant HMI
+App->SDL:RegisterAppInterface
+HMI->>SDL:BC.OnReady
+SDL->HMI:VR.IsReady
+HMI-->SDL:VR.IsReady (`SUCCESS`)
+note over SDL:<align:center>`HMICapabilitiesCacheFile`\nis not available
+SDL->SDL:Create `HMICapabilitiesCacheFile`
+note over SDL:<align:center>GetLanguage data\nis not available\nin `HMICapabilitiesCacheFile`
+
+opt GetLanguage - Happy Path
+SDL->HMI:VR.GetLanguage
+HMI-->SDL:VR.GetLanguage (`SUCCESS`, params)
+SDL->SDL:<align:center>Cache received data\nin `HMICapabilitiesCacheFile`
+note right of SDL:<align:center>Use received data\nfor App-SDL communication
+end
+
+opt GetLanguage - No response from HMI
+SDL->HMI:VR.GetLanguage
+note over HMI:No response
+note right of SDL:<align:center>Request data from HMI\nin subsequent ignition cycle
+SDL->SDL:Load default data\nfrom `hmi_capabilities.json`
+note right of SDL:<align:center>Use default data\nfor App-SDL communication\nwithin this ignition cycle
+end
+
+SDL-->App:RegisterAppInterface (params)

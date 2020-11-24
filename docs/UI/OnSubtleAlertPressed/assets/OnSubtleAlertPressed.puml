@@ -1,0 +1,59 @@
+@startuml OnSubtleAlertPressed
+
+participant Core
+participant HMI
+
+skinparam NoteTextAlignment center
+
+note over HMI
+app1 layout 
+is active
+
+app2 is in
+BACKGROUND
+end note
+
+Core -> HMI: UI.SubtleAlert(params, appID2, UI)
+
+note over HMI
+Display notification
+dialog on screen
+over app1 with
+specified data
+end note
+
+HMI ->> Core: UI.OnSystemContext(ALERT, appID2)
+HMI ->> Core: UI.OnSystemContext(HMI_OBSCURED)
+
+note over HMI
+User presses
+SubtleAlert dialog
+end note
+
+HMI ->> Core: UI.OnSubtleAlertPressed(appID2)
+
+note over HMI
+SubtleAlert dialog
+is closed
+end note
+
+HMI -> Core: SDL.ActivateApp(appID2)
+
+note over HMI
+app1 is deactivated
+and put into
+BACKGROUND
+
+app2 is activated
+and put into 
+HMI level FULL
+end note
+
+Core --> HMI: SDL.ActivateApp(SUCCESS)
+
+HMI --> Core: UI.SubtleAlert(SUCCESS)
+
+HMI ->> Core: UI.OnSystemContext(MAIN, appID1)
+HMI ->> Core: UI.OnSystemContext(MAIN, appID2)
+
+@enduml
