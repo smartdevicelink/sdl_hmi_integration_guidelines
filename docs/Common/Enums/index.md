@@ -68,6 +68,7 @@
 |SYSTEM|9||
 |PROJECTION|10||
 |REMOTE_CONTROL|11||
+|WEB_VIEW|12||
 
 ### CloudConnectionStatus
 
@@ -264,6 +265,9 @@
 |TYPE5SET|1||
 |CID1SET|2||
 |CID2SET|3||
+|ASCII|4|ASCII as defined in https://en.wikipedia.org/wiki/ASCII(codes 0-127).<br>Non-printable characters such as tabs and back spaces are ignored.|
+|ISO_8859_1|5|Latin-1, as defined in https://en.wikipedia.org/wiki/ISO/IEC_8859-1|
+|UTF_8|6|The UTF-8 character set that uses variable bytes per code point.<br>See https://en.wikipedia.org/wiki/UTF-8 for more details.<br>This is the preferred character set.|
 
 ### SamplingRate
 
@@ -571,6 +575,7 @@
 |UNAUTHORIZED_TRANSPORT_REGISTRATION|2|By getting this value, SDL unregisters the named application|
 |UNSUPPORTED_HMI_RESOURCE|3|By getting this value, SDL unregisters the named application|
 |CLOSE_CLOUD_CONNECTION|4|By getting this value, SDL puts the named app to NONE HMILevel. Used by the HMI to close a cloud app connection|
+|RESOURCE_CONSTRAINT|5|By getting this value, SDL should unregister the application to allow the HMI to close the application.|
 
 ### IgnitionStatus
 
@@ -852,6 +857,7 @@
 |showConstantTBTNextTurnIcon|11|The secondary image field for ShowConstantTBT|
 |locationImage|12|The optional image of a destination / location|
 |alertIcon|13|The image field for Alert|
+|subMenuIcon|14|The image field for AddSubMenu.menuIcon|
 
 ### VehicleDataType
 
@@ -891,6 +897,8 @@
 |VEHICLEDATA_CLOUDAPPVEHICLEID|31| Parameter used by cloud apps or the policy server to identify a head unit|
 |VEHICLEDATA_OEM_CUSTOM_DATA|32||
 |VEHICLEDATA_STABILITYCONTROLSSTATUS|33||
+|VEHICLEDATA_WINDOWSTATUS|34||
+|VEHICLEDATA_HANDSOFFSTEERING|35||
 
 ### VideoStreamingProtocol
 
@@ -1218,6 +1226,7 @@
 |APP_SERVICES|4||
 |DISPLAYS|5||
 |SEAT_LOCATION|6||
+|DRIVER_DISTRACTION|7|Describes capabilities when the driver is distracted|
 
 ### MediaType
 

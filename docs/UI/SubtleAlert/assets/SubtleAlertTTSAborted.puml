@@ -1,0 +1,72 @@
+@startuml SubtleAlertTTSAborted
+
+participant Core
+participant HMI.UI
+participant HMI.Buttons
+participant HMI.TTS
+
+skinparam NoteTextAlignment center
+
+note over HMI.UI
+app1 layout 
+is active
+end note
+
+Core -> HMI.UI: UI.SubtleAlert(\n\
+  params,\n\
+  softButtons,\n\
+  BOTH\n\
+)
+Core -> HMI.TTS: TTS.Speak(\n\
+  ttsChunks, appID1, SUBTLE_ALERT\n\
+)
+
+note over HMI.UI
+Display notification 
+dialog on screen 
+with specified data
+end note
+
+HMI.UI ->> Core: UI.OnSystemContext(ALERT, appID1)
+
+note over HMI.TTS
+Begin speaking 
+the requested text
+end note
+
+note over HMI.Buttons, HMI.UI
+User presses 
+softbutton with
+DEFAULT_ACTION
+in SubtleAlert
+dialog
+end note
+
+HMI.Buttons ->> Core: Buttons.OnButtonEvent(BUTTONDOWN)
+HMI.Buttons ->> Core: Buttons.OnButtonEvent(BUTTONUP)
+HMI.Buttons ->> Core: Buttons.OnButtonPress(SHORT)
+
+HMI.UI --> Core: UI.SubtleAlert(SUCCESS)
+
+Core -> HMI.TTS: TTS.StopSpeaking()
+
+note over HMI.TTS
+Speaking is 
+interrupted
+end note
+
+HMI.TTS --> Core: TTS.StopSpeaking(SUCCESS)
+
+HMI.TTS --> Core: TTS.Speak(ABORTED)
+
+note over HMI.UI
+SubtleAlert dialog
+is closed
+
+app1 layout 
+is displayed
+end note
+
+HMI.UI ->> Core: UI.OnSystemContext(MAIN, appID1)
+
+@enduml
