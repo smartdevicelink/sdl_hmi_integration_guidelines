@@ -1,0 +1,44 @@
+participant App
+participant SDL
+participant HMI
+
+note over App,HMI:<align:center> **//Pre-conditions://**\n**1.** appID application is successfully registered and active on HMI\n**2.** By default keyboard input characters are not masked on the screen\n
+note over App:<align:center>PIN authentication\nis required
+App->SDL:PerformInteraction (appID, <KEYBOARD>)
+SDL->HMI:PerformInteraction (appID, <KEYBOARD>)
+note over HMI:<align:center> Displays the keyboard\nin accordance with appID\nSetGlobalProperties presets
+HMI->>SDL:UI.Onsystemcontext (<HMI_OBSCURED>)
+SDL->>App:Onsystemcontext (<HMI_OBSCURED>)
+note over HMI:The User presses **"1"** key
+HMI->>SDL:UI.OnkeyboardInput ("1", <KEYPRESS>)
+SDL->>App:OnkeyboardInput ("1", <KEYPRESS>)
+note over HMI:<align:center>Keyboard input characters\nare **not masked**\non the screen
+
+opt App sends the request to mask keyboard input characters
+App->SDL:SetGlobalProperties (appID, <ENABLE_INPUT_KEY_MASK>)
+SDL->HMI:UI.SetGlobalProperties (appID, <ENABLE_INPUT_KEY_MASK>)
+note over HMI:<align:center>Stores the request data\nassociating it with appID
+HMI-->SDL:UI.SetGlobalProperties (code:0)
+SDL-->App:SetGlobalProperties (code:0)
+note over HMI:The User presses **"1"** key
+HMI->>SDL:UI.OnkeyboardInput ("1", <INPUT_KEY_MASK_ENABLED>)
+SDL->>App:OnkeyboardInput ("1", <INPUT_KEY_MASK_ENABLED>)
+note over HMI:<align:center>Keyboard input characters\nare **masked**\non the screen
+end
+
+opt App sends the request to unmask keyboard input characters per User choice
+App->SDL:SetGlobalProperties (appID, <USER_CHOICE_INPUT_KEY_MASK>)
+SDL->HMI:UI.SetGlobalProperties (appID, <USER_CHOICE_INPUT_KEY_MASK>)
+note over HMI:<align:center>Stores the request data\nassociating it with appID
+HMI-->SDL:UI.SetGlobalProperties (code:0)
+SDL-->App:SetGlobalProperties (code:0)
+note over HMI:The User presses **"1"** key
+HMI->>SDL:UI.OnkeyboardInput ("1", <INPUT_KEY_MASK_ENABLED>)
+SDL->>App:OnkeyboardInput ("1", <INPUT_KEY_MASK_ENABLED>)
+note over HMI:<align:center>Keyboard input characters\nare **masked**\non the screen
+note over HMI:<align:center> **Postcondition**:\nProvides a key to unmask\ninput characters
+note over HMI:<align:center>The User presses the key\nto unmask input characters
+note over HMI:<align:center>Keyboard input characters\nare **not masked**\non the screen
+HMI->>SDL:UI.OnKeyboardInput (<INPUT_KEY_MASK_DISABLED>)
+SDL->>App:OnKeyboardInput (<INPUT_KEY_MASK_DISABLED>)
+end

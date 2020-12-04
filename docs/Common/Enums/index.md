@@ -9,6 +9,8 @@
 |ENTRY_VOICE|2||
 |ENTRY_CANCELLED|3||
 |ENTRY_ABORTED|4||
+|INPUT_KEY_MASK_ENABLED|5||
+|INPUT_KEY_MASK_DISABLED|6||
 
 ### FuelCutoffStatus
 
@@ -187,6 +189,7 @@
 |QWERTY|0||
 |QWERTZ|1||
 |AZERTY|2||
+|NUMERIC|3||
 
 ### MenuLayout
 
@@ -1337,3 +1340,10 @@
 |LITERS|0||
 |KILOWATTHOURS|1||
 |KILOGRAMS|2||
+
+### KeyboardInputMask
+|Name|Value|Description|
+|:---|:----|:----------|
+|ENABLE_INPUT_KEY_MASK|0||
+|DISABLE_INPUT_KEY_MASK|1||
+|USER_CHOICE_INPUT_KEY_MASK|2||
