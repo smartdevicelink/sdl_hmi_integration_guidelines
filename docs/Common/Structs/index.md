@@ -1188,21 +1188,21 @@ There are no defined parameters for this struct
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |location|Common.Grid|true||Describes the status of a location of a door.|
-|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a door.|
+|status|[Common.DoorStatusType](../Enums/#doorstatustype)|true||Describes the status of a door.|
 
 ### GateStatus
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |location|Common.Grid|true||Describes the status of location of trunk/hood/etc.|
-|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of trunk/hood/etc.|
+|status|[Common.DoorStatusType](../Enums/#doorstatustype)|true||Describes the status of trunk/hood/etc.|
 
 ### RoofStatus
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |location|Common.Grid|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
-|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+|status|[Common.DoorStatusType](../Enums/#doorstatustype)|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
 |state|Common.WindowState|false||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
 
 #### Roof `status` selection:
