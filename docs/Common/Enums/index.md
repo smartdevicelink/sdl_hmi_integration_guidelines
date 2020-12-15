@@ -129,10 +129,12 @@
 |locationDescription|26|Optional description of intended location / establishment *(applies to SendLocation)*|
 |addressLines|27|Optional location address *(applies to SendLocation)*|
 |phoneNumber|28|Optional phone number of intended location / establishment *(applies to SendLocation)*|
-|timeToDestination|29||
-|turnText|30||
+|timeToDestination|29|Optional time to destination field for ShowConstantTBT|
+|turnText|30|Turn text for turnList parameter of UpdateTurnList|
 |navigationText|31|Navigation text for UpdateTurnList|
-|notificationText|32|Text of notification to be displayed on screen|
+|subtleAlertText1|32|The first line of the subtle alert text field; applies to `SubtleAlert` `alertText1`|
+|subtleAlertText2|33|The second line of the subtle alert text field; applies to `SubtleAlert` `alertText2`|
+|subtleAlertSoftButtonText|34|A text field in the soft button of a subtle alert; applies to `SubtleAlert` `softButtons`|
 
 ### MetadataType
 

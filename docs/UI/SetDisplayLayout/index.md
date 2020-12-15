@@ -71,7 +71,7 @@ SetDisplayLayout Invalid Data with UI.GetCapabilities
     "displayCapabilities" :
     {
         "displayType" : "GEN2_8_DMA",
-        "textFields" : ["mainField1", "mainField2", "alertText1", "alertText2", "alertText3", "scrollableMessageBody", "initialInteractionText", "navigationText1", "navigationText2", "audioPassThruDisplayText1", "audioPassThruDisplayText2", "notificationText"],
+        "textFields" : ["mainField1", "mainField2", "alertText1", "alertText2", "alertText3", "scrollableMessageBody", "initialInteractionText", "navigationText1", "navigationText2", "audioPassThruDisplayText1", "audioPassThruDisplayText2"],
         "imageFields" :
         [
           {
