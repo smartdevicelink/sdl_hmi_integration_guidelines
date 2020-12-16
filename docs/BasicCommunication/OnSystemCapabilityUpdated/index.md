@@ -18,11 +18,13 @@ Purpose
     * `menuName` and `templateTitle` should be included, if they are visible on HMI.
     * `mainField1-4`, `statusBar` and `mediaTrack` should not be included if OEM implemented the `WEB_VIEW` template without these text fields.
     * `availabletemplates`, `buttonCapabilities` and `imageTypeSupported` should reflect the general capabilities of the window/system.
+5. HMI sends `KeyboardCapabilities` and max number of customizable keys within OnSystemCapabilityUpdated notification to SDL.
 
 !!! NOTE
 
-Template `WEB_VIEW` is only allowed for the WebEngine applications with `AppHMIType`=`WEB_VIEW`.
+1. Template `WEB_VIEW` is only allowed for the WebEngine applications with `AppHMIType`=`WEB_VIEW`.
 
+2. In case HMI sends `KeyboardCapabilities` without information about `numConfigurableKeys` within OnSystemCapabilityUpdated notification, SDL would provide `KeyboardCapabilities` to app with `numConfigurableKeys` set to zero.
 !!!
 
 #### Parameters
