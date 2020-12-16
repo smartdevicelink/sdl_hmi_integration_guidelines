@@ -42,6 +42,7 @@ _**Notes for HMI expected behavior:**_
 6. When the User selects one of the displayed matching `autoCompleteList` strings, the system shall submit that entry and not require further User input for submission.
 7. HMI allows to customize special characters depending on the keyboard layout restrictions:
     * `QWERTY` - 3 customizable keys
+    * `QWERTZ` - 3 customizable keys
     * `AZERTY` - 4 customizable keys
     * `NUMERIC` - 2 customizable keys
 
@@ -75,9 +76,7 @@ _**Important Note:**_ If HMI-defined VR commands are accessible together with th
   * display the complete list of available VR commands (SDL-defined and HMI-defined ones) when the User activates VR.
 
 4. HMI displays the in-application menu for every active application upon the User's request. It must contain SDL-requested commands (UI.AddCommand) and sub-menus (UI.AddSubMenu). SDL provides the values for the name (`menuTitle` parameter) and for the icon (`menuIcon` parameter) of this in-application menu. The values for in-application menu and touchscreen keyboard are allowed by SDL Core for navigation type of application only.
-5. HMI must display the onscreen keyboard upon the User's request within the following condition: all `keyboardProperties` supported by HMI must be embodied in `HMI_capabilities.json file`. In this case SDL Core is able to compare `keyboardProperties` requested by the mobile device with actually supported `keyboardProperties` and send to HMI only those that are supported.
-6. HMI must use default `keyboardProperties` parameters, in case SDL Core transfers UI.SetGlobalProperties request with omitted or empty `keyboardProperties` parameters.
-7. In case SDL sends request with some values in `customizeKeys` array, HMI must:
+5. In case SDL sends request with some values in `customizeKeys` array, HMI must:
     * use these values to change the special characters shown in customizable keys
     * keep default values in the remaining keys, if the array is less than or equal to customizable keys amount
 
