@@ -6,12 +6,12 @@ note over App,HMI:<align:center> **//Pre-conditions://**\n**1.** appID applicati
 
 opt App sends a request to change customizable keys special characters - Happy Path
 note over HMI:<align:center>Keyboard layout\ncustomizable keys are:\n**" # "** - default value\n**" - "** - default value
-App->SDL:SetGlobalProperties (appID, <customizeKeys: **" # ", " $ "**>)
-SDL->HMI:UI.SetGlobalProperties (appID, <customizeKeys: **" # ", " $ "**>)     
+App->SDL:SetGlobalProperties (appID, <customizeKeys: **" ¥ ", " $ "**>)
+SDL->HMI:UI.SetGlobalProperties (appID, <customizeKeys: **" ¥ ", " $ "**>)     
 HMI->HMI:Update\ncustomizable\nkeys
 HMI-->SDL:UI.SetGlobalProperties (SUCCESS)
 SDL-->App:SetGlobalProperties (SUCCESS)
-note over HMI:<align:center>Keyboard layout\ncustomizable keys are:\n**" # "** - customized value\n** " $ "** - customized value
+note over HMI:<align:center>Keyboard layout\ncustomizable keys are:\n**" ¥ "** - customized value\n** " $ "** - customized value
 end
 
 opt App sends a request with a special character already available on keyboard
