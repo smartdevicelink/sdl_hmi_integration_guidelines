@@ -106,6 +106,11 @@ SetGlobalProperties Customize Keys
 ![SetGlobalProperties](./assets/SetGlobalPropertiesCustomizeKeys.png)
 |||
 
+|||
+SetGlobalProperties Resumption of non-default KeyboardProperties
+![SetGlobalProperties](./assets/SetGlobalPropertiesResumptionKeyboardProperties.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request
