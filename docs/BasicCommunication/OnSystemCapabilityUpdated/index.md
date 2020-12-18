@@ -24,7 +24,7 @@ Purpose
 
 1. Template `WEB_VIEW` is only allowed for the WebEngine applications with `AppHMIType`=`WEB_VIEW`.
 
-2. In case HMI sends `KeyboardCapabilities` without information about `numConfigurableKeys` within OnSystemCapabilityUpdated notification, SDL would provide `KeyboardCapabilities` to app with `numConfigurableKeys` set to zero.
+2. In case HMI sends OnSystemCapabilityUpdated notification with `KeyboardCapabilities`, `supportedKeyboardLayouts`  and without information about `numConfigurableKeys`, SDL would provide `KeyboardCapabilities` to app with `numConfigurableKeys` set to zero.
 !!!
 
 #### Parameters
