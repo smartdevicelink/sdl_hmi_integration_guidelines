@@ -11,6 +11,7 @@ App->SDL: RegisterAppInterface(hashID, params)
 
 note over SDL:<align:center> <hashID> is valid\nStart data resumption for the App
 
+SDL->>HMI: BC.OnAppRegistered(appName; appID)
 SDL->HMI:<align:center>UI.SetGlobalProperties\n (**keyboardLayout=AZERTY;\nmaskInputCharacters=USER_CHOICE_INPUT_KEY_MASK;\ncustomizeKeys = #, $**)
 
 HMI-->SDL: UI.SetGlobalProperties (code:0)
@@ -18,7 +19,6 @@ HMI-->SDL: UI.SetGlobalProperties (code:0)
 
 SDL-->App: RegisterAppInterface (SUCCESS)
 
-SDL->>HMI: BC.OnAppRegistered(appName; appID)
 SDL->>App: OnHMIStatus()
 
 SDL->HMI: BC.ActivateApp()

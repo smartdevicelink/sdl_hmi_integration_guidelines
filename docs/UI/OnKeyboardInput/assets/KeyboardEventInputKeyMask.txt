@@ -42,6 +42,7 @@ note over HMI:<align:center>A key to mask/unmask\ninput characters is shown
 note over HMI:The User presses **"1"** key
 HMI->>SDL:UI.OnkeyboardInput ("1", <KEYPRESS>)
 SDL->>App:OnkeyboardInput ("1", <KEYPRESS>)
+note over HMI:<align:center>User input is shown **NOT masked**
 note over HMI:The User presses the key\n to mask input characters
 HMI->>SDL:UI.OnkeyboardInput (<INPUT_KEY_MASK_ENABLED>)
 SDL->>App:OnkeyboardInput (<INPUT_KEY_MASK_ENABLED>)
