@@ -1185,4 +1185,4 @@ There are no defined parameters for this struct
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |type|[Common.SeekIndicatorType](../enums/#seekindicatortype)|true|||
-|seekTime|Integer|false|minvalue:1<br>maxvalue:99|If the type is TIME, this number of seconds may be present alongside the skip indicator. It will indicate the number of seconds that the currently playing media will skip forward or backward.|
+|seekTime|Integer|false|minvalue: 1<br>maxvalue: 99|If the type is TIME, this number of seconds may be present alongside the skip indicator. It will indicate the number of seconds that the currently playing media will skip forward or backward.|

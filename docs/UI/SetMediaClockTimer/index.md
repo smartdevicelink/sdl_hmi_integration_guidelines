@@ -45,6 +45,8 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
 |endTime|[Common.TimeFormat](../../common/structs/#timeformat)|false|endTime can be provided together with modes: "COUNTUP", "COUNTDOWN", "PAUSE" to HMI. To be used to calculate any visual progress bar (if not provided, this feature is ignored). If endTime is greater then startTime for COUNTDOWN or less than startTime for COUNTUP, then the request will return an INVALID_DATA. _endTime_ will be ignored for "PAUSE", "RESUME", and "CLEAR".|
 |updateMode|[Common.ClockUpdateMode](../../common/enums/#clockupdatemode)|true|Enumeration to control the media clock. In case of pause, resume, or clear, the start time value is ignored and shall be left out. For resume, the time continues with the same value as it was when paused.|
 |audioStreamingIndicator|[Common.AudioStreamingIndicator](../../common/enums/#audiostreamingindicator)|false|Indicates that a button press of the Play/Pause button would play, pause or stop the current playback.|
+|forwardSeekIndicator|[Common.SeekStreamingIndicator](../../common/structs/#seekstreamingindicator)|false|Used to control the forward seek button to either skip forward a set amount of time or to the next track.|
+|backSeekIndicator|[Common.SeekStreamingIndicator](../../common/structs/#seekstreamingindicator)|false|Used to control the backward seek button to either skip back a set amount of time or to the prevoius track.|
 |appID|Integer|true||
 
 ### Response
