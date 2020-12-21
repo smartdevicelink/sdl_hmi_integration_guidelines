@@ -1337,3 +1337,10 @@
 |LITERS|0||
 |KILOWATTHOURS|1||
 |KILOGRAMS|2||
+
+### SeekIndicatorType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|TRACK|0||
+|TIME|1||
