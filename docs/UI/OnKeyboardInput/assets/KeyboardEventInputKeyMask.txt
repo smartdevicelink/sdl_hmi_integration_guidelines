@@ -3,13 +3,21 @@ participant SDL
 participant HMI
 
 note over App,HMI:<align:center> **//Pre-conditions://**\n**1.** appID application is successfully registered and active on HMI\n**2.** HMI supports masking input characters
+participant App
+participant SDL
+participant HMI
+
+note over App,HMI:<align:center> **//Pre-conditions://**\n**1.** appID application is successfully registered and active on HMI\n**2.** HMI supports masking input characters
 
 HMI->>SDL: BC.OnSystemCapabilityUpdated(**maskInputCharactersSupported=true**)
 SDL->>App: OnSystemCapabilityUpdated(maskInputCharactersSupported=true)
 opt App sends the request to mask keyboard input characters 
 App->SDL:<align:center>SetGlobalProperties(appID,\n **maskInputCharacters=ENABLE_INPUT_KEY_MASK**)
 SDL->HMI:<align:center>UI.SetGlobalProperties(appID,\n **maskInputCharacters=ENABLE_INPUT_KEY_MASK**)
+
 note over HMI:<align:center>Stores the request data\nassociating it with appID
+HMI->>SDL:UI.OnkeyboardInput (<INPUT_KEY_MASK_ENABLED>)
+SDL->>App:OnkeyboardInput (<INPUT_KEY_MASK_ENABLED>)
 HMI-->SDL:UI.SetGlobalProperties (code:0)
 SDL-->App:SetGlobalProperties (SUCCESS)
 note over HMI:The User presses **"1"** key
@@ -22,6 +30,8 @@ opt App sends the request to UNmask keyboard input characters
 App->SDL:<align:center>SetGlobalProperties(appID,\n **maskInputCharacters=DISABLE_INPUT_KEY_MASK**
 SDL->HMI:<align:center>UI.SetGlobalProperties(appID,\n**maskInputCharacters=DISABLE_INPUT_KEY_MASK**
 note over HMI:<align:center>Stores the request data\nassociating it with appID
+HMI->>SDL:UI.OnkeyboardInput (<INPUT_KEY_MASK_DISABLED>)
+SDL->>App:OnkeyboardInput (<INPUT_KEY_MASK_DISABLED>)
 HMI-->SDL:UI.SetGlobalProperties (code:0)
 SDL-->App:SetGlobalProperties (SUCCESS)
 note over HMI:The User presses **"1"** key
@@ -34,18 +44,18 @@ opt App sends the request to unmask keyboard input characters per User choice
 App->SDL:<align:center> SetGlobalProperties (appID,\n **maskInputCharacters=USER_CHOICE_INPUT_KEY_MASK**)
 SDL->HMI:<align:center> UI.SetGlobalProperties (appID,\n **maskInputCharacters=USER_CHOICE_INPUT_KEY_MASK**)
 note over HMI:<align:center>Stores the request data\nassociating it with appID
+HMI->>SDL:UI.OnkeyboardInput (<INPUT_KEY_MASK_ENABLED>)
+SDL->>App:OnkeyboardInput (<INPUT_KEY_MASK_ENABLED>)
 HMI-->SDL:UI.SetGlobalProperties (code:0)
 SDL-->App:SetGlobalProperties (SUCCESS)
-HMI->>SDL:UI.OnkeyboardInput (<INPUT_KEY_MASK_DISABLED>)
-SDL->>App:OnkeyboardInput (<INPUT_KEY_MASK_DISABLED>)
 note over HMI:<align:center>A key to mask/unmask\ninput characters is shown
 note over HMI:The User presses **"1"** key
 HMI->>SDL:UI.OnkeyboardInput ("1", <KEYPRESS>)
 SDL->>App:OnkeyboardInput ("1", <KEYPRESS>)
-note over HMI:<align:center>User input is shown **NOT masked**
-note over HMI:The User presses the key\n to mask input characters
-HMI->>SDL:UI.OnkeyboardInput (<INPUT_KEY_MASK_ENABLED>)
-SDL->>App:OnkeyboardInput (<INPUT_KEY_MASK_ENABLED>)
-note over HMI:<align:center>Keyboard input characters\nare ** masked**\non the screen
+note over HMI:<align:center>User input is shown **masked**
+note over HMI:The User presses the key\n to unmask input characters
+HMI->>SDL:UI.OnkeyboardInput (<INPUT_KEY_MASK_DISABLED>)
+SDL->>App:OnkeyboardInput (<INPUT_KEY_MASK_DISABLED>)
+note over HMI:<align:center>Keyboard input characters\nare **NOT masked**\non the screen
 
 end
