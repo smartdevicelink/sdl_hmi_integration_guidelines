@@ -1195,14 +1195,14 @@ There are no defined parameters for this struct
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |location|Common.Grid|true||Describes the status of location of trunk/hood/etc.|
-|status|[Common.DoorStatusType](../Enums/#doorstatustype)|true||Describes the status of trunk/hood/etc.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of trunk/hood/etc.|
 
 ### RoofStatus
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |location|Common.Grid|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
-|status|[Common.DoorStatusType](../Enums/#doorstatustype)|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
 |state|Common.WindowState|false||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
 
 #### Roof `status` selection:
@@ -1218,4 +1218,3 @@ There are no defined parameters for this struct
 | Roof is closed and unknown locked state | CLOSED  | `approximatePosition` = 0 & `deviation` = 0 |
 | Roof is open  | AJAR  | actual values of `approximatePosition` & `deviation` |
 | Roof is physically removed  | REMOVED  | can be omitted OR `approximatePosition` = 0 & `deviation` = 0 |
-

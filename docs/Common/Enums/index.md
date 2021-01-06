@@ -1338,7 +1338,7 @@
 |KILOWATTHOURS|1||
 |KILOGRAMS|2||
 
-### DoorStatusType 
+### DoorStatusType
 
 |Name|Value|Description|
 |:---|:----|:----------|
@@ -1346,4 +1346,3 @@
 |LOCKED|1|The status is selected if a door is closed and locked|
 |AJAR|2|The status is selected if a door is open|
 |REMOVED|3|The status is selected if a door is physically removed|
-
