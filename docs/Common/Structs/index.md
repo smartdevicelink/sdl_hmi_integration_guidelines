@@ -50,6 +50,7 @@
 |diagonalScreenSize|Float|false|minvalue: 0|The diagonal screen size in inches.|
 |pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
 |scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
+|preferredFPS|integer|false|minvalue: 0<br>maxvalue: 2147483647|The preferred frame rate per second of the head unit.|
 
 ### DynamicUpdateCapabilities
 
