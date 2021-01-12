@@ -1188,7 +1188,7 @@ There are no defined parameters for this struct
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |location|Common.Grid|true||Describes the status of a location of a door.|
-|status|[Common.DoorStatusType](../Enums/#doorstatustype)|true||Describes the status of a door.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a door.|
 
 ### GateStatus
 
