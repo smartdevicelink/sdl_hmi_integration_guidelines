@@ -38,6 +38,7 @@ UI.AddCommand represents a request from an application to add a command to the a
 |cmdID|Integer|true|minvalue: 0<br>maxvalue: 2000000000|
 |menuParams|[Common.MenuParams](../../common/structs/#menuparams)|false||
 |cmdIcon|[Common.Image](../../common/structs/#image)|false||
+|secondaryImage|[Common.Image](../../common/structs/#image)|false||
 |appID|Integer|true||
 
 ### Response
@@ -109,11 +110,18 @@ AddCommand UI No Response, <abbr title="Voice Recognition">VR</abbr> Succeeds
      {
          "parentID" : 6,
          "position" : 0,
-         "menuName" : "Show weather for tomorrow"
+         "menuName" : "Show weather for tomorrow",
+         "secondaryText" : "Detroit, MI",
+         "tertiaryText" : "0.8 miles"
      },
     "cmdIcon" :
      {
          "value" : "tmp/SDL/app/Gis_meteo/1245_28.jpeg",
+         "imageType" : "DYNAMIC"
+     },
+    "secondaryImage" :
+     {
+         "value" : "tmp/SDL/app/Gis_meteo/5678.jpeg",
          "imageType" : "DYNAMIC"
      },
     "appID" : 65409
