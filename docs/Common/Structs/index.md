@@ -1205,16 +1205,4 @@ There are no defined parameters for this struct
 |status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
 |state|Common.WindowState|false||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
 
-#### Roof `status` selection:
-* Convertible roof - `location` grid would span entire rows and columns and roof `status` could be `CLOSED` or `AJAR` with corresponding `state`. 
-* Sunroof/Moonroof - `location` grid would span just actual location of sunroof/moonroof. `status` could be `CLOSED` or `AJAR` with corresponding `state`.
-* Entire roof - `location` grid would span entire rows and columns and roof status would be `REMOVED` or `CLOSED/LOCKED`. `state` can be omitted.
-* Other type of roof - `location` grid would span actual location of the roof as per physical location. `status` and `state` would be as per table below:
 
-| Roof condition  | `status` | `state` |
-| ------------- | ------------- | ------------- |
-| Roof is closed and locked  | LOCKED  | `approximatePosition` = 0 & `deviation` = 0 |
-| Roof is closed and unlocked  | CLOSED  | `approximatePosition` = 0 & `deviation` = 0 |
-| Roof is closed and unknown locked state | CLOSED  | `approximatePosition` = 0 & `deviation` = 0 |
-| Roof is open  | AJAR  | actual values of `approximatePosition` & `deviation` |
-| Roof is physically removed  | REMOVED  | can be omitted OR `approximatePosition` = 0 & `deviation` = 0 |
