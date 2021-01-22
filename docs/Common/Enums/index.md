@@ -132,6 +132,10 @@
 |turnText|30||
 |navigationText|31|Navigation text for UpdateTurnList|
 |notificationText|32|Text of notification to be displayed on screen|
+|menuCommandSecondaryText|33|Secondary text for AddCommand|
+|menuCommandTertiaryText|34|Tertiary text for AddCommand|
+|menuSubMenuSecondaryText|35|Secondary text for AddSubMenu|
+|menuSubMenuTertiaryText|36|Tertiary text for AddSubMenu|
 
 ### MetadataType
 
@@ -855,6 +859,10 @@
 |showConstantTBTNextTurnIcon|11|The secondary image field for ShowConstantTBT|
 |locationImage|12|The optional image of a destination / location|
 |alertIcon|13|The image field for Alert|
+|subMenuIcon|14|The image field for AddSubMenu.menuIcon|
+|subtleAlertIcon|15|The image of the subtle alert; applies to `SubtleAlert` `alertIcon`|
+|menuCommandSecondaryImage|16|The secondary image field for AddCommand|
+|menuSubMenuSecondaryImage|17|The secondary image field for AddSubMenu|
 
 ### VehicleDataType
 
