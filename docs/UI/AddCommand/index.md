@@ -29,6 +29,8 @@ UI.AddCommand represents a request from an application to add a command to the a
   
 !!!
 
+As of Core 7.1, UI.AddCommand requests can contain all UI elements that were previously found in a Perform Interaction's Choice.
+
 ### Request
 
 #### Parameters

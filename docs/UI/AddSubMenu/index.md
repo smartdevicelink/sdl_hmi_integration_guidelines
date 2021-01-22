@@ -36,6 +36,8 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
 
 !!!
 
+As of Core 7.1, UI.AddSubMenu requests can contain all UI elements that were previously found in a Perform Interaction's Choice.
+
 ### Request
 
 #### Parameters
