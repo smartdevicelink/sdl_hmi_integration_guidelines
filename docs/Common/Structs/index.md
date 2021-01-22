@@ -74,8 +74,8 @@
 |parentID|Integer|false|minvalue: 0<br>maxvalue: 2000000000||
 |position|Integer|false|minvalue: 0<br>maxvalue: 1000||
 |menuName|String|true|maxlength: 500||
-|secondaryText|String|true|maxlength: 500||
-|tertiaryText|String|true|maxlength: 500||
+|secondaryText|String|false|maxlength: 500||
+|tertiaryText|String|false|maxlength: 500||
 
 ### TireStatus
 
