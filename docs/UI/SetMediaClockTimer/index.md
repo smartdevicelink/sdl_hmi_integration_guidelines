@@ -19,9 +19,9 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
     * If the application is active, the updates must begin immediately.   
 2. Exhibit the following behavior based on the `updateMode` parameter:
     * COUNTUP/COUNTDOWN modes:   
-        * Start counting up or down from the requested `startTime` value with a step of 1 second;
+        * Start counting up or down from the requested `startTime` value at the specified `countRate` with a step of 1 second;
         * Continue counting up or down until:
-            * The next request of _SetMediaClockTimer_ with appropriate parameters comes;   
+            * The next request of _SetMediaClockTimer_ with appropriate parameters comes;
             * Zero is reached in the case of COUNTDOWN.   
     * PAUSE mode:   
         * Pause the timer that is counting up or down;   
@@ -47,6 +47,7 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
 |audioStreamingIndicator|[Common.AudioStreamingIndicator](../../common/enums/#audiostreamingindicator)|false|Indicates that a button press of the Play/Pause button would play, pause or stop the current playback.|
 |forwardSeekIndicator|[Common.SeekStreamingIndicator](../../common/structs/#seekstreamingindicator)|false|Used to control the forward seek button to either skip forward a set amount of time or to the next track.|
 |backSeekIndicator|[Common.SeekStreamingIndicator](../../common/structs/#seekstreamingindicator)|false|Used to control the backward seek button to either skip back a set amount of time or to the prevoius track.|
+|countRate|Float|false|The rate at which the media clock timer will progress. Values less than 1.0 will advance the timer slower than real-time (ex. 0.5 would advance the timer at 50% speed), while values greater than 1.0 will advance the timer faster than real-time (ex. 2.0 would advance the timer at 200% speed).|
 |appID|Integer|true||
 
 ### Response
@@ -91,6 +92,7 @@ SetMediaClockTimer COUNTDOWN for a deactivated application
     },
     "updateMode" : "COUNTUP",
     "audioStreamingIndicator" : "PAUSE",
+    "countRate": 1.0,
     "appID" : 65146
   }
 }
