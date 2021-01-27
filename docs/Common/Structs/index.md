@@ -1183,6 +1183,13 @@ There are no defined parameters for this struct
 |location|Common.Grid|true|||
 |state|Common.WindowState|true|||
 
+### SeekStreamingIndicator
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|type|[Common.SeekIndicatorType](../enums/#seekindicatortype)|true|||
+|seekTime|Integer|false|minvalue: 1<br>maxvalue: 99|If the type is TIME, this number of seconds may be present alongside the skip indicator. It will indicate the number of seconds that the currently playing media will skip forward or backward.|
+
 ### DoorStatus
 
 |Name|Type|Mandatory|Additional|Description|
@@ -1204,5 +1211,3 @@ There are no defined parameters for this struct
 |location|Common.Grid|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
 |status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
 |state|Common.WindowState|false||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
-
-
