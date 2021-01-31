@@ -114,6 +114,7 @@ OnSystemCapabilityUpdated(VIDEO_STREAMING) Streaming Resolution Switching
   }
 }
 ```
+
 #### Videosteaming Switching Example Notification
 
 ```json

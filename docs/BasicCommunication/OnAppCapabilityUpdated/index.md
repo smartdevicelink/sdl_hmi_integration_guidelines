@@ -15,7 +15,7 @@ SDL sends OnAppCapabilityUpdated notification to HMI to provide supported by app
 
 !!! may
 
-HMI may switch video streaming resolution according to values provided by application in OnAppCapabilityUpdated notification. (_see also [OnSystemCapabilityUpdated](../OnSystemCapabilityUpdated/index.)_)
+HMI may switch video streaming resolution according to values provided by application in OnAppCapabilityUpdated notification. (_see also [OnSystemCapabilityUpdated](../OnSystemCapabilityUpdated)_)
 
 If HMI doesn't receive OnAppCapabilityUpdated notification or receives OnAppCapabilityUpdated without `additionalVideoStreamingCapabilities`, HMI should not send OnSystemCapabilityUpdated notification and the user should not be able to change the resolution.
 !!!
@@ -39,7 +39,6 @@ In case older application does not support sending `OnAppCapabilityUpdated` noti
 Negotiation of Video Streaming Capabilities between HMI and Mobile Application
 ![OnAppCapabilityUpdated](./assets/OnAppCapabilityUpdated.png)
 |||
-
 
 ### JSON Message Examples
 
@@ -118,4 +117,5 @@ Negotiation of Video Streaming Capabilities between HMI and Mobile Application
          }
       }
    }
+}
 ```
