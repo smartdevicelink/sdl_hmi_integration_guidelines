@@ -1211,3 +1211,18 @@ There are no defined parameters for this struct
 |location|Common.Grid|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
 |status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
 |state|Common.WindowState|false||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+
+### SeatStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|seatLocation|Common.SeatLocation|true|||
+|conditionActive|Boolean|true|||
+
+### SeatOccupancy
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|seatsOccupied|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are occupied.|
+|seatsBelted|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are belted.|
+
