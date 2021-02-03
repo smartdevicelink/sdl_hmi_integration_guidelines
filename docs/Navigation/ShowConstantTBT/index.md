@@ -16,8 +16,8 @@ Purpose
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |navigationTexts|[Common.TextFieldStruct](../../common/structs/#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 5|See TextFieldStruct. Uses:<br>navigationText1<br>navigationText2<br>ETA<br>totalDistance<br>timeToDestination.|
-|turnIcon|[Common.Image](../../common/structs/#image)|false||
-|nextTurnIcon|[Common.Image](../../common/structs/#image)|false||
+|turnIcon|[Common.Image](../../common/structs/#image)|false|||
+|nextTurnIcon|[Common.Image](../../common/structs/#image)|false|||
 |distanceToManeuver|Float|true|minvalue: 0<br>maxvalue: 1000000000|Distance (in meters) until next maneuver. May be used to calculate progress bar.|
 |distanceToManeuverScale|Float|true|minvalue: 0<br>maxvalue: 1000000000|Distance (in meters) from previous maneuver to next maneuver. May be used to calculate progress bar.|
 |maneuverComplete|Boolean|false||If and when a maneuver has completed while an AlertManeuver is active, SDL will send this value set to TRUE in order to clear the AlertManeuver overlay.<br>If omitted the value should be assumed as FALSE.|

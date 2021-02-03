@@ -37,6 +37,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 !!! note
 
 #### Roof Status Selection
+
 * Convertible roof - `location` grid would span entire rows and columns and roof `status` could be `CLOSED` or `AJAR` with corresponding `state`. 
 * Sunroof/Moonroof - `location` grid would span just actual location of sunroof/moonroof. `status` could be `CLOSED` or `AJAR` with corresponding `state`.
 * Entire roof - `location` grid would span entire rows and columns and roof status would be `REMOVED` or `CLOSED/LOCKED`. `state` can be omitted.
