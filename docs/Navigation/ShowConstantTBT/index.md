@@ -13,16 +13,16 @@ Purpose
 
 #### Parameters
 
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
-|navigationTexts|[Common.TextFieldStruct](../../common/structs/#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 5|
-|turnIcon|[Common.Image](../../common/structs/#image)|false||
-|nextTurnIcon|[Common.Image](../../common/structs/#image)|false||
-|distanceToManeuver|Float|true|minvalue: 0<br>maxvalue: 1000000000|
-|distanceToManeuverScale|Float|true|minvalue: 0<br>maxvalue: 1000000000|
-|maneuverComplete|Boolean|false||
-|softButtons|[Common.SoftButton](../../common/structs/#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 3|
-|appID|Integer|true||
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|navigationTexts|[Common.TextFieldStruct](../../common/structs/#textfieldstruct)|true|array: true<br>minsize: 0<br>maxsize: 5|See TextFieldStruct. Uses:<br>navigationText1<br>navigationText2<br>ETA<br>totalDistance<br>timeToDestination.|
+|turnIcon|[Common.Image](../../common/structs/#image)|false|||
+|nextTurnIcon|[Common.Image](../../common/structs/#image)|false|||
+|distanceToManeuver|Float|true|minvalue: 0<br>maxvalue: 1000000000|Distance (in meters) until next maneuver. May be used to calculate progress bar.|
+|distanceToManeuverScale|Float|true|minvalue: 0<br>maxvalue: 1000000000|Distance (in meters) from previous maneuver to next maneuver. May be used to calculate progress bar.|
+|maneuverComplete|Boolean|false||If and when a maneuver has completed while an AlertManeuver is active, SDL will send this value set to TRUE in order to clear the AlertManeuver overlay.<br>If omitted the value should be assumed as FALSE.|
+|softButtons|[Common.SoftButton](../../common/structs/#softbutton)|false|array: true<br>minsize: 0<br>maxsize: 3|Three dynamic SoftButtons available<br>If omitted on supported displays, the currently displayed SoftButton values will not change.|
+|appID|Integer|true||ID of application related to this RPC.|
 
 ### Response
 

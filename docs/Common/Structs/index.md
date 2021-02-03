@@ -299,13 +299,16 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|parkBrakeActive|Boolean|true|||
-|ignitionStableStatus|[Common.IgnitionStableStatus](../enums/#ignitionstablestatus)|true|||
-|ignitionStatus|[Common.IgnitionStatus](../enums/#ignitionstatus)|true|||
-|driverDoorAjar|Boolean|false|||
-|passengerDoorAjar|Boolean|false|||
-|rearLeftDoorAjar|Boolean|false|||
-|rearRightDoorAjar|Boolean|false|||
+|parkBrakeActive|Boolean|true||If mechanical park brake is active, true. Otherwise false.|
+|ignitionStableStatus|[Common.IgnitionStableStatus](../enums/#ignitionstablestatus)|true||Provides information on status of ignition stable switch. See IgnitionStableStatus.|
+|ignitionStatus|[Common.IgnitionStatus](../enums/#ignitionstatus)|true||Provides information on current ignitiion status. See IgnitionStatus.|
+|driverDoorAjar|Boolean|false||References signal "DrStatDrv_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|passengerDoorAjar|Boolean|false||References signal "DrStatPsngr_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|rearLeftDoorAjar|Boolean|false||References signal "DrStatRl_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|rearRightDoorAjar|Boolean|false||References signal "DrStatRr_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|doorStatuses|Common.DoorStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for doors if Ajar/Closed/Locked|
+|gateStatuses|Common.GateStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for trunk/hood/etc. if Ajar/Closed/Locked|
+|roofStatuses|Common.RoofStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for roof/convertible roof/sunroof/moonroof etc., if Closed/Ajar/Removed etc.|
 
 ### BeltStatus
 
@@ -1179,6 +1182,35 @@ There are no defined parameters for this struct
 |:---|:---|:--------|:---------|:----------|
 |location|Common.Grid|true|||
 |state|Common.WindowState|true|||
+
+### SeekStreamingIndicator
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|type|[Common.SeekIndicatorType](../enums/#seekindicatortype)|true|||
+|seekTime|Integer|false|minvalue: 1<br>maxvalue: 99|If the type is TIME, this number of seconds may be present alongside the skip indicator. It will indicate the number of seconds that the currently playing media will skip forward or backward.|
+
+### DoorStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true||Describes the status of a location of a door.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a door.|
+
+### GateStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true||Describes the status of location of trunk/hood/etc.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of trunk/hood/etc.|
+
+### RoofStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+|state|Common.WindowState|false||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
 
 ### SeatStatus
 
