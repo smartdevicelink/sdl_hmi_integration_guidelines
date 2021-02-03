@@ -131,10 +131,9 @@
 |phoneNumber|28|Optional phone number of intended location / establishment *(applies to SendLocation)*|
 |timeToDestination|29|Optional time to destination field for ShowConstantTBT|
 |turnText|30|Turn text for turnList parameter of UpdateTurnList|
-|navigationText|31|Navigation text for UpdateTurnList|
-|subtleAlertText1|32|The first line of the subtle alert text field; applies to `SubtleAlert` `alertText1`|
-|subtleAlertText2|33|The second line of the subtle alert text field; applies to `SubtleAlert` `alertText2`|
-|subtleAlertSoftButtonText|34|A text field in the soft button of a subtle alert; applies to `SubtleAlert` `softButtons`|
+|subtleAlertText1|31|The first line of the subtle alert text field; applies to `SubtleAlert` `alertText1`|
+|subtleAlertText2|32|The second line of the subtle alert text field; applies to `SubtleAlert` `alertText2`|
+|subtleAlertSoftButtonText|33|A text field in the soft button of a subtle alert; applies to `SubtleAlert` `softButtons`|
 
 ### MetadataType
 
