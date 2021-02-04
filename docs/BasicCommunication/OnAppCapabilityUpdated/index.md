@@ -7,11 +7,11 @@ Sender
 : SDL
 
 Purpose
-: Inform that that a specific application capability has changed
+: Inform the HMI that a specific application capability has changed
 
 ### Notification
 
-SDL sends OnAppCapabilityUpdated notification to HMI to provide supported by application <abbr title="Video Streaming Capabilities">VSC</abbr>
+SDL sends OnAppCapabilityUpdated notification to HMI to provide <abbr title="Video Streaming Capabilities">VSC</abbr> supported by application
 
 !!! may
 
