@@ -76,7 +76,7 @@ _**Important Note:**_ If HMI-defined VR commands are accessible together with th
   * display the complete list of available VR commands (SDL-defined and HMI-defined ones) when the User activates VR.
 
 4. HMI displays the in-application menu for every active application upon the User's request. It must contain SDL-requested commands (UI.AddCommand) and sub-menus (UI.AddSubMenu). SDL provides the values for the name (`menuTitle` parameter) and for the icon (`menuIcon` parameter) of this in-application menu. The values for in-application menu and touchscreen keyboard are allowed by SDL Core for navigation type of application only.
-5. In case SDL sends request with some values in `customizeKeys` array, HMI must:
+5. In case SDL sends request with some values in `customKeys` array, HMI must:
     * use these values to change the special characters shown in customizable keys
     * keep default values in the remaining keys, if the array is less than or equal to customizable keys amount
 
@@ -102,8 +102,8 @@ SetGlobalProperties for active app on HMI with VR activation
 |||
 
 |||
-SetGlobalProperties Customize Keys
-![SetGlobalProperties](./assets/SetGlobalPropertiesCustomizeKeys.png)
+SetGlobalProperties Custom Keys
+![SetGlobalProperties](./assets/SetGlobalPropertiesCustomKeys.png)
 |||
 
 |||

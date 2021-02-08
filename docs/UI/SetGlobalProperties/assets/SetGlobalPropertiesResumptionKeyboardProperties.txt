@@ -2,7 +2,7 @@ participant App
 participant SDL
 participant HMI
 
-note over App,HMI:<align:center>**//Pre-conditions://**\n**1.** appID application is successfuly registered, activated\n**2.** App set non-default values for 'KeyboardProperties' via SetGlobalProperties request\n keyboardLayout=AZERTY; maskInputCharacters=USER_CHOICE_INPUT_KEY_MASK; customizeKeys = "#", "$"
+note over App,HMI:<align:center>**//Pre-conditions://**\n**1.** appID application is successfuly registered, activated\n**2.** App set non-default values for 'KeyboardProperties' via SetGlobalProperties request\n keyboardLayout=AZERTY; maskInputCharacters=USER_CHOICE_INPUT_KEY_MASK; customKeys = "#", "$"
 
 note over App,HMI: Unexpected disconnect and reconnect are performed
 
@@ -12,7 +12,7 @@ App->SDL: RegisterAppInterface(hashID, params)
 note over SDL:<align:center> <hashID> is valid\nStart data resumption for the App
 
 SDL->>HMI: BC.OnAppRegistered(appName; appID)
-SDL->HMI:<align:center>UI.SetGlobalProperties\n (**keyboardLayout=AZERTY;\nmaskInputCharacters=USER_CHOICE_INPUT_KEY_MASK;\ncustomizeKeys = #, $**)
+SDL->HMI:<align:center>UI.SetGlobalProperties\n (**keyboardLayout=AZERTY;\nmaskInputCharacters=USER_CHOICE_INPUT_KEY_MASK;\ncustomKeys = #, $**)
 
 HMI-->SDL: UI.SetGlobalProperties (code:0)
 
