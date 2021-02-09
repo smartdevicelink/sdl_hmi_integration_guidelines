@@ -34,6 +34,25 @@ The HMI will have to update this field if the user chooses to reset this value (
 
 !!!
 
+!!! note
+
+#### Roof Status Selection
+
+* Convertible roof - `location` grid would span entire rows and columns and roof `status` could be `CLOSED` or `AJAR` with corresponding `state`. 
+* Sunroof/Moonroof - `location` grid would span just actual location of sunroof/moonroof. `status` could be `CLOSED` or `AJAR` with corresponding `state`.
+* Entire roof - `location` grid would span entire rows and columns and roof status would be `REMOVED` or `CLOSED/LOCKED`. `state` can be omitted.
+* Other type of roof - `location` grid would span actual location of the roof as per physical location. `status` and `state` would be as per table below:
+
+| Roof condition  | status | state |
+| ------------- | ------------- | ------------- |
+| Roof is closed and locked  | LOCKED  | `approximatePosition` = 0 & `deviation` = 0 |
+| Roof is closed and unlocked  | CLOSED  | `approximatePosition` = 0 & `deviation` = 0 |
+| Roof is closed and unknown locked state | CLOSED  | `approximatePosition` = 0 & `deviation` = 0 |
+| Roof is open  | AJAR  | actual values of `approximatePosition` & `deviation` |
+| Roof is physically removed  | REMOVED  | can be omitted OR `approximatePosition` = 0 & `deviation` = 0 |
+
+!!!
+
 ### Request
 
 #### Parameters
@@ -74,6 +93,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |stabilityControlsStatus|Boolean|false||
 |windowStatus|Boolean|false||
 |handsOffSteering|Boolean|false||
+|seatOccupancy|Boolean|false||
 
 ### Response
 
@@ -115,6 +135,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |stabilityControlsStatus|[Common.StabilityControlsStatus](../../common/structs/#stabilitycontrolsstatus)|false||
 |windowStatus|[Common.WindowStatus](../../common/structs/#windowstatus)|false|array: true<br>minsize: 0<br>maxsize: 100|
 |handsOffSteering|Boolean|false||
+|seatOccupancy|[Common.SeatOccupancy](../../common/structs/#seatoccupancy)|false|
 
 ### Sequence Diagrams
 

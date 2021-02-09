@@ -67,6 +67,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |stabilityControlsStatus|[Common.StabilityControlsStatus](../../common/structs/#stabilitycontrolsstatus)|false||
 |windowStatus|[Common.WindowStatus](../../common/structs/#windowstatus)|false|array: true<br>minsize: 0<br>maxsize: 100|
 |handsOffSteering|Boolean|false||
+|seatOccupancy|[Common.SeatOccupancy](../../common/structs/#seatoccupancy)|false||
 
 ### Sequence Diagrams
 
