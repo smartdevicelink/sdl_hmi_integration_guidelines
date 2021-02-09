@@ -18,7 +18,7 @@ Purpose
     * `menuName` and `templateTitle` should be included, if they are visible on HMI.
     * `mainField1-4`, `statusBar` and `mediaTrack` should not be included if OEM implemented the `WEB_VIEW` template without these text fields.
     * `availabletemplates`, `buttonCapabilities` and `imageTypeSupported` should reflect the general capabilities of the window/system.
-5. HMI may send `KeyboardCapabilities` within OnSystemCapabilityUpdated notification which may include `maskInputCharactersSupported`, `supportedKeyboards` and `configurableKeys` parameters.
+5. HMI may send `KeyboardCapabilities` within OnSystemCapabilityUpdated notification with the supported keyboards in `supportedKeyboards`.
 
 !!! NOTE
 
