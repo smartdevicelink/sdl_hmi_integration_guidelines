@@ -49,6 +49,7 @@ Purpose
 |windowStatus|Boolean|false||
 |handsOffSteering|Boolean|false||
 |seatOccupancy|Boolean|false||
+|climateData|Boolean|false||
 
 ### Response
 
@@ -105,6 +106,7 @@ If multiple applications are trying to restore the same subscription, SDL should
 |windowStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |handsOffSteering|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |seatOccupancy|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|climateData|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
 

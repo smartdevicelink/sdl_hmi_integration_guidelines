@@ -1227,3 +1227,10 @@ There are no defined parameters for this struct
 |seatsOccupied|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are occupied.|
 |seatsBelted|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are belted.|
 
+### ClimateData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|externalTemperature|Common.Temperature|false||The external temperature in degrees celsius|
+|cabinTemperature|Common.Temperature|false||Internal ambient cabin temperature in degrees celsius|
+|atmosphericPressure|float|false|minvalue: 0<br>maxvalue: 2000|Current atmospheric pressure in mBar|
