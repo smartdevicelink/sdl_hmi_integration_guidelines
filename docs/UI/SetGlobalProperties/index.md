@@ -94,6 +94,11 @@ SetGlobalProperties for active app on HMI with <abbr title="Voice Recognition">V
 |||
 
 |||
+SetGlobalProperties for active app with TTS.SetGlobalProperties_request, UI.SetGlobalProperties_request, VR.Started, VR.Stopped
+![SetGlobalProperties](./assets/SetGlobalProperties_TTS_UI_VR.png)
+|||
+
+|||
 SetGlobalProperties Custom Keys
 ![SetGlobalProperties](./assets/SetGlobalPropertiesCustomKeys.png)
 |||
