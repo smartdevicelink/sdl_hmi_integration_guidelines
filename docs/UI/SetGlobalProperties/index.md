@@ -11,13 +11,13 @@ Purpose
 
 ### Description
 
-SDL requests to set-up the data for <abbr title="Voice Recognition">VR</abbr> help layout, the name and icon for in-application menu and the properties of the touchscreen keyboard (for example customize special characters at the root level of the keyboard layout).
+SDL requests to set-up the data for <abbr title="Voice Recognition">VR</abbr> help layout, the name and icon for in-application menu and the properties of the touchscreen keyboard (such as providing custom special characters to display at the root level of the keyboard layout).
 
 ### Request
 
 The request may arrive for the application whether being active or in background on HMI (depends on the Policy Table permissions applicable to mobile application request, by default allowed to operate in all HMI levels except `NONE`).
 
-The `vrHelp` parameter of the `SetGlobalProperties` RPC is used by the system to display the help items on the screen, and the `helpPrompt` parameter is used by the system for playing out the associated TTS help prompt.
+The `vrHelp` parameter of the `SetGlobalProperties` RPC is used by the system to display the help items on the screen, and the `helpPrompt` parameter is used by the system for playing out the associated <abbr title="Text To Speech">TTS</abbr> help prompt.
 
 SDL Core sends `SetGlobalProperties` request with specific `vrHelp` and `vrHelpTitle` values to HMI in the following cases:   
 
@@ -35,7 +35,7 @@ By default `vrHelpTitle` value is set to application name.
 _**Notes for HMI expected behavior:**_
 
 1. The system shall have the ability to receive and store multiple strings from `autoCompleteList` per application.
-2. When any of the keyboard layouts is being used, the system shall reference the `autoCompleteList` strings for that application.
+2. When any of the keyboard layouts are being used, the system shall reference the `autoCompleteList` strings for that application.
 3. As the User enters data on the keyboard, the system shall display values from `autoCompleteList` which match the entry.
 4. The number of matching `autoCompleteList` strings displayed shall only be limited by the character length constraints of the HMI.
 5. The system shall provide the User with the ability to select one of the displayed matching `autoCompleteList` strings without having to enter the entire string.
@@ -65,16 +65,12 @@ _**Notes for HMI expected behavior:**_
 !!! MUST
 
 1. Store the information and associate it with `appID`.
-
-_Note: Initially, the appID together with other application-related information is provided by SDL within UpdateAppList or OnAppRegistered RPCs._
-
+    * _Note:_ Initially, the appID together with other application-related information is provided by SDL within UpdateAppList or OnAppRegistered RPCs.
 2. When the system receives a new list of strings in `autoCompleteList` for a particular application, the system must delete the previous list and replace it with the new list for that application. 
 3. Whenever the User activates VR or sets up the requested values for VR help layout, HMI must display the list of commands available for voice recognition. SDL Core provides the title for this list (`vrHelpTitle` parameter) and the list of commands itself (`vrHelp` parameter which is an array of `VrHelpItem`).
-
-_**Important Note:**_ If HMI-defined VR commands are accessible together with those provided by SDL Core via VR.AddCommand, HMI must:* 
-  * add the corresponding VR HMI-defined commands to the list of VR help items provided by SDL via UI.SetGlobalProperties
-  * display the complete list of available VR commands (SDL-defined and HMI-defined ones) when the User activates VR.
-
+    * _**Important Note:**_ If HMI-defined VR commands are accessible together with those provided by SDL Core via VR.AddCommand, HMI must:
+        * add the corresponding VR HMI-defined commands to the list of VR help items provided by SDL via UI.SetGlobalProperties
+        * display the complete list of available VR commands (SDL-defined and HMI-defined ones) when the User activates VR.
 4. HMI displays the in-application menu for every active application upon the User's request. It must contain SDL-requested commands (UI.AddCommand) and sub-menus (UI.AddSubMenu). SDL provides the values for the name (`menuTitle` parameter) and for the icon (`menuIcon` parameter) of this in-application menu. The values for in-application menu and touchscreen keyboard are allowed by SDL Core for navigation type of application only.
 5. In case SDL sends request with some values in `customKeys` array, HMI must:
     * use these values to change the special characters shown in customizable keys
@@ -97,7 +93,7 @@ This RPC has no additional parameter requirements.
 ### Sequence Diagrams
 
 |||
-SetGlobalProperties for active app on HMI with VR activation
+SetGlobalProperties for active app on HMI with <abbr title="Voice Recognition">VR</abbr> activation
 ![SetGlobalProperties](./assets/SetGlobalPropertiesActiveVRActivate.png)
 |||
 
