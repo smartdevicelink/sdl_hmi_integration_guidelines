@@ -3,11 +3,6 @@ participant SDL
 participant HMI
 
 note over App,HMI:<align:center> **//Pre-conditions://**\n**1.** appID application is successfully registered and active on HMI\n**2.** HMI supports masking input characters
-participant App
-participant SDL
-participant HMI
-
-note over App,HMI:<align:center> **//Pre-conditions://**\n**1.** appID application is successfully registered and active on HMI\n**2.** HMI supports masking input characters
 
 HMI->>SDL: BC.OnSystemCapabilityUpdated(**maskInputCharactersSupported=true**)
 SDL->>App: OnSystemCapabilityUpdated(maskInputCharactersSupported=true)
