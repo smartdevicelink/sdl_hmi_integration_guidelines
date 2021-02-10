@@ -129,10 +129,11 @@
 |locationDescription|26|Optional description of intended location / establishment *(applies to SendLocation)*|
 |addressLines|27|Optional location address *(applies to SendLocation)*|
 |phoneNumber|28|Optional phone number of intended location / establishment *(applies to SendLocation)*|
-|timeToDestination|29||
-|turnText|30||
-|navigationText|31|Navigation text for UpdateTurnList|
-|notificationText|32|Text of notification to be displayed on screen|
+|timeToDestination|29|Optional time to destination field for ShowConstantTBT|
+|turnText|30|Turn text for turnList parameter of UpdateTurnList|
+|subtleAlertText1|31|The first line of the subtle alert text field; applies to `SubtleAlert` `alertText1`|
+|subtleAlertText2|32|The second line of the subtle alert text field; applies to `SubtleAlert` `alertText2`|
+|subtleAlertSoftButtonText|33|A text field in the soft button of a subtle alert; applies to `SubtleAlert` `softButtons`|
 
 ### MetadataType
 
@@ -899,6 +900,7 @@
 |VEHICLEDATA_STABILITYCONTROLSSTATUS|33||
 |VEHICLEDATA_WINDOWSTATUS|34||
 |VEHICLEDATA_HANDSOFFSTEERING|35||
+|VEHICLEDATA_SEATOCCUPANCY|36||
 |VEHICLEDATA_CLIMATEDATA|36||
 
 ### VideoStreamingProtocol
@@ -1338,3 +1340,19 @@
 |LITERS|0||
 |KILOWATTHOURS|1||
 |KILOGRAMS|2||
+
+### SeekIndicatorType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|TRACK|0||
+|TIME|1||
+
+### DoorStatusType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|CLOSED|0|The status is selected if a door is closed and unlocked or <br> if a door is closed and unknown locked state|
+|LOCKED|1|The status is selected if a door is closed and locked|
+|AJAR|2|The status is selected if a door is open|
+|REMOVED|3|The status is selected if a door is physically removed|

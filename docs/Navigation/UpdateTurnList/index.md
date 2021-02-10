@@ -48,7 +48,7 @@ UpdateTurnList
       {
         "navigationText" :  
         {
-          "fieldName" :  "navigationText",
+          "fieldName" :  "turnText",
           "fieldText" : "Turn Right"
         },
         "turnIcon" :
@@ -61,7 +61,7 @@ UpdateTurnList
       {
         "navigationText" :  
         {
-          "fieldName" :  "navigationText",
+          "fieldName" :  "turnText",
           "fieldText" : "Turn Left"
         },
         "turnIcon" :
@@ -74,7 +74,7 @@ UpdateTurnList
       {
         "navigationText" :  
         {
-          "fieldName" :  "navigationText",
+          "fieldName" :  "turnText",
           "fieldText" : "Go Forward"
         },
         "turnIcon" :
