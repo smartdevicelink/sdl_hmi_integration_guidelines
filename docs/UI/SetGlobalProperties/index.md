@@ -40,11 +40,7 @@ _**Notes for HMI expected behavior:**_
 4. The number of matching `autoCompleteList` strings displayed shall only be limited by the character length constraints of the HMI.
 5. The system shall provide the User with the ability to select one of the displayed matching `autoCompleteList` strings without having to enter the entire string.
 6. When the User selects one of the displayed matching `autoCompleteList` strings, the system shall submit that entry and not require further User input for submission.
-7. HMI allows to customize special characters depending on the keyboard layout restrictions:
-    * `QWERTY` - 3 customizable keys
-    * `QWERTZ` - 3 customizable keys
-    * `AZERTY` - 4 customizable keys
-    * `NUMERIC` - 2 customizable keys
+7. HMI allows to customize special characters depending on the keyboard layout restrictions.
 
 !!!
 
