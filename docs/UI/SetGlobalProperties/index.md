@@ -28,6 +28,24 @@ SDL Core sends `SetGlobalProperties` request with specific `vrHelp` and `vrHelpT
     * SDL Core must omit the `autoCompleteText` parameter when forwarding to the HMI
         * if `autoCompleteText` is present and `autoCompleteList` is omitted, SDL Core forwards `autoCompleteList` with a single value, taken from `autoCompleteText`.
 
+!!! MUST
+
+1. Store the information and associate it with `appID`.
+    * _Note:_ Initially, the appID together with other application-related information is provided by SDL within UpdateAppList or OnAppRegistered RPCs.
+2. When the system receives a new list of strings in `autoCompleteList` for a particular application, the system must delete the previous list and replace it with the new list for that application. 
+3. Whenever the User activates VR or sets up the requested values for VR help layout, HMI must display the list of commands available for voice recognition. SDL Core provides the title for this list (`vrHelpTitle` parameter) and the list of commands itself (`vrHelp` parameter which is an array of `VrHelpItem`).
+    * _**Important Note:**_ If HMI-defined VR commands are accessible together with those provided by SDL Core via VR.AddCommand, HMI must:
+        * add the corresponding VR HMI-defined commands to the list of VR help items provided by SDL via UI.SetGlobalProperties
+        * display the complete list of available VR commands (SDL-defined and HMI-defined ones) when the User activates VR.
+4. HMI displays the in-application menu for every active application upon the User's request. It must contain SDL-requested commands (UI.AddCommand) and sub-menus (UI.AddSubMenu). SDL provides the values for the name (`menuTitle` parameter) and for the icon (`menuIcon` parameter) of this in-application menu. The values for in-application menu and touchscreen keyboard are allowed by SDL Core for navigation type of application only.
+5. In case SDL sends request with some values in `customKeys` array, HMI must:
+    * use these values to change the special characters shown in customizable keys
+    * keep default values in the remaining keys, if the array is less than or equal to customizable keys amount
+
+_Note: HMI should not duplicate special characters on keyboard._ 
+  
+!!!
+
 !!! NOTE
 
 By default `vrHelpTitle` value is set to application name.
@@ -57,24 +75,6 @@ _**Notes for HMI expected behavior:**_
 |menuLayout|[Common.MenuLayout](../../common/enums/#menulayout)|false||
 
 ### Response
-
-!!! MUST
-
-1. Store the information and associate it with `appID`.
-    * _Note:_ Initially, the appID together with other application-related information is provided by SDL within UpdateAppList or OnAppRegistered RPCs.
-2. When the system receives a new list of strings in `autoCompleteList` for a particular application, the system must delete the previous list and replace it with the new list for that application. 
-3. Whenever the User activates VR or sets up the requested values for VR help layout, HMI must display the list of commands available for voice recognition. SDL Core provides the title for this list (`vrHelpTitle` parameter) and the list of commands itself (`vrHelp` parameter which is an array of `VrHelpItem`).
-    * _**Important Note:**_ If HMI-defined VR commands are accessible together with those provided by SDL Core via VR.AddCommand, HMI must:
-        * add the corresponding VR HMI-defined commands to the list of VR help items provided by SDL via UI.SetGlobalProperties
-        * display the complete list of available VR commands (SDL-defined and HMI-defined ones) when the User activates VR.
-4. HMI displays the in-application menu for every active application upon the User's request. It must contain SDL-requested commands (UI.AddCommand) and sub-menus (UI.AddSubMenu). SDL provides the values for the name (`menuTitle` parameter) and for the icon (`menuIcon` parameter) of this in-application menu. The values for in-application menu and touchscreen keyboard are allowed by SDL Core for navigation type of application only.
-5. In case SDL sends request with some values in `customKeys` array, HMI must:
-    * use these values to change the special characters shown in customizable keys
-    * keep default values in the remaining keys, if the array is less than or equal to customizable keys amount
-
-_Note: HMI should not duplicate special characters on keyboard._ 
-  
-!!!
 
 !!! NOTE
 
