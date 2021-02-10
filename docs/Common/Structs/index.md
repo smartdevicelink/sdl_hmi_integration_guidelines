@@ -1227,7 +1227,7 @@ There are no defined parameters for this struct
 |seatsOccupied|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are occupied.|
 |seatsBelted|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are belted.|
 
-### ClimateData 
+### ClimateData
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
