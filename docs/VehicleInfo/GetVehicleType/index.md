@@ -17,6 +17,12 @@ This RPC has no additional parameter requirements
 
 ### Response
 
+!!! note
+
+In case HMI responds with incomplete `VehicleType` (with no `make` value), the vehicle type filtering will not work on app side.
+
+!!!
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
