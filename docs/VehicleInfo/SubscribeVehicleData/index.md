@@ -62,6 +62,8 @@ HMI must send SubscribeVehicleData response only for ROOT level items.
 For OEM specific custom vehicle data items, `oemCustomDataType` will contain a type of OEM specific vehicle data (from schema), and `dataType` will be `VEHICLEDATA_OEM_CUSTOM_DATA`.  
 For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `dataType` will contain appropriate data type from `VehicleDataType` enum.
 
+If multiple applications are trying to restore the same subscription, SDL should send the only first subscription to HMI. If the first subscription was failed and application received `result_code=RESUME_FAILED`, for the second application SDL should also try to restore the subscription.
+
 !!!
 
 #### Parameters
@@ -107,6 +109,16 @@ For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `d
 |||
 SubscribeVehicleData
 ![SubscribeVehicleData](./assets/SubscribeVehicleData.jpg)
+|||
+
+|||
+Resumption of multiple applications with common subscriptions
+![SubscribeVehicleData](./assets/MultipleAppCommonSubscriptions.png)
+|||
+
+|||
+Error handling for subscriptions during parallel resumption of two applications
+![SubscribeVehicleData](./assets/MultipleAppErrorHandling.png)
 |||
 
 ### JSON Message Examples

@@ -68,6 +68,7 @@
 |SYSTEM|9||
 |PROJECTION|10||
 |REMOTE_CONTROL|11||
+|WEB_VIEW|12||
 
 ### CloudConnectionStatus
 
@@ -578,6 +579,7 @@
 |UNAUTHORIZED_TRANSPORT_REGISTRATION|2|By getting this value, SDL unregisters the named application|
 |UNSUPPORTED_HMI_RESOURCE|3|By getting this value, SDL unregisters the named application|
 |CLOSE_CLOUD_CONNECTION|4|By getting this value, SDL puts the named app to NONE HMILevel. Used by the HMI to close a cloud app connection|
+|RESOURCE_CONSTRAINT|5|By getting this value, SDL should unregister the application to allow the HMI to close the application.|
 
 ### IgnitionStatus
 
@@ -1334,6 +1336,7 @@
 |INFINITELY_VARIABLE|5|Infinitely variable transmission.|
 |ELECTRIC_VARIABLE|6|Electric variable transmission.|
 |DIRECT_DRIVE|7|Direct drive between engine and wheels.|
+
 ### CapacityUnit
 
 |Name|Value|Description|

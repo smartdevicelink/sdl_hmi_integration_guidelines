@@ -79,6 +79,11 @@ Add Sub Menu Rejected Limit Reached
 ![AddSubMenu](./assets/AddSubMenuLimit.png)
 |||
 
+|||
+Add Sub Menu for WebEngine App
+![AddSubMenu](./assets/AddSubMenuWebEngineApp.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request

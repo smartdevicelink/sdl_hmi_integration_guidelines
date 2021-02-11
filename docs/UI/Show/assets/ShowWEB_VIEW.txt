@@ -1,0 +1,42 @@
+participant Local Web App
+participant SDL
+participant HMI
+
+note over Local Web App, HMI:<align:center> **Preconditions:**\n 1.Web app (WEB_VIEW) is registered and activated on the HMI\n 2. HMI displays main window in WEB_VIEW template
+
+opt App sends request to change template to MEDIA
+
+Local Web App-> SDL: Show (templateConfiguration(template:"MEDIA"), all mandatory params)
+
+SDL->HMI: UI.Show (templateConfiguration(template:"MEDIA"), all mandatory params)
+
+HMI-->SDL: UI.Show(SUCCESS)
+
+SDL-->Local Web App: Show(SUCCESS)
+
+note over HMI: WEB_VIEW template is changed to MEDIA template
+
+HMI->>SDL:<align:center> BC.OnSystemCapabilityUpdate\n(displayCapabilities(...(templatesAvailable("MEDIA", "NON-MEDIA",\n "NAV_FULLSCREEN_MAP","WEB_VIEW"))
+
+SDL->>Local Web App: <align:center>OnSystemCapabilityUpdated\n(displayCapabilities(...(templatesAvailable("MEDIA", "NON-MEDIA",\n "NAV_FULLSCREEN_MAP","WEB_VIEW"))
+
+end
+
+opt App sends request to set WEB_VIEW template
+note over HMI:  MEDIA template is set
+
+Local Web App->SDL: Show (templateConfiguration(template:WEB_VIEW), all mandatory params)
+
+SDL->HMI: UI.Show (templateConfiguration(template:WEB_VIEW), all mandatory params)
+
+HMI-->SDL: UI.Show(SUCCESS)
+
+SDL-->Local Web App: Show(SUCCESS)
+
+HMI->>SDL:<align:center> BC.OnSystemCapabilityUpdate\n(displayCapabilities(...(templatesAvailable("MEDIA", "NON-MEDIA",\n "NAV_FULLSCREEN_MAP","WEB_VIEW"))
+
+note over HMI: <align:center> The WEB_VIEW template must NOT\n declare support in its WindowCapabilities\nfor any `softButtonCapabilities`, the `TextFields` with name:\n `mainField1-4`, `mediaClock`, `mediaTrack`,\nnor the `ImageFields` with name:\n `softButtonImage`, `menuIcon`, `graphic`, or `secondaryGraphic`
+
+SDL->>Local Web App: <align:center>OnSystemCapabilityUpdated\n(displayCapabilities(...(templatesAvailable("MEDIA", "NON-MEDIA",\n "NAV_FULLSCREEN_MAP","WEB_VIEW"))
+
+end
