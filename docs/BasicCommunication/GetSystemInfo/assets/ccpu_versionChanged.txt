@@ -1,8 +1,11 @@
 participant App
 participant SDL
 participant HMI
-App->SDL:RAI
-note left of App:<align:center>RAI request processing\non hold until\n`hmi_cooperating_ = true`
+
+note over App, HMI:<align:center>**Pre-conditions:**\n  1. App supports Protocol version 5.4.0 or higher
+
+App->SDL: StartService
+note left of App:<align:center>StartService request processing\nis on hold until\n`hmi_cooperating_ = true`
 HMI->SDL:BC.OnReady
 SDL->SDL:ONHMIStartedCooperation
 note over SDL:<align:center>Do not set\n`hmi_cooperating_= true`\nyet
@@ -32,6 +35,9 @@ HMI-->SDL:[VR,UI,TTS...].GetCapabilities
 end
 SDL->SDL:<align:center>Cache received data\nin `HMICapabilitiesCacheFile`
 SDL->SDL:<align:center>Load default capabilities data\nfor failed components
-end 
-SDL->SDL:Set `hmi_cooperating = true`
+end
+
+SDL->SDL:Set `hmi_cooperating_ = true`
+SDL-->App:StartService_ACK
+App->SDL:RAI
 SDL-->App:RAI

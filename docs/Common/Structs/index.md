@@ -50,6 +50,7 @@
 |diagonalScreenSize|Float|false|minvalue: 0|The diagonal screen size in inches.|
 |pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
 |scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
+|preferredFPS|integer|false|minvalue: 0<br>maxvalue: 2147483647|The preferred frame rate per second of the head unit.|
 
 ### DynamicUpdateCapabilities
 
@@ -301,13 +302,16 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|parkBrakeActive|Boolean|true|||
-|ignitionStableStatus|[Common.IgnitionStableStatus](../enums/#ignitionstablestatus)|true|||
-|ignitionStatus|[Common.IgnitionStatus](../enums/#ignitionstatus)|true|||
-|driverDoorAjar|Boolean|false|||
-|passengerDoorAjar|Boolean|false|||
-|rearLeftDoorAjar|Boolean|false|||
-|rearRightDoorAjar|Boolean|false|||
+|parkBrakeActive|Boolean|true||If mechanical park brake is active, true. Otherwise false.|
+|ignitionStableStatus|[Common.IgnitionStableStatus](../enums/#ignitionstablestatus)|true||Provides information on status of ignition stable switch. See IgnitionStableStatus.|
+|ignitionStatus|[Common.IgnitionStatus](../enums/#ignitionstatus)|true||Provides information on current ignitiion status. See IgnitionStatus.|
+|driverDoorAjar|Boolean|false||References signal "DrStatDrv_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|passengerDoorAjar|Boolean|false||References signal "DrStatPsngr_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|rearLeftDoorAjar|Boolean|false||References signal "DrStatRl_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|rearRightDoorAjar|Boolean|false||References signal "DrStatRr_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|doorStatuses|Common.DoorStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for doors if Ajar/Closed/Locked|
+|gateStatuses|Common.GateStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for trunk/hood/etc. if Ajar/Closed/Locked|
+|roofStatuses|Common.RoofStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for roof/convertible roof/sunroof/moonroof etc., if Closed/Ajar/Removed etc.|
 
 ### BeltStatus
 
@@ -1181,3 +1185,54 @@ There are no defined parameters for this struct
 |:---|:---|:--------|:---------|:----------|
 |location|Common.Grid|true|||
 |state|Common.WindowState|true|||
+
+### SeekStreamingIndicator
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|type|[Common.SeekIndicatorType](../enums/#seekindicatortype)|true|||
+|seekTime|Integer|false|minvalue: 1<br>maxvalue: 99|If the type is TIME, this number of seconds may be present alongside the skip indicator. It will indicate the number of seconds that the currently playing media will skip forward or backward.|
+
+### DoorStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true||Describes the status of a location of a door.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a door.|
+
+### GateStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true||Describes the status of location of trunk/hood/etc.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of trunk/hood/etc.|
+
+### RoofStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+|state|Common.WindowState|false||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+
+### SeatStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|seatLocation|Common.SeatLocation|true|||
+|conditionActive|Boolean|true|||
+
+### SeatOccupancy
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|seatsOccupied|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are occupied.|
+|seatsBelted|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are belted.|
+
+### ClimateData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|externalTemperature|Common.Temperature|false||The external temperature in degrees celsius|
+|cabinTemperature|Common.Temperature|false||Internal ambient cabin temperature in degrees celsius|
+|atmosphericPressure|float|false|minvalue: 0<br>maxvalue: 2000|Current atmospheric pressure in mBar|
