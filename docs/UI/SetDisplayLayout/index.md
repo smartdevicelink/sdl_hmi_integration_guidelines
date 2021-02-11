@@ -64,122 +64,153 @@ SetDisplayLayout Invalid Data with UI.GetCapabilities
 
 ```json
 {
-  "id" : 47,
-  "jsonrpc" : "2.0",
-  "result" :
-  {
-    "displayCapabilities" :
-    {
-        "displayType" : "GEN2_8_DMA",
-        "textFields" : ["mainField1", "mainField2", "alertText1", "alertText2", "alertText3", "scrollableMessageBody", "initialInteractionText", "navigationText1", "navigationText2", "audioPassThruDisplayText1", "audioPassThruDisplayText2", "notificationText"],
-        "imageFields" :
-        [
-          {
-           "name" : "softButtonImage",
-           "imageTypeSupported" : ["GRAPHIC_BMP",                       "GRAPHIC_JPEG", "GRAPHIC_PNG"],
-           "imageResolution" :
-            {
-             "resolutionWidth" : 32,
-             "resolutionHeight" : 32
-            }
-          },
-
-          {
-           "name" : "vrHelpItem",
-           "imageTypeSupported" : ["GRAPHIC_BMP",                       "GRAPHIC_JPEG", "GRAPHIC_PNG"],
-           "imageResolution" :
-            {
-             "resolutionWidth" : 32,
-             "resolutionHeight" : 32
-            }
-          },
-
-          {
-           "name" : "appIcon",
-           "imageTypeSupported" : ["GRAPHIC_BMP",                       "GRAPHIC_JPEG", "GRAPHIC_PNG"],
-           "imageResolution" :
-            {
-             "resolutionWidth" : 64,
-             "resolutionHeight" : 64
-            }
-          }
-        ],
-
-        "mediaClockFormats" : ["CLOCK1", "CLOCKTEXT4"],
-        "imageCapabilities" : ["DYNAMIC"],
-        "graphicSupported" : true,
-        "templatesAvailable" : ["DEFAULT", "MEDIA", "NON-MEDIA"],
-
-        "screenParams" :
-        {
-          "resolution" :
-            {
-             "resolutionWidth" : 800,
-             "resolutionHeight" : 480
+    "jsonrpc":"2.0",
+    "id":42,
+    "result":{
+        "code":0,
+        "method":"UI.SetDisplayLayout",
+        "displayCapabilities":{
+            "displayType":"GEN2_8_DMA",
+            "displayName":"SDL_HMI",
+            "textFields":[
+                {
+                    "name":"mainField1",
+                    "characterSet":"UTF_8",
+                    "width":500,
+                    "rows":1
+                },
+                ...
+                {
+                    "name":"mediaClock",
+                    "characterSet":"UTF_8",
+                    "width":500,
+                    "rows":1
+                },
+                {
+                    "name":"mediaTrack",
+                    "characterSet":"UTF_8",
+                    "width":500,
+                    "rows":1
+                },
+                {
+                    "name":"templateTitle",
+                    "characterSet":"UTF_8",
+                    "width":100,
+                    "rows":1
+                },
+                {
+                    "name":"alertText1",
+                    "characterSet":"UTF_8",
+                    "width":500,
+                    "rows":1
+                },
+                ...
+            ],
+            "imageFields":[
+                {
+                    "name":"softButtonImage",
+                    "imageTypeSupported":[
+                        "GRAPHIC_BMP",
+                        "GRAPHIC_JPEG",
+                        "GRAPHIC_PNG"
+                    ],
+                    "imageResolution":{
+                        "resolutionWidth":64,
+                        "resolutionHeight":64
+                    }
+                },
+                {
+                    "name":"choiceImage",
+                    "imageTypeSupported":[
+                        "GRAPHIC_BMP",
+                        "GRAPHIC_JPEG",
+                        "GRAPHIC_PNG"
+                    ],
+                    "imageResolution":{
+                        "resolutionWidth":64,
+                        "resolutionHeight":64
+                    }
+                },
+                ...
+            ],
+            "mediaClockFormats":[
+                "CLOCK1",
+                "CLOCK2",
+                "CLOCK3",
+                "CLOCKTEXT1",
+                "CLOCKTEXT2",
+                "CLOCKTEXT3",
+                "CLOCKTEXT4"
+            ],
+            "graphicSupported":true,
+            "imageCapabilities":[
+                "DYNAMIC",
+                "STATIC"
+            ],
+            "templatesAvailable":[
+                "MEDIA",
+                "NON-MEDIA",
+                "NAV_FULLSCREEN_MAP",
+                "WEB_VIEW"
+            ],
+            "screenParams":{
+                "resolution":{
+                    "resolutionWidth":800,
+                    "resolutionHeight":480
+                },
+                "touchEventAvailable":{
+                    "pressAvailable":true,
+                    "multiTouchAvailable":true,
+                    "doublePressAvailable":false
+                }
             },
-
-          "touchEventAvailable" :
-            {
-             "pressAvailable" : true,
-             "multiTouchAvailable" : true,
-             "doublePressAvailable" : false
-            }
+            "numCustomPresetsAvailable":8
         },
-        "numCustomPresetsAvailable" : 8
-    },
-
-    "buttonCapabilities" :
-    [
-      {
-        "name" : "OK",
-        "shortPressAvailable" : true,
-        "longPressAvailable" : true,
-        "upDownAvailable" : true
-      },
-      {
-        "name" : "SEEKLEFT",
-        "shortPressAvailable" : true,
-        "longPressAvailable" : true,
-        "upDownAvailable" : true
-      },
-      {
-        "name" : "SEEKRIGHT",
-        "shortPressAvailable" : true,
-        "longPressAvailable" : true,
-        "upDownAvailable" : true
-      },
-      {
-        "name" : "TUNEUP",
-        "shortPressAvailable" : true,
-        "longPressAvailable" : true,
-        "upDownAvailable" : true
-      },
-      {
-        "name" : "TUNEDOWN",
-        "shortPressAvailable" : true,
-        "longPressAvailable" : true,
-        "upDownAvailable" : true
-      }
-    ],
-
-    "softButtonCapabilities" :
-    [
-      {
-        "shortPressAvailable" : true,
-        "longPressAvailable" : true,
-        "upDownAvailable" : true,
-        "imageSupported" : true
-      }
-    ],
-
-    "presetBankCapabilities" :
-    {
-      "onScreenPresetsAvailable" : true
-    },
-
-    "code" : 0,
-    "method" : "UI.SetDisplayLayout"
-  }
+        "buttonCapabilities":[
+            ...
+            {
+                "name":"OK",
+                "shortPressAvailable":true,
+                "longPressAvailable":true,
+                "upDownAvailable":true
+            },
+            {
+                "name":"SEEKLEFT",
+                "shortPressAvailable":true,
+                "longPressAvailable":true,
+                "upDownAvailable":true
+            },
+            {
+                "name":"SEEKRIGHT",
+                "shortPressAvailable":true,
+                "longPressAvailable":true,
+                "upDownAvailable":true
+            },
+            {
+                "name":"TUNEUP",
+                "shortPressAvailable":true,
+                "longPressAvailable":true,
+                "upDownAvailable":true
+            },
+            {
+                "name":"TUNEDOWN",
+                "shortPressAvailable":true,
+                "longPressAvailable":true,
+                "upDownAvailable":true
+            }
+        ],
+        "softButtonCapabilities":[
+            {
+                "shortPressAvailable":true,
+                "longPressAvailable":true,
+                "upDownAvailable":true,
+                "imageSupported":true
+            }
+        ],
+        "presetBankCapabilities":{
+            "onScreenPresetsAvailable":true
+        }
+    }
 }
 ```
 
