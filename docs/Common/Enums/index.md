@@ -134,6 +134,10 @@
 |subtleAlertText1|31|The first line of the subtle alert text field; applies to `SubtleAlert` `alertText1`|
 |subtleAlertText2|32|The second line of the subtle alert text field; applies to `SubtleAlert` `alertText2`|
 |subtleAlertSoftButtonText|33|A text field in the soft button of a subtle alert; applies to `SubtleAlert` `softButtons`|
+|menuCommandSecondaryText|33|Secondary text for AddCommand|
+|menuCommandTertiaryText|34|Tertiary text for AddCommand|
+|menuSubMenuSecondaryText|35|Secondary text for AddSubMenu|
+|menuSubMenuTertiaryText|36|Tertiary text for AddSubMenu|s
 
 ### MetadataType
 
@@ -859,6 +863,9 @@
 |locationImage|12|The optional image of a destination / location|
 |alertIcon|13|The image field for Alert|
 |subMenuIcon|14|The image field for AddSubMenu.menuIcon|
+|subtleAlertIcon|15|The image of the subtle alert; applies to `SubtleAlert` `alertIcon`|
+|menuCommandSecondaryImage|16|The secondary image field for AddCommand|
+|menuSubMenuSecondaryImage|17|The secondary image field for AddSubMenu|
 
 ### VehicleDataType
 

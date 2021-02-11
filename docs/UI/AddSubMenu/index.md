@@ -36,6 +36,8 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
 
 !!!
 
+As of Core 7.1, UI.AddSubMenu requests can contain all UI elements that were previously found in a Perform Interaction's Choice.
+
 ### Request
 
 #### Parameters
@@ -45,6 +47,7 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
 |menuID|Integer|true|minvalue: 1<br>maxvalue: 2000000000|
 |menuParams|[Common.MenuParams](../../common/structs/#menuparams)|true||
 |menuIcon|[Common.Image](../../common/structs/#image)|false||
+|secondaryImage|[Common.Image](../../common/structs/#image)|false||
 |appID|Integer|true||
 |menuLayout|[Common.MenuLayout](../../common/enums/#menulayout)|false||
 
@@ -96,7 +99,19 @@ Add Sub Menu for WebEngine App
     "menuParams" :
     {
          "position" : 2,
-         "menuName" : "Settings"
+         "menuName" : "Settings",
+         "secondaryText" : "General",
+         "tertiaryText" : "Help"
+    },
+    "menuIcon" :
+    {
+         "value" : "tmp/SDL/app/Gis_meteo/1245_28.jpeg",
+         "imageType" : "DYNAMIC"
+    },
+    "secondaryImage" :
+    {
+         "value" : "tmp/SDL/app/Gis_meteo/5678.jpeg",
+         "imageType" : "DYNAMIC"
     },
     "appID" : 65464
   }
