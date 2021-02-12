@@ -133,6 +133,9 @@
             },
             {
               "name": "OnAppPropertiesChange"
+            },
+            {
+              "name": "OnAppCapabilityUpdated"
             }
           ]
         },

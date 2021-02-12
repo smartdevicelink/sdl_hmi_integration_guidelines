@@ -51,6 +51,7 @@
 |pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
 |scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
 |preferredFPS|integer|false|minvalue: 0<br>maxvalue: 2147483647|The preferred frame rate per second of the head unit.|
+|additionalVideoStreamingCapabilities|Common.VideoStreamingCapability|false|array: true<br>minsize: 1<br>maxsize: 100||
 
 ### DynamicUpdateCapabilities
 
@@ -1253,3 +1254,10 @@ There are no defined parameters for this struct
 |:---|:---|:--------|:---------|:----------|
 |keyboardLayout|[Common.KeyboardLayout](../enums/#keyboardlayout)|true|||
 |numConfigurableKeys|Integer|true|minvalue: 0<br>maxvalue: 10|Number of keys available for special characters, App can customize as per their needs.|
+
+### AppCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|appCapabilityType|[Common.AppCapabilityType](../enums/#appcapabilitytype)|true||Used as a descriptor of what data to expect in this struct. The corresponding param to this enum should be included and the only other param included|
+|videoStreamingCapability|Common.VideoStreamingCapability|false||Describes supported capabilities for video streaming|

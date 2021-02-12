@@ -1373,3 +1373,9 @@
 |ENABLE_INPUT_KEY_MASK|0||
 |DISABLE_INPUT_KEY_MASK|1||
 |USER_CHOICE_INPUT_KEY_MASK|2||
+
+### AppCapabilityType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|VIDEO_STREAMING|0||
