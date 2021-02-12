@@ -1,0 +1,42 @@
+participant App
+participant SDL
+participant HMI
+
+note over App,HMI:<align:center> **//Pre-conditions://**\n**1.** appID application is successfuly registered and active\n 
+
+opt App sends a request to change customizable keys special characters - Happy Path
+note over HMI:<align:center>Keyboard layout\ncustomizable keys are:\n**" # "** - default value\n**" - "** - default value
+App->SDL:SetGlobalProperties (appID, <customKeys: **" ¥ ", " $ "**>)
+SDL->HMI:UI.SetGlobalProperties (appID, <customKeys: **" ¥ ", " $ "**>)     
+HMI->HMI:Update\ncustomizable\nkeys
+HMI-->SDL:UI.SetGlobalProperties (SUCCESS)
+SDL-->App:SetGlobalProperties (SUCCESS)
+note over HMI:<align:center>Keyboard layout\ncustomizable keys are:\n**" ¥ "** - customized value\n** " $ "** - customized value
+end
+
+opt App sends a request with a special character already available on keyboard
+note over HMI:<align:center>Keyboard layout\ncustomizable keys are:\n**" $ "** and **" + "** 
+App->SDL:SetGlobalProperties (appID, <customKeys: **" @ ", " + "**>)
+SDL->HMI:UI.SetGlobalProperties (appID, <customKeys: **" @ ", " + "**>)
+note over HMI:<align:center>**" + "** is already\navailable on keyboard  
+HMI->HMI:<align:center>Use only\n**" @ "** value\nto update\ncustomizable\nkeys
+HMI-->SDL:UI.SetGlobalProperties (SUCCESS)
+SDL-->App:SetGlobalProperties (SUCCESS)
+note over HMI:<align:center>Keyboard layout\ncustomizable keys are:\n**" @ "** - customized value\n**" + "** - remains unchanged
+end
+
+opt App sends a request with too many special characters
+App->SDL:SetGlobalProperties (appID, <customKeys: **" # ", " @ ", " $ "**>)
+note over SDL:<align:center><customKeys> array\nhas more values than\ncustomizable keys allowed
+SDL-->App:<align:center>SetGlobalProperties\n(INVALID_DATA: "CustomKeys exceeds the number of customizable keys in this Layout")
+note over HMI:<align:center>Customizable keys' values\nare not changed
+end
+
+opt App sends a request with not supported special characters
+App->SDL:SetGlobalProperties (appID, <customKeys: ** " ? "**>)
+SDL->HMI:UI.SetGlobalProperties (appID, <customKeys: ** " ? "**>)
+note over HMI:<align:center><customKeys> array\nhas unsupported values
+HMI-->SDL:<align:center>UI.SetGlobalProperties\n(WARNINGS: "Some symbols might not be supported by system")
+SDL-->App:<align:center>SetGlobalProperties\n(WARNINGS: "Some symbols might not be supported by system")
+note over HMI:<align:center>Customizable keys' values\nare not changed
+end

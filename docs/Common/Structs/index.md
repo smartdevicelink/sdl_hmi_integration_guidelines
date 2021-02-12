@@ -177,6 +177,8 @@
 |keypressMode|[Common.KeypressMode](../enums/#keypressmode)|false|||
 |limitedCharacterList|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 1||
 |autoCompleteList|String|false|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 1000||
+|maskInputCharacters|[Common.KeyboardInputMask](../enums/#keyboardinputmask)|false||Allows an app to mask entered characters on HMI|
+|customKeys|String|false|maxlength: 1<br>minsize: 1<br>maxsize: 10<br>array: true|Array of special characters to show in customizable Keys.<br>If omitted, keyboard will show default special characters.|
 
 ### Choice
 
@@ -1109,6 +1111,7 @@ There are no defined parameters for this struct
 |softButtonCapabilities|Common.SoftButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of soft buttons available on-window and the capabilities for each button.|
 |menuLayoutsAvailable|[Common.MenuLayout](../enums/#menulayout)|false|array: true<br>minsize: 1<br>maxsize: 1000|An array of available menu layouts. If this parameter is not provided, only the `LIST` layout is assumed to be available|
 |dynamicUpdateCapabilities|Common.DynamicUpdateCapabilities|false||Contains the head unit's capabilities for dynamic updating features declaring if the module will send dynamic update RPCs|
+|keyboardCapabilities|[Common.KeyboardCapabilities](../structs/#keyboardcapabilities)|false||See KeyboardCapabilities|
 
 ### ModuleInfo
 
@@ -1236,3 +1239,17 @@ There are no defined parameters for this struct
 |externalTemperature|Common.Temperature|false||The external temperature in degrees celsius|
 |cabinTemperature|Common.Temperature|false||Internal ambient cabin temperature in degrees celsius|
 |atmosphericPressure|float|false|minvalue: 0<br>maxvalue: 2000|Current atmospheric pressure in mBar|
+
+### KeyboardCapabilities
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|maskInputCharactersSupported|Boolean|false||Availability of capability to mask input characters using keyboard.<br>True: Available, False: Not Available.|
+|supportedKeyboards|Common.KeyboardLayoutCapability|false|minsize: 1<br>maxsize: 1000<br>array: true|Capabilities of supported keyboard layouts by HMI.|
+
+### KeyboardLayoutCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|keyboardLayout|[Common.KeyboardLayout](../enums/#keyboardlayout)|true|||
+|numConfigurableKeys|Integer|true|minvalue: 0<br>maxvalue: 10|Number of keys available for special characters, App can customize as per their needs.|

@@ -11,6 +11,19 @@ Purpose
 
 ### Notification
 
+!!! MUST
+
+Notify SDL whether keyboard input characters are displayed as masked or not masked on HMI screen. 
+
+!!!
+
+!!! NOTE
+
+1. By default keyboard input characters are not masked.
+2. When `maskInputCharacters` value is set to "USER_CHOICE_INPUT_KEY_MASK", HMI masks input characters **and** provides a toggle button allowing the user to unmask them if needed.
+
+!!!
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -43,6 +56,11 @@ OnKeyboardInput cancelled
 |||
 OnKeyboardInput ENTRY_VOICE mode
 ![OnKeyboardInput](./assets/OnKeyboardInputVoice.png)
+|||
+
+|||
+KeyboardEvent InputKeyMask
+![OnKeyboardInput](./assets/KeyboardEventInputKeyMask.png)
 |||
 
 ### JSON Message Examples
