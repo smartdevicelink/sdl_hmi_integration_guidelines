@@ -31,6 +31,8 @@ UI.AddCommand represents a request from an application to add a command to the a
 
 !!!
 
+As of Core 7.1, UI.AddCommand requests can contain all UI elements that were previously found in a Perform Interaction's Choice.
+
 ### Request
 
 #### Parameters
@@ -40,6 +42,7 @@ UI.AddCommand represents a request from an application to add a command to the a
 |cmdID|Integer|true|minvalue: 0<br>maxvalue: 2000000000|
 |menuParams|[Common.MenuParams](../../common/structs/#menuparams)|false||
 |cmdIcon|[Common.Image](../../common/structs/#image)|false||
+|secondaryImage|[Common.Image](../../common/structs/#image)|false||
 |appID|Integer|true||
 
 ### Response
@@ -121,11 +124,18 @@ AddCommand restoring during data resumption
      {
          "parentID" : 6,
          "position" : 0,
-         "menuName" : "Show weather for tomorrow"
+         "menuName" : "Show weather for tomorrow",
+         "secondaryText" : "Detroit, MI",
+         "tertiaryText" : "0.8 miles"
      },
     "cmdIcon" :
      {
          "value" : "tmp/SDL/app/Gis_meteo/1245_28.jpeg",
+         "imageType" : "DYNAMIC"
+     },
+    "secondaryImage" :
+     {
+         "value" : "tmp/SDL/app/Gis_meteo/5678.jpeg",
          "imageType" : "DYNAMIC"
      },
     "appID" : 65409

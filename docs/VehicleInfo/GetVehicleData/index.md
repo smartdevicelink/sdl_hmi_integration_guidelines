@@ -94,6 +94,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |windowStatus|Boolean|false||
 |handsOffSteering|Boolean|false||
 |seatOccupancy|Boolean|false||
+|climateData|Boolean|false||
 
 ### Response
 
@@ -136,6 +137,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 |windowStatus|[Common.WindowStatus](../../common/structs/#windowstatus)|false|array: true<br>minsize: 0<br>maxsize: 100|
 |handsOffSteering|Boolean|false||
 |seatOccupancy|[Common.SeatOccupancy](../../common/structs/#seatoccupancy)|false|
+|climateData|[Common.ClimateData](../../common/structs/#climatedata)|false||
 
 ### Sequence Diagrams
 
