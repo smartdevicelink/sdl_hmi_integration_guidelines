@@ -59,6 +59,7 @@ Negotiation of Video Streaming Capabilities between HMI and Mobile Application
                {
                   "scale":1,
                   "hapticSpatialDataSupported":true,
+                  "preferredFPS": 15,
                   "preferredResolution":{
                      "resolutionWidth":800,
                      "resolutionHeight":350
@@ -66,6 +67,7 @@ Negotiation of Video Streaming Capabilities between HMI and Mobile Application
                },
                {
                   "hapticSpatialDataSupported":false,
+                  "preferredFPS": 30,
                   "preferredResolution":{
                      "resolutionWidth":320,
                      "resolutionHeight":240
@@ -73,6 +75,7 @@ Negotiation of Video Streaming Capabilities between HMI and Mobile Application
                },
                {
                   "hapticSpatialDataSupported":true,
+                  "preferredFPS": 24,
                   "preferredResolution":{
                      "resolutionWidth":400,
                      "resolutionHeight":480
@@ -80,6 +83,7 @@ Negotiation of Video Streaming Capabilities between HMI and Mobile Application
                },
                {
                   "hapticSpatialDataSupported":true,
+                  "preferredFPS": 20,
                   "preferredResolution":{
                      "resolutionWidth":640,
                      "resolutionHeight":480
@@ -87,6 +91,7 @@ Negotiation of Video Streaming Capabilities between HMI and Mobile Application
                },
                {
                   "hapticSpatialDataSupported":true,
+                  "preferredFPS": 20,
                   "preferredResolution":{
                      "resolutionWidth":800,
                      "resolutionHeight":240
@@ -101,6 +106,7 @@ Negotiation of Video Streaming Capabilities between HMI and Mobile Application
                   "hapticSpatialDataSupported":true
                }
             ],
+            "preferredFPS": 15,
             "preferredResolution":{
                "resolutionWidth":800,
                "resolutionHeight":350

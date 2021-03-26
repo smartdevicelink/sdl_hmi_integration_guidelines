@@ -126,6 +126,7 @@ OnSystemCapabilityUpdated(VIDEO_STREAMING) Streaming Resolution Switching
       "systemCapability":{
          "systemCapabilityType":"VIDEO_STREAMING",
          "videoStreamingCapability":{
+            "preferredFPS": 15,
             "preferredResolution":{
                "resolutionWidth":800,
                "resolutionHeight":380

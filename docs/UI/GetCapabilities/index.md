@@ -188,7 +188,59 @@ GetCapabilities
                 "hapticSpatialDataSupported":true,
                 "diagonalScreenSize":8,
                 "pixelPerInch":96,
-                "scale":1
+                "scale":1,
+                "preferredFPS": 15,
+                "additionalVideoStreamingCapabilities":[
+                   {
+                      "scale":1,
+                      "hapticSpatialDataSupported":true,
+                      "preferredFPS": 15,
+                      "preferredResolution":{
+                         "resolutionWidth":800,
+                         "resolutionHeight":350
+                      }
+                   },
+                   {
+                      "hapticSpatialDataSupported":false,
+                      "preferredFPS": 30,
+                      "preferredResolution":{
+                         "resolutionWidth":320,
+                         "resolutionHeight":240
+                      }
+                   },
+                   {
+                      "hapticSpatialDataSupported":true,
+                      "preferredFPS": 24,
+                      "preferredResolution":{
+                         "resolutionWidth":400,
+                         "resolutionHeight":480
+                      }
+                   },
+                   {
+                      "hapticSpatialDataSupported":true,
+                      "preferredFPS": 20,
+                      "preferredResolution":{
+                         "resolutionWidth":640,
+                         "resolutionHeight":480
+                      }
+                   },
+                   {
+                      "hapticSpatialDataSupported":true,
+                      "preferredFPS": 20,
+                      "preferredResolution":{
+                         "resolutionWidth":800,
+                         "resolutionHeight":240
+                      }
+                   },
+                   {
+                      "scale":2.5,
+                      "hapticSpatialDataSupported":false
+                   },
+                   {
+                      "scale":5,
+                      "hapticSpatialDataSupported":true
+                   }
+                ]
             },
             "driverDistractionCapability":{
                 "menuLength":10,
