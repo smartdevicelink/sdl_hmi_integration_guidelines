@@ -9,7 +9,7 @@ Sender
 Purpose
 : Set a value and update mode for the media clock of a media application.
 
-The UI.SetMediaClock timer request indicates either an initial value for the media clock timer for a media application or an update to this value. The request may come for the application which is not currently active on the HMI.
+The UI.SetMediaClockTimer request indicates either an initial value for the media clock timer for a media application or an update to this value. The request may come for the application which is not currently active on the HMI.
 
 ### Request
 
@@ -22,12 +22,15 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
         * Start counting up or down from the requested `startTime` value at the specified `countRate` with a step of 1 second;
         * Continue counting up or down until:
             * The next request of _SetMediaClockTimer_ with appropriate parameters comes;
+            * `endTime` is reached, if provided.
             * Zero is reached in the case of COUNTDOWN.   
     * PAUSE mode:   
         * Pause the timer that is counting up or down;   
         * If `startTime` or `endTime` parameters are provided, the values must be updated on the HMI.   
+    * RESUME mode:
+        * Resume the timer that was previously paused at the specified `countRate`;
     * CLEAR mode:    
-        * Clear `startTime` to 00:00:00 in the case that the `startTime` parameter is not provided in the request, otherwise, `startTime` must be updated with a new value. It is up to HMI to determine the way the media clock timer is cleared: either to remove it from display or to set it to zero.   
+        * Clear `startTime` to 00:00:00 in the case that the `startTime` parameter is not provided in the request, otherwise, `startTime` must be updated with a new value. It is up to HMI to determine the way the media clock timer is cleared: either to remove it from display or to set it to zero.
 3. Respond with the result code (see _response_ section) correspondingly to the results of this RPC execution.
 !!!
     
@@ -46,7 +49,7 @@ The UI.SetMediaClock timer request indicates either an initial value for the med
 |updateMode|[Common.ClockUpdateMode](../../common/enums/#clockupdatemode)|true||Enumeration to control the media clock. In case of pause, resume, or clear, the start time value is ignored and shall be left out. For resume, the time continues with the same value as it was when paused.|
 |audioStreamingIndicator|[Common.AudioStreamingIndicator](../../common/enums/#audiostreamingindicator)|false||Indicates that a button press of the Play/Pause button would play, pause or stop the current playback.|
 |forwardSeekIndicator|[Common.SeekStreamingIndicator](../../common/structs/#seekstreamingindicator)|false||Used to control the forward seek button to either skip forward a set amount of time or to the next track.|
-|backSeekIndicator|[Common.SeekStreamingIndicator](../../common/structs/#seekstreamingindicator)|false||Used to control the backward seek button to either skip back a set amount of time or to the prevoius track.|
+|backSeekIndicator|[Common.SeekStreamingIndicator](../../common/structs/#seekstreamingindicator)|false||Used to control the backward seek button to either skip back a set amount of time or to the previous track.|
 |countRate|Float|false|minvalue: 0.1<br>maxvalue: 100.0<br>defvalue: 1.0|The rate at which the media clock timer will progress. Values less than 1.0 will advance the timer slower than real-time (ex. 0.5 would advance the timer at 50% speed), while values greater than 1.0 will advance the timer faster than real-time (ex. 2.0 would advance the timer at 200% speed).|
 |appID|Integer|true|||
 
