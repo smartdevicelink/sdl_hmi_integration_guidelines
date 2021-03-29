@@ -41,6 +41,10 @@ SDL Core sends `SetGlobalProperties` request with specific `vrHelp` and `vrHelpT
 5. In case SDL sends request with some values in `customKeys` array, HMI must:
     * use these values to change the special characters shown in customizable keys
     * keep default values in the remaining keys, if the array is less than or equal to customizable keys amount
+6. Depending on the value of `maskInputCharacters`, the HMI must do the following when displaying the keyboard:
+    * DISABLE_INPUT_KEY_MASK (default if not set) - Display input characters submitted by the user in the input box normally
+    * ENABLE_INPUT_KEY_MASK - Mask input characters submitted by the user in the input box
+    * USER_CHOICE_INPUT_KEY_MASK - Mask input characters by default and provide a toggle option for the user to disable masking
 
 _Note: HMI should not duplicate special characters on keyboard._ 
   
@@ -59,6 +63,7 @@ _**Notes for HMI expected behavior:**_
 5. The system shall provide the User with the ability to select one of the displayed matching `autoCompleteList` strings without having to enter the entire string.
 6. When the User selects one of the displayed matching `autoCompleteList` strings, the system shall submit that entry and not require further User input for submission.
 7. The system shall allow applications to customize the special characters in each keyboard layout depending on the [KeyboardCapabilities](../../common/structs/#keyboardcapabilities) it provides.
+8. The system shall allow applications to decide whether or not to mask input characters submitted by the user if this capability is enabled in [KeyboardCapabilities](../../common/structs/#keyboardcapabilities).
 
 !!!
 
