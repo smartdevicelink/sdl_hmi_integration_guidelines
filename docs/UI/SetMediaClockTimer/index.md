@@ -40,6 +40,14 @@ The UI.SetMediaClockTimer request indicates either an initial value for the medi
 3. Initially, the appID together with other application-related information is provided by SDL within one of _UpdateAppList_ and _OnAppRegistered_ RPCs.   
 !!!
 
+!!! NOTE
+By default the seek indicators should be `TRACK` when:
+
+- The media app is newly registered on the head unit (after `RegisterAppInterface` and the button subscription).
+- The media app was closed by the user (App enters HMI level `NONE`).
+- The app sends a `SetMediaClockTimer` request with `forwardSeekIndicator` and/or `backSeekIndicator` not set to any value. 
+!!!
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|
