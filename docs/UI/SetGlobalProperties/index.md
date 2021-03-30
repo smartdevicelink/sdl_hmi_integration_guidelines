@@ -84,7 +84,7 @@ In case HMI does not respond to SDL Core request during SDL-default timeout (10 
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
+This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
 

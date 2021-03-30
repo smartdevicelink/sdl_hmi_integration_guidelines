@@ -136,10 +136,10 @@
 |subtleAlertText1|31|The first line of the subtle alert text field; applies to `SubtleAlert` `alertText1`|
 |subtleAlertText2|32|The second line of the subtle alert text field; applies to `SubtleAlert` `alertText2`|
 |subtleAlertSoftButtonText|33|A text field in the soft button of a subtle alert; applies to `SubtleAlert` `softButtons`|
-|menuCommandSecondaryText|33|Secondary text for AddCommand|
-|menuCommandTertiaryText|34|Tertiary text for AddCommand|
-|menuSubMenuSecondaryText|35|Secondary text for AddSubMenu|
-|menuSubMenuTertiaryText|36|Tertiary text for AddSubMenu|s
+|menuCommandSecondaryText|34|Secondary text for AddCommand|
+|menuCommandTertiaryText|35|Tertiary text for AddCommand|
+|menuSubMenuSecondaryText|36|Secondary text for AddSubMenu|
+|menuSubMenuTertiaryText|37|Tertiary text for AddSubMenu|s
 
 ### MetadataType
 
@@ -1368,6 +1368,7 @@
 |REMOVED|3|The status is selected if a door is physically removed|
 
 ### KeyboardInputMask
+
 |Name|Value|Description|
 |:---|:----|:----------|
 |ENABLE_INPUT_KEY_MASK|0||
