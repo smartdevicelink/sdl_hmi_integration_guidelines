@@ -139,7 +139,7 @@
 |menuCommandSecondaryText|34|Secondary text for AddCommand|
 |menuCommandTertiaryText|35|Tertiary text for AddCommand|
 |menuSubMenuSecondaryText|36|Secondary text for AddSubMenu|
-|menuSubMenuTertiaryText|37|Tertiary text for AddSubMenu|s
+|menuSubMenuTertiaryText|37|Tertiary text for AddSubMenu|
 
 ### MetadataType
 
