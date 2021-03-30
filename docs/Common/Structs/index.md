@@ -50,7 +50,7 @@
 |diagonalScreenSize|Float|false|minvalue: 0|The diagonal screen size in inches.|
 |pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
 |scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
-|preferredFPS|integer|false|minvalue: 0<br>maxvalue: 2147483647|The preferred frame rate per second of the head unit.|
+|preferredFPS|Integer|false|minvalue: 0<br>maxvalue: 2147483647|The preferred frame rate per second of the head unit.|
 |additionalVideoStreamingCapabilities|Common.VideoStreamingCapability|false|array: true<br>minsize: 1<br>maxsize: 100||
 
 ### DynamicUpdateCapabilities
@@ -1112,7 +1112,7 @@ There are no defined parameters for this struct
 |softButtonCapabilities|Common.SoftButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of soft buttons available on-window and the capabilities for each button.|
 |menuLayoutsAvailable|[Common.MenuLayout](../enums/#menulayout)|false|array: true<br>minsize: 1<br>maxsize: 1000|An array of available menu layouts. If this parameter is not provided, only the `LIST` layout is assumed to be available|
 |dynamicUpdateCapabilities|Common.DynamicUpdateCapabilities|false||Contains the head unit's capabilities for dynamic updating features declaring if the module will send dynamic update RPCs|
-|keyboardCapabilities|[Common.KeyboardCapabilities](../structs/#keyboardcapabilities)|false||See KeyboardCapabilities|
+|keyboardCapabilities|Common.KeyboardCapabilities|false||See KeyboardCapabilities|
 
 ### ModuleInfo
 
@@ -1239,7 +1239,7 @@ There are no defined parameters for this struct
 |:---|:---|:--------|:---------|:----------|
 |externalTemperature|Common.Temperature|false||The external temperature in degrees celsius|
 |cabinTemperature|Common.Temperature|false||Internal ambient cabin temperature in degrees celsius|
-|atmosphericPressure|float|false|minvalue: 0<br>maxvalue: 2000|Current atmospheric pressure in mBar|
+|atmosphericPressure|Float|false|minvalue: 0<br>maxvalue: 2000|Current atmospheric pressure in mBar|
 
 ### KeyboardCapabilities
 
