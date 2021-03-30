@@ -41,7 +41,7 @@ The UI.SetMediaClockTimer request indicates either an initial value for the medi
 !!!
 
 !!! NOTE
-By default the seek indicators should be `TRACK` when:
+By default, `forwardSeekIndicator` and `backSeekIndicator` should be set to `TRACK`. The HMI should reset these values to `TRACK` when:
 
 - The media app is newly registered on the head unit (after `RegisterAppInterface` and the button subscription).
 - The media app was closed by the user (App enters HMI level `NONE`).
