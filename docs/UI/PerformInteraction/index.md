@@ -15,8 +15,8 @@ A request sent by SDL to display a list of choices to the user.
 
   1. Display the choices in `choiceSet` to the user reasonably according to the `interactionLayout`
   2. Wait until the user responds or the request times out to respond to SDL
-  2. Include the `choiceID` of the chosen option in the response to SDL
-  3. If the interaction times out, respond with a success and no `choiceID` parameter to SDL
+  3. Include the `choiceID` of the chosen option (or `manualTextEntry` when using `KEYBOARD` layout) in the response to SDL
+  4. If the interaction times out, respond with a success and no `choiceID` parameter to SDL
 
 !!!
 

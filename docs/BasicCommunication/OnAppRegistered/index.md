@@ -19,7 +19,6 @@ Regarding data resumption:
 
 Data resumption means that an application may request to restore data used in the previous ignition cycle after an `Unexpected Disconnect`.
 
-
   * For data resumption purposes, SDL must store application-related data such as commands, application global properties, and show data for the past three ignition cycles after an `Unexpected Disconnect` or `Ignition Off`. On the fourth  `Ignition On`, SDL clears all corresponding application-related data used for resumption.
   * HMI must store the <abbr title="Voice Recognition">VR</abbr> grammar compiled for applications that are unregistered by an `Unexpected Disconnect` or `Ignition Off`.
   * During data resumption, the HMI may also have to resume the previous audio source. Refer to `BC.OnResumeAudioSource`.
@@ -55,6 +54,10 @@ If the application does NOT resume data successfully:
   * SDL cleans up all previously stored application data for the application that failed to resume. The HMI must also clean up previously compiled `VRGrammars` for the application.
   * The application will send new data to start SDL operations. In this event, SDL and the HMI should restart the cycle of collecting application data for resumption.
 
+!!! NOTE
+The application is not given a valid HMI state or registration response by SDL until the resumption process is complete, so any notifications directed at the application (such as [BC.OnSystemRequest](../onsystemrequest)) should not be sent until the app is listed in a [BC.UpdateAppList](../updateapplist) request.
+!!!
+
 !!! MUST
 
   1. Update its list of registered applications.
@@ -76,7 +79,7 @@ If the application does NOT resume data successfully:
 !!!
 
 !!! NOTE
-SDL Apps that are using the websocket transport adapter will send `OnAppRegistered` after the user has activated the app and the websocket connection is opened. The HMI should not use `OnAppRegistered` for updating the available apps in the app list. [BC.UpdateAppList](../UpdateAppList) should be used for updating the app list. 
+SDL Apps that are using the websocket transport adapter will send `OnAppRegistered` after the user has activated the app and the websocket connection is opened. The HMI should not use `OnAppRegistered` for updating the available apps in the app list. [BC.UpdateAppList](../UpdateAppList) should be used for updating the app list.
 !!!
 
 ### Notification
