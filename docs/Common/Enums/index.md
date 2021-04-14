@@ -9,6 +9,8 @@
 |ENTRY_VOICE|2||
 |ENTRY_CANCELLED|3||
 |ENTRY_ABORTED|4||
+|INPUT_KEY_MASK_ENABLED|5||
+|INPUT_KEY_MASK_DISABLED|6||
 
 ### FuelCutoffStatus
 
@@ -129,10 +131,15 @@
 |locationDescription|26|Optional description of intended location / establishment *(applies to SendLocation)*|
 |addressLines|27|Optional location address *(applies to SendLocation)*|
 |phoneNumber|28|Optional phone number of intended location / establishment *(applies to SendLocation)*|
-|timeToDestination|29||
-|turnText|30||
-|navigationText|31|Navigation text for UpdateTurnList|
-|notificationText|32|Text of notification to be displayed on screen|
+|timeToDestination|29|Optional time to destination field for ShowConstantTBT|
+|turnText|30|Turn text for turnList parameter of UpdateTurnList|
+|subtleAlertText1|31|The first line of the subtle alert text field; applies to `SubtleAlert` `alertText1`|
+|subtleAlertText2|32|The second line of the subtle alert text field; applies to `SubtleAlert` `alertText2`|
+|subtleAlertSoftButtonText|33|A text field in the soft button of a subtle alert; applies to `SubtleAlert` `softButtons`|
+|menuCommandSecondaryText|34|Secondary text for AddCommand|
+|menuCommandTertiaryText|35|Tertiary text for AddCommand|
+|menuSubMenuSecondaryText|36|Secondary text for AddSubMenu|
+|menuSubMenuTertiaryText|37|Tertiary text for AddSubMenu|
 
 ### MetadataType
 
@@ -187,6 +194,7 @@
 |QWERTY|0||
 |QWERTZ|1||
 |AZERTY|2||
+|NUMERIC|3||
 
 ### MenuLayout
 
@@ -858,6 +866,9 @@
 |locationImage|12|The optional image of a destination / location|
 |alertIcon|13|The image field for Alert|
 |subMenuIcon|14|The image field for AddSubMenu.menuIcon|
+|subtleAlertIcon|15|The image of the subtle alert; applies to `SubtleAlert` `alertIcon`|
+|menuCommandSecondaryImage|16|The secondary image field for AddCommand|
+|menuSubMenuSecondaryImage|17|The secondary image field for AddSubMenu|
 
 ### VehicleDataType
 
@@ -899,6 +910,8 @@
 |VEHICLEDATA_STABILITYCONTROLSSTATUS|33||
 |VEHICLEDATA_WINDOWSTATUS|34||
 |VEHICLEDATA_HANDSOFFSTEERING|35||
+|VEHICLEDATA_SEATOCCUPANCY|36||
+|VEHICLEDATA_CLIMATEDATA|37||
 
 ### VideoStreamingProtocol
 
@@ -1337,3 +1350,33 @@
 |LITERS|0||
 |KILOWATTHOURS|1||
 |KILOGRAMS|2||
+
+### SeekIndicatorType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|TRACK|0||
+|TIME|1||
+
+### DoorStatusType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|CLOSED|0|The status is selected if a door is closed and unlocked or <br> if a door is closed and unknown locked state|
+|LOCKED|1|The status is selected if a door is closed and locked|
+|AJAR|2|The status is selected if a door is open|
+|REMOVED|3|The status is selected if a door is physically removed|
+
+### KeyboardInputMask
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|ENABLE_INPUT_KEY_MASK|0||
+|DISABLE_INPUT_KEY_MASK|1||
+|USER_CHOICE_INPUT_KEY_MASK|2||
+
+### AppCapabilityType
+
+|Name|Value|Description|
+|:---|:----|:----------|
+|VIDEO_STREAMING|0||

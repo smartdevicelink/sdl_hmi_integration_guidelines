@@ -50,6 +50,8 @@
 |diagonalScreenSize|Float|false|minvalue: 0|The diagonal screen size in inches.|
 |pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
 |scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
+|preferredFPS|Integer|false|minvalue: 0<br>maxvalue: 2147483647|The preferred frame rate per second of the head unit.|
+|additionalVideoStreamingCapabilities|Common.VideoStreamingCapability|false|array: true<br>minsize: 1<br>maxsize: 100||
 
 ### DynamicUpdateCapabilities
 
@@ -81,6 +83,8 @@
 |parentID|Integer|false|minvalue: 0<br>maxvalue: 2000000000||
 |position|Integer|false|minvalue: 0<br>maxvalue: 1000||
 |menuName|String|true|maxlength: 500||
+|secondaryText|String|false|maxlength: 500||
+|tertiaryText|String|false|maxlength: 500||
 
 ### TireStatus
 
@@ -174,6 +178,8 @@
 |keypressMode|[Common.KeypressMode](../enums/#keypressmode)|false|||
 |limitedCharacterList|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 1||
 |autoCompleteList|String|false|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 1000||
+|maskInputCharacters|[Common.KeyboardInputMask](../enums/#keyboardinputmask)|false||Allows an app to mask entered characters on HMI|
+|customKeys|String|false|maxlength: 1<br>minsize: 1<br>maxsize: 10<br>array: true|Array of special characters to show in customizable Keys.<br>If omitted, keyboard will show default special characters.|
 
 ### Choice
 
@@ -299,13 +305,16 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|parkBrakeActive|Boolean|true|||
-|ignitionStableStatus|[Common.IgnitionStableStatus](../enums/#ignitionstablestatus)|true|||
-|ignitionStatus|[Common.IgnitionStatus](../enums/#ignitionstatus)|true|||
-|driverDoorAjar|Boolean|false|||
-|passengerDoorAjar|Boolean|false|||
-|rearLeftDoorAjar|Boolean|false|||
-|rearRightDoorAjar|Boolean|false|||
+|parkBrakeActive|Boolean|true||If mechanical park brake is active, true. Otherwise false.|
+|ignitionStableStatus|[Common.IgnitionStableStatus](../enums/#ignitionstablestatus)|true||Provides information on status of ignition stable switch. See IgnitionStableStatus.|
+|ignitionStatus|[Common.IgnitionStatus](../enums/#ignitionstatus)|true||Provides information on current ignitiion status. See IgnitionStatus.|
+|driverDoorAjar|Boolean|false||References signal "DrStatDrv_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|passengerDoorAjar|Boolean|false||References signal "DrStatPsngr_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|rearLeftDoorAjar|Boolean|false||References signal "DrStatRl_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|rearRightDoorAjar|Boolean|false||References signal "DrStatRr_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|doorStatuses|Common.DoorStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for doors if Ajar/Closed/Locked|
+|gateStatuses|Common.GateStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for trunk/hood/etc. if Ajar/Closed/Locked|
+|roofStatuses|Common.RoofStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for roof/convertible roof/sunroof/moonroof etc., if Closed/Ajar/Removed etc.|
 
 ### BeltStatus
 
@@ -1103,6 +1112,7 @@ There are no defined parameters for this struct
 |softButtonCapabilities|Common.SoftButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of soft buttons available on-window and the capabilities for each button.|
 |menuLayoutsAvailable|[Common.MenuLayout](../enums/#menulayout)|false|array: true<br>minsize: 1<br>maxsize: 1000|An array of available menu layouts. If this parameter is not provided, only the `LIST` layout is assumed to be available|
 |dynamicUpdateCapabilities|Common.DynamicUpdateCapabilities|false||Contains the head unit's capabilities for dynamic updating features declaring if the module will send dynamic update RPCs|
+|keyboardCapabilities|Common.KeyboardCapabilities|false||See KeyboardCapabilities|
 
 ### ModuleInfo
 
@@ -1179,3 +1189,75 @@ There are no defined parameters for this struct
 |:---|:---|:--------|:---------|:----------|
 |location|Common.Grid|true|||
 |state|Common.WindowState|true|||
+
+### SeekStreamingIndicator
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|type|[Common.SeekIndicatorType](../enums/#seekindicatortype)|true|||
+|seekTime|Integer|false|minvalue: 1<br>maxvalue: 99|If the type is TIME, this number of seconds may be present alongside the skip indicator. It will indicate the number of seconds that the currently playing media will skip forward or backward.|
+
+### DoorStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true||Describes the status of a location of a door.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a door.|
+
+### GateStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true||Describes the status of location of trunk/hood/etc.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of trunk/hood/etc.|
+
+### RoofStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+|state|Common.WindowState|false||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+
+### SeatStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|seatLocation|Common.SeatLocation|true|||
+|conditionActive|Boolean|true|||
+
+### SeatOccupancy
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|seatsOccupied|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are occupied.|
+|seatsBelted|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are belted.|
+
+### ClimateData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|externalTemperature|Common.Temperature|false||The external temperature in degrees celsius|
+|cabinTemperature|Common.Temperature|false||Internal ambient cabin temperature in degrees celsius|
+|atmosphericPressure|Float|false|minvalue: 0<br>maxvalue: 2000|Current atmospheric pressure in mBar|
+
+### KeyboardCapabilities
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|maskInputCharactersSupported|Boolean|false||Availability of capability to mask input characters using keyboard.<br>True: Available, False: Not Available.|
+|supportedKeyboards|Common.KeyboardLayoutCapability|false|minsize: 1<br>maxsize: 1000<br>array: true|Capabilities of supported keyboard layouts by HMI.|
+
+### KeyboardLayoutCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|keyboardLayout|[Common.KeyboardLayout](../enums/#keyboardlayout)|true|||
+|numConfigurableKeys|Integer|true|minvalue: 0<br>maxvalue: 10|Number of keys available for special characters, App can customize as per their needs.|
+
+### AppCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|appCapabilityType|[Common.AppCapabilityType](../enums/#appcapabilitytype)|true||Used as a descriptor of what data to expect in this struct. The corresponding param to this enum should be included and the only other param included|
+|videoStreamingCapability|Common.VideoStreamingCapability|false||Describes supported capabilities for video streaming|
