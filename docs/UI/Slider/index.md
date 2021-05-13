@@ -84,6 +84,8 @@ Slider with OK Button press
 }
 ```
 
+#### Example Response (Timeout)
+
 ```json
 {
   "id" : 133,
@@ -91,7 +93,7 @@ Slider with OK Button press
   "result" :
   {
     "sliderPosition" : 5,
-    "code" : 5,
+    "code" : 10,
     "method" : "UI.Slider"
   }
 }
