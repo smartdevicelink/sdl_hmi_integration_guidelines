@@ -84,24 +84,22 @@ Slider with OK Button press
 }
 ```
 
-#### Example Error
+#### Example Response (Timeout)
 
 ```json
 {
   "id" : 133,
   "jsonrpc" : "2.0",
-  "error" :
+  "result" :
   {
-    "code" : 5,
-    "message" : "A command was aborted due to user interaction",
-    "data" :
-    {
-      "sliderPosition" : 5,
-      "method" : "UI.Slider"
-    }
+    "sliderPosition" : 5,
+    "code" : 10,
+    "method" : "UI.Slider"
   }
 }
 ```
+
+#### Example Error
 
 ```json
 {
