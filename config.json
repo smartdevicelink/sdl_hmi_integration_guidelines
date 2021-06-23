@@ -1,4 +1,4 @@
-{
+﻿{
     "Authors": ["Anastasiya Britanova", "Justin Dickow", "Nicolas(Yifei) Li"],
     "languages": ["en"],
     "navigation": [
@@ -136,6 +136,9 @@
             },
             {
               "name": "OnAppCapabilityUpdated"
+            },
+            {
+              "name": "OnResetTimeout"
             }
           ]
         },
@@ -290,9 +293,6 @@
               "name": "OnLanguageChange"
             },
             {
-              "name": "OnResetTimeout"
-            },
-            {
               "name": "SetGlobalProperties"
             },
             {
@@ -368,9 +368,6 @@
             },
             {
               "name": "OnRecordStart"
-            },
-            {
-              "name": "OnResetTimeout"
             },
             {
               "name": "OnSubtleAlertPressed"
