@@ -1,0 +1,28 @@
+
+participant App
+participant SDL
+participant HMI
+
+note over App,HMI:<align:center> **//Pre-conditions://** 1. appID is successfully registered\n2.appID is active on HMI
+
+App->SDL:<align:center>ScrollableMessage\n(messageText, timeout, appID)
+SDL->HMI:<align:center>UI.ScrollableMessage\n(messageText, timeout, appID)
+
+note over HMI:<align:center>Display the popup or full\nscreen overlay\nwith the message Text
+
+HMI->>SDL:UI.OnSystemContext(HMI_OBSCURED)
+SDL->>App:OnHMIStatus(HMI_OBSCURED)
+
+note over HMI:<align:center>User scrolls the message
+
+note over HMI:<align:center>Renew the timeout of\nScrollableMessage
+
+HMI->>SDL: BC.OnResetTimeout(appID, "ScrollableMessage")
+
+note over HMI:Timeout
+note over HMI:<align:center>Close the message\n popup/screen
+
+HMI-->SDL:UI.ScrollableMessage(SUCCESS)
+SDL-->App:ScrollableMessage(SUCCESS)
+HMI->>SDL:UI.OnSystemContext(MAIN)
+SDL->>App:OnSystemContext(MAIN)

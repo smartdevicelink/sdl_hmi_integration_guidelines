@@ -31,6 +31,8 @@ RC.SetInteriorVehicleData represents a request from an application to change set
 
 ### Response
 
+In case HMI needs more time for processing RC.SetInteriorVehicleData request, HMI must send BC.OnResetTimeout notification to SDL for reseting timeout.
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|Description|

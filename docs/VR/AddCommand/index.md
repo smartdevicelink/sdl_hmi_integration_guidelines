@@ -43,6 +43,8 @@ During data resumption SDL sends VR.AddCommands to HMI by `internal_consecutiveN
 
 ### Response
 
+In case HMI needs more time for processing VR.AddCommand request (because of big number of `vrCommands`), HMI must send OnResetTimeout notification to SDL for reseting timeout.
+
 #### Parameters
 
 This RPC has no additional parameter requirements
