@@ -27,6 +27,12 @@ The HMI will have to update this field if the user chooses to reset this value (
 
 !!!
 
+!!! note
+
+In case an application is registered with msg versions earlier than 8.0.0 and HMI does not provide the values for the params of `TireStatus` structure, SDL provides the default values to the application.
+
+!!!
+
 ### Notification
 
 #### Parameters
