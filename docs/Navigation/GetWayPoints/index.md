@@ -15,7 +15,7 @@ SDL forwards a request from the mobile application to get waypoint/destination d
 
 !!! MUST
 1. Accept requests for getting details of active destination and waypoints and provide details in response to the request.
-2. Send [UI.OnResetTimeout](../../ui/onresettimeout) to SDL in case HMI needs more time for processing `GetWayPoints` request.
+2. Send [BC.OnResetTimeout](../../basiccommunication/onresettimeout) to SDL in case HMI needs more time for processing `GetWayPoints` request.
 !!!
 
 **SDL Note:** In case HMI does not respond to this request within SDL's default timeout (10s by default, [UI.OnResetTimeout](../../ui/onresettimeout) will reset this), SDL will return `GENERIC_ERROR` code to the corresponding mobile app's request

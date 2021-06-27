@@ -19,6 +19,8 @@ Otherwise, SDL responds to the request with the cached data without forwarding i
 
 The HMI should return interior vehicle data that corresponds to the requested module (`moduleId` + `moduleType`).
 
+The HMI should send `BC.OnResetTimeout` notification to SDL for reseting timeout in case HMI needs more time for processing the request.
+
 During the data resumption process, SDL sends GetInteriorVehicleData(subscribe=true) request to the HMI and stores data received from the HMI in cache.
 
 ### Request

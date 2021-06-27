@@ -29,7 +29,12 @@ The parameter `type` included in the `VR.AddCommand` request is the differentiat
 
 During data resumption SDL sends VR.AddCommands to HMI by `internal_consecutiveNumber` in the same order as they were created by mobile app in previous ignition cycle.
 
+!!! must
+
+Renew the timeout informing SDL about this event via `BC.OnResetTimeout` notification in case it requires more time for processing `VR.AddCommand` request (due to a batch of `vrCommands`).
+
 !!!
+
 
 #### Parameters
 
@@ -42,8 +47,6 @@ During data resumption SDL sends VR.AddCommands to HMI by `internal_consecutiveN
 |appID|Integer|false||
 
 ### Response
-
-In case HMI needs more time for processing VR.AddCommand request (because of big number of `vrCommands`), HMI must send OnResetTimeout notification to SDL for reseting timeout.
 
 #### Parameters
 

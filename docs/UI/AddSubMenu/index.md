@@ -13,16 +13,17 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
 
 !!! must
 
-  1. The sub menu sent for the application via AddCommand must be accessible from a Menu
-  2. If the user selects a sub menu item from the application's menu, the HMI must display all commands added via [UI.AddCommand](../addcommand) which share a `menuParams.parentID` with the menu's `menuID`
-  3. Store the data provided in this RPC with the requesting application's appID
-  4. Persist the stored data for the duration of the ignition cycle
-  5. Add the command to the application's menu at the position specified in the `menuParams`
+  1. The sub menu sent for the application via AddCommand must be accessible from a Menu.
+  2. If the user selects a sub menu item from the application's menu, the HMI must display all commands added via [UI.AddCommand](../addcommand) which share a `menuParams.parentID` with the menu's `menuID`.
+  3. Store the data provided in this RPC with the requesting application's appID.
+  4. Persist the stored data for the duration of the ignition cycle.
+  5. Add the command to the application's menu at the position specified in the `menuParams`.
   6. Display images on sub menus if provided by the application.
   7. Provide a WARNINGS information to the application that the SubMenu was added but no image was displayed.
   8. Scale the image to ensure it fits properly in the space allocated for the display of the image. If the image does not fit properly even after scaling, the HMI shall not display any image on the submenu.
   9. If a new submenu contains a parentID parameter, the new submenu must be nested inside the submenu specified by the parentID.
   10. When driver distraction state is enabled, submenus that are deeper than the [subMenuDepth](../../common/struct/#driverdistractioncapability) driver distraction limit must be disabled and inaccessible to the user.
+  11. Send `BC.OnResetTimeout` notification to SDL for reseting timeout in case HMI needs more time for processing the request.
 !!!
 
 !!! note

@@ -13,37 +13,38 @@ Purpose
 HMI can send this notification used by functions in all interfaces to notify that timeout needs to be reset.
 
 !!! must
-  * send OnResetTimeout to SDL in case HMI needs more time for processing a request from mobile application
-  * fine tune the wait time per method call as needed
-  * control number of reset timeouts and duration of each reset timeout for endless or finite method timeout
+
+  1. Send BC.OnResetTimeout to SDL in case HMI needs more time for processing a request from mobile application.
+  2. Fine tune the wait time per method call as needed.
+  3. Control number of reset timeouts and duration of each reset timeout for endless or finite method timeout.
 
 !!!
 
-HMI can send OnResetTimeout to inform SDL that the timeout of **UI RPC** is reset by definite User's actions.
-
-!!! must
-  * send OnResetTimeout to SDL upon every Users keypress processing UI.PerfromInteraction(layoutMode:KEYBOARD) request 
-  * send OnResetTimeout to SDL upon Users actions over the message (e.g. scrolling) processing UI.ScrollableMessage request
-  * send OnResetTimeout to SDL upon KEEP_CONTEXT soft button (defined within UI.ScrollableMessage RPC) press
-!!!
-
-HMI can send OnResetTimeout to reset the timeout for some **TTS RPC** running on HMI (e.g.Speak).  
-SDL's default timeout for any response from HMI is 10 seconds. So it needs to know if some TTS RPC is still running on HMI to predict sending wrong response by timeout. OnResetTimeout notifies SDL to reset the timeout for some TTS RPC running on HMI (e.g.Speak).
-
-!!! must
-  * send OnResetTimeout to SDL in case HMI speak event lasts longer than 10 seconds
-!!!
-
-_Note: Currently there is no version negotiation between HMI and Core, so older HMI implementations will not work with this new version of Core._
+_Note: Currently, there is no version negotiation between HMI and Core, so older HMI implementations will not work with Core_8.0 version._
 
 #### Parameters
-|Name|Type|Mandatory|Additional|
-|:---|:---|:--------|:---------|
-|requestID|Integer|true|minvalue="0" maxvalue="65535"|
-|methodName|String|true||
-|resetPeriod|Integer|false| minvalue="0" maxvalue="1000000" |
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:---------|
+|requestID|Integer|true||Id between HMI and SDL which SDL used to send the request for method in question, for which timeout needs to be reset|
+|methodName|String|true||Name of the function for which timeout needs to be reset|
+|resetPeriod|Integer|false| minvalue="0" maxvalue="1000000"|Timeout period in milliseconds, for the method for which timeout needs to be reset.<br>If omitted, timeout would be reset by defaultTimeout specified in smartDeviceLink.ini|
 
 ### Sequence Diagrams
+
+|||
+OnResetTimeout during PerformInteraction
+![OnResetTimeout](./assets/OnResetTimeoutPerformInteraction.png)
+|||
+
+|||
+OnResetTimeout during ScrollableMessage
+![OnResetTimeout](./assets/OnResetTimeoutScrollableMessage.png)
+|||
+
+|||
+OnResetTimeout KEEP_CONTEXT during alert
+![OnResetTimeout](./assets/OnResetTimeoutKeepContextAlert.png)
+|||
 
 #### JSON Example Notification
 ```json

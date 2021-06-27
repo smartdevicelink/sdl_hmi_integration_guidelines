@@ -14,7 +14,8 @@ In order to work with multiple widget windows, the app needs to be able to delet
 !!! must
 
 1. Delete requested window.
-2. Not delete the default main window on the main display. 
+2. Not delete the default main window on the main display.
+3. Send `BC.OnResetTimeout` notification to SDL for reseting timeout in HMI it needs more time for processing the request.
 
 !!!
 

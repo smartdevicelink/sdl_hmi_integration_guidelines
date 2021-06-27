@@ -18,6 +18,7 @@ SDL sends `AlertManeuver` together with [TTS.Speak](../../tts/speak). The purpos
     * Up to three soft buttons defined within the `softButtons` parameter.
     * HMI-defined `Close` soft button if a request without `softButtons` is received.
   3. Process `SystemContext` behavior for `AlertManeuver` in the same way an `Alert` is handled.
+  4. Send `BC.OnResetTimeout` notification to SDL for reseting timeout in case HMI needs more time for processing the request.
 
 !!!
 
@@ -34,7 +35,7 @@ SDL sends `AlertManeuver` together with [TTS.Speak](../../tts/speak). The purpos
 
 !!! NOTE
 
-If the HMI does not respond to SDL's request, after the default timeout occurs SDL will send `GENERIC_ERROR` to the corresponding mobile application.
+If the HMI does not respond to SDL's request, after the timeout, SDL will send `GENERIC_ERROR` to the corresponding mobile application.
 
 !!!
 

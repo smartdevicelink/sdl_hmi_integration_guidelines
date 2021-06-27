@@ -11,6 +11,12 @@ Purpose
 
 ### Request
 
+!!! must
+
+Send `BC.OnResetTimeout` notification to SDL for reseting timeout in case HMI needs more time for processing the request.
+
+!!!
+
 #### Parameters
 
 This RPC has no additional parameter requirements

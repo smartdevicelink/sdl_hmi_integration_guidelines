@@ -12,7 +12,8 @@ Purpose
 ### Request
 
 !!! MUST
-Stop sending waypoint updates to SDL
+1. Stop sending waypoint updates to SDL
+2. Send `BC.OnResetTimeout` notification to SDL for reseting timeout in case HMI needs more time for processing the request
 !!!
 
 #### Parameters
