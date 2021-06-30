@@ -19,7 +19,7 @@ SDL sends the `UI.SubtleAlert` RPC when some information needs to be displayed t
   4. Respond to the SubtleAlert earlier than SDL's default timeout of 10 seconds - applicable only to alerts without `softButtons`.
   5. Display the notification dialog with the text information in the `alertStrings` array and optional `softButtons`.
   6. Send [Buttons.OnButtonPress](../../buttons/onbuttonpress) and/or [Buttons.OnButtonEvent](../../buttons/onbuttonevent) notifications if soft buttons associated with the notification are pressed by the user.
-  7. Send BC.OnResetTimeout notification to SDL for reseting timeout in case HMI needs more time for processing UI.SubtleAlert request.
+  7. Send `BC.OnResetTimeout` notification to SDL for reseting timeout in case HMI needs more time for processing `UI.SubtleAlert` request.
   8. Dismiss the alert after the duration has passed since receipt of the request and send a `TIMED_OUT` response to SDL.
 
 !!!

@@ -26,7 +26,7 @@ SDL looks to see if the phone number entered is correct before passing to the HM
   3. Send the notification BC.OnOnPhoneCall(isActive:true) to SDL when the phone call is started on the HMI.
   3. Send the notification BC.OnOnPhoneCall(isActive:false) to SDL when the phone call is ended on the HMI.
   4. Always respond to BC.DialNumber with a response code. If the HMI does not respond, the mobile application will never get a response from from SDL because default timeouts do not apply to the DialNumber mobile API.
-  5. Send the notification BC.OnResetTimeout to SDL for reseting timeout in case HMI needs more time for processing BC.DialNumber request.
+  5. Send the notification `BC.OnResetTimeout` to SDL for reseting timeout in case HMI needs more time for processing `BC.DialNumber` request.
 
 !!!
 

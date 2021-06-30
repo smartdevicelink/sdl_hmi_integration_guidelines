@@ -25,7 +25,7 @@ Purpose
 
 ### Response
 
-In case HMI needs more time to get input from user for processing UI.Slider request, HMI must send BC.OnResetTimeout notification to SDL for reseting timeout. 
+In case HMI needs more time to get input from user for processing `UI.Slider` request, HMI must send `BC.OnResetTimeout` notification to SDL for reseting timeout. 
 
 #### Parameters
 

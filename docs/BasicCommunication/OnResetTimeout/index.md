@@ -14,7 +14,7 @@ HMI can send this notification used by functions in all interfaces to notify tha
 
 !!! must
 
-  1. Send BC.OnResetTimeout to SDL in case HMI needs more time for processing a request from mobile application.
+  1. Send `BC.OnResetTimeout` to SDL in case HMI needs more time for processing a request from mobile application.
   2. Fine tune the wait time per method call as needed.
   3. Control number of reset timeouts and duration of each reset timeout for endless or finite method timeout.
 

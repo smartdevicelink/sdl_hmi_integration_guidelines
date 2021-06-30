@@ -16,8 +16,8 @@ Purpose
 2. Send a `SUCCESS` response to SDL in case the destination data has been obtained.
 3. Ignore`<deliveryMode>`, `<timeStampParams>`,`<address>` parameters  in case HMI does not support them  (note: app will not know whether the whole information was processed by HMI)
 4. Respond with `WARNINGS` and “info: were not processed”” to SDL in case HMI partially supports `<deliveryMode>`, `<timeStampParams>`,`<address>`(SDL will transfer it to mobile app)
-5. Respond with `REJECTED` result code to SDL in case HMI is currently busy with a higher-priority event or other reasons defined for the mentioned resultCode by HMI.
-6. Send OnResetTimeout notification to SDL for reseting timeout in case HMI needs more time for processing user's selection.
+5. Respond with `REJECTED` result code to SDL in case HMI is currently busy with a higher-priority event or other reasons defined for the mentioned resultCode by HMI
+6. Send `OnResetTimeout` notification to SDL for reseting timeout in case HMI needs more time for processing user's selection
 
 ### Request
 
