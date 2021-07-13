@@ -1,4 +1,4 @@
-{
+﻿{
     "Authors": ["Anastasiya Britanova", "Justin Dickow", "Nicolas(Yifei) Li"],
     "languages": ["en"],
     "navigation": [
@@ -152,7 +152,10 @@
               "name": "OnButtonPress"
             },
             {
-              "name": "OnButtonSubscription"
+              "name": "SubscribeButton"
+            },
+            {
+              "name": "UnsubscribeButton"
             },
             {
               "name": "ButtonPress"
