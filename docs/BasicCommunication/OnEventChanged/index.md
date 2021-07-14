@@ -29,7 +29,7 @@ Upon receiving `OnEventChanged(PHONE_CALL)`, SDL will:
 
 |isActive|Result|
 |:-------|:-----|
-|true|Keep the HMI state of all applications but change audible state of all applications to NOT_AUDIBLE|
+|true|Move all apps with audioStreamingState AUDIBLE to NOT_AUDIBLE|
 |false|Return applications to the same HMI state they had prior to the event|
 
 #### EMERGENCY_EVENT
