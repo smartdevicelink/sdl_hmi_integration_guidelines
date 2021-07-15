@@ -75,7 +75,7 @@ The HMI will have to update this field if the user chooses to reset this value (
 
 !!! note
 
-In case an application is registered with msg versions earlier than 8.0.0 and HMI does not provide the values for the params of `TireStatus` structure in GetVehicleData_response, SDL provides the default values to the application.
+In case an application is registered with RPC Spec message versions earlier than 8.0.0 and HMI does not provide the values for the params of `TireStatus` structure in GetVehicleData_response, SDL Core provides the default values to the application.
 
 !!!
 
