@@ -18,7 +18,7 @@ SDL uses `OnEventChanged` notification to appropriately manage the hmiLevel and 
 !!! MUST
 1. Send notification with appropriate parameter value when active call on HMI has been started/ended.
 
-2. Resume the applications to their original audio streaming state prior to the phone call event in the HMI when the event ends (see note below).
+2. Return the applications to their appropriate audio streaming state in the HMI when the event ends.
 !!!
 
 !!! NOTE
