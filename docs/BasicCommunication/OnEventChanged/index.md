@@ -32,7 +32,7 @@ Upon receiving `OnEventChanged(PHONE_CALL)`, SDL will:
 |isActive|Result|
 |:-------|:-----|
 |true|Change the HMI state of all media applications currently either in FULL or LIMITED to (BACKGROUND, NOT_AUDIBLE) and all navi/projection apps to (LIMITED, NOT_AUDIBLE, STREAMABLE)|
-|false|Return applications to the same HMI state they had prior to the event|
+|false|Remove all HMI state modifications that were applied during the event from each application|
 
 #### EMERGENCY_EVENT
 
@@ -47,7 +47,7 @@ Upon receiving `OnEventChanged(EMERGENCY_EVENT)`, SDL will:
 |isActive|Result|
 |:-------|:-----|
 |true|Move all apps with audioStreamingState AUDIBLE or STREAMABLE to NOT_AUDIBLE and NOT_STREAMABLE|
-|false|Return applications to the same HMI state they had prior to the event|
+|false|Remove all HMI state modifications that were applied during the event from each application|
 
 !!! NOTE
 While the event is active, the app is not allowed to stream audio and it will not be heard by the user (due to other audio and/or system events blocking it).
@@ -65,7 +65,7 @@ Upon receiving `OnEventChanged(DEACTIVATE_HMI)`, SDL will:
 |isActive|Result|
 |:-------|:-----|
 |true|Change the hmiLevel of all applications currently in (FULL/LIMITED) to (BACKGROUND, NOT_AUDIBLE, NOT_STREAMABLE)|
-|false|Return applications to the same HMI state they had prior to the event|
+|false|Remove all HMI state modifications that were applied during the event from each application|
 
 !!! NOTE
 When this event is active, SDL **rejects** all app activation requests from the HMI.
