@@ -10,12 +10,19 @@ Purpose
 : Get the capabilities of buttons in the vehicle.
 
 ### Request
+SDL requests HMI to provide capabilities of supported buttons and saves received capabilities internally.
 
 #### Parameters
 
 This RPC has no additional parameter requirements
 
 ### Response
+
+!!! must  
+
+Check hmi_capabilities, and respond to SDL providing the capabilities of supported buttons.  
+
+!!!
 
 #### Parameters
 
