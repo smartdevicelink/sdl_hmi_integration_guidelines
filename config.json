@@ -1,588 +1,589 @@
 ﻿{
-    "Authors": ["Anastasiya Britanova", "Justin Dickow", "Nicolas(Yifei) Li"],
-    "languages": ["en"],
-    "navigation": [
-        {
-            "name": "Overview",
-            "name_zh-hans": "概述"
-        },
-        {
-          "name": "Getting Started",
-          "name_zh-hans": "入门"
-        },
-        {
-            "name": "WebSocket Transport",
-            "name_zh-hans": "连接到SmartDeviceLink"
-        },
-        {
-          "name": "BasicCommunication",
-          "navigation": [
-            {
-              "name": "UpdateDeviceList"
-            },
-            {
-              "name": "ActivateApp"
-            },
-            {
-              "name": "CloseApplication"
-            },
-            {
-              "name": "MixingAudioSupported"
-            },
-            {
-              "name": "SystemRequest"
-            },
-            {
-              "name": "GetSystemInfo"
-            },
-            {
-              "name": "OnReady"
-            },
-            {
-              "name": "OnStartDeviceDiscovery"
-            },
-            {
-              "name": "OnDeviceChosen"
-            },
-            {
-              "name": "DialNumber"
-            },
-            {
-              "name": "OnAppActivated"
-            },
-            {
-              "name": "OnAppDeactivated"
-            },
-            {
-              "name": "OnAppRegistered"
-            },
-            {
-              "name": "OnAppUnregistered"
-            },
-            {
-              "name": "OnAwakeSDL"
-            },
-            {
-              "name": "OnExitAllApplications"
-            },
-            {
-              "name": "OnExitApplication"
-            },
-            {
-              "name": "OnEventChanged"
-            },
-            {
-              "name": "OnFileRemoved"
-            },
-            {
-              "name": "OnFindApplications"
-            },
-            {
-              "name": "OnIgnitionCycleOver"
-            },
-            {
-              "name": "OnPutFile"
-            },
-            {
-              "name": "OnResumeAudioSource"
-            },
-            {
-              "name": "OnSDLClose"
-            },
-            {
-              "name": "OnSDLPersistenceComplete"
-            },
-            {
-              "name": "OnSystemInfoChanged"
-            },
-            {
-              "name": "OnSystemRequest"
-            },
-            {
-              "name": "OnUpdateDeviceList"
-            },
-            {
-              "name": "PolicyUpdate"
-            },
-            {
-              "name": "DecryptCertificate"
-            },
-            {
-              "name": "UpdateAppList"
-            },
-            {
-              "name": "OnSystemTimeReady"
-            },
-            {
-              "name": "GetSystemTime"
-            },
-            {
-              "name": "OnSystemCapabilityUpdated"
-            },
-            {
-              "name": "GetFilePath"
-            },
-            {
-              "name": "OnServiceUpdate"
-            },
-            {
-              "name": "GetAppProperties"
-            },
-            {
-              "name": "SetAppProperties"
-            },
-            {
-              "name": "OnAppPropertiesChange"
-            },
-            {
-              "name": "OnAppCapabilityUpdated"
-            }
-          ]
-        },
-        {
-          "name": "Buttons",
-          "navigation": [
-            {
-              "name": "GetCapabilities"
-            },
-            {
-              "name": "OnButtonEvent"
-            },
-            {
-              "name": "OnButtonPress"
-            },
-            {
-              "name": "SubscribeButton"
-            },
-            {
-              "name": "UnsubscribeButton"
-            },
-            {
-              "name": "ButtonPress"
-            }
-          ]
-        },
-        {
-          "name": "Navigation",
-          "navigation": [
-            {
-              "name": "AlertManeuver"
-            },
-            {
-              "name": "GetWayPoints"
-            },
-            {
-              "name": "SubscribeWayPoints"
-            },
-            {
-              "name": "UnsubscribeWayPoints"
-            },
-            {
-              "name": "OnWayPointChange"
-            },
-            {
-              "name": "IsReady"
-            },
-            {
-              "name": "OnAudioDataStreaming"
-            },
-            {
-              "name": "OnTBTClientState"
-            },
-            {
-              "name": "OnVideoDataStreaming"
-            },
-            {
-              "name": "SendLocation"
-            },
-            {
-              "name": "SetVideoConfig"
-            },
-            {
-              "name": "ShowConstantTBT"
-            },
-            {
-              "name": "StartAudioStream"
-            },
-            {
-              "name": "StartStream"
-            },
-            {
-              "name": "StopAudioStream"
-            },
-            {
-              "name": "StopStream"
-            },
-            {
-              "name": "UpdateTurnList"
-            }
-          ]
-        },
-        {
-          "name": "SDL",
-          "navigation": [
-            {
-              "name": "ActivateApp"
-            },
-            {
-              "name": "AddStatisticsInfo"
-            },
-            {
-              "name": "GetListOfPermissions"
-            },
-            {
-              "name": "GetStatusUpdate"
-            },
-            {
-              "name": "GetUserFriendlyMessage"
-            },
-            {
-              "name": "GetPolicyConfigurationData"
-            },
-            {
-              "name": "OnAllowSDLFunctionality"
-            },
-            {
-              "name": "OnAppPermissionChanged"
-            },
-            {
-              "name": "OnAppPermissionConsent"
-            },
-            {
-              "name": "OnDeviceStateChanged"
-            },
-            {
-              "name": "OnPolicyUpdate"
-            },
-            {
-              "name": "OnReceivedPolicyUpdate"
-            },
-            {
-              "name": "OnSDLConsentNeeded"
-            },
-            {
-              "name": "OnStatusUpdate"
-            },
-            {
-              "name": "OnSystemError"
-            },
-            {
-              "name": "UpdateSDL"
-            }
-          ]
-        },
-        {
-          "name": "TTS",
-          "navigation": [
-            {
-              "name": "ChangeRegistration"
-            },
-            {
-              "name": "GetCapabilities"
-            },
-            {
-              "name": "GetLanguage"
-            },
-            {
-              "name": "GetSupportedLanguages"
-            },
-            {
-              "name": "IsReady"
-            },
-            {
-              "name": "OnLanguageChange"
-            },
-            {
-              "name": "OnResetTimeout"
-            },
-            {
-              "name": "SetGlobalProperties"
-            },
-            {
-              "name": "Speak"
-            },
-            {
-              "name": "Started"
-            },
-            {
-              "name": "Stopped"
-            },
-            {
-              "name": "StopSpeaking"
-            }
-          ]
-        },
-        {
-          "name": "UI",
-          "navigation": [
-            {
-              "name": "AddCommand"
-            },
-            {
-              "name": "AddSubMenu"
-            },
-            {
-              "name": "Alert"
-            },
-            {
-              "name": "SubtleAlert"
-            },
-            {
-              "name": "CancelInteraction"
-            },
-            {
-              "name": "ChangeRegistration"
-            },
-            {
-              "name": "ClosePopUp"
-            },
-            {
-              "name": "DeleteCommand"
-            },
-            {
-              "name": "DeleteSubMenu"
-            },
-            {
-              "name": "EndAudioPassThru"
-            },
-            {
-              "name": "GetCapabilities"
-            },
-            {
-              "name": "GetLanguage"
-            },
-            {
-              "name": "GetSupportedLanguages"
-            },
-            {
-              "name": "IsReady"
-            },
-            {
-              "name": "OnCommand"
-            },
-            {
-              "name": "OnDriverDistraction"
-            },
-            {
-              "name": "OnKeyboardInput"
-            },
-            {
-              "name": "OnLanguageChange"
-            },
-            {
-              "name": "OnRecordStart"
-            },
-            {
-              "name": "OnResetTimeout"
-            },
-            {
-              "name": "OnSubtleAlertPressed"
-            },
-            {
-              "name": "OnSystemContext"
-            },
-            {
-              "name": "OnTouchEvent"
-            },
-            {
-              "name": "OnUpdateFile"
-            },
-            {
-              "name": "OnUpdateSubMenu"
-            },
-            {
-              "name": "PerformAudioPassThru"
-            },
-            {
-              "name": "PerformInteraction"
-            },
-            {
-              "name": "ScrollableMessage"
-            },
-            {
-              "name": "SendHapticData"
-            },
-            {
-              "name": "SetAppIcon"
-            },
-            {
-              "name": "SetDisplayLayout"
-            },
-            {
-              "name": "SetGlobalProperties"
-            },
-            {
-              "name": "SetMediaClockTimer"
-            },
-            {
-              "name": "Show"
-            },
-            {
-              "name": "ShowAppMenu"
-            },
-            {
-              "name": "Slider"
-            },
-            {
-              "name": "CreateWindow"
-            },
-            {
-              "name": "DeleteWindow"
-            }
-          ]
-        },
-        {
-          "name": "VehicleInfo",
-          "navigation": [
-            {
-              "name": "DiagnosticMessage"
-            },
-            {
-              "name": "GetDTCs"
-            },
-            {
-              "name": "GetVehicleData"
-            },
-            {
-              "name": "GetVehicleType"
-            },
-            {
-              "name": "IsReady"
-            },
-            {
-              "name": "OnVehicleData"
-            },
-            {
-              "name": "ReadDID"
-            },
-            {
-              "name": "SubscribeVehicleData"
-            },
-            {
-              "name": "UnsubscribeVehicleData"
-            }
-          ]
-        },
-        {
-          "name": "VR",
-          "navigation": [
-            {
-              "name": "AddCommand"
-            },
-            {
-              "name": "ChangeRegistration"
-            },
-            {
-              "name": "DeleteCommand"
-            },
-            {
-              "name": "GetCapabilities"
-            },
-            {
-              "name": "GetLanguage"
-            },
-            {
-              "name": "GetSupportedLanguages"
-            },
-            {
-              "name": "IsReady"
-            },
-            {
-              "name": "OnCommand"
-            },
-            {
-              "name": "OnLanguageChange"
-            },
-            {
-              "name": "PerformInteraction"
-            },
-            {
-              "name": "Started"
-            },
-            {
-              "name": "Stopped"
-            }
-          ]
-        },
-        {
-          "name": "RC",
-          "navigation": [
-            {
-              "name": "GetCapabilities"
-            },
-            {
-              "name": "GetInteriorVehicleData"
-            },
-            {
-              "name": "GetInteriorVehicleDataConsent"
-            },
-            {
-              "name": "IsReady"
-            },
-            {
-              "name": "OnInteriorVehicleData"
-            },
-            {
-              "name": "OnRemoteControlSettings"
-            },
-            {
-              "name": "SetInteriorVehicleData"
-            },
-            {
-              "name": "OnRCStatus"
-            },
-            {
-              "name": "SetGlobalProperties"
-            }
-          ]
-        },
-        {
-          "name": "AppService",
-          "navigation": [
-            {
-              "name": "PublishAppService"
-            },
-            {
-              "name": "UnpublishAppService"
-            },
-            {
-              "name": "GetAppServiceData"
-            },
-            {
-              "name": "OnAppServiceData"
-            },
-            {
-              "name": "PerformAppServiceInteraction"
-            },
-            {
-              "name": "GetActiveServiceConsent"
-            },
-            {
-              "name": "GetAppServiceRecords"
-            },
-            {
-              "name": "AppServiceActivation"
-            }
-          ]
-        },
-        {
-          "name": "Common",
-          "navigation": [
-            {
-              "name": "Enums"
-            },
-            {
-              "name": "Structs"
-            }
-          ]
-        },
-        {
-          "name": "UnixSignals",
-          "navigation": [
-            {
-              "name": "LowVoltage"
-            }
-          ]
-        }
-    ]
+  "Authors": ["Anastasiya Britanova", "Justin Dickow", "Nicolas(Yifei) Li"],
+  "languages": ["en"],
+  "navigation": [
+      {
+          "name": "Overview",
+          "name_zh-hans": "概述"
+      },
+      {
+        "name": "Getting Started",
+        "name_zh-hans": "入门"
+      },
+      {
+          "name": "WebSocket Transport",
+          "name_zh-hans": "连接到SmartDeviceLink"
+      },
+      {
+        "name": "BasicCommunication",
+        "navigation": [
+          {
+            "name": "UpdateDeviceList"
+          },
+          {
+            "name": "ActivateApp"
+          },
+          {
+            "name": "CloseApplication"
+          },
+          {
+            "name": "MixingAudioSupported"
+          },
+          {
+            "name": "SystemRequest"
+          },
+          {
+            "name": "GetSystemInfo"
+          },
+          {
+            "name": "OnReady"
+          },
+          {
+            "name": "OnStartDeviceDiscovery"
+          },
+          {
+            "name": "OnDeviceChosen"
+          },
+          {
+            "name": "DialNumber"
+          },
+          {
+            "name": "OnAppActivated"
+          },
+          {
+            "name": "OnAppDeactivated"
+          },
+          {
+            "name": "OnAppRegistered"
+          },
+          {
+            "name": "OnAppUnregistered"
+          },
+          {
+            "name": "OnAwakeSDL"
+          },
+          {
+            "name": "OnExitAllApplications"
+          },
+          {
+            "name": "OnExitApplication"
+          },
+          {
+            "name": "OnEventChanged"
+          },
+          {
+            "name": "OnFileRemoved"
+          },
+          {
+            "name": "OnFindApplications"
+          },
+          {
+            "name": "OnIgnitionCycleOver"
+          },
+          {
+            "name": "OnPutFile"
+          },
+          {
+            "name": "OnResumeAudioSource"
+          },
+          {
+            "name": "OnSDLClose"
+          },
+          {
+            "name": "OnSDLPersistenceComplete"
+          },
+          {
+            "name": "OnSystemInfoChanged"
+          },
+          {
+            "name": "OnSystemRequest"
+          },
+          {
+            "name": "OnUpdateDeviceList"
+          },
+          {
+            "name": "PolicyUpdate"
+          },
+          {
+            "name": "DecryptCertificate"
+          },
+          {
+            "name": "UpdateAppList"
+          },
+          {
+            "name": "OnSystemTimeReady"
+          },
+          {
+            "name": "GetSystemTime"
+          },
+          {
+            "name": "OnSystemCapabilityUpdated"
+          },
+          {
+            "name": "GetFilePath"
+          },
+          {
+            "name": "OnServiceUpdate"
+          },
+          {
+            "name": "GetAppProperties"
+          },
+          {
+            "name": "SetAppProperties"
+          },
+          {
+            "name": "OnAppPropertiesChange"
+          },
+          {
+            "name": "OnAppCapabilityUpdated"
+          }
+        ]
+      },
+      {
+        "name": "Buttons",
+        "navigation": [
+          {
+            "name": "GetCapabilities"
+          },
+          {
+            "name": "OnButtonEvent"
+          },
+          {
+            "name": "OnButtonPress"
+          },
+          {
+            "name": "SubscribeButton"
+          },
+          {
+            "name": "UnsubscribeButton"
+          },
+          {
+            "name": "ButtonPress"
+          }
+        ]
+      },
+      {
+        "name": "Navigation",
+        "navigation": [
+          {
+            "name": "AlertManeuver"
+          },
+          {
+            "name": "GetWayPoints"
+          },
+          {
+            "name": "SubscribeWayPoints"
+          },
+          {
+            "name": "UnsubscribeWayPoints"
+          },
+          {
+            "name": "OnWayPointChange"
+          },
+          {
+            "name": "IsReady"
+          },
+          {
+            "name": "OnAudioDataStreaming"
+          },
+          {
+            "name": "OnTBTClientState"
+          },
+          {
+            "name": "OnVideoDataStreaming"
+          },
+          {
+            "name": "SendLocation"
+          },
+          {
+            "name": "SetVideoConfig"
+          },
+          {
+            "name": "ShowConstantTBT"
+          },
+          {
+            "name": "StartAudioStream"
+          },
+          {
+            "name": "StartStream"
+          },
+          {
+            "name": "StopAudioStream"
+          },
+          {
+            "name": "StopStream"
+          },
+          {
+            "name": "UpdateTurnList"
+          }
+        ]
+      },
+      {
+        "name": "SDL",
+        "navigation": [
+          {
+            "name": "ActivateApp"
+          },
+          {
+            "name": "AddStatisticsInfo"
+          },
+          {
+            "name": "GetListOfPermissions"
+          },
+          {
+            "name": "GetStatusUpdate"
+          },
+          {
+            "name": "GetUserFriendlyMessage"
+          },
+          {
+            "name": "GetPolicyConfigurationData"
+          },
+          {
+            "name": "OnAllowSDLFunctionality"
+          },
+          {
+            "name": "OnAppPermissionChanged"
+          },
+          {
+            "name": "OnAppPermissionConsent"
+          },
+          {
+            "name": "OnDeviceStateChanged"
+          },
+          {
+            "name": "OnPolicyUpdate"
+          },
+          {
+            "name": "OnReceivedPolicyUpdate"
+          },
+          {
+            "name": "OnSDLConsentNeeded"
+          },
+          {
+            "name": "OnStatusUpdate"
+          },
+          {
+            "name": "OnSystemError"
+          },
+          {
+            "name": "UpdateSDL"
+          }
+        ]
+      },
+      {
+        "name": "TTS",
+        "navigation": [
+          {
+            "name": "ChangeRegistration"
+          },
+          {
+            "name": "GetCapabilities"
+          },
+          {
+            "name": "GetLanguage"
+          },
+          {
+            "name": "GetSupportedLanguages"
+          },
+          {
+            "name": "IsReady"
+          },
+          {
+            "name": "OnLanguageChange"
+          },
+          {
+            "name": "OnResetTimeout"
+          },
+          {
+            "name": "SetGlobalProperties"
+          },
+          {
+            "name": "Speak"
+          },
+          {
+            "name": "Started"
+          },
+          {
+            "name": "Stopped"
+          },
+          {
+            "name": "StopSpeaking"
+          }
+        ]
+      },
+      {
+        "name": "UI",
+        "navigation": [
+          {
+            "name": "AddCommand"
+          },
+          {
+            "name": "AddSubMenu"
+          },
+          {
+            "name": "Alert"
+          },
+          {
+            "name": "SubtleAlert"
+          },
+          {
+            "name": "CancelInteraction"
+          },
+          {
+            "name": "ChangeRegistration"
+          },
+          {
+            "name": "ClosePopUp"
+          },
+          {
+            "name": "DeleteCommand"
+          },
+          {
+            "name": "DeleteSubMenu"
+          },
+          {
+            "name": "EndAudioPassThru"
+          },
+          {
+            "name": "GetCapabilities"
+          },
+          {
+            "name": "GetLanguage"
+          },
+          {
+            "name": "GetSupportedLanguages"
+          },
+          {
+            "name": "IsReady"
+          },
+          {
+            "name": "OnCommand"
+          },
+          {
+            "name": "OnDriverDistraction"
+          },
+          {
+            "name": "OnKeyboardInput"
+          },
+          {
+            "name": "OnLanguageChange"
+          },
+          {
+            "name": "OnRecordStart"
+          },
+          {
+            "name": "OnResetTimeout"
+          },
+          {
+            "name": "OnSubtleAlertPressed"
+          },
+          {
+            "name": "OnSystemContext"
+          },
+          {
+            "name": "OnTouchEvent"
+          },
+          {
+            "name": "OnUpdateFile"
+          },
+          {
+            "name": "OnUpdateSubMenu"
+          },
+          {
+            "name": "PerformAudioPassThru"
+          },
+          {
+            "name": "PerformInteraction"
+          },
+          {
+            "name": "ScrollableMessage"
+          },
+          {
+            "name": "SendHapticData"
+          },
+          {
+            "name": "SetAppIcon"
+          },
+          {
+            "name": "SetDisplayLayout"
+          },
+          {
+            "name": "SetGlobalProperties"
+          },
+          {
+            "name": "SetMediaClockTimer"
+          },
+          {
+            "name": "Show"
+          },
+          {
+            "name": "ShowAppMenu"
+          },
+          {
+            "name": "Slider"
+          },
+          {
+            "name": "CreateWindow"
+          },
+          {
+            "name": "DeleteWindow"
+          }
+        ]
+      },
+      {
+        "name": "VehicleInfo",
+        "navigation": [
+          {
+            "name": "DiagnosticMessage"
+          },
+          {
+            "name": "GetDTCs"
+          },
+          {
+            "name": "GetVehicleData"
+          },
+          {
+            "name": "GetVehicleType"
+          },
+          {
+            "name": "IsReady"
+          },
+          {
+            "name": "OnVehicleData"
+          },
+          {
+            "name": "ReadDID"
+          },
+          {
+            "name": "SubscribeVehicleData"
+          },
+          {
+            "name": "UnsubscribeVehicleData"
+          }
+        ]
+      },
+      {
+        "name": "VR",
+        "navigation": [
+          {
+            "name": "AddCommand"
+          },
+          {
+            "name": "ChangeRegistration"
+          },
+          {
+            "name": "DeleteCommand"
+          },
+          {
+            "name": "GetCapabilities"
+          },
+          {
+            "name": "GetLanguage"
+          },
+          {
+            "name": "GetSupportedLanguages"
+          },
+          {
+            "name": "IsReady"
+          },
+          {
+            "name": "OnCommand"
+          },
+          {
+            "name": "OnLanguageChange"
+          },
+          {
+            "name": "PerformInteraction"
+          },
+          {
+            "name": "Started"
+          },
+          {
+            "name": "Stopped"
+          }
+        ]
+      },
+      {
+        "name": "RC",
+        "navigation": [
+          {
+            "name": "GetCapabilities"
+          },
+          {
+            "name": "GetInteriorVehicleData"
+          },
+          {
+            "name": "GetInteriorVehicleDataConsent"
+          },
+          {
+            "name": "IsReady"
+          },
+          {
+            "name": "OnInteriorVehicleData"
+          },
+          {
+            "name": "OnRemoteControlSettings"
+          },
+          {
+            "name": "SetInteriorVehicleData"
+          },
+          {
+            "name": "OnRCStatus"
+          },
+          {
+            "name": "SetGlobalProperties"
+          }
+        ]
+      },
+      {
+        "name": "AppService",
+        "navigation": [
+          {
+            "name": "PublishAppService"
+          },
+          {
+            "name": "UnpublishAppService"
+          },
+          {
+            "name": "GetAppServiceData"
+          },
+          {
+            "name": "OnAppServiceData"
+          },
+          {
+            "name": "PerformAppServiceInteraction"
+          },
+          {
+            "name": "GetActiveServiceConsent"
+          },
+          {
+            "name": "GetAppServiceRecords"
+          },
+          {
+            "name": "AppServiceActivation"
+          }
+        ]
+      },
+      {
+        "name": "Common",
+        "navigation": [
+          {
+            "name": "Enums"
+          },
+          {
+            "name": "Structs"
+          }
+        ]
+      },
+      {
+        "name": "UnixSignals",
+        "navigation": [
+          {
+            "name": "LowVoltage"
+          }
+        ]
+      }
+  ]
 }
+{"mode":"full","isActive":false}
