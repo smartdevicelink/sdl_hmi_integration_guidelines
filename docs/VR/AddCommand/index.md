@@ -35,7 +35,6 @@ Renew the timeout informing SDL about this event via `BC.OnResetTimeout` notific
 
 !!!
 
-
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
