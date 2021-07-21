@@ -17,7 +17,7 @@ This request is sent by SDL to HMI to create one or multiple widget windows.
   1. Create and store a list of available widgets.
   2. Notify SDL about widget activation/deactivation
   3. Reject bidirectional window content duplication. Since widgets can be created with parameter `duplicateUpdatesFromWindowID`, it is prohibited for 2 widgets to have this parameter set to duplicate each other's content. (E.g. having widget1 that duplicates widget2 AND widget2 which duplicates widget1 is not allowed).
-  4. Send `BC.OnResetTimeout` notification to SDL for reseting timeout in case HMI needs more time for processing the request.
+  4. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
 
 !!!
 

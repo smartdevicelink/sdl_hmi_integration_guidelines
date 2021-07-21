@@ -7,21 +7,23 @@ Sender
 : HMI
 
 Purpose
-: Inform SDL about RPC instance for which timeout needs to be reset 
+: Inform SDL that the timeout needs to be reset for an RPC instance
 
-### Notification
-
-HMI can send this notification used by functions in all interfaces to notify that timeout needs to be reset.
+HMI can send this RPC to notify SDL that the timeout needs to be reset for an RPC request. `BC.OnResetTimeout` can be used for functions in all interfaces.
 
 !!! must
 
-  1. Send `BC.OnResetTimeout` to SDL in case HMI needs more time for processing a request from mobile application.
+  1. Send `BC.OnResetTimeout` to SDL in case HMI needs more time to process a request from a mobile application.
   2. Fine tune the wait time per method call as needed.
-  3. Control number of reset timeouts and duration of each reset timeout for endless or finite method timeout.
+  3. Control the number of reset timeouts and duration of each reset timeout for endless or finite method timeout.
 
 !!!
 
-_Note: Currently, there is no version negotiation between HMI and Core, so older HMI implementations will not work with Core_8.0 version._
+!!! note
+Currently, there is no version negotiation between HMI and Core, so older HMI implementations will not work with Core 8.0 version.
+!!!
+
+### Notification
 
 #### Parameters
 

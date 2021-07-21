@@ -23,7 +23,7 @@ UI.AddSubMenu represents a request from an application to add a sub-menu to the 
   8. Scale the image to ensure it fits properly in the space allocated for the display of the image. If the image does not fit properly even after scaling, the HMI shall not display any image on the submenu.
   9. If a new submenu contains a parentID parameter, the new submenu must be nested inside the submenu specified by the parentID.
   10. When driver distraction state is enabled, submenus that are deeper than the [subMenuDepth](../../common/struct/#driverdistractioncapability) driver distraction limit must be disabled and inaccessible to the user.
-  11. Send `BC.OnResetTimeout` notification to SDL for reseting timeout in case HMI needs more time for processing the request.
+  11. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
 !!!
 
 !!! note

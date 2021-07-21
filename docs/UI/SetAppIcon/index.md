@@ -17,7 +17,7 @@ Purpose
     * Right away if the the list of registered applications is currently displayed  
     * When the list of registered applications is displayed upon User's request on HMI  
 3. Display default app icon if the mobile application had not previously set an icon successfully and/or the file does not exist on HMI.    
-4. Send `BC.OnResetTimeout` notification to SDL for reseting timeout in case HMI needs more time for processing the request.    
+4. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.    
 
 !!!
 

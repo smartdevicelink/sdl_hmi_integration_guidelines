@@ -14,7 +14,7 @@ UI.DeleteCommand represents a request to remove a previously added command (adde
 !!! must
 
 1. The application's menu must no longer display the command whose `cmdID` matches the RPC's `cmdID` when the user accesses the applications menu.
-2. Send `BC.OnResetTimeout` notification to SDL for reseting timeout in case HMI needs more time for processing the request.
+2. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
 
 !!!
 

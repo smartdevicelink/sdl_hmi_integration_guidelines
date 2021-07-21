@@ -14,7 +14,7 @@ Purpose
 !!! must
 
   1. Remove the application from the foreground (SDL will place the application in hmiLevel `NONE`).
-  2. Send `BC.OnResetTimeout` notification to SDL for reseting timeout in case HMI needs more time for processing the request.
+  2. Send `BC.OnResetTimeout` notification to SDL for resetting timeout in case HMI needs more time to process the request.
 
 !!!
 

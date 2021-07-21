@@ -13,7 +13,7 @@ Purpose
 
 !!! must
 
-1. The HMI must send send `BC.OnResetTimeout` notification to SDL for reseting timeout in case it needs more time for processing the request.
+1. The HMI must send a `BC.OnResetTimeout` notification to SDL to reset the timeout in case it needs more time to process the request.
 
 !!!
 

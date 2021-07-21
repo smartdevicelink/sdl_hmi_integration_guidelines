@@ -31,7 +31,7 @@ During data resumption SDL sends VR.AddCommands to HMI by `internal_consecutiveN
 
 !!! must
 
-Renew the timeout informing SDL about this event via `BC.OnResetTimeout` notification in case it requires more time for processing `VR.AddCommand` request (due to a batch of `vrCommands`).
+Renew the timeout informing SDL about this event via `BC.OnResetTimeout` notification in case it requires more time to process the `VR.AddCommand` request (due to a batch of `vrCommands`).
 
 !!!
 

@@ -16,7 +16,7 @@ UI.SendHapticData represents a request for the HMI to keep track of several appl
 1. The HMI must store the provided HapticRect data and utilize it whenever the users switches focus to part of the application that sent the message.
 2. The HMI must replace all stored HapticRect data every time a new SendHapticData is received for a given application. When an empty hapticRectData array is received, the HMI must clear any existing HapticRect data for that application.
 3. The HMI must send a pair [UI.OnTouchEvent](../ontouchevent) (one BEGIN and one END) with a TouchCoord corresponding to the center of the HapticRect when one of these elements is selected by the user.
-4. The HMI must send send `BC.OnResetTimeout` notification to SDL for reseting timeout in case it needs more time for processing the request.
+4. The HMI must send a `BC.OnResetTimeout` notification to SDL to reset the timeout in case it needs more time to process the request.
 
 !!!
 

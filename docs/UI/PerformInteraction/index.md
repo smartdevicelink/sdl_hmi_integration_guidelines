@@ -14,7 +14,7 @@ A request sent by SDL to display a list of choices to the user.
 !!! must
 
   1. Display the choices in `choiceSet` to the user reasonably according to the `interactionLayout`.
-  2. Wait until the user responds or send BC.OnResetTimeout notification to SDL for reseting timeout in case HMI needs more time to get input from user.
+  2. Wait until the user responds or send BC.OnResetTimeout notification to SDL to reset the timeout in case HMI needs more time to get input from user.
   3. Include the `choiceID` of the chosen option (or `manualTextEntry` when using `KEYBOARD` layout) in the response to SDL.
   4. If the interaction times out, respond with a success and no `choiceID` parameter to SDL.
 

@@ -16,7 +16,7 @@ SDL sends SystemRequest to the HMI when SDL receives the SystemRequest RPC from 
 !!! must
 
 1. Notify any relevant modules about the location of the file which was transferred.
-2. Send `BC.OnResetTimeout` notification to SDL for reseting timeout in case HMI needs more time for processing the request.
+2. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
 
 !!!
 
