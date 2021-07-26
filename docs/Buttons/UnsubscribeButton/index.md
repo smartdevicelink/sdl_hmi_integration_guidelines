@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Unsubscribe mob app from a button
+: Unsubscribe application from a button
 
 ### Request
 

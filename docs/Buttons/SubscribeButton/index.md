@@ -7,7 +7,7 @@ Sender
 : SDL
 
 Purpose
-: Subscribe mob app to a particular button
+: Subscribe application to a particular button
 
 ### Request
 SDL requests HMI to subscribe an application to a `buttonName`.
