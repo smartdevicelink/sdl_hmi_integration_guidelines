@@ -16,7 +16,7 @@ HMI->SDL: BC.OnResetTimeout(requestID, "TTSSpeak")
 
 note over SDL:<align:center>10 seconds default\ntimeout has been\nreset for Speak request
 
-note over HMI:<align:center>Speaking continues\nfor more than10 seconds.\nNo reset timeout is sent
+note over HMI:<align:center>Speaking continues\nfor more than 10 seconds.\nNo reset timeout is sent
 
 note over SDL:<align:center> SDL doesn't get response\nor ResetTimeout from TTS\n within 10 seconds
 
