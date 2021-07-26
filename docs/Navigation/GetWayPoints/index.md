@@ -18,7 +18,7 @@ SDL forwards a request from the mobile application to get waypoint/destination d
 2. Send [BC.OnResetTimeout](../../basiccommunication/onresettimeout) to SDL in case HMI needs more time to process the `GetWayPoints` request.
 !!!
 
-**SDL Note:** In case HMI does not respond to this request within SDL's default timeout (10s by default, [UI.OnResetTimeout](../../ui/onresettimeout) will reset this), SDL will return `GENERIC_ERROR` code to the corresponding mobile app's request
+**SDL Note:** In case HMI does not respond to this request within SDL's default timeout (10s by default, [BC.OnResetTimeout](../../basiccommunication/onresettimeout) will reset this), SDL will return `GENERIC_ERROR` code to the corresponding mobile app's request
 
 #### Parameters
 
@@ -30,7 +30,7 @@ SDL forwards a request from the mobile application to get waypoint/destination d
 ### Response
 
 !!! MUST   
-1. Wait using a predefined timeout for the navigation system to respond with the full data. The system shall wait for data (resetting the timer as necessary with [UI.OnResetTimeout](../../ui/onresettimeout)) until all waypoints have been received.
+1. Wait using a predefined timeout for the navigation system to respond with the full data. The system shall wait for data (resetting the timer as necessary with [BC.OnResetTimeout](../../basiccommunication/onresettimeout)) until all waypoints have been received.
 2. **If additional requests are received:** While a request for getting waypoints is being processed, if HMI receives another request from the same app then the system shall reject the new request with a response of `IN_USE`.   
 3. **If there is no active navigation source:** the system shall provide a response of `UNSUPPORTED_RESOURCE`.   
 4. **If the predefined timeout expires** _or_ **the system receives a "time out" notification from the navigation system:** the system shall provide a response of `TIMED_OUT`.
