@@ -39,47 +39,47 @@ This RPC has no additional parameter requirements.
 [SubscribeButton](./assets/SubscribeButton.png)
 |||
 
-### Example Request
+### JSON Message Examples
+
+#### Example Request
 
 ```json
 {
-    "id": 32,
-    "jsonrpc": "2.0",
-    "method": "Buttons.SubscribeButton",
-    "params": {
-        "appID": 680015438,
-        "buttonName": "VOLUME_UP"
-    }
-}
-```
-
-### Example Response
-
-```json
-{
-    "id": 32,
-    "jsonrpc": "2.0",
-    "result": {
-        "code": 0,
-        "method": "Buttons.SubscribeButton"
-    }
-}
-```
-
-### Example Error 
-
-```json
-{
-  "id" : 32,
-  "jsonrpc" : "2.0",
-  "error" :
-  {
-    "code" : 22,
-    "message" : "An unknown issue occurred ",
-    "data" :
-    {
-      "method" : "Buttons.SubscribeButton"
-    }
+  "id": 32,
+  "jsonrpc": "2.0",
+  "method": "Buttons.SubscribeButton",
+  "params": {
+    "appID": "680015438",
+    "buttonName": "VOLUME_UP"
   }
+}
+```
+
+#### Example Response
+
+```json
+{
+  "id": 32,
+  "jsonrpc": "2.0",
+  "result": {
+    "code": 0,
+    "method": "Buttons.SubscribeButton"
+  }
+}
+```
+
+#### Example Error
+
+```json
+{
+  "error": {
+    "code": 22,
+    "data": {
+      "method": "Buttons.SubscribeButton"
+    },
+    "message": "An unknown issue occurred"
+  },
+  "id": 32,
+  "jsonrpc": "2.0"
 }
 ```
