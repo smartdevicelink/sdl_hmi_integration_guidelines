@@ -25,16 +25,16 @@ During Resumption SDL should restore all button subscriptions for application an
 
 ### Response
 
-!!! must
-1. Check whether the button subscription can be performed for requested `buttonName`. 
+!!! MUST
+1. Check whether the button subscription can be performed for requested `buttonName`.
 2. Respond to SDL within DefaultTimeout period after successful button subscription.
-
 !!!
 
 #### Parameters
 This RPC has no additional parameter requirements.
 
 ### Sequence Diagrams
+
 |||
 [SubscribeButton](./assets/SubscribeButton.png)
 |||
