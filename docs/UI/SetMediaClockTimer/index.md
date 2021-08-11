@@ -32,6 +32,7 @@ The UI.SetMediaClockTimer request indicates either an initial value for the medi
     * CLEAR mode:    
         * Clear `startTime` to 00:00:00 in the case that the `startTime` parameter is not provided in the request, otherwise, `startTime` must be updated with a new value. It is up to the HMI to determine the way the media clock timer is cleared: either to remove it from display or to set it to zero.
 3. Respond with the result code (see _response_ section) correspondingly to the results of this RPC execution.
+4. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
 !!!
     
 !!! NOTE

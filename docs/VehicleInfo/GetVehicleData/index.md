@@ -18,6 +18,7 @@ Purpose
     * Schema_items should not have `name`/`key` equivalent to any RPC vehicle data item/sub-param.
 
 4. Respond with any vehicle data defined in `HMI_API.xml` included in the original request.
+5. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
 
 !!!
 
