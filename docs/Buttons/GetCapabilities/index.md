@@ -10,6 +10,7 @@ Purpose
 : Get the capabilities of buttons in the vehicle.
 
 ### Request
+
 SDL requests HMI to provide capabilities of supported buttons and saves received capabilities internally.
 
 #### Parameters
