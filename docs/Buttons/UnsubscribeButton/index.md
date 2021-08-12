@@ -36,18 +36,18 @@ then SDL sends `UnsubscribeButton` request to HMI, so that the application and H
 
 #### Parameters
 
-This RPC has no additional parameter requirements.
-
+This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
 
 |||
-[UnsubscribeButton](./assets/UnsubscribeButton.png)
+UnsubscribeButton
+![UnsubscribeButton](./assets/UnsubscribeButton.png)
 |||
 
 ### JSON Message Examples
 
-### Example Request
+#### Example Request
 
 ```json
 {
@@ -55,13 +55,13 @@ This RPC has no additional parameter requirements.
   "jsonrpc": "2.0",
   "method": "Buttons.UnsubscribeButton",
   "params": {
-    "appID": "680015438",
+    "appID": 680015438,
     "buttonName": "VOLUME_UP"
   }
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -74,7 +74,7 @@ This RPC has no additional parameter requirements.
 }
 ```
 
-### Example Error
+#### Example Error
 
 ```json
 {

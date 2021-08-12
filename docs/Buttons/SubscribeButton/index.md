@@ -10,6 +10,7 @@ Purpose
 : Subscribe application to a particular button
 
 ### Request
+
 SDL requests HMI to subscribe an application to a `buttonName`.
 
 The request may come for the application being whatever active or in background on HMI (depends on SDL Policy Manager permissions).
@@ -31,12 +32,14 @@ During Resumption SDL should restore all button subscriptions for application an
 !!!
 
 #### Parameters
-This RPC has no additional parameter requirements.
+
+This RPC has no additional parameter requirements
 
 ### Sequence Diagrams
 
 |||
-[SubscribeButton](./assets/SubscribeButton.png)
+SubscribeButton
+![SubscribeButton](./assets/SubscribeButton.png)
 |||
 
 ### JSON Message Examples
@@ -49,7 +52,7 @@ This RPC has no additional parameter requirements.
   "jsonrpc": "2.0",
   "method": "Buttons.SubscribeButton",
   "params": {
-    "appID": "680015438",
+    "appID": 680015438,
     "buttonName": "VOLUME_UP"
   }
 }
