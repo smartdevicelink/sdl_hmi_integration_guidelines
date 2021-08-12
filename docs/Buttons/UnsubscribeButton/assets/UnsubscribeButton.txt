@@ -1,0 +1,27 @@
+participant App
+participant SDL
+participant HMI
+note over App,HMI:<align:center> **//Preconditions://** 1. Application is successfully registered and running on SDL, the status is active or in background on HMI\n2. The request is valid and allowed by SDL Policy Manager\n3. Application is subscribed to <buttonName>
+App->SDL:UnsubscribeButton (<appID>, <buttonName>)        
+SDL->HMI:Buttons.UnsubscribeButton (<appID>, <buttonName>) 
+SDL->SDL:<align:center>Start <DefaultTimeout>\n(the value defined at //.ini file//)
+opt Application is unsubscribed from <buttonName> within <DefaultTimeout>
+note over SDL:<align:center><DefaultTimeout>\nis NOT expired yet
+SDL<<--HMI:Buttons.UnsubscribeButton (SUCCESS, success: true)
+App<<--SDL:UnsubscribeButton (SUCCESS, success: true)
+end
+opt Error Flow
+opt HMI does not respond during <DefaultTimeout>
+App->SDL Buttons.SubscribeButton
+note over SDL:<align:center><DefaultTimeout>\nIS expired
+App<<--SDL:UnSubscribeButton (GENERIC_ERROR, success: false)
+App->SDL Buttons.SubscribeButton
+(value defined at .ini file)
+end
+opt HMI responds after <DefaultTimeout> is expired
+note over SDL:<align:center><DefaultTimeout>\nIS expired
+App<<--SDL:UnSubscribeButton (GENERIC_ERROR, success: false)
+SDL<<--HMI:Buttons.UnsubscribeButton (SUCCESS, success: true)
+SDL->HMI:Buttons.SubscribeButton (<buttonName>)
+end
+end
