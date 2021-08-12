@@ -18,6 +18,7 @@ Purpose
     * Schema_items should not have `name`/`key` equivalent to any RPC vehicle data item/sub-param.
 
 4. Respond with any vehicle data defined in `HMI_API.xml` included in the original request.
+5. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
 
 !!!
 
@@ -97,6 +98,12 @@ The HMI will have to update this field if the user chooses to reset this value (
 |climateData|Boolean|false||
 
 ### Response
+
+!!! note
+
+In case an application is registered with RPC Spec message versions earlier than 8.0.0 and HMI does not provide the values for the params of `TireStatus` structure in GetVehicleData_response, SDL Core provides the default values to the application.
+
+!!!
 
 #### Parameters
 

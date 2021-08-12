@@ -12,11 +12,12 @@ Purpose
 ### Behavior
 
 !!! must  
-1.	 Transfer data received from SDL to navigation embedded module. Navigation embedded HU system should update the location data on the embedded navi screen.  
-2.	Send a `SUCCESS` response to SDL in case the destination data has been obtained.
-3.  Ignore`<deliveryMode>`, `<timeStampParams>`,`<address>` parameters  in case HMI does not support them  (note: app will not know whether the whole information was processed by HMI)
-4.  Respond with `WARNINGS` and “info: were not processed”” to SDL in case HMI partially supports `<deliveryMode>`, `<timeStampParams>`,`<address>`(SDL will transfer it to mobile app)
+1. Transfer data received from SDL to navigation embedded module. Navigation embedded HU system should update the location data on the embedded navi screen.  
+2. Send a `SUCCESS` response to SDL in case the destination data has been obtained.
+3. Ignore`<deliveryMode>`, `<timeStampParams>`,`<address>` parameters  in case HMI does not support them  (note: app will not know whether the whole information was processed by HMI).
+4. Respond with `WARNINGS` and “info: were not processed”” to SDL in case HMI partially supports `<deliveryMode>`, `<timeStampParams>`,`<address>`(SDL will transfer it to mobile app).
 5. Respond with `REJECTED` result code to SDL in case HMI is currently busy with a higher-priority event or other reasons defined for the mentioned resultCode by HMI.
+6. Send `OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the user's selection.
 
 ### Request
 

@@ -11,6 +11,12 @@ Purpose
 
 ### Request
 
+!!! must
+
+Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
+
+!!!
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -31,6 +37,16 @@ This RPC has no additional parameter requirements
 |||
 Speak
 ![Speak](./assets/Speak.png)
+|||
+
+|||
+OnResetTimeout for Speak SUCCESS
+![OnResetTimeout](./assets/OnResetTimeoutSpeakSuccess.png)
+|||
+
+|||
+OnResetTimeout for Speak GENERIC_ERROR
+![OnResetTimeout](./assets/OnResetTimeoutGenericError.png)
 |||
 
 ### JSON Message Examples
