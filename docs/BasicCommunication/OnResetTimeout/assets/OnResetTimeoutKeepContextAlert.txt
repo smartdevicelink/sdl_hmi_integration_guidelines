@@ -1,0 +1,22 @@
+participant App
+participant SDL
+participant HMI
+
+note over App,HMI:<align:center> **//Pre-conditions://** 1. appID is active on HMI
+
+App->SDL: Alert(params)
+SDL->HMI: UI.Alert(params)
+
+note over HMI:<align:center>Display the Alert dialog with\nalertText1 text and a\nsoftButtonID_1 soft button
+
+HMI->>SDL:UI.OnSystemContext(ALERT)
+
+note over HMI:<align:center>User taps the\nsoftButtonID_1 button
+
+HMI->>SDL: Buttons.OnButtonEvent(BUTTONDOWN, customButtonID_1)
+HMI->SDL: BC.OnResetTimeout(resetPeriod)
+
+note over App,HMI:<align:center>Timeout for UI.Alert(softButtons) never expires\nSDL does not apply UI.Alert timeout\nSDL does not reset timeout by BC.OnResetTimeout
+
+HMI-->SDL: UI.Alert(SUCCESS)
+SDL-->App: Alert(SUCCESS)
