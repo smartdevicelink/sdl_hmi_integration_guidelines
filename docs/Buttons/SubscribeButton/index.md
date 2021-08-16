@@ -46,6 +46,11 @@ SubscribeButton
 ![SubscribeButton](./assets/SubscribeButton.png)
 |||
 
+|||
+SubscribeButton CUSTOM_BUTTON
+![SubscribeButton CUSTOM_BUTTON](./assets/SubscribeCUSTOM_BUTTON.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request
