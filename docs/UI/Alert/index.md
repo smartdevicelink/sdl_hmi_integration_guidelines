@@ -31,8 +31,7 @@ The HMI may provide the user with a system defined "close" button providing the 
 
 !!! note
 
-An alert may be sent to the HMI for an application which is not currently active. If the alert contains `softButtons` then the duration will be set to `0`
-In this case the HMI must assign a duration to the alert
+An alert may be sent to the HMI for an application which is not currently active. If the alert contains `softButtons` then the duration will be set to `0`. In this case the HMI must assign a duration to the alert.
 
 !!!
 
