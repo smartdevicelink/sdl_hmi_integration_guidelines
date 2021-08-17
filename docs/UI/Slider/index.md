@@ -25,6 +25,8 @@ Purpose
 
 ### Response
 
+In case HMI needs more time to get input from user for processing `UI.Slider` request, HMI must send `BC.OnResetTimeout` notification to SDL to reset the timeout. 
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -84,24 +86,22 @@ Slider with OK Button press
 }
 ```
 
-#### Example Error
+#### Example Response (Timeout)
 
 ```json
 {
   "id" : 133,
   "jsonrpc" : "2.0",
-  "error" :
+  "result" :
   {
-    "code" : 5,
-    "message" : "A command was aborted due to user interaction",
-    "data" :
-    {
-      "sliderPosition" : 5,
-      "method" : "UI.Slider"
-    }
+    "sliderPosition" : 5,
+    "code" : 10,
+    "method" : "UI.Slider"
   }
 }
 ```
+
+#### Example Error
 
 ```json
 {

@@ -2,7 +2,9 @@ participant App
 participant SDL
 participant HMI
 
-App->SDL:RegisterAppInterface
+note over App, HMI:<align:center>**Pre-conditions:**\n  1. App supports Protocol version 5.4.0 or higher
+
+App->SDL: StartService
 HMI->>SDL:BC.OnReady
 SDL->HMI:VehicleInfo.IsReady
 HMI-->SDL:VehicleInfo.IsReady (`SUCCESS`)
@@ -17,13 +19,13 @@ SDL->HMI:VehicleInfo.GetVehicleType
 HMI-->SDL:VehicleInfo.GetVehicleType (params)
 SDL->SDL:Cache received data\nin `HMICapabilitiesCacheFile`
 SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
-SDL-->App:RegisterAppInterface (params)
+SDL-->App: StartService_ACK
 end
 
 opt In subsequent ignition cycles
 note over SDL:<align:center> Capabilities data is available\nin`HMICapabilitiesCacheFile`
 SDL->SDL:Load cached data\nfrom **`HMICapabilitiesCacheFile`**
-SDL-->App:RegisterAppInterface (params)
+SDL-->App:StartService_ACK
 end
 end
 
@@ -35,5 +37,8 @@ note over HMI:<align:center>No response
 note over SDL:<align:center>Request and persist \nHMI capabilities\nin subsequent ignition cycle
 SDL->SDL:Load default data\nfrom **`hmi_capabilities.json`**
 note over SDL:<align:center>Use default data\nfor App-SDL communication\nwithin this ignition cycle
-SDL-->App:RegisterAppInterface (params)
+SDL-->App:StartService_ACK
 end
+
+App->SDL:RegisterAppInterface
+SDL-->App:RegisterAppInterface (params)

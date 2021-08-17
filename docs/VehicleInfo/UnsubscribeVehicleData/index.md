@@ -15,7 +15,6 @@ Purpose
 
 |Name|Type|Mandatory|Additional|
 |:---|:---|:--------|:---------|
-|appID|Integer|true||
 |gps|Boolean|false||
 |speed|Boolean|false||
 |rpm|Boolean|false||
@@ -45,12 +44,19 @@ Purpose
 |engineOilLife|Boolean|false||
 |electronicParkBrakeStatus|Boolean|false||
 |cloudAppVehicleID|Boolean|false||
+|gearStatus|Boolean|false||
+|stabilityControlsStatus|Boolean|false||
+|windowStatus|Boolean|false||
+|handsOffSteering|Boolean|false||
+|seatOccupancy|Boolean|false||
+|climateData|Boolean|false||
 
 ### Response
 
 !!! must
 
-HMI must send SubscribeVehicleData response only for ROOT level items.
+1. Send SubscribeVehicleData response only for ROOT level items.
+2. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
 
 !!!
 
@@ -58,6 +64,8 @@ HMI must send SubscribeVehicleData response only for ROOT level items.
 
 For OEM specific custom vehicle data items, `oemCustomDataType` will contain a type of OEM specific vehicle data (from schema), and `dataType` will be `VEHICLEDATA_OEM_CUSTOM_DATA`.  
 For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `dataType` will contain appropriate data type from `VehicleDataType` enum.
+
+In the case during data resumption with multiple applications, a subscription is already used by other applications, which have all their data successfully resumed, SDL should not send unsubscribe requests to HMI.
 
 !!!
 
@@ -94,6 +102,12 @@ For vehicle data items from RPCSpec, `oemCustomDataType` will be omitted, and `d
 |engineOilLife|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |electronicParkBrakeStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 |cloudAppVehicleID|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|gearStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|stabilityControlsStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|windowStatus|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|handsOffSteering|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|seatOccupancy|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
+|climateData|[Common.VehicleDataResult](../../common/structs/#vehicledataresult)|false||
 
 ### Sequence Diagrams
 
@@ -105,6 +119,11 @@ UnsubscribeVehicleData
 |||
 UnsubscribeVehicleData unexpected disconnect
 ![UnsubscribeVehicleData](./assets/UnsubscribeVehicleDataDisconnect.jpg)
+|||
+
+|||
+UnsubscribeVehicleData during data resumption and erroneous response from HMI
+![UnsubscribeVehicleData](./assets/MultipleAppErrorHandling.png)
 |||
 
 ### JSON Message Examples
@@ -130,8 +149,7 @@ UnsubscribeVehicleData unexpected disconnect
     "deviceStatus" : true,
     "wiperStatus" : true,
     "headLampStatus" : true,
-    "accPedalPosition" : true,
-    "appID" : 65368
+    "accPedalPosition" : true
   }
 }
 ```

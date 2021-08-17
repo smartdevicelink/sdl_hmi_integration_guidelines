@@ -1,0 +1,19 @@
+@startuml SubtleAlertRejected
+
+participant Core
+participant HMI.UI
+
+skinparam NoteTextAlignment center
+
+Core -> HMI.UI: UI.SubtleAlert(params, UI)
+
+note over HMI.UI
+Higher priority event
+is active in the UI
+(ex. Emergency 
+phone call)
+end note
+
+HMI.UI --> Core: UI.SubtleAlert(REJECTED)
+
+@enduml

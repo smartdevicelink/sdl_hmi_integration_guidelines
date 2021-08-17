@@ -27,6 +27,12 @@ The HMI will have to update this field if the user chooses to reset this value (
 
 !!!
 
+!!! note
+
+In case an application is registered with RPC Spec message versions earlier than 8.0.0 and HMI does not provide the values for the params of `TireStatus` structure, SDL Core provides the default values to the application.
+
+!!!
+
 ### Notification
 
 #### Parameters
@@ -63,6 +69,12 @@ The HMI will have to update this field if the user chooses to reset this value (
 |engineOilLife|Float|false|minvalue: 0<br>maxvalue: 100|
 |electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
 |cloudAppVehicleID|String|false||
+|gearStatus|[Common.GearStatus](../../common/structs/#gearstatus)|false||
+|stabilityControlsStatus|[Common.StabilityControlsStatus](../../common/structs/#stabilitycontrolsstatus)|false||
+|windowStatus|[Common.WindowStatus](../../common/structs/#windowstatus)|false|array: true<br>minsize: 0<br>maxsize: 100|
+|handsOffSteering|Boolean|false||
+|seatOccupancy|[Common.SeatOccupancy](../../common/structs/#seatoccupancy)|false||
+|climateData|[Common.ClimateData](../../common/structs/#climatedata)|false||
 
 ### Sequence Diagrams
 

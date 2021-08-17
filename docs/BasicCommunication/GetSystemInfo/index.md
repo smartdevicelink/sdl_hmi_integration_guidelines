@@ -36,6 +36,7 @@ This RPC has no additional parameter requirements
 |ccpu_version|String|true|maxlength: 500|
 |language|[Common.Language](../../common/enums/#language)|true||
 |wersCountryCode|String|true|maxlength: 500|
+|systemHardwareVersion|String|false|maxlength: 500|
 
 ### Sequence Diagrams
 

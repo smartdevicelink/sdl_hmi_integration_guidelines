@@ -50,6 +50,22 @@
 |diagonalScreenSize|Float|false|minvalue: 0|The diagonal screen size in inches.|
 |pixelPerInch|Float|false|minvalue: 0|PPI is the diagonal resolution in pixels divided by the diagonal screen size in inches.|
 |scale|Float|false|minvalue: 1<br>maxvalue: 10|The scaling factor the app should use to change the size of the projecting view.|
+|preferredFPS|Integer|false|minvalue: 0<br>maxvalue: 2147483647|The preferred frame rate per second of the head unit.|
+|additionalVideoStreamingCapabilities|Common.VideoStreamingCapability|false|array: true<br>minsize: 1<br>maxsize: 100||
+
+### DynamicUpdateCapabilities
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|supportedDynamicImageFieldNames|[Common.ImageFieldName](../enums/#imagefieldname)|false|array: true<br>minsize: 1|An array of ImageFieldName values for which the system supports sending OnFileUpdate notifications. If you send an Image struct for that image field with a name without having uploaded the image data using PutFile that matches that name, the system will request that you upload the data with PutFile at a later point when the HMI needs it. The HMI will then display the image in the appropriate field. If not sent, assume false.|
+|supportsDynamicSubMenus|Boolean|false||If true, the head unit supports dynamic sub-menus by sending OnUpdateSubMenu notifications. If true, you should not send AddCommands that attach to a parentID for an AddSubMenu until OnUpdateSubMenu is received with the menuID. At that point, you should send all AddCommands with a parentID that match the menuID. If not set, assume false.|
+
+### DriverDistractionCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|menuLength|Integer|false||The number of items allowed in a Choice Set or Command menu while the driver is distracted|
+|subMenuDepth|Integer|false|minvalue: 1|The depth of submenus allowed when the driver is distracted. e.g. 3 == top level menu -> submenu -> submenu; 1 == top level menu only|
 
 ### SystemCapabilities
 
@@ -58,6 +74,7 @@
 |navigationCapability|Common.NavigationCapability|false|||
 |phoneCapability|Common.PhoneCapability|false|||
 |videoStreamingCapability|Common.VideoStreamingCapability|false|||
+|driverDistractionCapability|Common.DriverDistractionCapability|false||Describes capabilities when the driver is distracted|
 
 ### MenuParams
 
@@ -66,18 +83,20 @@
 |parentID|Integer|false|minvalue: 0<br>maxvalue: 2000000000||
 |position|Integer|false|minvalue: 0<br>maxvalue: 1000||
 |menuName|String|true|maxlength: 500||
+|secondaryText|String|false|maxlength: 500||
+|tertiaryText|String|false|maxlength: 500||
 
 ### TireStatus
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|pressureTelltale|[Common.WarningLightStatus](../enums/#warninglightstatus)|false|||
-|leftFront|Common.SingleTireStatus|false|||
-|rightFront|Common.SingleTireStatus|false|||
-|leftRear|Common.SingleTireStatus|false|||
-|rightRear|Common.SingleTireStatus|false|||
-|innerLeftRear|Common.SingleTireStatus|false|||
-|innerRightRear|Common.SingleTireStatus|false|||
+|pressureTelltale|[Common.WarningLightStatus](../enums/#warninglightstatus)|false||Status of the Tire Pressure Telltale. See WarningLightStatus|
+|leftFront|Common.SingleTireStatus|false||The status of the left front tire.|
+|rightFront|Common.SingleTireStatus|false||The status of the right front tire.|
+|leftRear|Common.SingleTireStatus|false||The status of the left rear tire.|
+|rightRear|Common.SingleTireStatus|false||The status of the right rear tire.|
+|innerLeftRear|Common.SingleTireStatus|false||The status of the inner left rear.|
+|innerRightRear|Common.SingleTireStatus|false||The status of the inner right rear.|
 
 ### ECallInfo
 
@@ -159,6 +178,8 @@
 |keypressMode|[Common.KeypressMode](../enums/#keypressmode)|false|||
 |limitedCharacterList|String|false|array: true<br>minsize: 1<br>maxsize: 100<br>maxlength: 1||
 |autoCompleteList|String|false|array: true<br>minsize: 0<br>maxsize: 100<br>maxlength: 1000||
+|maskInputCharacters|[Common.KeyboardInputMask](../enums/#keyboardinputmask)|false||Allows an app to mask entered characters on HMI|
+|customKeys|String|false|maxlength: 1<br>minsize: 1<br>maxsize: 10<br>array: true|Array of special characters to show in customizable Keys.<br>If omitted, keyboard will show default special characters.|
 
 ### Choice
 
@@ -284,13 +305,16 @@
 
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
-|parkBrakeActive|Boolean|true|||
-|ignitionStableStatus|[Common.IgnitionStableStatus](../enums/#ignitionstablestatus)|true|||
-|ignitionStatus|[Common.IgnitionStatus](../enums/#ignitionstatus)|true|||
-|driverDoorAjar|Boolean|false|||
-|passengerDoorAjar|Boolean|false|||
-|rearLeftDoorAjar|Boolean|false|||
-|rearRightDoorAjar|Boolean|false|||
+|parkBrakeActive|Boolean|true||If mechanical park brake is active, true. Otherwise false.|
+|ignitionStableStatus|[Common.IgnitionStableStatus](../enums/#ignitionstablestatus)|true||Provides information on status of ignition stable switch. See IgnitionStableStatus.|
+|ignitionStatus|[Common.IgnitionStatus](../enums/#ignitionstatus)|true||Provides information on current ignitiion status. See IgnitionStatus.|
+|driverDoorAjar|Boolean|false||References signal "DrStatDrv_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|passengerDoorAjar|Boolean|false||References signal "DrStatPsngr_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|rearLeftDoorAjar|Boolean|false||References signal "DrStatRl_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|rearRightDoorAjar|Boolean|false||References signal "DrStatRr_B_Actl". Deprecated starting with RPC Spec 7.1.0|
+|doorStatuses|Common.DoorStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for doors if Ajar/Closed/Locked|
+|gateStatuses|Common.GateStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for trunk/hood/etc. if Ajar/Closed/Locked|
+|roofStatuses|Common.RoofStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Provides status for roof/convertible roof/sunroof/moonroof etc., if Closed/Ajar/Removed etc.|
 
 ### BeltStatus
 
@@ -752,6 +776,10 @@
 |:---|:---|:--------|:---------|:----------|
 |type|[Common.FuelType](../enums/#fueltype)|false|||
 |range|Float|false|minvalue: 0<br>maxvalue: 10000|The estimate range in KM the vehicle can travel based on fuel level and consumption|
+|level|Float|false|minvalue: -6<br>maxvalue: 1000000|The relative remaining capacity of this fuel type (percentage)|
+|levelState|[Common.ComponentVolumeStatus](../enums/#componentvolumestatus)|false||The fuel level state|
+|capacity|Float|false|minvalue: 0<br>maxvalue: 1000000|The absolute capacity of this fuel type|
+|capacityUnit|[Common.CapacityUnit](../enums/#capacityunit)|false||The unit of the capacity of this fuel type such as liters for gasoline or kWh for batteries|
 
 ### MassageModeData
 
@@ -931,6 +959,7 @@
 |appServicesCapabilities|Common.AppServicesCapabilities|false||An array of currently available services. If this is an update to the capability the affected services will include an update reason in that item|
 |displayCapabilities|Common.DisplayCapability|false|array: true<br>minsize: 1<br>maxsize: 1000||
 |seatLocationCapability|Common.SeatLocationCapability|false||Contains information about the locations of each seat|
+|driverDistractionCapability|Common.DriverDistractionCapability|false||Describes capabilities when the driver is distracted|
 
 ### MediaServiceManifest
 
@@ -1082,6 +1111,8 @@ There are no defined parameters for this struct
 |buttonCapabilities|Common.ButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of buttons and the capabilities of each on-window button.|
 |softButtonCapabilities|Common.SoftButtonCapabilities|false|array: true<br>minsize: 1<br>maxsize: 100|The number of soft buttons available on-window and the capabilities for each button.|
 |menuLayoutsAvailable|[Common.MenuLayout](../enums/#menulayout)|false|array: true<br>minsize: 1<br>maxsize: 1000|An array of available menu layouts. If this parameter is not provided, only the `LIST` layout is assumed to be available|
+|dynamicUpdateCapabilities|Common.DynamicUpdateCapabilities|false||Contains the head unit's capabilities for dynamic updating features declaring if the module will send dynamic update RPCs|
+|keyboardCapabilities|Common.KeyboardCapabilities|false||See KeyboardCapabilities|
 
 ### ModuleInfo
 
@@ -1130,3 +1161,103 @@ There are no defined parameters for this struct
 |hybridAppPreference|[Common.HybridAppPreference](../enums/#hybridapppreference)|false||Specifies the user preference to use one specific app type or all available types|
 |endpoint|String|false|maxlength: 65535|If specified, which Core uses a client implementation of the connection type and attempts to connect to the endpoint when this app is selected (activated).<br>If omitted, Core won't attempt to connect as the app selection (activation) is managed outside of Core. Instead it uses a server implementation of the connection type and expects the app to connect|
 
+### GearStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|userSelectedGear|[Common.PRNDL](../enums/#prndl)|false||Gear position selected by the user<br>i.e. Park, Drive, Reverse|
+|actualGear|[Common.PRNDL](../enums/#prndl)|false||Actual Gear in use by the transmission|
+|transmissionType|[Common.TransmissionType](../enums/#transmissiontype)|false||Tells the transmission type|
+
+### StabilityControlsStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|escSystem|[Common.VehicleDataStatus](../enums/#vehicledatastatus)|false||true if vehicle stability control is ON,<br>else false|
+|trailerSwayControl|[Common.VehicleDataStatus](../enums/#vehicledatastatus)|false||true if vehicle trailer sway control is ON,<br>else false|
+
+### WindowState
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|approximatePosition|Integer|true|minvalue: 0<br>maxvalue: 100|The approximate percentage that the window is open -<br>0 being fully closed, 100 being fully open|
+|deviation|Integer|true|minvalue: 0<br>maxvalue: 100|The percentage deviation of the approximatePosition.<br>e.g. If the approximatePosition is 50 and the deviation is 10,<br>then the window's location is somewhere between 40 and 60|
+
+### WindowStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true|||
+|state|Common.WindowState|true|||
+
+### SeekStreamingIndicator
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|type|[Common.SeekIndicatorType](../enums/#seekindicatortype)|true|||
+|seekTime|Integer|false|minvalue: 1<br>maxvalue: 99|If the type is TIME, this number of seconds may be present alongside the skip indicator. It will indicate the number of seconds that the currently playing media will skip forward or backward.|
+
+### DoorStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true||Describes the status of a location of a door.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a door.|
+
+### GateStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true||Describes the status of location of trunk/hood/etc.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of trunk/hood/etc.|
+
+### RoofStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|location|Common.Grid|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+|status|[Common.DoorStatusType](../enums/#doorstatustype)|true||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+|state|Common.WindowState|false||Describes the status of a parameter of roof, convertible roof, sunroof/moonroof etc.<br>If roof is open (AJAR), state will determine percentage of roof open.|
+
+### SeatStatus
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|seatLocation|Common.SeatLocation|true|||
+|conditionActive|Boolean|true|||
+
+### SeatOccupancy
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|seatsOccupied|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are occupied.|
+|seatsBelted|Common.SeatStatus|false|array: true<br>minsize: 0<br>maxsize: 100|Seat status array containing location and whether the seats are belted.|
+
+### ClimateData
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|externalTemperature|Common.Temperature|false||The external temperature in degrees celsius|
+|cabinTemperature|Common.Temperature|false||Internal ambient cabin temperature in degrees celsius|
+|atmosphericPressure|Float|false|minvalue: 0<br>maxvalue: 2000|Current atmospheric pressure in mBar|
+
+### KeyboardCapabilities
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|maskInputCharactersSupported|Boolean|false||Availability of capability to mask input characters using keyboard.<br>True: Available, False: Not Available.|
+|supportedKeyboards|Common.KeyboardLayoutCapability|false|minsize: 1<br>maxsize: 1000<br>array: true|Capabilities of supported keyboard layouts by HMI.|
+
+### KeyboardLayoutCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|keyboardLayout|[Common.KeyboardLayout](../enums/#keyboardlayout)|true|||
+|numConfigurableKeys|Integer|true|minvalue: 0<br>maxvalue: 10|Number of keys available for special characters, App can customize as per their needs.|
+
+### AppCapability
+
+|Name|Type|Mandatory|Additional|Description|
+|:---|:---|:--------|:---------|:----------|
+|appCapabilityType|[Common.AppCapabilityType](../enums/#appcapabilitytype)|true||Used as a descriptor of what data to expect in this struct. The corresponding param to this enum should be included and the only other param included|
+|videoStreamingCapability|Common.VideoStreamingCapability|false||Describes supported capabilities for video streaming|

@@ -1,0 +1,20 @@
+participant Local Web App
+participant SDL
+participant HMI
+
+
+note over Local Web App, HMI:<align:center> **Preconditions:**\n 1. Core is built with DWEBSOCKET_SERVER_TRANSPORT_SUPPORT set to `true`\n2. Web app (appHMIType=WEB_VIEW) is registered\n3. Web app is in NONE HMILevel
+
+note over HMI: User activates Web app 
+
+HMI->SDL: SDL.ActivateApp()
+SDL-->HMI: SDL.ActivateApp(SUCCESS)
+SDL->Local Web App: OnHMIStatus (hmiLevel=FULL)
+
+note over HMI: <align:center>Web app is visible\nin the main window on the HMI
+
+HMI->>SDL:<align:center> BC.OnSystemCapabilityUpdate\n(displayCapabilities(...(templatesAvailable("MEDIA", "NON-MEDIA",\n "NAV_FULLSCREEN_MAP","WEB_VIEW"))
+
+note over HMI: <align:center> The WEB_VIEW template must NOT\n declare support in its WindowCapabilities\nfor any `softButtonCapabilities`, the `TextFields` with name:\n `mainField1-4`, `mediaClock`, `mediaTrack`,\nnor the `ImageFields` with name:\n `softButtonImage`, `menuIcon`, `graphic`, or `secondaryGraphic`
+
+SDL->>Local Web App: <align:center>OnSystemCapabilityUpdated\n(displayCapabilities(...(templatesAvailable("MEDIA", "NON-MEDIA",\n "NAV_FULLSCREEN_MAP","WEB_VIEW"))

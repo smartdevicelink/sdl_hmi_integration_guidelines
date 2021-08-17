@@ -11,6 +11,12 @@ Purpose
 
 ### Request
 
+!!! must
+
+1. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
+
+!!!
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|
@@ -48,7 +54,7 @@ UpdateTurnList
       {
         "navigationText" :  
         {
-          "fieldName" :  "navigationText",
+          "fieldName" :  "turnText",
           "fieldText" : "Turn Right"
         },
         "turnIcon" :
@@ -61,7 +67,7 @@ UpdateTurnList
       {
         "navigationText" :  
         {
-          "fieldName" :  "navigationText",
+          "fieldName" :  "turnText",
           "fieldText" : "Turn Left"
         },
         "turnIcon" :
@@ -74,7 +80,7 @@ UpdateTurnList
       {
         "navigationText" :  
         {
-          "fieldName" :  "navigationText",
+          "fieldName" :  "turnText",
           "fieldText" : "Go Forward"
         },
         "turnIcon" :

@@ -133,7 +133,13 @@
             },
             {
               "name": "OnAppPropertiesChange"
-            }
+            },
+            {
+              "name": "OnAppCapabilityUpdated"
+            },
+            {
+              "name": "OnResetTimeout"
+            }            
           ]
         },
         {
@@ -149,7 +155,10 @@
               "name": "OnButtonPress"
             },
             {
-              "name": "OnButtonSubscription"
+              "name": "SubscribeButton"
+            },
+            {
+              "name": "UnsubscribeButton"
             },
             {
               "name": "ButtonPress"
@@ -287,9 +296,6 @@
               "name": "OnLanguageChange"
             },
             {
-              "name": "OnResetTimeout"
-            },
-            {
               "name": "SetGlobalProperties"
             },
             {
@@ -317,6 +323,9 @@
             },
             {
               "name": "Alert"
+            },
+            {
+              "name": "SubtleAlert"
             },
             {
               "name": "CancelInteraction"
@@ -364,13 +373,19 @@
               "name": "OnRecordStart"
             },
             {
-              "name": "OnResetTimeout"
+              "name": "OnSubtleAlertPressed"
             },
             {
               "name": "OnSystemContext"
             },
             {
               "name": "OnTouchEvent"
+            },
+            {
+              "name": "OnUpdateFile"
+            },
+            {
+              "name": "OnUpdateSubMenu"
             },
             {
               "name": "PerformAudioPassThru"

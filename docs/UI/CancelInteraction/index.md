@@ -11,13 +11,19 @@ Purpose
 
 ### Request
 
+!!! must
+
+Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
+
+!!!
+
 #### Parameters
 
 |Name|Type|Mandatory|Description|
 |:---|:---|:--------|:---------|
 |appID|Integer|true||
 |cancelID|Integer|false||
-|functionID|Integer|true|Can be any one of AlertID, PerformInteractionID, SliderID or ScrollableMessageID|
+|functionID|Integer|true|Can be any one of AlertID, PerformInteractionID, SliderID, ScrollableMessageID, or SubtleAlertID|
 
 ### Response
 

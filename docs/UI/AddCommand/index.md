@@ -13,19 +13,26 @@ UI.AddCommand represents a request from an application to add a command to the a
 
 !!! must
 
-  1. The commands sent for the application via AddCommand must be accessible from a Menu
-  2. The user must be able to enter the Menu while the related application is in the FULL state
-  3. Store the data provided in this RPC with the requesting application's appID
-  4. Add the command to the application's menu at the position specified in the `menuParams`
+  1. The commands sent for the application via AddCommand must be accessible from a Menu.
+  2. The user must be able to enter the Menu while the related application is in the FULL state.
+  3. Store the data provided in this RPC with the requesting application's appID.
+  4. Add the command to the application's menu at the position specified in the `menuParams`.
+  5. If driver distraction state is enabled, the number of shown items should be limited by the driver distraction system capability parameter [menuLength](../../common/struct/#driverdistractioncapability).
+  6. Renew the timeout via sending `BC.OnResetTimeout` notification to SDL in case more time for processing `UI.AddSubMenu` request is needed.
 
 !!!
 
 !!! note
 
   * If SDL sends the HMI a UI.AddCommand and a VR.AddCommand, and receives a SUCCESS from one and a failure from the other, SDL will send a UI.DeleteCommand for the AddCommand which succeeded.
+  * If the `menuParams` contains a `parentID`, the command is part of a sub menu. SDL adds new sub menus via the [UI.AddSubMenu](../addsubmenu) request.
+  * If some command list items are hidden due to driver distraction, the HMI can note that some menu items are hidden for the drivers safety.
   * If the `menuParams` contains a `parentID` the command is part of a sub menu. SDL adds SubMenu Commands to the top level Menu via [UI.AddSubMenu](../addsubmenu)
-  
+  * During data resumption SDL sends UI.AddCommands to HMI by `internal_consecutiveNumber` in the same order as they were created by mobile app in previous ignition cycle.
+
 !!!
+
+As of Core 7.1, UI.AddCommand requests can contain all UI elements that were previously found in a Perform Interaction's Choice.
 
 ### Request
 
@@ -36,6 +43,7 @@ UI.AddCommand represents a request from an application to add a command to the a
 |cmdID|Integer|true|minvalue: 0<br>maxvalue: 2000000000|
 |menuParams|[Common.MenuParams](../../common/structs/#menuparams)|false||
 |cmdIcon|[Common.Image](../../common/structs/#image)|false||
+|secondaryImage|[Common.Image](../../common/structs/#image)|false||
 |appID|Integer|true||
 
 ### Response
@@ -91,6 +99,16 @@ AddCommand UI No Response, <abbr title="Voice Recognition">VR</abbr> Succeeds
 ![AddCommand](./assets/AddCommandUINoResponseVRSuccess.png)
 |||
 
+|||
+AddCommand for WebEngine App
+![AddCommand](./assets/AddCommandWebEngineApp.png)
+|||
+
+|||
+AddCommand restoring during data resumption
+![AddCommand](./assets/AddCommand_Resumption.png)
+|||
+
 ### JSON Message Examples
 
 #### Example Request
@@ -107,11 +125,18 @@ AddCommand UI No Response, <abbr title="Voice Recognition">VR</abbr> Succeeds
      {
          "parentID" : 6,
          "position" : 0,
-         "menuName" : "Show weather for tomorrow"
+         "menuName" : "Show weather for tomorrow",
+         "secondaryText" : "Detroit, MI",
+         "tertiaryText" : "0.8 miles"
      },
     "cmdIcon" :
      {
          "value" : "tmp/SDL/app/Gis_meteo/1245_28.jpeg",
+         "imageType" : "DYNAMIC"
+     },
+    "secondaryImage" :
+     {
+         "value" : "tmp/SDL/app/Gis_meteo/5678.jpeg",
          "imageType" : "DYNAMIC"
      },
     "appID" : 65409

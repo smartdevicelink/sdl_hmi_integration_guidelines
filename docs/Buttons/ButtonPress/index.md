@@ -16,9 +16,10 @@ The system shall list all available RC radio buttons and RC climate buttons in t
 
 !!! must
 
-  1. Modules sent by application must be available on HMI
-  2. Access to control module settings is defined by access mode entered by user on HMI
-  3. Requested control buttons have to be available for such module on HMI
+  1. Modules sent by application must be available on HMI.
+  2. Access to control module settings is defined by access mode entered by user on HMI.
+  3. Requested control buttons have to be available for such module on HMI.
+  4. HMI must send `BC.OnResetTimeout` notification to SDL to reset the timeout in case it needs more time to process the request.
 
 
 !!!

@@ -1,0 +1,36 @@
+participant App
+participant SDL
+participant HMI
+
+==<align:center>Pre-conditions: 1.Streaming is in process\n2.App is subscribed to capabilities updates ==
+
+seq HMI notifies application of new Video Streaming Capabilities
+
+note over HMI:<align:center> User changes\nstreaming resolution
+
+HMI->HMI: Stop displaying video
+HMI->>SDL:<align:center> BC.OnSystemCapabilityUpdated\n(appID, videoStreamingCapability=VideoStreamingCapability)
+SDL->>App:<align:center> OnSystemCapabilityUpdated\n(videoStreamingCapability=VideoStreamingCapability)
+App->App: CallBack
+end
+
+seq Application stops streaming
+App->SDL: EndService (VIDEO)
+SDL-->App: EndServiceACK (VIDEO)
+SDL->HMI: Navi.StopStream
+HMI-->SDL: Navi.StopStream (SUCCESS)
+SDL->>HMI: Navi.OnVideoDataStreaming (false)
+end
+
+seq Application starts streaming after updating streaming content window according to the new VSCs
+App->SDL: StartService (VIDEO, new_streaming_params)
+SDL->HMI: Navi.SetVideoConfig (new_streaming_params)
+HMI-->SDL: Navi.SetVideoConfig (SUCCESS)
+SDL-->App: StartServiceACK (VIDEO, new_streaming_params)
+SDL->HMI: Navi.StartStream
+HMI-->SDL: Navi.StartStream (SUCCESS)
+App->SDL:<align:center> StreamingData ...\n(new_streaming_params)
+SDL->HMI: <align:center> StreamingData ...\n(new_streaming_params)
+SDL->>HMI: Navi.OnVideoDataStreaming (true)
+HMI->HMI: Display new video stream
+end

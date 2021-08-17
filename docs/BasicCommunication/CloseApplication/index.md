@@ -11,16 +11,12 @@ Purpose
 
 ### Behavior
 
-If the application is in the foreground of the HMI:
 !!! must
 
-  1. Remove the application from the foreground.
+  1. Remove the application from the foreground (SDL will place the application in hmiLevel `NONE`).
+  2. Send `BC.OnResetTimeout` notification to SDL for resetting timeout in case HMI needs more time to process the request.
 
 !!!
-
-SDL will:
-
-1. Place the application in hmiLevel `NONE`
 
 ### Request
 
@@ -46,6 +42,11 @@ Close Application request from mobile application
 |||
 Close Application after Failed Data Consent Prompt
 ![Close Application Failed Data](./assets/CloseApplicationFailedData.png)
+|||
+
+|||
+Close Application request from Local Web App  
+![Close Application Local Web App](./assets/CloseApplicationLocalWebApp.png)
 |||
 
 ### JSON Message Examples

@@ -27,6 +27,12 @@ The parameter `type` included in the `VR.AddCommand` request is the differentiat
 
 `Command` type <abbr title="Voice Recognition">VR</abbr> Commands should only be used when the user wants to interact with the App's Menu.
 
+During data resumption SDL sends VR.AddCommands to HMI by `internal_consecutiveNumber` in the same order as they were created by mobile app in previous ignition cycle.
+
+!!! must
+
+Renew the timeout informing SDL about this event via `BC.OnResetTimeout` notification in case it requires more time to process the `VR.AddCommand` request (due to a batch of `vrCommands`).
+
 !!!
 
 #### Parameters
@@ -70,6 +76,11 @@ UI.AddCommand fails, VR.AddCommand returns SUCCESS
 |||
 UI.AddCommand no response, VR.AddCommand returns SUCCESS
 ![AddCommand](./assets/AddCommandSuccessUINoResponse.png)
+|||
+
+|||
+AddCommand restoring during data resumption
+![AddCommand](./assets/AddCommandResumption.png)
 |||
 
 ### JSON Message Examples

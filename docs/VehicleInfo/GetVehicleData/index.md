@@ -18,6 +18,7 @@ Purpose
     * Schema_items should not have `name`/`key` equivalent to any RPC vehicle data item/sub-param.
 
 4. Respond with any vehicle data defined in `HMI_API.xml` included in the original request.
+5. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
 
 !!!
 
@@ -31,6 +32,25 @@ Purpose
 * Could be used by a policy server to index cloud app configurations for a specific head unit
 
 The HMI will have to update this field if the user chooses to reset this value (in case the vehicle changes owners)
+
+!!!
+
+!!! note
+
+#### Roof Status Selection
+
+* Convertible roof - `location` grid would span entire rows and columns and roof `status` could be `CLOSED` or `AJAR` with corresponding `state`. 
+* Sunroof/Moonroof - `location` grid would span just actual location of sunroof/moonroof. `status` could be `CLOSED` or `AJAR` with corresponding `state`.
+* Entire roof - `location` grid would span entire rows and columns and roof status would be `REMOVED` or `CLOSED/LOCKED`. `state` can be omitted.
+* Other type of roof - `location` grid would span actual location of the roof as per physical location. `status` and `state` would be as per table below:
+
+| Roof condition  | status | state |
+| ------------- | ------------- | ------------- |
+| Roof is closed and locked  | LOCKED  | `approximatePosition` = 0 & `deviation` = 0 |
+| Roof is closed and unlocked  | CLOSED  | `approximatePosition` = 0 & `deviation` = 0 |
+| Roof is closed and unknown locked state | CLOSED  | `approximatePosition` = 0 & `deviation` = 0 |
+| Roof is open  | AJAR  | actual values of `approximatePosition` & `deviation` |
+| Roof is physically removed  | REMOVED  | can be omitted OR `approximatePosition` = 0 & `deviation` = 0 |
 
 !!!
 
@@ -70,8 +90,20 @@ The HMI will have to update this field if the user chooses to reset this value (
 |engineOilLife|Boolean|false||
 |electronicParkBrakeStatus|Boolean|false||
 |cloudAppVehicleID|Boolean|false||
+|gearStatus|Boolean|false||
+|stabilityControlsStatus|Boolean|false||
+|windowStatus|Boolean|false||
+|handsOffSteering|Boolean|false||
+|seatOccupancy|Boolean|false||
+|climateData|Boolean|false||
 
 ### Response
+
+!!! note
+
+In case an application is registered with RPC Spec message versions earlier than 8.0.0 and HMI does not provide the values for the params of `TireStatus` structure in GetVehicleData_response, SDL Core provides the default values to the application.
+
+!!!
 
 #### Parameters
 
@@ -107,6 +139,12 @@ The HMI will have to update this field if the user chooses to reset this value (
 |engineOilLife|Float|false|minvalue: 0<br>maxvalue: 100|
 |electronicParkBrakeStatus|[Common.ElectronicParkBrakeStatus](../../common/enums/#electronicparkbrakestatus)|false||
 |cloudAppVehicleID|String|false||
+|gearStatus|[Common.GearStatus](../../common/structs/#gearstatus)|false||
+|stabilityControlsStatus|[Common.StabilityControlsStatus](../../common/structs/#stabilitycontrolsstatus)|false||
+|windowStatus|[Common.WindowStatus](../../common/structs/#windowstatus)|false|array: true<br>minsize: 0<br>maxsize: 100|
+|handsOffSteering|Boolean|false||
+|seatOccupancy|[Common.SeatOccupancy](../../common/structs/#seatoccupancy)|false||
+|climateData|[Common.ClimateData](../../common/structs/#climatedata)|false||
 
 ### Sequence Diagrams
 

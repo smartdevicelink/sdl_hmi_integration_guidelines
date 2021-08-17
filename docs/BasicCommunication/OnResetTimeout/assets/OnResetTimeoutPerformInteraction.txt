@@ -1,0 +1,39 @@
+participant App
+participant SDL
+participant HMI
+
+note over App,HMI:<align:center> **//Pre-conditions://** 1. appID is active on HMI
+
+App->SDL:<align:center> SetGlobalProperties\n(params,QUEUE_KEYPRESSES, appID)
+SDL->HMI:<align:center> UI.SetGlobalProperties\n(params,QUEUE_KEYPRESSES, appID)
+
+HMI->HMI:Store SetGlobalProperties\ndata associated with the appID 
+
+HMI-->SDL: UI.SetGlobalProperties(SUCCESS)
+SDL-->App:SetGlobalProperties(SUCCESS)
+
+App->SDL:<align:center>PerformInteraction\n(params, KEYBOARD, appID)
+
+SDL->HMI:<align:center>UI.PerformInteraction\n(params, KEYBOARD, appID)
+
+HMI->HMI:Check with\nSetGlobalProperties data\nstored for the appID
+
+note over HMI:<align:center>Display the keyboard\nin accordence with\n SetGlobalProperties presets
+
+HMI->>SDL:UI.OnSystemContext(HMI_OBSCURED)
+
+note over HMI:<align:center>User presses 'p' key
+HMI->SDL: BC.OnResetTimeout(appID, "PerformInteraction")
+note over HMI:<align:center>User presses 'a' key
+HMI->SDL: BC.OnResetTimeout(appID, "PerformInteraction")
+
+note over HMI:<align:center>User presses HMI-defined\n'Cancel' button
+
+HMI->>SDL:UI.OnKeyboardInput(ENTRY_CANCELLED)
+
+note over HMI:<align:center>Close the dialog with\nkeyboard
+
+HMI-->SDL:UI.PerformInteraction(ABORTED)
+SDL->App:PerformInteraction(ABORTED)
+HMI-->SDL:UI.OnSystemContext(MAIN)
+SDL-->App:OnSystemContext(MAIN)
