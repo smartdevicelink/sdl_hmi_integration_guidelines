@@ -7,14 +7,6 @@
             "name_zh-hans": "概述"
         },
         {
-          "name": "Getting Started",
-          "name_zh-hans": "入门"
-        },
-        {
-            "name": "WebSocket Transport",
-            "name_zh-hans": "连接到SmartDeviceLink"
-        },
-        {
           "name": "BasicCommunication",
           "navigation": [
             {
