@@ -18,20 +18,18 @@ SDL uses `OnEventChanged` notification to appropriately manage the hmiLevel and 
 !!! MUST
 1. Send notification with appropriate parameter value when active call on HMI has been started/ended.
 
-2. Send [SDL.OnAppDeactivated](../../sdl/onappdeactivated) to the active app when the phone call is started.
-
-3. Resume the applications to their original state prior to the phone call event in the HMI when the event ends (see note below).
+2. Return the applications to their appropriate audio streaming state in the HMI when the event ends.
 !!!
 
 !!! NOTE
-SDL does not send BC.ActivateApp or BC.OnResumeAudioSource to HMI after the phone call is ended.
+If the HMI wants to leave the app screen when the PHONE_CALL event occurs, the app's HMI state can be changed accordingly using the `BC.OnAppDeactivated(appID)` and `BC.OnAppActivated(appID)` notifications.
 !!!
 
 Upon receiving `OnEventChanged(PHONE_CALL)`, SDL will:
 
 |isActive|Result|
 |:-------|:-----|
-|true|Change the HMI state of all media applications currently either in FULL or LIMITED to (BACKGROUND, NOT_AUDIBLE) and all navi/projection apps to (LIMITED, NOT_AUDIBLE, STREAMABLE)|
+|true|Move all apps with audioStreamingState AUDIBLE to NOT_AUDIBLE|
 |false|Return applications to the same HMI state they had prior to the event|
 
 #### EMERGENCY_EVENT
