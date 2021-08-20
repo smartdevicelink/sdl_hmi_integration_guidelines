@@ -32,7 +32,7 @@ The HMI may provide the user with a system defined "close" button providing the 
 
 !!! note
 
-An SubtleAlert message may be sent to the HMI for an application which is not currently active. If the alert contains `softButtons` then the duration should be ignored.
+An SubtleAlert message may be sent to the HMI for an application which is not currently active. If the alert contains `softButtons` then the duration parameter will be omitted. In this case the HMI is required to assign a timeout, and recommended to set a longer than usual timeout.
 
 !!!
 
