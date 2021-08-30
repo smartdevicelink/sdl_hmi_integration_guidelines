@@ -81,7 +81,7 @@ When this event is active, SDL **rejects** all app activation requests from the 
     - The HMI must deactivate the EMBEDDED_NAVI event if a navigation app is activated.
 4. When the system supports audio mixing and embedded navigation starts streaming
     - Send TTS.Started to SDL to change media app currently in (LIMITED, AUDIBLE) to (LIMITED, ATTENUATED) due to active embedded navigation.
-    - Send TTS.Stopped to SDL right after embedded navigation stops streaming to change application's HMIStatus to the same state it had prior to the event.
+    - Send TTS.Stopped to SDL right after embedded navigation stops streaming to remove any HMI state modifications that were applied during the event.
 !!!
 
 !!! NOTE
