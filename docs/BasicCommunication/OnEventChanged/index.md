@@ -30,7 +30,7 @@ Upon receiving `OnEventChanged(PHONE_CALL)`, SDL will:
 |isActive|Result|
 |:-------|:-----|
 |true|Move all apps with audioStreamingState AUDIBLE to NOT_AUDIBLE|
-|false|Return applications to the same HMI state they had prior to the event|
+|false|Remove all HMI state modifications that were applied during the event from each application|
 
 #### EMERGENCY_EVENT
 
@@ -45,7 +45,7 @@ Upon receiving `OnEventChanged(EMERGENCY_EVENT)`, SDL will:
 |isActive|Result|
 |:-------|:-----|
 |true|Move all apps with audioStreamingState AUDIBLE or STREAMABLE to NOT_AUDIBLE and NOT_STREAMABLE|
-|false|Return applications to the same HMI state they had prior to the event|
+|false|Remove all HMI state modifications that were applied during the event from each application|
 
 !!! NOTE
 While the event is active, the app is not allowed to stream audio and it will not be heard by the user (due to other audio and/or system events blocking it).
@@ -63,7 +63,7 @@ Upon receiving `OnEventChanged(DEACTIVATE_HMI)`, SDL will:
 |isActive|Result|
 |:-------|:-----|
 |true|Change the hmiLevel of all applications currently in (FULL/LIMITED) to (BACKGROUND, NOT_AUDIBLE, NOT_STREAMABLE)|
-|false|Return applications to the same HMI state they had prior to the event|
+|false|Remove all HMI state modifications that were applied during the event from each application|
 
 !!! NOTE
 When this event is active, SDL **rejects** all app activation requests from the HMI.
@@ -79,7 +79,7 @@ When this event is active, SDL **rejects** all app activation requests from the 
     - The HMI must deactivate the EMBEDDED_NAVI event if a navigation app is activated.
 4. When the system supports audio mixing and embedded navigation starts streaming
     - Send TTS.Started to SDL to change media app currently in (LIMITED, AUDIBLE) to (LIMITED, ATTENUATED) due to active embedded navigation.
-    - Send TTS.Stopped to SDL right after embedded navigation stops streaming to change application's HMIStatus to the same state it had prior to the event.
+    - Send TTS.Stopped to SDL right after embedded navigation stops streaming to remove any HMI state modifications that were applied during the event.
 !!!
 
 !!! NOTE
