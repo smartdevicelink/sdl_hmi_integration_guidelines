@@ -1,0 +1,18 @@
+participant App
+participant SDL
+participant HMI
+note over App,HMI:<align:center> **//Preconditions://** 1. Application is successfully registered, the status is active or in background on HMI\n2. The request is valid and allowed by SDL Policy Manager
+opt <CUSTOM_BUTTON> is supported by HMI
+note over HMI:<align:center><CUSTOM_BUTTON>\nis supported\nin hmi_capabilities
+App->SDL:SubscribeButton (<appID>, <CUSTOM_BUTTON>)
+SDL->SDL:<align:center> Check stored\nhmi_capabilities
+SDL->HMI:Buttons.SubscribeButton (<appID>, <CUSTOM_BUTTON>)
+SDL<<--HMI:Buttons.SubscribeButton (SUCCESS, success: true)
+App<<--SDL:SubscribeButton (SUCCESS, success: true)
+end
+opt <CUSTOM_BUTTON> is NOT supported by HMI
+note over HMI:<align:center> <CUSTOM_BUTTON>\nis **not** supported\nin hmi_capabilities
+App->SDL:SubscribeButton (<appID>, <CUSTOM_BUTTON>)
+SDL->SDL:<align:center> Check stored\nhmi_capabilities
+App<<--SDL:SubscribeButton (UNSUPPORTED_RESOURCE, success:false)
+end

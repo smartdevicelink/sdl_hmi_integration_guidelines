@@ -11,6 +11,12 @@ Purpose
 
 ### Request
 
+!!! must
+
+Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
+
+!!!
+
 #### Parameters
 
 |Name|Type|Mandatory|Additional|

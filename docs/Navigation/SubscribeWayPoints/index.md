@@ -12,7 +12,8 @@ Purpose
 ### Request
 
 !!! MUST
-Send future waypoint updates to SDL using [Navigation.OnWayPointChange](../onwaypointchange)
+1. Send future waypoint updates to SDL using [Navigation.OnWayPointChange](../onwaypointchange).
+2. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
 !!!
 
 !!! note

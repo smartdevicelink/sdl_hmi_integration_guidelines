@@ -16,9 +16,10 @@ SDL sends the `UI.Alert` RPC when some information needs to be displayed to the 
   1. If the alert includes a soft button of type `STEAL_FOCUS` and the user presses the button, the HMI must bring the app associated with the Alert into full screen mode.
   2. The HMI must send [UI.OnSystemContext](../onsystemcontext) with type `ALERT` for the application which is in `FULL` mode.
   3. Respond to the Alert earlier than SDL's default timeout of 10 seconds - applicable only to alerts without `softButtons`.
-  4. Display the alert dialog with the text information in the `alertFields` array and optional `softButtons` and optional `displayIndicator` indicating a timeout for the alert
-  5. Send [Buttons.OnButtonPress](../../buttons/onbuttonpress) and/or [Buttons.OnButtonEvent](../../buttons/onbuttonevent) notifications if soft buttons associated with the alert are pressed by the user
-  6. Dismiss the alert after the duration has passed since receipt of the request
+  4. Display the alert dialog with the text information in the `alertFields` array and optional `softButtons` and optional `displayIndicator` indicating a timeout for the alert.
+  5. Send [Buttons.OnButtonPress](../../buttons/onbuttonpress) and/or [Buttons.OnButtonEvent](../../buttons/onbuttonevent) notifications if soft buttons associated with the alert are pressed by the user.
+  6. Send `BC.OnResetTimeout` notification to SDL to reset the timeout, in case HMI needs more time to process input from user for the request.
+  7. Dismiss the alert after the duration has passed since receipt of the request.
 
 !!!
 
@@ -30,7 +31,7 @@ The HMI may provide the user with a system defined "close" button providing the 
 
 !!! note
 
-An alert may be sent to the HMI for an application which is not currently active. If the alert contains `softButtons` then the duration will be set to `0`
+An alert may be sent to the HMI for an application which is not currently active. If the alert contains `softButtons` then the duration will be set to `0`. In this case the HMI is required to assign a timeout, and recommended to set a longer than usual timeout.
 
 !!!
 
