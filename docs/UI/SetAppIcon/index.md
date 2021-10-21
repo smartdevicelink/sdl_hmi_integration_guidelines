@@ -12,9 +12,9 @@ Purpose
 ### Request
 
 !!! MUST  
-1. Keep track and store the the name and file referencing the app icon each time a successful `SetAppIcon` request occurs from the mobile app.  
+1. Keep track and store the name and file referencing the app icon each time a successful `SetAppIcon` request occurs from the mobile app.  
 2. Display the requested icon together with the application name in the HMI list of registered applications:  
-    * Right away if the the list of registered applications is currently displayed  
+    * Right away if the list of registered applications is currently displayed  
     * When the list of registered applications is displayed upon User's request on HMI  
 3. Display default app icon if the mobile application had not previously set an icon successfully and/or the file does not exist on HMI.    
 
