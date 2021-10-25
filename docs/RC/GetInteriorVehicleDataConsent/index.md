@@ -13,7 +13,7 @@ RC.GetInteriorVehicleDataConsent is sent to the HMI if:
 1. The [access mode](../../common/enums/#rcaccessmode) is `ASK_DRIVER` and
 2. An application (in HMILevel FULL) requests access to an RC module that is already in use by another application.
 
-The `AUTO_ALLOW` and `AUTO_DENY` RC access modes are automatically handled by SDL. For more information about consent rules, see the [Remote Control Consent](https://smartdevicelink.com/en/guides/core/feature-documentation/remote-control-guide/#consent) section.
+The `AUTO_ALLOW` and `AUTO_DENY` RC access modes are automatically handled by SDL. For more information about consent rules, see the [Remote Control Consent](https://smartdevicelink.com/en/guides/core/feature-documentation/remote-control/#consent) section.
 
 The HMI is expected to display a permission prompt to the driver showing the RC module and app details (for example, app's name).
 The driver is expected to have an ability to grant or deny the permission.
