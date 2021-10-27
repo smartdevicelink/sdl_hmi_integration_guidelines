@@ -15,7 +15,7 @@ In order to validate the certificate and to check whether this certificate is no
 ### Request
 
 SDL sends a GetSystemTime request after receiving a BC.OnSystemTimeReady notification from the HMI.  
-After sending the request SDL starts [`<DefaultTimeout>`](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/develop/docs/Configuration%20file/index.md#main) (value from .ini file) waiting for response from HMI. 
+After sending the request SDL starts [`<DefaultTimeout>`](https://smartdevicelink.com/en/guides/core/getting-started/ini-configuration/) (value from .ini file) waiting for response from HMI. 
 
 #### Parameters
 

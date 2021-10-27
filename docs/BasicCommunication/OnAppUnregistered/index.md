@@ -17,7 +17,7 @@ SDL sends this notification when:
 
 !!! MUST
 
-  1. HMI must distinguish distinguish between an unexpected disconnect and a regular exit from the `unexpectedDisconnect` parameter.
+  1. HMI must distinguish between an unexpected disconnect and a regular exit from the `unexpectedDisconnect` parameter.
   2. HMI must removed the named application from the list of registered applications.
 
 !!!

@@ -13,10 +13,11 @@ RC.SetInteriorVehicleData represents a request from an application to change set
 
 !!! must
 
-  1. Modules sent by application must be available on HMI
-  2. Access to control module settings is defined by access mode entered by user on HMI
-  3. Module settings can be changed for settable parameters only
-  4. Requested module items have to be available for such module on HMI
+  1. Modules sent by application must be available on HMI.
+  2. Access to control module settings is defined by access mode entered by user on HMI.
+  3. Module settings can be changed for settable parameters only.
+  4. Requested module items have to be available for such module on HMI.
+  5. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
   
 !!!
 

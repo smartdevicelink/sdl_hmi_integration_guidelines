@@ -13,15 +13,16 @@ RC.GetInteriorVehicleDataConsent is sent to the HMI if:
 1. The [access mode](../../common/enums/#rcaccessmode) is `ASK_DRIVER` and
 2. An application (in HMILevel FULL) requests access to an RC module that is already in use by another application.
 
-The `AUTO_ALLOW` and `AUTO_DENY` RC access modes are automatically handled by SDL. For more information about consent rules, see the [Remote Control Consent](https://smartdevicelink.com/en/guides/core/feature-documentation/remote-control-guide/#consent) section.
+The `AUTO_ALLOW` and `AUTO_DENY` RC access modes are automatically handled by SDL. For more information about consent rules, see the [Remote Control Consent](https://smartdevicelink.com/en/guides/core/feature-documentation/remote-control/#consent) section.
 
 The HMI is expected to display a permission prompt to the driver showing the RC module and app details (for example, app's name).
 The driver is expected to have an ability to grant or deny the permission.
 
 !!! must
-1. HMI must prompt user to make selection of resource allocation
-2. Respond to SDL with user choice within RC.GetInteriorVehicleDataConsent response
-3. If user didn't make choice send GENERIC_ERROR to SDL
+1. HMI must prompt user to make selection of resource allocation.
+2. Respond to SDL with user choice within RC.GetInteriorVehicleDataConsent response.
+3. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the `RC.GetInteriorVehicleDataConsent` request.
+4. Send TIMED_OUT to SDL if user didn't make choice after default timeout expires.
 !!!
 
 ### Request

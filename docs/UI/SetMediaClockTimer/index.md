@@ -32,6 +32,7 @@ The UI.SetMediaClockTimer request indicates either an initial value for the medi
     * CLEAR mode:    
         * Clear `startTime` to 00:00:00 in the case that the `startTime` parameter is not provided in the request, otherwise, `startTime` must be updated with a new value. It is up to the HMI to determine the way the media clock timer is cleared: either to remove it from display or to set it to zero.
 3. Respond with the result code (see _response_ section) correspondingly to the results of this RPC execution.
+4. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
 !!!
     
 !!! NOTE
@@ -53,7 +54,7 @@ By default, `forwardSeekIndicator` and `backSeekIndicator` should be set to `TRA
 |Name|Type|Mandatory|Additional|Description|
 |:---|:---|:--------|:---------|:----------|
 |startTime|[Common.TimeFormat](../../common/structs/#timeformat)|false||_startTime_ must be provided together with modes: "COUNTUP", "COUNTDOWN", "PAUSE" to HMI. _startTime_ will be ignored for "RESUME", and "CLEAR".|
-|endTime|[Common.TimeFormat](../../common/structs/#timeformat)|false||endTime can be provided together with modes: "COUNTUP", "COUNTDOWN", "PAUSE" to HMI. To be used to calculate any visual progress bar (if not provided, this feature is ignored). If endTime is greater then startTime for COUNTDOWN or less than startTime for COUNTUP, then the request will return an INVALID_DATA. _endTime_ will be ignored for "PAUSE", "RESUME", and "CLEAR".|
+|endTime|[Common.TimeFormat](../../common/structs/#timeformat)|false||endTime can be provided together with modes: "COUNTUP", "COUNTDOWN", "PAUSE" to HMI. To be used to calculate any visual progress bar (if not provided, this feature is ignored). If endTime is greater than startTime for COUNTDOWN or less than startTime for COUNTUP, then the request will return an INVALID_DATA. _endTime_ will be ignored for "PAUSE", "RESUME", and "CLEAR".|
 |updateMode|[Common.ClockUpdateMode](../../common/enums/#clockupdatemode)|true||Enumeration to control the media clock. In case of pause, resume, or clear, the start time value is ignored and shall be left out. For resume, the time continues with the same value as it was when paused.|
 |audioStreamingIndicator|[Common.AudioStreamingIndicator](../../common/enums/#audiostreamingindicator)|false||Indicates that a button press of the Play/Pause button would play, pause or stop the current playback.|
 |forwardSeekIndicator|[Common.SeekStreamingIndicator](../../common/structs/#seekstreamingindicator)|false||Used to control the forward seek button to either skip forward a set amount of time or to the next track.|

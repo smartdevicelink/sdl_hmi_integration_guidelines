@@ -55,7 +55,8 @@ Purpose
 
 !!! must
 
-HMI must send SubscribeVehicleData response only for ROOT level items.
+1. Send SubscribeVehicleData response only for ROOT level items.
+2. Send `BC.OnResetTimeout` notification to SDL to reset the timeout in case HMI needs more time to process the request.
 
 !!!
 

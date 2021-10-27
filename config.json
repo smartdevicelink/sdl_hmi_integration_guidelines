@@ -128,7 +128,10 @@
             },
             {
               "name": "OnAppCapabilityUpdated"
-            }
+            },
+            {
+              "name": "OnResetTimeout"
+            }            
           ]
         },
         {
@@ -144,7 +147,10 @@
               "name": "OnButtonPress"
             },
             {
-              "name": "OnButtonSubscription"
+              "name": "SubscribeButton"
+            },
+            {
+              "name": "UnsubscribeButton"
             },
             {
               "name": "ButtonPress"
@@ -282,9 +288,6 @@
               "name": "OnLanguageChange"
             },
             {
-              "name": "OnResetTimeout"
-            },
-            {
               "name": "SetGlobalProperties"
             },
             {
@@ -360,9 +363,6 @@
             },
             {
               "name": "OnRecordStart"
-            },
-            {
-              "name": "OnResetTimeout"
             },
             {
               "name": "OnSubtleAlertPressed"

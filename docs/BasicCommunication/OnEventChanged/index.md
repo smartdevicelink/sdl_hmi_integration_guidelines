@@ -18,21 +18,19 @@ SDL uses `OnEventChanged` notification to appropriately manage the hmiLevel and 
 !!! MUST
 1. Send notification with appropriate parameter value when active call on HMI has been started/ended.
 
-2. Send [SDL.OnAppDeactivated](../../sdl/onappdeactivated) to the active app when the phone call is started.
-
-3. Resume the applications to their original state prior to the phone call event in the HMI when the event ends (see note below).
+2. Return the applications to their appropriate audio streaming state in the HMI when the event ends.
 !!!
 
 !!! NOTE
-SDL does not send BC.ActivateApp or BC.OnResumeAudioSource to HMI after the phone call is ended.
+If the HMI wants to leave the app screen when the PHONE_CALL event occurs, the app's HMI state can be changed accordingly using the `BC.OnAppDeactivated(appID)` and `BC.OnAppActivated(appID)` notifications.
 !!!
 
 Upon receiving `OnEventChanged(PHONE_CALL)`, SDL will:
 
 |isActive|Result|
 |:-------|:-----|
-|true|Change the HMI state of all media applications currently either in FULL or LIMITED to (BACKGROUND, NOT_AUDIBLE) and all navi/projection apps to (LIMITED, NOT_AUDIBLE, STREAMABLE)|
-|false|Return applications to the same HMI state they had prior to the event|
+|true|Move all apps with audioStreamingState AUDIBLE to NOT_AUDIBLE|
+|false|Remove all HMI state modifications that were applied during the event from each application|
 
 #### EMERGENCY_EVENT
 
@@ -47,7 +45,7 @@ Upon receiving `OnEventChanged(EMERGENCY_EVENT)`, SDL will:
 |isActive|Result|
 |:-------|:-----|
 |true|Move all apps with audioStreamingState AUDIBLE or STREAMABLE to NOT_AUDIBLE and NOT_STREAMABLE|
-|false|Return applications to the same HMI state they had prior to the event|
+|false|Remove all HMI state modifications that were applied during the event from each application|
 
 !!! NOTE
 While the event is active, the app is not allowed to stream audio and it will not be heard by the user (due to other audio and/or system events blocking it).
@@ -65,7 +63,7 @@ Upon receiving `OnEventChanged(DEACTIVATE_HMI)`, SDL will:
 |isActive|Result|
 |:-------|:-----|
 |true|Change the hmiLevel of all applications currently in (FULL/LIMITED) to (BACKGROUND, NOT_AUDIBLE, NOT_STREAMABLE)|
-|false|Return applications to the same HMI state they had prior to the event|
+|false|Remove all HMI state modifications that were applied during the event from each application|
 
 !!! NOTE
 When this event is active, SDL **rejects** all app activation requests from the HMI.
@@ -81,7 +79,7 @@ When this event is active, SDL **rejects** all app activation requests from the 
     - The HMI must deactivate the EMBEDDED_NAVI event if a navigation app is activated.
 4. When the system supports audio mixing and embedded navigation starts streaming
     - Send TTS.Started to SDL to change media app currently in (LIMITED, AUDIBLE) to (LIMITED, ATTENUATED) due to active embedded navigation.
-    - Send TTS.Stopped to SDL right after embedded navigation stops streaming to change application's HMIStatus to the same state it had prior to the event.
+    - Send TTS.Stopped to SDL right after embedded navigation stops streaming to remove any HMI state modifications that were applied during the event.
 !!!
 
 !!! NOTE
