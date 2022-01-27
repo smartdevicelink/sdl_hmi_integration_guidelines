@@ -395,9 +395,6 @@
               "name": "SetAppIcon"
             },
             {
-              "name": "SetDisplayLayout"
-            },
-            {
               "name": "SetGlobalProperties"
             },
             {
