@@ -9,6 +9,11 @@ Sender
 Purpose
 : Set the display template for the specified application's persistent display.
 
+!!! NOTE
+This RPC is no longer used as of Core version 8.1.0. 
+
+Core now transforms incoming `SetDisplayLayout` requests from the into [UI.Show](../Show) requests with the `templateConfiguration` parameter to change the display layout.
+!!!
 ### Request
 
 !!! must
