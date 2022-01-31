@@ -12,7 +12,7 @@ Purpose
 !!! NOTE
 This RPC is no longer used as of SDL version 8.1.0. 
 
-SDL now transforms incoming `SetDisplayLayout` requests from the into [UI.Show](../Show) requests with the `templateConfiguration` parameter to change the display layout.
+SDL now transforms incoming `SetDisplayLayout` requests from mobile into [UI.Show](../Show) requests with the `templateConfiguration` parameter to change the display layout.
 !!!
 ### Request
 
