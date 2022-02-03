@@ -61,7 +61,7 @@ The list of RPCs and data structures that `OnPutFile` affects are:
 
 !!! NOTE
 
-In the context of `PutFile` and `OnPutFile` each of these diagrams refers to `syncFileName` by `FileName`
+In the context of `PutFile` and `OnPutFile`, each of these diagrams use the term `FileName` to refer to the value of the `syncFileName` parameter
 
 !!!
 
