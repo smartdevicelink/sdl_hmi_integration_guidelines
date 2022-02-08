@@ -25,6 +25,6 @@ SDL-->HMI: SDL.GetUserFriendlyMessage {params}
 
 note over SDL:<align:center>SDL will never allow the\n appID_1 (WEB_VIEW) app\n that has NULL permissions\nto register afterwards</align>
 
-note over HMI:<align:center>Display the popup\nwith "Unauthorized"\nmessage</align>
+note over HMI:<align:center>Display the popup\nwith "AppUnauthorized"\nmessage</align>
 
 note over SDL:<align:center> Apps with other AppHMIType can be registered,\nbut are not allowed to be activated
