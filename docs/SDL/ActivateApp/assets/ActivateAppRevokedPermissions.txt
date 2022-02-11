@@ -1,0 +1,30 @@
+participant SDL
+
+participant HMI
+
+note over HMI: <align:center>appID_1 app is registered and is\npresent in the 'List of registered\napps' on HMI</align>
+
+note over HMI: <align:center>The User chooses to activate appID_1\napp (manually or by voice)</align>
+
+SDL<-HMI: SDL.ActiveApp{appID_1}
+
+
+note over SDL: <align:center>PT stores the device\nas consented</align>
+
+note over SDL: <align:center>PT Update comes ->\nappID_1 gets NULL\npermissions</align>
+
+SDL-->HMI:<align:center> SDL.ActiveApp\n{code:4, isSDLAllowed:true, isAppRevoked:true}
+
+note over HMI: <align:center>Do NOT activate the\nappID_1 app</align>
+
+SDL<-HMI: <align:center> SDL.GetUserFriendlyMessage\n{messageCodes: "AppUnauthorized", params}
+
+note over SDL: <align:center>Takes the information\nfrom PT</align>
+
+SDL-->HMI: SDL.GetUserFriendlyMessage {params}
+
+note over SDL:<align:center>SDL will never allow the\n appID_1 (WEB_VIEW) app\n that has NULL permissions\nto register afterwards</align>
+
+note over HMI:<align:center>Display the popup\nwith "AppUnauthorized"\nmessage</align>
+
+note over SDL:<align:center> Apps with other AppHMIType can be registered,\nbut are not allowed to be activated
