@@ -40,7 +40,7 @@ If `level` is `FULL` or `LIMITED`:
   * Apply [UI.SetGlobalProperties](../../UI/SetGlobalProperties) associated with the named `appID`, if any
   * Apply [UI.AddSubMenu](../../UI/AddSubMenu) associated with the named `appID`, if any
   * Display the web page view in the main window of the application, in case the application `AppHMIType` is `WEB_VIEW` and a template has not yet been set.
-  2. Make <abbr title="Voice Recognition">VR</abbr> commands accessible from previous [VR.AddCommand](https://smartdevicelink.com/en/docs/hmi/master/vr/addcommand/) for the named `appID` during the same ignition cycle
+  2. Make <abbr title="Voice Recognition">VR</abbr> commands accessible from previous [VR.AddCommand](../../vr/addcommand/) for the named `appID` during the same ignition cycle
   3. Apply [TTS.SetGlobalProperties](../../TTS/SetGlobalProperties) associated with the `appID` in case previously requested since application registration
   4. Assign priority based on the `priority` parameter received. If the parameter is omitted, the HMI must assign a priority of `NONE` by default
   5. Respond with `SUCCESS` result code after the previous requirements have been met
