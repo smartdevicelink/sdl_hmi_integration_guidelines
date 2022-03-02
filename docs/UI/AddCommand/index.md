@@ -17,7 +17,7 @@ UI.AddCommand represents a request from an application to add a command to the a
   2. The user must be able to enter the Menu while the related application is in the FULL state.
   3. Store the data provided in this RPC with the requesting application's appID.
   4. Add the command to the application's menu at the position specified in the `menuParams`.
-  5. If driver distraction state is enabled, the number of shown items should be limited by the driver distraction system capability parameter [menuLength](https://smartdevicelink.com/en/docs/hmi/master/common/structs/#driverdistractioncapability).
+  5. If driver distraction state is enabled, the number of shown items should be limited by the driver distraction system capability parameter [menuLength](../../common/structs/#driverdistractioncapability).
   6. Renew the timeout via sending `BC.OnResetTimeout` notification to SDL in case more time for processing `UI.AddSubMenu` request is needed.
 
 !!!

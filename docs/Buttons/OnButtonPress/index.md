@@ -9,7 +9,7 @@ Sender
 Purpose
 : Inform SDL about a Button Press
 
-If the HMI reports to SDL via [Buttons.GetCapabilities](../getcapabilities) that it supports long and/or short button press modes, SDL expects the HMI to send the Buttons.OnButtonPress notification but buttons that have been subscribed via [Buttons.OnButtonSubscription](https://smartdevicelink.com/en/docs/hmi/master/buttons/subscribebutton/) and custom buttons added in other RPCs as Soft Buttons.
+If the HMI reports to SDL via [Buttons.GetCapabilities](../getcapabilities) that it supports long and/or short button press modes, SDL expects the HMI to send the Buttons.OnButtonPress notification but buttons that have been subscribed via [Buttons.OnButtonSubscription](../../buttons/subscribebutton/) and custom buttons added in other RPCs as Soft Buttons.
 
 !!! must
 
