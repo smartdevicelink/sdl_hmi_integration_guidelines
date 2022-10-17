@@ -18,7 +18,7 @@ The request may come for the application being whatever active or in background 
 During Resumption SDL should restore all button subscriptions for application and send required `SubscribeButton` requests to HMI.
 
 !!! NOTE
-SDL transfers `Buttons.SubscibeButton(CUSTOM_BUTTON)` request from an application to HMI **only if** `CUSTOM_BUTTON` is supported by HMI (`Buttons[capabilities]` section of `hmi_capabilities.json`).
+SDL transfers `Buttons.SubscribeButton(CUSTOM_BUTTON)` request from an application to HMI **only if** `CUSTOM_BUTTON` is supported by HMI (`Buttons[capabilities]` section of `hmi_capabilities.json`).
 !!!
 
 #### Parameters

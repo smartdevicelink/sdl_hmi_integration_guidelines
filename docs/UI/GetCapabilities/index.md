@@ -53,231 +53,223 @@ GetCapabilities
 
 ```json
 {
-    "jsonrpc":"2.0",
-    "id":42,
-    "result":{
-        "code":0,
-        "method":"UI.GetCapabilities",
-        "displayCapabilities":{
-            "displayType":"GEN2_8_DMA",
-            "displayName":"SDL_HMI",
-            "textFields":[
-                {
-                    "name":"mainField1",
-                    "characterSet":"UTF_8",
-                    "width":500,
-                    "rows":1
-                },
-                ...
-                {
-                    "name":"mediaClock",
-                    "characterSet":"UTF_8",
-                    "width":500,
-                    "rows":1
-                },
-                {
-                    "name":"mediaTrack",
-                    "characterSet":"UTF_8",
-                    "width":500,
-                    "rows":1
-                },
-                {
-                    "name":"templateTitle",
-                    "characterSet":"UTF_8",
-                    "width":100,
-                    "rows":1
-                },
-                {
-                    "name":"alertText1",
-                    "characterSet":"UTF_8",
-                    "width":500,
-                    "rows":1
-                },
-                ...
-            ],
-            "imageFields":[
-                {
-                    "name":"softButtonImage",
-                    "imageTypeSupported":[
-                        "GRAPHIC_BMP",
-                        "GRAPHIC_JPEG",
-                        "GRAPHIC_PNG"
-                    ],
-                    "imageResolution":{
-                        "resolutionWidth":64,
-                        "resolutionHeight":64
-                    }
-                },
-                {
-                    "name":"choiceImage",
-                    "imageTypeSupported":[
-                        "GRAPHIC_BMP",
-                        "GRAPHIC_JPEG",
-                        "GRAPHIC_PNG"
-                    ],
-                    "imageResolution":{
-                        "resolutionWidth":64,
-                        "resolutionHeight":64
-                    }
-                },
-                ...
-            ],
-            "mediaClockFormats":[
-                "CLOCK1",
-                "CLOCK2",
-                "CLOCK3",
-                "CLOCKTEXT1",
-                "CLOCKTEXT2",
-                "CLOCKTEXT3",
-                "CLOCKTEXT4"
-            ],
-            "graphicSupported":true,
-            "imageCapabilities":[
-                "DYNAMIC",
-                "STATIC"
-            ],
-            "templatesAvailable":[
-                "MEDIA",
-                "NON-MEDIA",
-                "DEFAULT",
-                "NAV_FULLSCREEN_MAP",
-                "WEB_VIEW"
-            ],
-            "screenParams":{
-                "resolution":{
-                    "resolutionWidth":800,
-                    "resolutionHeight":480
-                },
-                "touchEventAvailable":{
-                    "pressAvailable":true,
-                    "multiTouchAvailable":true,
-                    "doublePressAvailable":false
-                }
-            },
-            "numCustomPresetsAvailable":10
-        },
-        "systemCapabilities":{
-            "videoStreamingCapability":{
-                "preferredResolution":{
-                    "resolutionWidth":800,
-                    "resolutionHeight":380
-                },
-                "maxBitrate":2147483647,
-                "supportedFormats":[
-                    {
-                        "protocol":"RAW",
-                        "codec":"H264"
-                    },
-                    {
-                        "protocol":"RTP",
-                        "codec":"H264"
-                    },
-                    {
-                        "protocol":"RTSP",
-                        "codec":"Theora"
-                    },
-                    {
-                        "protocol":"RTMP",
-                        "codec":"VP8"
-                    },
-                    {
-                        "protocol":"WEBM",
-                        "codec":"VP9"
-                    }
-                ],
-                "hapticSpatialDataSupported":true,
-                "diagonalScreenSize":8,
-                "pixelPerInch":96,
-                "scale":1,
-                "preferredFPS": 15,
-                "additionalVideoStreamingCapabilities":[
-                   {
-                      "scale":1,
-                      "hapticSpatialDataSupported":true,
-                      "preferredFPS": 15,
-                      "preferredResolution":{
-                         "resolutionWidth":800,
-                         "resolutionHeight":350
-                      }
-                   },
-                   {
-                      "hapticSpatialDataSupported":false,
-                      "preferredFPS": 30,
-                      "preferredResolution":{
-                         "resolutionWidth":320,
-                         "resolutionHeight":240
-                      }
-                   },
-                   {
-                      "hapticSpatialDataSupported":true,
-                      "preferredFPS": 24,
-                      "preferredResolution":{
-                         "resolutionWidth":400,
-                         "resolutionHeight":480
-                      }
-                   },
-                   {
-                      "hapticSpatialDataSupported":true,
-                      "preferredFPS": 20,
-                      "preferredResolution":{
-                         "resolutionWidth":640,
-                         "resolutionHeight":480
-                      }
-                   },
-                   {
-                      "hapticSpatialDataSupported":true,
-                      "preferredFPS": 20,
-                      "preferredResolution":{
-                         "resolutionWidth":800,
-                         "resolutionHeight":240
-                      }
-                   },
-                   {
-                      "scale":2.5,
-                      "hapticSpatialDataSupported":false
-                   },
-                   {
-                      "scale":5,
-                      "hapticSpatialDataSupported":true
-                   }
-                ]
-            },
-            "driverDistractionCapability":{
-                "menuLength":10,
-                "subMenuDepth":2
-            }
-        },
-        "audioPassThruCapabilities":{
-            "samplingRate":"44KHZ",
-            "bitsPerSample":"8_BIT",
-            "audioType":"PCM"
-        },
-        "audioPassThruCapabilitiesList":[
-            {
-                "samplingRate":"44KHZ",
-                "bitsPerSample":"8_BIT",
-                "audioType":"PCM"
-            }
-        ],
-        "pcmStreamCapabilities":{
-            "samplingRate":"16KHZ",
-            "bitsPerSample":"16_BIT",
-            "audioType":"PCM"
-        },
-        "hmiZoneCapabilities":"FRONT",
-        "softButtonCapabilities":[
-            {
-                "shortPressAvailable":true,
-                "longPressAvailable":true,
-                "upDownAvailable":true,
-                "imageSupported":true
-            }
-        ],
-        "hmiCapabilities":{
-            "navigation":true,
-            "phoneCall":true
-        }
-    }
+	"jsonrpc": "2.0",
+	"id": 42,
+	"result": {
+		"code": 0,
+		"method": "UI.GetCapabilities",
+		"displayCapabilities": {
+			"displayType": "GEN2_8_DMA",
+			"displayName": "SDL_HMI",
+			"textFields": [{
+					"name": "mainField1",
+					"characterSet": "UTF_8",
+					"width": 500,
+					"rows": 1
+				},
+				...
+				{
+					"name": "mediaClock",
+					"characterSet": "UTF_8",
+					"width": 500,
+					"rows": 1
+				},
+				{
+					"name": "mediaTrack",
+					"characterSet": "UTF_8",
+					"width": 500,
+					"rows": 1
+				},
+				{
+					"name": "templateTitle",
+					"characterSet": "UTF_8",
+					"width": 100,
+					"rows": 1
+				},
+				{
+					"name": "alertText1",
+					"characterSet": "UTF_8",
+					"width": 500,
+					"rows": 1
+				},
+				...
+			],
+			"imageFields": [{
+					"name": "softButtonImage",
+					"imageTypeSupported": [
+						"GRAPHIC_BMP",
+						"GRAPHIC_JPEG",
+						"GRAPHIC_PNG"
+					],
+					"imageResolution": {
+						"resolutionWidth": 64,
+						"resolutionHeight": 64
+					}
+				},
+				{
+					"name": "choiceImage",
+					"imageTypeSupported": [
+						"GRAPHIC_BMP",
+						"GRAPHIC_JPEG",
+						"GRAPHIC_PNG"
+					],
+					"imageResolution": {
+						"resolutionWidth": 64,
+						"resolutionHeight": 64
+					}
+				},
+				...
+			],
+			"mediaClockFormats": [
+				"CLOCK1",
+				"CLOCK2",
+				"CLOCK3",
+				"CLOCKTEXT1",
+				"CLOCKTEXT2",
+				"CLOCKTEXT3",
+				"CLOCKTEXT4"
+			],
+			"graphicSupported": true,
+			"imageCapabilities": [
+				"DYNAMIC",
+				"STATIC"
+			],
+			"templatesAvailable": [
+				"MEDIA",
+				"NON-MEDIA",
+				"DEFAULT",
+				"NAV_FULLSCREEN_MAP",
+				"WEB_VIEW"
+			],
+			"screenParams": {
+				"resolution": {
+					"resolutionWidth": 800,
+					"resolutionHeight": 480
+				},
+				"touchEventAvailable": {
+					"pressAvailable": true,
+					"multiTouchAvailable": true,
+					"doublePressAvailable": false
+				}
+			},
+			"numCustomPresetsAvailable": 10
+		},
+		"systemCapabilities": {
+			"videoStreamingCapability": {
+				"preferredResolution": {
+					"resolutionWidth": 800,
+					"resolutionHeight": 380
+				},
+				"maxBitrate": 2147483647,
+				"supportedFormats": [{
+						"protocol": "RAW",
+						"codec": "H264"
+					},
+					{
+						"protocol": "RTP",
+						"codec": "H264"
+					},
+					{
+						"protocol": "RTSP",
+						"codec": "Theora"
+					},
+					{
+						"protocol": "RTMP",
+						"codec": "VP8"
+					},
+					{
+						"protocol": "WEBM",
+						"codec": "VP9"
+					}
+				],
+				"hapticSpatialDataSupported": true,
+				"diagonalScreenSize": 8,
+				"pixelPerInch": 96,
+				"scale": 1,
+				"preferredFPS": 15,
+				"additionalVideoStreamingCapabilities": [{
+						"scale": 1,
+						"hapticSpatialDataSupported": true,
+						"preferredFPS": 15,
+						"preferredResolution": {
+							"resolutionWidth": 800,
+							"resolutionHeight": 350
+						}
+					},
+					{
+						"hapticSpatialDataSupported": false,
+						"preferredFPS": 30,
+						"preferredResolution": {
+							"resolutionWidth": 320,
+							"resolutionHeight": 240
+						}
+					},
+					{
+						"hapticSpatialDataSupported": true,
+						"preferredFPS": 24,
+						"preferredResolution": {
+							"resolutionWidth": 400,
+							"resolutionHeight": 480
+						}
+					},
+					{
+						"hapticSpatialDataSupported": true,
+						"preferredFPS": 20,
+						"preferredResolution": {
+							"resolutionWidth": 640,
+							"resolutionHeight": 480
+						}
+					},
+					{
+						"hapticSpatialDataSupported": true,
+						"preferredFPS": 20,
+						"preferredResolution": {
+							"resolutionWidth": 800,
+							"resolutionHeight": 240
+						}
+					},
+					{
+						"scale": 2.5,
+						"hapticSpatialDataSupported": false
+					},
+					{
+						"scale": 5,
+						"hapticSpatialDataSupported": true
+					}
+				]
+			},
+			"driverDistractionCapability": {
+				"menuLength": 10,
+				"subMenuDepth": 2
+			}
+		},
+		"audioPassThruCapabilities": {
+			"samplingRate": "44KHZ",
+			"bitsPerSample": "8_BIT",
+			"audioType": "PCM"
+		},
+		"audioPassThruCapabilitiesList": [{
+			"samplingRate": "44KHZ",
+			"bitsPerSample": "8_BIT",
+			"audioType": "PCM"
+		}],
+		"pcmStreamCapabilities": {
+			"samplingRate": "16KHZ",
+			"bitsPerSample": "16_BIT",
+			"audioType": "PCM"
+		},
+		"hmiZoneCapabilities": "FRONT",
+		"softButtonCapabilities": [{
+			"shortPressAvailable": true,
+			"longPressAvailable": true,
+			"upDownAvailable": true,
+			"imageSupported": true
+		}],
+		"hmiCapabilities": {
+			"navigation": true,
+			"phoneCall": true
+		}
+	}
 }
 ```
 

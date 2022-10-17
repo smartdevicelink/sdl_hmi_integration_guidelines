@@ -9,12 +9,12 @@ Sender
 Purpose
 : Inform HMI about the Policy Table Update (PTU) mechanism is triggered on SDL
 
-In case SDL is built with **"-DEXTENDED_POLICY: HTTP" flag**, SDL supports PolicyTableUpdate flow **without HMI-related logic**. 
+In case SDL is built with **"-DEXTENDED_POLICY=HTTP" flag**, SDL supports PolicyTableUpdate flow **without HMI-related logic**. 
 
 ### Request
 
 ``BC.PolicyUpdate`` represents SDL-generated request to start the PTU sequence.  
-In case SDL is built with **"-DEXTENDED_POLICY: PROPRIETARY"**  or **"-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY"** flag and PolicyTableUpdate is required, SDL internally creates PT snapshot and sends BC.PolicyUpdate(path_to_PTS) to HMI to start PTU sequence.
+In case SDL is built with **"-DEXTENDED_POLICY=PROPRIETARY"**  or **"-DEXTENDED_POLICY=EXTERNAL_PROPRIETARY"** flag and PolicyTableUpdate is required, SDL internally creates PT snapshot and sends BC.PolicyUpdate(path_to_PTS) to HMI to start PTU sequence.
 
 
 !!! MUST
