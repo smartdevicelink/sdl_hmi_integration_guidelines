@@ -61,7 +61,8 @@ GetCapabilities
 		"displayCapabilities": {
 			"displayType": "GEN2_8_DMA",
 			"displayName": "SDL_HMI",
-			"textFields": [{
+			"textFields": [
+				{
 					"name": "mainField1",
 					"characterSet": "UTF_8",
 					"width": 500,
@@ -94,7 +95,8 @@ GetCapabilities
 				},
 				...
 			],
-			"imageFields": [{
+			"imageFields": [
+				{
 					"name": "softButtonImage",
 					"imageTypeSupported": [
 						"GRAPHIC_BMP",
@@ -161,7 +163,8 @@ GetCapabilities
 					"resolutionHeight": 380
 				},
 				"maxBitrate": 2147483647,
-				"supportedFormats": [{
+				"supportedFormats": [
+					{
 						"protocol": "RAW",
 						"codec": "H264"
 					},
@@ -187,7 +190,8 @@ GetCapabilities
 				"pixelPerInch": 96,
 				"scale": 1,
 				"preferredFPS": 15,
-				"additionalVideoStreamingCapabilities": [{
+				"additionalVideoStreamingCapabilities": [
+					{
 						"scale": 1,
 						"hapticSpatialDataSupported": true,
 						"preferredFPS": 15,
