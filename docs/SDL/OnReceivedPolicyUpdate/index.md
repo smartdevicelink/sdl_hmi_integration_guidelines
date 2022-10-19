@@ -19,8 +19,8 @@ Purpose
 
 !!! NOTE
 1. _SDL.OnReceivedPolicyUpdate_ dependencies:  
-   - SDL expects _SDL.OnReceivedPolicyUpdate_ _only in case_ it's built with `"-DEXTENDED_POLICY: PROPRIETARY" flag or without this flag` and `-DEXTENDED_POLICY: EXTERNAL_PROPRIETARY` flag. _Otherwise_ SDL handles the entire PTU flow by itself.
-   - SDL will not use Updated PT until notified by HMI.   
+    - SDL expects _SDL.OnReceivedPolicyUpdate_ _only in case_ it's built with `"-DEXTENDED_POLICY=PROPRIETARY" flag or without this flag` and `-DEXTENDED_POLICY=EXTERNAL_PROPRIETARY` flag. _Otherwise_ SDL handles the entire PTU flow by itself.
+    - SDL will not use Updated PT until notified by HMI.   
    
 2. After getting _OnReceivedPolicyUpdate (policyFile)_ from HMI, _SDL must_ stop timeout started by _OnSystemRequest_ and validate the Policy Table Update (policyFile) of optional, required, or omitted:   
     - validation must reject Policy Table updates if it include fields with a status of ‘omitted.’

@@ -87,7 +87,7 @@ Show request to set/change template WEB_VIEW
     [
       {
          "fieldName" : "mainField1",
-         "fieldText" : "Favourite Album"
+         "fieldText" : "Favorite Album"
       },
       {
          "fieldName" : "mediaClock",

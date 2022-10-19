@@ -22,7 +22,7 @@ Purpose
 and SDL responds GENERIC_ERROR to mobile app 
 and then HMI responds that the button has been successfully subscribed, 
 then SDL sends `UnsubscribeButton` request to HMI, so that the application and HMI are in sync.
-2. When an application disconnects unexpectedely, SDL sends `UnsubscribeButton` request for all button names subscribed only by the application just disconnected.
+2. When an application disconnects unexpectedly, SDL sends `UnsubscribeButton` request for all button names subscribed only by the application just disconnected.
 !!!
 
 #### Parameters
