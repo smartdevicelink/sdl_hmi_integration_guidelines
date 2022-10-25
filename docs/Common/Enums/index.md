@@ -651,8 +651,8 @@
 |Name|Value|Description|
 |:---|:----|:----------|
 |NO_FIX|0|No <abbr title="Global Positioning System">GPS</abbr> at all|
-|2D|1|Longitude and lattitude|
-|3D|2|Longitude and lattitude and altitude|
+|2D|1|Longitude and latitude|
+|3D|2|Longitude and latitude and altitude|
 
 ### ImageType
 
