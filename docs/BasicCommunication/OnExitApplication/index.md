@@ -14,7 +14,7 @@ Purpose
   1. Provide the possibility for the user to exit any of the registered applications.
   2. Track if an application is active or running in the background, and complies with the driver distraction rules of the system.
   3. Track that the transport type that corresponds to the application running. For example, navigation applications are not allowed to be run over a bluetooth connection.
-  4. Ignore all SDL RPC's related to an application that are defined as prohibited for a specific transport type.
+  4. Ignore all SDL RPCs related to an application that are defined as prohibited for a specific transport type.
   5. Track the application performance issues such as high CPU load or memory constraint warnings.
   6. Send `OnExitApplication` notification to SDL if an application conflicts with any of the rules above (i.e. Users requests to exit, driver distraction rules violated, navigation app connected over bluetooth, or the application has performance issues).
 

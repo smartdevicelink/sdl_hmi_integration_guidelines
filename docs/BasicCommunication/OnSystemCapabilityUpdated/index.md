@@ -17,7 +17,7 @@ Purpose
 4. If the application changes template to `WEB_VIEW`, HMI should send OnSystemCapabilityUpdated with the following `textFields` restrictions in `WindowCapability`:
     * `menuName` and `templateTitle` should be included, if they are visible on HMI.
     * `mainField1-4`, `statusBar` and `mediaTrack` should not be included if OEM implemented the `WEB_VIEW` template without these text fields.
-    * `availabletemplates`, `buttonCapabilities` and `imageTypeSupported` should reflect the general capabilities of the window/system.
+    * `templatesAvailable`, `buttonCapabilities` and `imageTypeSupported` should reflect the general capabilities of the window/system.
 5. HMI sends OnSystemCapabilityUpdated(VIDEO_STREAMING) notification to notify a subscribed mobile application that video streaming resolution has switched.
 
 !!! NOTE
